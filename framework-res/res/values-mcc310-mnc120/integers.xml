@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_volte_replacement_rat">6</integer>
+    <integer name="config_networkPolicyDefaultWarning">51200</integer>
+    <integer name="config_mobile_mtu">1422</integer>
+    <integer name="config_valid_wappush_index">4</integer>
+    <integer name="config_cdma_3waycall_flash_delay">70</integer>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>ماڵ</item>
+        <item>کار</item>
+        <item>دیکە</item>
+        <item>دروستکراو</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>ئامانج</item>
+        <item>Windows Live</item>
+        <item>یاهوو</item>
+        <item>سکایپ</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>کار</item>
+        <item>دیکە</item>
+        <item>دروستکراو</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ماڵ</item>
+        <item>موبایل</item>
+        <item>کار</item>
+        <item>کاری فاکس</item>
+        <item>ماڵی فاکس</item>
+        <item>پەڕە</item>
+        <item>دیکە</item>
+        <item>دروستکراو</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ماڵ</item>
+        <item>کار</item>
+        <item>دیکە</item>
+        <item>دروستکراو</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>ماڵ</item>
+        <item>کار</item>
+        <item>دیکە</item>
+        <item>دروستکراو</item>
+    </string-array>
+</resources>

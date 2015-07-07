@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>गृह</item>
+        <item>काम</item>
+        <item>अन्य</item>
+        <item>अनुकूलन</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>स्काइप</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>काम गर्नुहोस्</item>
+        <item>अन्य</item>
+        <item>अनुकूलन</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>गृह</item>
+        <item>मोबाइल</item>
+        <item>काम गर्नुहोस्</item>
+        <item>कार्य फ्याक्स</item>
+        <item>घरको फ्याक्स</item>
+        <item>पेजर</item>
+        <item>अन्य</item>
+        <item>अनुकूलन</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>गृह</item>
+        <item>काम</item>
+        <item>अन्य</item>
+        <item>अनुकूलन</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>गृह</item>
+        <item>काम</item>
+        <item>अन्य</item>
+        <item>अनुकूलन</item>
+    </string-array>
+</resources>

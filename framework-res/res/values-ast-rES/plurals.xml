@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Quédente %d intentos pa bloquiar la tarxeta SIM.</item>
+        <item quantity="one">Quédate %d intentu pa bloquiar la tarxeta SIM.</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">hai %d segundos</item>
+        <item quantity="one">hai 1 segundu</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">hai %d minutos</item>
+        <item quantity="one">hai 1 minutu</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">hai %d hores</item>
+        <item quantity="one">hai 1 hora</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Postreros %d díes</item>
+        <item quantity="one">Postreros %d díes</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">hai %d díes</item>
+        <item quantity="one">ayeri</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">"d'equí a %d segundos"</item>
+        <item quantity="one">"d'equí a 1 segundu"</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">"d'equí a %d minutos"</item>
+        <item quantity="one">"d'equí a 1 minutu"</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">"d'equí a %d hores"</item>
+        <item quantity="one">"d'equí a 1 hora"</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">"d'equí a %d díes"</item>
+        <item quantity="one">mañana</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">hai %d segundos</item>
+        <item quantity="one">hai 1 segundu</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">hai %d minutos</item>
+        <item quantity="one">hai 1 minutu</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">hai %d hores</item>
+        <item quantity="one">hai 1 hora</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">hai %d díes</item>
+        <item quantity="one">ayeri</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">"d'equí a %d segundos"</item>
+        <item quantity="one">"d'equí a 1 segundu"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">"d'equí a %d minutos"</item>
+        <item quantity="one">"d'equí a 1 minutu"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">"d'equí a %d hores"</item>
+        <item quantity="one">"d'equí a 1 hora"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">"d'equí a %d díes"</item>
+        <item quantity="one">mañana</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">1 segundu</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">1 minutu</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d hores</item>
+        <item quantity="one">1 hora</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Redes Wi-Fi disponibles</item>
+        <item quantity="one">Rede Wi-Fi disponible</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Redes Wi-Fi abiertes disponibles</item>
+        <item quantity="one">Rede Wi-Fi abierta disponible</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d de %2$d</item>
+        <item quantity="one">Una coincidencia</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Inténtalo en %d s</item>
+        <item quantity="one">Inténtalo en 1 s</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Mientres %d minutos</item>
+        <item quantity="one">Mientres un minutu</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Mientres %d hores</item>
+        <item quantity="one">Mientres una hora</item>
+    </plurals>
+</resources>
