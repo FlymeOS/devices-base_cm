@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>ပင်မစာမျက်နှာ</item>
+        <item>အလုပ်အကိုင်</item>
+        <item>တခြား</item>
+        <item>မိမိစိတ်ကြိုက်</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>ရာဟူး</item>
+        <item>စကိုက်ပ်</item>
+        <item>QQ</item>
+        <item>ဂူဂဲလ်တော့ခ်</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>အလုပ်အကိုင်</item>
+        <item>တခြား</item>
+        <item>မိမိစိတ်ကြိုက်</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ပင်မစာမျက်နှာ</item>
+        <item>မိုဘိုင်း</item>
+        <item>အလုပ်အကိုင်</item>
+        <item>အလုပ်ဖက်စ်</item>
+        <item>အိမ်ဖက်စ်</item>
+        <item>ပေဂျာ</item>
+        <item>တခြား</item>
+        <item>မိမိစိတ်ကြိုက်</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ပင်မစာမျက်နှာ</item>
+        <item>အလုပ်အကိုင်</item>
+        <item>တခြား</item>
+        <item>မိမိစိတ်ကြိုက်</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>ပင်မစာမျက်နှာ</item>
+        <item>အလုပ်အကိုင်</item>
+        <item>တခြား</item>
+        <item>မိမိစိတ်ကြိုက်</item>
+    </string-array>
+</resources>

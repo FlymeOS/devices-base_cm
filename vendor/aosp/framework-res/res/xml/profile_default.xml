@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles>
+    <profile nameres="profileNameDefault">
+        <ringModeDescriptor>
+            <value>normal</value>
+            <override>true</override>
+        </ringModeDescriptor>
+    </profile>
+    <profile nameres="profileNameSilent">
+        <ringModeDescriptor>
+            <value>mute</value>
+            <override>true</override>
+        </ringModeDescriptor>
+    </profile>
+    <profile nameres="profileNameAutomobile">
+        <connectionDescriptor>
+            <connectionId>4</connectionId>
+            <value>1</value>
+            <override>true</override>
+        </connectionDescriptor>
+        <connectionDescriptor>
+            <connectionId>7</connectionId>
+            <value>1</value>
+            <override>true</override>
+        </connectionDescriptor>
+    </profile>
+</profiles>

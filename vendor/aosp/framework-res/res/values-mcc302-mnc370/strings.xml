@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_mms_user_agent_profile_url">http://gsm.lge.com/html/gsm/Nexus5-M10.xml</string>
+    <string name="config_tether_apndata">Fido LTE Tethering,ltedata.apn,,,,,,,,,302,370,,DUN</string>
+</resources>

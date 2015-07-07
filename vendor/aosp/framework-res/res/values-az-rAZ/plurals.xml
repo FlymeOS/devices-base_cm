@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d saniyə əvvəl</item>
+        <item quantity="one">1 saniyə əvvəl</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d dəqiqə əvvəl</item>
+        <item quantity="one">1 dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d saat əvvəl</item>
+        <item quantity="one">1 saat əvvəl</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Son %d gün</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d gün əvvəl</item>
+        <item quantity="one">dünən</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d saniyə içində</item>
+        <item quantity="one">1 saniyə ərzində</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d dəqiqə ərzində</item>
+        <item quantity="one">1 dəqiqə içində</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d saata</item>
+        <item quantity="one">1 saata</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d gün ərzində</item>
+        <item quantity="one">sabah</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d san əvvəl</item>
+        <item quantity="one">1 saniyə əvvəl</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d dəqiqə əvvəl</item>
+        <item quantity="one">1 dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d saat əvvəl</item>
+        <item quantity="one">1 saat əvvəl</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d gün əvvəl</item>
+        <item quantity="one">dünən</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d san ərzində</item>
+        <item quantity="one">1 san ərzində</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d dəqiqəyə</item>
+        <item quantity="one">1 dəq ərzində</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d saata</item>
+        <item quantity="one">1 saat ərzində</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d günə</item>
+        <item quantity="one">sabah</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d saniyə</item>
+        <item quantity="one">1 saniyə</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d dəqiqə</item>
+        <item quantity="one">1 dəqiqə</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi şəbəkələri mövcuddur</item>
+        <item quantity="one">Wi-Fi şəbəkəsi mövcuddur</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Açıq Wi-Fi şəbəkələri mövcuddur</item>
+        <item quantity="one">Wi-Fi şəbəkəni açın</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ədəddən %2$d</item>
+        <item quantity="one">1 uyğunluq</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d saniyə sonra təkrar yoxlayın</item>
+        <item quantity="one">1 saniyə sonra təkrar yoxlayın</item>
+    </plurals>
+</resources>
