@@ -16,6 +16,8 @@
 
 
 # static fields
+.field public static final PARCELABLE_IMAGE_SPAN:I = 0x19
+
 .field public static final ABSOLUTE_SIZE_SPAN:I = 0x10
 
 .field public static final ALIGNMENT_SPAN:I = 0x1
@@ -1216,6 +1218,10 @@
     .line 1089
     .local v7, "ellipsis":Ljava/lang/String;
     :goto_0
+    invoke-static/range {p3 .. p3}, Landroid/text/TextUtils;->mzEllipsize(Landroid/text/TextUtils$TruncateAt;)Ljava/lang/String;
+
+    move-result-object v7
+
     sget-object v6, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
     move-object v0, p0
@@ -4939,7 +4945,7 @@
     .local v6, "spanTypeId":I
     if-lt v6, v11, :cond_1
 
-    const/16 v7, 0x18
+    const/16 v7, 0x19
 
     if-le v6, v7, :cond_3
 
@@ -5079,4 +5085,69 @@
 
     .line 671
     return-void
+.end method
+
+.method static mzAccessMethodReadSpan(Landroid/os/Parcel;Landroid/text/Spannable;Ljava/lang/Object;)V
+    .locals 0
+    .param p0, "p"    # Landroid/os/Parcel;
+    .param p1, "sp"    # Landroid/text/Spannable;
+    .param p2, "o"    # Ljava/lang/Object;
+
+    .prologue
+    invoke-static {p0, p1, p2}, Landroid/text/TextUtils;->readSpan(Landroid/os/Parcel;Landroid/text/Spannable;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private static mzEllipsize(Landroid/text/TextUtils$TruncateAt;)Ljava/lang/String;
+    .locals 2
+    .param p0, "where"    # Landroid/text/TextUtils$TruncateAt;
+
+    .prologue
+    const v1, #android:string@ellipsis_two_dots#t
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Landroid/text/TextUtils$TruncateAt;->END_SMALL:Landroid/text/TextUtils$TruncateAt;
+
+    if-ne p0, v0, :cond_0
+
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, #android:string@ellipsis#t
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

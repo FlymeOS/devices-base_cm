@@ -518,6 +518,9 @@
     .end local v0    # "container":Landroid/os/Bundle;
     .end local v1    # "preferenceScreen":Landroid/preference/PreferenceScreen;
     :cond_1
+
+    invoke-direct/range {p0 .. p0}, Landroid/preference/PreferenceFragment;->mzResetListViewPaddingTop()V
+
     return-void
 .end method
 
@@ -832,4 +835,155 @@
     .line 267
     :cond_0
     return-void
+.end method
+
+.method private mzResetListViewPaddingTop()V
+    .locals 11
+
+    .prologue
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/app/Activity;->isActionBarToTop()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    sget v8, Lcom/flyme/internal/R$dimen;->mz_action_bar_default_height:I
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    .local v0, "actionBarHight":I
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const-string v8, "status_bar_height"
+
+    invoke-static {v9, v8}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v6
+
+    .local v6, "statusBarHeight":I
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+
+    move-result-object v5
+
+    .local v5, "preferenceScreen":Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    sget v8, Lcom/flyme/internal/R$dimen;->mz_preferencefragment_margin_top:I
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    .local v2, "marginToActionBar":I
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v5}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
+
+    move-result v7
+
+    if-lt v7, v9, :cond_0
+
+    invoke-virtual {v5, v10}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
+
+    move-result-object v4
+
+    .local v4, "preference":Landroid/preference/Preference;
+    if-eqz v4, :cond_0
+
+    instance-of v7, v4, Landroid/preference/PreferenceCategory;
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    sget v8, Lcom/flyme/internal/R$dimen;->mz_preferencefragment_category_margin_top:I
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    .end local v4    # "preference":Landroid/preference/Preference;
+    :cond_0
+    const/4 v1, 0x0
+
+    .local v1, "listView":Landroid/widget/ListView;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getListView()Landroid/widget/ListView;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v1
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/widget/ListView;->getPaddingBottom()I
+
+    move-result v3
+
+    .local v3, "paddingBottom":I
+    invoke-virtual {v1}, Landroid/widget/ListView;->getPaddingLeft()I
+
+    move-result v7
+
+    invoke-virtual {v1}, Landroid/widget/ListView;->getPaddingTop()I
+
+    move-result v8
+
+    add-int/2addr v8, v0
+
+    add-int/2addr v8, v6
+
+    add-int/2addr v8, v2
+
+    invoke-virtual {v1}, Landroid/widget/ListView;->getPaddingRight()I
+
+    move-result v9
+
+    invoke-virtual {v1, v7, v8, v9, v3}, Landroid/widget/ListView;->setPadding(IIII)V
+
+    invoke-virtual {v1, v10}, Landroid/widget/ListView;->setClipToPadding(Z)V
+
+    .end local v0    # "actionBarHight":I
+    .end local v1    # "listView":Landroid/widget/ListView;
+    .end local v2    # "marginToActionBar":I
+    .end local v3    # "paddingBottom":I
+    .end local v5    # "preferenceScreen":Landroid/preference/PreferenceScreen;
+    .end local v6    # "statusBarHeight":I
+    :cond_1
+    return-void
+
+    .restart local v0    # "actionBarHight":I
+    .restart local v1    # "listView":Landroid/widget/ListView;
+    .restart local v2    # "marginToActionBar":I
+    .restart local v5    # "preferenceScreen":Landroid/preference/PreferenceScreen;
+    .restart local v6    # "statusBarHeight":I
+    :catch_0
+    move-exception v7
+
+    goto :goto_0
 .end method

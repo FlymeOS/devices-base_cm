@@ -713,6 +713,8 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternUtils;->setFlymeLockSettingsService()V
+
     .line 222
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
@@ -6249,5 +6251,24 @@
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     .line 1425
+    return-void
+.end method
+
+.method private setFlymeLockSettingsService()V
+    .locals 1
+
+    .prologue
+    const-string v0, "lock_settings"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/widget/ILockSettings$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/ILockSettings;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
+
     return-void
 .end method

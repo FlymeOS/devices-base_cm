@@ -15,6 +15,17 @@
 
 
 # instance fields
+.field private mSimSlots:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mTexts:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -44,6 +55,14 @@
 
     iput-object v0, p0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
 
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
+
     .line 3896
     return-void
 .end method
@@ -64,6 +83,14 @@
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
 
     .line 3899
     invoke-virtual {p0, p1}, Landroid/app/Notification$InboxStyle;->setBuilder(Landroid/app/Notification$Builder;)V
@@ -344,6 +371,8 @@
     # invokes: Landroid/app/Notification$Builder;->addProfileBadge(Landroid/widget/RemoteViews;I)Z
     invoke-static {v11, v1, v12}, Landroid/app/Notification$Builder;->access$1400(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;I)Z
 
+    invoke-virtual {p0, v1}, Landroid/app/Notification$InboxStyle;->makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
+
     .line 4001
     return-object v1
 
@@ -407,6 +436,8 @@
 
     invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
+    invoke-direct/range {p0 .. p1}, Landroid/app/Notification$InboxStyle;->putExtrasIntegerArrayList(Landroid/os/Bundle;)V
+
     .line 3935
     return-void
 .end method
@@ -424,6 +455,8 @@
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-direct/range {p0 .. p0}, Landroid/app/Notification$InboxStyle;->addSimSlotHide()V
 
     .line 3924
     return-object p0
@@ -516,4 +549,457 @@
 
     .line 3916
     return-object p0
+.end method
+
+.method private addSimSlotHide()V
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
+
+    sget v1, Landroid/app/NotificationBuilderExt;->SIM_SLOT_HIDE:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method private putExtrasIntegerArrayList(Landroid/os/Bundle;)V
+    .locals 2
+    .param p1, "extras"    # Landroid/os/Bundle;
+
+    .prologue
+    const-string v0, "android.simSlots"
+
+    iget-object v1, p0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public addLine(Ljava/lang/CharSequence;I)Landroid/app/Notification$InboxStyle;
+    .locals 2
+    .param p1, "cs"    # Ljava/lang/CharSequence;
+    .param p2, "slotId"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Landroid/app/Notification;->safeCharSequence(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 3924
+    return-object p0
+.end method
+
+.method public makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
+    .locals 18
+    .param p1, "contentView"    # Landroid/widget/RemoteViews;
+
+    .prologue
+    sget v2, Lcom/flyme/internal/R$id;->text2:I
+
+    const/16 v3, 0x8
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    const/4 v2, 0x7
+
+    new-array v14, v2, [I
+
+    const/4 v2, 0x0
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text0:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x1
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text1:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x2
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text2:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x3
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text3:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x4
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text4:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x5
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text5:I
+
+    aput v3, v14, v2
+
+    const/4 v2, 0x6
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_text6:I
+
+    aput v3, v14, v2
+
+    .local v14, "rowIds":[I
+    move-object v8, v14
+
+    .local v8, "arr$":[I
+    array-length v12, v8
+
+    .local v12, "len$":I
+    const/4 v10, 0x0
+
+    .local v10, "i$":I
+    :goto_0
+    if-ge v10, v12, :cond_0
+
+    aget v13, v8, v10
+
+    .local v13, "rowId":I
+    const/16 v2, 0x8
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_0
+
+    .end local v13    # "rowId":I
+    :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mBuilder:Landroid/app/Notification$Builder;
+
+    invoke-virtual {v2}, Landroid/app/Notification$Builder;->mzGetFieldContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/content/res/Configuration;->fontScale:F
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    cmpl-float v2, v2, v3
+
+    if-lez v2, :cond_3
+
+    const/4 v11, 0x1
+
+    .local v11, "largeText":Z
+    :goto_1
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mBuilder:Landroid/app/Notification$Builder;
+
+    invoke-virtual {v2}, Landroid/app/Notification$Builder;->mzGetFieldContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, #android:dimen@notification_subtext_size#t
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    int-to-float v0, v2
+
+    move/from16 v17, v0
+
+    .local v17, "subTextSize":F
+    const/4 v9, 0x0
+
+    .local v9, "i":I
+    :goto_2
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v9, v2, :cond_7
+
+    array-length v2, v14
+
+    if-ge v9, v2, :cond_7
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v16
+
+    check-cast v16, Ljava/lang/CharSequence;
+
+    .local v16, "str":Ljava/lang/CharSequence;
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mSimSlots:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/lang/Integer;
+
+    .local v15, "simSlot":Ljava/lang/Integer;
+    if-eqz v16, :cond_2
+
+    const-string v2, ""
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    aget v2, v14, v9
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    aget v2, v14, v9
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Landroid/app/Notification$InboxStyle;->mBuilder:Landroid/app/Notification$Builder;
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v3, v0}, Landroid/app/Notification$Builder;->mzInvokeMethodProcessLegacyText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    if-eqz v11, :cond_1
+
+    aget v2, v14, v9
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v17
+
+    invoke-virtual {v0, v2, v3, v1}, Landroid/widget/RemoteViews;->setTextViewTextSize(IIF)V
+
+    :cond_1
+    if-eqz v15, :cond_2
+
+    invoke-virtual {v15}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sget v3, Landroid/app/NotificationBuilderExt;->SIM_SLOT_0:I
+
+    if-ne v2, v3, :cond_4
+
+    aget v3, v14, v9
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    sget v6, Lcom/flyme/internal/R$drawable;->sim1_notice_m:I
+
+    const/4 v7, 0x0
+
+    move-object/from16 v2, p1
+
+    invoke-virtual/range {v2 .. v7}, Landroid/widget/RemoteViews;->setTextViewCompoundDrawables(IIIII)V
+
+    :cond_2
+    :goto_3
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    .end local v9    # "i":I
+    .end local v11    # "largeText":Z
+    .end local v15    # "simSlot":Ljava/lang/Integer;
+    .end local v16    # "str":Ljava/lang/CharSequence;
+    .end local v17    # "subTextSize":F
+    :cond_3
+    const/4 v11, 0x0
+
+    goto/16 :goto_1
+
+    .restart local v9    # "i":I
+    .restart local v11    # "largeText":Z
+    .restart local v15    # "simSlot":Ljava/lang/Integer;
+    .restart local v16    # "str":Ljava/lang/CharSequence;
+    .restart local v17    # "subTextSize":F
+    :cond_4
+    invoke-virtual {v15}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sget v3, Landroid/app/NotificationBuilderExt;->SIM_SLOT_1:I
+
+    if-ne v2, v3, :cond_5
+
+    aget v3, v14, v9
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    sget v6, Lcom/flyme/internal/R$drawable;->sim2_notice_m:I
+
+    const/4 v7, 0x0
+
+    move-object/from16 v2, p1
+
+    invoke-virtual/range {v2 .. v7}, Landroid/widget/RemoteViews;->setTextViewCompoundDrawables(IIIII)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v15}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sget v3, Landroid/app/NotificationBuilderExt;->SIM_SLOT_UNKNOWN:I
+
+    if-ne v2, v3, :cond_6
+
+    aget v3, v14, v9
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    sget v6, Lcom/flyme/internal/R$drawable;->nosim_notice_m:I
+
+    const/4 v7, 0x0
+
+    move-object/from16 v2, p1
+
+    invoke-virtual/range {v2 .. v7}, Landroid/widget/RemoteViews;->setTextViewCompoundDrawables(IIIII)V
+
+    goto :goto_3
+
+    :cond_6
+    aget v3, v14, v9
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object/from16 v2, p1
+
+    invoke-virtual/range {v2 .. v7}, Landroid/widget/RemoteViews;->setTextViewCompoundDrawables(IIIII)V
+
+    goto :goto_3
+
+    .end local v15    # "simSlot":Ljava/lang/Integer;
+    .end local v16    # "str":Ljava/lang/CharSequence;
+    :cond_7
+    sget v3, Lcom/flyme/internal/R$id;->inbox_end_pad:I
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_8
+
+    const/4 v2, 0x0
+
+    :goto_4
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v3, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    sget v3, Lcom/flyme/internal/R$id;->inbox_more:I
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    array-length v4, v14
+
+    if-le v2, v4, :cond_9
+
+    const/4 v2, 0x0
+
+    :goto_5
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v3, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    .line 4010
+    return-void
+
+    :cond_8
+    const/16 v2, 0x8
+
+    goto :goto_4
+
+    :cond_9
+    const/16 v2, 0x8
+
+    goto :goto_5
 .end method

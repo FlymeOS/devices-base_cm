@@ -4,6 +4,22 @@
 
 
 # static fields
+.field public static final EXTRA_WAPI_AS_CERTIFICATES_DATA:Ljava/lang/String; = "wapi_ca_certificates_data"
+
+.field public static final EXTRA_WAPI_AS_CERTIFICATES_NAME:Ljava/lang/String; = "wapi_ca_certificates_name"
+
+.field public static final EXTRA_WAPI_USER_CERTIFICATES_DATA:Ljava/lang/String; = "wapi_user_certificate_data"
+
+.field public static final EXTRA_WAPI_USER_CERTIFICATES_NAME:Ljava/lang/String; = "wapi_user_certificate_name"
+
+.field public static final WAPI_AS_CERTIFICATE:Ljava/lang/String; = "WAPIAS_"
+
+.field public static final WAPI_AS_CERT_NAME_MEIZU:Ljava/lang/String; = "normal_as"
+
+.field public static final WAPI_USER_CERTIFICATE:Ljava/lang/String; = "WAPIUSR_"
+
+.field public static final WAPI_USER_CERT_NAME_MEIZU:Ljava/lang/String; = "normal_user"
+
 .field public static final CA_CERTIFICATE:Ljava/lang/String; = "CACERT_"
 
 .field public static final EXTENSION_CER:Ljava/lang/String; = ".cer"

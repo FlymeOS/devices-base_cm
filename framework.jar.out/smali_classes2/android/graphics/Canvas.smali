@@ -4168,3 +4168,54 @@
     .line 533
     return-void
 .end method
+
+.method public drawBlurRect(FFFFFLandroid/graphics/Paint;)V
+    .locals 6
+    .param p1, "left"    # F
+    .param p2, "top"    # F
+    .param p3, "right"    # F
+    .param p4, "bottom"    # F
+    .param p5, "level"    # F
+    .param p6, "paint"    # Landroid/graphics/Paint;
+
+    .prologue
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p6
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public drawBlurRect(Landroid/graphics/Rect;FLandroid/graphics/Paint;)V
+    .locals 0
+    .param p1, "r"    # Landroid/graphics/Rect;
+    .param p2, "level"    # F
+    .param p3, "paint"    # Landroid/graphics/Paint;
+
+    .prologue
+    invoke-virtual {p0, p1, p3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public drawBlurRect(Landroid/graphics/RectF;FLandroid/graphics/Paint;)V
+    .locals 0
+    .param p1, "rect"    # Landroid/graphics/RectF;
+    .param p2, "level"    # F
+    .param p3, "paint"    # Landroid/graphics/Paint;
+
+    .prologue
+    invoke-virtual {p0, p1, p3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+
+    return-void
+.end method

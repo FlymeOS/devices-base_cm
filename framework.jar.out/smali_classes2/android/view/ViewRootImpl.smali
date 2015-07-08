@@ -167,6 +167,24 @@
 
 
 # instance fields
+.field mForceLayoutByOrientation:Z
+
+.field private mMzLastActionBar:Landroid/view/View;
+
+.field private mMzLastContentScrollY:I
+
+.field private mMzLastContentView:Landroid/view/View;
+
+.field private mMzLastOverlayLayout:Landroid/view/View;
+
+.field private mMzLastRootAsFocus:Landroid/view/View;
+
+.field private mMzLastSplitActionBar:Landroid/view/View;
+
+.field private mMzShadowTouchPoint:Landroid/graphics/Point;
+
+.field private mMzStatusBarNfcShareEnabled:Z
+
 .field mAccessibilityFocusedHost:Landroid/view/View;
 
 .field mAccessibilityFocusedVirtualView:Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -3977,6 +3995,8 @@
     .end local v3    # "what":I
     :cond_0
     :goto_0
+    invoke-direct/range {p0 .. p1}, Landroid/view/ViewRootImpl;->mzHandleDragEvent(Landroid/view/DragEvent;)V
+
     invoke-virtual {p1}, Landroid/view/DragEvent;->recycle()V
 
     .line 5115
@@ -5784,6 +5804,10 @@
 
     .line 1328
     .local v45, "layoutRequested":Z
+    invoke-direct/range {p0 .. p0}, Landroid/view/ViewRootImpl;->mzSetLayoutRequested()Z
+
+    move-result v45
+
     if-eqz v45, :cond_c
 
     .line 1330
@@ -7821,7 +7845,9 @@
 
     iget-boolean v4, v0, Landroid/view/ViewRootImpl;->mStopped:Z
 
-    if-nez v4, :cond_52
+    if-nez v4, :cond_flyme_0
+
+    :goto_flyme_0
 
     .line 1753
     and-int/lit8 v4, v52, 0x1
@@ -8018,11 +8044,20 @@
     .end local v47    # "measureAgain":Z
     .end local v64    # "width":I
     :cond_52
+    :cond_flyme_1
     :goto_17
     move/from16 v32, v45
 
     .line 1826
     .local v32, "didLayout":Z
+    move-object/from16 v0, p0
+
+    move/from16 v1, v45
+
+    invoke-direct {v0, v1}, Landroid/view/ViewRootImpl;->mzSetDidLayout(Z)Z
+
+    move-result v32
+
     if-nez v32, :cond_53
 
     move-object/from16 v0, p0
@@ -9084,6 +9119,15 @@
     move-exception v4
 
     goto/16 :goto_19
+
+    :cond_flyme_0
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewRootImpl;->needRefreshWhenStopped()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_flyme_1
+
+    goto/16 :goto_flyme_0
 .end method
 
 .method private postSendWindowContentChangedCallback(Landroid/view/View;I)V
@@ -16191,6 +16235,8 @@
     .param p2, "force"    # Z
 
     .prologue
+    invoke-virtual/range {p0 .. p1}, Landroid/view/ViewRootImpl;->updateConfigurationForOrientation(Landroid/content/res/Configuration;)V
+
     .line 2949
     iget-object v5, p0, Landroid/view/ViewRootImpl;->mDisplayAdjustments:Landroid/view/DisplayAdjustments;
 
@@ -16406,4 +16452,411 @@
 
     .line 6003
     goto :goto_1
+.end method
+
+.method private isViewHasSpace(Landroid/view/View;)Z
+    .locals 5
+    .param p1, "v"    # Landroid/view/View;
+
+    .prologue
+    const/4 v2, 0x0
+
+    move-object v0, p1
+
+    .local v0, "current":Landroid/view/View;
+    :goto_0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v3
+
+    const/16 v4, 0x8
+
+    if-ne v3, v4, :cond_1
+
+    :cond_0
+    :goto_1
+    return v2
+
+    :cond_1
+    iget-object v1, v0, Landroid/view/View;->mParent:Landroid/view/ViewParent;
+
+    .local v1, "parent":Landroid/view/ViewParent;
+    if-eqz v1, :cond_0
+
+    instance-of v3, v1, Landroid/view/View;
+
+    if-nez v3, :cond_2
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v1
+
+    check-cast v0, Landroid/view/View;
+
+    goto :goto_0
+.end method
+
+.method private mzGetImeOffset()I
+    .locals 2
+
+    .prologue
+    iget-object v1, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->imeOffset:I
+
+    if-gez v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/ViewRootImpl;->getLastSplitActionBar()Landroid/view/View;
+
+    move-result-object v0
+
+    .local v0, "lastSplitActionBar":Landroid/view/View;
+    invoke-direct {p0, v0}, Landroid/view/ViewRootImpl;->isViewHasSpace(Landroid/view/View;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    .end local v0    # "lastSplitActionBar":Landroid/view/View;
+    :goto_0
+    return v1
+
+    .restart local v0    # "lastSplitActionBar":Landroid/view/View;
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    .end local v0    # "lastSplitActionBar":Landroid/view/View;
+    :cond_1
+    iget-object v1, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->imeOffset:I
+
+    goto :goto_0
+.end method
+
+.method private mzHandleDragEvent(Landroid/view/DragEvent;)V
+    .locals 2
+    .param p1, "event"    # Landroid/view/DragEvent;
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mAdded:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/DragEvent;->getAction()I
+
+    move-result v0
+
+    const/16 v1, 0x64
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewRootImpl;->setLocalDragState(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private mzSetDidLayout(Z)Z
+    .locals 3
+    .param p1, "layoutRequested"    # Z
+
+    .prologue
+    invoke-virtual {p0}, Landroid/view/ViewRootImpl;->needRefreshWhenStopped()Z
+
+    move-result v1
+
+    .local v1, "refreshWhenStopped":Z
+    if-eqz p1, :cond_1
+
+    if-nez v1, :cond_0
+
+    iget-boolean v2, p0, Landroid/view/ViewRootImpl;->mStopped:Z
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .local v0, "didLayout":Z
+    :goto_0
+    return v0
+
+    .end local v0    # "didLayout":Z
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private mzSetLayoutRequested()Z
+    .locals 5
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0}, Landroid/view/ViewRootImpl;->needRefreshWhenStopped()Z
+
+    move-result v1
+
+    .local v1, "refreshWhenStopped":Z
+    iget-boolean v4, p0, Landroid/view/ViewRootImpl;->mLayoutRequested:Z
+
+    if-eqz v4, :cond_1
+
+    iget-boolean v4, p0, Landroid/view/ViewRootImpl;->mStopped:Z
+
+    if-nez v4, :cond_1
+
+    move v0, v3
+
+    .local v0, "layoutRequested":Z
+    :goto_0
+    if-nez v0, :cond_0
+
+    iget-boolean v4, p0, Landroid/view/ViewRootImpl;->mLayoutRequested:Z
+
+    if-eqz v4, :cond_2
+
+    if-eqz v1, :cond_2
+
+    :cond_0
+    move v0, v3
+
+    :goto_1
+    return v0
+
+    .end local v0    # "layoutRequested":Z
+    :cond_1
+    move v0, v2
+
+    goto :goto_0
+
+    .restart local v0    # "layoutRequested":Z
+    :cond_2
+    move v0, v2
+
+    goto :goto_1
+.end method
+
+.method public getLastContentView()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mMzLastContentView:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public getLastSplitActionBar()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mMzLastSplitActionBar:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public getVisibleBottomOffset()I
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
+
+    .local v0, "attachInfo":Landroid/view/View$AttachInfo;
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Landroid/view/View$AttachInfo;->mVisibleInsets:Landroid/graphics/Rect;
+
+    iget v1, v1, Landroid/graphics/Rect;->bottom:I
+
+    if-nez v1, :cond_0
+
+    invoke-direct {p0}, Landroid/view/ViewRootImpl;->mzGetImeOffset()I
+
+    move-result v1
+
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public mzGetMeizuFlags()I
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->meizuFlags:I
+
+    return v0
+.end method
+
+.method public mzGetShadowTouchPoint()Landroid/graphics/Point;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mMzShadowTouchPoint:Landroid/graphics/Point;
+
+    return-object v0
+.end method
+
+.method public mzGetStatusBarNfcShareEnabled()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mMzStatusBarNfcShareEnabled:Z
+
+    return v0
+.end method
+
+.method public mzSetDragTouchState(Landroid/graphics/Point;)V
+    .locals 0
+    .param p1, "shadowTouchPoint"    # Landroid/graphics/Point;
+
+    .prologue
+    iput-object p1, p0, Landroid/view/ViewRootImpl;->mMzShadowTouchPoint:Landroid/graphics/Point;
+
+    return-void
+.end method
+
+.method public mzSetStatusBarNfcShareEnabled(Z)V
+    .locals 0
+    .param p1, "enabled"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Landroid/view/ViewRootImpl;->mMzStatusBarNfcShareEnabled:Z
+
+    return-void
+.end method
+
+.method public needRefreshWhenStopped()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    iget-boolean v1, p0, Landroid/view/ViewRootImpl;->mForceLayoutByOrientation:Z
+
+    if-eqz v1, :cond_0
+
+    iput-boolean v0, p0, Landroid/view/ViewRootImpl;->mForceLayoutByOrientation:Z
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
+.method public processEventForMoveWinIfNeed(Landroid/view/InputEvent;)V
+    .locals 1
+    .param p1, "event"    # Landroid/view/InputEvent;
+
+    .prologue
+    instance-of v0, p1, Landroid/view/MotionEvent;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/view/MotionEvent;
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lmeizu/view/MoveWinManager;->getInstance(Landroid/content/Context;)Lmeizu/view/MoveWinManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lmeizu/view/MoveWinManager;->processInputEvent(Landroid/view/InputEvent;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setLastActionBar(Landroid/view/View;)V
+    .locals 0
+    .param p1, "v"    # Landroid/view/View;
+
+    .prologue
+    iput-object p1, p0, Landroid/view/ViewRootImpl;->mMzLastActionBar:Landroid/view/View;
+
+    return-void
+.end method
+
+.method public setLastContentView(Landroid/view/View;)V
+    .locals 0
+    .param p1, "v"    # Landroid/view/View;
+
+    .prologue
+    iput-object p1, p0, Landroid/view/ViewRootImpl;->mMzLastContentView:Landroid/view/View;
+
+    return-void
+.end method
+
+.method public setLastSplitActionBar(Landroid/view/View;)V
+    .locals 0
+    .param p1, "v"    # Landroid/view/View;
+
+    .prologue
+    iput-object p1, p0, Landroid/view/ViewRootImpl;->mMzLastSplitActionBar:Landroid/view/View;
+
+    return-void
+.end method
+
+.method public updateConfigurationForOrientation(Landroid/content/res/Configuration;)V
+    .locals 2
+    .param p1, "config"    # Landroid/content/res/Configuration;
+
+    .prologue
+    iget v0, p1, Landroid/content/res/Configuration;->orientation:I
+
+    iget-object v1, p0, Landroid/view/ViewRootImpl;->mLastConfiguration:Landroid/content/res/Configuration;
+
+    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mAppVisible:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/view/ViewRootImpl;->mForceLayoutByOrientation:Z
+
+    :cond_0
+    return-void
 .end method

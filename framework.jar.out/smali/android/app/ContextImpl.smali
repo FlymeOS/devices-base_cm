@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/ContextImpl$AccessControlServiceFetcher;,
         Landroid/app/ContextImpl$ApplicationContentResolver;,
         Landroid/app/ContextImpl$StaticServiceFetcher;,
         Landroid/app/ContextImpl$ServiceFetcher;
@@ -784,6 +785,8 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
+    invoke-static {}, Landroid/app/ContextImpl;->registeFlymeManager()V
+
     .line 798
     return-void
 .end method
@@ -1054,6 +1057,12 @@
     invoke-virtual/range {v2 .. v12}, Landroid/app/ResourcesManager;->getTopLevelResources(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILjava/lang/String;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;Landroid/os/IBinder;Landroid/content/Context;)Landroid/content/res/Resources;
 
     move-result-object v14
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v2, p3
+
+    invoke-direct {v0, v14, v2}, Landroid/app/ContextImpl;->setFlymeThemeResource(Landroid/content/res/Resources;Landroid/app/LoadedApk;)V
 
     .line 2330
     :cond_4
@@ -8294,4 +8303,38 @@
     move-exception v1
 
     goto :goto_0
+.end method
+
+.method private static registeFlymeManager()V
+    .locals 3
+
+    .prologue
+    const-string v0, "access_control"
+
+    new-instance v1, Landroid/app/ContextImpl$AccessControlServiceFetcher;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Landroid/app/ContextImpl$AccessControlServiceFetcher;-><init>(Landroid/app/ContextImpl$1;)V
+
+    invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
+
+    .line 798
+    return-void
+.end method
+
+.method private setFlymeThemeResource(Landroid/content/res/Resources;Landroid/app/LoadedApk;)V
+    .locals 1
+    .param p1, "resources"    # Landroid/content/res/Resources;
+    .param p2, "packageInfo"    # Landroid/app/LoadedApk;
+
+    .prologue
+    invoke-virtual {p2}, Landroid/app/LoadedApk;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->setFlymeThemeResource(Ljava/lang/String;)V
+
+    .line 2281
+    return-void
 .end method

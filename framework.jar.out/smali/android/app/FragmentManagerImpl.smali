@@ -21,6 +21,8 @@
 
 
 # instance fields
+.field private mAnimArray:Landroid/util/SparseIntArray;
+
 .field mActive:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3797,6 +3799,10 @@
 
     .line 778
     :cond_6
+    invoke-direct {p0, v0}, Landroid/app/FragmentManagerImpl;->mzOverlayAnim(I)I
+
+    move-result v0
+
     iget-object v4, p0, Landroid/app/FragmentManagerImpl;->mActivity:Landroid/app/Activity;
 
     invoke-static {v4, v0}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
@@ -8779,6 +8785,119 @@
     iget-object v1, p0, Landroid/app/FragmentManagerImpl;->mActivity:Landroid/app/Activity;
 
     invoke-static {v1, v0}, Landroid/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+
+    goto :goto_0
+.end method
+
+.method private mzOverlayAnim(I)I
+    .locals 6
+    .param p1, "id"    # I
+
+    .prologue
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Landroid/util/SparseIntArray;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3}, Landroid/util/SparseIntArray;-><init>(I)V
+
+    iput-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    .local v1, "res":Landroid/content/res/Resources;
+    if-nez v1, :cond_1
+
+    .end local v1    # "res":Landroid/content/res/Resources;
+    .end local p1    # "id":I
+    :cond_0
+    :goto_0
+    return p1
+
+    .restart local v1    # "res":Landroid/content/res/Resources;
+    .restart local p1    # "id":I
+    :cond_1
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    const-string v3, "fragment_open_enter"
+
+    const-string v4, "animator"
+
+    const-string v5, "android"
+
+    invoke-virtual {v1, v3, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    sget v4, Lcom/flyme/internal/R$animator;->mz_fragment_open_enter:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    const-string v3, "fragment_open_exit"
+
+    const-string v4, "animator"
+
+    const-string v5, "android"
+
+    invoke-virtual {v1, v3, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    sget v4, Lcom/flyme/internal/R$animator;->mz_fragment_open_exit:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    const-string v3, "fragment_close_enter"
+
+    const-string v4, "animator"
+
+    const-string v5, "android"
+
+    invoke-virtual {v1, v3, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    sget v4, Lcom/flyme/internal/R$animator;->mz_fragment_close_enter:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    const-string v3, "fragment_close_exit"
+
+    const-string v4, "animator"
+
+    const-string v5, "android"
+
+    invoke-virtual {v1, v3, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    sget v4, Lcom/flyme/internal/R$animator;->mz_fragment_close_exit:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    .end local v1    # "res":Landroid/content/res/Resources;
+    :cond_2
+    iget-object v2, p0, Landroid/app/FragmentManagerImpl;->mAnimArray:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v2, p1}, Landroid/util/SparseIntArray;->get(I)I
+
+    move-result v0
+
+    .local v0, "overlayId":I
+    if-lez v0, :cond_0
+
+    move p1, v0
 
     goto :goto_0
 .end method

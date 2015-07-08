@@ -17,7 +17,7 @@
     .line 32
     const-string v0, "android.display"
 
-    const/4 v1, -0x4
+    const/4 v1, -0x8
 
     const/4 v2, 0x0
 

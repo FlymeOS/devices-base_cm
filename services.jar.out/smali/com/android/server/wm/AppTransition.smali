@@ -841,7 +841,7 @@
     if-eqz v0, :cond_1
 
     .line 370
-    invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    invoke-static {v1, v0}, Lcom/android/server/wm/InjectorWMS;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v3
 
@@ -3761,7 +3761,7 @@
     if-eqz v0, :cond_1
 
     .line 342
-    invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    invoke-static {v1, v0}, Lcom/android/server/wm/InjectorWMS;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v3
 
@@ -3802,7 +3802,7 @@
 
     .line 354
     :cond_0
-    invoke-static {v0, p2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+    invoke-static {v0, p2}, Lcom/android/server/wm/InjectorWMS;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v2
 

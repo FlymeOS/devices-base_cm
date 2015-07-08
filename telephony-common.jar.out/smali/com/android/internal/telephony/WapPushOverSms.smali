@@ -17,6 +17,8 @@
 
 
 # instance fields
+.field private mAccessControlManager:Lmeizu/security/AccessControlManager;
+
 .field private final mContext:Landroid/content/Context;
 
 .field private volatile mWapPushManager:Lcom/android/internal/telephony/IWapPushManager;
@@ -2108,4 +2110,765 @@
 
     .line 83
     return-void
+.end method
+
+.method protected checkAccessControl()Z
+    .locals 3
+
+    .prologue
+    iget-object v1, p0, Lcom/android/internal/telephony/WapPushOverSms;->mAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/WapPushOverSms;->mContext:Landroid/content/Context;
+
+    const-string v2, "access_control"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmeizu/security/AccessControlManager;
+
+    iput-object v1, p0, Lcom/android/internal/telephony/WapPushOverSms;->mAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/internal/telephony/WapPushOverSms;->mAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    const-string v2, "com.android.mms"
+
+    invoke-virtual {v1, v2}, Lmeizu/security/AccessControlManager;->checkAccessControl(Ljava/lang/String;)Z
+
+    move-result v0
+
+    .local v0, "encryption":Z
+    return v0
+.end method
+
+.method public dispatchWapPduExt([BLandroid/content/BroadcastReceiver;Lcom/android/internal/telephony/InboundSmsHandler;[[BLjava/lang/String;)I
+    .locals 34
+    .param p1, "pdu"    # [B
+    .param p2, "receiver"    # Landroid/content/BroadcastReceiver;
+    .param p3, "handler"    # Lcom/android/internal/telephony/InboundSmsHandler;
+    .param p4, "rawSmsPdus"    # [[B
+    .param p5, "format"    # Ljava/lang/String;
+
+    .prologue
+    const/16 v19, 0x0
+
+    .local v19, "index":I
+    add-int/lit8 v20, v19, 0x1
+
+    .end local v19    # "index":I
+    .local v20, "index":I
+    :try_start_0
+    aget-byte v4, p1, v19
+    :try_end_0
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_2
+
+    and-int/lit16 v0, v4, 0xff
+
+    move/from16 v31, v0
+
+    .local v31, "transactionId":I
+    add-int/lit8 v19, v20, 0x1
+
+    .end local v20    # "index":I
+    .restart local v19    # "index":I
+    :try_start_1
+    aget-byte v4, p1, v20
+
+    and-int/lit16 v0, v4, 0xff
+
+    move/from16 v24, v0
+
+    .local v24, "pduType":I
+    invoke-virtual/range {p3 .. p3}, Lcom/android/internal/telephony/InboundSmsHandler;->getPhone()Lcom/android/internal/telephony/PhoneBase;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/android/internal/telephony/PhoneBase;->getPhoneId()I
+
+    move-result v25
+
+    .local v25, "phoneId":I
+    const/4 v4, 0x6
+
+    move/from16 v0, v24
+
+    if-eq v0, v4, :cond_1
+
+    const/4 v4, 0x7
+
+    move/from16 v0, v24
+
+    if-eq v0, v4, :cond_1
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/internal/telephony/WapPushOverSms;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v8, #android:integer@config_valid_wappush_index#t
+
+    invoke-virtual {v4, v8}, Landroid/content/res/Resources;->getInteger(I)I
+    :try_end_1
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result v19
+
+    const/4 v4, -0x1
+
+    move/from16 v0, v19
+
+    if-eq v0, v4, :cond_0
+
+    add-int/lit8 v20, v19, 0x1
+
+    .end local v19    # "index":I
+    .restart local v20    # "index":I
+    :try_start_2
+    aget-byte v4, p1, v19
+    :try_end_2
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_2
+
+    and-int/lit16 v0, v4, 0xff
+
+    move/from16 v31, v0
+
+    add-int/lit8 v19, v20, 0x1
+
+    .end local v20    # "index":I
+    .restart local v19    # "index":I
+    :try_start_3
+    aget-byte v4, p1, v20
+
+    and-int/lit16 v0, v4, 0xff
+
+    move/from16 v24, v0
+
+    const/4 v4, 0x6
+
+    move/from16 v0, v24
+
+    if-eq v0, v4, :cond_1
+
+    const/4 v4, 0x7
+
+    move/from16 v0, v24
+
+    if-eq v0, v4, :cond_1
+
+    const/4 v4, 0x1
+
+    .end local v24    # "pduType":I
+    .end local v25    # "phoneId":I
+    .end local v31    # "transactionId":I
+    :goto_0
+    return v4
+
+    .restart local v24    # "pduType":I
+    .restart local v25    # "phoneId":I
+    .restart local v31    # "transactionId":I
+    :cond_0
+    const/4 v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v23, Lcom/android/internal/telephony/WspTypeDecoder;
+
+    move-object/from16 v0, v23
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1}, Lcom/android/internal/telephony/WspTypeDecoder;-><init>([B)V
+
+    .local v23, "pduDecoder":Lcom/android/internal/telephony/WspTypeDecoder;
+    move-object/from16 v0, v23
+
+    move/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeUintvarInteger(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    const/4 v4, 0x2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
+
+    move-result-wide v8
+
+    long-to-int v0, v8
+
+    move/from16 v17, v0
+
+    .local v17, "headerLength":I
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
+
+    move-result v4
+
+    add-int v19, v19, v4
+
+    move/from16 v18, v19
+
+    .local v18, "headerStartIndex":I
+    move-object/from16 v0, v23
+
+    move/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeContentType(I)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    const/4 v4, 0x2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
+
+    move-result-object v22
+
+    .local v22, "mimeType":Ljava/lang/String;
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
+
+    move-result-wide v12
+
+    .local v12, "binaryContentType":J
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
+
+    move-result v4
+
+    add-int v19, v19, v4
+
+    move/from16 v0, v17
+
+    new-array v0, v0, [B
+
+    move-object/from16 v16, v0
+
+    .local v16, "header":[B
+    const/4 v4, 0x0
+
+    move-object/from16 v0, v16
+
+    array-length v8, v0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v18
+
+    move-object/from16 v2, v16
+
+    invoke-static {v0, v1, v2, v4, v8}, Ljava/lang/System;->arraycopy([BI[BII)V
+
+    if-eqz v22, :cond_8
+
+    const-string v4, "application/vnd.wap.coc"
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "application/vnd.wap.sic"
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "application/vnd.wap.slc"
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    :cond_4
+    move-object/from16 v21, p1
+
+    .local v21, "intentData":[B
+    :goto_1
+    invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/telephony/SmsManager;->getAutoPersisting()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    invoke-static/range {v25 .. v25}, Landroid/telephony/SubscriptionManager;->getSubId(I)[J
+
+    move-result-object v30
+
+    .local v30, "subIds":[J
+    if-eqz v30, :cond_9
+
+    move-object/from16 v0, v30
+
+    array-length v4, v0
+
+    if-lez v4, :cond_9
+
+    const/4 v4, 0x0
+
+    aget-wide v28, v30, v4
+
+    .local v28, "subId":J
+    :goto_2
+    move-object/from16 v0, p0
+
+    move-wide/from16 v1, v28
+
+    move-object/from16 v3, v21
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/WapPushOverSms;->writeInboxMessage(J[B)V
+
+    .end local v28    # "subId":J
+    .end local v30    # "subIds":[J
+    :cond_5
+    add-int v4, v19, v17
+
+    add-int/lit8 v4, v4, -0x1
+
+    move-object/from16 v0, v23
+
+    move/from16 v1, v19
+
+    invoke-virtual {v0, v1, v4}, Lcom/android/internal/telephony/WspTypeDecoder;->seekXWapApplicationId(II)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
+
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
+
+    move-result-wide v8
+
+    long-to-int v0, v8
+
+    move/from16 v19, v0
+
+    move-object/from16 v0, v23
+
+    move/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeXWapApplicationId(I)Z
+
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
+
+    move-result-object v32
+
+    .local v32, "wapAppId":Ljava/lang/String;
+    if-nez v32, :cond_6
+
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
+
+    move-result-wide v8
+
+    long-to-int v4, v8
+
+    invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v32
+
+    :cond_6
+    if-nez v22, :cond_a
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    :try_end_3
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_3 .. :try_end_3} :catch_0
+
+    move-result-object v14
+
+    .local v14, "contentType":Ljava/lang/String;
+    :goto_3
+    const/16 v27, 0x1
+
+    .local v27, "processFurther":Z
+    :try_start_4
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/internal/telephony/WapPushOverSms;->mWapPushManager:Lcom/android/internal/telephony/IWapPushManager;
+
+    move-object/from16 v33, v0
+
+    .local v33, "wapPushMan":Lcom/android/internal/telephony/IWapPushManager;
+    if-eqz v33, :cond_7
+
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5}, Landroid/content/Intent;-><init>()V
+
+    .local v5, "intent":Landroid/content/Intent;
+    const-string v4, "transactionId"
+
+    move/from16 v0, v31
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v4, "pduType"
+
+    move/from16 v0, v24
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v4, "header"
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    const-string v4, "data"
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    const-string v4, "contentTypeParameters"
+
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getContentParameters()Ljava/util/HashMap;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v4, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    move/from16 v0, v25
+
+    invoke-static {v5, v0}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
+
+    const-string v4, "pdus"
+
+    move-object/from16 v0, p4
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    const-string v4, "format"
+
+    move-object/from16 v0, p5
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-object/from16 v0, v33
+
+    move-object/from16 v1, v32
+
+    invoke-interface {v0, v1, v14, v5}, Lcom/android/internal/telephony/IWapPushManager;->processMessage(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)I
+    :try_end_4
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_4 .. :try_end_4} :catch_0
+
+    move-result v26
+
+    .local v26, "procRet":I
+    and-int/lit8 v4, v26, 0x1
+
+    if-lez v4, :cond_7
+
+    const v4, 0x8000
+
+    and-int v4, v4, v26
+
+    if-nez v4, :cond_7
+
+    const/16 v27, 0x0
+
+    .end local v5    # "intent":Landroid/content/Intent;
+    .end local v26    # "procRet":I
+    :cond_7
+    if-nez v27, :cond_b
+
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .end local v14    # "contentType":Ljava/lang/String;
+    .end local v21    # "intentData":[B
+    .end local v27    # "processFurther":Z
+    .end local v32    # "wapAppId":Ljava/lang/String;
+    .end local v33    # "wapPushMan":Lcom/android/internal/telephony/IWapPushManager;
+    :cond_8
+    add-int v15, v18, v17
+
+    .local v15, "dataIndex":I
+    :try_start_5
+    move-object/from16 v0, p1
+
+    array-length v4, v0
+
+    sub-int/2addr v4, v15
+
+    new-array v0, v4, [B
+
+    move-object/from16 v21, v0
+
+    .restart local v21    # "intentData":[B
+    const/4 v4, 0x0
+
+    move-object/from16 v0, v21
+
+    array-length v8, v0
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v21
+
+    invoke-static {v0, v15, v1, v4, v8}, Ljava/lang/System;->arraycopy([BI[BII)V
+
+    goto/16 :goto_1
+
+    .end local v12    # "binaryContentType":J
+    .end local v15    # "dataIndex":I
+    .end local v16    # "header":[B
+    .end local v17    # "headerLength":I
+    .end local v18    # "headerStartIndex":I
+    .end local v21    # "intentData":[B
+    .end local v22    # "mimeType":Ljava/lang/String;
+    .end local v23    # "pduDecoder":Lcom/android/internal/telephony/WspTypeDecoder;
+    .end local v24    # "pduType":I
+    .end local v25    # "phoneId":I
+    :catch_0
+    move-exception v10
+
+    .end local v31    # "transactionId":I
+    .local v10, "aie":Ljava/lang/ArrayIndexOutOfBoundsException;
+    :goto_4
+    const/4 v4, 0x2
+
+    goto/16 :goto_0
+
+    .end local v10    # "aie":Ljava/lang/ArrayIndexOutOfBoundsException;
+    .restart local v12    # "binaryContentType":J
+    .restart local v16    # "header":[B
+    .restart local v17    # "headerLength":I
+    .restart local v18    # "headerStartIndex":I
+    .restart local v21    # "intentData":[B
+    .restart local v22    # "mimeType":Ljava/lang/String;
+    .restart local v23    # "pduDecoder":Lcom/android/internal/telephony/WspTypeDecoder;
+    .restart local v24    # "pduType":I
+    .restart local v25    # "phoneId":I
+    .restart local v30    # "subIds":[J
+    .restart local v31    # "transactionId":I
+    :cond_9
+    invoke-static {}, Landroid/telephony/SmsManager;->getDefaultSmsSubId()J
+
+    move-result-wide v28
+
+    goto/16 :goto_2
+
+    .end local v30    # "subIds":[J
+    .restart local v32    # "wapAppId":Ljava/lang/String;
+    :cond_a
+    move-object/from16 v14, v22
+
+    goto/16 :goto_3
+
+    .restart local v14    # "contentType":Ljava/lang/String;
+    .restart local v27    # "processFurther":Z
+    :catch_1
+    move-exception v4
+
+    .end local v14    # "contentType":Ljava/lang/String;
+    .end local v27    # "processFurther":Z
+    .end local v32    # "wapAppId":Ljava/lang/String;
+    :cond_b
+    if-nez v22, :cond_c
+
+    const/4 v4, 0x2
+
+    goto/16 :goto_0
+
+    :cond_c
+    const-string v4, "application/vnd.wap.mms-message"
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_f
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WapPushOverSms;->checkAccessControl()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_e
+
+    const-string v6, "android.permission.RECEIVE_MMS_SUPER"
+
+    .local v6, "permission":Ljava/lang/String;
+    :goto_5
+    const/16 v7, 0x12
+
+    .local v7, "appOp":I
+    :goto_6
+    new-instance v5, Landroid/content/Intent;
+
+    const-string v4, "android.provider.Telephony.WAP_PUSH_DELIVER"
+
+    invoke-direct {v5, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .restart local v5    # "intent":Landroid/content/Intent;
+    move-object/from16 v0, v22
+
+    invoke-virtual {v5, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v4, "transactionId"
+
+    move/from16 v0, v31
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v4, "pduType"
+
+    move/from16 v0, v24
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v4, "header"
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    const-string v4, "data"
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    const-string v4, "contentTypeParameters"
+
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/telephony/WspTypeDecoder;->getContentParameters()Ljava/util/HashMap;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v4, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    move/from16 v0, v25
+
+    invoke-static {v5, v0}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
+
+    const-string v4, "pdus"
+
+    move-object/from16 v0, p4
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    const-string v4, "format"
+
+    move-object/from16 v0, p5
+
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/internal/telephony/WapPushOverSms;->mContext:Landroid/content/Context;
+
+    const/4 v8, 0x1
+
+    invoke-static {v4, v8}, Lcom/android/internal/telephony/SmsApplication;->getDefaultMmsApplication(Landroid/content/Context;Z)Landroid/content/ComponentName;
+
+    move-result-object v11
+
+    .local v11, "componentName":Landroid/content/ComponentName;
+    if-eqz v11, :cond_d
+
+    invoke-virtual {v5, v11}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    :cond_d
+    sget-object v9, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
+
+    move-object/from16 v4, p3
+
+    move-object/from16 v8, p2
+
+    invoke-virtual/range {v4 .. v9}, Lcom/android/internal/telephony/InboundSmsHandler;->dispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;Landroid/os/UserHandle;)V
+
+    const/4 v4, -0x1
+
+    goto/16 :goto_0
+
+    .end local v5    # "intent":Landroid/content/Intent;
+    .end local v6    # "permission":Ljava/lang/String;
+    .end local v7    # "appOp":I
+    .end local v11    # "componentName":Landroid/content/ComponentName;
+    :cond_e
+    const-string v6, "android.permission.RECEIVE_MMS"
+
+    .restart local v6    # "permission":Ljava/lang/String;
+    goto :goto_5
+
+    .end local v6    # "permission":Ljava/lang/String;
+    :cond_f
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WapPushOverSms;->checkAccessControl()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_10
+
+    const-string v6, "android.permission.RECEIVE_WAP_PUSH_SUPER"
+
+    .restart local v6    # "permission":Ljava/lang/String;
+    :goto_7
+    const/16 v7, 0x13
+
+    .restart local v7    # "appOp":I
+    goto :goto_6
+
+    .end local v6    # "permission":Ljava/lang/String;
+    .end local v7    # "appOp":I
+    :cond_10
+    const-string v6, "android.permission.RECEIVE_WAP_PUSH"
+    :try_end_5
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_5 .. :try_end_5} :catch_0
+
+    .restart local v6    # "permission":Ljava/lang/String;
+    goto :goto_7
+
+    .end local v6    # "permission":Ljava/lang/String;
+    .end local v12    # "binaryContentType":J
+    .end local v16    # "header":[B
+    .end local v17    # "headerLength":I
+    .end local v18    # "headerStartIndex":I
+    .end local v19    # "index":I
+    .end local v21    # "intentData":[B
+    .end local v22    # "mimeType":Ljava/lang/String;
+    .end local v23    # "pduDecoder":Lcom/android/internal/telephony/WspTypeDecoder;
+    .end local v24    # "pduType":I
+    .end local v25    # "phoneId":I
+    .end local v31    # "transactionId":I
+    .restart local v20    # "index":I
+    :catch_2
+    move-exception v10
+
+    move/from16 v19, v20
+
+    .end local v20    # "index":I
+    .restart local v19    # "index":I
+    goto/16 :goto_4
 .end method

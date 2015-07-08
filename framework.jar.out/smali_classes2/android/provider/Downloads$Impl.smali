@@ -24,6 +24,8 @@
 
 
 # static fields
+.field public static final COLUMN_ORIGINAL_URI:Ljava/lang/String; = "original_uri"
+
 .field public static final ACTION_DOWNLOAD_COMPLETED:Ljava/lang/String; = "android.intent.action.DOWNLOAD_COMPLETED"
 
 .field public static final ACTION_NOTIFICATION_CLICKED:Ljava/lang/String; = "android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"

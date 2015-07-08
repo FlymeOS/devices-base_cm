@@ -50,6 +50,10 @@ selinux.                u:object_r:security_prop:s0
 vold.                   u:object_r:vold_prop:s0
 crypto.                 u:object_r:vold_prop:s0
 
+# Flyme kuangqianbo add for mtpd to access system_property {@
+meizu.vpn.              u:object_r:meizu_vpn_prop:s0
+# @}
+
 # ctl properties
 ctl.bootanim            u:object_r:ctl_bootanim_prop:s0
 ctl.dumpstate           u:object_r:ctl_dumpstate_prop:s0

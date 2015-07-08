@@ -289,6 +289,8 @@
     .line 64
     iput-object p2, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
+    invoke-direct {p0, p2}, Lcom/android/internal/view/menu/BaseMenuPresenter;->mzInitMenuView(Lcom/android/internal/view/menu/MenuBuilder;)V
+
     .line 65
     return-void
 .end method
@@ -536,4 +538,21 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
+.end method
+
+.method private mzInitMenuView(Lcom/android/internal/view/menu/MenuBuilder;)V
+    .locals 1
+    .param p1, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenuView:Lcom/android/internal/view/menu/MenuView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mMenuView:Lcom/android/internal/view/menu/MenuView;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/view/menu/MenuView;->initialize(Lcom/android/internal/view/menu/MenuBuilder;)V
+
+    :cond_0
+    return-void
 .end method

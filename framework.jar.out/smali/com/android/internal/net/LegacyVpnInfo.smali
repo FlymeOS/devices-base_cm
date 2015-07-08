@@ -15,6 +15,78 @@
 
 
 # static fields
+.field public static final BROADCAST_EXTRA_KEY_STATE_CHANGED:Ljava/lang/String; = "vpn_state"
+
+.field public static final STATE_MAX:I = 0x99
+
+.field public static final STATE_MTPD_EXIT_CHALLENGE_FAILED:I = 0x68
+
+.field public static final STATE_MTPD_EXIT_CONNECT_SERVER_ERROR:I = 0x6d
+
+.field public static final STATE_MTPD_EXIT_GET_SERVER_ADDR_ERROR:I = 0x6c
+
+.field public static final STATE_MTPD_EXIT_NETWORK_ERROR:I = 0x66
+
+.field public static final STATE_MTPD_EXIT_OFFSET:I = 0x64
+
+.field public static final STATE_MTPD_EXIT_PROTOCOL_ERROR:I = 0x67
+
+.field public static final STATE_MTPD_EXIT_PROTOCOL_NOT_COMPATIBLE:I = 0x6b
+
+.field public static final STATE_MTPD_EXIT_REMOTE_REQUESTED:I = 0x6a
+
+.field public static final STATE_MTPD_EXIT_SYSTEM_ERROR:I = 0x65
+
+.field public static final STATE_MTPD_EXIT_USER_REQUESTED:I = 0x69
+
+.field public static final STATE_PPPD_EXIT_AUTH_TOPEER_FAILED:I = 0x97
+
+.field public static final STATE_PPPD_EXIT_CALLBACK:I = 0x92
+
+.field public static final STATE_PPPD_EXIT_CNID_AUTH_FAILED:I = 0x99
+
+.field public static final STATE_PPPD_EXIT_CONNECT_FAILED:I = 0x8c
+
+.field public static final STATE_PPPD_EXIT_CONNECT_TIME:I = 0x91
+
+.field public static final STATE_PPPD_EXIT_FATAL_ERROR:I = 0x85
+
+.field public static final STATE_PPPD_EXIT_HANGUP:I = 0x94
+
+.field public static final STATE_PPPD_EXIT_IDLE_TIMEOUT:I = 0x90
+
+.field public static final STATE_PPPD_EXIT_INIT_FAILED:I = 0x96
+
+.field public static final STATE_PPPD_EXIT_LOCK_FAILED:I = 0x8a
+
+.field public static final STATE_PPPD_EXIT_LOOPBACK:I = 0x95
+
+.field public static final STATE_PPPD_EXIT_NEGOTIATION_FAILED:I = 0x8e
+
+.field public static final STATE_PPPD_EXIT_NOT_ROOT:I = 0x87
+
+.field public static final STATE_PPPD_EXIT_NO_KERNEL_SUPPORT:I = 0x88
+
+.field public static final STATE_PPPD_EXIT_OFFSET:I = 0x84
+
+.field public static final STATE_PPPD_EXIT_OPEN_FAILED:I = 0x8b
+
+.field public static final STATE_PPPD_EXIT_OPTION_ERROR:I = 0x86
+
+.field public static final STATE_PPPD_EXIT_PEER_AUTH_FAILED:I = 0x8f
+
+.field public static final STATE_PPPD_EXIT_PEER_DEAD:I = 0x93
+
+.field public static final STATE_PPPD_EXIT_PTYCMD_FAILED:I = 0x8d
+
+.field public static final STATE_PPPD_EXIT_TRAFFIC_LIMIT:I = 0x98
+
+.field public static final STATE_PPPD_EXIT_USER_REQUEST:I = 0x89
+
+.field public static final STATE_USING_NETWORKINFO_STATE:I = -0x1
+
+.field public static final STATE_WAIT_FOR_RECONNECT:I = 0x6
+
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {

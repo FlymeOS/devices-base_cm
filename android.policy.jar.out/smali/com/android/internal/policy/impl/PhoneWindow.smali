@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;,
         Lcom/android/internal/policy/impl/PhoneWindow$DialogMenuCallback;,
         Lcom/android/internal/policy/impl/PhoneWindow$RotationWatcher;,
         Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;,
@@ -1679,6 +1680,8 @@
 
     .line 3842
     :cond_3
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->setWindowAttributesToActionbar(Lcom/android/internal/policy/impl/PhoneWindow;)V
+
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
 
     iget v8, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mUiOptions:I
@@ -2076,6 +2079,8 @@
     move-result-object v8
 
     invoke-interface {v7, v8}, Lcom/android/internal/widget/DecorContentParent;->setIcon(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->mzSetDefaultIcon(Lcom/android/internal/policy/impl/PhoneWindow;)V
 
     .line 3851
     iget v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mResourcesSetFlags:I
@@ -10881,4 +10886,13 @@
     .line 1478
     :cond_0
     return-void
+.end method
+
+.method getDecorContentParent()Lcom/android/internal/widget/DecorContentParent;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
+
+    return-object v0
 .end method

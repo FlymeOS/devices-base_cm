@@ -1187,6 +1187,10 @@
     .param p2, "iconRes"    # I
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/net/LockdownVpnTracker;->getFlymeIcon()I
+
+    move-result p2
+
     .line 332
     new-instance v1, Landroid/app/Notification$Builder;
 
@@ -1635,4 +1639,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method private getFlymeIcon()I
+    .locals 1
+
+    .prologue
+    sget v0, Lcom/flyme/internal/R$drawable;->mz_stat_sys_vpn_connected:I
+
+    return v0
 .end method

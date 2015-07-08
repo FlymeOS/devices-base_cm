@@ -10,6 +10,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/preference/PreferenceScreen$1;,
+        Landroid/preference/PreferenceScreen$FlymeListViewDividerFilter;,
         Landroid/preference/PreferenceScreen$SavedState;
     }
 .end annotation
@@ -182,6 +184,8 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
+    invoke-direct/range {p0 .. p1}, Landroid/preference/PreferenceScreen;->mzBind(Landroid/widget/ListView;)V
+
     .line 146
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->onAttachedToActivity()V
 
@@ -353,6 +357,8 @@
 
     .line 214
     .local v1, "preference":Landroid/preference/Preference;
+    invoke-direct {p0, p2, v1}, Landroid/preference/PreferenceScreen;->mzSetPreferenceView(Landroid/view/View;Landroid/preference/Preference;)V
+
     invoke-virtual {v1, p0}, Landroid/preference/Preference;->performClick(Landroid/preference/PreferenceScreen;)V
 
     goto :goto_0
@@ -464,4 +470,59 @@
     iput-object v3, v1, Landroid/preference/PreferenceScreen$SavedState;->dialogBundle:Landroid/os/Bundle;
 
     goto :goto_0
+.end method
+
+.method private mzBind(Landroid/widget/ListView;)V
+    .locals 2
+    .param p1, "listView"    # Landroid/widget/ListView;
+
+    .prologue
+    invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->isDeviceDefaultTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/widget/ListView;->applyMeizuPartitionStyle()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1}, Landroid/widget/ListView;->setDividerInSide(Z)V
+
+    new-instance v0, Landroid/preference/PreferenceScreen$FlymeListViewDividerFilter;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Landroid/preference/PreferenceScreen$FlymeListViewDividerFilter;-><init>(Landroid/preference/PreferenceScreen;Landroid/preference/PreferenceScreen$1;)V
+
+    .local v0, "dividerFilter":Landroid/preference/PreferenceScreen$FlymeListViewDividerFilter;
+    invoke-virtual {p1, v0}, Landroid/widget/ListView;->setDividerFilterListener(Landroid/widget/ListView$DividerFilter;)V
+
+    .end local v0    # "dividerFilter":Landroid/preference/PreferenceScreen$FlymeListViewDividerFilter;
+    :cond_0
+    return-void
+.end method
+
+.method private mzSetPreferenceView(Landroid/view/View;Landroid/preference/Preference;)V
+    .locals 0
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "preference"    # Landroid/preference/Preference;
+
+    .prologue
+    invoke-virtual {p2, p1}, Landroid/preference/Preference;->setPreferenceView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method getListAdapter()Landroid/widget/ListAdapter;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/preference/PreferenceScreen;->mRootAdapter:Landroid/widget/ListAdapter;
+
+    return-object v0
 .end method

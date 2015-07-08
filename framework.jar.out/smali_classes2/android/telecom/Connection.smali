@@ -17,6 +17,38 @@
 
 
 # static fields
+.field public static final CAPABILITY_DISCONNECT_FROM_CONFERENCE:I = 0x2000
+
+.field public static final CAPABILITY_GENERIC_CONFERENCE:I = 0x4000
+
+.field public static final CAPABILITY_HIGH_DEF_AUDIO:I = 0x400
+
+.field public static final CAPABILITY_HOLD:I = 0x1
+
+.field public static final CAPABILITY_MANAGE_CONFERENCE:I = 0x80
+
+.field public static final CAPABILITY_MERGE_CONFERENCE:I = 0x4
+
+.field public static final CAPABILITY_MUTE:I = 0x40
+
+.field public static final CAPABILITY_RESPOND_VIA_TEXT:I = 0x20
+
+.field public static final CAPABILITY_SEPARATE_FROM_CONFERENCE:I = 0x1000
+
+.field public static final CAPABILITY_SUPPORTS_VT_LOCAL:I = 0x100
+
+.field public static final CAPABILITY_SUPPORTS_VT_REMOTE:I = 0x200
+
+.field public static final CAPABILITY_SUPPORT_HOLD:I = 0x2
+
+.field public static final CAPABILITY_SWAP_CONFERENCE:I = 0x8
+
+.field public static final CAPABILITY_UNUSED:I = 0x10
+
+.field public static final CAPABILITY_VoWIFI:I = 0x800
+
+.field public static final STATE_ALERTING:I = 0x7
+
 .field public static final CALL_SUBSTATE_AUDIO_CONNECTED_SUSPENDED:I = 0x1
 
 .field public static final CALL_SUBSTATE_AVP_RETRY:I = 0x4
@@ -2268,4 +2300,224 @@
     .end local v1    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
+.end method
+
+.method public static can(II)Z
+    .locals 1
+    .param p0, "capabilities"    # I
+    .param p1, "capability"    # I
+
+    .prologue
+    and-int v0, p0, p1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static capabilitiesToString(I)Ljava/lang/String;
+    .locals 2
+    .param p0, "capabilities"    # I
+
+    .prologue
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .local v0, "builder":Ljava/lang/StringBuilder;
+    const-string v1, "[Capabilities:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, " CAPABILITY_HOLD"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    const/4 v1, 0x2
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, " CAPABILITY_SUPPORT_HOLD"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    const/4 v1, 0x4
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, " CAPABILITY_MERGE_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    const/16 v1, 0x8
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, " CAPABILITY_SWAP_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    const/16 v1, 0x20
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string v1, " CAPABILITY_RESPOND_VIA_TEXT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    const/16 v1, 0x40
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-string v1, " CAPABILITY_MUTE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    const/16 v1, 0x80
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    const-string v1, " CAPABILITY_MANAGE_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_6
+    const/16 v1, 0x100
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_7
+    const/16 v1, 0x200
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_8
+    const/16 v1, 0x400
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const-string v1, " CAPABILITY_HIGH_DEF_AUDIO"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_9
+    const/16 v1, 0x800
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    const-string v1, " CAPABILITY_VoWIFI"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_a
+    const/16 v1, 0x4000
+
+    invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    const-string v1, " CAPABILITY_GENERIC_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_b
+    and-int/lit16 v1, p0, 0x1000
+
+    if-eqz v1, :cond_c
+
+    const-string v1, " CAPABILITY_SEPARATE_FROM_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_c
+    and-int/lit16 v1, p0, 0x2000
+
+    if-eqz v1, :cond_d
+
+    const-string v1, " CAPABILITY_DISCONNECT_FROM_CONFERENCE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_d
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
 .end method

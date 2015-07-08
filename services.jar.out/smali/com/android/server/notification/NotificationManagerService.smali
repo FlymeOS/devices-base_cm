@@ -117,6 +117,10 @@
 
 
 # instance fields
+.field mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+.field mServiceAquireLock:Ljava/lang/Object;
+
 .field private mActiveMedia:Z
 
 .field private mAm:Landroid/app/IActivityManager;
@@ -545,6 +549,8 @@
     invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mSpamCache:Landroid/util/LruCache;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService;->initServiceAquireLock()V
 
     .line 911
     return-void
@@ -1868,6 +1874,10 @@
 
     move-result v4
 
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService;->isVibrateOn()Z
+
+    move-result v4
+
     if-eqz v4, :cond_c
 
     .line 2118
@@ -2583,6 +2593,8 @@
 
     .line 2520
     :cond_1
+    invoke-virtual/range {p0 .. p1}, Lcom/android/server/notification/NotificationManagerService;->hookcancelNotification(Lcom/android/server/notification/NotificationRecord;)V
+
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService;->mSoundNotification:Lcom/android/server/notification/NotificationRecord;
 
     if-ne v4, p1, :cond_3
@@ -3095,6 +3107,8 @@
 
     .line 1665
     const-string v0, "callState"
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
@@ -9384,4 +9398,384 @@
 
     .restart local v3    # "ledOffMS":I
     goto :goto_5
+.end method
+
+.method getFlymeStatusBarService()Lmeizu/statusbar/IFlymeStatusBarService;
+    .locals 2
+
+    .prologue
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mServiceAquireLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "flyme_statusbar"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmeizu/statusbar/IFlymeStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lmeizu/statusbar/IFlymeStatusBarService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    monitor-exit v1
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public hookEnqueueNotification(Landroid/app/Notification;Lcom/android/server/notification/NotificationRecord;Landroid/service/notification/StatusBarNotification;Lcom/android/server/notification/NotificationRecord;)V
+    .locals 8
+    .param p1, "notification"    # Landroid/app/Notification;
+    .param p2, "old"    # Lcom/android/server/notification/NotificationRecord;
+    .param p3, "n"    # Landroid/service/notification/StatusBarNotification;
+    .param p4, "r"    # Lcom/android/server/notification/NotificationRecord;
+
+    .prologue
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
+
+    move-result-object v1
+
+    iget-wide v6, v1, Landroid/app/Notification;->when:J
+
+    iput-wide v6, p1, Landroid/app/Notification;->when:J
+
+    :cond_0
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v4
+
+    .local v4, "token":J
+    :try_start_0
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    .local v0, "currentUser":I
+    invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    iget v1, p1, Landroid/app/Notification;->icon:I
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object v6
+
+    invoke-static {v1, v6}, Landroid/app/Notification$Builder;->rebuild(Landroid/content/Context;Landroid/app/Notification;)Landroid/app/Notification;
+
+    invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService;->getFlymeStatusBarService()Lmeizu/statusbar/IFlymeStatusBarService;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    if-nez v1, :cond_2
+
+    :cond_1
+    :goto_0
+    return-void
+
+    .end local v0    # "currentUser":I
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v1
+
+    .restart local v0    # "currentUser":I
+    :cond_2
+    if-eqz p2, :cond_3
+
+    iget-object v1, p2, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p2, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    iput-object v1, p4, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v2
+
+    .local v2, "identity":J
+    :try_start_1
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    iget-object v6, p4, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    invoke-interface {v1, v6, p3}, Lmeizu/statusbar/IFlymeStatusBarService;->updateNotification(Landroid/os/IBinder;Landroid/service/notification/StatusBarNotification;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v1
+
+    .end local v2    # "identity":J
+    :cond_3
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v2
+
+    .restart local v2    # "identity":J
+    :try_start_2
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    invoke-interface {v1, p3}, Lmeizu/statusbar/IFlymeStatusBarService;->addNotification(Landroid/service/notification/StatusBarNotification;)Landroid/os/IBinder;
+
+    move-result-object v1
+
+    iput-object v1, p4, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+    :try_end_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v1
+
+    .end local v2    # "identity":J
+    :cond_4
+    const-string v1, "NotificationService"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Not posting notification with icon==0: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v1, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_1
+
+    iget-object v1, p2, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v2
+
+    .restart local v2    # "identity":J
+    :try_start_3
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    iget-object v6, p2, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    invoke-interface {v1, v6}, Lmeizu/statusbar/IFlymeStatusBarService;->removeNotification(Landroid/os/IBinder;)V
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catchall_3
+    move-exception v1
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v1
+.end method
+
+.method public hookcancelNotification(Lcom/android/server/notification/NotificationRecord;)V
+    .locals 4
+    .param p1, "r"    # Lcom/android/server/notification/NotificationRecord;
+
+    .prologue
+    invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/app/Notification;->icon:I
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService;->getFlymeStatusBarService()Lmeizu/statusbar/IFlymeStatusBarService;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    if-eqz v2, :cond_0
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v0
+
+    .local v0, "identity":J
+    :try_start_0
+    iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService;->mFlymeStatusBarService:Lmeizu/statusbar/IFlymeStatusBarService;
+
+    iget-object v3, p1, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    invoke-interface {v2, v3}, Lmeizu/statusbar/IFlymeStatusBarService;->removeNotification(Landroid/os/IBinder;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    :goto_0
+    const/4 v2, 0x0
+
+    iput-object v2, p1, Lcom/android/server/notification/NotificationRecord;->statusBarKey:Landroid/os/IBinder;
+
+    .end local v0    # "identity":J
+    :cond_0
+    const/4 v2, 0x1
+
+    iput-boolean v2, p1, Lcom/android/server/notification/NotificationRecord;->isCanceled:Z
+
+    iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService;->mListeners:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
+
+    iget-object v3, p1, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
+
+    invoke-virtual {v2, v3}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->notifyRemovedLocked(Landroid/service/notification/StatusBarNotification;)V
+
+    :cond_1
+    return-void
+
+    .restart local v0    # "identity":J
+    :catch_0
+    move-exception v2
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v2
+.end method
+
+.method public initServiceAquireLock()V
+    .locals 1
+
+    .prologue
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mServiceAquireLock:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method final isVibrateOn()Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "vibrate_when_ringing"
+
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
 .end method

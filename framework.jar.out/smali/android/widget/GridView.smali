@@ -5276,7 +5276,7 @@
 .end method
 
 .method findMotionRow(I)I
-    .locals 4
+    .locals 5
     .param p1, "y"    # I
 
     .prologue
@@ -5313,6 +5313,10 @@
     invoke-virtual {v3}, Landroid/view/View;->getBottom()I
 
     move-result v3
+
+    iget v4, p0, Landroid/widget/GridView;->mScrollY:I
+
+    sub-int/2addr v3, v4
 
     if-gt p1, v3, :cond_0
 
@@ -5352,6 +5356,10 @@
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v3
+
+    iget v4, p0, Landroid/widget/GridView;->mScrollY:I
+
+    sub-int/2addr v3, v4
 
     if-lt p1, v3, :cond_2
 

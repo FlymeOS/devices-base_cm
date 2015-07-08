@@ -2385,4 +2385,5 @@
     <attr name="neverEncrypt" format="boolean" />
     <attr name="cantSaveState" format="boolean" />
     <attr name="primaryUserOnly" format="boolean" />
+    <attr name="needAccessControl" format="boolean" />
 </resources>

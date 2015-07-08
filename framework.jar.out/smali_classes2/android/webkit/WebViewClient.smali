@@ -323,3 +323,13 @@
 
     return v0
 .end method
+
+.method public sendUrlRedirection(Landroid/webkit/WebView;Ljava/lang/String;Z)V
+    .locals 0
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "is_redirect"    # Z
+
+    .prologue
+    return-void
+.end method

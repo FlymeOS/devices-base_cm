@@ -1427,6 +1427,7 @@
     <public type="attr" name="neverEncrypt" id="0x01010590" />
     <public type="attr" name="cantSaveState" id="0x01010591" />
     <public type="attr" name="primaryUserOnly" id="0x01010592" />
+    <public type="attr" name="needAccessControl" id="0x01010593" />
     <public type="id" name="background" id="0x01020000" />
     <public type="id" name="checkbox" id="0x01020001" />
     <public type="id" name="content" id="0x01020002" />

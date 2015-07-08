@@ -7994,3 +7994,11 @@
     .line 1389
     return-void
 .end method
+
+.method public setIncomingCallIndicationResponse(Z)V
+    .locals 0
+    .param p1, "accept"    # Z
+
+    .prologue
+    return-void
+.end method

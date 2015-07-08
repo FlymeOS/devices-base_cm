@@ -12,6 +12,8 @@
 
 
 # static fields
+.field private mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
 .field private static final TAG:Ljava/lang/String; = "UsbService"
 
 
@@ -124,6 +126,8 @@
 
     .line 106
     :cond_1
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/usb/UsbService;->initExtFlymeFields(Landroid/content/Context;)V
+
     const/4 v2, 0x0
 
     invoke-direct {p0, v2}, Lcom/android/server/usb/UsbService;->setCurrentUser(I)V
@@ -1019,5 +1023,38 @@
 
     .line 146
     :cond_1
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/usb/UsbService;->mzUsbDeviceSystemReady()V
+
+    return-void
+.end method
+
+.method private initExtFlymeFields(Landroid/content/Context;)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    new-instance v0, Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-direct {v0, p1}, Lcom/android/server/usb/MzUsbAudioDeviceManager;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    return-void
+.end method
+
+.method private mzUsbDeviceSystemReady()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mMzUsbAudioDeviceManager:Lcom/android/server/usb/MzUsbAudioDeviceManager;
+
+    invoke-virtual {v0}, Lcom/android/server/usb/MzUsbAudioDeviceManager;->systemReady()V
+
+    :cond_0
     return-void
 .end method

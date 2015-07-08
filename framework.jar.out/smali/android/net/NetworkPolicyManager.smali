@@ -4,6 +4,20 @@
 
 
 # static fields
+.field public static final ACTION_USER_DELETE_SNOOZED_NOTIFICATION:Ljava/lang/String; = "android.net.action.USER_DELETE_SNOOZED_NOTIFICATION"
+
+.field public static final EXTRA_NETWORK_POLICY:Ljava/lang/String; = "android.net.NETWORK_POLICY"
+
+.field public static final EXTRA_TYPE:Ljava/lang/String; = "android.net.TYPE"
+
+.field public static final POLICY_REJECT_APP_NET_MOBILE:I = 0x2
+
+.field public static final POLICY_REJECT_APP_NET_WIFI:I = 0x4
+
+.field public static final RULE_REJECT_METERED_MOBILE:I = 0x2
+
+.field public static final RULE_REJECT_METERED_WIFI:I = 0x4
+
 .field private static final ALLOW_PLATFORM_APP_POLICY:Z = true
 
 .field public static final EXTRA_NETWORK_TEMPLATE:Ljava/lang/String; = "android.net.NETWORK_TEMPLATE"

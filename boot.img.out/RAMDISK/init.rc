@@ -334,6 +334,15 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     #setprop vold.post_fs_data_done 1
 
+    # Flyme kuangqianbo for samba server and client {@
+    mkdir /data/misc/samba 0775 system system
+    mkdir /data/misc/samba/remote 0775 system system
+    mkdir /data/misc/samba/lib 0775 system system
+    mkdir /data/misc/samba/private 0775 system system
+    mkdir /data/misc/samba/tmp 0775 system system
+    mkdir /data/misc/samba/var 0775 system system
+    # @}
+
 on boot
     # basic network init
     ifup lo
@@ -539,6 +548,57 @@ service servicemanager /system/bin/servicemanager
     onrestart restart surfaceflinger
     onrestart restart drm
 
+# Flyme kuangqianbo add forwifi share
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+# Flyme wifi share end
+
+# FLYME:duxiaolei@Feature {@
+on post-fs-data
+    # For pppoe
+    mkdir /data/pppoe 0770
+    chown root system /data/pppoe
+
+#pppoe
+service pppd_pppoe /system/bin/sh /system/etc/ppp/init.pppoe-pppd
+    user root
+    group radio cache inet misc
+    oneshot
+    disabled
+
+on property:net.pppoe=start
+   start pppd_pppoe
+
+on property:net.pppoe=stop
+   stop pppd_pppoe
+#pppoe end
+
+#wifi test
+service wifi_test_mode  /system/bin/wifitest
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+on property:meizu.wifi.test=start
+    start wifi_test_mode
+
+on property:meizu.wifi.test=stop
+    stop wifi_test_mode
+#wifi test end
+
+# @}
+
 service vold /system/bin/vold
     class core
     socket vold stream 0660 root mount
@@ -550,6 +610,12 @@ service netd /system/bin/netd
     socket dnsproxyd stream 0660 root inet
     socket mdns stream 0660 root system
     socket fwmarkd stream 0660 root inet
+
+# Flyme kuangqianbo add for meizu own daemon { @
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system
+# @ }
 
 service debuggerd /system/bin/debuggerd
     class main

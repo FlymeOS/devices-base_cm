@@ -115,7 +115,7 @@
     .line 66
     const/4 v2, -0x1
 
-    const v3, 0x10405bd
+    sget v3, Lcom/flyme/internal/R$string;->dlg_ok:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
