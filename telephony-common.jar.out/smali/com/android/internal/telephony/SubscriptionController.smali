@@ -1146,26 +1146,30 @@
     .line 342
     const-string v2, "sub_state"
 
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    #move-result v2
 
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x0
 
     iput v2, v0, Landroid/telephony/SubInfoRecord;->mStatus:I
 
     .line 344
     const-string v2, "network_mode"
 
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    #move-result v2
 
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x0
 
     iput v2, v0, Landroid/telephony/SubInfoRecord;->mNwMode:I
 
@@ -8167,7 +8171,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    #invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 1613
     return-void
