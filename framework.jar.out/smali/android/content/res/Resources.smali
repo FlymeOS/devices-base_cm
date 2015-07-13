@@ -5069,6 +5069,16 @@
     .end annotation
 
     .prologue
+    invoke-static {p0, p2}, Landroid/content/res/Resources$FlymeInjector;->getFlymeThemeColor(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-object v0
+
+    :cond_flyme_0
+
     .line 2634
     iget v8, p1, Landroid/util/TypedValue;->assetCookie:I
 
