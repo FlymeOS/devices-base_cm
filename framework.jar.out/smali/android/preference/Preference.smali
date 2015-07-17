@@ -433,6 +433,9 @@
 
     .line 286
     :cond_1
+
+    invoke-direct/range {p0 .. p0}, Landroid/preference/Preference;->mzReplaceSourceIfNeed()V
+
     return-void
 
     .line 220
@@ -2914,6 +2917,10 @@
     .param p1, "layoutResId"    # I
 
     .prologue
+    invoke-direct/range {p0 .. p1}, Landroid/preference/Preference;->mzReplaceSourceIfNeed(I)I
+
+    move-result p1
+
     .line 428
     iget v0, p0, Landroid/preference/Preference;->mLayoutResId:I
 
@@ -3376,5 +3383,69 @@
     .prologue
     iput-object p1, p0, Landroid/preference/Preference;->mPreferenceView:Landroid/view/View;
 
+    return-void
+.end method
+
+.method private mzReplaceSourceIfNeed(I)I
+    .locals 3
+    .param p1, "layoutSource"    # I
+
+    .prologue
+    move v0, p1
+
+    .local v0, "id":I
+    iget-object v1, p0, Landroid/preference/Preference;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->isColorTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x5
+
+    const-string v2, "preference_category_material"
+
+    invoke-static {v1, v2}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+
+    move-result v1
+
+    if-ne p1, v1, :cond_0
+
+    sget v0, Lcom/flyme/internal/R$layout;->mz_preference_category_material:I
+
+    :cond_0
+    return v0
+.end method
+
+.method private mzReplaceSourceIfNeed()V
+    .locals 3
+
+    .prologue
+    iget-object v0, p0, Landroid/preference/Preference;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->isColorTheme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Landroid/preference/Preference;->mLayoutResId:I
+
+    const/4 v1, 0x5
+
+    const-string v2, "preference_category_material"
+
+    invoke-static {v1, v2}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    sget v0, Lcom/flyme/internal/R$layout;->mz_preference_category_material:I
+
+    iput v0, p0, Landroid/preference/Preference;->mLayoutResId:I
+
+    :cond_0
     return-void
 .end method

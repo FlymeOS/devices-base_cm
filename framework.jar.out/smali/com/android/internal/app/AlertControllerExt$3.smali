@@ -66,7 +66,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x3
+    const v2, 0x800003
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 

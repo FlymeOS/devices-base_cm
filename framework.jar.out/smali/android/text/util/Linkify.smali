@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/text/util/Linkify$FlymeInjector;,
         Landroid/text/util/Linkify$TransformFilter;,
         Landroid/text/util/Linkify$MatchFilter;
     }
@@ -288,7 +287,7 @@
     if-eqz v1, :cond_4
 
     .line 230
-    invoke-static {v0, p0}, Landroid/text/util/Linkify$FlymeInjector;->gatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)Z
+    invoke-static {v0, p0}, Landroid/text/util/Linkify;->mzGatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)Z
 
     .line 233
     :cond_4
@@ -301,7 +300,7 @@
 
     .line 237
     :cond_5
-    invoke-static/range {p0 .. p1}, Landroid/text/util/Linkify$FlymeInjector;->initFlymeExtFields(Landroid/text/Spannable;I)V
+    invoke-static {v0, p0, p1}, Landroid/text/util/Linkify;->mzGatherLinksDateTime(Ljava/util/ArrayList;Landroid/text/Spannable;I)V
 
     invoke-static {v0}, Landroid/text/util/Linkify;->pruneOverlaps(Ljava/util/ArrayList;)V
 
@@ -1133,8 +1132,6 @@
     .end annotation
 
     .prologue
-    invoke-static/range {p0 .. p0}, Landroid/text/util/Linkify$FlymeInjector;->gatherLinksDateTime(Ljava/util/ArrayList;)V
-
     .line 505
     .local p0, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
     new-instance v2, Landroid/text/util/Linkify$4;
@@ -1317,4 +1314,116 @@
     invoke-static/range {p0 .. p5}, Landroid/text/util/Linkify;->gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
 
     return-void
+.end method
+
+.method public static final mzGatherLinksDateTime(Ljava/util/ArrayList;Landroid/text/Spannable;I)V
+    .locals 6
+    .param p1, "sTextSpannable"    # Landroid/text/Spannable;
+    .param p2, "sMask"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;",
+            "Landroid/text/Spannable;",
+            "I)V"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    and-int/lit8 v0, p2, 0x10
+
+    if-eqz v0, :cond_0
+
+    sget-object v2, Landroid/util/DateTimeUrlHelper;->DATE_TIME_PATTERN:Ljava/util/regex/Pattern;
+
+    const/4 v0, 0x1
+
+    new-array v3, v0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const-string v1, "datetime:"
+
+    aput-object v1, v3, v0
+
+    sget-object v4, Landroid/util/DateTimeUrlHelper;->sDateTimeMatchFilter:Landroid/text/util/Linkify$MatchFilter;
+
+    sget-object v5, Landroid/util/DateTimeUrlHelper;->sDateTimeTransformFilter:Landroid/text/util/Linkify$TransformFilter;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-static/range {v0 .. v5}, Landroid/text/util/Linkify;->mzGatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method static final mzGatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)Z
+    .locals 7
+    .param p1, "s"    # Landroid/text/Spannable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;",
+            "Landroid/text/Spannable;",
+            ")Z"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    const/4 v6, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v2, Landroid/util/MzPatterns;->PHONE:Ljava/util/regex/Pattern;
+
+    new-array v3, v6, [Ljava/lang/String;
+
+    const-string v1, "tel:"
+
+    aput-object v1, v3, v0
+
+    new-instance v4, Landroid/text/util/MzPhoneNumberMatchFilter;
+
+    invoke-direct {v4}, Landroid/text/util/MzPhoneNumberMatchFilter;-><init>()V
+
+    sget-object v5, Landroid/text/util/Linkify;->sPhoneNumberTransformFilter:Landroid/text/util/Linkify$TransformFilter;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-static/range {v0 .. v5}, Landroid/text/util/Linkify;->gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    move v0, v6
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {p0, p1}, Landroid/text/util/Linkify;->gatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)V
+
+    goto :goto_0
 .end method

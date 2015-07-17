@@ -601,3 +601,27 @@
     .line 2777
     return-void
 .end method
+
+.method static openFlymeThemeRawResource(Landroid/content/res/Resources;ILandroid/util/TypedValue;)Ljava/io/InputStream;
+    .locals 3
+    .param p0, "res"    # Landroid/content/res/Resources;
+    .param p1, "id"    # I
+    .param p2, "value"    # Landroid/util/TypedValue;
+
+    .prologue
+    iget-object v2, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "file":Ljava/lang/String;
+    const/4 v1, 0x0
+
+    .local v1, "is":Ljava/io/InputStream;
+    invoke-static {p0, p1, v0, p2}, Landroid/content/res/Resources$FlymeInjector;->getThemeFileStream(Landroid/content/res/Resources;ILjava/lang/String;Landroid/util/TypedValue;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    return-object v1
+.end method

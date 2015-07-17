@@ -2373,7 +2373,7 @@
 .end method
 
 .method private syncAppListIfNeeded(Ljava/util/List;)V
-    .locals 19
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2385,65 +2385,57 @@
     .end annotation
 
     .prologue
-    .line 1340
     .local p1, "resolves":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mIntent:Landroid/content/Intent;
+    iget-object v7, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mIntent:Landroid/content/Intent;
 
-    .line 1344
-    .local v6, "intent":Landroid/content/Intent;
-    if-eqz v6, :cond_1
+    .local v7, "intent":Landroid/content/Intent;
+    if-eqz v7, :cond_1
 
-    const-string v8, "*/*"
+    const-string v9, "*/*"
 
-    .line 1345
-    .local v8, "intentType":Ljava/lang/String;
+    .local v9, "intentType":Ljava/lang/String;
     :goto_0
-    if-eqz v6, :cond_2
+    if-eqz v7, :cond_2
 
-    const-string v7, "android.intent.action.SEND"
+    const-string v8, "android.intent.action.SEND"
 
-    .line 1346
-    .local v7, "intentAction":Ljava/lang/String;
+    .local v8, "intentAction":Ljava/lang/String;
     :goto_1
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->this$0:Lcom/android/internal/app/MzResolverActivity;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     # invokes: Lcom/android/internal/app/MzResolverActivity;->ensureDraggable(Landroid/content/Intent;)Z
-    invoke-static {v0, v6}, Lcom/android/internal/app/MzResolverActivity;->access$400(Lcom/android/internal/app/MzResolverActivity;Landroid/content/Intent;)Z
+    invoke-static {v0, v7}, Lcom/android/internal/app/MzResolverActivity;->access$400(Lcom/android/internal/app/MzResolverActivity;Landroid/content/Intent;)Z
 
-    move-result v17
+    move-result v18
 
-    if-nez v17, :cond_3
+    if-nez v18, :cond_3
 
-    .line 1426
     :cond_0
     :goto_2
     return-void
 
-    .line 1344
-    .end local v7    # "intentAction":Ljava/lang/String;
-    .end local v8    # "intentType":Ljava/lang/String;
+    .end local v8    # "intentAction":Ljava/lang/String;
+    .end local v9    # "intentType":Ljava/lang/String;
     :cond_1
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 1345
-    .restart local v8    # "intentType":Ljava/lang/String;
+    .restart local v9    # "intentType":Ljava/lang/String;
     :cond_2
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 1351
-    .restart local v7    # "intentAction":Ljava/lang/String;
+    .restart local v8    # "intentAction":Ljava/lang/String;
     :cond_3
     if-eqz p1, :cond_0
 
@@ -2459,293 +2451,280 @@
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->this$0:Lcom/android/internal/app/MzResolverActivity;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    invoke-virtual/range {v17 .. v17}, Lcom/android/internal/app/MzResolverActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {v18 .. v18}, Lcom/android/internal/app/MzResolverActivity;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v15
+    move-result-object v16
 
-    .line 1353
-    .local v15, "resolver":Landroid/content/ContentResolver;
-    invoke-static {v15, v8, v7}, Landroid/provider/Settings$ShareList;->getSortedListByType(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .local v16, "resolver":Landroid/content/ContentResolver;
+    move-object/from16 v0, v16
 
-    move-result-object v13
-
-    .line 1356
-    .local v13, "pkgNamesInDb":Ljava/lang/String;
-    if-eqz v13, :cond_c
-
-    .line 1359
-    const-string v17, ","
-
-    move-object/from16 v0, v17
-
-    invoke-virtual {v13, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v12
-
-    .line 1361
-    .local v12, "pkgNamesArrayInDb":[Ljava/lang/String;
-    const/4 v14, 0x0
-
-    .line 1364
-    .local v14, "resolve":Landroid/content/pm/ResolveInfo;
-    array-length v2, v12
-
-    .line 1365
-    .local v2, "M":I
-    add-int/lit8 v5, v2, -0x1
-
-    .local v5, "i":I
-    :goto_3
-    if-ltz v5, :cond_7
-
-    .line 1367
-    const/4 v9, 0x0
-
-    .local v9, "j":I
-    :goto_4
-    if-ge v9, v3, :cond_4
-
-    .line 1368
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v9, v8}, Landroid/provider/Settings$ShareList;->getSortedListByType(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    .end local v14    # "resolve":Landroid/content/pm/ResolveInfo;
-    check-cast v14, Landroid/content/pm/ResolveInfo;
+    .local v14, "pkgNamesInDb":Ljava/lang/String;
+    if-eqz v14, :cond_c
 
-    .line 1369
-    .restart local v14    # "resolve":Landroid/content/pm/ResolveInfo;
-    iget-object v0, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    const-string v18, ","
 
-    move-object/from16 v17, v0
+    move-object/from16 v0, v18
 
-    if-eqz v17, :cond_5
+    invoke-virtual {v14, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    move-result-object v13
 
-    .line 1371
-    .local v4, "ci":Landroid/content/pm/ComponentInfo;
-    :goto_5
-    new-instance v17, Ljava/lang/StringBuilder;
+    .local v13, "pkgNamesArrayInDb":[Ljava/lang/String;
+    const/4 v15, 0x0
 
-    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+    .local v15, "resolve":Landroid/content/pm/ResolveInfo;
+    array-length v2, v13
 
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    move-object/from16 v18, v0
-
-    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v17
-
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
-
-    move-object/from16 v18, v0
-
-    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v17
-
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 1373
-    .local v10, "pkgName":Ljava/lang/String;
-    aget-object v17, v12, v5
-
-    move-object/from16 v0, v17
-
-    invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_6
-
-    .line 1374
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v9}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    .line 1375
-    const/16 v17, 0x0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v17
-
-    invoke-interface {v0, v1, v14}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    .line 1365
-    .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v10    # "pkgName":Ljava/lang/String;
-    :cond_4
-    add-int/lit8 v5, v5, -0x1
-
-    goto :goto_3
-
-    .line 1369
-    :cond_5
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
-
-    goto :goto_5
-
-    .line 1367
-    .restart local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .restart local v10    # "pkgName":Ljava/lang/String;
-    :cond_6
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_4
-
-    .line 1382
-    .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v9    # "j":I
-    .end local v10    # "pkgName":Ljava/lang/String;
-    :cond_7
-    add-int/lit8 v5, v2, -0x1
-
-    :goto_6
-    if-ltz v5, :cond_b
-
-    .line 1384
-    const/4 v9, 0x0
-
-    .restart local v9    # "j":I
-    :goto_7
-    if-ge v9, v3, :cond_8
-
-    .line 1385
+    .local v2, "M":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    invoke-interface/range {v18 .. v18}, Ljava/util/List;->size()I
 
-    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v14
+    .local v4, "N2":I
+    add-int/lit8 v6, v2, -0x1
 
-    .end local v14    # "resolve":Landroid/content/pm/ResolveInfo;
-    check-cast v14, Landroid/content/pm/ResolveInfo;
+    .local v6, "i":I
+    :goto_3
+    if-ltz v6, :cond_7
 
-    .line 1386
-    .restart local v14    # "resolve":Landroid/content/pm/ResolveInfo;
-    iget-object v0, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    const/4 v10, 0x0
 
-    move-object/from16 v17, v0
+    .local v10, "j":I
+    :goto_4
+    if-ge v10, v3, :cond_4
 
-    if-eqz v17, :cond_9
+    move-object/from16 v0, p1
 
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    invoke-interface {v0, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 1388
-    .restart local v4    # "ci":Landroid/content/pm/ComponentInfo;
+    move-result-object v15
+
+    .end local v15    # "resolve":Landroid/content/pm/ResolveInfo;
+    check-cast v15, Landroid/content/pm/ResolveInfo;
+
+    .restart local v15    # "resolve":Landroid/content/pm/ResolveInfo;
+    iget-object v0, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    move-object/from16 v18, v0
+
+    if-eqz v18, :cond_5
+
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    .local v5, "ci":Landroid/content/pm/ComponentInfo;
+    :goto_5
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    .local v11, "pkgName":Ljava/lang/String;
+    aget-object v18, v13, v6
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_6
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v10}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    const/16 v18, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v18
+
+    invoke-interface {v0, v1, v15}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    .end local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v11    # "pkgName":Ljava/lang/String;
+    :cond_4
+    add-int/lit8 v6, v6, -0x1
+
+    goto :goto_3
+
+    :cond_5
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
+
+    goto :goto_5
+
+    .restart local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .restart local v11    # "pkgName":Ljava/lang/String;
+    :cond_6
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_4
+
+    .end local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v10    # "j":I
+    .end local v11    # "pkgName":Ljava/lang/String;
+    :cond_7
+    add-int/lit8 v6, v2, -0x1
+
+    :goto_6
+    if-ltz v6, :cond_b
+
+    const/4 v10, 0x0
+
+    .restart local v10    # "j":I
+    :goto_7
+    if-ge v10, v4, :cond_8
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    invoke-interface {v0, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v15
+
+    .end local v15    # "resolve":Landroid/content/pm/ResolveInfo;
+    check-cast v15, Landroid/content/pm/ResolveInfo;
+
+    .restart local v15    # "resolve":Landroid/content/pm/ResolveInfo;
+    iget-object v0, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    move-object/from16 v18, v0
+
+    if-eqz v18, :cond_9
+
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    .restart local v5    # "ci":Landroid/content/pm/ComponentInfo;
     :goto_8
-    new-instance v17, Ljava/lang/StringBuilder;
+    new-instance v18, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v17
+    move-result-object v18
 
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v17
+    move-result-object v18
 
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v11
 
-    .line 1390
-    .restart local v10    # "pkgName":Ljava/lang/String;
-    aget-object v17, v12, v5
+    .restart local v11    # "pkgName":Ljava/lang/String;
+    aget-object v18, v13, v6
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_a
+    if-eqz v18, :cond_a
 
     .line 1391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-interface {v0, v9}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    invoke-interface {v0, v10}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 1392
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    const/16 v18, 0x0
+    const/16 v19, 0x0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
-    invoke-interface {v0, v1, v14}, Ljava/util/List;->add(ILjava/lang/Object;)V
+    invoke-interface {v0, v1, v15}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 1382
-    .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v10    # "pkgName":Ljava/lang/String;
+    .end local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v11    # "pkgName":Ljava/lang/String;
     :cond_8
-    add-int/lit8 v5, v5, -0x1
+    add-int/lit8 v6, v6, -0x1
 
     goto :goto_6
 
-    .line 1386
     :cond_9
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     goto :goto_8
 
-    .line 1384
-    .restart local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .restart local v10    # "pkgName":Ljava/lang/String;
+    .restart local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .restart local v11    # "pkgName":Ljava/lang/String;
     :cond_a
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_7
 
-    .line 1399
-    .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v9    # "j":I
-    .end local v10    # "pkgName":Ljava/lang/String;
+    .end local v5    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v10    # "j":I
+    .end local v11    # "pkgName":Ljava/lang/String;
     :cond_b
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-direct {v0, v1}, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->storeSortedResolves(Ljava/util/List;)V
 
@@ -2753,115 +2732,109 @@
 
     .line 1404
     .end local v2    # "M":I
-    .end local v5    # "i":I
-    .end local v12    # "pkgNamesArrayInDb":[Ljava/lang/String;
-    .end local v14    # "resolve":Landroid/content/pm/ResolveInfo;
+    .end local v4    # "N2":I
+    .end local v6    # "i":I
+    .end local v13    # "pkgNamesArrayInDb":[Ljava/lang/String;
+    .end local v15    # "resolve":Landroid/content/pm/ResolveInfo;
     :cond_c
-    const/4 v11, 0x0
+    const/4 v12, 0x0
 
-    .line 1408
-    .local v11, "pkgNames":Ljava/lang/String;
-    new-instance v16, Ljava/lang/StringBuilder;
+    .local v12, "pkgNames":Ljava/lang/String;
+    new-instance v17, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1409
-    .local v16, "sb":Ljava/lang/StringBuilder;
-    const/4 v5, 0x0
+    .local v17, "sb":Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    .restart local v5    # "i":I
+    .restart local v6    # "i":I
     :goto_9
-    if-ge v5, v3, :cond_f
+    if-ge v6, v3, :cond_f
 
     .line 1411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mGlobalResolveList:Ljava/util/List;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v14
+    move-result-object v15
 
-    check-cast v14, Landroid/content/pm/ResolveInfo;
+    check-cast v15, Landroid/content/pm/ResolveInfo;
 
-    .line 1412
-    .restart local v14    # "resolve":Landroid/content/pm/ResolveInfo;
-    iget-object v0, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    .restart local v15    # "resolve":Landroid/content/pm/ResolveInfo;
+    iget-object v0, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    if-eqz v17, :cond_e
+    if-eqz v18, :cond_e
 
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 1414
-    .restart local v4    # "ci":Landroid/content/pm/ComponentInfo;
+    .restart local v5    # "ci":Landroid/content/pm/ComponentInfo;
     :goto_a
-    new-instance v17, Ljava/lang/StringBuilder;
+    new-instance v18, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    iget-object v0, v5, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v17
+    add-int/lit8 v18, v3, -0x1
 
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+    move/from16 v0, v18
 
-    move-object/from16 v18, v0
+    if-eq v6, v0, :cond_d
+
+    const-string v18, ","
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v17
-
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v17
-
-    invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1417
-    add-int/lit8 v17, v3, -0x1
-
-    move/from16 v0, v17
-
-    if-eq v5, v0, :cond_d
-
-    .line 1418
-    const-string v17, ","
-
-    invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1409
     :cond_d
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_9
 
-    .line 1412
-    .end local v4    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v5    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_e
-    iget-object v4, v14, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
+    iget-object v5, v15, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     goto :goto_a
 
-    .line 1422
-    .end local v14    # "resolve":Landroid/content/pm/ResolveInfo;
+    .end local v15    # "resolve":Landroid/content/pm/ResolveInfo;
     :cond_f
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v17
+    move-result-object v18
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v16
 
-    invoke-static {v15, v8, v7, v0}, Landroid/provider/Settings$ShareList;->storeSortedList(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+    move-object/from16 v1, v18
+
+    invoke-static {v0, v9, v8, v1}, Landroid/provider/Settings$ShareList;->storeSortedList(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     goto/16 :goto_2
 .end method
@@ -3070,8 +3043,7 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1273
-    const v0, 0x1020006
+    const v0, #android:id@icon#t
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

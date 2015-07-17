@@ -44,6 +44,8 @@
 
 .field public static final IS_M71C:Ljava/lang/Boolean;
 
+.field public static final IS_MA01:Ljava/lang/Boolean;
+
 .field public static final IS_MOBILE_PUBLIC:Ljava/lang/Boolean;
 
 .field public static final IS_MX2:Ljava/lang/Boolean;
@@ -55,6 +57,8 @@
 .field public static final IS_MX4_Pro:Ljava/lang/Boolean;
 
 .field public static final IS_MX5:Ljava/lang/Boolean;
+
+.field public static final IS_MX5_PRO:Ljava/lang/Boolean;
 
 .field public static final IS_PRODUCT:Z
 
@@ -115,7 +119,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_c
 
     move v0, v1
 
@@ -300,7 +304,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     :cond_0
     move v0, v1
@@ -353,7 +357,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     const-string/jumbo v0, "ro.arch"
 
@@ -367,7 +371,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     :cond_1
     move v0, v1
@@ -420,7 +424,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     :cond_2
     move v0, v1
@@ -473,7 +477,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     :cond_3
     move v0, v1
@@ -531,7 +535,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     :cond_4
     move v0, v1
@@ -570,7 +574,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_12
 
     :cond_5
     move v0, v1
@@ -609,7 +613,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     :cond_6
     move v0, v1
@@ -648,7 +652,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_14
 
     :cond_7
     move v0, v1
@@ -687,7 +691,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     :cond_8
     move v0, v1
@@ -698,6 +702,76 @@
     move-result-object v0
 
     sput-object v0, Landroid/os/BuildExt;->IS_M2C:Ljava/lang/Boolean;
+
+    const-string v0, "ro.product.model"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "M86"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    const-string v0, "ro.product.model"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "NIUX"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    const-string v0, "ro.product.model"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "MX5 Pro"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_16
+
+    :cond_9
+    move v0, v1
+
+    :goto_a
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/os/BuildExt;->IS_MX5_PRO:Ljava/lang/Boolean;
+
+    const-string v0, "ro.product.model"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "MA01"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/os/BuildExt;->IS_MA01:Ljava/lang/Boolean;
 
     .line 107
     const-string/jumbo v0, "ro.product.manufacturer"
@@ -838,7 +912,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string/jumbo v0, "ro.product.model"
 
@@ -852,7 +926,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string/jumbo v0, "ro.product.model"
 
@@ -866,7 +940,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string/jumbo v0, "ro.product.model"
 
@@ -880,7 +954,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string/jumbo v0, "ro.product.model"
 
@@ -894,7 +968,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string/jumbo v0, "ro.product.model"
 
@@ -908,12 +982,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
-
-    :cond_9
-    move v2, v1
+    if-eqz v0, :cond_b
 
     :cond_a
+    move v2, v1
+
+    :cond_b
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -922,65 +996,60 @@
 
     return-void
 
-    :cond_b
-    move v0, v2
-
-    .line 34
-    goto/16 :goto_0
-
     :cond_c
     move v0, v2
 
-    .line 58
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_d
     move v0, v2
 
-    .line 62
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_e
     move v0, v2
 
-    .line 69
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :cond_f
     move v0, v2
 
-    .line 74
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :cond_10
     move v0, v2
 
-    .line 83
-    goto/16 :goto_5
+    goto/16 :goto_4
 
     :cond_11
     move v0, v2
 
-    .line 88
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :cond_12
     move v0, v2
 
-    .line 93
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :cond_13
     move v0, v2
 
-    .line 98
-    goto/16 :goto_8
+    goto/16 :goto_7
 
     :cond_14
     move v0, v2
 
-    .line 103
+    goto/16 :goto_8
+
+    :cond_15
+    move v0, v2
+
     goto/16 :goto_9
+
+    :cond_16
+    move v0, v2
+
+    goto/16 :goto_a
 .end method
 
 .method public constructor <init>()V

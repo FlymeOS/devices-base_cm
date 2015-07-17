@@ -211,6 +211,8 @@
 
 .field public static final MZ_QUICK_WAKEUP_SWITCH:Ljava/lang/String; = "mz_quick_wakeup_switch"
 
+.field public static final MZ_REMOTE_CONTROL_MODE:Ljava/lang/String; = "mz_remote_control_mode"
+
 .field public static final MZ_SCHEDULED_POWER_OFF:Ljava/lang/String; = "mz_scheduled_power_off"
 
 .field public static final MZ_SCHEDULED_POWER_OFF_DAYS:Ljava/lang/String; = "mz_scheduled_power_off_days"
