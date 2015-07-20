@@ -12,7 +12,7 @@ base_cm使用方法：
 
    为了减少repo库的体积，base_cm暂时没有放在repo下载列表里，因此下载base_cm推荐使用git clone下载，第一次下载时先cd到devices目录，然后输入：
 
-   git clone https://github.com/FlymeOS/devices-base_cm.git -b lollipop-5.0
+   git clone https://github.com/FlymeOS/devices-base_cm.git --single-branch -b lollipop-5.0
 
    即开始下载，下载完成后建议对其重命名, cd到devices目录，输入：mv ./devices-base_cm ./base_cm，即将其重命名为base_cm
 
