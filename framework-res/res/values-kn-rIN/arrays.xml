@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>ನಿವಾಸ</item>
+        <item>ಕಚೇರಿ</item>
+        <item>ಇತರೆ</item>
+        <item>ಕಸ್ಟಮ್</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>ಕಚೇರಿ</item>
+        <item>ಇತರೆ</item>
+        <item>ಕಸ್ಟಮ್</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ನಿವಾಸ</item>
+        <item>ಮೊಬೈಲ್</item>
+        <item>ಕಚೇರಿ</item>
+        <item>ಕಚೇರಿ ಫಾಕ್ಸ್</item>
+        <item>ನಿವಾಸದ ಫ್ಯಾಕ್ಸ್</item>
+        <item>ಪೇಜರ್</item>
+        <item>ಇತರೆ</item>
+        <item>ಕಸ್ಟಮ್</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ನಿವಾಸ</item>
+        <item>ಕಚೇರಿ</item>
+        <item>ಇತರೆ</item>
+        <item>ಕಸ್ಟಮ್</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>ನಿವಾಸ</item>
+        <item>ಕಚೇರಿ</item>
+        <item>ಇತರೆ</item>
+        <item>ಕಸ್ಟಮ್</item>
+    </string-array>
+</resources>

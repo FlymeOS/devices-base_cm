@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Ana səhifə</item>
+        <item>İş</item>
+        <item>Digər</item>
+        <item>Fərdi</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Söhbət</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>İş</item>
+        <item>Digər</item>
+        <item>Fərdi</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Əsas səhifə</item>
+        <item>Mobil</item>
+        <item>İş</item>
+        <item>İş Faksı</item>
+        <item>Ev Faksı</item>
+        <item>Peycer</item>
+        <item>Digər</item>
+        <item>Şəxsi</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Əsas səhifə</item>
+        <item>İş</item>
+        <item>Digər</item>
+        <item>Düzənləyin</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Əsas səhifə</item>
+        <item>İş</item>
+        <item>Digər</item>
+        <item>Fərdi</item>
+    </string-array>
+</resources>

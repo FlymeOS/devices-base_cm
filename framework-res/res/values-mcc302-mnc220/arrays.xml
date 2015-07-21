@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_tether_apndata">
+        <item>[ApnSettingV3]TELUS ISP,isp.telus.com,,,,,,,,,302,220,,DUN,,,true,0,,,,,,,gid,54</item>
+        <item>[ApnSettingV3]Tethered PC Mobile,isp.mb.com,,,,,,,,,302,220,,DUN,,,true,0,,,,,,,gid,50</item>
+    </string-array>
+    <string-array name="config_operatorConsideredNonRoaming">
+        <item>302370</item>
+        <item>302610</item>
+        <item>302660</item>
+        <item>302720</item>
+        <item>302780</item>
+    </string-array>
+</resources>
