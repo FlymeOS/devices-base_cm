@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">您还有%d次尝试机会。如果仍然失败，SIM卡将被锁定。</item>
+        <item quantity="one">您还有%d次尝试机会。如果仍然失败，SIM卡将被锁定。</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d秒前</item>
+        <item quantity="one">1秒前</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d分钟前</item>
+        <item quantity="one">1分钟前</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d小时前</item>
+        <item quantity="one">1小时前</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">过去%d天</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d天前</item>
+        <item quantity="one">昨天</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d秒后</item>
+        <item quantity="one">1秒后</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d分钟后</item>
+        <item quantity="one">1分钟后</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d小时后</item>
+        <item quantity="one">1小时后</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d 天后</item>
+        <item quantity="one">明天</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d秒前</item>
+        <item quantity="one">1秒前</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d分钟前</item>
+        <item quantity="one">1分钟前</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d小时前</item>
+        <item quantity="one">1小时前</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d天前</item>
+        <item quantity="one">昨天</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d秒后</item>
+        <item quantity="one">1秒后</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d分钟后</item>
+        <item quantity="one">1分钟后</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d小时后</item>
+        <item quantity="one">1小时后</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d 天后</item>
+        <item quantity="one">明天</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d分钟</item>
+        <item quantity="one">1分钟</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d小时</item>
+        <item quantity="one">1小时</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">有可用的WLAN网络</item>
+        <item quantity="one">有可用的WLAN网络</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">打开可用的WLAN网络</item>
+        <item quantity="one">打开可用的WLAN网络</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">第 %1$d 项，共 %2$d 项</item>
+        <item quantity="one">1 个匹配项</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d秒后重试</item>
+        <item quantity="one">1秒后重试</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d 分钟（到%2$s）</item>
+        <item quantity="one">1 分钟（到%2$s）</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d 小时（到%2$s）</item>
+        <item quantity="one">1 小时（到%2$s）</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d分钟</item>
+        <item quantity="one">1分钟</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d小时</item>
+        <item quantity="one">1小时</item>
+    </plurals>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">ಸಿಮ್‌ ಲಾಕ್ ಆಗುವುದಕ್ಕೂ ಮೊದಲು ನಿಮ್ಮಲ್ಲಿ %d ಪ್ರಯತ್ನಗಳು ಬಾಕಿ ಉಳಿದಿವೆ.</item>
+        <item quantity="one">ಸಿಮ್‌ ಲಾಕ್ ಆಗುವುದಕ್ಕಿಂತ ಮೊದಲು ನಿಮ್ಮಲ್ಲಿ %d ಪ್ರಯತ್ನ ಬಾಕಿ ಉಳಿದಿದೆ.</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ಸೆಕೆಂಡಿನ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d ನಿಮಿಷಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ನಿಮಿಷದ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d ಗಂಟೆಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ಗಂಟೆ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">ಕಳೆದ %d ದಿನಗಳಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d ದಿನಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">ನಿನ್ನೆ</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ಸೆಕೆಂಡಿನಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d ನಿಮಿಷಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ನಿಮಿಷದಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d ಗಂಟೆಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ಗಂಟೆಯಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d ದಿನಗಳಲ್ಲಿ</item>
+        <item quantity="one">ನಾಳೆ</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ಸೆಕೆಂಡಿನ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d ನಿಮಿಷಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ನಿಮಿಷದ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d ಗಂಟೆಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">1 ಗಂಟೆ ಹಿಂದೆ</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d ದಿನಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">ನಿನ್ನೆ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ಸೆಕೆಂಡಿನಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d ನಿಮಿಷಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ನಿಮಿಷದಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d ಗಂಟೆಗಳಲ್ಲಿ</item>
+        <item quantity="one">1 ಗಂಟೆಯಲ್ಲಿ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d ದಿನಗಳಲ್ಲಿ</item>
+        <item quantity="one">ನಾಳೆ</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳು</item>
+        <item quantity="one">1 ಸೆಕೆಂಡು</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d ನಿಮಿಷಗಳು</item>
+        <item quantity="one">1 ನಿಮಿಷ</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d ಗಂಟೆಗಳು</item>
+        <item quantity="one">1 ಗಂಟೆ</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಲಭ್ಯವಿವೆ</item>
+        <item quantity="one">Wi-Fi ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿದೆ</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ಮುಕ್ತ Wi-Fi ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಲಭ್ಯವಿವೆ</item>
+        <item quantity="one">ಮುಕ್ತ Wi-Fi ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿದೆ</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ರಲ್ಲಿ %2$d</item>
+        <item quantity="one">1 ಹೊಂದಾಣಿಕೆ</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</item>
+        <item quantity="one">1 ಸೆಕೆಂಡಿನಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d ನಿಮಿಷಗಳವರೆಗೆ (%2$s ವರೆಗೆ)</item>
+        <item quantity="one">ಒಂದು ನಿಮಿಷದವರೆಗೆ (%2$s ವರೆಗೆ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d ಗಂಟೆಗಳವರೆಗೆ (%2$s ವರೆಗೆ)</item>
+        <item quantity="one">ಒಂದು ಗಂಟೆಯವರೆಗೆ (%2$s ವರೆಗೆ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d ನಿಮಿಷಗಳವರೆಗೆ</item>
+        <item quantity="one">ಒಂದು ನಿಮಿಷದವರೆಗೆ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d ಗಂಟೆಗಳವರೆಗೆ</item>
+        <item quantity="one">ಒಂದು ಗಂಟೆಯವರೆಗೆ</item>
+    </plurals>
+</resources>

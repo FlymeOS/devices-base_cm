@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">%d marta uringaningizdan so‘ng, SIM karta qulflanib qoladi.</item>
+        <item quantity="one">%d marta uringaningizdan so‘ng, SIM karta qulflanib qoladi.</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d soniya oldin</item>
+        <item quantity="one">1 soniya oldin</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d daqiqa oldin</item>
+        <item quantity="one">1 daqiqa oldin</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d soat oldin</item>
+        <item quantity="one">1 soat oldin</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">O‘tgan %d kun</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d kun oldin</item>
+        <item quantity="one">kecha</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d soniyada</item>
+        <item quantity="one">1 soniyada</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d daqiqada</item>
+        <item quantity="one">1 daqiqada</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d soatda</item>
+        <item quantity="one">1 soatda</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d kunda</item>
+        <item quantity="one">ertaga</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d soniya oldin</item>
+        <item quantity="one">1 soniya oldin</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d daq. oldin</item>
+        <item quantity="one">1 daq. oldin</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d soat oldin</item>
+        <item quantity="one">1 soat oldin</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d kun oldin</item>
+        <item quantity="one">kecha</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d soniya da</item>
+        <item quantity="one">1 soniya da</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d daq. da</item>
+        <item quantity="one">1 daq. da</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d soatda</item>
+        <item quantity="one">1 soatda</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d kunda</item>
+        <item quantity="one">ertaga</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d soniya</item>
+        <item quantity="one">1 soniya</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d daqiqa</item>
+        <item quantity="one">1 daqiqa</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d soat</item>
+        <item quantity="one">1 soat</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi tarmoqlar mavjud</item>
+        <item quantity="one">Wi-Fi tarmoq mavjud</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Mavjud Wi-Fi tarmoqlarini ochish</item>
+        <item quantity="one">Mavjud Wi-Fi tarmoqni ochish</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$ddan %2$d</item>
+        <item quantity="one">1 mos topildi</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d soniyadan keyin qayta urinib ko‘ring</item>
+        <item quantity="one">1 soniyadan keyin qayta urinib ko‘ring</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d daqiqa (ushbu vaqtgacha: %2$s)</item>
+        <item quantity="one">Bir daqiqa (ushbu vaqtgacha: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d soat (ushbu vaqtgacha: %2$s)</item>
+        <item quantity="one">Bir soat (ushbu vaqtgacha: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d daqiqa</item>
+        <item quantity="one">1 daqiqa</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d soat</item>
+        <item quantity="one">1 soat</item>
+    </plurals>
+</resources>

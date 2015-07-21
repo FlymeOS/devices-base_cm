@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">సిమ్ లాక్ కాకుండా ఉండటానికి మీకు %d ప్రయత్నాలు మిగిలి ఉన్నాయి.</item>
+        <item quantity="one">సిమ్ లాక్ కాకుండా ఉండటానికి మీకు %d ప్రయత్నం మిగిలి ఉంది.</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d సెకన్ల క్రితం</item>
+        <item quantity="one">1 సెకను క్రితం</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d నిమిషాల క్రితం</item>
+        <item quantity="one">1 నిమిషం క్రితం</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d గంటల క్రితం</item>
+        <item quantity="one">1 గంట క్రితం</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">గత %d రోజులు</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d రోజుల క్రితం</item>
+        <item quantity="one">నిన్న</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d సెకన్లలో</item>
+        <item quantity="one">1 సెకనులో</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d నిమిషాల్లో</item>
+        <item quantity="one">1 నిమిషంలో</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d గంటల్లో</item>
+        <item quantity="one">1 గంటలో</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d రోజుల్లో</item>
+        <item quantity="one">రేపు</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d సెక క్రితం</item>
+        <item quantity="one">1 సెక క్రితం</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d నిమి క్రితం</item>
+        <item quantity="one">1 నిమి క్రితం</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d గంటల క్రితం</item>
+        <item quantity="one">1 గంట క్రితం</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d రోజుల క్రితం</item>
+        <item quantity="one">నిన్న</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d సెకన్లలో</item>
+        <item quantity="one">1 సెకనులో</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d నిమిషాల్లో</item>
+        <item quantity="one">1 నిమిషంలో</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d గంటల్లో</item>
+        <item quantity="one">1 గంటలో</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d రోజుల్లో</item>
+        <item quantity="one">రేపు</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d సెకన్లు</item>
+        <item quantity="one">1 సెకను</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d నిమిషాలు</item>
+        <item quantity="one">1 నిమిషం</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d గంటలు</item>
+        <item quantity="one">1 గంట</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi నెట్‌వర్క్‌లు అందుబాటులో ఉన్నాయి</item>
+        <item quantity="one">Wi-Fi నెట్‌వర్క్ అందుబాటులో ఉంది</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">అందుబాటులో ఉన్న Wi-Fi నెట్‌వర్క్‌లను తెరవండి</item>
+        <item quantity="one">అందుబాటులో ఉన్న Wi-Fi నెట్‌వర్క్‌ను తెరవండి</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$dలో %2$d</item>
+        <item quantity="one">1 సరిపోలిక</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d సెకన్లలో మళ్లీ ప్రయత్నించండి</item>
+        <item quantity="one">1 సెకనులో మళ్లీ ప్రయత్నించండి</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d నిమిషాల పాటు (%2$s వరకు)</item>
+        <item quantity="one">ఒక నిమిషం పాటు (%2$s వరకు)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d గంటల పాటు (%2$s వరకు)</item>
+        <item quantity="one">ఒక గంట పాటు (%2$s వరకు)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d నిమిషాలకి</item>
+        <item quantity="one">ఒక నిమిషానికి</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d గంటలకు</item>
+        <item quantity="one">ఒక గంటకు</item>
+    </plurals>
+</resources>

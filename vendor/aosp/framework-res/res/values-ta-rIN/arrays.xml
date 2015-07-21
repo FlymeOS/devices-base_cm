@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>வீடு</item>
+        <item>அலுவலகம்</item>
+        <item>மற்றவை</item>
+        <item>தனிப்பயன்</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>அலுவலகம்</item>
+        <item>மற்றவை</item>
+        <item>தனிப்பயன்</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>வீடு</item>
+        <item>மொபைல்</item>
+        <item>அலுவலகம்</item>
+        <item>பணியிட தொலைநகல்</item>
+        <item>வீட்டு தொலைநகல்</item>
+        <item>பேஜர்</item>
+        <item>மற்றவை</item>
+        <item>தனிப்பயன்</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>வீடு</item>
+        <item>அலுவலகம்</item>
+        <item>மற்றவை</item>
+        <item>தனிப்பயன்</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>வீடு</item>
+        <item>அலுவலகம்</item>
+        <item>மற்றவை</item>
+        <item>தனிப்பயன்</item>
+    </string-array>
+</resources>
