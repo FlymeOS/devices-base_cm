@@ -2601,6 +2601,8 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_flyme_0
+
     .line 785
     const-string v3, "InputMethodManagerService"
 
@@ -2630,6 +2632,7 @@
 
     .line 787
     :cond_4
+    :cond_flyme_0
     if-eqz v0, :cond_0
 
     .line 788

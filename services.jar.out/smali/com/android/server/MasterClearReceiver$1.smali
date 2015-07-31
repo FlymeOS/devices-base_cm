@@ -74,11 +74,7 @@
 
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$reason:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
-
-    invoke-static {v1, v2}, Landroid/os/RecoverySystem;->mzRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v2, v3, v4, v1}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;ZLjava/lang/String;Z)V
 
     .line 54
     const-string v2, "MasterClear"

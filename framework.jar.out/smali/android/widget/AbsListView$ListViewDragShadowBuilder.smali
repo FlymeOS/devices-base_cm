@@ -77,41 +77,30 @@
 
     const/4 v9, 0x0
 
-    .line 7703
     iput-object p1, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->this$0:Landroid/widget/AbsListView;
 
-    .line 7704
     invoke-direct {p0, p2}, Landroid/view/View$DragShadowBuilder;-><init>(Landroid/view/View;)V
 
-    .line 7690
     iput-boolean v10, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mNeedBackground:Z
 
-    .line 7694
     iput v9, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mFilterColorNormal:I
 
-    .line 7695
     iput v9, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mFilterColorWarning:I
 
-    .line 7819
     const/4 v6, -0x1
 
     iput v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mState:I
 
-    .line 7705
     iput-boolean p3, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mNeedBackground:Z
 
-    .line 7706
     if-nez p2, :cond_0
 
-    .line 7758
     :goto_0
     return-void
 
-    .line 7707
     :cond_0
-    if-eqz p3, :cond_4
+    if-eqz p3, :cond_5
 
-    .line 7708
     invoke-virtual {p1}, Landroid/widget/AbsListView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -243,7 +232,7 @@
 
     move-result v7
 
-    if-le v6, v7, :cond_3
+    if-le v6, v7, :cond_4
 
     .line 7736
     new-array v2, v11, [I
@@ -321,11 +310,20 @@
     :cond_2
     iget-object v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightNormal:Landroid/graphics/drawable/Drawable;
 
+    if-eqz v6, :cond_3
+
+    iget-object v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightNormal:Landroid/graphics/drawable/Drawable;
+
     iget v7, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mWidth:I
 
     iget v8, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHeight:I
 
     invoke-virtual {v6, v9, v9, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    :cond_3
+    iget-object v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightWarning:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v6, :cond_4
 
     .line 7754
     iget-object v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightWarning:Landroid/graphics/drawable/Drawable;
@@ -339,27 +337,24 @@
     .line 7757
     .end local v0    # "dragLocation":[I
     .end local v2    # "listLocation":[I
-    :cond_3
+    :cond_4
     invoke-direct {p0}, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->createBitmapCache()V
 
     goto/16 :goto_0
 
-    .line 7725
-    :cond_4
+    :cond_5
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result v6
 
     iput v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mWidth:I
 
-    .line 7726
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
     iput v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHeight:I
 
-    .line 7728
     invoke-virtual {p1}, Landroid/widget/AbsListView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -372,7 +367,6 @@
 
     iput v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mFilterColorNormal:I
 
-    .line 7730
     invoke-virtual {p1}, Landroid/widget/AbsListView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -385,38 +379,32 @@
 
     iput v6, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mFilterColorWarning:I
 
-    goto :goto_1
+    goto/16 :goto_1
 .end method
 
 .method private createBitmapCache()V
     .locals 8
 
     .prologue
-    .line 7826
     invoke-virtual {p0}, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->getView()Landroid/view/View;
 
     move-result-object v4
 
-    .line 7827
     .local v4, "view":Landroid/view/View;
     if-nez v4, :cond_0
 
-    .line 7856
     :goto_0
     return-void
 
-    .line 7831
     :cond_0
     const/4 v0, 0x0
 
-    .line 7834
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     :try_start_0
     iget-boolean v5, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mNeedBackground:Z
 
     if-eqz v5, :cond_1
 
-    .line 7835
     invoke-virtual {v4}, Landroid/view/View;->getWidth()I
 
     move-result v5
@@ -441,7 +429,6 @@
 
     move-result-object v0
 
-    .line 7842
     :goto_1
     iget-object v5, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->this$0:Landroid/widget/AbsListView;
 
@@ -459,18 +446,15 @@
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7848
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 7849
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
 
     move-result v3
 
-    .line 7850
     .local v3, "restoreCount":I
     const/4 v5, 0x0
 
@@ -482,23 +466,18 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 7851
     invoke-virtual {v4, v1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 7852
     invoke-virtual {v1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 7853
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 7855
     iput-object v0, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mBitmapCache:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 7839
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v3    # "restoreCount":I
     :cond_1
@@ -521,11 +500,9 @@
 
     goto :goto_1
 
-    .line 7844
     :catch_0
     move-exception v2
 
-    .line 7845
     .local v2, "e":Ljava/lang/OutOfMemoryError;
     goto :goto_0
 .end method
@@ -543,33 +520,27 @@
 
     const/4 v3, 0x0
 
-    .line 7774
     iget-boolean v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mNeedBackground:Z
 
     if-eqz v2, :cond_4
 
-    .line 7775
     iget v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mState:I
 
     if-nez v2, :cond_1
 
-    .line 7776
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightNormal:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 7783
     :goto_0
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mBitmapCache:Landroid/graphics/Bitmap;
 
     if-nez v2, :cond_3
 
-    .line 7784
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v1
 
-    .line 7785
     .local v1, "restoreCount":I
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mBackgroundPadding:Landroid/graphics/Rect;
 
@@ -589,32 +560,26 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 7786
     invoke-super {p0, p1}, Landroid/view/View$DragShadowBuilder;->onDrawShadow(Landroid/graphics/Canvas;)V
 
-    .line 7787
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 7814
     .end local v1    # "restoreCount":I
     :cond_0
     :goto_1
     return-void
 
-    .line 7777
     :cond_1
     iget v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mState:I
 
     if-ne v2, v4, :cond_2
 
-    .line 7778
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mHightLightWarning:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 7780
     :cond_2
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mBackground:Landroid/graphics/drawable/Drawable;
 
@@ -622,7 +587,6 @@
 
     goto :goto_0
 
-    .line 7789
     :cond_3
     iget-object v2, p0, Landroid/widget/AbsListView$ListViewDragShadowBuilder;->mBitmapCache:Landroid/graphics/Bitmap;
 
@@ -642,6 +606,7 @@
 
     goto :goto_1
 
+    .line 7725
     .line 7792
     :cond_4
     const/4 v0, 0x0

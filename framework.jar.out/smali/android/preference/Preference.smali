@@ -3447,5 +3447,35 @@
     iput v0, p0, Landroid/preference/Preference;->mLayoutResId:I
 
     :cond_0
+    invoke-direct {p0}, Landroid/preference/Preference;->mzShouldRecycle()V
+
+    return-void
+.end method
+
+.method private mzShouldRecycle()V
+    .locals 2
+
+    .prologue
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.meizu"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/preference/Preference;->mCanRecycleLayout:Z
+
+    :cond_0
     return-void
 .end method
