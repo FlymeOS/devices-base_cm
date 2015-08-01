@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dropTarget_paddingEnd">22.0dip</dimen>
+    <dimen name="dropTarget_paddingStart">165.0dip</dimen>
+    <dimen name="folder_cell_thumb_translatey_three_row">7.0dip</dimen>
+    <dimen name="folder_cell_thumb_translatey_two_row">10.0dip</dimen>
+    <dimen name="folder_icon_size">57.0dip</dimen>
+    <dimen name="folder_items_num_offsetx0">3.5dip</dimen>
+    <dimen name="folder_items_num_offsetx1">18.0dip</dimen>
+    <dimen name="folder_items_num_offsetx2">32.5dip</dimen>
+    <dimen name="folder_items_num_offsety1">21.5dip</dimen>
+    <dimen name="icontext_size">4.699994sp</dimen>
+    <dimen name="real_folder_name_height_translatey">14.0dip</dimen>
+</resources>
