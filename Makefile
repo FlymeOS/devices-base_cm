@@ -88,7 +88,7 @@ vendor_modify_jars := android.policy framework services telephony-common wifi-se
 # The default value is nothing.
 # You can configure the board system file path which relative to the system directory in the board release.
 #-----------------------------------------------------------------------------
-board_saved_files := lib/libsqlite.so lib/libwebviewchromium.so
+board_saved_files := lib/libwebviewchromium.so
 
 ##############################################################################
 # The value decides which board system apk you want to remove.
