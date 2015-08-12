@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <add-resource type="dimen" name="alert_dialog_padding_material" />
+    <dimen name="alert_dialog_padding_material">24dp</dimen>
+    <add-resource type="dimen" name="alert_dialog_padding_top_material" />
+    <dimen name="alert_dialog_padding_top_material">18dp</dimen>
+</resources>
