@@ -666,7 +666,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {v2, v3}, Landroid/media/MediaRecorder;->setVideoSource(I)V
+    invoke-virtual {v2, v3}, Landroid/media/MediaRecorder;->hook_setVideoSource(I)V
 
     .line 233
     iget-boolean v2, p0, Landroid/filterpacks/videosink/MediaEncoderFilter;->mCaptureTimeLapse:Z

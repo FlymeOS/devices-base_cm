@@ -6233,6 +6233,14 @@
     :cond_0
     :goto_0
     :pswitch_0
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1, v11}, Landroid/view/ViewGroup;->mzDispatchDragEvent(Landroid/view/DragEvent;Z)Z
+
+    move-result v11
+
     if-nez v11, :cond_1
 
     .line 1388
@@ -18299,4 +18307,136 @@
 
     .line 3801
     return-void
+.end method
+
+.method private mzDispatchDragEvent(Landroid/view/DragEvent;Z)Z
+    .locals 4
+    .param p1, "event"    # Landroid/view/DragEvent;
+    .param p2, "retval"    # Z
+
+    .prologue
+    iget v2, p1, Landroid/view/DragEvent;->mAction:I
+
+    const/16 v3, 0x64
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Landroid/view/ViewGroup;->mDragNotifiedChildren:Ljava/util/HashSet;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Landroid/view/ViewGroup;->mDragNotifiedChildren:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    .local v0, "child":Landroid/view/View;
+    invoke-virtual {v0, p1}, Landroid/view/View;->dispatchDragEvent(Landroid/view/DragEvent;)Z
+
+    iget v2, v0, Landroid/view/View;->mPrivateFlags2:I
+
+    and-int/lit8 v2, v2, -0x4
+
+    iput v2, v0, Landroid/view/View;->mPrivateFlags2:I
+
+    invoke-virtual {v0}, Landroid/view/View;->refreshDrawableState()V
+
+    goto :goto_0
+
+    .end local v0    # "child":Landroid/view/View;
+    :cond_0
+    iget-object v2, p0, Landroid/view/ViewGroup;->mDragNotifiedChildren:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
+
+    iget-object v2, p0, Landroid/view/ViewGroup;->mCurrentDrag:Landroid/view/DragEvent;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Landroid/view/ViewGroup;->mCurrentDrag:Landroid/view/DragEvent;
+
+    invoke-virtual {v2}, Landroid/view/DragEvent;->recycle()V
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Landroid/view/ViewGroup;->mCurrentDrag:Landroid/view/DragEvent;
+
+    .end local v1    # "i$":Ljava/util/Iterator;
+    :cond_1
+    iget-boolean v2, p0, Landroid/view/ViewGroup;->mChildAcceptsDrag:Z
+
+    if-eqz v2, :cond_2
+
+    const/4 p2, 0x1
+
+    :cond_2
+    return p2
+.end method
+
+.method public dispatchStatusBarTap()Z
+    .locals 5
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewGroup;->mChildren:[Landroid/view/View;
+
+    .local v0, "children":[Landroid/view/View;
+    iget v1, p0, Landroid/view/ViewGroup;->mChildrenCount:I
+
+    .local v1, "count":I
+    const/4 v2, 0x0
+
+    .local v2, "handled":Z
+    const/4 v3, 0x0
+
+    .local v3, "i":I
+    :goto_0
+    if-ge v3, v1, :cond_0
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Landroid/view/View;->dispatchStatusBarTap()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const/4 v2, 0x1
+
+    :cond_0
+    if-nez v2, :cond_1
+
+    invoke-super {p0}, Landroid/view/View;->dispatchStatusBarTap()Z
+
+    move-result v2
+
+    :cond_1
+    return v2
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 .end method

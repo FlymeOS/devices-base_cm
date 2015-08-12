@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/ApplicationPackageManager$FlymeInjector;,
         Landroid/app/ApplicationPackageManager$ResourceName;
     }
 .end annotation
@@ -2365,6 +2366,8 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
+    invoke-static {}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getDefaultFlymeActivityIcon()Landroid/graphics/drawable/Drawable;
+
     move-result-object v0
 
     return-object v0
@@ -2392,6 +2395,12 @@
 
     .line 732
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    invoke-static/range {p1 .. p1}, Landroid/app/ApplicationPackageManager$FlymeInjector;->isFlymeCalendarPkg(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_flyme_0
+
     if-eqz v0, :cond_0
 
     move-object v4, v0
@@ -2402,6 +2411,7 @@
 
     .line 735
     :cond_0
+    :cond_flyme_0
     if-nez p3, :cond_1
 
     .line 737
@@ -2423,7 +2433,7 @@
 
     .line 744
     .local v3, "r":Landroid/content/res/Resources;
-    invoke-virtual {v3, p2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {p0 .. p3}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getFlymeThemeDrawable(Landroid/app/ApplicationPackageManager;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

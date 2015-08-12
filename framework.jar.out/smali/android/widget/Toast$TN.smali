@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field mMzToastType:I
+
 .field mGravity:I
 
 .field final mHandler:Landroid/os/Handler;
@@ -112,6 +114,8 @@
     const/16 v1, 0x98
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Toast$TN;->mzInitToastType()V
 
     .line 370
     return-void
@@ -396,6 +400,8 @@
 
     iput-object v3, v4, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Toast$TN;->mzHookToastType()V
+
     .line 419
     iget-object v4, p0, Landroid/widget/Toast$TN;->mView:Landroid/view/View;
 
@@ -461,5 +467,29 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 379
+    return-void
+.end method
+
+.method private mzHookToastType()V
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Toast$TN;->mParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, p0, Landroid/widget/Toast$TN;->mMzToastType:I
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    return-void
+.end method
+
+.method private mzInitToastType()V
+    .locals 1
+
+    .prologue
+    const/16 v0, 0x7d5
+
+    iput v0, p0, Landroid/widget/Toast$TN;->mMzToastType:I
+
     return-void
 .end method

@@ -6,6 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/view/inputmethod/InputMethodManager$FlymeInjector;,
+        Landroid/view/inputmethod/InputMethodManager$MzHandler;,
+        Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;,
         Landroid/view/inputmethod/InputMethodManager$PendingEvent;,
         Landroid/view/inputmethod/InputMethodManager$ImeInputEventSender;,
         Landroid/view/inputmethod/InputMethodManager$FinishedInputEventCallback;,
@@ -16,6 +19,12 @@
 
 
 # static fields
+.field public static final ID_IME_MEIZU:Ljava/lang/String; = "com.baidu.input_mz/com.meizu.input.MzInputService"
+
+.field static final MSG_VIS_CHANGED:I = 0x8
+
+.field public static final MZ_FLAG_DISABLE_NEXT_ANIMATION:I = 0x1
+
 .field public static final CONTROL_START_INITIAL:I = 0x100
 
 .field public static final CONTROL_WINDOW_FIRST:I = 0x4
@@ -78,6 +87,37 @@
 
 
 # instance fields
+.field mMzHandler:Landroid/view/inputmethod/InputMethodManager$MzHandler;
+
+.field mMzInputShown:Z
+
+.field mMzInputShownChangeListenerList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mMzInputTheme:Ljava/lang/String;
+
+.field mMzPrivateImeOptionsMap:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mMzService:Lcom/android/internal/view/MzIInputMethodManager;
+
 .field mActive:Z
 
 .field mBindSequence:I
@@ -287,6 +327,8 @@
     invoke-direct {v0, p2, v1, p0}, Landroid/view/inputmethod/InputMethodManager$ControlledInputConnectionWrapper;-><init>(Landroid/os/Looper;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/InputMethodManager;)V
 
     iput-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mIInputContext:Lcom/android/internal/view/IInputContext;
+
+    invoke-static/range {p0 .. p0}, Landroid/view/inputmethod/InputMethodManager$FlymeInjector;->initFlymeExtFields(Landroid/view/inputmethod/InputMethodManager;)V
 
     .line 612
     return-void
@@ -4565,6 +4607,8 @@
 
     iput-boolean v1, p0, Landroid/view/inputmethod/InputMethodManager;->mServedConnecting:Z
 
+    invoke-static/range {p0 .. p0}, Landroid/view/inputmethod/InputMethodManager$FlymeInjector;->mzAdjustEditorInfo(Landroid/view/inputmethod/InputMethodManager;)V
+
     .line 1205
     invoke-direct {p0}, Landroid/view/inputmethod/InputMethodManager;->notifyInputConnectionFinished()V
 
@@ -5825,4 +5869,354 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method public addInputShownChangeListener(Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;)V
+    .locals 1
+    .param p1, "l"    # Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShownChangeListenerList:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShownChangeListenerList:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public enableInputWindowNextAnimation(Z)V
+    .locals 5
+    .param p1, "enable"    # Z
+
+    .prologue
+    const/4 v1, 0x1
+
+    invoke-virtual {p0}, Landroid/view/inputmethod/InputMethodManager;->checkFocus()V
+
+    iget-object v2, p0, Landroid/view/inputmethod/InputMethodManager;->mH:Landroid/view/inputmethod/InputMethodManager$H;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-object v3, p0, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
+
+    if-nez v3, :cond_0
+
+    iget-object v3, p0, Landroid/view/inputmethod/InputMethodManager;->mCurrentTextBoxAttribute:Landroid/view/inputmethod/EditorInfo;
+
+    if-nez v3, :cond_0
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    :try_start_1
+    iget-object v3, p0, Landroid/view/inputmethod/InputMethodManager;->mMzService:Lcom/android/internal/view/MzIInputMethodManager;
+
+    if-eqz p1, :cond_1
+
+    const/4 v1, 0x0
+
+    :cond_1
+    const/4 v4, 0x1
+
+    invoke-interface {v3, v1, v4}, Lcom/android/internal/view/MzIInputMethodManager;->mzSetFlags(II)I
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    :try_start_2
+    monitor-exit v2
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Landroid/os/RemoteException;
+    :try_start_3
+    const-string v1, "InputMethodManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "IME died: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Landroid/view/inputmethod/InputMethodManager;->mCurId:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+.end method
+
+.method public getCurEditorInfo()Landroid/view/inputmethod/EditorInfo;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mCurrentTextBoxAttribute:Landroid/view/inputmethod/EditorInfo;
+
+    return-object v0
+.end method
+
+.method public getMzHandler()Landroid/view/inputmethod/InputMethodManager$MzHandler;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzHandler:Landroid/view/inputmethod/InputMethodManager$MzHandler;
+
+    return-object v0
+.end method
+
+.method public getMzInputTheme()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputTheme:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getMzInputThemeLight()Z
+    .locals 2
+
+    .prologue
+    const-string v0, "white"
+
+    iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputTheme:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getPrivateImeOptionsMap()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzPrivateImeOptionsMap:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method public getServedView()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public isSoftInputShown()Z
+    .locals 4
+
+    .prologue
+    :try_start_0
+    iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mMzService:Lcom/android/internal/view/MzIInputMethodManager;
+
+    invoke-interface {v1}, Lcom/android/internal/view/MzIInputMethodManager;->mzIsShown()Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/view/inputmethod/InputMethodManager;->setInputShown(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    iget-boolean v1, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShown:Z
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Landroid/os/RemoteException;
+    const-string v1, "InputMethodManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "IME died: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/view/inputmethod/InputMethodManager;->mCurId:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method public removeInputShownChangeListener(Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;)V
+    .locals 1
+    .param p1, "l"    # Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
+
+    .prologue
+    iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShownChangeListenerList:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public setInputShown(Z)V
+    .locals 4
+    .param p1, "shown"    # Z
+
+    .prologue
+    iget-object v3, p0, Landroid/view/inputmethod/InputMethodManager;->mH:Landroid/view/inputmethod/InputMethodManager$H;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-boolean v2, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShown:Z
+
+    if-eq v2, p1, :cond_0
+
+    iput-boolean p1, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShown:Z
+
+    iget-object v2, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputShownChangeListenerList:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .local v0, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
+
+    .local v1, "l":Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
+    invoke-interface {v1, p1}, Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;->onInputShownChanged(Z)V
+
+    goto :goto_0
+
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "l":Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v2
+
+    :cond_0
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
+.end method
+
+.method public setMzInputThemeLight(Z)V
+    .locals 2
+    .param p1, "light"    # Z
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    const-string v0, "white"
+
+    .local v0, "theme":Ljava/lang/String;
+    :goto_0
+    iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputTheme:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :goto_1
+    return-void
+
+    .end local v0    # "theme":Ljava/lang/String;
+    :cond_0
+    const-string v0, "black"
+
+    goto :goto_0
+
+    .restart local v0    # "theme":Ljava/lang/String;
+    :cond_1
+    iput-object v0, p0, Landroid/view/inputmethod/InputMethodManager;->mMzInputTheme:Ljava/lang/String;
+
+    iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
+
+    invoke-virtual {p0, v1}, Landroid/view/inputmethod/InputMethodManager;->restartInput(Landroid/view/View;)V
+
+    goto :goto_1
 .end method

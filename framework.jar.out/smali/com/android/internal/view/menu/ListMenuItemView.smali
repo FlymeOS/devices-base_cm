@@ -11,6 +11,8 @@
 
 
 # instance fields
+.field private mMzTextColor:Landroid/content/res/ColorStateList;
+
 .field private mBackground:Landroid/graphics/drawable/Drawable;
 
 .field private mCheckBox:Landroid/widget/CheckBox;
@@ -387,6 +389,8 @@
 
     iput-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mShortcutView:Landroid/widget/TextView;
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/view/menu/ListMenuItemView;->mzInitShortCut()V
+
     .line 96
     return-void
 .end method
@@ -492,6 +496,8 @@
     .param p1, "checkable"    # Z
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/view/menu/ListMenuItemView;->mzSetTextColor()V
+
     const/16 v3, 0x8
 
     .line 130
@@ -664,6 +670,8 @@
     .local v0, "compoundButton":Landroid/widget/CompoundButton;
     :goto_0
     invoke-virtual {v0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/internal/view/menu/ListMenuItemView;->mzSetTextColor()V
 
     .line 187
     return-void
@@ -942,4 +950,135 @@
     iget-boolean v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mForceShowIcon:Z
 
     return v0
+.end method
+
+.method private mzInitShortCut()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mMzTextColor:Landroid/content/res/ColorStateList;
+
+    iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mShortcutView:Landroid/widget/TextView;
+
+    if-nez v0, :cond_0
+
+    sget v0, Lcom/flyme/internal/R$id;->shortcut:I
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/ListMenuItemView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mShortcutView:Landroid/widget/TextView;
+
+    :cond_0
+    return-void
+.end method
+
+.method private mzSetTextColor()V
+    .locals 4
+
+    .prologue
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->isCheckable()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/internal/view/menu/ListMenuItemView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/flyme/internal/R$color;->mz_foreground_hight_light:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    .local v1, "textColorHighLight":I
+    const/4 v2, 0x2
+
+    new-array v0, v2, [I
+
+    fill-array-data v0, :array_0
+
+    .local v0, "stateSet":[I
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mMzTextColor:Landroid/content/res/ColorStateList;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->isExclusiveCheckable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->isChecked()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->isDeviceDefaultTheme()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mMzTextColor:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v2, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mMzTextColor:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+
+    goto :goto_0
+
+    nop
+
+    :array_0
+    .array-data 4
+        #android:attr@state_checked#t
+        #android:attr@state_enabled#t
+    .end array-data
 .end method

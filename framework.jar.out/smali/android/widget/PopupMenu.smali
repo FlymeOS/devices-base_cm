@@ -17,6 +17,8 @@
 
 
 # instance fields
+.field private mMzLayoutMode:I
+
 .field private final mAnchor:Landroid/view/View;
 
 .field private final mContext:Landroid/content/Context;
@@ -69,6 +71,8 @@
     move v3, p3
 
     invoke-direct/range {v0 .. v5}, Landroid/widget/PopupMenu;-><init>(Landroid/content/Context;Landroid/view/View;III)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/PopupMenu;->initFlymeExtFields()V
 
     .line 87
     return-void
@@ -364,11 +368,133 @@
     .locals 1
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Landroid/widget/PopupMenu;->mzSetPopupLayoutMode()V
+
     .line 194
     iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuPopupHelper;->show()V
 
     .line 195
+    return-void
+.end method
+
+.method private initFlymeExtFields()V
+    .locals 1
+
+    .prologue
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/widget/PopupMenu;->mMzLayoutMode:I
+
+    return-void
+.end method
+
+.method private mzSetPopupLayoutMode()V
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    iget v1, p0, Landroid/widget/PopupMenu;->mMzLayoutMode:I
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/view/menu/MenuPopupHelper;->setPopupLayoutMode(I)V
+
+    return-void
+.end method
+
+.method public adjustWindowPositionForMz(Z)V
+    .locals 1
+    .param p1, "adjust"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper;->adjustWindowPositionForMz(Z)V
+
+    goto :goto_0
+.end method
+
+.method public setCenterHorizontal(Z)V
+    .locals 1
+    .param p1, "center"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper;->setCenterHorizontal(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setForceShowIcon(Z)V
+    .locals 1
+    .param p1, "showIcon"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper;->setForceShowIcon(Z)V
+
+    goto :goto_0
+.end method
+
+.method public setMaxHeight(I)V
+    .locals 1
+    .param p1, "height"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper;->setMaxHeigh(I)V
+
+    return-void
+.end method
+
+.method public setPopupLayoutMode(I)V
+    .locals 0
+    .param p1, "mode"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/PopupMenu;->mMzLayoutMode:I
+
+    return-void
+.end method
+
+.method public setPopupWidth(I)V
+    .locals 1
+    .param p1, "width"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/PopupMenu;->mPopup:Lcom/android/internal/view/menu/MenuPopupHelper;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper;->setPopupWidth(I)V
+
+    :cond_0
     return-void
 .end method

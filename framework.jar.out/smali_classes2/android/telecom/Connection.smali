@@ -17,6 +17,8 @@
 
 
 # static fields
+.field public static final STATE_ALERTING:I = 0x7
+
 .field public static final ADD_PARTICIPANT:I = 0x8000
 
 .field public static final CALL_SUBSTATE_ALL:I = 0xf

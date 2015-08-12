@@ -2,8 +2,12 @@
 .super Ljava/lang/Object;
 .source "PduHeaders.java"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
 # static fields
+.field public static final RESPONSE_STATUS_ERROR_MEIZU_DEVICEERROR:I = 0x2537
+
 .field public static final ADAPTATION_ALLOWED:I = 0xbc
 
 .field public static final ADDITIONAL_HEADERS:I = 0xb0

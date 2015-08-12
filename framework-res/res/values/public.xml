@@ -1208,6 +1208,7 @@
     <public type="attr" name="dialogPreferredPadding" id="0x010104d3" />
     <public type="attr" name="searchHintIcon" id="0x010104d4" />
     <public type="attr" name="revisionCode" id="0x010104d5" />
+    <public type="attr" name="needAccessControl" id="0x010104d6" />
     <public type="attr" name="APKTOOL_DUMMY_0267" id="0x01010267" />
     <public type="attr" name="APKTOOL_DUMMY_03a8" id="0x010103a8" />
     <public type="attr" name="APKTOOL_DUMMY_03c3" id="0x010103c3" />

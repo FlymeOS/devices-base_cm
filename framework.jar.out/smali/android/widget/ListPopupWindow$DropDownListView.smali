@@ -81,6 +81,8 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ListPopupWindow$DropDownListView;->setCacheColorHint(I)V
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/ListPopupWindow$DropDownListView;->mzSetDelayTopOverScrollEnabled()V
+
     .line 1544
     return-void
 .end method
@@ -726,4 +728,15 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method private mzSetDelayTopOverScrollEnabled()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/widget/ListPopupWindow$DropDownListView;->setDelayTopOverScrollEnabled(Z)V
+
+    return-void
 .end method

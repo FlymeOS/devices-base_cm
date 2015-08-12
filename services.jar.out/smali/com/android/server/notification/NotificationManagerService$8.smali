@@ -719,6 +719,18 @@
     :goto_4
     move-object/from16 v0, p0
 
+    iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    iget-object v4, v0, Lcom/android/server/notification/NotificationManagerService$7;->val$notification:Landroid/app/Notification;
+
+    move-object/from16 v5, v20
+
+    move-object/from16 v1, v22
+
+    invoke-virtual {v3, v4, v5, v2, v1}, Lcom/android/server/notification/NotificationManagerService;->hookEnqueueNotification(Landroid/app/Notification;Lcom/android/server/notification/NotificationRecord;Landroid/service/notification/StatusBarNotification;Lcom/android/server/notification/NotificationRecord;)V
+
+    move-object/from16 v0, p0
+
     iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$8;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     move-object/from16 v0, v22

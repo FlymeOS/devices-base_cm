@@ -5235,3 +5235,21 @@
     .line 981
     return-void
 .end method
+
+.method public registerForVoiceCallIncomingIndication(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    return-void
+.end method
+
+.method public unregisterForVoiceCallIncomingIndication(Landroid/os/Handler;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+
+    .prologue
+    return-void
+.end method

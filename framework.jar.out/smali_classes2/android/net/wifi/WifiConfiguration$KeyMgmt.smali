@@ -15,6 +15,10 @@
 
 
 # static fields
+.field public static final WAPI_CERT:I = 0x6
+
+.field public static final WAPI_PSK:I = 0x5
+
 .field public static final IEEE8021X:I = 0x3
 
 .field public static final NONE:I = 0x0
@@ -37,6 +41,8 @@
     .prologue
     .line 92
     const/4 v0, 0x5
+
+    add-int/lit8 v0, v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -67,6 +73,18 @@
     const/4 v1, 0x4
 
     const-string v2, "WPA2_PSK"
+
+    aput-object v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    const-string v2, "WAPI_PSK"
+
+    aput-object v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    const-string v2, "WAPI_CERT"
 
     aput-object v2, v0, v1
 

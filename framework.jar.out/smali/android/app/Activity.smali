@@ -14,6 +14,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/Activity$FlymeInject;,
+        Landroid/app/Activity$FlymeUpdateStatusBarIconThemeRunnable;,
+        Landroid/app/Activity$FlymeUpdateStatusBarTintRunnable;,
         Landroid/app/Activity$TranslucentConversionListener;,
         Landroid/app/Activity$ManagedCursor;,
         Landroid/app/Activity$NonConfigurationInstances;,
@@ -59,6 +62,16 @@
 
 
 # instance fields
+.field mAccessControlManager:Lmeizu/security/AccessControlManager;
+
+.field private mActionBarToTop:Z
+
+.field mActionModeHeaderHidden:Z
+
+.field mDisableStatusBarIconTheme:Z
+
+.field mTopRegionMainColor:Ljava/lang/Integer;
+
 .field mActionBar:Landroid/app/ActionBar;
 
 .field mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -527,6 +540,16 @@
 
     .line 2128
     :cond_1
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInject;->mzInitActionBar(Landroid/app/Activity;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     new-instance v1, Lcom/android/internal/app/WindowDecorActionBar;
 
     invoke-direct {v1, p0}, Lcom/android/internal/app/WindowDecorActionBar;-><init>(Landroid/app/Activity;)V
@@ -3867,6 +3890,8 @@
     .line 4570
     .end local v0    # "wm":Landroid/view/ViewManager;
     :cond_0
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInject;->mzMakeVisibleForStatusBarTint(Landroid/app/Activity;)V
+
     iget-object v1, p0, Landroid/app/Activity;->mDecor:Landroid/view/View;
 
     const/4 v2, 0x0
@@ -4500,6 +4525,8 @@
 
     :goto_1
     invoke-virtual {v2, v0, v1}, Landroid/app/FragmentManagerImpl;->restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Activity$FlymeInject;->resetActionModeHeaderState(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 936
     .end local v0    # "p":Landroid/os/Parcelable;
@@ -6064,6 +6091,8 @@
 
     iput-boolean v0, p0, Landroid/app/Activity;->mCalled:Z
 
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInject;->mzAccessControl(Landroid/app/Activity;)V
+
     .line 1223
     return-void
 .end method
@@ -6137,6 +6166,8 @@
     move-result-object v1
 
     invoke-virtual {v1, p0, p1}, Landroid/app/Application;->dispatchActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Activity$FlymeInject;->onSaveActionModeState(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 1372
     return-void
@@ -6543,6 +6574,8 @@
     iget-object v0, p0, Landroid/app/Activity;->mActionBar:Landroid/app/ActionBar;
 
     if-eqz v0, :cond_0
+
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInject;->onRestoreActionModeHeaderState(Landroid/app/Activity;)V
 
     .line 5695
     iget-object v0, p0, Landroid/app/Activity;->mActionBar:Landroid/app/ActionBar;
@@ -8179,6 +8212,8 @@
     .param p1, "toolbar"    # Landroid/widget/Toolbar;
 
     .prologue
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInject;->checkActionBar(Landroid/app/Activity;)V
+
     .line 2102
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -10693,5 +10728,62 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
     .line 3216
+    return-void
+.end method
+
+.method public getActivityInfo()Landroid/content/pm/ActivityInfo;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/app/Activity;->mActivityInfo:Landroid/content/pm/ActivityInfo;
+
+    return-object v0
+.end method
+
+.method public isActionBarToTop()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/app/Activity;->mActionBarToTop:Z
+
+    return v0
+.end method
+
+.method isEnableDefaultActionBarUp()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/app/Activity;->mEnableDefaultActionBarUp:Z
+
+    return v0
+.end method
+
+.method public setActionBarToTop(Z)V
+    .locals 0
+    .param p1, "actionBarToTop"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Landroid/app/Activity;->mActionBarToTop:Z
+
+    invoke-static {p0, p1}, Landroid/app/Activity$FlymeInject;->setTranslucentStatus(Landroid/app/Activity;Z)V
+
+    return-void
+.end method
+
+.method public setStatusBarDarkIcon(Z)V
+    .locals 1
+    .param p1, "on"    # Z
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/app/Activity;->mDisableStatusBarIconTheme:Z
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Landroid/app/Activity$FlymeInject;->setStatusBarDarkIcon(Landroid/view/Window;Z)V
+
     return-void
 .end method

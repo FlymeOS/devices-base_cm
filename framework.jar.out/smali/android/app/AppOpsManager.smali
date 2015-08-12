@@ -2821,7 +2821,7 @@
         0x0
         0x0
         0x0
-        0x1
+        0x0
         0x0
         0x0
         0x0
@@ -4722,6 +4722,51 @@
     .restart local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     :catch_0
     move-exception v1
+
+    goto :goto_0
+.end method
+
+.method public hook_noteOp(IILjava/lang/String;)I
+    .locals 2
+    .param p1, "op"    # I
+    .param p2, "uid"    # I
+    .param p3, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    const/16 v1, 0x14
+
+    const/4 v0, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    invoke-static {v1}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->noteOp(IILjava/lang/String;)I
+
+    move-result v0
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-static {}, Landroid/os/Binder;->getCallingPid()I
+
+    move-result v1
+
+    invoke-static {p1, p3, p2, v1}, Lmeizu/security/FlymePermissionManager;->isGranted(ILjava/lang/String;II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->noteOp(IILjava/lang/String;)I
+
+    move-result v0
 
     goto :goto_0
 .end method

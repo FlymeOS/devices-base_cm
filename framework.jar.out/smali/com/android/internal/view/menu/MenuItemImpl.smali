@@ -37,6 +37,10 @@
 
 
 # instance fields
+.field private mMzIsHeader:Z
+
+.field private mMzShowGravity:I
+
 .field private mActionProvider:Landroid/view/ActionProvider;
 
 .field private mActionView:Landroid/view/View;
@@ -1998,6 +2002,96 @@
 
     :goto_0
     return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getShowGravity()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mMzShowGravity:I
+
+    return v0
+.end method
+
+.method public isCategoryHeader()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mMzIsHeader:Z
+
+    return v0
+.end method
+
+.method public setCategoryHeader(Z)V
+    .locals 0
+    .param p1, "isHeader"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mMzIsHeader:Z
+
+    return-void
+.end method
+
+.method public setShowGravity(I)Landroid/view/MenuItem;
+    .locals 3
+    .param p1, "showGravity"    # I
+
+    .prologue
+    const/4 v0, 0x7
+
+    .local v0, "showGravityMask":I
+    and-int v1, p1, v0
+
+    packed-switch v1, :pswitch_data_0
+
+    :pswitch_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "SHOW_GRAVITY_LEFT, SHOW_GRAVITY_CENTER, and SHOW_GRAVITY_RIGHT are mutually exclusive."
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :pswitch_1
+    iput p1, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mMzShowGravity:I
+
+    iget-object v1, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
+
+    invoke-virtual {v1, p0}, Lcom/android/internal/view/menu/MenuBuilder;->onItemActionRequestChanged(Lcom/android/internal/view/menu/MenuItemImpl;)V
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public showsTextAlwaysAsAction()Z
+    .locals 2
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mShowAsAction:I
+
+    and-int/lit8 v0, v0, 0x10
+
+    const/16 v1, 0x10
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_0
     const/4 v0, 0x0

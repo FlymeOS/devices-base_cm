@@ -2,6 +2,8 @@
 .super Ljava/lang/Object;
 .source "PduBody.java"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
 # instance fields
 .field private mPartMapByContentId:Ljava/util/Map;

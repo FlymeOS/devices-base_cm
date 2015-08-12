@@ -46,6 +46,8 @@
 
 
 # instance fields
+.field private mMzAbleDraw:Z
+
 .field private mBaseGlowScale:F
 
 .field private final mBounds:Landroid/graphics/Rect;
@@ -415,6 +417,16 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
+    iget-boolean v0, p0, Landroid/widget/EdgeEffect;->mMzAbleDraw:Z
+
+    if-nez v0, :cond_flyme_0
+
+    const/4 v6, 0x0
+
+    return v6
+
+    :cond_flyme_0
+
     const/4 v6, 0x0
 
     const/high16 v9, 0x3f800000    # 1.0f

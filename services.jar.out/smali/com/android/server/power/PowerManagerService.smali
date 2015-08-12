@@ -5994,9 +5994,9 @@
     if-eqz v3, :cond_1
 
     .line 2584
-    const-string v3, "ctl.start"
+    const-string v3, "sys.powerctl"
 
-    const-string v4, "pre-recovery"
+    const-string v4, "reboot,recovery"
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 

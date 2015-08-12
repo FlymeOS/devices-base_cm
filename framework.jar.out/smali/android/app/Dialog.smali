@@ -13,6 +13,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/Dialog$SimulateForBack;,
         Landroid/app/Dialog$ListenersHandler;
     }
 .end annotation
@@ -2398,9 +2399,9 @@
     invoke-virtual {v3, v4}, Landroid/view/Window;->setDefaultLogo(I)V
 
     .line 284
-    new-instance v3, Lcom/android/internal/app/WindowDecorActionBar;
+    new-instance v3, Lcom/android/internal/app/ActionBarImpl;
 
-    invoke-direct {v3, p0}, Lcom/android/internal/app/WindowDecorActionBar;-><init>(Landroid/app/Dialog;)V
+    invoke-direct {v3, p0}, Lcom/android/internal/app/ActionBarImpl;-><init>(Landroid/app/Dialog;)V
 
     iput-object v3, p0, Landroid/app/Dialog;->mActionBar:Landroid/app/ActionBar;
 
@@ -2545,4 +2546,260 @@
 
     .line 954
     return-void
+.end method
+
+.method public handleTouchBackkey(Landroid/view/MotionEvent;)Z
+    .locals 13
+    .param p1, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    iget-boolean v11, p0, Landroid/app/Dialog;->mShowing:Z
+
+    if-eqz v11, :cond_2
+
+    sget-object v11, Landroid/os/BuildExt;->HAS_PERMANENTKEY:Ljava/lang/Boolean;
+
+    invoke-virtual {v11}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v11
+
+    if-nez v11, :cond_2
+
+    iget-object v11, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
+
+    iget-object v12, p0, Landroid/app/Dialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v11, v12, p1}, Landroid/view/Window;->isTouchOutOfBounds(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_2
+
+    new-instance v8, Landroid/graphics/Rect;
+
+    invoke-direct {v8}, Landroid/graphics/Rect;-><init>()V
+
+    .local v8, "winRect":Landroid/graphics/Rect;
+    iget-object v11, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
+
+    invoke-virtual {v11}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v8}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    const/4 v11, 0x2
+
+    new-array v4, v11, [I
+
+    .local v4, "location":[I
+    iget-object v11, p0, Landroid/app/Dialog;->mWindow:Landroid/view/Window;
+
+    invoke-virtual {v11}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v4}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    const/4 v11, 0x0
+
+    aget v11, v4, v11
+
+    int-to-float v11, v11
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v12
+
+    add-float/2addr v11, v12
+
+    float-to-int v9, v11
+
+    .local v9, "x":I
+    const/4 v11, 0x1
+
+    aget v11, v4, v11
+
+    int-to-float v11, v11
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v12
+
+    add-float/2addr v11, v12
+
+    float-to-int v10, v11
+
+    .local v10, "y":I
+    const/4 v3, 0x0
+
+    .local v3, "inBackKeyArea":Z
+    iget-object v11, p0, Landroid/app/Dialog;->mWindowManager:Landroid/view/WindowManager;
+
+    invoke-interface {v11}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/view/Display;->getRotation()I
+
+    move-result v5
+
+    .local v5, "rotation":I
+    iget-object v11, p0, Landroid/app/Dialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    sget v12, Lcom/flyme/internal/R$dimen;->mz_action_bar_default_height:I
+
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    .local v0, "actionBarHeight":I
+    packed-switch v5, :pswitch_data_0
+
+    :cond_0
+    :goto_0
+    if-eqz v3, :cond_2
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/view/View;->findFocus()Landroid/view/View;
+
+    move-result-object v7
+
+    .local v7, "vFocus":Landroid/view/View;
+    invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
+
+    move-result-object v2
+
+    .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
+    const/4 v1, 0x0
+
+    .local v1, "closeSoftIme":Z
+    if-eqz v1, :cond_1
+
+    new-instance v6, Landroid/app/Dialog$SimulateForBack;
+
+    const/4 v11, 0x0
+
+    invoke-direct {v6, p0, v11}, Landroid/app/Dialog$SimulateForBack;-><init>(Landroid/app/Dialog;Landroid/app/Dialog$1;)V
+
+    .local v6, "simulateForBack":Landroid/app/Dialog$SimulateForBack;
+    iget-object v11, p0, Landroid/app/Dialog;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v11, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    const/4 v11, 0x1
+
+    .end local v0    # "actionBarHeight":I
+    .end local v1    # "closeSoftIme":Z
+    .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
+    .end local v3    # "inBackKeyArea":Z
+    .end local v4    # "location":[I
+    .end local v5    # "rotation":I
+    .end local v6    # "simulateForBack":Landroid/app/Dialog$SimulateForBack;
+    .end local v7    # "vFocus":Landroid/view/View;
+    .end local v8    # "winRect":Landroid/graphics/Rect;
+    .end local v9    # "x":I
+    .end local v10    # "y":I
+    :goto_1
+    return v11
+
+    .restart local v0    # "actionBarHeight":I
+    .restart local v3    # "inBackKeyArea":Z
+    .restart local v4    # "location":[I
+    .restart local v5    # "rotation":I
+    .restart local v8    # "winRect":Landroid/graphics/Rect;
+    .restart local v9    # "x":I
+    .restart local v10    # "y":I
+    :pswitch_0
+    iget v11, v8, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr v11, v0
+
+    if-le v10, v11, :cond_0
+
+    iget v11, v8, Landroid/graphics/Rect;->right:I
+
+    div-int/lit8 v11, v11, 0x3
+
+    if-ge v9, v11, :cond_0
+
+    const/4 v3, 0x1
+
+    goto :goto_0
+
+    :pswitch_1
+    iget v11, v8, Landroid/graphics/Rect;->top:I
+
+    add-int/2addr v11, v0
+
+    if-ge v10, v11, :cond_0
+
+    iget v11, v8, Landroid/graphics/Rect;->right:I
+
+    div-int/lit8 v11, v11, 0x3
+
+    if-ge v9, v11, :cond_0
+
+    const/4 v3, 0x1
+
+    goto :goto_0
+
+    .restart local v1    # "closeSoftIme":Z
+    .restart local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
+    .restart local v7    # "vFocus":Landroid/view/View;
+    :cond_1
+    iget-boolean v11, p0, Landroid/app/Dialog;->mCancelable:Z
+
+    if-eqz v11, :cond_2
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->cancel()V
+
+    const/4 v11, 0x1
+
+    goto :goto_1
+
+    .end local v0    # "actionBarHeight":I
+    .end local v1    # "closeSoftIme":Z
+    .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
+    .end local v3    # "inBackKeyArea":Z
+    .end local v4    # "location":[I
+    .end local v5    # "rotation":I
+    .end local v7    # "vFocus":Landroid/view/View;
+    .end local v8    # "winRect":Landroid/graphics/Rect;
+    .end local v9    # "x":I
+    .end local v10    # "y":I
+    :cond_2
+    const/4 v11, 0x0
+
+    goto :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public isCancelable()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/app/Dialog;->mCancelable:Z
+
+    return v0
 .end method

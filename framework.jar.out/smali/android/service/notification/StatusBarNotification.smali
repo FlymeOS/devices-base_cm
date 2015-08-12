@@ -22,27 +22,27 @@
 # instance fields
 .field private final groupKey:Ljava/lang/String;
 
-.field private final id:I
+.field public final id:I
 
 .field private final initialPid:I
 
 .field private final key:Ljava/lang/String;
 
-.field private final notification:Landroid/app/Notification;
+.field public final notification:Landroid/app/Notification;
 
 .field private final opPkg:Ljava/lang/String;
 
-.field private final pkg:Ljava/lang/String;
+.field public final pkg:Ljava/lang/String;
 
 .field private final postTime:J
 
 .field private final score:I
 
-.field private final tag:Ljava/lang/String;
+.field public final tag:Ljava/lang/String;
 
 .field private final uid:I
 
-.field private final user:Landroid/os/UserHandle;
+.field public final user:Landroid/os/UserHandle;
 
 
 # direct methods
@@ -944,4 +944,13 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
+.end method
+
+.method public getPkg()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
+
+    return-object v0
 .end method

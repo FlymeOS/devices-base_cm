@@ -1387,8 +1387,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    # invokes: Lcom/android/server/am/ActivityManagerService;->showUserSwitchDialog(ILjava/lang/String;)V
-    invoke-static {v3, v4, v2}, Lcom/android/server/am/ActivityManagerService;->access$400(Lcom/android/server/am/ActivityManagerService;ILjava/lang/String;)V
+    invoke-virtual {v3, v4, v2}, Lcom/android/server/am/ActivityManagerService;->mzShowUserSwitchDialog(ILjava/lang/String;)V
 
     goto/16 :goto_0
 

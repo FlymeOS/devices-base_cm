@@ -2,6 +2,8 @@
 .super Ljava/lang/Object;
 .source "GenericPdu.java"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
 # instance fields
 .field mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;

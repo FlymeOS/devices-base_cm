@@ -972,3 +972,9 @@
 
 .method public abstract updateServiceLocation()V
 .end method
+
+.method public abstract registerForVoiceCallIncomingIndication(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
+.method public abstract unregisterForVoiceCallIncomingIndication(Landroid/os/Handler;)V
+.end method

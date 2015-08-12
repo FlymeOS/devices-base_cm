@@ -3,6 +3,7 @@
 .source "EncodedStringValue.java"
 
 # interfaces
+.implements Ljava/io/Serializable;
 .implements Ljava/lang/Cloneable;
 
 

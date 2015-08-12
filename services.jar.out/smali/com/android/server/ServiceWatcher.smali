@@ -6,6 +6,13 @@
 .implements Landroid/content/ServiceConnection;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
+    }
+.end annotation
+
 # static fields
 .field private static final D:Z = false
 
@@ -15,6 +22,10 @@
 
 
 # instance fields
+.field private mMzObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
+
+.field public mName:Ljava/lang/String;
+
 .field private final mAction:Ljava/lang/String;
 
 .field private mBinder:Landroid/os/IBinder;
@@ -299,6 +310,7 @@
 
     .local v5, "i$":Ljava/util/Iterator;
     :cond_1
+    :cond_flyme_0
     :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
@@ -405,6 +417,14 @@
     .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v8    # "pInfo":Landroid/content/pm/PackageInfo;
     :cond_2
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v9}, Lcom/android/server/ServiceWatcher;->isNetworkProvider(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_flyme_0
+
     const/high16 v12, -0x80000000
 
     .line 192
@@ -1106,6 +1126,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/ServiceWatcher;->addObserver()V
+
     .line 148
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
@@ -1178,4 +1200,155 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method private addObserver()V
+    .locals 3
+
+    .prologue
+    const-string v0, "network"
+
+    iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
+
+    iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
+
+    iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, p0, v1, v2}, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;-><init>(Lcom/android/server/ServiceWatcher;Landroid/os/Handler;Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mMzObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
+
+    iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mMzObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
+
+    invoke-virtual {v0}, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->observer()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public isNetworkProvider(Ljava/lang/String;)Z
+    .locals 4
+    .param p1, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v1, 0x0
+
+    .local v1, "valid":Z
+    iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
+
+    if-eqz v2, :cond_3
+
+    const-string v2, "network"
+
+    iget-object v3, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "network_provider_package"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "settingPackage":Ljava/lang/String;
+    if-nez v0, :cond_0
+
+    iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "network_provider_package"
+
+    invoke-static {v2, v3, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_1
+    const/4 v1, 0x1
+
+    .end local v0    # "settingPackage":Ljava/lang/String;
+    :cond_2
+    :goto_0
+    return v1
+
+    :cond_3
+    const/4 v1, 0x1
+
+    goto :goto_0
+.end method
+
+.method mzGetFieldLock()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method mzGetFieldPackageName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method mzInvokeMethodBindBestPackageLocked(Ljava/lang/String;)Z
+    .locals 1
+    .param p1, "justCheckThisPackage"    # Ljava/lang/String;
+
+    .prologue
+    invoke-direct {p0, p1}, Lcom/android/server/ServiceWatcher;->bindBestPackageLocked(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method mzInvokeMethodUnbindLocked()V
+    .locals 0
+
+    .prologue
+    invoke-direct {p0}, Lcom/android/server/ServiceWatcher;->unbindLocked()V
+
+    return-void
+.end method
+
+.method public setProviderName(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "name"    # Ljava/lang/String;
+
+    .prologue
+    iput-object p1, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
+
+    return-void
 .end method

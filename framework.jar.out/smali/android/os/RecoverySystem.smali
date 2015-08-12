@@ -2006,3 +2006,475 @@
     .line 317
     return-void
 .end method
+
+.method private static mzInstallPackage(Landroid/content/Context;ZLjava/lang/String;)V
+    .locals 11
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "wipe"    # Z
+    .param p2, "filePath"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v10, 0x1
+
+    const/4 v9, 0x0
+
+    const-string v0, "--update_package"
+
+    .local v0, "MZ_COMMAND_UPDATE":Ljava/lang/String;
+    const-string v1, "--update_package_wipe"
+
+    .local v1, "MZ_COMMAND_UPDATE_WIPE":Ljava/lang/String;
+    invoke-static {}, Landroid/os/BuildExt;->isFlymeRom()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    new-instance v5, Ljava/io/File;
+
+    invoke-direct {v5, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .local v5, "packageFile":Ljava/io/File;
+    invoke-virtual {v5}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    .local v3, "filename":Ljava/lang/String;
+    const-string v6, "RecoverySystem"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "!!! REBOOTING TO INSTALL "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, " !!!"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "--update_package="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    .local v4, "filenameArg":Ljava/lang/String;
+    const/4 v6, 0x2
+
+    new-array v7, v6, [Ljava/lang/String;
+
+    aput-object v4, v7, v9
+
+    if-eqz p1, :cond_0
+
+    const-string v6, "--wipe_data"
+
+    :goto_0
+    aput-object v6, v7, v10
+
+    invoke-static {p0, v7}, Landroid/os/RecoverySystem;->bootCommand(Landroid/content/Context;[Ljava/lang/String;)V
+
+    .end local v3    # "filename":Ljava/lang/String;
+    .end local v4    # "filenameArg":Ljava/lang/String;
+    .end local v5    # "packageFile":Ljava/io/File;
+    :goto_1
+    return-void
+
+    .restart local v3    # "filename":Ljava/lang/String;
+    .restart local v4    # "filenameArg":Ljava/lang/String;
+    .restart local v5    # "packageFile":Ljava/io/File;
+    :cond_0
+    const/4 v6, 0x0
+
+    goto :goto_0
+
+    .end local v3    # "filename":Ljava/lang/String;
+    .end local v4    # "filenameArg":Ljava/lang/String;
+    .end local v5    # "packageFile":Ljava/io/File;
+    :cond_1
+    if-eqz p1, :cond_2
+
+    move-object v2, v1
+
+    .local v2, "command":Ljava/lang/String;
+    :goto_2
+    invoke-static {p2}, Landroid/os/RecoverySystem;->writeUpgradeFilePath(Ljava/lang/String;)V
+
+    new-array v6, v10, [Ljava/lang/String;
+
+    aput-object v2, v6, v9
+
+    invoke-static {p0, v6}, Landroid/os/RecoverySystem;->bootCommand(Landroid/content/Context;[Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .end local v2    # "command":Ljava/lang/String;
+    :cond_2
+    move-object v2, v0
+
+    goto :goto_2
+.end method
+
+.method public static mzRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 7
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x0
+
+    const-string v4, "android.intent.action.MZ_UPDATE"
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const-string v4, "RecoverySystem"
+
+    const-string v5, "Flyme will reboot to recovery and start flashing phone"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v4, "wipe_userdata"
+
+    invoke-virtual {p1, v4, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .local v0, "clearData":Z
+    const-string v4, "upgrade_locate_filepath"
+
+    invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, "filePath":Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Landroid/os/RecoverySystem;->mzInstallPackage(Landroid/content/Context;ZLjava/lang/String;)V
+
+    .end local v0    # "clearData":Z
+    .end local v1    # "filePath":Ljava/lang/String;
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v4, "shutdown"
+
+    invoke-virtual {p1, v4, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    .local v3, "shutdown":Z
+    const-string v4, "android.intent.extra.REASON"
+
+    invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .local v2, "reason":Ljava/lang/String;
+    invoke-static {p0, v3, v2}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;ZLjava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method private static writeUpgradeFilePath(Ljava/lang/String;)V
+    .locals 11
+    .param p0, "filePath"    # Ljava/lang/String;
+
+    .prologue
+    if-nez p0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance v4, Ljava/io/File;
+
+    const-string v7, "/cache/"
+
+    invoke-direct {v4, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .local v4, "root":Ljava/io/File;
+    const-string v0, ".update_locate"
+
+    .local v0, "MZ_FILENAME_UPDATE_LOCATE":Ljava/lang/String;
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v4, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .local v3, "mFile":Ljava/io/File;
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v7
+
+    if-nez v7, :cond_0
+
+    :try_start_0
+    invoke-virtual {v3}, Ljava/io/File;->createNewFile()Z
+
+    const-string v7, "RecoverySystem"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, "file created"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_1
+    :try_start_1
+    new-instance v5, Ljava/io/FileOutputStream;
+
+    invoke-direct {v5, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+
+    .local v5, "stream":Ljava/io/FileOutputStream;
+    const/4 v8, 0x0
+
+    :try_start_2
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    .local v1, "buf":[B
+    invoke-virtual {v5, v1}, Ljava/io/FileOutputStream;->write([B)V
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_4
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-eqz v5, :cond_0
+
+    if-eqz v8, :cond_2
+
+    :try_start_3
+    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v6
+
+    .local v6, "x2":Ljava/lang/Throwable;
+    :try_start_4
+    invoke-virtual {v8, v6}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_end_4
+    .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    goto :goto_0
+
+    .end local v1    # "buf":[B
+    .end local v5    # "stream":Ljava/io/FileOutputStream;
+    .end local v6    # "x2":Ljava/lang/Throwable;
+    :catch_1
+    move-exception v2
+
+    .local v2, "e":Ljava/io/FileNotFoundException;
+    const-string v7, "RecoverySystem"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, "was not found so write failed"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2}, Ljava/io/FileNotFoundException;->printStackTrace()V
+
+    goto :goto_0
+
+    .end local v2    # "e":Ljava/io/FileNotFoundException;
+    :catch_2
+    move-exception v2
+
+    .local v2, "e":Ljava/io/IOException;
+    const-string v7, "RecoverySystem"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Could not create "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    .end local v2    # "e":Ljava/io/IOException;
+    .restart local v1    # "buf":[B
+    .restart local v5    # "stream":Ljava/io/FileOutputStream;
+    :cond_2
+    :try_start_5
+    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/FileNotFoundException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    goto/16 :goto_0
+
+    .end local v1    # "buf":[B
+    .end local v5    # "stream":Ljava/io/FileOutputStream;
+    :catch_3
+    move-exception v2
+
+    .restart local v2    # "e":Ljava/io/IOException;
+    const-string v7, "RecoverySystem"
+
+    const-string v8, "Error on writeFile."
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+
+    goto/16 :goto_0
+
+    .end local v2    # "e":Ljava/io/IOException;
+    .restart local v5    # "stream":Ljava/io/FileOutputStream;
+    :catch_4
+    move-exception v7
+
+    :try_start_6
+    throw v7
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :catchall_0
+    move-exception v8
+
+    move-object v10, v8
+
+    move-object v8, v7
+
+    move-object v7, v10
+
+    :goto_2
+    if-eqz v5, :cond_3
+
+    if-eqz v8, :cond_4
+
+    :try_start_7
+    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_5
+    .catch Ljava/io/FileNotFoundException; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
+
+    :cond_3
+    :goto_3
+    :try_start_8
+    throw v7
+
+    :catch_5
+    move-exception v6
+
+    .restart local v6    # "x2":Ljava/lang/Throwable;
+    invoke-virtual {v8, v6}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    .end local v6    # "x2":Ljava/lang/Throwable;
+    :cond_4
+    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/FileNotFoundException; {:try_start_8 .. :try_end_8} :catch_1
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v7
+
+    goto :goto_2
+.end method

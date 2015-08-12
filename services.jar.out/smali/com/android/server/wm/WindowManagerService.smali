@@ -193,6 +193,8 @@
 
 
 # instance fields
+.field mMoveWindowService:Lcom/android/server/wm/MoveWindowService;
+
 .field mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
 .field final mActivityManager:Landroid/app/IActivityManager;
@@ -1723,6 +1725,8 @@
 
     .line 952
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->showEmulatorDisplayOverlayIfNeeded()V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/wm/InjectorWMS;->setup(Lcom/android/server/wm/WindowManagerService;)V
 
     .line 953
     return-void
@@ -7066,6 +7070,8 @@
 
     .line 9760
     :cond_4
+    invoke-virtual/range {p0 .. p1}, Lcom/android/server/wm/WindowManagerService;->mzApplayUserActivityTime(Lcom/android/server/wm/WindowState;)V
+
     iget v5, v1, Landroid/view/WindowManager$LayoutParams;->type:I
 
     .line 9761
@@ -9254,6 +9260,8 @@
     move-object/from16 v0, v20
 
     iput v4, v0, Lcom/android/server/wm/DisplayContent;->pendingLayoutChanges:I
+
+    invoke-static {}, Lcom/android/server/wm/InjectorWMS;->applyDarkStatusBarTheme()V
 
     .line 10016
     const-string v4, "after finishPostLayoutPolicyLw"
@@ -11866,7 +11874,7 @@
 
     if-nez v18, :cond_8
 
-    invoke-virtual/range {v16 .. v16}, Lcom/android/server/wm/WindowState;->isConfigChanged()Z
+    invoke-virtual/range {v16 .. v16}, Lcom/android/server/wm/WindowState;->mzIsConfigChanged()Z
 
     move-result v18
 
@@ -13749,6 +13757,8 @@
 
     iput v2, v1, Landroid/content/res/Configuration;->fontScale:F
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/WindowManagerService;->mzAddThemeChangedProperty()V
+
     .line 8679
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
 
@@ -14663,6 +14673,8 @@
 
     invoke-virtual {v1, v8, v0}, Lcom/android/server/wm/WindowAnimator;->setScreenRotationAnimationLocked(ILcom/android/server/wm/ScreenRotationAnimation;)V
 
+    invoke-static {}, Lcom/android/server/wm/InjectorWMS;->adjustMoveWindowOnOrientationChanged()V
+
     goto/16 :goto_0
 
     .line 10901
@@ -15553,6 +15565,8 @@
 
     .line 10742
     .local v1, "focusChanged":I
+    invoke-static {}, Lcom/android/server/wm/InjectorWMS;->applyDarkStatusBarTheme()V
+
     if-eqz v2, :cond_2
 
     iget-object v5, p0, Lcom/android/server/wm/WindowManagerService;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
@@ -15703,6 +15717,8 @@
     iget v5, p1, Landroid/content/res/Configuration;->fontScale:F
 
     iput v5, v4, Landroid/content/res/Configuration;->fontScale:F
+
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/wm/WindowManagerService;->mzAddThemeChangedProperty(Landroid/content/res/Configuration;)V
 
     .line 3966
     iget-object v4, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
@@ -18792,6 +18808,8 @@
 
     .line 1794
     :cond_2
+    invoke-static/range {v28 .. v28}, Lcom/android/server/wm/InjectorWMS;->adjustMoveWindowWallpaperMoveWindow(Lcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v28
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
@@ -33348,6 +33366,8 @@
 
     .line 7569
     :try_start_1
+    invoke-static {}, Lcom/android/server/wm/InjectorWMS;->endDragLw()V
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
@@ -33414,7 +33434,7 @@
     .end local v16    # "token":Landroid/os/IBinder;
     .local v5, "token":Landroid/os/IBinder;
     :try_start_2
-    new-instance v3, Lcom/android/server/wm/DragState;
+    new-instance v3, Lcom/android/server/wm/MzDragState;
 
     const/4 v7, 0x0
 
@@ -33422,11 +33442,25 @@
 
     move-object v6, v2
 
-    invoke-direct/range {v3 .. v8}, Lcom/android/server/wm/DragState;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;Landroid/view/SurfaceControl;ILandroid/os/IBinder;)V
+    invoke-direct/range {v3 .. v8}, Lcom/android/server/wm/MzDragState;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;Landroid/view/SurfaceControl;ILandroid/os/IBinder;)V
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
+
+    move/from16 v0, p4
+
+    int-to-float v4, v0
+
+    move/from16 v0, p5
+
+    int-to-float v6, v0
+
+    invoke-virtual {v3, v4, v6}, Lcom/android/server/wm/DragState;->mzSetWidthAndHeight(FF)V
 
     .line 7582
     move-object/from16 v0, p0
@@ -33497,13 +33531,12 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 7600
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7603
+    invoke-static {}, Lcom/android/server/wm/InjectorWMS;->registerDragStateRegister()V
+
     return-object v5
 
-    .line 7589
     .end local v5    # "token":Landroid/os/IBinder;
     .restart local v16    # "token":Landroid/os/IBinder;
     :cond_1
@@ -34791,6 +34824,12 @@
     .restart local v20    # "origId":J
     .restart local v30    # "win":Lcom/android/server/wm/WindowState;
     :cond_1
+    move/from16 v0, p7
+
+    move-object/from16 v1, v30
+
+    invoke-static {v0, v1}, Lcom/android/server/wm/InjectorWMS;->resetMoveWindowOnWindowChanged(ILcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
@@ -35026,6 +35065,12 @@
     .restart local v12    # "flagChanges":I
     :cond_8
     :try_start_1
+    move-object/from16 v0, v30
+
+    move-object/from16 v1, p4
+
+    invoke-static {v0, v1}, Lcom/android/server/wm/InjectorWMS;->adjustMoveWindowBackupWindowFlag(Lcom/android/server/wm/WindowState;Landroid/view/WindowManager$LayoutParams;)V
+
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
@@ -35959,6 +36004,12 @@
     .line 3346
     .end local v10    # "displayInfo":Landroid/view/DisplayInfo;
     :cond_1e
+    move/from16 v0, p7
+
+    move-object/from16 v1, v30
+
+    invoke-static {v0, v1}, Lcom/android/server/wm/InjectorWMS;->adjustMoveWindowInputWindow(ILcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;
@@ -46879,6 +46930,16 @@
 
     .line 11093
     .local v6, "ws":Lcom/android/server/wm/WindowState;
+    invoke-direct {p0, v6}, Lcom/android/server/wm/WindowManagerService;->mzIsCurrentFoucus(Lcom/android/server/wm/WindowState;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_flyme_0
+
+    goto :goto_flyme_0
+
+    :cond_flyme_0
+
     :try_start_0
     iget v1, v6, Lcom/android/server/wm/WindowState;->mSystemUiVisibility:I
 
@@ -46944,6 +47005,7 @@
     .end local v4    # "newValue":I
     :cond_2
     :goto_1
+    :goto_flyme_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
@@ -49760,4 +49822,137 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method private mzAddThemeChangedProperty()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mCurConfiguration:Landroid/content/res/Configuration;
+
+    invoke-direct {p0, v0}, Lcom/android/server/wm/WindowManagerService;->mzAddThemeChangedProperty(Landroid/content/res/Configuration;)V
+
+    return-void
+.end method
+
+.method private mzAddThemeChangedProperty(Landroid/content/res/Configuration;)V
+    .locals 2
+    .param p1, "currentConfig"    # Landroid/content/res/Configuration;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
+
+    iget v1, p1, Landroid/content/res/Configuration;->themeChanged:I
+
+    iput v1, v0, Landroid/content/res/Configuration;->themeChanged:I
+
+    return-void
+.end method
+
+.method private mzIsCurrentFoucus(Lcom/android/server/wm/WindowState;)Z
+    .locals 1
+    .param p1, "ws"    # Lcom/android/server/wm/WindowState;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mCurrentFocus:Lcom/android/server/wm/WindowState;
+
+    if-ne v0, p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getWindowManagerPolicy()Landroid/view/WindowManagerPolicy;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    return-object v0
+.end method
+
+.method final performLayoutAndPlaceSurfacesForMoveWinLocked()V
+    .locals 0
+
+    .prologue
+    invoke-direct {p0}, Lcom/android/server/wm/WindowManagerService;->performLayoutAndPlaceSurfacesLocked()V
+
+    return-void
+.end method
+
+.method public startMoveWindowService(Landroid/content/Context;)Lcom/android/server/wm/MoveWindowService;
+    .locals 2
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    new-instance v0, Lcom/android/server/wm/MoveWindowService;
+
+    iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
+
+    invoke-direct {v0, p1, p0, v1}, Lcom/android/server/wm/MoveWindowService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;Landroid/os/Handler;)V
+
+    .local v0, "mws":Lcom/android/server/wm/MoveWindowService;
+    iput-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mMoveWindowService:Lcom/android/server/wm/MoveWindowService;
+
+    return-object v0
+.end method
+
+.method mzApplayUserActivityTime(Lcom/android/server/wm/WindowState;)V
+    .locals 4
+    .param p1, "w"    # Lcom/android/server/wm/WindowState;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mInnerFields:Lcom/android/server/wm/WindowManagerService$LayoutFields;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mzGetFieldSyswin()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget-wide v0, v0, Landroid/view/WindowManager$LayoutParams;->userActivityTimeout:J
+
+    const-wide/16 v2, -0x2
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mInnerFields:Lcom/android/server/wm/WindowManagerService$LayoutFields;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mzGetFieldUserActivityTimeout()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mInnerFields:Lcom/android/server/wm/WindowManagerService$LayoutFields;
+
+    iget-object v1, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget-wide v2, v1, Landroid/view/WindowManager$LayoutParams;->userActivityTimeout:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mzSetFieldUserActivityTimeout(J)V
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mInnerFields:Lcom/android/server/wm/WindowManagerService$LayoutFields;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mzSetFieldSyswin(Z)V
+
+    :cond_0
+    return-void
 .end method

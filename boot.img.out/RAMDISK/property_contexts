@@ -50,6 +50,10 @@ selinux.                u:object_r:security_prop:s0
 vold.                   u:object_r:vold_prop:s0
 crypto.                 u:object_r:vold_prop:s0
 
+# Flyme kuangqianbo add for mtpd to access system_property {@
+meizu.vpn.              u:object_r:meizu_vpn_prop:s0
+# @}
+
 # ro.build.fingerprint is either set in /system/build.prop, or is
 # set at runtime by system_server.
 build.fingerprint       u:object_r:fingerprint_prop:s0

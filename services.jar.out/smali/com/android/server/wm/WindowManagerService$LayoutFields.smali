@@ -292,3 +292,41 @@
 
     return p1
 .end method
+
+.method mzGetFieldSyswin()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mSyswin:Z
+
+    return v0
+.end method
+
+.method mzGetFieldUserActivityTimeout()J
+    .locals 2
+
+    .prologue
+    iget-wide v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUserActivityTimeout:J
+
+    return-wide v0
+.end method
+
+.method mzSetFieldSyswin(Z)V
+    .locals 0
+    .param p1, "syswin"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mSyswin:Z
+
+    return-void
+.end method
+
+.method mzSetFieldUserActivityTimeout(J)V
+    .locals 1
+    .param p1, "timeOut"    # J
+
+    .prologue
+    iput-wide p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUserActivityTimeout:J
+
+    return-void
+.end method

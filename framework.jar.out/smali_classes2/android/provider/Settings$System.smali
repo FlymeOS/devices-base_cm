@@ -3427,3 +3427,32 @@
 
     goto :goto_0
 .end method
+
+.method public static getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+    .param p0, "resolver"    # Landroid/content/ContentResolver;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "def"    # Ljava/lang/String;
+
+    .prologue
+    invoke-static {p0, p1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "v":Ljava/lang/String;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .end local v0    # "v":Ljava/lang/String;
+    :goto_0
+    return-object v0
+
+    .restart local v0    # "v":Ljava/lang/String;
+    :cond_0
+    move-object v0, p2
+
+    goto :goto_0
+.end method
