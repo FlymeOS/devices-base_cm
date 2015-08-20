@@ -719,9 +719,9 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
+    iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$8;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    iget-object v4, v0, Lcom/android/server/notification/NotificationManagerService$7;->val$notification:Landroid/app/Notification;
+    iget-object v4, v0, Lcom/android/server/notification/NotificationManagerService$8;->val$notification:Landroid/app/Notification;
 
     move-object/from16 v5, v20
 
