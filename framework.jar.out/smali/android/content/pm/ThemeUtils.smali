@@ -1579,6 +1579,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
+    const/4 v1, 0x0
+
+    return-object v1
+
     .line 525
     :try_start_0
     const-string v1, "com.android.systemui"
