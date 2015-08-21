@@ -6710,7 +6710,9 @@
     .local v3, "subId":I
     const-string v4, "subscription"
 
-    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    int-to-long v5, v3
+
+    invoke-virtual {v2, v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     .line 1647
     new-instance v4, Ljava/lang/StringBuilder;

@@ -252,6 +252,8 @@
 
     invoke-direct {v7, v3}, Ljava/lang/Integer;-><init>(I)V
 
+    const/16 v11, 0x8
+
     invoke-virtual {v6, v11, v7}, Lcom/android/internal/telephony/ModemStackController;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
@@ -259,6 +261,8 @@
     .line 210
     .local v2, "msg":Landroid/os/Message;
     sget-object v6, Lcom/android/internal/telephony/ModemStackController$SubscriptionStatus;->SUB_DEACTIVATED:Lcom/android/internal/telephony/ModemStackController$SubscriptionStatus;
+
+    const/4 v12, 0x0
 
     invoke-static {v2, v6, v12}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
@@ -291,9 +295,13 @@
     .line 216
     const-string v6, "subscription"
 
-    invoke-virtual {p2, v6, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    const-wide/16 v11, -0x1
 
-    move-result v5
+    invoke-virtual {p2, v6, v11, v12}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v5
+
+    long-to-int v5, v5
 
     .line 218
     .restart local v5    # "subId":I
@@ -375,6 +383,8 @@
 
     invoke-direct {v7, v3}, Ljava/lang/Integer;-><init>(I)V
 
+    const/16 v11, 0x8
+
     invoke-virtual {v6, v11, v7}, Lcom/android/internal/telephony/ModemStackController;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
@@ -382,6 +392,8 @@
     .line 227
     .restart local v2    # "msg":Landroid/os/Message;
     sget-object v6, Lcom/android/internal/telephony/ModemStackController$SubscriptionStatus;->SUB_ACTIVATED:Lcom/android/internal/telephony/ModemStackController$SubscriptionStatus;
+
+    const/4 v12, 0x0
 
     invoke-static {v2, v6, v12}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 

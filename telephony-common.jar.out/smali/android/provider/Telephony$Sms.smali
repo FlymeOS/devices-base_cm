@@ -678,3 +678,84 @@
 
     goto :goto_0
 .end method
+
+.method public static addMessageToUri(JLandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZ)Landroid/net/Uri;
+    .locals 10
+    .param p0, "subId"    # J
+    .param p2, "resolver"    # Landroid/content/ContentResolver;
+    .param p3, "uri"    # Landroid/net/Uri;
+    .param p4, "address"    # Ljava/lang/String;
+    .param p5, "body"    # Ljava/lang/String;
+    .param p6, "subject"    # Ljava/lang/String;
+    .param p7, "date"    # Ljava/lang/Long;
+    .param p8, "read"    # Z
+    .param p9, "deliveryReport"    # Z
+
+    .prologue
+    .line 389
+    long-to-int v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object/from16 v5, p6
+
+    move-object/from16 v6, p7
+
+    move/from16 v7, p8
+
+    move/from16 v8, p9
+
+    invoke-static/range {v0 .. v8}, Landroid/provider/Telephony$Sms;->addMessageToUri(ILandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZ)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static addMessageToUri(JLandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZJ)Landroid/net/Uri;
+    .locals 12
+    .param p0, "subId"    # J
+    .param p2, "resolver"    # Landroid/content/ContentResolver;
+    .param p3, "uri"    # Landroid/net/Uri;
+    .param p4, "address"    # Ljava/lang/String;
+    .param p5, "body"    # Ljava/lang/String;
+    .param p6, "subject"    # Ljava/lang/String;
+    .param p7, "date"    # Ljava/lang/Long;
+    .param p8, "read"    # Z
+    .param p9, "deliveryReport"    # Z
+    .param p10, "threadId"    # J
+
+    .prologue
+    .line 442
+    long-to-int v1, p0
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object/from16 v4, p4
+
+    move-object/from16 v5, p5
+
+    move-object/from16 v6, p6
+
+    move-object/from16 v7, p7
+
+    move/from16 v8, p8
+
+    move/from16 v9, p9
+
+    move-wide/from16 v10, p10
+
+    invoke-static/range {v1 .. v11}, Landroid/provider/Telephony$Sms;->addMessageToUri(ILandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZJ)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method

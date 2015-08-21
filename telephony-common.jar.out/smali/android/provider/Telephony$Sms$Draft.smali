@@ -124,3 +124,33 @@
 
     return-object v0
 .end method
+
+.method public static addMessage(JLandroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Landroid/net/Uri;
+    .locals 6
+    .param p0, "subId"    # J
+    .param p2, "resolver"    # Landroid/content/ContentResolver;
+    .param p3, "address"    # Ljava/lang/String;
+    .param p4, "body"    # Ljava/lang/String;
+    .param p5, "subject"    # Ljava/lang/String;
+    .param p6, "date"    # Ljava/lang/Long;
+
+    .prologue
+    .line 726
+    long-to-int v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    invoke-static/range {v0 .. v5}, Landroid/provider/Telephony$Sms$Draft;->addMessage(ILandroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method

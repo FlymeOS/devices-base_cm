@@ -964,3 +964,20 @@
     .local v0, "number":Ljava/lang/String;
     return-object v0
 .end method
+
+.method public getIccSimChallengeResponse(JILjava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "appType"    # I
+    .param p4, "data"    # Ljava/lang/String;
+
+    .prologue
+    .line 319
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/PhoneSubInfo;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

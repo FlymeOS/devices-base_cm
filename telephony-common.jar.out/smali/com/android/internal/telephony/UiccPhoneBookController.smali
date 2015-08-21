@@ -1087,3 +1087,132 @@
 
     goto :goto_0
 .end method
+
+.method public getAdnRecordsInEfForSubscriber(JI)Ljava/util/List;
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "efid"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(JI)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/telephony/uicc/AdnRecord;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 155
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccPhoneBookController;->getAdnRecordsInEfForSubscriber(II)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getAdnRecordsSizeForSubscriber(JI)[I
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "efid"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 131
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccPhoneBookController;->getAdnRecordsSizeForSubscriber(II)[I
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public updateAdnRecordsInEfByIndexForSubscriber(JILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
+    .locals 7
+    .param p1, "subId"    # J
+    .param p3, "efid"    # I
+    .param p4, "newTag"    # Ljava/lang/String;
+    .param p5, "newPhoneNumber"    # Ljava/lang/String;
+    .param p6, "index"    # I
+    .param p7, "pin2"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 107
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move v5, p6
+
+    move-object v6, p7
+
+    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/UiccPhoneBookController;->updateAdnRecordsInEfByIndexForSubscriber(IILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public updateAdnRecordsInEfBySearchForSubscriber(JILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 9
+    .param p1, "subId"    # J
+    .param p3, "efid"    # I
+    .param p4, "oldTag"    # Ljava/lang/String;
+    .param p5, "oldPhoneNumber"    # Ljava/lang/String;
+    .param p6, "newTag"    # Ljava/lang/String;
+    .param p7, "newPhoneNumber"    # Ljava/lang/String;
+    .param p8, "pin2"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 76
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/internal/telephony/UiccPhoneBookController;->updateAdnRecordsInEfBySearchForSubscriber(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method

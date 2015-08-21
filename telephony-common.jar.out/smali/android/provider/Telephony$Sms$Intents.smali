@@ -110,9 +110,13 @@
 
     move-result v8
 
-    invoke-virtual {p0, v7, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    int-to-long v8, v8
 
-    move-result v6
+    invoke-virtual {p0, v7, v8, v9}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v6
+
+    long-to-int v6, v6
 
     .line 1244
     .local v6, "subId":I

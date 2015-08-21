@@ -490,6 +490,8 @@
 
     .line 305
     :cond_b
+    invoke-static {p0, v0}, Landroid/telecom/Connection;->mzAddCapabilitiesToString(ILjava/lang/StringBuilder;)V
+
     const/high16 v1, 0x20000
 
     invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
@@ -2772,5 +2774,40 @@
     .line 1654
     .end local v1    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
+    return-void
+.end method
+
+.method private static mzAddCapabilitiesToString(ILjava/lang/StringBuilder;)V
+    .locals 1
+    .param p0, "capabilities"    # I
+    .param p1, "builder"    # Ljava/lang/StringBuilder;
+
+    .prologue
+    const/16 v0, 0x1000
+
+    invoke-static {p0, v0}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, " CAPABILITY_SEPARATE_FROM_CONFERENCE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    const/16 v0, 0x2000
+
+    invoke-static {p0, v0}, Landroid/telecom/Connection;->can(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, " CAPABILITY_DISCONNECT_FROM_CONFERENCE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
     return-void
 .end method

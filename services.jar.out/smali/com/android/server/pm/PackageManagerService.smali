@@ -2451,7 +2451,7 @@
 
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    invoke-static/range {v22 .. v22}, Lcom/android/server/pm/InjectorPMS;->mzAddAlreadyDexOpted(Ljava/util/HashSet;)V
+    invoke-static/range {v22 .. v22}, Lcom/android/server/pm/InjectorPMS;->mzAddAlreadyDexOpted(Landroid/util/ArraySet;)V
 
     .line 1617
     invoke-virtual/range {v45 .. v45}, Ljava/io/File;->list()[Ljava/lang/String;

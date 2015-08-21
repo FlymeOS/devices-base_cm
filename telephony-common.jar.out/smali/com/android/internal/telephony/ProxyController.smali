@@ -410,3 +410,50 @@
     .line 111
     return-void
 .end method
+
+.method public isDataDisconnected(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 162
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/ProxyController;->isDataDisconnected(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public registerForAllDataDisconnected(JLandroid/os/Handler;ILjava/lang/Object;)V
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "h"    # Landroid/os/Handler;
+    .param p4, "what"    # I
+    .param p5, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    .line 135
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4, p5}, Lcom/android/internal/telephony/ProxyController;->registerForAllDataDisconnected(ILandroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 136
+    return-void
+.end method
+
+.method public unregisterForAllDataDisconnected(JLandroid/os/Handler;)V
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "h"    # Landroid/os/Handler;
+
+    .prologue
+    .line 147
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/ProxyController;->unregisterForAllDataDisconnected(ILandroid/os/Handler;)V
+
+    .line 148
+    return-void
+.end method

@@ -81,3 +81,9 @@
 
 .method public abstract unregisterForPersoLocked(Landroid/os/Handler;)V
 .end method
+
+.method public abstract registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
+.method public abstract unregisterForNetworkLocked(Landroid/os/Handler;)V
+.end method

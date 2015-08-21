@@ -5837,3 +5837,337 @@
 
     goto :goto_0
 .end method
+
+.method public canConference(Lcom/android/internal/telephony/Call;J)Z
+    .locals 2
+    .param p1, "heldCall"    # Lcom/android/internal/telephony/Call;
+    .param p2, "subId"    # J
+
+    .prologue
+    .line 947
+    long-to-int v0, p2
+
+    invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/CallManager;->canConference(Lcom/android/internal/telephony/Call;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public canTransfer(Lcom/android/internal/telephony/Call;J)Z
+    .locals 2
+    .param p1, "heldCall"    # Lcom/android/internal/telephony/Call;
+    .param p2, "subId"    # J
+
+    .prologue
+    .line 1173
+    long-to-int v0, p2
+
+    invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/CallManager;->canTransfer(Lcom/android/internal/telephony/Call;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public clearDisconnected(J)V
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1096
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->clearDisconnected(I)V
+
+    .line 1097
+    return-void
+.end method
+
+.method public getActiveFgCall(J)Lcom/android/internal/telephony/Call;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1998
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall(I)Lcom/android/internal/telephony/Call;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getActiveFgCallState(J)Lcom/android/internal/telephony/Call$State;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2151
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getActiveFgCallState(I)Lcom/android/internal/telephony/Call$State;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getBgCallConnections(J)Ljava/util/List;
+    .locals 1
+    .param p1, "subId"    # J
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/telephony/Connection;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 2207
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getBgCallConnections(I)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getBgPhone(J)Lcom/android/internal/telephony/Phone;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 526
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getBgPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getFgCallConnections(J)Ljava/util/List;
+    .locals 1
+    .param p1, "subId"    # J
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/telephony/Connection;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 2179
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgCallConnections(I)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getFgCallLatestConnection(J)Lcom/android/internal/telephony/Connection;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2235
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgCallLatestConnection(I)Lcom/android/internal/telephony/Connection;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getFgPhone(J)Lcom/android/internal/telephony/Phone;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 507
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getFirstActiveBgCall(J)Lcom/android/internal/telephony/Call;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2085
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall(I)Lcom/android/internal/telephony/Call;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getFirstActiveRingingCall(J)Lcom/android/internal/telephony/Call;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2123
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFirstActiveRingingCall(I)Lcom/android/internal/telephony/Call;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getPhoneInCall(J)Lcom/android/internal/telephony/Phone;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 418
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getPhoneInCall(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getRingingPhone(J)Lcom/android/internal/telephony/Phone;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 545
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getRingingPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getServiceState(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 385
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getServiceState(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getState(J)Lcom/android/internal/telephony/PhoneConstants$State;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 316
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getState(I)Lcom/android/internal/telephony/PhoneConstants$State;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public hasActiveBgCall(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1943
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->hasActiveBgCall(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasActiveFgCall(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1920
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->hasActiveFgCall(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasActiveRingingCall(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1962
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->hasActiveRingingCall(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasDisconnectedBgCall(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2273
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->hasDisconnectedBgCall(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasDisconnectedFgCall(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2254
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->hasDisconnectedFgCall(I)Z
+
+    move-result v0
+
+    return v0
+.end method

@@ -527,3 +527,33 @@
     .line 471
     return-void
 .end method
+
+.method public static startQuery(ILandroid/content/Context;Ljava/lang/String;Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;Ljava/lang/Object;J)Lcom/android/internal/telephony/CallerInfoAsyncQuery;
+    .locals 7
+    .param p0, "token"    # I
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "number"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;
+    .param p4, "cookie"    # Ljava/lang/Object;
+    .param p5, "subId"    # J
+
+    .prologue
+    .line 458
+    long-to-int v5, p5
+
+    move v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/telephony/CallerInfoAsyncQuery;->startQuery(ILandroid/content/Context;Ljava/lang/String;Lcom/android/internal/telephony/CallerInfoAsyncQuery$OnQueryCompleteListener;Ljava/lang/Object;I)Lcom/android/internal/telephony/CallerInfoAsyncQuery;
+
+    move-result-object v0
+
+    return-object v0
+.end method

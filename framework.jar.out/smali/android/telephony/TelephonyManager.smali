@@ -9249,3 +9249,552 @@
     :cond_0
     return-void
 .end method
+
+.method public static getTelephonyProperty(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/String;
+    .locals 3
+    .param p0, "property"    # Ljava/lang/String;
+    .param p1, "subId"    # J
+    .param p3, "defaultVal"    # Ljava/lang/String;
+
+    .prologue
+    .line 3298
+    invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->getPhoneId(J)I
+
+    move-result v0
+
+    .line 3299
+    .local v0, "phoneId":I
+    invoke-static {v0, p0, p3}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public static setTelephonyProperty(Ljava/lang/String;JLjava/lang/String;)V
+    .locals 1
+    .param p0, "property"    # Ljava/lang/String;
+    .param p1, "subId"    # J
+    .param p3, "value"    # Ljava/lang/String;
+
+    .prologue
+    .line 3186
+    invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->getPhoneId(J)I
+
+    move-result v0
+
+    .line 3187
+    .local v0, "phoneId":I
+    invoke-static {v0, p0, p3}, Landroid/telephony/TelephonyManager;->setTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)V
+
+    .line 3188
+    return-void
+.end method
+
+.method public disableLocationUpdates(J)V
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 813
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->disableLocationUpdates(I)V
+
+    .line 814
+    return-void
+.end method
+
+.method public enableLocationUpdates(J)V
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 787
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->enableLocationUpdates(I)V
+
+    .line 788
+    return-void
+.end method
+
+.method public getCallState(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2501
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCallState(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getCdmaEriIconIndex(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2655
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCdmaEriIconIndex(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getCdmaEriIconMode(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2687
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCdmaEriIconMode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getCdmaEriText(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2716
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCdmaEriText(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getCdmaMdn(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 3637
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCdmaMdn(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getCdmaMin(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 3659
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCdmaMin(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getCompleteVoiceMailNumber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2296
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCompleteVoiceMailNumber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getCurrentPhoneType(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 895
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getCurrentPhoneType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDataNetworkType(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1428
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getDataNetworkType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getGroupIdLevel1(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2050
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getGroupIdLevel1(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getIccSimChallengeResponse(JILjava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "appType"    # I
+    .param p4, "data"    # Ljava/lang/String;
+
+    .prologue
+    .line 3397
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4}, Landroid/telephony/TelephonyManager;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getLine1AlphaTagForSubscriber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2188
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getLine1AlphaTagForSubscriber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getLine1NumberForSubscriber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2095
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getLine1NumberForSubscriber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getLteOnCdmaMode(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1949
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getLteOnCdmaMode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMsisdn(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2226
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getMsisdn(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getNetworkCountryIso(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1227
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getNetworkCountryIsoForSubscription(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getNetworkOperator(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1151
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getNetworkOperatorForSubscription(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getNetworkOperatorName(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1120
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getNetworkOperatorName(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getNetworkType(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1370
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getNetworkType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getSimCountryIso(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1851
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getSimCountryIso(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSimOperator(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1737
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getSimOperator(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSimOperatorName(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1819
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getSimOperatorNameForSubscription(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSimSerialNumber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1908
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getSimSerialNumber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getSubscriberId(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2007
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getSubscriberId(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getVoiceMailAlphaTag(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2399
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getVoiceMailAlphaTag(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getVoiceMailNumber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2260
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getVoiceMailNumber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getVoiceMessageCount(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 2363
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getVoiceMessageCount(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getVoiceNetworkType(J)I
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1464
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->getVoiceNetworkType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasIccCard(J)Z
+    .locals 1
+    .param p1, "slotId"    # J
+
+    .prologue
+    .line 1664
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->hasIccCard(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isNetworkRoaming(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 1195
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Landroid/telephony/TelephonyManager;->isNetworkRoaming(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setGlobalPreferredNetworkType()Z
+    .locals 1
+
+    .prologue
+    .line 3498
+    invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->setPreferredNetworkTypeToGlobal()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setLine1NumberForDisplayForSubscriber(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "alphaTag"    # Ljava/lang/String;
+    .param p4, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 2140
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4}, Landroid/telephony/TelephonyManager;->setLine1NumberForDisplayForSubscriber(ILjava/lang/String;Ljava/lang/String;)Z
+
+    .line 2141
+    return-void
+.end method

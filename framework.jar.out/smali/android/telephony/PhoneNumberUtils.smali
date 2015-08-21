@@ -8162,3 +8162,119 @@
     .line 2424
     return-void
 .end method
+
+.method public static isEmergencyNumber(JLjava/lang/String;)Z
+    .locals 2
+    .param p0, "subId"    # J
+    .param p2, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 1639
+    long-to-int v0, p0
+
+    invoke-static {v0, p2}, Landroid/telephony/PhoneNumberUtils;->isEmergencyNumber(ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isEmergencyNumber(JLjava/lang/String;Ljava/lang/String;)Z
+    .locals 2
+    .param p0, "subId"    # J
+    .param p2, "number"    # Ljava/lang/String;
+    .param p3, "defaultCountryIso"    # Ljava/lang/String;
+
+    .prologue
+    .line 1787
+    long-to-int v0, p0
+
+    invoke-static {v0, p2, p3}, Landroid/telephony/PhoneNumberUtils;->isEmergencyNumber(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isLocalEmergencyNumber(Landroid/content/Context;JLjava/lang/String;)Z
+    .locals 1
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "subId"    # J
+    .param p3, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 2009
+    long-to-int v0, p1
+
+    invoke-static {p0, v0, p3}, Landroid/telephony/PhoneNumberUtils;->isLocalEmergencyNumber(Landroid/content/Context;ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isPotentialEmergencyNumber(JLjava/lang/String;)Z
+    .locals 2
+    .param p0, "subId"    # J
+    .param p2, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 1705
+    long-to-int v0, p0
+
+    invoke-static {v0, p2}, Landroid/telephony/PhoneNumberUtils;->isPotentialEmergencyNumber(ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isPotentialEmergencyNumber(JLjava/lang/String;Ljava/lang/String;)Z
+    .locals 2
+    .param p0, "subId"    # J
+    .param p2, "number"    # Ljava/lang/String;
+    .param p3, "defaultCountryIso"    # Ljava/lang/String;
+
+    .prologue
+    .line 1845
+    long-to-int v0, p0
+
+    invoke-static {v0, p2, p3}, Landroid/telephony/PhoneNumberUtils;->isPotentialEmergencyNumber(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isPotentialLocalEmergencyNumber(Landroid/content/Context;JLjava/lang/String;)Z
+    .locals 1
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "subId"    # J
+    .param p3, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 2069
+    long-to-int v0, p1
+
+    invoke-static {p0, v0, p3}, Landroid/telephony/PhoneNumberUtils;->isPotentialLocalEmergencyNumber(Landroid/content/Context;ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isVoiceMailNumber(JLjava/lang/String;)Z
+    .locals 2
+    .param p0, "subId"    # J
+    .param p2, "number"    # Ljava/lang/String;
+
+    .prologue
+    .line 2195
+    long-to-int v0, p0
+
+    invoke-static {v0, p2}, Landroid/telephony/PhoneNumberUtils;->isVoiceMailNumber(ILjava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method

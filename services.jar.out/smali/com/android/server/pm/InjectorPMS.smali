@@ -1025,7 +1025,7 @@
     .local v6, "info":Landroid/content/pm/PackageInfo;
     sget-object v0, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v1, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v1, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
@@ -1033,9 +1033,9 @@
     :try_start_0
     sget-object v0, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -1357,12 +1357,12 @@
     goto :goto_0
 .end method
 
-.method static mzAddAlreadyDexOpted(Ljava/util/HashSet;)V
+.method static mzAddAlreadyDexOpted(Landroid/util/ArraySet;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/HashSet",
+            "Landroid/util/ArraySet",
             "<",
             "Ljava/lang/String;",
             ">;)V"
@@ -1371,7 +1371,7 @@
 
     .prologue
     .line 101
-    .local p0, "alreadyDexOpted":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
+    .local p0, "alreadyDexOpted":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
@@ -1406,7 +1406,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 103
     return-void
@@ -1859,18 +1859,18 @@
 
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v6
 
     :try_start_0
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -2086,11 +2086,11 @@
 
     iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    iget-object v5, v5, Lcom/android/server/pm/Settings;->mPackages:Ljava/util/HashMap;
+    iget-object v5, v5, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -2418,7 +2418,7 @@
     .local v2, "write":Z
     sget-object v3, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v4, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v4, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v4
 
@@ -2426,9 +2426,9 @@
     :try_start_0
     sget-object v3, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
-    invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    invoke-virtual {v3}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v3
 
@@ -2627,7 +2627,7 @@
     .line 187
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v6
 
@@ -2635,11 +2635,11 @@
     :try_start_0
     sget-object v5, Lcom/android/server/pm/InjectorPMS;->mPMS:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Ljava/util/HashMap;
+    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -2856,11 +2856,11 @@
 
     iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    iget-object v5, v5, Lcom/android/server/pm/Settings;->mPackages:Ljava/util/HashMap;
+    iget-object v5, v5, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
 
     iget-object v7, v2, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 

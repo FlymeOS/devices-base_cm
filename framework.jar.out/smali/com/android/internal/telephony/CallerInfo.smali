@@ -1633,3 +1633,35 @@
 
     goto :goto_0
 .end method
+
+.method public static getCallerInfo(Landroid/content/Context;Ljava/lang/String;J)Lcom/android/internal/telephony/CallerInfo;
+    .locals 2
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "number"    # Ljava/lang/String;
+    .param p2, "subId"    # J
+
+    .prologue
+    .line 350
+    long-to-int v0, p2
+
+    invoke-static {p0, p1, v0}, Lcom/android/internal/telephony/CallerInfo;->getCallerInfo(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/internal/telephony/CallerInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method markAsVoiceMail(J)Lcom/android/internal/telephony/CallerInfo;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 452
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallerInfo;->markAsVoiceMail(I)Lcom/android/internal/telephony/CallerInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method

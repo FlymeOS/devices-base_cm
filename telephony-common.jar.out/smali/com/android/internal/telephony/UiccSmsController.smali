@@ -2887,3 +2887,403 @@
 
     goto :goto_0
 .end method
+
+.method public copyMessageToIccEfForSubscriber(JLjava/lang/String;I[B[B)Z
+    .locals 7
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .param p4, "status"    # I
+    .param p5, "pdu"    # [B
+    .param p6, "smsc"    # [B
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 252
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/internal/telephony/UiccSmsController;->copyMessageToIccEfForSubscriber(ILjava/lang/String;I[B[B)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getAllMessagesFromIccEfForSubscriber(JLjava/lang/String;)Ljava/util/List;
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/internal/telephony/SmsRawData;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 274
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccSmsController;->getAllMessagesFromIccEfForSubscriber(ILjava/lang/String;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getImsSmsFormatForSubscriber(J)Ljava/lang/String;
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 571
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/UiccSmsController;->getImsSmsFormatForSubscriber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getPremiumSmsPermissionForSubscriber(JLjava/lang/String;)I
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    .line 482
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccSmsController;->getPremiumSmsPermissionForSubscriber(ILjava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public injectSmsPdu(J[BLjava/lang/String;Landroid/app/PendingIntent;)V
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "pdu"    # [B
+    .param p4, "format"    # Ljava/lang/String;
+    .param p5, "receivedIntent"    # Landroid/app/PendingIntent;
+
+    .prologue
+    .line 585
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4, p5}, Lcom/android/internal/telephony/UiccSmsController;->injectSmsPdu(I[BLjava/lang/String;Landroid/app/PendingIntent;)V
+
+    .line 586
+    return-void
+.end method
+
+.method public isImsSmsSupportedForSubscriber(J)Z
+    .locals 1
+    .param p1, "subId"    # J
+
+    .prologue
+    .line 519
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/UiccSmsController;->isImsSmsSupportedForSubscriber(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public sendDataForSubscriber(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+    .locals 9
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .param p4, "destAddr"    # Ljava/lang/String;
+    .param p5, "scAddr"    # Ljava/lang/String;
+    .param p6, "destPort"    # I
+    .param p7, "data"    # [B
+    .param p8, "sentIntent"    # Landroid/app/PendingIntent;
+    .param p9, "deliveryIntent"    # Landroid/app/PendingIntent;
+
+    .prologue
+    .line 299
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move v5, p6
+
+    move-object/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    move-object/from16 v8, p9
+
+    invoke-virtual/range {v0 .. v8}, Lcom/android/internal/telephony/UiccSmsController;->sendDataForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+
+    .line 301
+    return-void
+.end method
+
+.method public sendMultipartTextForSubscriber(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 9
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .param p4, "destAddr"    # Ljava/lang/String;
+    .param p5, "scAddr"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/app/PendingIntent;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/app/PendingIntent;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 382
+    .local p6, "parts":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local p7, "sentIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
+    .local p8, "deliveryIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/internal/telephony/UiccSmsController;->sendMultipartTextForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    .line 383
+    return-void
+.end method
+
+.method public sendStoredMultipartText(JLjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+    .locals 7
+    .param p1, "subId"    # J
+    .param p3, "callingPkg"    # Ljava/lang/String;
+    .param p4, "messageUri"    # Landroid/net/Uri;
+    .param p5, "scAddress"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/lang/String;",
+            "Landroid/net/Uri;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/app/PendingIntent;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/app/PendingIntent;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 678
+    .local p6, "sentIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
+    .local p7, "deliveryIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object v6, p7
+
+    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/UiccSmsController;->sendStoredMultipartText(ILjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+
+    .line 679
+    return-void
+.end method
+
+.method public sendStoredText(JLjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+    .locals 7
+    .param p1, "subId"    # J
+    .param p3, "callingPkg"    # Ljava/lang/String;
+    .param p4, "messageUri"    # Landroid/net/Uri;
+    .param p5, "scAddress"    # Ljava/lang/String;
+    .param p6, "sentIntent"    # Landroid/app/PendingIntent;
+    .param p7, "deliveryIntent"    # Landroid/app/PendingIntent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 658
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object v6, p7
+
+    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/UiccSmsController;->sendStoredText(ILjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+
+    .line 659
+    return-void
+.end method
+
+.method public sendTextForSubscriber(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+    .locals 9
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .param p4, "destAddr"    # Ljava/lang/String;
+    .param p5, "scAddr"    # Ljava/lang/String;
+    .param p6, "text"    # Ljava/lang/String;
+    .param p7, "sentIntent"    # Landroid/app/PendingIntent;
+    .param p8, "deliveryIntent"    # Landroid/app/PendingIntent;
+
+    .prologue
+    .line 337
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/internal/telephony/UiccSmsController;->sendTextForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+
+    .line 338
+    return-void
+.end method
+
+.method public setPremiumSmsPermissionForSubscriber(JLjava/lang/String;I)V
+    .locals 1
+    .param p1, "subId"    # J
+    .param p3, "packageName"    # Ljava/lang/String;
+    .param p4, "permission"    # I
+
+    .prologue
+    .line 500
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/UiccSmsController;->setPremiumSmsPermissionForSubscriber(ILjava/lang/String;I)V
+
+    .line 501
+    return-void
+.end method
+
+.method public updateMessageOnIccEfForSubscriber(JLjava/lang/String;II[B)Z
+    .locals 7
+    .param p1, "subId"    # J
+    .param p3, "callingPackage"    # Ljava/lang/String;
+    .param p4, "index"    # I
+    .param p5, "status"    # I
+    .param p6, "pdu"    # [B
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 229
+    long-to-int v1, p1
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    move v3, p4
+
+    move v4, p5
+
+    move-object v5, p6
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/internal/telephony/UiccSmsController;->updateMessageOnIccEfForSubscriber(ILjava/lang/String;II[B)Z
+
+    move-result v0
+
+    return v0
+.end method
