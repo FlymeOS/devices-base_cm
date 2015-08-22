@@ -731,7 +731,7 @@
 
     if-nez v0, :cond_flyme_0
 
-    sget-object v0, Landroid/text/Layout;->ELLIPSIS_TWO_DOTS:[C
+    sget-object v0, Landroid/text/TextUtils;->ELLIPSIS_TWO_DOTS:[C
 
     const/4 v1, 0x0
 
