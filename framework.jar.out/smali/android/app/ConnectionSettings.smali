@@ -553,6 +553,10 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    const-string/jumbo v1, "mobile_data"
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
     .line 145
     invoke-static {v8}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
