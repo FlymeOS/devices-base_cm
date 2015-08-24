@@ -1,0 +1,55 @@
+.method public addExistingConnection(Ljava/lang/String;Landroid/telecom/ParcelableConnection;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public onPostDialChar(Ljava/lang/String;C)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    return-void
+.end method
+
+.method public setCallProperties(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setCallSubstate(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setConnectionCapabilities(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->setCallCapabilities(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public setExtras(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setPhoneAccountHandle(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method

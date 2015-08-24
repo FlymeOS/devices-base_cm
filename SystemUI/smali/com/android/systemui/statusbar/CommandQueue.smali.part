@@ -1,0 +1,33 @@
+.method public showScreenPinningRequest()V
+    .locals 3
+
+    .prologue
+    .line 245
+    iget-object v1, p0, Lcom/android/systemui/statusbar/CommandQueue;->mList:Lcom/android/internal/statusbar/StatusBarIconList;
+
+    monitor-enter v1
+
+    .line 246
+    :try_start_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/CommandQueue;->mHandler:Landroid/os/Handler;
+
+    const/high16 v2, 0x120000
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    .line 247
+    monitor-exit v1
+
+    .line 248
+    return-void
+
+    .line 247
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method

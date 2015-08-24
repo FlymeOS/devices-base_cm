@@ -1,0 +1,78 @@
+.method public getActiveSubscription()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getAdnUriForPhoneAccount(Landroid/telecom/PhoneAccountHandle;)Landroid/net/Uri;
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getLine1Number(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method private getVoiceMailNumberInternal(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public handlePinMmiForPhoneAccount(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public hasVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;)Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public switchToOtherActiveSub(I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
