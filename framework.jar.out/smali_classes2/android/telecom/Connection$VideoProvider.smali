@@ -378,3 +378,14 @@
 
     goto :goto_0
 .end method
+
+.method public onRequestCallDataUsage()V
+    .locals 0
+
+    .prologue
+    .line 617
+    invoke-virtual {p0}, Landroid/telecom/Connection$VideoProvider;->onRequestConnectionDataUsage()V
+
+    .line 618
+    return-void
+.end method

@@ -1357,12 +1357,12 @@
     goto :goto_0
 .end method
 
-.method static mzAddAlreadyDexOpted(Landroid/util/ArraySet;)V
+.method static mzAddAlreadyDexOpted(Ljava/util/HashSet;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroid/util/ArraySet",
+            "Ljava/util/HashSet",
             "<",
             "Ljava/lang/String;",
             ">;)V"
@@ -1371,7 +1371,7 @@
 
     .prologue
     .line 101
-    .local p0, "alreadyDexOpted":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
+    .local p0, "alreadyDexOpted":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
@@ -1406,9 +1406,34 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 103
+    return-void
+.end method
+
+.method static mzAddAlreadyDexOpted(Landroid/util/ArraySet;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/ArraySet",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 108
+    .local p0, "alreadyDexOpted":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v0}, Lcom/android/server/pm/InjectorPMS;->mzAddAlreadyDexOpted(Ljava/util/HashSet;)V
+
+    .line 109
     return-void
 .end method
 

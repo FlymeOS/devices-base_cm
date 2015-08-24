@@ -1558,3 +1558,16 @@
     :cond_0
     return-void
 .end method
+
+.method setCallCapabilities(Ljava/lang/String;I)V
+    .locals 0
+    .param p1, "callId"    # Ljava/lang/String;
+    .param p2, "capabilities"    # I
+
+    .prologue
+    .line 214
+    invoke-virtual {p0, p1, p2}, Landroid/telecom/ConnectionServiceAdapter;->setConnectionCapabilities(Ljava/lang/String;I)V
+
+    .line 215
+    return-void
+.end method

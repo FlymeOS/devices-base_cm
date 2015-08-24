@@ -1771,3 +1771,27 @@
     :cond_0
     return-void
 .end method
+
+.method public getCallCapabilities()I
+    .locals 1
+
+    .prologue
+    .line 563
+    invoke-virtual {p0}, Landroid/telecom/RemoteConnection;->getConnectionCapabilities()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method setCallCapabilities(I)V
+    .locals 0
+    .param p1, "callCapabilities"    # I
+
+    .prologue
+    .line 918
+    invoke-virtual {p0, p1}, Landroid/telecom/RemoteConnection;->setConnectionCapabilities(I)V
+
+    .line 919
+    return-void
+.end method
