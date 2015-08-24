@@ -961,6 +961,14 @@
 
     move-result-object v0
 
+    if-nez v0, :cond_flyme_0
+
+    move-object v0, p0
+
+    return-object v0
+
+    :cond_flyme_0
+
     .line 794
     const v1, 0x103013f
 
