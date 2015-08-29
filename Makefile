@@ -26,7 +26,7 @@ RESOLUTION := 1080x1920
 ##############################################################################
 # The value decides whether use prebuilt image or pack from the BOOT or RECOVERY directory in the vendor directory.
 # Support values: boot, recovery or nothing.
-# The default value is nothing.
+# The default value is boot.
 # When the value is boot or recovery, the system of build will pack boot.img or recovery.img
 # from the BOOT or vendor RECOVERY in the vendor directory which might contain your changes.
 # When the value is nothing, the system of build will check boot.img or recovery.img in the project root directory.
@@ -56,7 +56,7 @@ vendor_modify_images := boot
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth NfcNci KeyChain Tag HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler Shell DefaultContainerService WAPPushManager
+                     ProxyHandler Shell DefaultContainerService WAPPushManager Stk TimeService qcrilmsgtunnel
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -107,7 +107,7 @@ board_saved_files := lib/libwebviewchromium.so
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := TeleService Keyguard SystemUI Telecom
+board_modify_apps := TeleService Keyguard SystemUI Telecom FlymeLauncher
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -134,10 +134,10 @@ override_property += \
 
 
 # The property decide your ID on the backend server which statistical data for your device.
-# The default value is Flyme.
-# You should configure the property according to your ID, ie, replace "Flyme" with your ID.
+# The default value is Unofficial.
+# You should configure the property according to your ID, ie, replace "Unofficial" with your ID.
 override_property += \
-    ro.flyme.romer=Flyme
+    ro.flyme.romer=Unofficial
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
