@@ -78,12 +78,16 @@
 
 .field private static mDeviceTpColor:Ljava/lang/String;
 
+.field private static mHasNavBar:Ljava/lang/Boolean;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
     .prologue
+    const/4 v4, 0x0
+
     const/4 v2, 0x0
 
     const/4 v1, 0x1
@@ -244,13 +248,11 @@
 
     sput-object v0, Landroid/os/BuildExt;->CHINAMOBILE_TEST:Ljava/lang/Boolean;
 
-    .line 54
-    const/4 v0, 0x0
+    sput-object v4, Landroid/os/BuildExt;->mDeviceTpColor:Ljava/lang/String;
 
-    sput-object v0, Landroid/os/BuildExt;->mDeviceTpColor:Ljava/lang/String;
+    sput-object v4, Landroid/os/BuildExt;->mHasNavBar:Ljava/lang/Boolean;
 
-    .line 58
-    const-string/jumbo v0, "ro.product.model"
+    const-string v0, "ro.product.model"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2283,4 +2285,74 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public static hasNavigationBar()Z
+    .locals 3
+
+    .prologue
+    sget-object v2, Landroid/os/BuildExt;->mHasNavBar:Ljava/lang/Boolean;
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    .local v0, "hasNavBar":Z
+    const-string v2, "window"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/view/IWindowManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/IWindowManager;
+
+    move-result-object v1
+
+    .local v1, "wm":Landroid/view/IWindowManager;
+    :try_start_0
+    invoke-interface {v1}, Landroid/view/IWindowManager;->hasNavigationBar()Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    sput-object v2, Landroid/os/BuildExt;->mHasNavBar:Ljava/lang/Boolean;
+
+    :cond_0
+    sget-object v2, Landroid/os/BuildExt;->mHasNavBar:Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    return v2
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_0
+.end method
+
+.method public static isIndiaVersion()Z
+    .locals 2
+
+    .prologue
+    const-string v0, "ro.meizu.locale.region"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "india"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method

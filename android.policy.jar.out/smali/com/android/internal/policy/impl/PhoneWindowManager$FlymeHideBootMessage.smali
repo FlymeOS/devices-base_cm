@@ -61,7 +61,22 @@
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
 
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeHideBootMessage;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
+
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeHideBootMessage;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iput-object v3, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeHideBootMessage;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iput-object v3, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgBar:Landroid/widget/ProgressBar;
 
     .line 6429
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeHideBootMessage;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;

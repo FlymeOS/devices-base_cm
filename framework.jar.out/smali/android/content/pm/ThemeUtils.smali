@@ -1732,6 +1732,8 @@
     .line 691
     const/4 v9, 0x0
 
+    return-object v9
+
     .line 692
     .local v9, "config":Landroid/content/res/ThemeConfig;
     const/4 v0, 0x0

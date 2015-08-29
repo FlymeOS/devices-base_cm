@@ -261,6 +261,16 @@
     .prologue
     const/4 v7, 0x0
 
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->isColorTheme()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
     .line 953
     invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->mzGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
