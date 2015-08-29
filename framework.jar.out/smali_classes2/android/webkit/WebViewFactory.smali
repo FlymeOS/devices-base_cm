@@ -529,7 +529,7 @@
     .restart local v3    # "uid":I
     if-eqz v3, :cond_1
 
-    const/16 v4, 0x3e8
+    const/16 v4, 0x0
 
     if-ne v3, v4, :cond_2
 
