@@ -1168,27 +1168,40 @@
 .end method
 
 .method private initMstoreItemView()Landroid/view/View;
-    .locals 8
+    .locals 9
 
     .prologue
-    .line 554
+    const/4 v4, 0x0
+
+    const/4 v8, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/internal/app/RecommendActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v5
+
+    const-string v6, "com.meizu.mstore"
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v5, v6, v7}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
     invoke-virtual {p0}, Lcom/android/internal/app/RecommendActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+
+    move-result-object v5
+
+    sget v6, Lcom/flyme/internal/R$layout;->mz_recommend_header_item:I
+
+    invoke-virtual {v5, v6, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v4
 
-    sget v5, Lcom/flyme/internal/R$layout;->mz_recommend_header_item:I
+    .local v4, "itemView":Landroid/view/View;
+    sget v5, Lcom/flyme/internal/R$id;->recommend_icon:I
 
-    const/4 v6, 0x0
-
-    invoke-virtual {v4, v5, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v3
-
-    .line 555
-    .local v3, "itemView":Landroid/view/View;
-    sget v4, Lcom/flyme/internal/R$id;->recommend_icon:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1196,9 +1209,9 @@
 
     .line 556
     .local v0, "appImage":Landroid/widget/ImageView;
-    sget v4, Lcom/flyme/internal/R$id;->recommend_app_title:I
+    sget v5, Lcom/flyme/internal/R$id;->recommend_app_title:I
 
-    invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -1206,74 +1219,82 @@
 
     .line 557
     .local v2, "appTitle":Landroid/widget/TextView;
-    sget v4, Lcom/flyme/internal/R$id;->recommend_app_summary:I
+    sget v5, Lcom/flyme/internal/R$id;->recommend_app_summary:I
 
-    invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 558
     .local v1, "appSummary":Landroid/widget/TextView;
-    const v4, 0x7fffffff
+    const v5, 0x7fffffff
 
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setMaxWidth(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 559
     invoke-direct {p0}, Lcom/android/internal/app/RecommendActivity;->loadMstoreIcon()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 561
     invoke-direct {p0}, Lcom/android/internal/app/RecommendActivity;->isInternational()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    .line 562
-    sget v4, Lcom/flyme/internal/R$string;->recommend_search_gooleplay:I
+    sget v5, Lcom/flyme/internal/R$string;->recommend_search_gooleplay:I
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
+    new-array v6, v6, [Ljava/lang/Object;
 
     iget-object v7, p0, Lcom/android/internal/app/RecommendActivity;->mPlayStoreName:Ljava/lang/String;
 
-    aput-object v7, v5, v6
+    aput-object v7, v6, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/internal/app/RecommendActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/internal/app/RecommendActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 567
     :goto_0
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 568
-    new-instance v4, Lcom/android/internal/app/RecommendActivity$4;
+    new-instance v5, Lcom/android/internal/app/RecommendActivity$4;
 
-    invoke-direct {v4, p0}, Lcom/android/internal/app/RecommendActivity$4;-><init>(Lcom/android/internal/app/RecommendActivity;)V
+    invoke-direct {v5, p0}, Lcom/android/internal/app/RecommendActivity$4;-><init>(Lcom/android/internal/app/RecommendActivity;)V
 
-    invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 581
-    return-object v3
+    .end local v0    # "appImage":Landroid/widget/ImageView;
+    .end local v1    # "appSummary":Landroid/widget/TextView;
+    .end local v2    # "appTitle":Landroid/widget/TextView;
+    .end local v4    # "itemView":Landroid/view/View;
+    :goto_1
+    return-object v4
 
-    .line 564
+    :catch_0
+    move-exception v3
+
+    .local v3, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    invoke-virtual {v3}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    goto :goto_1
+
+    .end local v3    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v0    # "appImage":Landroid/widget/ImageView;
+    .restart local v1    # "appSummary":Landroid/widget/TextView;
+    .restart local v2    # "appTitle":Landroid/widget/TextView;
+    .restart local v4    # "itemView":Landroid/view/View;
     :cond_0
-    sget v4, Lcom/flyme/internal/R$string;->recommend_search_mstore:I
+    sget v5, Lcom/flyme/internal/R$string;->recommend_search_mstore:I
 
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 .end method

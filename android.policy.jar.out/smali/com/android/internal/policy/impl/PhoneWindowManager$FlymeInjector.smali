@@ -476,14 +476,12 @@
 
     move v0, v3
 
-    .line 6629
     .local v0, "dismissKeyguard":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isKeyguardSecure()Z
+    invoke-static {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector;->mzGetKeyguardSecure(Lcom/android/internal/policy/impl/PhoneWindowManager;)Z
 
     move-result v2
 
-    .line 6631
     .local v2, "secureKeyguard":Z
     iget-object v5, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mAppsToBeHidden:Ljava/util/HashSet;
 
@@ -1112,4 +1110,54 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method static mzGetKeyguardSecure()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method static mzGetKeyguardSecure(Lcom/android/internal/policy/impl/PhoneWindowManager;)Z
+    .locals 1
+    .param p0, "pwm"    # Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMzKeyguardSecure:Ljava/lang/Boolean;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isKeyguardSecure()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMzKeyguardSecure:Ljava/lang/Boolean;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMzKeyguardSecure:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static mzSetKeyguardSecure(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+    .locals 1
+    .param p0, "pwm"    # Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    .prologue
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMzKeyguardSecure:Ljava/lang/Boolean;
+
+    return-void
 .end method

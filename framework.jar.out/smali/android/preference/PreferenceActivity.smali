@@ -2091,6 +2091,8 @@
     .end local v16    # "initialTitleStr":Ljava/lang/CharSequence;
     :cond_2
     :goto_3
+    invoke-direct/range {p0 .. p0}, Landroid/preference/PreferenceActivity;->mzSetScrollPanelVisibility()V
+
     invoke-virtual/range {p0 .. p0}, Landroid/preference/PreferenceActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v17
@@ -4030,5 +4032,55 @@
     .prologue
     iput-object p1, p0, Landroid/preference/PreferenceActivity;->mPrefsContainer:Landroid/view/ViewGroup;
 
+    invoke-direct {p0}, Landroid/preference/PreferenceActivity;->mzSetScrollPanelVisibility()V
+
+    return-void
+.end method
+
+.method private mzSetScrollPanelVisibility()V
+    .locals 3
+
+    .prologue
+    iget-object v1, p0, Landroid/preference/PreferenceActivity;->mPrefsContainer:Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/preference/PreferenceActivity;->mPrefsContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    .local v0, "v":Landroid/view/ViewGroup;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "com.meizu.widget.ScrollPane"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/preference/PreferenceActivity;->mPrefsContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getVisibility()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    .end local v0    # "v":Landroid/view/ViewGroup;
+    :cond_0
     return-void
 .end method

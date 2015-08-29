@@ -233,6 +233,8 @@
 
 .field mzPwm:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
+.field mMzKeyguardSecure:Ljava/lang/Boolean;
+
 .field mAccelerometerDefault:Z
 
 .field mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -28630,7 +28632,6 @@
     .prologue
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWinShowWhenLocked:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 6701
     return-void
 .end method
 
@@ -28677,7 +28678,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 6231
     :cond_0
     :goto_1
     return v6
@@ -28776,7 +28776,6 @@
 
     goto :goto_1
 
-    .line 7006
     :cond_4
     move v1, v6
 
