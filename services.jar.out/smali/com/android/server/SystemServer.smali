@@ -1251,7 +1251,7 @@
 
     const-class v5, Lcom/android/server/telecom/TelecomLoaderService;
 
-    invoke-virtual {v4, v5}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
+    #invoke-virtual {v4, v5}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     .line 469
     const-string v4, "SystemServer"
