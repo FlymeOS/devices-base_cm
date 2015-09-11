@@ -191,11 +191,23 @@
 .end method
 
 .method public setSimSlot(I)V
-    .locals 0
+    .locals 1
     .param p1, "slotId"    # I
 
     .prologue
-    .line 59
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isMultiSimEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput p1, p0, Landroid/app/NotificationBuilderExt;->mSimSlot:I
+
+    :cond_0
     return-void
 .end method
 

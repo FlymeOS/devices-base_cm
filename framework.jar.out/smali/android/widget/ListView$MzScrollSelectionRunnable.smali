@@ -18,9 +18,9 @@
 
 
 # static fields
-.field private static final SCROLL_DURATION:I = 0x19
+.field private static final SCROLL_DURATION:I = 0x1
 
-.field private static final SCROLL_SPEED:I = 0x23
+.field private static final SCROLL_SPEED:I = 0xa
 
 
 # instance fields
@@ -94,45 +94,36 @@
 
     const/4 v1, 0x0
 
-    .line 4399
-    const/16 v13, 0x23
+    const/16 v13, 0xa
 
-    .line 4400
     .local v13, "speed":I
     const/4 v10, 0x0
 
-    .line 4401
     .local v10, "atEdge":Z
     const/4 v11, 0x0
 
-    .line 4402
     .local v11, "atEnd":Z
     iget-boolean v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->mUpSelect:Z
 
     if-eqz v0, :cond_4
 
-    .line 4403
     iget-object v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v0, v13, v13}, Landroid/widget/ListView;->trackMotionScroll(II)Z
 
     move-result v10
 
-    .line 4404
     iget-object v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v0, v9}, Landroid/widget/ListView;->mzFindCandidateScrollSelection(Z)I
 
     move-result v12
 
-    .line 4407
     .local v12, "candidatePosition":I
     if-ne v12, v14, :cond_0
 
-    .line 4408
     const/4 v11, 0x1
 
-    .line 4412
     :cond_0
     iget-object v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->this$0:Landroid/widget/ListView;
 
@@ -173,28 +164,23 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->mzCorrectTooLow(I)V
 
-    .line 4453
     :cond_2
     :goto_0
     if-nez v11, :cond_3
 
-    .line 4454
     iget-object v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->this$0:Landroid/widget/ListView;
 
-    const-wide/16 v2, 0x19
+    const-wide/16 v2, 0x1
 
     invoke-virtual {v0, p0, v2, v3}, Landroid/widget/ListView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 4456
     :cond_3
     return-void
 
-    .line 4421
     .end local v12    # "candidatePosition":I
     :cond_4
     mul-int/lit8 v13, v13, -0x1
 
-    .line 4422
     iget-object v0, p0, Landroid/widget/ListView$MzScrollSelectionRunnable;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getScrollY()I
