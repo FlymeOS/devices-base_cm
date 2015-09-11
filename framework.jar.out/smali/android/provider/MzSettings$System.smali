@@ -89,6 +89,8 @@
 
 .field public static final MODE_RING_UP:Ljava/lang/String; = "mode_ring_up"
 
+.field public static final MSIM_MODE_SETTING:Ljava/lang/String; = "msim_mode_setting"
+
 .field public static final MZ_APP_LOCK_CONTROL:Ljava/lang/String; = "mz_app_lock_control"
 
 .field public static final MZ_CURRENT_NETWROK_SPEED:Ljava/lang/String; = "mz_current_network_speed"

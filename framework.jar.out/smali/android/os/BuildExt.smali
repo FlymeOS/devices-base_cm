@@ -20,6 +20,8 @@
 
 .field public static final HAS_DRIVE_MODE:Ljava/lang/Boolean;
 
+.field public static final HAS_NAVBAR:Ljava/lang/String;
+
 .field public static final HAS_PERMANENTKEY:Ljava/lang/Boolean;
 
 .field public static final HAS_SMARTBAR:Ljava/lang/String;
@@ -109,6 +111,14 @@
     move-result-object v0
 
     sput-object v0, Landroid/os/BuildExt;->IS_FLYMEROM:Ljava/lang/String;
+
+    const-string v0, "qemu.hw.mainkeys"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/os/BuildExt;->HAS_NAVBAR:Ljava/lang/String;
 
     .line 34
     const-string/jumbo v0, "ro.error.receiver.default"
