@@ -12,9 +12,9 @@
 
 ###1.	下载
 
-为了减少 *repo* 库的体积， *base_cm* 暂时没有放在 *repo* 的默认下载列表里，因此下载 *base_cm* 推荐使用 *git clone* 下
+为了减少 *repo* 库的体积， *base_cm* 暂时没有放在 *repo* 的默认下载列表里，因此下载 *base_cm* 推荐
 
-载，第一次下载时先 *cd* 到 *devices* 目录，然后输入：
+使用 *git clone* 下载，第一次下载时先 *cd* 到 *devices* 目录，然后输入：
 
 	git clone https://github.com/FlymeOS/devices-base_cm.git --single-branch -b lollipop-5.1
 
@@ -64,7 +64,7 @@
 
 息，将配置文件和配置信息一并写在你的机型目录中。
 
-	例如：不同的厂商会对ITelephony.aidl这个binder文件中的接口进行修改或者扩展，因此需要对这个binder接口的实现部分进行定制修改，它的实现部分通常位于TeleService.apk中的PhoneInterfaceManager文件中。由于base_cm已经对 TeleService.apk进行了定制，因此需要自行将TeleService目录拷贝到你的机型目录中，并且在Makefile文件中给予相应的配置。
+	例如：不同的厂商会对ITelephony.aidl这个binder文件中的接口进行修改或者扩展，因此需要对这个binder接口的实现部分进行定制修改，它的实现部分通常位于TeleService.apk中的PhoneInterfaceManager文件中。由于base_cm已经对TeleService.apk进行了定制，因此需要自行将TeleService目录拷贝到你的机型目录中，并且在Makefile文件中给予相应的配置。
 
 对 *base_cm* 中已经定制的其他 *apk* 或者资源文件可以采用类似的操作，若要详细了解对 *apk* 或者资源文件进行定制的
 
