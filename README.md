@@ -44,7 +44,9 @@
 
 正确下载后，与使用默认方式来 *patch*（即使用*base*来*patch*）的各项操作相同，只需要额外进行一项配置即可。
 
-要使用指定 *base*（如*base_cm*）的 *patch* 来进行插桩，需要在你的机型目录下的 *Makefile* 文件中进行配置，配置项为：
+要使用指定 *base*（如*base_cm*）的 *patch* 来进行插桩，需要在你的机型目录下的 *Makefile* 文件中进行配置，
+
+配置项为：
 
 	BASE :=
 
@@ -60,11 +62,14 @@
 
 *base_cm* 的正确运行可能需要对部分*apk*或者资源文件进行定制，但是需要定制的文件改动目前并没有被包含在
 
-*patchall* 及 *upgrade* 中，因此，你需要查看 *base_cm* 下对*apk*或者资源文件进行定制的文件以及其相应的配置信
+*patchall* 及 *upgrade* 中，因此，你需要查看 *base_cm* 下对*apk*或者资源文件进行定制的文件以及其相应的
 
-息，将配置文件和配置信息一并写在你的机型目录中。
+配置信息，将配置文件和配置信息一并写在你的机型目录中。
 
-	例如：不同的厂商会对ITelephony.aidl这个binder文件中的接口进行修改或者扩展，因此需要对这个binder接口的实现部分进行定制修改，它的实现部分通常位于TeleService.apk中的PhoneInterfaceManager文件中。由于base_cm已经对TeleService.apk进行了定制，因此需要自行将TeleService目录拷贝到你的机型目录中，并且在Makefile文件中给予相应的配置。
+	例如：不同的厂商会对ITelephony.aidl这个binder文件中的接口进行修改或者扩展，因此需要对这个binder接口的实现部
+    分进行定制修改，它的实现部分通常位于TeleService.apk中的PhoneInterfaceManager文件中。由于base_cm已经对
+    TeleService.apk进行了定制，因此需要自行将TeleService目录拷贝到你的机型目录中，并且在Makefile文件中给予相应
+    的配置。
 
 对 *base_cm* 中已经定制的其他 *apk* 或者资源文件可以采用类似的操作，若要详细了解对 *apk* 或者资源文件进行定制的
 
