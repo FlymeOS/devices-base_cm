@@ -20,7 +20,7 @@
 
 当然也可以自行修改 *mainfest/default.xml* 将 *base_cm* 放在 *repo* 的下载列表里。
 
-为了解决中国的开发者访问 *<https://github.com/FlymeOS>* 过于缓慢的问题，增加了本项目的中国镜像地址：*<http://git.oschina.net/FlymeOS>*
+为了解决中国的开发者访问 *<https://github.com/FlymeOS>* 过于缓慢的问题，增加了本项目的中国镜像地址： *<http://git.oschina.net/FlymeOS>*
 
 因此，中国的开发者可以使用下面的命令下载代码：
 
