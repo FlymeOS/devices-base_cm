@@ -34,13 +34,13 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    .locals 4
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    const/16 v2, 0x8
+    const/16 v3, 0x8
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v2, 0x3f800000    # 1.0f
 
     .line 156
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
     .line 166
     :cond_0
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/widget/MzActionBarContainer;->setAlpha(F)V
+    invoke-virtual {v0, v2}, Lcom/android/internal/widget/MzActionBarContainer;->setAlpha(F)V
 
     .line 171
     :cond_1
@@ -101,7 +101,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
 
@@ -112,7 +112,7 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_2
+    if-ne v0, v1, :cond_3
 
     .line 177
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
@@ -145,10 +145,20 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/android/internal/widget/MzSplitActionBarContainer;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Lcom/android/internal/widget/MzSplitActionBarContainer;->setVisibility(I)V
 
     .line 182
     :cond_2
+    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
+
+    # getter for: Lcom/android/internal/app/ActionBarImpl;->mSplitView:Lcom/android/internal/widget/MzSplitActionBarContainer;
+    invoke-static {v0}, Lcom/android/internal/app/ActionBarImpl;->access$300(Lcom/android/internal/app/ActionBarImpl;)Lcom/android/internal/widget/MzSplitActionBarContainer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/android/internal/widget/MzSplitActionBarContainer;->setAlpha(F)V
+
+    :cond_3
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
 
     # getter for: Lcom/android/internal/app/ActionBarImpl;->mContainerView:Lcom/android/internal/widget/MzActionBarContainer;
@@ -156,7 +166,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/android/internal/widget/MzActionBarContainer;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Lcom/android/internal/widget/MzActionBarContainer;->setVisibility(I)V
 
     .line 183
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
@@ -191,7 +201,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 187
     iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl$1;->this$0:Lcom/android/internal/app/ActionBarImpl;
@@ -203,7 +213,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->requestApplyInsets()V
 
-    .line 189
-    :cond_3
+    :cond_4
     return-void
 .end method

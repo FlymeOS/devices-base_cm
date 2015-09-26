@@ -453,19 +453,16 @@
     .param p2, "wallpaperManagerService"    # Lcom/android/server/wallpaper/WallpaperManagerService;
 
     .prologue
-    .line 1250
     invoke-static {p0, p1}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeAccessService(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;)V
 
-    .line 1251
+    invoke-static {p0}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeThemeService(Lcom/android/server/SystemServer;)V
+
     invoke-static {p0, p2}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymeWallpaperService(Lcom/android/server/SystemServer;Lcom/android/server/wallpaper/WallpaperManagerService;)V
 
-    .line 1252
     invoke-static {p0, p1}, Lcom/android/server/SystemServer$FlymeInjector;->startPermissionControlService(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;)V
 
-    .line 1253
     invoke-static {p0}, Lcom/android/server/SystemServer$FlymeInjector;->startFlymePackageManagerService(Lcom/android/server/SystemServer;)V
 
-    .line 1254
     return-void
 .end method
 
@@ -536,6 +533,49 @@
     const-string v3, "Failed to add flyme_permission service "
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method private static startFlymeThemeService(Lcom/android/server/SystemServer;)V
+    .locals 5
+    .param p0, "dst"    # Lcom/android/server/SystemServer;
+
+    .prologue
+    invoke-virtual {p0}, Lcom/android/server/SystemServer;->getSystemContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    .local v0, "context":Landroid/content/Context;
+    new-instance v2, Landroid/content/res/flymetheme/FlymeThemeService;
+
+    invoke-direct {v2, v0}, Landroid/content/res/flymetheme/FlymeThemeService;-><init>(Landroid/content/Context;)V
+
+    .local v2, "flymeThemeService":Landroid/content/res/flymetheme/FlymeThemeService;
+    const-string v3, "flyme_theme_service"
+
+    invoke-static {v3, v2}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    if-eqz v2, :cond_0
+
+    :try_start_0
+    invoke-virtual {v2}, Landroid/content/res/flymetheme/FlymeThemeService;->systemReady()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    .local v1, "e":Ljava/lang/Throwable;
+    const-string v3, "SystemServer"
+
+    const-string v4, "BOOT FAILURE for making flymeThemeService Service ready"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 .end method
