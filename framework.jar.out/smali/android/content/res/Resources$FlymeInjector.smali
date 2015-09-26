@@ -249,100 +249,115 @@
 .end method
 
 .method private static getThemeFileStream(Landroid/content/res/Resources;ILjava/lang/String;Landroid/util/TypedValue;)Ljava/io/InputStream;
-    .locals 5
+    .locals 6
     .param p0, "res"    # Landroid/content/res/Resources;
     .param p1, "resId"    # I
     .param p2, "fileName"    # Ljava/lang/String;
     .param p3, "value"    # Landroid/util/TypedValue;
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 2812
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 2813
-    .local v1, "resPackageName":Ljava/lang/String;
-    const-string v3, "android"
+    .local v2, "resPackageName":Ljava/lang/String;
+    const-string v4, "android"
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    .line 2814
-    .local v0, "isFramework":Z
-    iget-object v3, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+    .local v1, "isFramework":Z
+    iget-object v4, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
-    if-nez v3, :cond_0
+    if-eqz v4, :cond_0
 
-    .line 2825
-    .end local v0    # "isFramework":Z
-    .end local v1    # "resPackageName":Ljava/lang/String;
-    :goto_0
-    return-object v2
+    if-eqz v2, :cond_0
 
-    .line 2816
-    .restart local v0    # "isFramework":Z
-    .restart local v1    # "resPackageName":Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .end local v1    # "isFramework":Z
+    .end local v2    # "resPackageName":Ljava/lang/String;
     :cond_0
-    if-nez v0, :cond_1
+    :goto_0
+    return-object v3
 
-    iget-object v3, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
-
-    invoke-virtual {v3}, Landroid/content/res/flymetheme/FlymeThemeResource;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
-
-    invoke-virtual {v3}, Landroid/content/res/flymetheme/FlymeThemeResource;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    .line 2818
-    new-instance v3, Landroid/content/res/flymetheme/FlymeThemeResource;
-
-    invoke-direct {v3, v1, p0}, Landroid/content/res/flymetheme/FlymeThemeResource;-><init>(Ljava/lang/String;Landroid/content/res/Resources;)V
-
-    iput-object v3, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
-
-    .line 2819
-    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getInstance()Landroid/content/res/flymetheme/FlymeThemeResourceManager;
-
-    move-result-object v3
+    .restart local v1    # "isFramework":Z
+    .restart local v2    # "resPackageName":Ljava/lang/String;
+    :cond_1
+    if-nez v1, :cond_3
 
     iget-object v4, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
-    invoke-virtual {v3, v1, v4}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->setFlymeThemeResource(Ljava/lang/String;Landroid/content/res/flymetheme/FlymeThemeResource;)V
+    invoke-virtual {v4}, Landroid/content/res/flymetheme/FlymeThemeResource;->getPackageName()Ljava/lang/String;
 
-    .line 2821
-    :cond_1
-    iget-object v3, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+    move-result-object v4
 
-    invoke-virtual {v3, p2, v0, p3}, Landroid/content/res/flymetheme/FlymeThemeResource;->getThemeFileStream(Ljava/lang/String;ZLandroid/util/TypedValue;)Ljava/io/InputStream;
+    if-eqz v4, :cond_3
+
+    iget-object v4, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-virtual {v4}, Landroid/content/res/flymetheme/FlymeThemeResource;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getInstance()Landroid/content/res/flymetheme/FlymeThemeResourceManager;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getFlymeThemeResource(Ljava/lang/String;)Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    move-result-object v0
+
+    .local v0, "flymeThemeResource":Landroid/content/res/flymetheme/FlymeThemeResource;
+    if-nez v0, :cond_2
+
+    new-instance v0, Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    .end local v0    # "flymeThemeResource":Landroid/content/res/flymetheme/FlymeThemeResource;
+    invoke-direct {v0, v2, p0}, Landroid/content/res/flymetheme/FlymeThemeResource;-><init>(Ljava/lang/String;Landroid/content/res/Resources;)V
+
+    .restart local v0    # "flymeThemeResource":Landroid/content/res/flymetheme/FlymeThemeResource;
+    :cond_2
+    iput-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getInstance()Landroid/content/res/flymetheme/FlymeThemeResourceManager;
+
+    move-result-object v4
+
+    iget-object v5, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-virtual {v4, v2, v5}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->setFlymeThemeResource(Ljava/lang/String;Landroid/content/res/flymetheme/FlymeThemeResource;)V
+
+    .end local v0    # "flymeThemeResource":Landroid/content/res/flymetheme/FlymeThemeResource;
+    :cond_3
+    iget-object v4, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-virtual {v4, p2, v1, p3}, Landroid/content/res/flymetheme/FlymeThemeResource;->getThemeFileStream(Ljava/lang/String;ZLandroid/util/TypedValue;)Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v2
+    move-result-object v3
 
     goto :goto_0
 
-    .line 2822
-    .end local v0    # "isFramework":Z
-    .end local v1    # "resPackageName":Ljava/lang/String;
+    .end local v1    # "isFramework":Z
+    .end local v2    # "resPackageName":Ljava/lang/String;
     :catch_0
-    move-exception v3
+    move-exception v4
 
     goto :goto_0
 .end method
@@ -359,24 +374,20 @@
     .end annotation
 
     .prologue
-    .line 2791
     iget-object v2, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2794
     .local v0, "file":Ljava/lang/String;
     invoke-static {p0, p2, v0, p1}, Landroid/content/res/Resources$FlymeInjector;->getThemeFileStream(Landroid/content/res/Resources;ILjava/lang/String;Landroid/util/TypedValue;)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 2797
     .local v1, "is":Ljava/io/InputStream;
     if-nez v1, :cond_0
 
-    .line 2798
     iget-object v2, p0, Landroid/content/res/Resources;->mAssets:Landroid/content/res/AssetManager;
 
     iget v3, p1, Landroid/util/TypedValue;->assetCookie:I
@@ -387,7 +398,6 @@
 
     move-result-object v1
 
-    .line 2801
     :cond_0
     return-object v1
 .end method
@@ -397,17 +407,14 @@
     .param p0, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 2784
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
-    .line 2785
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/res/Resources;->mIsFlymeThemeChange:Z
 
-    .line 2786
     return-void
 .end method
 
@@ -416,7 +423,6 @@
     .param p0, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 2909
     invoke-virtual {p0}, Landroid/content/res/Resources;->mzGetFieldConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
@@ -429,11 +435,9 @@
 
     move-result v0
 
-    .line 2910
     .local v0, "changes":I
     iput v0, p0, Landroid/content/res/Resources;->mFlymeThemeChanges:I
 
-    .line 2911
     and-int/lit16 v1, v0, 0x4000
 
     if-eqz v1, :cond_1
@@ -442,28 +446,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 2912
     iget-object v1, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
     invoke-virtual {v1}, Landroid/content/res/flymetheme/FlymeThemeResource;->reset()V
 
-    .line 2913
     sget-object v1, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
 
     if-eq p0, v1, :cond_0
 
-    .line 2914
     iget-object v1, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
     invoke-virtual {v1}, Landroid/content/res/flymetheme/FlymeThemeResource;->load()V
 
-    .line 2916
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/content/res/Resources;->mIsFlymeThemeChange:Z
 
-    .line 2918
+    .line 2821
     :cond_1
     return-void
 .end method

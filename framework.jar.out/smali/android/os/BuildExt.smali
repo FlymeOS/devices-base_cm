@@ -703,6 +703,20 @@
 
     move-result v0
 
+    if-nez v0, :cond_8
+
+    const-string v0, "ro.product.model"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "M578CE"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
     if-eqz v0, :cond_15
 
     :cond_8

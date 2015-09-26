@@ -122,8 +122,8 @@
 
     :array_0
     .array-data 4
-        0x10102eb
-        0x1010059
+        #android:attr@actionBarSize#t
+        #android:attr@windowContentOverlay#t
     .end array-data
 .end method
 
@@ -2791,13 +2791,11 @@
     .locals 1
 
     .prologue
-    .line 603
     iget-object v0, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mContent:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 604
-    const v0, 0x1020002
+    const v0, #android:id@content#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2805,8 +2803,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mContent:Landroid/view/View;
 
-    .line 605
-    const v0, 0x102037f
+    const v0, #android:id@action_bar_container#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2816,8 +2813,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mActionBarTop:Lcom/android/internal/widget/MzActionBarContainer;
 
-    .line 607
-    const v0, 0x1020380
+    const v0, #android:id@action_bar#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2829,8 +2825,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
-    .line 608
-    const v0, 0x1020382
+    const v0, #android:id@split_action_bar#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -3372,7 +3367,7 @@
 
     move-result-object v6
 
-    const v7, 0x1120008
+    const v7, #android:bool@split_action_bar_is_narrow#t
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3401,16 +3396,16 @@
 
     if-nez v6, :cond_4
 
+    invoke-static {}, Landroid/os/BuildExt;->hasSmartBar()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
     .line 740
     iget-object v6, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
     instance-of v6, v6, Lcom/android/internal/widget/MzActionBarView;
-
-    if-eqz v6, :cond_2
-
-    invoke-static {}, Landroid/os/BuildExt;->hasSmartBar()Z
-
-    move-result v6
 
     if-eqz v6, :cond_2
 
@@ -3481,25 +3476,21 @@
 
     if-eqz v5, :cond_9
 
-    .line 764
     iget-object v5, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
     iget-object v6, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mActionBarBottom:Lcom/android/internal/widget/MzActionBarContainer;
 
     invoke-interface {v5, v6}, Lcom/android/internal/widget/DecorToolbar;->setSplitView(Landroid/view/ViewGroup;)V
 
-    .line 765
     iget-object v5, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
     invoke-interface {v5, v2}, Lcom/android/internal/widget/DecorToolbar;->setSplitToolbar(Z)V
 
-    .line 766
     iget-object v5, p0, Lcom/android/internal/widget/MzActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
     invoke-interface {v5, v3}, Lcom/android/internal/widget/DecorToolbar;->setSplitWhenNarrow(Z)V
 
-    .line 768
-    const v5, 0x1020381
+    const v5, #android:id@action_context_bar#t
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/MzActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
