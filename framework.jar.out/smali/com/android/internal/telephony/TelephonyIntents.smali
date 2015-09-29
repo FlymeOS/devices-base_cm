@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final ACTION_SET_RADIO_CAPABILITY_DONE:Ljava/lang/String; = "android.intent.action.ACTION_SET_RADIO_CAPABILITY_DONE"
+
 .field public static final ACTION_ANY_DATA_CONNECTION_STATE_CHANGED:Ljava/lang/String; = "android.intent.action.ANY_DATA_STATE"
 
 .field public static final ACTION_CAPABILITY_SWITCH_DONE:Ljava/lang/String; = "com.android.phone.ACTION_CAPABILITY_SWITCH_DONE"
