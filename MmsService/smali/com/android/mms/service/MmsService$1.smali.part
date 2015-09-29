@@ -1,0 +1,114 @@
+.method public sendMessage(ILjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+    .locals 8
+    .param p1, "subId"    # I
+    .param p2, "callingPkg"    # Ljava/lang/String;
+    .param p3, "contentUri"    # Landroid/net/Uri;
+    .param p4, "locationUrl"    # Ljava/lang/String;
+    .param p5, "configOverrides"    # Landroid/os/Bundle;
+    .param p6, "sentIntent"    # Landroid/app/PendingIntent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    move-object v0, p0
+
+    int-to-long v1, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move-object v7, p6
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/mms/service/MmsService$1;->sendMessage(JLjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method public downloadMessage(ILjava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+    .locals 8
+    .param p1, "subId"    # I
+    .param p2, "callingPkg"    # Ljava/lang/String;
+    .param p3, "locationUrl"    # Ljava/lang/String;
+    .param p4, "contentUri"    # Landroid/net/Uri;
+    .param p5, "configOverrides"    # Landroid/os/Bundle;
+    .param p6, "downloadedIntent"    # Landroid/app/PendingIntent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    move-object v0, p0
+
+    int-to-long v1, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move-object v7, p6
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/mms/service/MmsService$1;->downloadMessage(JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method public getCarrierConfigValues(I)Landroid/os/Bundle;
+    .locals 3
+    .param p1, "subId"    # I
+
+    .prologue
+    move-object v0, p0
+
+    int-to-long v1, p1
+
+    invoke-virtual/range {v0 .. v2}, Lcom/android/mms/service/MmsService$1;->getCarrierConfigValues(J)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public sendStoredMessage(ILjava/lang/String;Landroid/net/Uri;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+    .locals 7
+    .param p1, "subId"    # I
+    .param p2, "callingPkg"    # Ljava/lang/String;
+    .param p3, "messageUri"    # Landroid/net/Uri;
+    .param p4, "configOverrides"    # Landroid/os/Bundle;
+    .param p5, "sentIntent"    # Landroid/app/PendingIntent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    move-object v0, p0
+
+    int-to-long v1, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    invoke-virtual/range {v0 .. v6}, Lcom/android/mms/service/MmsService$1;->sendStoredMessage(JLjava/lang/String;Landroid/net/Uri;Landroid/os/Bundle;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
