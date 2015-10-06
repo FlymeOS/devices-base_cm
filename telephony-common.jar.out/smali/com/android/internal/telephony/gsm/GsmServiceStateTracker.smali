@@ -9146,9 +9146,7 @@
 
     move/from16 v1, v24
 
-    int-to-long v1, v1
-
-    invoke-virtual {v10, v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v10, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 775
     move-object/from16 v0, p0

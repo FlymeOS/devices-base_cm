@@ -1043,7 +1043,7 @@
 .end method
 
 .method public static putPhoneIdAndSubIdExtra(Landroid/content/Intent;II)V
-    .locals 3
+    .locals 1
     .param p0, "intent"    # Landroid/content/Intent;
     .param p1, "phoneId"    # I
     .param p2, "subId"    # I
@@ -1052,9 +1052,7 @@
     .line 1164
     const-string/jumbo v0, "subscription"
 
-    int-to-long v1, p2
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {p0, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 1165
     const-string/jumbo v0, "phone"

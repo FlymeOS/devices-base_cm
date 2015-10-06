@@ -112,13 +112,9 @@
 
     move-result v5
 
-    int-to-long v5, v5
+    invoke-virtual {p2, v4, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    invoke-virtual {p2, v4, v5, v6}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v4
-
-    long-to-int v4, v4
+    move-result v4
 
     invoke-direct {v2, v4}, Ljava/lang/Integer;-><init>(I)V
 

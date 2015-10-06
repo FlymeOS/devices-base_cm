@@ -371,7 +371,7 @@
 .end method
 
 .method private broadcastDefaultDataSubIdChanged(I)V
-    .locals 4
+    .locals 3
     .param p1, "subId"    # I
 
     .prologue
@@ -416,9 +416,7 @@
 
     move-result v2
 
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 1459
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
@@ -432,7 +430,7 @@
 .end method
 
 .method private broadcastDefaultSmsSubIdChanged(I)V
-    .locals 4
+    .locals 3
     .param p1, "subId"    # I
 
     .prologue
@@ -473,9 +471,7 @@
     .line 1326
     const-string v1, "subscription"
 
-    int-to-long v2, p1
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 1327
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
@@ -489,7 +485,7 @@
 .end method
 
 .method private broadcastDefaultVoiceSubIdChanged(I)V
-    .locals 4
+    .locals 3
     .param p1, "subId"    # I
 
     .prologue
@@ -530,9 +526,7 @@
     .line 1355
     const-string v1, "subscription"
 
-    int-to-long v2, p1
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 1356
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
