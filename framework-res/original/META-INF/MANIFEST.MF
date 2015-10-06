@@ -2540,7 +2540,7 @@ Name: res/drawable-xxhdpi-v4/btn_radio_to_off_mtrl_015.png
 SHA1-Digest: 53DYKltMU34zhaYZHtlNZkme+Co=
 
 Name: AndroidManifest.xml
-SHA1-Digest: owVNqdJdNK8KU+TJgl705sC4jKU=
+SHA1-Digest: TRED2c5CAch6Uqmf0dd9L/z0jp4=
 
 Name: res/drawable/ic_find_next_material.xml
 SHA1-Digest: FmBYqvPq46KyscEn6qCtO1v1O0s=
@@ -7377,7 +7377,7 @@ Name: res/drawable-xxhdpi-v4/ic_menu_always_landscape_portrait.png
 SHA1-Digest: h3XXGafPSnXT+7QkX+o/I8Jj1cA=
 
 Name: resources.arsc
-SHA1-Digest: vnIjjOvgO39bb+f4mxnD3d+5iAc=
+SHA1-Digest: gDaNoAYjJn68se7rcWBUJvtJk2s=
 
 Name: res/drawable/notification_material_media_action_background.xml
 SHA1-Digest: DR/tbE7OaJ2RozXNsdsJlwwW1mo=

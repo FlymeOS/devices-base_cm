@@ -211,6 +211,7 @@
     .end annotation
 
     .prologue
+    .line 139
     .local p14, "conferenceableConnectionIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v15, 0x0
 
@@ -246,6 +247,7 @@
 
     invoke-direct/range {v0 .. v15}, Landroid/telecom/ParcelableConnection;-><init>(Landroid/telecom/PhoneAccountHandle;IILandroid/net/Uri;ILjava/lang/String;ILcom/android/internal/telecom/IVideoProvider;IZZLandroid/telecom/StatusHints;Landroid/telecom/DisconnectCause;Ljava/util/List;I)V
 
+    .line 154
     return-void
 .end method
 

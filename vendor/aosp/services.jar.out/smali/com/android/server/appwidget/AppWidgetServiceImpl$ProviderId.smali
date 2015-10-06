@@ -27,16 +27,16 @@
     .param p2, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3257
+    .line 3255
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3258
+    .line 3256
     iput p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
-    .line 3259
+    .line 3257
     iput-object p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
-    .line 3260
+    .line 3258
     return-void
 .end method
 
@@ -47,7 +47,7 @@
     .param p3, "x2"    # Lcom/android/server/appwidget/AppWidgetServiceImpl$1;
 
     .prologue
-    .line 3253
+    .line 3251
     invoke-direct {p0, p1, p2}, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;-><init>(ILandroid/content/ComponentName;)V
 
     return-void
@@ -64,24 +64,24 @@
 
     const/4 v2, 0x0
 
-    .line 3264
+    .line 3262
     if-ne p0, p1, :cond_1
 
-    .line 3284
+    .line 3282
     :cond_0
     :goto_0
     return v1
 
-    .line 3267
+    .line 3265
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 3268
+    .line 3266
     goto :goto_0
 
-    .line 3270
+    .line 3268
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -95,16 +95,16 @@
 
     move v1, v2
 
-    .line 3271
+    .line 3269
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 3273
+    .line 3271
     check-cast v0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
-    .line 3274
+    .line 3272
     .local v0, "other":Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
     iget v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
@@ -114,26 +114,26 @@
 
     move v1, v2
 
-    .line 3275
+    .line 3273
     goto :goto_0
 
-    .line 3277
+    .line 3275
     :cond_4
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     if-nez v3, :cond_5
 
-    .line 3278
+    .line 3276
     iget-object v3, v0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
     if-eqz v3, :cond_0
 
     move v1, v2
 
-    .line 3279
+    .line 3277
     goto :goto_0
 
-    .line 3281
+    .line 3279
     :cond_5
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->componentName:Landroid/content/ComponentName;
 
@@ -147,7 +147,7 @@
 
     move v1, v2
 
-    .line 3282
+    .line 3280
     goto :goto_0
 .end method
 
@@ -155,10 +155,10 @@
     .locals 3
 
     .prologue
-    .line 3289
+    .line 3287
     iget v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
 
-    .line 3290
+    .line 3288
     .local v0, "result":I
     mul-int/lit8 v2, v0, 0x1f
 
@@ -175,10 +175,10 @@
     :goto_0
     add-int v0, v2, v1
 
-    .line 3292
+    .line 3290
     return v0
 
-    .line 3290
+    .line 3288
     :cond_0
     const/4 v1, 0x0
 
@@ -189,7 +189,7 @@
     .locals 2
 
     .prologue
-    .line 3297
+    .line 3295
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

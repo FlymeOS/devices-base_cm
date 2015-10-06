@@ -707,7 +707,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2, p2, p3}, Lcom/android/internal/appwidget/IAppWidgetService;->createAppWidgetConfigIntentSender(Ljava/lang/String;II)Landroid/content/IntentSender;
+    invoke-interface {v0, v2, p2}, Lcom/android/internal/appwidget/IAppWidgetService;->createAppWidgetConfigIntentSender(Ljava/lang/String;I)Landroid/content/IntentSender;
 
     move-result-object v1
 
@@ -720,13 +720,13 @@
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
     move-object v0, p1
 
     move v2, p4
+
+    move v5, p3
+
+    move v6, p3
 
     move-object v7, p5
 

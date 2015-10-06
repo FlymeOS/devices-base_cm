@@ -39,7 +39,7 @@
     .end annotation
 .end method
 
-.method public abstract createAppWidgetConfigIntentSender(Ljava/lang/String;II)Landroid/content/IntentSender;
+.method public abstract createAppWidgetConfigIntentSender(Ljava/lang/String;I)Landroid/content/IntentSender;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -230,10 +230,12 @@
     .param p3, "inCallAdapter"    # Landroid/telecom/InCallAdapter;
 
     .prologue
+    .line 715
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/telecom/Call;-><init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;Z)V
 
+    .line 716
     return-void
 .end method
 

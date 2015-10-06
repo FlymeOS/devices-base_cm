@@ -21,7 +21,7 @@
     .param p2, "x1"    # I
 
     .prologue
-    .line 5044
+    .line 5049
     invoke-direct {p0, p1, p2}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -35,7 +35,7 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 5046
+    .line 5051
     monitor-enter p0
 
     :try_start_0

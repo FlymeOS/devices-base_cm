@@ -29,15 +29,15 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 3455
+    .line 3453
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3456
+    .line 3454
     iput p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->mUserId:I
 
-    .line 3457
+    .line 3455
     return-void
 .end method
 
@@ -47,7 +47,7 @@
     .locals 3
 
     .prologue
-    .line 3461
+    .line 3459
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     # getter for: Lcom/android/server/appwidget/AppWidgetServiceImpl;->mLock:Ljava/lang/Object;
@@ -57,7 +57,7 @@
 
     monitor-enter v1
 
-    .line 3462
+    .line 3460
     :try_start_0
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
@@ -66,7 +66,7 @@
     # invokes: Lcom/android/server/appwidget/AppWidgetServiceImpl;->ensureGroupStateLoadedLocked(I)V
     invoke-static {v0, v2}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$2100(Lcom/android/server/appwidget/AppWidgetServiceImpl;I)V
 
-    .line 3463
+    .line 3461
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     iget v2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$SaveStateRunnable;->mUserId:I
@@ -74,13 +74,13 @@
     # invokes: Lcom/android/server/appwidget/AppWidgetServiceImpl;->saveStateLocked(I)V
     invoke-static {v0, v2}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->access$2400(Lcom/android/server/appwidget/AppWidgetServiceImpl;I)V
 
-    .line 3464
+    .line 3462
     monitor-exit v1
 
-    .line 3465
+    .line 3463
     return-void
 
-    .line 3464
+    .line 3462
     :catchall_0
     move-exception v0
 

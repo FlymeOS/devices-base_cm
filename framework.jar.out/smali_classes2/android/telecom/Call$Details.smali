@@ -141,6 +141,7 @@
     .param p14, "extras"    # Landroid/os/Bundle;
 
     .prologue
+    .line 325
     const-wide/16 v10, 0x0
 
     const/16 v18, 0x0
@@ -175,6 +176,7 @@
 
     invoke-direct/range {v1 .. v18}, Landroid/telecom/Call$Details;-><init>(Landroid/net/Uri;ILjava/lang/String;ILandroid/telecom/PhoneAccountHandle;IILandroid/telecom/DisconnectCause;JJLandroid/telecom/GatewayInfo;ILandroid/telecom/StatusHints;Landroid/os/Bundle;I)V
 
+    .line 341
     return-void
 .end method
 

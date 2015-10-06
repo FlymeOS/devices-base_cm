@@ -31,22 +31,22 @@
     .param p3, "theNewId"    # I
 
     .prologue
-    .line 4058
+    .line 4056
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$BackupRestoreController$RestoreUpdateRecord;->this$1:Lcom/android/server/appwidget/AppWidgetServiceImpl$BackupRestoreController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4059
+    .line 4057
     iput p2, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$BackupRestoreController$RestoreUpdateRecord;->oldId:I
 
-    .line 4060
+    .line 4058
     iput p3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$BackupRestoreController$RestoreUpdateRecord;->newId:I
 
-    .line 4061
+    .line 4059
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$BackupRestoreController$RestoreUpdateRecord;->notified:Z
 
-    .line 4062
+    .line 4060
     return-void
 .end method

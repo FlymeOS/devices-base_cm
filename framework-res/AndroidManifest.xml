@@ -352,6 +352,7 @@
     <permission android:description="@string/permdesc_bind_incall_service" android:label="@string/permlab_bind_incall_service" android:name="android.permission.BIND_INCALL_SERVICE" android:permissionGroup="android.permission-group.PHONE_CALLS" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_bind_connection_service" android:label="@string/permlab_bind_connection_service" android:name="android.permission.BIND_CONNECTION_SERVICE" android:permissionGroup="android.permission-group.PHONE_CALLS" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_control_incall_experience" android:label="@string/permlab_control_incall_experience" android:name="android.permission.CONTROL_INCALL_EXPERIENCE" android:permissionGroup="android.permission-group.PHONE_CALLS" android:protectionLevel="system|signature"/>
+    <permission android:name="android.permission.RECEIVE_STK_COMMANDS" android:protectionLevel="system|signature"/>
     <eat-comment/>
     <permission-group android:description="@string/permgroupdesc_storage" android:icon="@drawable/perm_group_storage" android:label="@string/permgrouplab_storage" android:name="android.permission-group.STORAGE" android:permissionGroupFlags="personalInfo" android:priority="240"/>
     <permission android:description="@string/permdesc_sdcardRead" android:label="@string/permlab_sdcardRead" android:name="android.permission.READ_EXTERNAL_STORAGE" android:permissionGroup="android.permission-group.STORAGE" android:protectionLevel="normal"/>

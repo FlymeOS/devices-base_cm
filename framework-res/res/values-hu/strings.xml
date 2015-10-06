@@ -1254,7 +1254,7 @@ Szeretné bezárni?"</string>
     <string name="smv_process">%1$s folyamat megsértette az általa kényszerített Szigorú üzemmód irányelvet.</string>
     <string name="android_upgrading_title">Android frissítése folyamatban...</string>
     <string name="android_upgrading_apk">Alkalmazás optimalizálása: %1$d/%2$d.</string>
-    <string name="android_upgrading_starting_apps">Kezdő alkalmazások.</string>
+    <string name="android_upgrading_starting_apps">Alkalmazások indítása.</string>
     <string name="android_upgrading_complete">Rendszerindítás befejezése.</string>
     <string name="heavy_weight_notification">%1$s fut</string>
     <string name="heavy_weight_notification_detail">Érintse meg az alkalmazásra váltáshoz</string>
