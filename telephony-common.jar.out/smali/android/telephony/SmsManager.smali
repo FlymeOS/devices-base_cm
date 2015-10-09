@@ -3295,3 +3295,27 @@
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method
+
+.method public static getAllMessagesFromIccExtended()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/telephony/SmsMessage;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/SmsManager;->getAllMessagesFromIcc()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
