@@ -97,8 +97,6 @@
 
 .field mInputShownChangeListener:Landroid/view/inputmethod/InputMethodManager$InputShownChangeListener;
 
-.field mIsDeviceDefaultTheme:Z
-
 .field mPasswordUseMonospaceFont:Z
 
 .field mTempCoords:[I
@@ -30472,14 +30470,6 @@
     .prologue
     const/4 v0, 0x0
 
-    iget-object v1, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->isDeviceDefaultTheme()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
     iget-object v1, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
     if-nez v1, :cond_1
@@ -30502,14 +30492,6 @@
     if-eqz v1, :cond_0
 
     const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 5543
-    :cond_2
-    invoke-virtual {p0}, Landroid/widget/TextView;->isCursorVisible()Z
-
-    move-result v0
 
     goto :goto_0
 .end method
@@ -30889,24 +30871,14 @@
     .prologue
     const/4 v7, 0x0
 
-    iget-boolean v5, p0, Landroid/widget/TextView;->mIsDeviceDefaultTheme:Z
-
-    if-nez v5, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 8075
-    :cond_1
     invoke-virtual {p0}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     .local v0, "background":Landroid/graphics/drawable/Drawable;
-    if-nez p1, :cond_3
+    if-nez p1, :cond_2
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
@@ -30919,14 +30891,14 @@
     const/4 v2, 0x0
 
     .local v2, "i":I
-    :goto_1
+    :goto_0
     if-ge v2, v3, :cond_0
 
     aget v5, v1, v2
 
     const v6, #android:attr@state_focused#t
 
-    if-ne v5, v6, :cond_2
+    if-ne v5, v6, :cond_1
 
     add-int/lit8 v5, v3, -0x1
 
@@ -30945,18 +30917,26 @@
 
     invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    goto :goto_0
-
+    .end local v1    # "drawableState":[I
+    .end local v2    # "i":I
+    .end local v3    # "length":I
     .end local v4    # "nonFocusedState":[I
-    :cond_2
+    :cond_0
+    :goto_1
+    return-void
+
+    .restart local v1    # "drawableState":[I
+    .restart local v2    # "i":I
+    .restart local v3    # "length":I
+    :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_1
+    goto :goto_0
 
     .end local v1    # "drawableState":[I
     .end local v2    # "i":I
     .end local v3    # "length":I
-    :cond_3
+    :cond_2
     if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getDrawableState()[I
@@ -30966,7 +30946,7 @@
     .restart local v1    # "drawableState":[I
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public updateCurrentCursorVisbility(Z)Z

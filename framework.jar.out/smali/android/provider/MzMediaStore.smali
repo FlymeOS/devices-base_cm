@@ -13,6 +13,8 @@
 
 
 # static fields
+.field public static final EXTERNAL_DISK_PATH:Ljava/lang/String; = "/data/system/scsi"
+
 .field private static final TAG:Ljava/lang/String; = "MzMediaStore"
 
 .field public static final UNKNOWN_STRING:Ljava/lang/String; = "<unknown>"

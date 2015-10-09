@@ -183,44 +183,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10080
-    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->isDeviceDefaultTheme()Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Landroid/widget/TextView;->mIsDeviceDefaultTheme:Z
-
-    .line 10084
-    iget-boolean v2, p0, Landroid/widget/TextView;->mIsDeviceDefaultTheme:Z
-
-    if-nez v2, :cond_1
-
-    const/4 v2, 0x1
-
-    :goto_0
-    iput-boolean v2, p0, Landroid/widget/TextView;->mPasswordUseMonospaceFont:Z
-
-    .line 10087
-    iget-boolean v2, p0, Landroid/widget/TextView;->mIsDeviceDefaultTheme:Z
-
-    iput-boolean v2, p0, Landroid/widget/TextView;->mAutoLinkMaskIncludeDateTime:Z
-
-    .line 10089
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v1
 
-    .line 10092
     .local v1, "theme":Landroid/content/res/Resources$Theme;
     iget v2, p0, Landroid/widget/TextView;->mCursorDrawableRes:I
 
     if-eqz v2, :cond_0
 
-    .line 10093
     invoke-virtual {p0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -233,44 +204,32 @@
 
     .line 10094
     .local v0, "cursor":Landroid/graphics/drawable/Drawable;
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     move v2, v3
 
-    :goto_1
+    :goto_0
     iput v2, p0, Landroid/widget/TextView;->mCursorWidth:I
 
-    .line 10098
     .end local v0    # "cursor":Landroid/graphics/drawable/Drawable;
     :cond_0
     iput-boolean v3, p0, Landroid/widget/TextView;->mEmojiAlphaEnabled:Z
 
-    .line 10099
     const/4 v2, 0x2
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Landroid/widget/TextView;->mTempCoords:[I
 
-    .line 10100
     return-void
 
-    .end local v1    # "theme":Landroid/content/res/Resources$Theme;
-    :cond_1
-    move v2, v3
-
-    .line 10084
-    goto :goto_0
-
-    .line 10094
     .restart local v0    # "cursor":Landroid/graphics/drawable/Drawable;
-    .restart local v1    # "theme":Landroid/content/res/Resources$Theme;
-    :cond_2
+    :cond_1
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method static mzGetAutoLinkMask(Landroid/widget/TextView;)I
@@ -358,30 +317,24 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 9944
-    const v1, 0x1020028
+    const v1, #android:id@startSelectingText#t
 
     if-ne v1, p1, :cond_0
 
-    .line 9945
     invoke-static {p0}, Landroid/widget/TextView$FlymeInjector;->editorSelectCurrentWordMz(Landroid/widget/TextView;)V
 
-    .line 9952
     :goto_0
     return v0
 
-    .line 9947
     :cond_0
     sget v1, Landroid/widget/TextView;->ID_COPY_ALL:I
 
     if-ne v1, p1, :cond_1
 
-    .line 9948
     invoke-static {p0}, Landroid/widget/TextView$FlymeInjector;->copyAllOnTextContextMenuItem(Landroid/widget/TextView;)V
 
     goto :goto_0
 
-    .line 9952
     :cond_1
     const/4 v0, 0x0
 
