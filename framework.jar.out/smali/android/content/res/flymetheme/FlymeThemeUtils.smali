@@ -114,8 +114,9 @@
 
     sput-object v0, Landroid/content/res/flymetheme/FlymeThemeUtils;->PIXELS:[Ljava/lang/String;
 
-    .line 49
-    new-array v0, v4, [Ljava/lang/String;
+    const/16 v0, 0x2b
+
+    new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "com.meizu.flyme.find"
 
@@ -124,6 +125,246 @@
     const-string v1, "com.meizu.media.life"
 
     aput-object v1, v0, v3
+
+    const-string v1, "com.meizu.account"
+
+    aput-object v1, v0, v4
+
+    const-string v1, "com.meizu.backup"
+
+    aput-object v1, v0, v5
+
+    const-string v1, "com.meizu.callsetting"
+
+    aput-object v1, v0, v6
+
+    const/4 v1, 0x5
+
+    const-string v2, "com.meizu.cloud"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "com.meizu.compaign"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string v2, "com.meizu.customizecenter"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    const-string v2, "com.meizu.documentsui"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9
+
+    const-string v2, "com.meizu.feedback"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa
+
+    const-string v2, "com.meizu.filemanager"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb
+
+    const-string v2, "com.meizu.flyme.android.theme.LRA_Soft"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc
+
+    const-string v2, "com.meizu.flyme.android.theme.LRA_Strong"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xd
+
+    const-string v2, "com.meizu.flyme.calculator"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xe
+
+    const-string v2, "com.meizu.flyme.clouddisk"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xf
+
+    const-string v2, "com.meizu.flyme.gamecenter"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x10
+
+    const-string v2, "com.meizu.flyme.input"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x11
+
+    const-string v2, "com.meizu.flyme.launcher"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x12
+
+    const-string v2, "com.meizu.flyme.service.find"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x13
+
+    const-string v2, "com.meizu.flyme.toolbox"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x14
+
+    const-string v2, "com.meizu.flyme.update"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x15
+
+    const-string v2, "com.meizu.flyme.weather"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x16
+
+    const-string v2, "com.meizu.gamecenter.service"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x17
+
+    const-string v2, "com.meizu.logreport"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x18
+
+    const-string v2, "com.meizu.media.camera"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x19
+
+    const-string v2, "com.meizu.media.gallery"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1a
+
+    const-string v2, "com.meizu.media.music"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1b
+
+    const-string v2, "com.meizu.media.reader"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1c
+
+    const-string v2, "com.meizu.media.video"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1d
+
+    const-string v2, "com.meizu.mpay"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1e
+
+    const-string v2, "com.meizu.mstore"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1f
+
+    const-string v2, "com.meizu.mzsimcontacts"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x20
+
+    const-string v2, "com.meizu.mzsyncservice"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x21
+
+    const-string v2, "com.meizu.net.o2oservice"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x22
+
+    const-string v2, "com.meizu.net.search"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x23
+
+    const-string v2, "om.meizu.netcontactservice"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x24
+
+    const-string v2, "com.meizu.notepaper"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x25
+
+    const-string v2, "com.meizu.powersave"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x26
+
+    const-string v2, "com.meizu.safe"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x27
+
+    const-string v2, "com.meizu.setup"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x28
+
+    const-string v2, "com.meizu.splitloccontroller"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x29
+
+    const-string v2, "com.meizu.systemwallpaper"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2a
+
+    const-string v2, "com.meizu.voiceassistant"
+
+    aput-object v2, v0, v1
 
     sput-object v0, Landroid/content/res/flymetheme/FlymeThemeUtils;->WHITE_LIST:[Ljava/lang/String;
 
