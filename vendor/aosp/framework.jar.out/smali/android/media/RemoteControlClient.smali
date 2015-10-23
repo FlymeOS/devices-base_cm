@@ -658,7 +658,7 @@
     .line 1241
     const-string v0, "RemoteControlClient"
 
-    const-string v2, "mGetNowPlayingEntriesListener.onGetNowPlayingEntries"
+    const-string/jumbo v2, "mGetNowPlayingEntriesListener.onGetNowPlayingEntries"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

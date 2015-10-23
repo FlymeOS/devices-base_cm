@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Este vídeo não é válido para transmissão em fluxo contínuo neste aparelho.</string>
     <string name="selectTextMode">Selecionar texto</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Padrão</string>
-    <string name="profileNameWork">Trabalho</string>
-    <string name="profileNameHome">Casa</string>
-    <string name="profileNameSilent">Silêncio</string>
-    <string name="profileNameNight">Noite</string>
-    <string name="profileNameAutomobile">Automóvel</string>
-    <string name="profileGroupPhone">Telefone</string>
-    <string name="profileGroupCalendar">Calendário</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Outro</string>
     <string name="profile_none">Nenhum</string>
     <string name="profile_picker_title">Perfis</string>
     <string name="global_action_choose_profile">Perfil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">A lanterna está ligada</string>
     <string name="quick_settings_tile_flashlight_not_summary">Toque para desligar</string>
     <string name="storage_sd_dock_card">Cartão SD da Dock</string>
+    <string name="fingerprint_default_name">Impressão digital %d</string>
+    <string name="permlab_accessFingerprintService">aceder ao serviço de impressões digitais</string>
+    <string name="permdesc_accessFingerprintService">Permite que uma aplicação aceda ao serviço de impressão digital. A aplicação pode adicionar, eliminar, mudar o nome e autenticar ao comparar impressões digitais</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e de %B de %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ A poupança de bateria desliga-se automaticamente quando o dispositivo está a c
     <string name="stk_cc_ss_to_ss">O pedido SS foi modificado para um novo pedido SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; rede</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Rede</string>
+    <string name="permlab_resetBatteryStats">reiniciar estatísticas da bateria</string>
+    <string name="permdesc_resetBatteryStats">Permite a uma aplicação reiniciar os dados de utilização de baixo nível da bateria.</string>
+    <string name="silent_mode_priority">Prioridade</string>
+    <string name="silent_mode_none">Nenhum</string>
 </resources>

@@ -186,7 +186,7 @@
 
 .field public static final PRIVATE_FLAG_COMPATIBLE_WINDOW:I = 0x80
 
-.field public static final PRIVATE_FLAG_DISABLE_WALLPAPER_TOUCH_EVENTS:I = 0x800
+.field public static final PRIVATE_FLAG_DISABLE_WALLPAPER_TOUCH_EVENTS:I = 0x4000
 
 .field public static final PRIVATE_FLAG_FAKE_HARDWARE_ACCELERATED:I = 0x1
 

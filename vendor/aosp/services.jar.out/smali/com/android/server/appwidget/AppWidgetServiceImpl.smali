@@ -3,8 +3,8 @@
 .source "AppWidgetServiceImpl.java"
 
 # interfaces
-.implements Landroid/app/admin/DevicePolicyManagerInternal$OnCrossProfileWidgetProvidersChangeListener;
 .implements Lcom/android/server/WidgetBackupProvider;
+.implements Landroid/app/admin/DevicePolicyManagerInternal$OnCrossProfileWidgetProvidersChangeListener;
 
 
 # annotations

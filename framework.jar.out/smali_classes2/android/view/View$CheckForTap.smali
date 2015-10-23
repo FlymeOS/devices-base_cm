@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 19858
+    .line 19866
     iput-object p1, p0, Landroid/view/View$CheckForTap;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .param p2, "x1"    # Landroid/view/View$1;
 
     .prologue
-    .line 19858
+    .line 19866
     invoke-direct {p0, p1}, Landroid/view/View$CheckForTap;-><init>(Landroid/view/View;)V
 
     return-void
@@ -56,7 +56,7 @@
     .locals 4
 
     .prologue
-    .line 19864
+    .line 19872
     iget-object v0, p0, Landroid/view/View$CheckForTap;->this$0:Landroid/view/View;
 
     iget v1, v0, Landroid/view/View;->mPrivateFlags:I
@@ -67,7 +67,7 @@
 
     iput v1, v0, Landroid/view/View;->mPrivateFlags:I
 
-    .line 19865
+    .line 19873
     iget-object v0, p0, Landroid/view/View$CheckForTap;->this$0:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -79,7 +79,7 @@
     # invokes: Landroid/view/View;->setPressed(ZFF)V
     invoke-static {v0, v1, v2, v3}, Landroid/view/View;->access$2200(Landroid/view/View;ZFF)V
 
-    .line 19866
+    .line 19874
     iget-object v0, p0, Landroid/view/View$CheckForTap;->this$0:Landroid/view/View;
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
@@ -89,6 +89,6 @@
     # invokes: Landroid/view/View;->checkForLongClick(I)V
     invoke-static {v0, v1}, Landroid/view/View;->access$2300(Landroid/view/View;I)V
 
-    .line 19867
+    .line 19875
     return-void
 .end method

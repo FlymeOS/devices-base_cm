@@ -50,6 +50,7 @@
     invoke-direct {p0, v0}, Landroid/net/Uri$AbstractHierarchicalUri;-><init>(Landroid/net/Uri$1;)V
 
     .line 1265
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -592,6 +593,7 @@
     .line 1270
     iget-object v1, p0, Landroid/net/Uri$HierarchicalUri;->uriString:Ljava/lang/String;
 
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v2

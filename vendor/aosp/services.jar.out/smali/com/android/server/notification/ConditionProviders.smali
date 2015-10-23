@@ -130,7 +130,7 @@
 
     const-string v5, "system.condition.providers"
 
-    const v6, 0x107004b
+    const v6, 0x107004c
 
     invoke-static {v3, v5, v6}, Lcom/android/server/notification/PropConfig;->getStringArray(Landroid/content/Context;Ljava/lang/String;I)[Ljava/lang/String;
 
@@ -2151,7 +2151,7 @@
     iput-object v1, v0, Lcom/android/server/notification/ManagedServices$Config;->settingsAction:Ljava/lang/String;
 
     .line 93
-    const v1, 0x1040626
+    const v1, 0x104062f
 
     iput v1, v0, Lcom/android/server/notification/ManagedServices$Config;->clientLabel:I
 

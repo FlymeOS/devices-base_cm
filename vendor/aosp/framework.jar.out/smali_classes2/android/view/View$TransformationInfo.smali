@@ -34,20 +34,20 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 2968
+    .line 2976
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2976
+    .line 2984
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Landroid/view/View$TransformationInfo;->mMatrix:Landroid/graphics/Matrix;
 
-    .line 2991
+    .line 2999
     iput v1, p0, Landroid/view/View$TransformationInfo;->mAlpha:F
 
-    .line 2999
+    .line 3007
     iput v1, p0, Landroid/view/View$TransformationInfo;->mTransitionAlpha:F
 
     return-void
@@ -58,7 +58,7 @@
     .param p0, "x0"    # Landroid/view/View$TransformationInfo;
 
     .prologue
-    .line 2968
+    .line 2976
     iget-object v0, p0, Landroid/view/View$TransformationInfo;->mMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -69,7 +69,7 @@
     .param p0, "x0"    # Landroid/view/View$TransformationInfo;
 
     .prologue
-    .line 2968
+    .line 2976
     iget-object v0, p0, Landroid/view/View$TransformationInfo;->mInverseMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -81,7 +81,7 @@
     .param p1, "x1"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 2968
+    .line 2976
     iput-object p1, p0, Landroid/view/View$TransformationInfo;->mInverseMatrix:Landroid/graphics/Matrix;
 
     return-object p1

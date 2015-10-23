@@ -1714,7 +1714,7 @@
 
     .line 506
     .local v5, "line1":Ljava/lang/String;
-    const v2, 0x104076a
+    const v2, 0x1040773
 
     const/4 v7, 0x1
 

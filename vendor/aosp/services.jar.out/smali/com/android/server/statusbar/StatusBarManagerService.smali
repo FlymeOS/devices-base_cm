@@ -150,7 +150,7 @@
     .local v0, "res":Landroid/content/res/Resources;
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
-    const v2, 0x1070014
+    const v2, 0x1070015
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

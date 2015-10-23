@@ -3,9 +3,9 @@
 .source "WebView.java"
 
 # interfaces
-.implements Landroid/view/ViewDebug$HierarchyHandler;
-.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 .implements Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
+.implements Landroid/view/ViewDebug$HierarchyHandler;
 
 
 # annotations

@@ -1256,7 +1256,7 @@
 
     move-result-object v0
 
-    const-string v1, "mColors="
+    const-string/jumbo v1, "mColors="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1272,7 +1272,7 @@
 
     move-result-object v0
 
-    const-string v1, "mDefaultColor="
+    const-string/jumbo v1, "mDefaultColor="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

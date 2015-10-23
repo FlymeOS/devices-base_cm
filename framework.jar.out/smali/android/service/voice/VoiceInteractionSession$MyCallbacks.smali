@@ -3,8 +3,8 @@
 .source "VoiceInteractionSession.java"
 
 # interfaces
-.implements Landroid/inputmethodservice/SoftInputWindow$Callback;
 .implements Lcom/android/internal/os/HandlerCaller$Callback;
+.implements Landroid/inputmethodservice/SoftInputWindow$Callback;
 
 
 # annotations

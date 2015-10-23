@@ -3,8 +3,8 @@
 .source "QuoteSpan.java"
 
 # interfaces
-.implements Landroid/text/ParcelableSpan;
 .implements Landroid/text/style/LeadingMarginSpan;
+.implements Landroid/text/ParcelableSpan;
 
 
 # static fields

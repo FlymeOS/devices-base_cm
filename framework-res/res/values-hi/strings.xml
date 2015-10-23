@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">यह वीडियो इस डिवाइस पर स्ट्रीमिंग के लिए मान्‍य नहीं है.</string>
     <string name="selectTextMode">लेख को चुनें</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">डिफ़ॉल्ट</string>
-    <string name="profileNameWork">कार्य</string>
-    <string name="profileNameHome">घर</string>
-    <string name="profileNameSilent">नीरव</string>
-    <string name="profileNameNight">रात</string>
-    <string name="profileNameAutomobile">ऑटोमोबाइल</string>
-    <string name="profileGroupPhone">फ़ोन</string>
-    <string name="profileGroupCalendar">कैलेंडर</string>
-    <string name="profileGroupGmail">जीमेल</string>
-    <string name="profileGroupEmail">ईमेल</string>
-    <string name="profileGroupSMS">एसएमएस</string>
-    <string name="wildcardProfile">अन्य</string>
     <string name="profile_none">कोई नहीं</string>
     <string name="profile_picker_title">प्रोफ़ाइल</string>
     <string name="global_action_choose_profile">प्रोफ़ाइल</string>
@@ -212,6 +200,13 @@
     <string name="live_display_outdoor">बाहर (तेज़ धूप)</string>
     <string name="live_display_outdoor_summary">केवल बाहर की सेटिंग का उपयोग करें</string>
     <string name="live_display_hint">लाइवडिस्प्ले आँखों पर पड़नेवाले दबाव को घटा सकता है और आपको रात को अच्छी तरह से सोने में मदद कर सकता है। इसे आज़माने के लिए यहाँ क्लिक करें।</string>
+    <string name="lock_to_app_toast_no_navbar">इस स्क्रीन को अनपिन करने के लिए पीछे के बटन को कुछ देर के लिए छुएँ।</string>
+    <string name="quick_settings_tile_flashlight_not_title">टॉर्च चालू है</string>
+    <string name="quick_settings_tile_flashlight_not_summary">उसे बंद करने के लिए टैप करें</string>
+    <string name="storage_sd_dock_card">एसडी कार्ड को डॉक करें</string>
+    <string name="fingerprint_default_name">अँगुली छाप %d</string>
+    <string name="permlab_accessFingerprintService">अँगुली छाप सेवा में पहुँचें</string>
+    <string name="permdesc_accessFingerprintService">किसी ऐप को अँगुली छाप सेवा में पहुँचने की अनुमति दें। यह ऐप अँगुली छाप के बल पर जोड़ सकता है, हटा सकता है, नाम बदल सकता है और प्रमाणित कर सकता है</string>
     <string name="numeric_date_template" formatted="false">%s-%s-%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -1788,4 +1783,10 @@
     <string name="stk_cc_ss_to_ss">SS अनुरोध को नए SS अनुरोध में बदल दिया गया है.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">एडीबी - %1$s</string>
+    <string name="adb_active_custom_tile_both">यूएसबी और नेटवर्क</string>
+    <string name="adb_active_custom_tile_usb">यूएसबी</string>
+    <string name="adb_active_custom_tile_net">नेटवर्क</string>
+    <string name="permlab_resetBatteryStats">बैटरी के आँकड़ों को रीसेट करें</string>
+    <string name="permdesc_resetBatteryStats">अनुप्रयोग को वर्तमान निम्न-स्तर के बैटरी उपयोग डेटा को रीसेट करने देता है।</string>
 </resources>

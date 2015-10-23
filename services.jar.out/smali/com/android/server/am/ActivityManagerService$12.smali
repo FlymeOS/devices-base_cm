@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 11102
+    .line 11113
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,39 +39,39 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 11105
+    .line 11116
     const-string v0, "ActivityManager"
 
     const-string v1, "Shutting down activity manager..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11106
+    .line 11117
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     const/16 v1, 0x2710
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService;->shutdown(I)Z
 
-    .line 11107
+    .line 11118
     const-string v0, "ActivityManager"
 
     const-string v1, "Shutdown complete, restarting!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11108
+    .line 11119
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 11109
+    .line 11120
     const/16 v0, 0xa
 
     invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
-    .line 11110
+    .line 11121
     return-void
 .end method

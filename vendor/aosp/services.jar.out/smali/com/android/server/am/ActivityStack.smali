@@ -12896,9 +12896,7 @@
 
     iget-object v3, v3, Lcom/android/server/am/ActivityStackSupervisor;->mPm:Landroid/os/PowerManager;
 
-    const v4, 0x1e8480
-
-    invoke-virtual {v3, v4}, Landroid/os/PowerManager;->cpuBoost(I)V
+    invoke-virtual {v3}, Landroid/os/PowerManager;->launchBoost()V
 
     goto/16 :goto_8
 
@@ -12979,9 +12977,7 @@
 
     iget-object v3, v3, Lcom/android/server/am/ActivityStackSupervisor;->mPm:Landroid/os/PowerManager;
 
-    const v4, 0x1e8480
-
-    invoke-virtual {v3, v4}, Landroid/os/PowerManager;->cpuBoost(I)V
+    invoke-virtual {v3}, Landroid/os/PowerManager;->launchBoost()V
 
     goto/16 :goto_9
 

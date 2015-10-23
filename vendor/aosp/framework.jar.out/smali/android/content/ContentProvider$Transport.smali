@@ -789,9 +789,7 @@
     move-result-object p2
 
     .line 316
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, p2, v1}, Landroid/content/ContentProvider$Transport;->enforceWritePermission(Ljava/lang/String;Landroid/net/Uri;Landroid/os/IBinder;)I
+    invoke-direct {p0, p1, p2}, Landroid/content/ContentProvider$Transport;->enforceDeletePermission(Ljava/lang/String;Landroid/net/Uri;)I
 
     move-result v1
 

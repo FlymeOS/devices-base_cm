@@ -426,7 +426,7 @@
 
     .line 541
     :cond_0
-    const-string v4, "mIconPkgName"
+    const-string/jumbo v4, "mIconPkgName"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -451,7 +451,7 @@
 
     .line 543
     :cond_1
-    const-string v4, "mFontPkgName"
+    const-string/jumbo v4, "mFontPkgName"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -684,7 +684,7 @@
     invoke-virtual {v0, v1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
     .line 502
-    const-string v0, "mIconPkgName"
+    const-string/jumbo v0, "mIconPkgName"
 
     invoke-virtual {p0, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
 
@@ -695,7 +695,7 @@
     invoke-virtual {v0, v1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
     .line 503
-    const-string v0, "mFontPkgName"
+    const-string/jumbo v0, "mFontPkgName"
 
     invoke-virtual {p0, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
 

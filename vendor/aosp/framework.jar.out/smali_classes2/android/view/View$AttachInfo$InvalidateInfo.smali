@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 20208
+    .line 20216
     new-instance v0, Landroid/util/Pools$SynchronizedPool;
 
     const/16 v1, 0xa
@@ -62,7 +62,7 @@
     .locals 0
 
     .prologue
-    .line 20205
+    .line 20213
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +72,7 @@
     .locals 2
 
     .prologue
-    .line 20219
+    .line 20227
     sget-object v1, Landroid/view/View$AttachInfo$InvalidateInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v1}, Landroid/util/Pools$SynchronizedPool;->acquire()Ljava/lang/Object;
@@ -81,7 +81,7 @@
 
     check-cast v0, Landroid/view/View$AttachInfo$InvalidateInfo;
 
-    .line 20220
+    .line 20228
     .local v0, "instance":Landroid/view/View$AttachInfo$InvalidateInfo;
     if-eqz v0, :cond_0
 
@@ -105,16 +105,16 @@
     .locals 1
 
     .prologue
-    .line 20224
+    .line 20232
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/View$AttachInfo$InvalidateInfo;->target:Landroid/view/View;
 
-    .line 20225
+    .line 20233
     sget-object v0, Landroid/view/View$AttachInfo$InvalidateInfo;->sPool:Landroid/util/Pools$SynchronizedPool;
 
     invoke-virtual {v0, p0}, Landroid/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
 
-    .line 20226
+    .line 20234
     return-void
 .end method

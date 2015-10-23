@@ -26,13 +26,13 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 5482
+    .line 5490
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 5483
+    .line 5491
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 5479
+    .line 5487
     const-string v0, "user_setup_complete"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -41,7 +41,7 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
-    .line 5484
+    .line 5492
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 5492
+    .line 5500
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     invoke-virtual {v0, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -62,12 +62,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5493
+    .line 5501
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateUserSetupComplete()V
 
-    .line 5495
+    .line 5503
     :cond_0
     return-void
 .end method
@@ -77,7 +77,7 @@
     .param p1, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 5487
+    .line 5495
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     const/4 v1, 0x0
@@ -86,6 +86,6 @@
 
     invoke-virtual {p1, v0, v1, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 5488
+    .line 5496
     return-void
 .end method

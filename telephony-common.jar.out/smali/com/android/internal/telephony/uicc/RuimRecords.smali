@@ -709,20 +709,20 @@
 
     const/16 v6, 0x64
 
-    .line 979
+    .line 980
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x11200a8
+    const v3, 0x11200a9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
-    .line 989
+    .line 990
     .local v0, "mESNTrackerEnabled":Z
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequested:Z
 
@@ -741,7 +741,7 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 991
+    .line 992
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -793,11 +793,11 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1066
+    .line 1067
     :goto_1
     return-void
 
-    .line 989
+    .line 990
     :cond_1
     iget-boolean v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequired:Z
 
@@ -805,11 +805,11 @@
 
     goto :goto_0
 
-    .line 998
+    .line 999
     :cond_2
     iput-boolean v5, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequested:Z
 
-    .line 1000
+    .line 1001
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -832,7 +832,7 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1002
+    .line 1003
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x2fe2
@@ -845,21 +845,21 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1004
+    .line 1005
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1006
+    .line 1007
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1007
+    .line 1008
     .local v1, "resource":Landroid/content/res/Resources;
-    const v2, 0x11200ae
+    const v2, 0x11200af
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -867,7 +867,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 1008
+    .line 1009
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x2f05
@@ -882,14 +882,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1010
+    .line 1011
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1012
+    .line 1013
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f3a
@@ -904,14 +904,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1014
+    .line 1015
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1017
+    .line 1018
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
@@ -927,14 +927,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1019
+    .line 1020
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1021
+    .line 1022
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f44
@@ -949,14 +949,14 @@
 
     invoke-virtual {v2, v3, v5, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFLinearFixed(IILandroid/os/Message;)V
 
-    .line 1023
+    .line 1024
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1025
+    .line 1026
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f22
@@ -971,14 +971,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1027
+    .line 1028
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1029
+    .line 1030
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f28
@@ -993,17 +993,17 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFLinearFixedAll(ILandroid/os/Message;)V
 
-    .line 1031
+    .line 1032
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1033
+    .line 1034
     if-eqz v0, :cond_4
 
-    .line 1034
+    .line 1035
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f81    # 4.0E-41f
@@ -1018,14 +1018,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1036
+    .line 1037
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1038
+    .line 1039
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f90
@@ -1040,14 +1040,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1040
+    .line 1041
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1043
+    .line 1044
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f32
@@ -1060,14 +1060,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1045
+    .line 1046
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1047
+    .line 1048
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f31
@@ -1082,14 +1082,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1049
+    .line 1050
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1054
+    .line 1055
     :cond_4
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
@@ -1107,14 +1107,14 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(IILandroid/os/Message;)V
 
-    .line 1056
+    .line 1057
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1058
+    .line 1059
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f3c
@@ -1127,7 +1127,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->getEFLinearRecordSize(ILandroid/os/Message;)V
 
-    .line 1060
+    .line 1061
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v3, 0x6f4d
@@ -1142,14 +1142,14 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
-    .line 1062
+    .line 1063
     iget v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsToLoad:I
 
-    .line 1064
+    .line 1065
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1576,24 +1576,24 @@
     .locals 15
 
     .prologue
-    .line 1122
+    .line 1123
     const/16 v11, 0x7e
 
     new-array v0, v11, [B
 
-    .line 1123
+    .line 1124
     .local v0, "data":[B
     const/4 v5, 0x0
 
-    .line 1124
+    .line 1125
     .local v5, "model":[B
     const/4 v4, 0x0
 
-    .line 1125
+    .line 1126
     .local v4, "manufacturer":[B
     const/4 v8, 0x0
 
-    .line 1127
+    .line 1128
     .local v8, "softwareVersion":[B
     const/4 v2, 0x0
 
@@ -1603,17 +1603,17 @@
 
     if-ge v2, v11, :cond_0
 
-    .line 1128
+    .line 1129
     const/4 v11, -0x1
 
     aput-byte v11, v0, v2
 
-    .line 1127
+    .line 1128
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1132
+    .line 1133
     :cond_0
     :try_start_0
     sget-object v11, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -1624,7 +1624,7 @@
 
     move-result-object v5
 
-    .line 1133
+    .line 1134
     sget-object v11, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     const-string v12, "UTF-8"
@@ -1633,7 +1633,7 @@
 
     move-result-object v4
 
-    .line 1134
+    .line 1135
     const-string v11, "persist.product.sw.version"
 
     sget-object v12, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
@@ -1642,7 +1642,7 @@
 
     move-result-object v9
 
-    .line 1135
+    .line 1136
     .local v9, "str":Ljava/lang/String;
     const-string v11, "UTF-8"
 
@@ -1652,7 +1652,7 @@
 
     move-result-object v8
 
-    .line 1139
+    .line 1140
     .end local v9    # "str":Ljava/lang/String;
     :goto_1
     const/4 v11, 0x0
@@ -1661,17 +1661,17 @@
 
     aput-byte v12, v0, v11
 
-    .line 1140
+    .line 1141
     const/4 v11, 0x1
 
     const/4 v12, 0x1
 
     aput-byte v12, v0, v11
 
-    .line 1143
+    .line 1144
     const/4 v7, 0x2
 
-    .line 1144
+    .line 1145
     .local v7, "offset":I
     array-length v11, v5
 
@@ -1681,17 +1681,17 @@
 
     const/16 v6, 0x20
 
-    .line 1146
+    .line 1147
     .local v6, "modelLen":I
     :goto_2
     const/4 v11, 0x0
 
     invoke-static {v5, v11, v0, v7, v6}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1147
+    .line 1148
     add-int/lit8 v7, v7, 0x20
 
-    .line 1149
+    .line 1150
     array-length v11, v4
 
     const/16 v12, 0x20
@@ -1700,17 +1700,17 @@
 
     const/16 v3, 0x20
 
-    .line 1151
+    .line 1152
     .local v3, "manufactureLen":I
     :goto_3
     const/4 v11, 0x0
 
     invoke-static {v4, v11, v0, v7, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1154
+    .line 1155
     add-int/lit8 v7, v7, 0x20
 
-    .line 1155
+    .line 1156
     array-length v11, v8
 
     const/16 v12, 0x3c
@@ -1719,14 +1719,14 @@
 
     const/16 v10, 0x3c
 
-    .line 1157
+    .line 1158
     .local v10, "versionLength":I
     :goto_4
     const/4 v11, 0x0
 
     invoke-static {v8, v11, v0, v7, v10}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1159
+    .line 1160
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1779,7 +1779,7 @@
 
     invoke-virtual {p0, v11}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1162
+    .line 1163
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1814,7 +1814,7 @@
 
     invoke-virtual {p0, v11}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1165
+    .line 1166
     iget-object v11, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
     if-eqz v11, :cond_4
@@ -1829,12 +1829,12 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 1166
+    .line 1167
     const-string v11, "CSIM card type, set csim model"
 
     invoke-virtual {p0, v11}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1167
+    .line 1168
     iget-object v11, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     const/16 v12, 0x6f81    # 4.0E-41f
@@ -1853,11 +1853,11 @@
 
     invoke-virtual {v11, v12, v0, v13}, Lcom/android/internal/telephony/uicc/IccFileHandler;->updateEFTransparent(I[BLandroid/os/Message;)V
 
-    .line 1173
+    .line 1174
     :goto_5
     return-void
 
-    .line 1136
+    .line 1137
     .end local v3    # "manufactureLen":I
     .end local v6    # "modelLen":I
     .end local v7    # "offset":I
@@ -1865,7 +1865,7 @@
     :catch_0
     move-exception v1
 
-    .line 1137
+    .line 1138
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1889,7 +1889,7 @@
 
     goto/16 :goto_1
 
-    .line 1144
+    .line 1145
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
     .restart local v7    # "offset":I
     :cond_1
@@ -1897,21 +1897,21 @@
 
     goto/16 :goto_2
 
-    .line 1149
+    .line 1150
     .restart local v6    # "modelLen":I
     :cond_2
     array-length v3, v4
 
     goto/16 :goto_3
 
-    .line 1155
+    .line 1156
     .restart local v3    # "manufactureLen":I
     :cond_3
     array-length v10, v8
 
     goto/16 :goto_4
 
-    .line 1170
+    .line 1171
     .restart local v10    # "versionLength":I
     :cond_4
     iget-object v11, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
@@ -1984,7 +1984,7 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1269
+    .line 1270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2005,15 +2005,15 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1270
+    .line 1271
     const-string v0, " extends:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1271
+    .line 1272
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccRecords;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1272
+    .line 1273
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2036,7 +2036,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1273
+    .line 1274
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2059,7 +2059,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1274
+    .line 1275
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2082,7 +2082,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1275
+    .line 1276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2105,7 +2105,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1276
+    .line 1277
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2132,7 +2132,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1277
+    .line 1278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2159,7 +2159,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1278
+    .line 1279
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2182,7 +2182,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1279
+    .line 1280
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2205,7 +2205,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1280
+    .line 1281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2228,7 +2228,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1281
+    .line 1282
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2251,7 +2251,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1282
+    .line 1283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2274,10 +2274,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1283
+    .line 1284
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 1284
+    .line 1285
     return-void
 .end method
 
@@ -2308,7 +2308,7 @@
     .locals 1
 
     .prologue
-    .line 1255
+    .line 1256
     iget-boolean v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mCsimSpnDisplayCondition:Z
 
     return v0
@@ -2319,7 +2319,7 @@
     .param p1, "plmn"    # Ljava/lang/String;
 
     .prologue
-    .line 1183
+    .line 1184
     const/4 v0, 0x0
 
     return v0
@@ -2339,7 +2339,7 @@
     .locals 1
 
     .prologue
-    .line 1239
+    .line 1240
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMdn:Ljava/lang/String;
 
     return-object v0
@@ -2359,7 +2359,7 @@
     .locals 1
 
     .prologue
-    .line 1243
+    .line 1244
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMin:Ljava/lang/String;
 
     return-object v0
@@ -2379,7 +2379,7 @@
     .locals 1
 
     .prologue
-    .line 1251
+    .line 1252
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mHomeNetworkId:Ljava/lang/String;
 
     return-object v0
@@ -2544,7 +2544,7 @@
     .locals 1
 
     .prologue
-    .line 1247
+    .line 1248
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mHomeSystemId:Ljava/lang/String;
 
     return-object v0
@@ -2554,12 +2554,12 @@
     .locals 1
 
     .prologue
-    .line 1220
+    .line 1221
     const-string v0, "RuimRecords:getVoiceMessageCount - NOP for CDMA"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1221
+    .line 1222
     const/4 v0, 0x0
 
     return v0
@@ -2570,35 +2570,35 @@
     .param p1, "efid"    # I
 
     .prologue
-    .line 1226
+    .line 1227
     packed-switch p1, :pswitch_data_0
 
-    .line 1232
+    .line 1233
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
-    .line 1233
+    .line 1234
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->fetchRuimRecords()V
 
-    .line 1236
+    .line 1237
     :goto_0
     return-void
 
-    .line 1228
+    .line 1229
     :pswitch_0
     const-string v0, "SIM Refresh for EF_ADN"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1229
+    .line 1230
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
     goto :goto_0
 
-    .line 1226
+    .line 1227
     nop
 
     :pswitch_data_0
@@ -3385,7 +3385,7 @@
 
     const/4 v1, 0x0
 
-    .line 1194
+    .line 1195
     const-string v2, "persist.radio.test-csim"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -3394,12 +3394,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 1206
+    .line 1207
     :cond_0
     :goto_0
     return v0
 
-    .line 1198
+    .line 1199
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
@@ -3407,10 +3407,10 @@
 
     move v0, v1
 
-    .line 1199
+    .line 1200
     goto :goto_0
 
-    .line 1202
+    .line 1203
     :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
@@ -3433,7 +3433,7 @@
     :cond_3
     move v0, v1
 
-    .line 1204
+    .line 1205
     goto :goto_0
 .end method
 
@@ -3442,7 +3442,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 1259
+    .line 1260
     const-string v0, "RuimRecords"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3465,7 +3465,7 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1260
+    .line 1261
     return-void
 .end method
 
@@ -3474,7 +3474,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 1264
+    .line 1265
     const-string v0, "RuimRecords"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3497,7 +3497,7 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1265
+    .line 1266
     return-void
 .end method
 
@@ -3564,7 +3564,10 @@
 
     invoke-virtual {p0, v3, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 930
+    .line 926
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->setSpnFromConfig(Ljava/lang/String;)V
+
+    .line 931
     :goto_0
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mImsi:Ljava/lang/String;
 
@@ -3574,7 +3577,7 @@
 
     if-nez v3, :cond_2
 
-    .line 931
+    .line 932
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3597,7 +3600,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 932
+    .line 933
     const-string v3, "gsm.sim.operator.iso-country"
 
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mImsi:Ljava/lang/String;
@@ -3618,18 +3621,18 @@
 
     invoke-virtual {p0, v3, v4}, Lcom/android/internal/telephony/uicc/RuimRecords;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 938
+    .line 939
     :goto_1
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->setLocaleFromCsim()V
 
-    .line 939
+    .line 940
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->isAppStateReady()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 940
+    .line 941
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     new-instance v4, Landroid/os/AsyncResult;
@@ -3638,7 +3641,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/RegistrantList;->notifyRegistrants(Landroid/os/AsyncResult;)V
 
-    .line 947
+    .line 948
     :goto_2
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMdn:Ljava/lang/String;
 
@@ -3648,7 +3651,7 @@
 
     if-nez v3, :cond_0
 
-    .line 948
+    .line 949
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getUiccCard()Lcom/android/internal/telephony/uicc/UiccCard;
@@ -3659,7 +3662,7 @@
 
     move-result v1
 
-    .line 949
+    .line 950
     .local v1, "phoneId":I
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
@@ -3669,11 +3672,11 @@
 
     move-result-object v2
 
-    .line 950
+    .line 951
     .local v2, "subIds":[I
     if-eqz v2, :cond_4
 
-    .line 951
+    .line 952
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3708,7 +3711,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 952
+    .line 953
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -3721,14 +3724,14 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/telephony/SubscriptionManager;->setDisplayNumber(Ljava/lang/String;I)I
 
-    .line 957
+    .line 958
     .end local v1    # "phoneId":I
     .end local v2    # "subIds":[I
     :cond_0
     :goto_3
     return-void
 
-    .line 927
+    .line 928
     :cond_1
     const-string v3, "onAllRecordsLoaded empty \'gsm.sim.operator.numeric\' skipping"
 
@@ -3736,7 +3739,7 @@
 
     goto/16 :goto_0
 
-    .line 935
+    .line 936
     :cond_2
     const-string v3, "onAllRecordsLoaded empty imsi skipping setting mcc"
 
@@ -3744,7 +3747,7 @@
 
     goto :goto_1
 
-    .line 943
+    .line 944
     :cond_3
     const-string v3, "onAllRecordsLoaded: AppState is not ready; not notifying the registrants"
 
@@ -3752,7 +3755,7 @@
 
     goto :goto_2
 
-    .line 954
+    .line 955
     .restart local v1    # "phoneId":I
     .restart local v2    # "subIds":[I
     :cond_4
@@ -3767,10 +3770,10 @@
     .locals 2
 
     .prologue
-    .line 961
+    .line 962
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->fetchRuimRecords()V
 
-    .line 963
+    .line 964
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v1, 0xa
@@ -3781,7 +3784,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->getCDMASubscription(Landroid/os/Message;)V
 
-    .line 964
+    .line 965
     return-void
 .end method
 
@@ -3890,20 +3893,20 @@
     .locals 1
 
     .prologue
-    .line 971
+    .line 972
     const-string v0, "recordsRequired"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 972
+    .line 973
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequired:Z
 
-    .line 975
+    .line 976
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->fetchRuimRecords()V
 
-    .line 976
+    .line 977
     return-void
 .end method
 
@@ -4003,12 +4006,12 @@
     .param p2, "countWaiting"    # I
 
     .prologue
-    .line 1213
+    .line 1214
     const-string v0, "RuimRecords:setVoiceMessageWaiting - NOP for CDMA"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1214
+    .line 1215
     return-void
 .end method
 

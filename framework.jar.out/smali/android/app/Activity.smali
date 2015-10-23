@@ -3,11 +3,11 @@
 .source "Activity.java"
 
 # interfaces
-.implements Landroid/content/ComponentCallbacks2;
-.implements Landroid/view/KeyEvent$Callback;
 .implements Landroid/view/LayoutInflater$Factory2;
-.implements Landroid/view/View$OnCreateContextMenuListener;
 .implements Landroid/view/Window$Callback;
+.implements Landroid/view/KeyEvent$Callback;
+.implements Landroid/view/View$OnCreateContextMenuListener;
+.implements Landroid/content/ComponentCallbacks2;
 .implements Landroid/view/Window$OnWindowDismissedCallback;
 
 
@@ -2204,7 +2204,7 @@
     .line 5356
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mChangingConfigurations="
+    const-string/jumbo v1, "mChangingConfigurations="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -2216,7 +2216,7 @@
     .line 5358
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mCurrentConfig="
+    const-string/jumbo v1, "mCurrentConfig="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

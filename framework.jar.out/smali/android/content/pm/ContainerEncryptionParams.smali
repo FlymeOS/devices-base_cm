@@ -951,7 +951,7 @@
 
     .line 283
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string v1, "mEncryptionAlgorithm=\""
+    const-string/jumbo v1, "mEncryptionAlgorithm=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -966,7 +966,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 286
-    const-string v1, "mEncryptionSpec="
+    const-string/jumbo v1, "mEncryptionSpec="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -980,7 +980,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 288
-    const-string v1, "mEncryptionKey="
+    const-string/jumbo v1, "mEncryptionKey="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

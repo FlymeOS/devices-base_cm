@@ -3,8 +3,8 @@
 .source "ClosedCaptionRenderer.java"
 
 # interfaces
-.implements Landroid/media/CCParser$DisplayListener;
 .implements Landroid/media/SubtitleTrack$RenderingWidget;
+.implements Landroid/media/CCParser$DisplayListener;
 
 
 # annotations

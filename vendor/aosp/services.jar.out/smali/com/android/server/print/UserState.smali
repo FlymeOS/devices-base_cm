@@ -3,8 +3,8 @@
 .source "UserState.java"
 
 # interfaces
-.implements Lcom/android/server/print/RemotePrintService$PrintServiceCallbacks;
 .implements Lcom/android/server/print/RemotePrintSpooler$PrintSpoolerCallbacks;
+.implements Lcom/android/server/print/RemotePrintService$PrintServiceCallbacks;
 
 
 # annotations
@@ -707,7 +707,7 @@
 
     iget-object v9, p0, Lcom/android/server/print/UserState;->mContext:Landroid/content/Context;
 
-    const v10, 0x1040741
+    const v10, 0x104074a
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3132,7 +3132,7 @@
 
     iget-object v5, p0, Lcom/android/server/print/UserState;->mContext:Landroid/content/Context;
 
-    const v6, 0x1040741
+    const v6, 0x104074a
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

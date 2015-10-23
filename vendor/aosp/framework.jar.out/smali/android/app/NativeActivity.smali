@@ -3,8 +3,8 @@
 .source "NativeActivity.java"
 
 # interfaces
-.implements Landroid/view/InputQueue$Callback;
 .implements Landroid/view/SurfaceHolder$Callback2;
+.implements Landroid/view/InputQueue$Callback;
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 

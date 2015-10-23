@@ -90,7 +90,7 @@
 
     .line 914
     .local v3, "r":Landroid/content/res/Resources;
-    const v5, 0x1120098
+    const v5, 0x1120099
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2416,7 +2416,7 @@
 
     .line 1262
     .local v7, "r":Landroid/content/res/Resources;
-    const v9, 0x1120092
+    const v9, 0x1120093
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2921,7 +2921,7 @@
 
     .line 1426
     .restart local v7    # "r":Landroid/content/res/Resources;
-    const v9, 0x1120092
+    const v9, 0x1120093
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 

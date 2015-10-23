@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/preference/PreferenceManager$OnActivityStopListener;
-.implements Landroid/preference/SeekBarVolumizer$Callback;
 .implements Landroid/view/View$OnKeyListener;
+.implements Landroid/preference/SeekBarVolumizer$Callback;
 
 
 # annotations

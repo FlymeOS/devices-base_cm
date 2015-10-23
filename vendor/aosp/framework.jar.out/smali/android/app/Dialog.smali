@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Landroid/content/DialogInterface;
+.implements Landroid/view/Window$Callback;
 .implements Landroid/view/KeyEvent$Callback;
 .implements Landroid/view/View$OnCreateContextMenuListener;
-.implements Landroid/view/Window$Callback;
 .implements Landroid/view/Window$OnWindowDismissedCallback;
 
 

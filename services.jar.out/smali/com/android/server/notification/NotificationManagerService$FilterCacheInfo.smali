@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 2635
+    .line 2636
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .param p1, "x0"    # Lcom/android/server/notification/NotificationManagerService$1;
 
     .prologue
-    .line 2635
+    .line 2636
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$FilterCacheInfo;-><init>()V
 
     return-void

@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Je nám ľúto, ale toto video sa nedá streamovať do tohto zariadenia.</string>
     <string name="selectTextMode">Vybrať text</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Predvolené</string>
-    <string name="profileNameWork">Práca</string>
-    <string name="profileNameHome">Domov</string>
-    <string name="profileNameSilent">Tichý</string>
-    <string name="profileNameNight">Noc</string>
-    <string name="profileNameAutomobile">Auto</string>
-    <string name="profileGroupPhone">Telefón</string>
-    <string name="profileGroupCalendar">Kalendár</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">E-mail</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Iný</string>
     <string name="profile_none">Žiadny</string>
     <string name="profile_picker_title">Profily</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Svietidlo je zapnuté</string>
     <string name="quick_settings_tile_flashlight_not_summary">Dotykom vypnúť</string>
     <string name="storage_sd_dock_card">Karta SD v doku</string>
+    <string name="fingerprint_default_name">Odtlačok prsta %d</string>
+    <string name="permlab_accessFingerprintService">prístup k službe odtlačku prstov</string>
+    <string name="permdesc_accessFingerprintService">Umožňuje prístup k službe odtlačku prstov. Aplikácia môže pridať, odstrániť, premenovať a vykonať overenie odtlačkov prstov</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1792,4 +1783,9 @@ Dlhodobé počúvanie pri vysokej hlasitosti môže poškodiť váš sluch."</st
     <string name="stk_cc_ss_to_ss">Žiadosť SS bola upravená na novú žiadosť SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Sieť</string>
+    <string name="permlab_resetBatteryStats">obnoviť štatistiky batérie</string>
+    <string name="permdesc_resetBatteryStats">Umožňuje aplikácii obnoviť aktuálne nízkoúrovňové údaje o využití batérie.</string>
 </resources>

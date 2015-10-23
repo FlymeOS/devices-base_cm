@@ -143,7 +143,7 @@
     .line 295
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v1, 0x1040173
+    const v1, 0x104017c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -375,9 +375,9 @@
     .param p2, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    const v5, 0x1040161
+    const v5, 0x104016a
 
-    const v4, 0x1040158
+    const v4, 0x1040161
 
     .line 304
     new-instance v2, Ljava/lang/StringBuilder;
@@ -460,7 +460,7 @@
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040162
+    const v4, 0x104016b
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -578,7 +578,7 @@
     :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v4, 0x104015f
+    const v4, 0x1040168
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -611,7 +611,7 @@
     .line 342
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040167
+    const v4, 0x1040170
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -641,7 +641,7 @@
     .line 346
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040168
+    const v4, 0x1040171
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -692,7 +692,7 @@
     .line 358
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v4, 0x104015d
+    const v4, 0x1040166
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -990,7 +990,7 @@
     if-nez v4, :cond_1
 
     .line 227
-    const v4, 0x1040163
+    const v4, 0x104016c
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->handlePasswordError(I)V
 
@@ -1017,7 +1017,7 @@
 
     .line 230
     :cond_2
-    const v4, 0x1040164
+    const v4, 0x104016d
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->handlePasswordError(I)V
     :try_end_0
@@ -1041,7 +1041,7 @@
     .line 264
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->mContext:Landroid/content/Context;
 
-    const v5, 0x1040158
+    const v5, 0x1040161
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1088,7 +1088,7 @@
     if-ne v4, v5, :cond_4
 
     .line 235
-    const v4, 0x1040166
+    const v4, 0x104016f
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/CdmaMmiCode;->handlePasswordError(I)V
 

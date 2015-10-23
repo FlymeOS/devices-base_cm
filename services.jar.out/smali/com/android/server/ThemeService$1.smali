@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1147
+    .line 1148
     iput-object p1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1150
+    .line 1151
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     # getter for: Lcom/android/server/ThemeService;->mWallpaperChangedByUs:Z
@@ -49,18 +49,18 @@
 
     if-nez v1, :cond_0
 
-    .line 1152
+    .line 1153
     new-instance v0, Landroid/content/res/ThemeChangeRequest$Builder;
 
     invoke-direct {v0}, Landroid/content/res/ThemeChangeRequest$Builder;-><init>()V
 
-    .line 1153
+    .line 1154
     .local v0, "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/content/res/ThemeChangeRequest$Builder;->setWallpaper(Ljava/lang/String;)Landroid/content/res/ThemeChangeRequest$Builder;
 
-    .line 1154
+    .line 1155
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 
     invoke-virtual {v0}, Landroid/content/res/ThemeChangeRequest$Builder;->build()Landroid/content/res/ThemeChangeRequest;
@@ -74,12 +74,12 @@
     # invokes: Lcom/android/server/ThemeService;->updateProvider(Landroid/content/res/ThemeChangeRequest;J)V
     invoke-static {v1, v2, v4, v5}, Lcom/android/server/ThemeService;->access$1100(Lcom/android/server/ThemeService;Landroid/content/res/ThemeChangeRequest;J)V
 
-    .line 1158
+    .line 1159
     .end local v0    # "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     :goto_0
     return-void
 
-    .line 1156
+    .line 1157
     :cond_0
     iget-object v1, p0, Lcom/android/server/ThemeService$1;->this$0:Lcom/android/server/ThemeService;
 

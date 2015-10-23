@@ -103,7 +103,7 @@
     .locals 5
 
     .prologue
-    .line 349
+    .line 370
     const-string v2, "gsm.current.phone-type"
 
     new-instance v3, Ljava/lang/Integer;
@@ -118,14 +118,14 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 352
+    .line 373
     const-string v2, "ro.cdma.home.operator.alpha"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 353
+    .line 374
     .local v0, "operatorAlpha":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -133,12 +133,12 @@
 
     if-nez v2, :cond_0
 
-    .line 354
+    .line 375
     const-string v2, "gsm.sim.operator.alpha"
 
     invoke-virtual {p0, v2, v0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 358
+    .line 379
     :cond_0
     const-string v2, "ro.cdma.home.operator.numeric"
 
@@ -146,7 +146,7 @@
 
     move-result-object v1
 
-    .line 359
+    .line 380
     .local v1, "operatorNumeric":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -168,19 +168,19 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->log(Ljava/lang/String;)V
 
-    .line 360
+    .line 381
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 361
+    .line 382
     const-string v2, "gsm.sim.operator.numeric"
 
     invoke-virtual {p0, v2, v1}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 363
+    .line 384
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v2
@@ -191,10 +191,10 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/android/internal/telephony/SubscriptionController;->setMccMnc(Ljava/lang/String;I)I
 
-    .line 365
+    .line 386
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->setIsoCountryProperty(Ljava/lang/String;)V
 
-    .line 367
+    .line 388
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -215,18 +215,18 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->log(Ljava/lang/String;)V
 
-    .line 368
+    .line 389
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mContext:Landroid/content/Context;
 
     const/4 v3, 0x0
 
     invoke-static {v2, v1, v3}, Lcom/android/internal/telephony/MccTable;->updateMccMncConfiguration(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 371
+    .line 392
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->updateCurrentCarrierInProvider()Z
 
-    .line 372
+    .line 393
     return-void
 .end method
 
@@ -280,15 +280,15 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 470
+    .line 491
     const-string v0, "CDMALTEPhone extends:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 471
+    .line 492
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/telephony/cdma/CDMAPhone;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 472
+    .line 493
     return-void
 .end method
 
@@ -297,12 +297,12 @@
     .param p1, "response"    # Landroid/os/Message;
 
     .prologue
-    .line 270
+    .line 291
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p1}, Lcom/android/internal/telephony/CommandsInterface;->getAvailableNetworks(Landroid/os/Message;)V
 
-    .line 271
+    .line 292
     return-void
 .end method
 
@@ -491,11 +491,39 @@
     .end packed-switch
 .end method
 
+.method public getDeviceId()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 256
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getLteOnCdmaModeStatic()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 257
+    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mImei:Ljava/lang/String;
+
+    .line 259
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-super {p0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->getDeviceId()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
 .method public getDeviceSvn()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 255
+    .line 276
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mImeiSv:Ljava/lang/String;
 
     return-object v0
@@ -505,7 +533,7 @@
     .locals 1
 
     .prologue
-    .line 245
+    .line 266
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     if-eqz v0, :cond_0
@@ -529,7 +557,7 @@
     .locals 1
 
     .prologue
-    .line 250
+    .line 271
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mImei:Ljava/lang/String;
 
     return-object v0
@@ -539,7 +567,7 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 281
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIsimUiccRecords:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     return-object v0
@@ -549,7 +577,7 @@
     .locals 1
 
     .prologue
-    .line 265
+    .line 286
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     if-eqz v0, :cond_0
@@ -573,14 +601,14 @@
     .locals 6
 
     .prologue
-    .line 407
+    .line 428
     const/4 v2, 0x0
 
-    .line 408
+    .line 429
     .local v2, "operatorNumeric":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 409
+    .line 430
     .local v1, "curIccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
     iget v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCdmaSubscriptionSource:I
 
@@ -588,19 +616,19 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 410
+    .line 431
     const-string v3, "ro.cdma.home.operator.numeric"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 423
+    .line 444
     :cond_0
     :goto_0
     if-nez v2, :cond_1
 
-    .line 424
+    .line 445
     const-string v4, "CDMAPhone"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -646,7 +674,7 @@
 
     invoke-static {v4, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
+    .line 450
     :cond_1
     const-string v3, "CDMAPhone"
 
@@ -682,29 +710,29 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
+    .line 453
     return-object v2
 
-    .line 411
+    .line 432
     :cond_2
     iget v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCdmaSubscriptionSource:I
 
     if-nez v3, :cond_0
 
-    .line 412
+    .line 433
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
-    .line 413
+    .line 434
     if-eqz v1, :cond_3
 
-    .line 414
+    .line 435
     invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/IccRecords;->getOperatorNumeric()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 416
+    .line 437
     :cond_3
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -715,7 +743,7 @@
     .end local v1    # "curIccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
     check-cast v1, Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 417
+    .line 438
     .restart local v1    # "curIccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
     if-eqz v1, :cond_0
 
@@ -725,10 +753,10 @@
 
     move-object v0, v1
 
-    .line 418
+    .line 439
     check-cast v0, Lcom/android/internal/telephony/uicc/RuimRecords;
 
-    .line 419
+    .line 440
     .local v0, "csim":Lcom/android/internal/telephony/uicc/RuimRecords;
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->getOperatorNumeric()Ljava/lang/String;
 
@@ -736,7 +764,7 @@
 
     goto :goto_0
 
-    .line 424
+    .line 445
     .end local v0    # "csim":Lcom/android/internal/telephony/uicc/RuimRecords;
     :cond_4
     const/4 v3, 0x0
@@ -745,27 +773,86 @@
 .end method
 
 .method public getSubscriberId()Ljava/lang/String;
-    .locals 1
+    .locals 4
 
     .prologue
     .line 239
-    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
+    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
+    iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/SIMRecords;->getIMSI()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/internal/telephony/uicc/IccRecords;
+
+    move-object v1, v2
+
+    .line 240
+    .local v1, "r":Lcom/android/internal/telephony/uicc/IccRecords;
+    :goto_0
+    if-eqz v1, :cond_1
+
+    .line 241
+    invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/IccRecords;->getIMSI()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
+    .line 242
+    .local v0, "imsi":Ljava/lang/String;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 243
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "IMSI = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->log(Ljava/lang/String;)V
+
+    .line 249
+    .end local v0    # "imsi":Ljava/lang/String;
+    :goto_1
     return-object v0
 
+    .line 239
+    .end local v1    # "r":Lcom/android/internal/telephony/uicc/IccRecords;
     :cond_0
-    const-string v0, ""
+    const/4 v1, 0x0
 
     goto :goto_0
+
+    .line 248
+    .restart local v1    # "r":Lcom/android/internal/telephony/uicc/IccRecords;
+    :cond_1
+    const-string v2, "IMSI undefined"
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->log(Ljava/lang/String;)V
+
+    .line 249
+    const-string v0, ""
+
+    goto :goto_1
 .end method
 
 .method public getSystemProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -774,17 +861,17 @@
     .param p2, "defValue"    # Ljava/lang/String;
 
     .prologue
-    .line 383
+    .line 404
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->getUnitTestMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 384
+    .line 405
     const/4 v0, 0x0
 
-    .line 386
+    .line 407
     :goto_0
     return-object v0
 
@@ -913,19 +1000,19 @@
 
     const/4 v4, 0x0
 
-    .line 310
+    .line 331
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2, v6}, Lcom/android/internal/telephony/CommandsInterface;->setPhoneType(I)V
 
-    .line 311
+    .line 332
     new-instance v2, Lcom/android/internal/telephony/cdma/CdmaCallTracker;
 
     invoke-direct {v2, p0}, Lcom/android/internal/telephony/cdma/CdmaCallTracker;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;)V
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCT:Lcom/android/internal/telephony/cdma/CdmaCallTracker;
 
-    .line 312
+    .line 333
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v3, 0x1b
@@ -936,21 +1023,21 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCdmaSSM:Lcom/android/internal/telephony/cdma/CdmaSubscriptionSourceManager;
 
-    .line 314
+    .line 335
     new-instance v2, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
 
     invoke-direct {v2, p0}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;)V
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
 
-    .line 315
+    .line 336
     new-instance v2, Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-direct {v2, p0}, Lcom/android/internal/telephony/PhoneSubInfo;-><init>(Lcom/android/internal/telephony/Phone;)V
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
-    .line 316
+    .line 337
     new-instance v2, Lcom/android/internal/telephony/cdma/EriManager;
 
     const/4 v3, 0x0
@@ -959,50 +1046,50 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mEriManager:Lcom/android/internal/telephony/cdma/EriManager;
 
-    .line 318
+    .line 339
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2, p0, v5, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForAvailable(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 319
+    .line 340
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v3, 0x8
 
     invoke-interface {v2, p0, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForOffOrNotAvailable(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 320
+    .line 341
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v3, 0x5
 
     invoke-interface {v2, p0, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForOn(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 321
+    .line 342
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2, p0, v6, v4}, Lcom/android/internal/telephony/CommandsInterface;->setOnSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 322
+    .line 343
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSST:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     const/16 v3, 0x13
 
     invoke-virtual {v2, p0, v3, v4}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->registerForNetworkAttached(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 323
+    .line 344
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v3, 0x19
 
     invoke-interface {v2, p0, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->setEmergencyCallbackMode(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 324
+    .line 345
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2, p0, v7, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForExitEmergencyCallbackMode(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 327
+    .line 348
     const-string v2, "power"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1011,7 +1098,7 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 329
+    .line 350
     .local v1, "pm":Landroid/os/PowerManager;
     const-string v2, "CDMAPhone"
 
@@ -1021,7 +1108,7 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 332
+    .line 353
     const-string v2, "ril.cdma.inecmmode"
 
     const-string v3, "false"
@@ -1030,7 +1117,7 @@
 
     move-result-object v0
 
-    .line 333
+    .line 354
     .local v0, "inEcm":Ljava/lang/String;
     const-string v2, "true"
 
@@ -1040,12 +1127,12 @@
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIsPhoneInEcmState:Z
 
-    .line 334
+    .line 355
     iget-boolean v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIsPhoneInEcmState:Z
 
     if-eqz v2, :cond_0
 
-    .line 336
+    .line 357
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {p0, v7}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->obtainMessage(I)Landroid/os/Message;
@@ -1054,7 +1141,7 @@
 
     invoke-interface {v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->exitEmergencyCallbackMode(Landroid/os/Message;)V
 
-    .line 340
+    .line 361
     :cond_0
     const-string v2, "ro.cdma.otaspnumschema"
 
@@ -1066,10 +1153,10 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mCarrierOtaSpNumSchema:Ljava/lang/String;
 
-    .line 343
+    .line 364
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->setProperties()V
 
-    .line 344
+    .line 365
     return-void
 .end method
 
@@ -1093,12 +1180,12 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 457
+    .line 478
     const-string v0, "CDMALTEPhone"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
+    .line 479
     return-void
 .end method
 
@@ -1107,12 +1194,12 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 461
+    .line 482
     const-string v0, "CDMALTEPhone"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
+    .line 483
     return-void
 .end method
 
@@ -1122,12 +1209,12 @@
     .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 465
+    .line 486
     const-string v0, "CDMALTEPhone"
 
     invoke-static {v0, p1, p2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 466
+    .line 487
     return-void
 .end method
 
@@ -1137,27 +1224,27 @@
     .prologue
     const/4 v6, 0x3
 
-    .line 275
+    .line 296
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     if-eqz v3, :cond_0
 
-    .line 276
+    .line 297
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     invoke-virtual {v3, p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->unregisterForRecordsLoaded(Landroid/os/Handler;)V
 
-    .line 279
+    .line 300
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
     if-nez v3, :cond_1
 
-    .line 306
+    .line 327
     :goto_0
     return-void
 
-    .line 284
+    .line 305
     :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
@@ -1167,15 +1254,15 @@
 
     move-result-object v2
 
-    .line 286
+    .line 307
     .local v2, "newUiccApplication":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     const/4 v0, 0x0
 
-    .line 288
+    .line 309
     .local v0, "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
     if-eqz v2, :cond_2
 
-    .line 289
+    .line 310
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getIccRecords()Lcom/android/internal/telephony/uicc/IccRecords;
 
     move-result-object v0
@@ -1183,12 +1270,12 @@
     .end local v0    # "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
     check-cast v0, Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
-    .line 291
+    .line 312
     .restart local v0    # "newIsimUiccRecords":Lcom/android/internal/telephony/uicc/IsimUiccRecords;
     :cond_2
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mIsimUiccRecords:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
-    .line 294
+    .line 315
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
     iget v4, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mPhoneId:I
@@ -1199,14 +1286,14 @@
 
     move-result-object v2
 
-    .line 296
+    .line 317
     const/4 v1, 0x0
 
-    .line 297
+    .line 318
     .local v1, "newSimRecords":Lcom/android/internal/telephony/uicc/SIMRecords;
     if-eqz v2, :cond_3
 
-    .line 298
+    .line 319
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getIccRecords()Lcom/android/internal/telephony/uicc/IccRecords;
 
     move-result-object v1
@@ -1214,24 +1301,24 @@
     .end local v1    # "newSimRecords":Lcom/android/internal/telephony/uicc/SIMRecords;
     check-cast v1, Lcom/android/internal/telephony/uicc/SIMRecords;
 
-    .line 300
+    .line 321
     .restart local v1    # "newSimRecords":Lcom/android/internal/telephony/uicc/SIMRecords;
     :cond_3
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
-    .line 301
+    .line 322
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     if-eqz v3, :cond_4
 
-    .line 302
+    .line 323
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecords:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, p0, v6, v4}, Lcom/android/internal/telephony/uicc/SIMRecords;->registerForRecordsLoaded(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 305
+    .line 326
     :cond_4
     invoke-super {p0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->onUpdateIccAvailability()V
 
@@ -1245,14 +1332,14 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 435
+    .line 456
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/dataconnection/DcTracker;->registerForAllDataDisconnected(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 437
+    .line 458
     return-void
 .end method
 
@@ -1263,12 +1350,12 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 446
+    .line 467
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/RegistrantList;->addUnique(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 447
+    .line 468
     return-void
 .end method
 
@@ -1289,14 +1376,14 @@
     .param p2, "onCompleteMsg"    # Landroid/os/Message;
 
     .prologue
-    .line 394
+    .line 415
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->setInternalDataEnabled(ZLandroid/os/Message;)Z
 
-    .line 396
+    .line 417
     return-void
 .end method
 
@@ -1305,7 +1392,7 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 399
+    .line 420
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
@@ -1323,18 +1410,18 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 376
+    .line 397
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->getUnitTestMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 380
+    .line 401
     :goto_0
     return-void
 
-    .line 379
+    .line 400
     :cond_0
     iget v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mPhoneId:I
 
@@ -1348,14 +1435,14 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 440
+    .line 461
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->unregisterForAllDataDisconnected(Landroid/os/Handler;)V
 
-    .line 442
+    .line 463
     return-void
 .end method
 
@@ -1364,12 +1451,12 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 451
+    .line 472
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mSimRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 452
+    .line 473
     return-void
 .end method
 
@@ -1583,13 +1670,13 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 411
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->update()V
 
-    .line 391
+    .line 412
     return-void
 .end method

@@ -3,9 +3,9 @@
 .source "XmlResourceParser.java"
 
 # interfaces
+.implements Lorg/xmlpull/v1/XmlPullParser;
 .implements Landroid/util/AttributeSet;
 .implements Ljava/lang/AutoCloseable;
-.implements Lorg/xmlpull/v1/XmlPullParser;
 
 
 # virtual methods

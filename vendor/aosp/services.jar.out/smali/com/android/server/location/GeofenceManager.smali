@@ -3,8 +3,8 @@
 .source "GeofenceManager.java"
 
 # interfaces
-.implements Landroid/app/PendingIntent$OnFinished;
 .implements Landroid/location/LocationListener;
+.implements Landroid/app/PendingIntent$OnFinished;
 
 
 # annotations

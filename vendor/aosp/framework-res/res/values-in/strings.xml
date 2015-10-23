@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Video ini tidak valid untuk pengaliran ke perangkat ini.</string>
     <string name="selectTextMode">Pilih teks</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Standar</string>
-    <string name="profileNameWork">Kerja</string>
-    <string name="profileNameHome">Home</string>
-    <string name="profileNameSilent">Diam</string>
-    <string name="profileNameNight">Malam</string>
-    <string name="profileNameAutomobile">Otomotif</string>
-    <string name="profileGroupPhone">Telepon</string>
-    <string name="profileGroupCalendar">Kalender</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Lainnya</string>
     <string name="profile_none">Tidak Ada</string>
     <string name="profile_picker_title">Profil</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Senter aktif</string>
     <string name="quick_settings_tile_flashlight_not_summary">Tekan untuk mematikan</string>
     <string name="storage_sd_dock_card">Kartu SD di dok</string>
+    <string name="fingerprint_default_name">Sidik Jari %d</string>
+    <string name="permlab_accessFingerprintService">akses layanan sidik jari</string>
+    <string name="permdesc_accessFingerprintService">Mengizinkan aplikasi untuk mengakses layanan sidik jari. Aplikasi bisa menambah, menghapus, mengubah nama, dan autentikasi sidik jari</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ Penghemat baterai otomatis nonaktif jika perangkat diisi dayanya."</string>
     <string name="stk_cc_ss_to_ss">Permintaan SS diubah menjadi permintaan SS baru.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">Jaringan &amp; USB</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Jaringan</string>
+    <string name="permlab_resetBatteryStats">set ulang statistik baterai</string>
+    <string name="permdesc_resetBatteryStats">Mengizinkan aplikasi untuk set ulang data penggunaan baterai rendah yang sekarang.</string>
+    <string name="silent_mode_priority">Prioritas</string>
+    <string name="silent_mode_none">Tidak Ada</string>
 </resources>

@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Denne video kan ikke streames på denne enhed.</string>
     <string name="selectTextMode">Markér tekst</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Standard</string>
-    <string name="profileNameWork">Arbejde</string>
-    <string name="profileNameHome">Hjem</string>
-    <string name="profileNameSilent">Lydløs</string>
-    <string name="profileNameNight">Nat</string>
-    <string name="profileNameAutomobile">Bil</string>
-    <string name="profileGroupPhone">Telefon</string>
-    <string name="profileGroupCalendar">Kalender</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Andre</string>
     <string name="profile_none">Ingen</string>
     <string name="profile_picker_title">Profiler</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Lommelygten er tændt</string>
     <string name="quick_settings_tile_flashlight_not_summary">Tryk for at slukke</string>
     <string name="storage_sd_dock_card">Dock SD-kort</string>
+    <string name="fingerprint_default_name">Fingeraftryk %d</string>
+    <string name="permlab_accessFingerprintService">adgang til fingeraftrykstjenesten</string>
+    <string name="permdesc_accessFingerprintService">Gør det muligt for en app at få adgang til fingeraftrykstjenesten. Appen kan tilføje, slette, omdøbe og godkende i forhold til fingeraftryk</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ Batterisparefunktionen slukker automatisk, når enheden oplader."</string>
     <string name="stk_cc_ss_to_ss">SS-anmodningen er ændret til en ny SS-anmodning.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; netværk</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Netværk</string>
+    <string name="permlab_resetBatteryStats">nulstil batteristatistik</string>
+    <string name="permdesc_resetBatteryStats">Tillader en app at nulstille den aktuelle statistik over batteriforbruget.</string>
+    <string name="silent_mode_priority">Prioritet</string>
+    <string name="silent_mode_none">Ingen</string>
 </resources>

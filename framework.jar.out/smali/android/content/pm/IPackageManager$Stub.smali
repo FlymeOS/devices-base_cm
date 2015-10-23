@@ -54,7 +54,7 @@
 
 .field static final TRANSACTION_checkUidSignatures:I = 0x19
 
-.field static final TRANSACTION_clearApplicationUserData_78:I = 0x4f
+.field static final TRANSACTION_clearApplicationUserData:I = 0x4f
 
 .field static final TRANSACTION_clearCrossProfileIntentFilters:I = 0x45
 

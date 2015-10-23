@@ -26,9 +26,9 @@
 
 .field private final mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
-.field private mLastToast:Landroid/widget/Toast;
+.field private mHasNavigationBar:Z
 
-.field private final mPolicy:Landroid/view/WindowManagerPolicy;
+.field private mLastToast:Landroid/widget/Toast;
 
 
 # direct methods
@@ -37,20 +37,13 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
-    invoke-static {}, Lcom/android/internal/policy/PolicyManager;->makeNewWindowManager()Landroid/view/WindowManagerPolicy;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mPolicy:Landroid/view/WindowManagerPolicy;
-
-    .line 49
+    .line 48
     iput-object p1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
-    .line 50
+    .line 49
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
     const-string v2, "accessibility"
@@ -63,7 +56,7 @@
 
     iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 52
+    .line 51
     new-instance v1, Lcom/android/server/am/LockTaskNotify$H;
 
     const/4 v2, 0x0
@@ -72,16 +65,29 @@
 
     iput-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
-    .line 53
+    .line 52
     new-instance v0, Lcom/android/server/am/LockTaskNotify$SettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mHandler:Lcom/android/server/am/LockTaskNotify$H;
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/am/LockTaskNotify$SettingsObserver;-><init>(Lcom/android/server/am/LockTaskNotify;Landroid/os/Handler;)V
 
-    .line 54
+    .line 53
     .local v0, "observer":Lcom/android/server/am/LockTaskNotify$SettingsObserver;
     invoke-virtual {v0}, Lcom/android/server/am/LockTaskNotify$SettingsObserver;->observe()V
+
+    .line 54
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x1120065
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/am/LockTaskNotify;->mHasNavigationBar:Z
 
     .line 55
     return-void
@@ -92,7 +98,7 @@
     .param p0, "x0"    # Lcom/android/server/am/LockTaskNotify;
 
     .prologue
-    .line 38
+    .line 37
     iget-object v0, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -104,7 +110,7 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 38
+    .line 37
     iput-boolean p1, p0, Lcom/android/server/am/LockTaskNotify;->mDevForceNavbar:Z
 
     return p1
@@ -154,7 +160,7 @@
     if-eqz p1, :cond_1
 
     .line 64
-    const v0, 0x1040761
+    const v0, 0x104076a
 
     .line 71
     .local v0, "textResId":I
@@ -197,7 +203,7 @@
     if-eqz v1, :cond_2
 
     .line 66
-    const v0, 0x1040760
+    const v0, 0x1040769
 
     .restart local v0    # "textResId":I
     goto :goto_0
@@ -205,11 +211,7 @@
     .line 68
     .end local v0    # "textResId":I
     :cond_2
-    iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mPolicy:Landroid/view/WindowManagerPolicy;
-
-    invoke-interface {v1}, Landroid/view/WindowManagerPolicy;->hasNavigationBar()Z
-
-    move-result v1
+    iget-boolean v1, p0, Lcom/android/server/am/LockTaskNotify;->mHasNavigationBar:Z
 
     if-nez v1, :cond_3
 
@@ -218,7 +220,7 @@
     if-eqz v1, :cond_4
 
     :cond_3
-    const v0, 0x104075f
+    const v0, 0x1040768
 
     .restart local v0    # "textResId":I
     :goto_1
@@ -237,14 +239,14 @@
 
     .prologue
     .line 78
-    const v0, 0x1040763
+    const v0, 0x104076c
 
     .line 79
     .local v0, "showString":I
     if-eqz p1, :cond_0
 
     .line 80
-    const v0, 0x1040762
+    const v0, 0x104076b
 
     .line 82
     :cond_0

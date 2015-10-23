@@ -47,6 +47,8 @@
 
 .field public static final FEATURE_TAP_TO_WAKE:I = 0x200
 
+.field public static final FEATURE_THERMAL_MONITOR:I = 0x8000
+
 .field public static final FEATURE_TOUCH_HOVERING:I = 0x800
 
 .field public static final FEATURE_VIBRATOR:I = 0x400
@@ -87,8 +89,8 @@
 
     const/4 v3, 0x1
 
-    .line 98
-    const/4 v0, 0x7
+    .line 100
+    const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/Integer;
 
@@ -154,6 +156,16 @@
 
     aput-object v2, v0, v1
 
+    const/4 v1, 0x7
+
+    const v2, 0x8000
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -168,10 +180,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
+    .line 115
     const-string v0, "cmhw"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -184,7 +196,7 @@
 
     iput-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
-    .line 114
+    .line 117
     return-void
 .end method
 
@@ -195,14 +207,14 @@
     .param p3, "defaultValue"    # I
 
     .prologue
-    .line 197
+    .line 200
     if-eqz p1, :cond_0
 
     array-length v0, p1
 
     if-gt v0, p2, :cond_1
 
-    .line 201
+    .line 204
     .end local p3    # "defaultValue":I
     :cond_0
     :goto_0
@@ -221,23 +233,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 320
+    .line 323
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 321
+    .line 324
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
+    .line 332
     :goto_0
     return-object v0
 
-    .line 326
+    .line 329
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -250,7 +262,7 @@
 
     goto :goto_0
 
-    .line 327
+    .line 330
     :catch_0
     move-exception v1
 
@@ -264,23 +276,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 408
+    .line 411
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 409
+    .line 412
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
+    .line 420
     :goto_0
     return-object v0
 
-    .line 414
+    .line 417
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -293,7 +305,7 @@
 
     goto :goto_0
 
-    .line 415
+    .line 418
     :catch_0
     move-exception v1
 
@@ -306,23 +318,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 226
+    .line 229
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 227
+    .line 230
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 238
     :goto_0
     return-object v0
 
-    .line 232
+    .line 235
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -335,7 +347,7 @@
 
     goto :goto_0
 
-    .line 233
+    .line 236
     :catch_0
     move-exception v1
 
@@ -351,7 +363,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 153
+    .line 156
     sget-object v1, Landroid/hardware/CmHardwareManager;->BOOLEAN_FEATURES:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -364,7 +376,7 @@
 
     if-nez v1, :cond_0
 
-    .line 154
+    .line 157
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -389,24 +401,24 @@
 
     throw v0
 
-    .line 157
+    .line 160
     :cond_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_1
 
-    .line 158
+    .line 161
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
+    .line 169
     :goto_0
     return v0
 
-    .line 163
+    .line 166
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -419,7 +431,7 @@
 
     goto :goto_0
 
-    .line 164
+    .line 167
     :catch_0
     move-exception v1
 
@@ -432,12 +444,12 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 336
+    .line 339
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getDisplayColorCalibrationArray()[I
 
     move-result-object v0
 
-    .line 337
+    .line 340
     .local v0, "arr":[I
     if-eqz v0, :cond_0
 
@@ -445,11 +457,11 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 338
+    .line 341
     :cond_0
     const/4 v1, 0x0
 
-    .line 340
+    .line 343
     :goto_0
     return-object v1
 
@@ -465,7 +477,7 @@
     .locals 3
 
     .prologue
-    .line 347
+    .line 350
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getDisplayColorCalibrationArray()[I
 
     move-result-object v0
@@ -485,7 +497,7 @@
     .locals 3
 
     .prologue
-    .line 361
+    .line 364
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getDisplayColorCalibrationArray()[I
 
     move-result-object v0
@@ -505,7 +517,7 @@
     .locals 3
 
     .prologue
-    .line 354
+    .line 357
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getDisplayColorCalibrationArray()[I
 
     move-result-object v0
@@ -528,12 +540,12 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 442
+    .line 445
     invoke-direct {p0, p1}, Landroid/hardware/CmHardwareManager;->getDisplayGammaCalibrationArray(I)[I
 
     move-result-object v0
 
-    .line 443
+    .line 446
     .local v0, "arr":[I
     if-eqz v0, :cond_0
 
@@ -541,11 +553,11 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 444
+    .line 447
     :cond_0
     const/4 v1, 0x0
 
-    .line 446
+    .line 449
     :goto_0
     return-object v1
 
@@ -563,7 +575,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 460
+    .line 463
     invoke-direct {p0, v2}, Landroid/hardware/CmHardwareManager;->getDisplayGammaCalibrationArray(I)[I
 
     move-result-object v0
@@ -583,7 +595,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 453
+    .line 456
     invoke-direct {p0, v2}, Landroid/hardware/CmHardwareManager;->getDisplayGammaCalibrationArray(I)[I
 
     move-result-object v0
@@ -603,23 +615,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 506
+    .line 509
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 507
+    .line 510
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
+    .line 518
     :goto_0
     return-object v0
 
-    .line 512
+    .line 515
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -632,7 +644,7 @@
 
     goto :goto_0
 
-    .line 513
+    .line 516
     :catch_0
     move-exception v1
 
@@ -645,23 +657,23 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 522
+    .line 525
     iget-object v2, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v2, :cond_0
 
-    .line 523
+    .line 526
     const-string v2, "CmHardwareManager"
 
     const-string/jumbo v3, "no cmhw service."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
+    .line 534
     :goto_0
     return-wide v0
 
-    .line 528
+    .line 531
     :cond_0
     :try_start_0
     iget-object v2, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -674,7 +686,7 @@
 
     goto :goto_0
 
-    .line 529
+    .line 532
     :catch_0
     move-exception v2
 
@@ -687,23 +699,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 490
+    .line 493
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 491
+    .line 494
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 502
     :goto_0
     return-object v0
 
-    .line 496
+    .line 499
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -716,7 +728,7 @@
 
     goto :goto_0
 
-    .line 497
+    .line 500
     :catch_0
     move-exception v1
 
@@ -729,23 +741,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 424
+    .line 427
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 425
+    .line 428
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
+    .line 436
     :goto_0
     return v0
 
-    .line 430
+    .line 433
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -758,7 +770,7 @@
 
     goto :goto_0
 
-    .line 431
+    .line 434
     :catch_0
     move-exception v1
 
@@ -771,23 +783,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 538
+    .line 541
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 539
+    .line 542
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
+    .line 550
     :goto_0
     return-object v0
 
-    .line 544
+    .line 547
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -800,7 +812,7 @@
 
     goto :goto_0
 
-    .line 545
+    .line 548
     :catch_0
     move-exception v1
 
@@ -813,23 +825,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 120
+    .line 123
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 121
+    .line 124
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
+    .line 132
     :goto_0
     return v0
 
-    .line 126
+    .line 129
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -842,9 +854,43 @@
 
     goto :goto_0
 
-    .line 127
+    .line 130
     :catch_0
     move-exception v1
+
+    goto :goto_0
+.end method
+
+.method public getThermalState()I
+    .locals 1
+
+    .prologue
+    .line 575
+    :try_start_0
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    if-eqz v0, :cond_0
+
+    .line 576
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    invoke-interface {v0}, Landroid/hardware/ICmHardwareService;->getThermalState()I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    .line 580
+    :goto_0
+    return v0
+
+    .line 578
+    :catch_0
+    move-exception v0
+
+    .line 580
+    :cond_0
+    const/4 v0, -0x1
 
     goto :goto_0
 .end method
@@ -853,7 +899,7 @@
     .locals 3
 
     .prologue
-    .line 249
+    .line 252
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getVibratorIntensityArray()[I
 
     move-result-object v0
@@ -875,7 +921,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 242
+    .line 245
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getVibratorIntensityArray()[I
 
     move-result-object v0
@@ -891,7 +937,7 @@
     .locals 3
 
     .prologue
-    .line 263
+    .line 266
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getVibratorIntensityArray()[I
 
     move-result-object v0
@@ -911,7 +957,7 @@
     .locals 3
 
     .prologue
-    .line 256
+    .line 259
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getVibratorIntensityArray()[I
 
     move-result-object v0
@@ -931,7 +977,7 @@
     .locals 3
 
     .prologue
-    .line 270
+    .line 273
     invoke-direct {p0}, Landroid/hardware/CmHardwareManager;->getVibratorIntensityArray()[I
 
     move-result-object v0
@@ -952,7 +998,7 @@
     .param p1, "feature"    # I
 
     .prologue
-    .line 140
+    .line 143
     invoke-virtual {p0}, Landroid/hardware/CmHardwareManager;->getSupportedFeatures()I
 
     move-result v0
@@ -972,29 +1018,66 @@
     goto :goto_0
 .end method
 
+.method public registerThermalListener(Landroid/hardware/ThermalListenerCallback;)Z
+    .locals 1
+    .param p1, "thermalCallback"    # Landroid/hardware/ThermalListenerCallback;
+
+    .prologue
+    .line 589
+    :try_start_0
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 590
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    invoke-interface {v0, p1}, Landroid/hardware/ICmHardwareService;->registerThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    .line 594
+    :goto_0
+    return v0
+
+    .line 592
+    :catch_0
+    move-exception v0
+
+    .line 594
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public requireAdaptiveBacklightForSunlightEnhancement()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 555
+    .line 558
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 556
+    .line 559
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
+    .line 567
     :goto_0
     return v0
 
-    .line 561
+    .line 564
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -1007,7 +1090,7 @@
 
     goto :goto_0
 
-    .line 562
+    .line 565
     :catch_0
     move-exception v1
 
@@ -1022,7 +1105,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 180
+    .line 183
     sget-object v1, Landroid/hardware/CmHardwareManager;->BOOLEAN_FEATURES:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1035,7 +1118,7 @@
 
     if-nez v1, :cond_0
 
-    .line 181
+    .line 184
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1060,24 +1143,24 @@
 
     throw v0
 
-    .line 184
+    .line 187
     :cond_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_1
 
-    .line 185
+    .line 188
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
+    .line 196
     :goto_0
     return v0
 
-    .line 190
+    .line 193
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -1090,7 +1173,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 194
     :catch_0
     move-exception v1
 
@@ -1104,23 +1187,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 374
+    .line 377
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 375
+    .line 378
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
+    .line 386
     :goto_0
     return v0
 
-    .line 380
+    .line 383
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -1133,7 +1216,7 @@
 
     goto :goto_0
 
-    .line 381
+    .line 384
     :catch_0
     move-exception v1
 
@@ -1148,23 +1231,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 474
+    .line 477
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 475
+    .line 478
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
+    .line 486
     :goto_0
     return v0
 
-    .line 480
+    .line 483
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -1177,7 +1260,7 @@
 
     goto :goto_0
 
-    .line 481
+    .line 484
     :catch_0
     move-exception v1
 
@@ -1191,23 +1274,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 282
+    .line 285
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
 
     if-nez v1, :cond_0
 
-    .line 283
+    .line 286
     const-string v1, "CmHardwareManager"
 
     const-string/jumbo v2, "no cmhw service."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 294
     :goto_0
     return v0
 
-    .line 288
+    .line 291
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
@@ -1220,9 +1303,46 @@
 
     goto :goto_0
 
-    .line 289
+    .line 292
     :catch_0
     move-exception v1
+
+    goto :goto_0
+.end method
+
+.method public unRegisterThermalListener(Landroid/hardware/ThermalListenerCallback;)Z
+    .locals 1
+    .param p1, "thermalCallback"    # Landroid/hardware/ThermalListenerCallback;
+
+    .prologue
+    .line 603
+    :try_start_0
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 604
+    iget-object v0, p0, Landroid/hardware/CmHardwareManager;->mService:Landroid/hardware/ICmHardwareService;
+
+    invoke-interface {v0, p1}, Landroid/hardware/ICmHardwareService;->unRegisterThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    .line 608
+    :goto_0
+    return v0
+
+    .line 606
+    :catch_0
+    move-exception v0
+
+    .line 608
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

@@ -3,8 +3,8 @@
 .source "WifiScanningServiceImpl.java"
 
 # interfaces
-.implements Lcom/android/server/wifi/WifiNative$HotlistEventHandler;
 .implements Lcom/android/server/wifi/WifiNative$ScanEventHandler;
+.implements Lcom/android/server/wifi/WifiNative$HotlistEventHandler;
 .implements Lcom/android/server/wifi/WifiNative$SignificantWifiChangeEventHandler;
 
 

@@ -1570,7 +1570,7 @@
     .local v10, "isVisible":Z
     move/from16 v0, v27
 
-    and-int/lit16 v2, v0, 0x800
+    and-int/lit16 v2, v0, 0x4000
 
     if-eqz v2, :cond_7
 

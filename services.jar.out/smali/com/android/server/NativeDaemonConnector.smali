@@ -3,9 +3,9 @@
 .source "NativeDaemonConnector.java"
 
 # interfaces
+.implements Ljava/lang/Runnable;
 .implements Landroid/os/Handler$Callback;
 .implements Lcom/android/server/Watchdog$Monitor;
-.implements Ljava/lang/Runnable;
 
 
 # annotations

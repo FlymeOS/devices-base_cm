@@ -3,8 +3,8 @@
 .source "DynamicLayout.java"
 
 # interfaces
-.implements Landroid/text/SpanWatcher;
 .implements Landroid/text/TextWatcher;
+.implements Landroid/text/SpanWatcher;
 
 
 # annotations

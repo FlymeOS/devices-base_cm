@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="profileNameDefault">Padrão</string>
-    <string name="profileNameWork">Trabalho</string>
-    <string name="profileNameHome">Casa</string>
-    <string name="profileNameSilent">Silêncio</string>
-    <string name="profileNameNight">Noite</string>
-    <string name="profileNameAutomobile">Automóvel</string>
-    <string name="profileGroupPhone">Telefone</string>
-    <string name="profileGroupCalendar">Agenda</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Outro</string>
     <string name="profile_none">Nenhum</string>
     <string name="profile_picker_title">Perfis</string>
     <string name="global_action_choose_profile">Perfil</string>
@@ -192,4 +180,15 @@
     <string name="quick_settings_tile_flashlight_not_title">A lanterna está ligada</string>
     <string name="quick_settings_tile_flashlight_not_summary">Toque para desligar</string>
     <string name="storage_sd_dock_card">Cartão SD do dock</string>
+    <string name="fingerprint_default_name">Impressão digital %d</string>
+    <string name="permlab_accessFingerprintService">acesso ao serviço de impressão digital</string>
+    <string name="permdesc_accessFingerprintService">Permite um aplicativo acessar o serviço de impressão digital. O aplicativo pode adicionar, excluir, renomear e autenticar usando impressões digitais</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB e rede</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Rede</string>
+    <string name="permlab_resetBatteryStats">redefinir estatísticas da bateria</string>
+    <string name="permdesc_resetBatteryStats">Permite uma aplicação redefinir o atual nível baixo dos dados de uso da bateria.</string>
+    <string name="silent_mode_priority">Prioridade</string>
+    <string name="silent_mode_none">Nenhum</string>
 </resources>

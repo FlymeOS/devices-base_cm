@@ -3,8 +3,8 @@
 .source "PreferenceScreen.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
 .implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations

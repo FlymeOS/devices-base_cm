@@ -3,8 +3,8 @@
 .source "UnderlineSpan.java"
 
 # interfaces
-.implements Landroid/text/ParcelableSpan;
 .implements Landroid/text/style/UpdateAppearance;
+.implements Landroid/text/ParcelableSpan;
 
 
 # direct methods

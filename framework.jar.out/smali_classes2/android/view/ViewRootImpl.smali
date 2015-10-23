@@ -1020,7 +1020,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120084
+    const v1, #android:bool@config_windowIsRound#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3583,7 +3583,7 @@
 
     move-result-object v2
 
-    const v3, 0x1160029
+    const v3, #android:^attr-private@accessibilityFocusedDrawable#t
 
     const/4 v4, 0x1
 
@@ -5012,7 +5012,7 @@
 
     .line 1139
     .local v4, "packageMetrics":Landroid/util/DisplayMetrics;
-    const v6, 0x1050009
+    const v6, #android:dimen@config_prefDialogWidth#t
 
     iget-object v7, p0, Landroid/view/ViewRootImpl;->mTmpValue:Landroid/util/TypedValue;
 

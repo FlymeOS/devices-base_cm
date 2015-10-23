@@ -49,7 +49,7 @@
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->setContentView(I)V
 
     .line 39
-    const v3, 0x1040568
+    const v3, 0x1040571
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -125,7 +125,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040569
+    const v4, 0x1040572
 
     new-array v5, v8, [Ljava/lang/Object;
 
@@ -195,7 +195,7 @@
 
     move-result-object v3
 
-    const v4, 0x104056a
+    const v4, 0x1040573
 
     new-array v5, v8, [Ljava/lang/Object;
 

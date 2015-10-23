@@ -39,6 +39,14 @@
     .end annotation
 .end method
 
+.method public abstract vibrateLowPriority(ILjava/lang/String;[JIILandroid/os/IBinder;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract vibratePattern(ILjava/lang/String;[JIILandroid/os/IBinder;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

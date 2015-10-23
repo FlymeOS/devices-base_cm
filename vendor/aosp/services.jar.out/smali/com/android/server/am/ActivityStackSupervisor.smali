@@ -4402,7 +4402,7 @@
 .end method
 
 .method findTaskLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
-    .locals 7
+    .locals 6
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
@@ -4510,9 +4510,7 @@
     :cond_3
     iget-object v5, p0, Lcom/android/server/am/ActivityStackSupervisor;->mPm:Landroid/os/PowerManager;
 
-    const v6, 0x1e8480
-
-    invoke-virtual {v5, v6}, Landroid/os/PowerManager;->cpuBoost(I)V
+    invoke-virtual {v5}, Landroid/os/PowerManager;->launchBoost()V
 
     .line 2742
     invoke-static {}, Lcom/android/internal/os/BinderInternal;->modifyDelayedGcParams()V
@@ -10744,9 +10742,7 @@
 
     iget-object v5, v0, Lcom/android/server/am/ActivityStackSupervisor;->mPm:Landroid/os/PowerManager;
 
-    const v8, 0x1e8480
-
-    invoke-virtual {v5, v8}, Landroid/os/PowerManager;->cpuBoost(I)V
+    invoke-virtual {v5}, Landroid/os/PowerManager;->launchBoost()V
 
     .line 1355
     const-wide/16 v8, 0x40

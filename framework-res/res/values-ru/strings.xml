@@ -24,19 +24,7 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Это видео не предназначено для потокового воспроизведения на данном устройстве.</string>
     <string name="selectTextMode">Выбрать текст</string>
     <string name="status_bar_notification_info_overflow">>999</string>
-    <string name="profileNameDefault">Стандартный</string>
-    <string name="profileNameWork">Работа</string>
-    <string name="profileNameHome">Дом</string>
-    <string name="profileNameSilent">Без звука</string>
-    <string name="profileNameNight">Ночь</string>
-    <string name="profileNameAutomobile">Автомобиль</string>
-    <string name="profileGroupPhone">Телефон</string>
-    <string name="profileGroupCalendar">Календарь</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Почта</string>
-    <string name="profileGroupSMS">Сообщения</string>
-    <string name="wildcardProfile">Другой</string>
-    <string name="profile_none">Не выбран</string>
+    <string name="profile_none">Нет</string>
     <string name="profile_picker_title">Профили</string>
     <string name="global_action_choose_profile">Профиль</string>
     <string name="global_action_screenshot">Скриншот</string>
@@ -149,7 +137,7 @@
     <string name="permission_remember_choice">Запомнить разрешение</string>
     <string name="perf_profile_pwrsv">Экономия энергии</string>
     <string name="perf_profile_bal">Сбалансиров.</string>
-    <string name="perf_profile_perf">Высокая производит.</string>
+    <string name="perf_profile_perf">Производительность</string>
     <string name="theme_install_error_title">Не удалось установить тему</string>
     <string name="theme_install_error_message">Сбой при установке «%s»</string>
     <string name="theme_reset_notification_title">Тема отключена</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Фонарик включён</string>
     <string name="quick_settings_tile_flashlight_not_summary">Нажмите для отключения</string>
     <string name="storage_sd_dock_card">SD-карта док-станции</string>
+    <string name="fingerprint_default_name">Отпечаток пальца %d</string>
+    <string name="permlab_accessFingerprintService">Доступ к отпечаткам пальцев</string>
+    <string name="permdesc_accessFingerprintService">Разрешение доступа к службе отпечатков пальцев. Приложение сможет добавлять, удалять, редактировать и использовать для авторизации отпечатки пальцев</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y г.</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1792,4 +1783,12 @@
     <string name="stk_cc_ss_to_ss">SS-запрос преобразован в новый SS-запрос.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">...</string>
+    <string name="adb_active_custom_tile">Отладка %1$s</string>
+    <string name="adb_active_custom_tile_both">по сети и USB</string>
+    <string name="adb_active_custom_tile_usb">по USB</string>
+    <string name="adb_active_custom_tile_net">по сети</string>
+    <string name="permlab_resetBatteryStats">Обнуление статистики батареи</string>
+    <string name="permdesc_resetBatteryStats">Разрешить приложению очищать данные об использовании аккумуляторной батареи устройства.</string>
+    <string name="silent_mode_priority">Важные</string>
+    <string name="silent_mode_none">Нет</string>
 </resources>

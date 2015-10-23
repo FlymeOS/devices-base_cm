@@ -412,7 +412,7 @@
 
     .line 42
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string v1, "mHwAddr="
+    const-string/jumbo v1, "mHwAddr="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

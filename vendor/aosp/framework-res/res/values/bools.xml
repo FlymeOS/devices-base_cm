@@ -63,6 +63,7 @@
     <bool name="config_multiColorNotificationLed">true</bool>
     <bool name="config_intrusiveBatteryLed">true</bool>
     <bool name="config_multiColorBatteryLed">true</bool>
+    <bool name="config_ledCanPulse">true</bool>
     <bool name="config_disableMenuKeyInLockScreen">false</bool>
     <bool name="config_enableLockBeforeUnlockScreen">false</bool>
     <bool name="config_enableLockScreenRotation">false</bool>
@@ -176,6 +177,7 @@
     <bool name="config_LTE_eri_for_network_name">true</bool>
     <bool name="config_defaultInTouchMode">true</bool>
     <bool name="config_proximityCheckOnWake">false</bool>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
     <bool name="config_show_cmIMESwitcher">true</bool>
     <bool name="config_fetch_apn_from_omh_card">true</bool>
     <bool name="config_samsung_stk">false</bool>
@@ -183,6 +185,7 @@
     <bool name="config_stylusGestures">false</bool>
     <bool name="config_ui_blur_enabled">false</bool>
     <bool name="config_advancedSettingsMode">true</bool>
+    <bool name="config_excludeRingtonesFromRemovableStorage">false</bool>
     <bool name="def_telephony_spn_spec_enabled">false</bool>
     <bool name="def_custom_dateformat">false</bool>
     <bool name="lockscreen_isPortrait">true</bool>

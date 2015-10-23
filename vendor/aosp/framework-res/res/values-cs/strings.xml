@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Toto video nelze přenášet datovým proudem do tohoto zařízení.</string>
     <string name="selectTextMode">Vybrat text</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Výchozí</string>
-    <string name="profileNameWork">Práce</string>
-    <string name="profileNameHome">Doma</string>
-    <string name="profileNameSilent">Tichý</string>
-    <string name="profileNameNight">Noc</string>
-    <string name="profileNameAutomobile">Automobil</string>
-    <string name="profileGroupPhone">Telefon</string>
-    <string name="profileGroupCalendar">Kalendář</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">E-mail</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Ostatní</string>
     <string name="profile_none">Žádný</string>
     <string name="profile_picker_title">Profily</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Svítilna je zapnuta</string>
     <string name="quick_settings_tile_flashlight_not_summary">Dotykem vypnout</string>
     <string name="storage_sd_dock_card">SD karta doku</string>
+    <string name="fingerprint_default_name">Otisk prstu %d</string>
+    <string name="permlab_accessFingerprintService">přístup ke službě otisku prstů</string>
+    <string name="permdesc_accessFingerprintService">Umožní přístup ke službě otisku prstů. Aplikace může přidat, odebrat, přejmenovat a provést ověření otiskem prstů</string>
     <string name="numeric_date_template" formatted="false">%s. %s. %s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1792,4 +1783,12 @@ Při nabíjení zařízení se spořič baterie automaticky vypne."</string>
     <string name="stk_cc_ss_to_ss">Požadavek SS byl změněn na nový požadavek SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB a síť</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Síť</string>
+    <string name="permlab_resetBatteryStats">obnovení statistiky baterie</string>
+    <string name="permdesc_resetBatteryStats">Umožní provést obnovení/vyčištění informací o využívání baterie.</string>
+    <string name="silent_mode_priority">Priorita</string>
+    <string name="silent_mode_none">Žádný</string>
 </resources>

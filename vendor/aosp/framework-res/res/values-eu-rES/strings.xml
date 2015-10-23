@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Bideo hau ezin da gailuan zuzenean erreproduzitu.</string>
     <string name="selectTextMode">Hautatu testua</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Lehenetsia</string>
-    <string name="profileNameWork">Lanean</string>
-    <string name="profileNameHome">Etxean</string>
-    <string name="profileNameSilent">Isilik</string>
-    <string name="profileNameNight">Gaua</string>
-    <string name="profileNameAutomobile">Kotxean</string>
-    <string name="profileGroupPhone">Telefonoa</string>
-    <string name="profileGroupCalendar">Egutegia</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Besteak</string>
     <string name="profile_none">Bat ere ez</string>
     <string name="profile_picker_title">Profilak</string>
     <string name="global_action_choose_profile">Profila</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Linterna piztuta dago</string>
     <string name="quick_settings_tile_flashlight_not_summary">Sakatu itzaltzeko</string>
     <string name="storage_sd_dock_card">Oinarriaren SD txartela</string>
+    <string name="fingerprint_default_name">%d. hatz-marka</string>
+    <string name="permlab_accessFingerprintService">atzitu hatz-marka zerbitzua</string>
+    <string name="permdesc_accessFingerprintService">Hatz-marka zerbitzua atzitzea ahalbidetzen dio aplikazioari. Aplikazioak hatz-markak gehitu, ezabatu edo izenez aldatu ahal izango ditu eta hauek erabilita identifikatu</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>
@@ -1787,4 +1778,12 @@ Gailua kargatzen ezarri orduko desaktibatzen da bateria-aurrezlea."</string>
     <string name="stk_cc_ss_to_ss">SS eskaera SS eskaera berrira aldatu da.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB eta sarea</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Sarea</string>
+    <string name="permlab_resetBatteryStats">leheneratu bateria estatistikak</string>
+    <string name="permdesc_resetBatteryStats">Bateriaren maila baxuko erabilera datuak leheneratzea ahalbidetzen dio aplikazioari.</string>
+    <string name="silent_mode_priority">Lehentasuna</string>
+    <string name="silent_mode_none">Bat ere ez</string>
 </resources>

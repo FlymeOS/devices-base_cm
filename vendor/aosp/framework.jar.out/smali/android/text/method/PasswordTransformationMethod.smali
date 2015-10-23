@@ -3,8 +3,8 @@
 .source "PasswordTransformationMethod.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
 .implements Landroid/text/method/TransformationMethod;
+.implements Landroid/text/TextWatcher;
 
 
 # annotations

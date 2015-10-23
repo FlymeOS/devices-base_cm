@@ -983,7 +983,7 @@
 
     move-result-object v2
 
-    const v3, 0x10401bb
+    const v3, 0x10401c4
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1015,7 +1015,7 @@
 
     move-result-object v3
 
-    const v5, 0x10401b9
+    const v5, 0x10401c2
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1042,7 +1042,7 @@
     iput v2, v10, Landroid/app/Notification;->color:I
 
     .line 3124
-    const v2, 0x10401ba
+    const v2, 0x10401c3
 
     invoke-virtual {v9, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

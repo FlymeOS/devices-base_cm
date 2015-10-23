@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 809
+    .line 817
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/power/PowerManagerService$1;->val$lowPowerModeEnabled:Z
@@ -46,7 +46,7 @@
     .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 812
+    .line 820
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.os.action.POWER_SAVE_MODE_CHANGING"
@@ -70,7 +70,7 @@
 
     move-result-object v1
 
-    .line 815
+    .line 823
     .local v1, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 817
+    .line 825
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mLock:Ljava/lang/Object;
@@ -91,7 +91,7 @@
 
     monitor-enter v4
 
-    .line 818
+    .line 826
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -104,13 +104,13 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 820
+    .line 828
     .local v2, "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/PowerManagerInternal$LowPowerModeListener;>;"
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 821
+    .line 829
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -121,7 +121,7 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 822
+    .line 830
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -132,12 +132,12 @@
 
     invoke-interface {v3, v4}, Landroid/os/PowerManagerInternal$LowPowerModeListener;->onLowPowerModeChanged(Z)V
 
-    .line 821
+    .line 829
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 820
+    .line 828
     .end local v0    # "i":I
     .end local v2    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/PowerManagerInternal$LowPowerModeListener;>;"
     :catchall_0
@@ -150,7 +150,7 @@
 
     throw v3
 
-    .line 824
+    .line 832
     .restart local v0    # "i":I
     .restart local v2    # "listeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/PowerManagerInternal$LowPowerModeListener;>;"
     :cond_0
@@ -161,11 +161,11 @@
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 825
+    .line 833
     .restart local v1    # "intent":Landroid/content/Intent;
     invoke-virtual {v1, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 826
+    .line 834
     iget-object v3, p0, Lcom/android/server/power/PowerManagerService$1;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
@@ -175,6 +175,6 @@
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 827
+    .line 835
     return-void
 .end method

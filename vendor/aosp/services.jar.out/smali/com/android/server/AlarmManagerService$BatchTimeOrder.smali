@@ -41,13 +41,11 @@
 
 # virtual methods
 .method public compare(Lcom/android/server/AlarmManagerService$Batch;Lcom/android/server/AlarmManagerService$Batch;)I
-    .locals 8
+    .locals 5
     .param p1, "b1"    # Lcom/android/server/AlarmManagerService$Batch;
     .param p2, "b2"    # Lcom/android/server/AlarmManagerService$Batch;
 
     .prologue
-    const-wide/16 v6, 0x0
-
     .line 406
     iget-wide v0, p1, Lcom/android/server/AlarmManagerService$Batch;->start:J
 
@@ -57,9 +55,7 @@
 
     .line 408
     .local v2, "when2":J
-    sub-long v4, v0, v2
-
-    cmp-long v4, v4, v6
+    cmp-long v4, v0, v2
 
     if-lez v4, :cond_0
 
@@ -72,9 +68,7 @@
 
     .line 411
     :cond_0
-    sub-long v4, v0, v2
-
-    cmp-long v4, v4, v6
+    cmp-long v4, v0, v2
 
     if-gez v4, :cond_1
 

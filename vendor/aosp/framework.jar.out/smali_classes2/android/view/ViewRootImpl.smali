@@ -3,9 +3,9 @@
 .source "ViewRootImpl.java"
 
 # interfaces
-.implements Landroid/view/HardwareRenderer$HardwareDrawCallbacks;
-.implements Landroid/view/View$AttachInfo$Callbacks;
 .implements Landroid/view/ViewParent;
+.implements Landroid/view/View$AttachInfo$Callbacks;
+.implements Landroid/view/HardwareRenderer$HardwareDrawCallbacks;
 
 
 # annotations
@@ -1002,7 +1002,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120084
+    const v1, 0x1120085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

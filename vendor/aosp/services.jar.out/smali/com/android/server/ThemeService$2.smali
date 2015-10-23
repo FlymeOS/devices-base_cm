@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1161
+    .line 1162
     iput-object p1, p0, Lcom/android/server/ThemeService$2;->this$0:Lcom/android/server/ThemeService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1164
+    .line 1165
     const-string v4, "android.intent.extra.user_handle"
 
     const/4 v5, -0x1
@@ -48,7 +48,7 @@
 
     move-result v3
 
-    .line 1165
+    .line 1166
     .local v3, "userHandle":I
     if-ltz v3, :cond_0
 
@@ -61,13 +61,13 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1166
+    .line 1167
     iget-object v4, p0, Lcom/android/server/ThemeService$2;->this$0:Lcom/android/server/ThemeService;
 
     # setter for: Lcom/android/server/ThemeService;->mCurrentUserId:I
     invoke-static {v4, v3}, Lcom/android/server/ThemeService;->access$1202(Lcom/android/server/ThemeService;I)I
 
-    .line 1167
+    .line 1168
     iget-object v4, p0, Lcom/android/server/ThemeService$2;->this$0:Lcom/android/server/ThemeService;
 
     # getter for: Lcom/android/server/ThemeService;->mContext:Landroid/content/Context;
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    .line 1173
+    .line 1174
     .local v0, "config":Landroid/content/res/ThemeConfig;
     new-instance v4, Landroid/content/res/ThemeChangeRequest$Builder;
 
@@ -93,7 +93,7 @@
 
     move-result-object v2
 
-    .line 1175
+    .line 1176
     .local v2, "request":Landroid/content/res/ThemeChangeRequest;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ThemeService$2;->this$0:Lcom/android/server/ThemeService;
@@ -104,20 +104,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1180
+    .line 1181
     .end local v0    # "config":Landroid/content/res/ThemeConfig;
     .end local v2    # "request":Landroid/content/res/ThemeChangeRequest;
     :cond_0
     :goto_0
     return-void
 
-    .line 1176
+    .line 1177
     .restart local v0    # "config":Landroid/content/res/ThemeConfig;
     .restart local v2    # "request":Landroid/content/res/ThemeChangeRequest;
     :catch_0
     move-exception v1
 
-    .line 1177
+    .line 1178
     .local v1, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/ThemeService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/ThemeService;->access$300()Ljava/lang/String;

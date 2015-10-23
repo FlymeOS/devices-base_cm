@@ -63,9 +63,9 @@
 
 .field private static final SEND_NEXT_MSG_EXTRA:Ljava/lang/String; = "SendNextMsg"
 
-.field private static final SEND_RETRY_DELAY:I = 0x7d0
+.field private static final SEND_RESPOND_VIA_MESSAGE_PERMISSION:Ljava/lang/String; = "android.permission.SEND_RESPOND_VIA_MESSAGE"
 
-.field private static final SEND_SMS_NO_CONFIRMATION_PERMISSION:Ljava/lang/String; = "android.permission.SEND_SMS_NO_CONFIRMATION"
+.field private static final SEND_RETRY_DELAY:I = 0x7d0
 
 .field private static final SINGLE_PART_SMS:I = 0x1
 
@@ -243,7 +243,7 @@
 
     move-result-object v0
 
-    const v3, 0x1120059
+    const v3, 0x112005a
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1159,7 +1159,7 @@
 
     move-result-object v10
 
-    const v11, 0x1070052
+    const v11, 0x1070053
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1192,7 +1192,7 @@
     :cond_1
     iget-object v10, p0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
-    const-string v11, "android.permission.SEND_SMS_NO_CONFIRMATION"
+    const-string v11, "android.permission.SEND_RESPOND_VIA_MESSAGE"
 
     invoke-virtual {v10, v11}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
@@ -2090,7 +2090,7 @@
     if-eqz p1, :cond_1
 
     .line 1291
-    const v4, 0x10405ad
+    const v4, 0x10405b6
 
     .line 1296
     .local v4, "detailsId":I
@@ -2115,7 +2115,7 @@
 
     .line 1298
     .local v12, "r":Landroid/content/res/Resources;
-    const v14, 0x10405ab
+    const v14, 0x10405b4
 
     const/4 v15, 0x2
 
@@ -2248,7 +2248,7 @@
 
     move-result-object v14
 
-    const v15, 0x10405ae
+    const v15, 0x10405b7
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2258,7 +2258,7 @@
 
     move-result-object v14
 
-    const v15, 0x10405af
+    const v15, 0x10405b8
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2323,7 +2323,7 @@
     .end local v12    # "r":Landroid/content/res/Resources;
     .end local v13    # "rememberChoice":Landroid/widget/CheckBox;
     :cond_1
-    const v4, 0x10405ac
+    const v4, 0x10405b5
 
     .restart local v4    # "detailsId":I
     goto/16 :goto_1
@@ -2568,7 +2568,7 @@
 
     .line 1262
     .local v4, "r":Landroid/content/res/Resources;
-    const v5, 0x10405a8
+    const v5, 0x10405b1
 
     const/4 v6, 0x1
 
@@ -2602,7 +2602,7 @@
 
     invoke-direct {v5, v6}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v6, 0x10405a7
+    const v6, 0x10405b0
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -2618,7 +2618,7 @@
 
     move-result-object v5
 
-    const v6, 0x10405a9
+    const v6, 0x10405b2
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2628,7 +2628,7 @@
 
     move-result-object v5
 
-    const v6, 0x10405aa
+    const v6, 0x10405b3
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

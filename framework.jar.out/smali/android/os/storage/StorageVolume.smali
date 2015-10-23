@@ -395,7 +395,7 @@
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 283
-    const-string v0, "mDescriptionId"
+    const-string/jumbo v0, "mDescriptionId"
 
     iget v1, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
 
@@ -428,7 +428,7 @@
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 286
-    const-string v0, "mEmulated"
+    const-string/jumbo v0, "mEmulated"
 
     iget-boolean v1, p0, Landroid/os/storage/StorageVolume;->mEmulated:Z
 
@@ -450,7 +450,7 @@
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 288
-    const-string v0, "mAllowMassStorage"
+    const-string/jumbo v0, "mAllowMassStorage"
 
     iget-boolean v1, p0, Landroid/os/storage/StorageVolume;->mAllowMassStorage:Z
 
@@ -500,7 +500,7 @@
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 294
-    const-string v0, "mAllowMtp"
+    const-string/jumbo v0, "mAllowMtp"
 
     iget-boolean v1, p0, Landroid/os/storage/StorageVolume;->mAllowMtp:Z
 

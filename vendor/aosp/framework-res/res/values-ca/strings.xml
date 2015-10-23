@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Aquest vídeo no és vàlid per a la reproducció en aquest dispositiu.</string>
     <string name="selectTextMode">Selecciona el text</string>
     <string name="status_bar_notification_info_overflow">+999</string>
-    <string name="profileNameDefault">Predeterminat</string>
-    <string name="profileNameWork">Feina</string>
-    <string name="profileNameHome">Casa</string>
-    <string name="profileNameSilent">Silenci</string>
-    <string name="profileNameNight">Nit</string>
-    <string name="profileNameAutomobile">Automòbil</string>
-    <string name="profileGroupPhone">Telèfon</string>
-    <string name="profileGroupCalendar">Calendari</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Correu</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Altres</string>
     <string name="profile_none">Cap</string>
     <string name="profile_picker_title">Perfils</string>
     <string name="global_action_choose_profile">Perfil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">La llanterna està encesa</string>
     <string name="quick_settings_tile_flashlight_not_summary">Pica per apagar-la</string>
     <string name="storage_sd_dock_card">Acopla la targeta SD</string>
+    <string name="fingerprint_default_name">Empremta digital %d</string>
+    <string name="permlab_accessFingerprintService">"Accés al servei d'empremtes dactilars"</string>
+    <string name="permdesc_accessFingerprintService">"Permet a una aplicació accedir al servei d'empremtes dactilars. L'aplicació pot afegir, esborrar, canviar el nom i autenticar-se amb empremtes dactilars"</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e %B de %Y</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1792,4 +1783,12 @@ L'estalvi de bateria es desactiva de manera automàtica quan el dispositiu es po
     <string name="stk_cc_ss_to_ss">"La sol·licitud SS s'ha transformat en una sol·licitud SS nova."</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; xarxa</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Xarxa</string>
+    <string name="permlab_resetBatteryStats">reinicia estadítiques de la bateria</string>
+    <string name="permdesc_resetBatteryStats">"Permet a una aplicació reiniciar les dades actuals de baix nivell d'us de la bateria."</string>
+    <string name="silent_mode_priority">Prioritat</string>
+    <string name="silent_mode_none">Cap</string>
 </resources>

@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract authenticate(Landroid/os/IBinder;I)V
+.method public abstract authenticate(Landroid/os/IBinder;IZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -84,6 +84,14 @@
 .end method
 
 .method public abstract setFingerprintName(Landroid/os/IBinder;ILjava/lang/String;I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setWakeup(Landroid/os/IBinder;IZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -3,8 +3,8 @@
 .source "DreamController.java"
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
 .implements Landroid/os/IBinder$DeathRecipient;
+.implements Landroid/content/ServiceConnection;
 
 
 # annotations

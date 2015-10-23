@@ -457,6 +457,8 @@
 
 .field public static final RECEIVE_SMS:Ljava/lang/String; = "android.permission.RECEIVE_SMS"
 
+.field public static final RECEIVE_STK_COMMANDS:Ljava/lang/String; = "android.permission.RECEIVE_STK_COMMANDS"
+
 .field public static final RECEIVE_WAP_PUSH:Ljava/lang/String; = "android.permission.RECEIVE_WAP_PUSH"
 
 .field public static final RECORD_AUDIO:Ljava/lang/String; = "android.permission.RECORD_AUDIO"

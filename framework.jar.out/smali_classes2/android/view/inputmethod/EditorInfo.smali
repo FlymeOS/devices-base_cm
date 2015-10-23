@@ -3,8 +3,8 @@
 .source "EditorInfo.java"
 
 # interfaces
-.implements Landroid/os/Parcelable;
 .implements Landroid/text/InputType;
+.implements Landroid/os/Parcelable;
 
 
 # static fields

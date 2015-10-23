@@ -45,34 +45,34 @@
     .param p8, "abiOverride"    # Ljava/lang/String;
 
     .prologue
-    .line 10130
+    .line 10161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10131
+    .line 10162
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->origin:Lcom/android/server/pm/PackageManagerService$OriginInfo;
 
-    .line 10132
+    .line 10163
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
-    .line 10133
+    .line 10164
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->observer:Landroid/content/pm/IPackageInstallObserver2;
 
-    .line 10134
+    .line 10165
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerPackageName:Ljava/lang/String;
 
-    .line 10135
+    .line 10166
     iput-object p5, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
-    .line 10136
+    .line 10167
     iput-object p6, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->user:Landroid/os/UserHandle;
 
-    .line 10137
+    .line 10168
     iput-object p7, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->instructionSets:[Ljava/lang/String;
 
-    .line 10138
+    .line 10169
     iput-object p8, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->abiOverride:Ljava/lang/String;
 
-    .line 10139
+    .line 10170
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 10179
+    .line 10210
     const/4 v0, 0x1
 
     return v0
@@ -118,7 +118,7 @@
     .locals 1
 
     .prologue
-    .line 10168
+    .line 10199
     const/4 v0, 0x1
 
     return v0
@@ -143,7 +143,7 @@
     .locals 1
 
     .prologue
-    .line 10191
+    .line 10222
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->user:Landroid/os/UserHandle;
 
     return-object v0
@@ -153,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 10187
+    .line 10218
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -175,7 +175,7 @@
     .locals 1
 
     .prologue
-    .line 10183
+    .line 10214
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installFlags:I
 
     and-int/lit8 v0, v0, 0x1

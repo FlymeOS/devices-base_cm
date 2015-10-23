@@ -1376,7 +1376,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120089
+    const v5, 0x112008a
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3748,7 +3748,7 @@
 
     move-result-object v5
 
-    const v6, 0x1070046
+    const v6, 0x1070047
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -3864,7 +3864,7 @@
 
     move-result-object v5
 
-    const v6, 0x112005f
+    const v6, 0x1120060
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6404,7 +6404,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v3, v4}, Lcom/android/internal/telephony/cdma/CDMAPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1962
     :cond_2

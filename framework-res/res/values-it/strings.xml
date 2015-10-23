@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Questo video non è valido per lo streaming su questo dispositivo.</string>
     <string name="selectTextMode">Seleziona testo</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Predefinito</string>
-    <string name="profileNameWork">Lavoro</string>
-    <string name="profileNameHome">Casa</string>
-    <string name="profileNameSilent">Silenzioso</string>
-    <string name="profileNameNight">Notte</string>
-    <string name="profileNameAutomobile">Automobile</string>
-    <string name="profileGroupPhone">Telefono</string>
-    <string name="profileGroupCalendar">Calendario</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Altro</string>
     <string name="profile_none">Nessuno</string>
     <string name="profile_picker_title">Profili</string>
     <string name="global_action_choose_profile">Profilo</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Torcia accesa</string>
     <string name="quick_settings_tile_flashlight_not_summary">Tocca per spegnere</string>
     <string name="storage_sd_dock_card">Scheda SD dock</string>
+    <string name="fingerprint_default_name">Impronta digitale %d</string>
+    <string name="permlab_accessFingerprintService">Accedi al servizio impronte digitali</string>
+    <string name="permdesc_accessFingerprintService">"Consenti ad un'app di accedere al servizio di impronte digitali. L'app può aggiungere, eliminale, rinominare e riautenticare impronte digitali"</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ La funzione di risparmio energetico viene disattivata automaticamente quando il 
     <string name="stk_cc_ss_to_ss">La richiesta SS è stata modificata in nuova richiesta SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; rete</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Rete</string>
+    <string name="permlab_resetBatteryStats">reimposta statistiche batteria</string>
+    <string name="permdesc_resetBatteryStats">"Consente all'applicazione di reimpostare gli attuali dati di utilizzo della batteria a basso livello."</string>
+    <string name="silent_mode_priority">Priorità</string>
+    <string name="silent_mode_none">Nessuno</string>
 </resources>

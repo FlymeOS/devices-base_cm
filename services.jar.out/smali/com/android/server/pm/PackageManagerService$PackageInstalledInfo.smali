@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 10893
+    .line 10924
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,18 +59,18 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 10906
+    .line 10937
     iput p1, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnCode:I
 
-    .line 10907
+    .line 10938
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnMsg:Ljava/lang/String;
 
-    .line 10908
+    .line 10939
     const-string v0, "PackageManager"
 
     invoke-static {v0, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10909
+    .line 10940
     return-void
 .end method
 
@@ -80,24 +80,24 @@
     .param p2, "e"    # Landroid/content/pm/PackageParser$PackageParserException;
 
     .prologue
-    .line 10912
+    .line 10943
     iget v0, p2, Landroid/content/pm/PackageParser$PackageParserException;->error:I
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnCode:I
 
-    .line 10913
+    .line 10944
     invoke-static {p1, p2}, Landroid/util/ExceptionUtils;->getCompleteMessage(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnMsg:Ljava/lang/String;
 
-    .line 10914
+    .line 10945
     const-string v0, "PackageManager"
 
     invoke-static {v0, p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10915
+    .line 10946
     return-void
 .end method
 
@@ -107,23 +107,23 @@
     .param p2, "e"    # Lcom/android/server/pm/PackageManagerException;
 
     .prologue
-    .line 10918
+    .line 10949
     iget v0, p2, Lcom/android/server/pm/PackageManagerException;->error:I
 
     iput v0, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnCode:I
 
-    .line 10919
+    .line 10950
     invoke-static {p1, p2}, Landroid/util/ExceptionUtils;->getCompleteMessage(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;->returnMsg:Ljava/lang/String;
 
-    .line 10920
+    .line 10951
     const-string v0, "PackageManager"
 
     invoke-static {v0, p1, p2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10921
+    .line 10952
     return-void
 .end method

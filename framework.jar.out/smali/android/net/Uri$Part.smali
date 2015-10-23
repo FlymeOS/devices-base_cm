@@ -144,6 +144,7 @@
 
     .prologue
     .line 2052
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -161,6 +162,7 @@
 
     .prologue
     .line 2043
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -288,6 +290,7 @@
     .line 2011
     iget-object v1, p0, Landroid/net/Uri$Part;->encoded:Ljava/lang/String;
 
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v2

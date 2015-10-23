@@ -3,9 +3,9 @@
 .source "SpannableString.java"
 
 # interfaces
+.implements Ljava/lang/CharSequence;
 .implements Landroid/text/GetChars;
 .implements Landroid/text/Spannable;
-.implements Ljava/lang/CharSequence;
 
 
 # direct methods

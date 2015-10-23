@@ -3,9 +3,9 @@
 .source "SpannedString.java"
 
 # interfaces
+.implements Ljava/lang/CharSequence;
 .implements Landroid/text/GetChars;
 .implements Landroid/text/Spanned;
-.implements Ljava/lang/CharSequence;
 
 
 # direct methods

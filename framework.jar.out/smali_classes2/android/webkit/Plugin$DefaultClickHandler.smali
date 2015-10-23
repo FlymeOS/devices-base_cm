@@ -3,8 +3,8 @@
 .source "Plugin.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 .implements Landroid/webkit/Plugin$PreferencesClickHandler;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations

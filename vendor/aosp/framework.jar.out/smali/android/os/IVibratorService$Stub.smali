@@ -32,6 +32,8 @@
 
 .field static final TRANSACTION_vibrate:I = 0x2
 
+.field static final TRANSACTION_vibrateLowPriority:I = 0x5
+
 .field static final TRANSACTION_vibratePattern:I = 0x3
 
 
@@ -124,7 +126,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 100
+    .line 119
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -340,13 +342,84 @@
 
     goto/16 :goto_0
 
+    .line 101
+    .end local v4    # "_arg0":Landroid/os/IBinder;
+    :sswitch_5
+    const-string v3, "android.os.IVibratorService"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 103
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    .line 105
+    .local v4, "_arg0":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 107
+    .restart local v5    # "_arg1":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createLongArray()[J
+
+    move-result-object v6
+
+    .line 109
+    .restart local v6    # "_arg2":[J
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v8
+
+    .line 111
+    .restart local v8    # "_arg3":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v9
+
+    .line 113
+    .restart local v9    # "_arg4":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v16
+
+    .restart local v16    # "_arg5":Landroid/os/IBinder;
+    move-object/from16 v10, p0
+
+    move v11, v4
+
+    move-object v12, v5
+
+    move-object v13, v6
+
+    move v14, v8
+
+    move v15, v9
+
+    .line 114
+    invoke-virtual/range {v10 .. v16}, Landroid/os/IVibratorService$Stub;->vibrateLowPriority(ILjava/lang/String;[JIILandroid/os/IBinder;)V
+
+    .line 115
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 116
+    const/4 v3, 0x1
+
+    goto/16 :goto_0
+
     .line 39
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
         0x2 -> :sswitch_2
         0x3 -> :sswitch_3
         0x4 -> :sswitch_4
+        0x5 -> :sswitch_5
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

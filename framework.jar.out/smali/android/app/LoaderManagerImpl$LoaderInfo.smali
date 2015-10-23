@@ -3,8 +3,8 @@
 .source "LoaderManager.java"
 
 # interfaces
-.implements Landroid/content/Loader$OnLoadCanceledListener;
 .implements Landroid/content/Loader$OnLoadCompleteListener;
+.implements Landroid/content/Loader$OnLoadCanceledListener;
 
 
 # annotations
@@ -578,7 +578,7 @@
     .line 507
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mId="
+    const-string/jumbo v0, "mId="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -598,7 +598,7 @@
     .line 509
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mCallbacks="
+    const-string/jumbo v0, "mCallbacks="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -659,7 +659,7 @@
     :cond_1
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mHaveData="
+    const-string/jumbo v0, "mHaveData="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -679,7 +679,7 @@
     .line 517
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mData="
+    const-string/jumbo v0, "mData="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

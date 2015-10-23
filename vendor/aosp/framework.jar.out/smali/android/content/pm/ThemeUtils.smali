@@ -598,21 +598,21 @@
     .end annotation
 
     .prologue
-    .line 699
+    .line 702
     .local p1, "componentMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
-    .line 707
+    .line 710
     :cond_0
     return-void
 
-    .line 701
+    .line 704
     :cond_1
     invoke-static {p0}, Landroid/content/pm/ThemeUtils;->getDefaultComponents(Landroid/content/Context;)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 702
+    .line 705
     .local v1, "defaultComponents":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -637,7 +637,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 703
+    .line 706
     .local v0, "component":Ljava/lang/String;
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -645,7 +645,7 @@
 
     if-nez v3, :cond_2
 
-    .line 704
+    .line 707
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1735,14 +1735,14 @@
     .locals 12
 
     .prologue
-    .line 720
+    .line 723
     const/4 v9, 0x0
 
-    .line 721
+    .line 724
     .local v9, "config":Landroid/content/res/ThemeConfig;
     const/4 v0, 0x0
 
-    .line 723
+    .line 726
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     :try_start_0
     const-string v1, "/data/data/com.android.providers.settings/databases/settings.db"
@@ -1755,13 +1755,13 @@
 
     move-result-object v0
 
-    .line 725
+    .line 728
     if-eqz v0, :cond_1
 
-    .line 726
+    .line 729
     const-string/jumbo v3, "name=?"
 
-    .line 727
+    .line 730
     .local v3, "selection":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -1773,7 +1773,7 @@
 
     aput-object v5, v4, v1
 
-    .line 729
+    .line 732
     .local v4, "selectionArgs":[Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -1785,7 +1785,7 @@
 
     aput-object v5, v2, v1
 
-    .line 730
+    .line 733
     .local v2, "columns":[Ljava/lang/String;
     const-string/jumbo v1, "secure"
 
@@ -1799,37 +1799,37 @@
 
     move-result-object v8
 
-    .line 732
+    .line 735
     .local v8, "c":Landroid/database/Cursor;
     if-eqz v8, :cond_1
 
-    .line 733
+    .line 736
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 734
+    .line 737
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 735
+    .line 738
     const/4 v1, 0x0
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 736
+    .line 739
     .local v11, "json":Ljava/lang/String;
     if-eqz v11, :cond_0
 
-    .line 737
+    .line 740
     invoke-static {v11}, Landroid/content/res/ThemeConfig;->fromJson(Ljava/lang/String;)Landroid/content/res/ThemeConfig;
 
     move-result-object v9
 
-    .line 740
+    .line 743
     .end local v11    # "json":Ljava/lang/String;
     :cond_0
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
@@ -1837,7 +1837,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 746
+    .line 749
     .end local v2    # "columns":[Ljava/lang/String;
     .end local v3    # "selection":Ljava/lang/String;
     .end local v4    # "selectionArgs":[Ljava/lang/String;
@@ -1845,19 +1845,19 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 747
+    .line 750
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 751
+    .line 754
     :cond_2
     :goto_0
     return-object v9
 
-    .line 743
+    .line 746
     :catch_0
     move-exception v10
 
-    .line 744
+    .line 747
     .local v10, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "ThemeUtils"
@@ -1868,22 +1868,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 746
+    .line 749
     if-eqz v0, :cond_2
 
-    .line 747
+    .line 750
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     goto :goto_0
 
-    .line 746
+    .line 749
     .end local v10    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
     if-eqz v0, :cond_3
 
-    .line 747
+    .line 750
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_3
@@ -2090,16 +2090,16 @@
     .end annotation
 
     .prologue
-    .line 669
+    .line 672
     invoke-static {p0}, Landroid/content/pm/ThemeUtils;->getDefaultThemePackageName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 670
+    .line 673
     .local v3, "defaultThemePkg":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 671
+    .line 674
     .local v2, "defaultComponents":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string/jumbo v6, "system"
 
@@ -2107,7 +2107,7 @@
 
     move-result-object v5
 
-    .line 672
+    .line 675
     .local v5, "systemComponents":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string/jumbo v6, "system"
 
@@ -2117,12 +2117,12 @@
 
     if-nez v6, :cond_0
 
-    .line 673
+    .line 676
     invoke-static {p0, v3}, Landroid/content/pm/ThemeUtils;->getSupportedComponents(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 676
+    .line 679
     :cond_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -2132,11 +2132,11 @@
 
     invoke-direct {v1, v6}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 677
+    .line 680
     .local v1, "componentMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v2, :cond_1
 
-    .line 678
+    .line 681
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -2155,13 +2155,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 679
+    .line 682
     .local v0, "component":Ljava/lang/String;
     invoke-interface {v1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 682
+    .line 685
     .end local v0    # "component":Ljava/lang/String;
     .end local v4    # "i$":Ljava/util/Iterator;
     :cond_1
@@ -2184,7 +2184,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 683
+    .line 686
     .restart local v0    # "component":Ljava/lang/String;
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -2192,14 +2192,14 @@
 
     if-nez v6, :cond_2
 
-    .line 684
+    .line 687
     const-string/jumbo v6, "system"
 
     invoke-interface {v1, v0, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 688
+    .line 691
     .end local v0    # "component":Ljava/lang/String;
     :cond_3
     return-object v1
@@ -2710,7 +2710,7 @@
     .param p0, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 772
+    .line 775
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
     if-eqz v1, :cond_0
@@ -2721,17 +2721,17 @@
 
     move-result v0
 
-    .line 773
+    .line 776
     .local v0, "hash":I
     :goto_0
     mul-int/lit8 v1, v0, 0x1f
 
     add-int/lit8 v0, v1, 0x3
 
-    .line 774
+    .line 777
     return v0
 
-    .line 772
+    .line 775
     .end local v0    # "hash":I
     :cond_0
     const/4 v0, 0x0
@@ -2794,20 +2794,21 @@
 
     .line 649
     .local v7, "c":Landroid/database/Cursor;
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
+    .line 650
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 650
+    .line 651
     invoke-static {}, Landroid/content/pm/ThemeUtils;->getAllComponents()Ljava/util/List;
 
     move-result-object v6
 
-    .line 651
+    .line 652
     .local v6, "allComponents":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2828,13 +2829,13 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 652
+    .line 653
     .local v8, "component":Ljava/lang/String;
     invoke-interface {v7, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 653
+    .line 654
     .local v10, "index":I
     invoke-interface {v7, v10}, Landroid/database/Cursor;->getInt(I)I
 
@@ -2842,17 +2843,21 @@
 
     if-ne v0, v12, :cond_0
 
-    .line 654
+    .line 655
     invoke-interface {v11, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 658
+    .line 659
     .end local v6    # "allComponents":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v8    # "component":Ljava/lang/String;
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v10    # "index":I
     :cond_1
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
+
+    .line 661
+    :cond_2
     return-object v11
 .end method
 
@@ -3088,7 +3093,7 @@
     .param p0, "component"    # Ljava/lang/String;
 
     .prologue
-    .line 761
+    .line 764
     const-string v0, "default"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

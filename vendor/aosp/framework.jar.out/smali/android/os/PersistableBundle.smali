@@ -3,9 +3,9 @@
 .source "PersistableBundle.java"
 
 # interfaces
+.implements Ljava/lang/Cloneable;
 .implements Landroid/os/Parcelable;
 .implements Lcom/android/internal/util/XmlUtils$WriteMapCallback;
-.implements Ljava/lang/Cloneable;
 
 
 # annotations

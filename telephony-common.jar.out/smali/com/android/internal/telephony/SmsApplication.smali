@@ -186,7 +186,7 @@
 
     .line 338
     .local v11, "r":Landroid/content/res/Resources;
-    const v13, 0x10400f2
+    const v13, 0x10400fb
 
     invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2035,7 +2035,7 @@
 
     move-result-object v5
 
-    const v6, 0x1070052
+    const v6, 0x1070053
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

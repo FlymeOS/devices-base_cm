@@ -34,6 +34,8 @@
 
 .field public static final REFRESH_RESULT:Ljava/lang/String; = "refresh_result"
 
+.field public static final STK_PERMISSION:Ljava/lang/String; = "android.permission.RECEIVE_STK_COMMANDS"
+
 
 # virtual methods
 .method public abstract onCmdResponse(Lcom/android/internal/telephony/cat/CatResponseMessage;)V

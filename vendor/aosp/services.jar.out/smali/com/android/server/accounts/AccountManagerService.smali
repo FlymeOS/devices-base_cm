@@ -1656,7 +1656,7 @@
 
     iget-object v4, v0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
-    const v5, 0x104061d
+    const v5, 0x1040626
 
     const/4 v6, 0x1
 
@@ -1946,7 +1946,7 @@
 
     .line 3010
     .local v10, "contextForUser":Landroid/content/Context;
-    const v4, 0x10401b8
+    const v4, 0x10401c1
 
     invoke-virtual {v10, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2584,7 +2584,7 @@
 
     move-result-object v21
 
-    const v22, 0x104010f
+    const v22, 0x1040118
 
     invoke-virtual/range {v21 .. v22}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

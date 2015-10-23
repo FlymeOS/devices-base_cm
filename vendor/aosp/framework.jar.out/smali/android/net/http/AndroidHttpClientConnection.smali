@@ -3,8 +3,8 @@
 .source "AndroidHttpClientConnection.java"
 
 # interfaces
-.implements Lorg/apache/http/HttpConnection;
 .implements Lorg/apache/http/HttpInetConnection;
+.implements Lorg/apache/http/HttpConnection;
 
 
 # instance fields

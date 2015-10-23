@@ -3,8 +3,8 @@
 .source "GlobalActions.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
 .implements Lcom/android/internal/policy/impl/GlobalActions$Action;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations

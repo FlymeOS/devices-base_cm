@@ -3,8 +3,8 @@
 .source "AlteredCharSequence.java"
 
 # interfaces
-.implements Landroid/text/GetChars;
 .implements Ljava/lang/CharSequence;
+.implements Landroid/text/GetChars;
 
 
 # annotations

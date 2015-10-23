@@ -228,7 +228,7 @@
     .prologue
     const/4 v4, 0x0
 
-    const v10, 0x1040634
+    const v10, 0x104063d
 
     const/4 v1, 0x0
 
@@ -352,7 +352,7 @@
 
     move-result-object v7
 
-    const v3, 0x1040635
+    const v3, 0x104063e
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

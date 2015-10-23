@@ -3,10 +3,10 @@
 .source "Editable.java"
 
 # interfaces
+.implements Ljava/lang/CharSequence;
 .implements Landroid/text/GetChars;
 .implements Landroid/text/Spannable;
 .implements Ljava/lang/Appendable;
-.implements Ljava/lang/CharSequence;
 
 
 # annotations

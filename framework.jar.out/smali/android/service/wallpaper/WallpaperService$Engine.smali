@@ -1004,7 +1004,7 @@
     .line 525
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mInitializing="
+    const-string/jumbo v0, "mInitializing="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1044,7 +1044,7 @@
     .line 529
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mDisplay="
+    const-string/jumbo v0, "mDisplay="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1055,7 +1055,7 @@
     .line 530
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mCreated="
+    const-string/jumbo v0, "mCreated="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1222,7 +1222,7 @@
     .line 547
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mConfiguration="
+    const-string/jumbo v0, "mConfiguration="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -2216,7 +2216,7 @@
 
     move-result-object v2
 
-    const v3, 0x1120084
+    const v3, 0x1120085
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 

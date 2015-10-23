@@ -40,7 +40,7 @@
 
 .field static final CATEGORY_STANDARD_SHORT_CODE:I = 0x2
 
-.field private static final DBG:Z = false
+.field private static final DBG:Z = true
 
 .field private static final DEFAULT_SMS_CHECK_PERIOD:I = 0xea60
 
@@ -238,18 +238,18 @@
     .locals 5
 
     .prologue
-    .line 639
+    .line 643
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 640
+    .line 644
     .local v1, "uid":I
     invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 641
+    .line 645
     .local v0, "appId":I
     const/16 v2, 0x3e8
 
@@ -261,11 +261,11 @@
 
     if-nez v1, :cond_1
 
-    .line 642
+    .line 646
     :cond_0
     return-void
 
-    .line 644
+    .line 648
     :cond_1
     new-instance v2, Ljava/lang/SecurityException;
 
@@ -297,12 +297,12 @@
     .param p0, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 622
+    .line 626
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 623
+    .line 627
     .local v2, "uid":I
     invoke-static {v2}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -314,11 +314,11 @@
 
     if-nez v2, :cond_1
 
-    .line 636
+    .line 640
     :cond_0
     return-void
 
-    .line 627
+    .line 631
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -335,7 +335,7 @@
 
     move-result-object v0
 
-    .line 629
+    .line 633
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget v3, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -345,7 +345,7 @@
 
     if-nez v3, :cond_0
 
-    .line 630
+    .line 634
     new-instance v3, Ljava/lang/SecurityException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -394,12 +394,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 633
+    .line 637
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v1
 
-    .line 634
+    .line 638
     .local v1, "re":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/SecurityException;
 
@@ -764,9 +764,41 @@
     const-string v9, "Parsing pattern data found null"
 
     invoke-static {v7, v9}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 384
     .end local v2    # "element":Ljava/lang/String;
     :goto_1
+    const-string v7, "SmsUsageMonitor"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "Country ("
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, ") not found"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v7, v9}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     move-object v7, v8
 
     .line 385
@@ -776,6 +808,7 @@
     .line 365
     .restart local v2    # "element":Ljava/lang/String;
     :cond_1
+    :try_start_1
     const-string v7, "shortcode"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -845,9 +878,9 @@
     new-instance v7, Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
 
     invoke-direct {v7, v4, v5, v3, v6}, Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    :try_end_1
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_2
 
@@ -875,7 +908,7 @@
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v2    # "element":Ljava/lang/String;
     :cond_2
-    :try_start_1
+    :try_start_2
     const-string v7, "SmsUsageMonitor"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -897,11 +930,11 @@
     move-result-object v9
 
     invoke-static {v7, v9}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    :try_end_2
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 381
     .end local v2    # "element":Ljava/lang/String;
@@ -916,7 +949,7 @@
 
     invoke-static {v7, v9, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1
+    goto/16 :goto_1
 .end method
 
 .method private isUnderLimit(Ljava/util/ArrayList;I)Z
@@ -936,7 +969,7 @@
     .local p1, "sent":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v5, 0x0
 
-    .line 667
+    .line 671
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -945,7 +978,7 @@
 
     move-result-object v2
 
-    .line 668
+    .line 672
     .local v2, "ct":Ljava/lang/Long;
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
@@ -957,7 +990,7 @@
 
     sub-long v0, v6, v8
 
-    .line 672
+    .line 676
     .local v0, "beginCheckPeriod":J
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -980,12 +1013,12 @@
 
     if-gez v4, :cond_0
 
-    .line 673
+    .line 677
     invoke-virtual {p1, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 676
+    .line 680
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -997,26 +1030,26 @@
 
     if-gt v4, v6, :cond_2
 
-    .line 677
+    .line 681
     const/4 v3, 0x0
 
     .local v3, "i":I
     :goto_1
     if-ge v3, p2, :cond_1
 
-    .line 678
+    .line 682
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 677
+    .line 681
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 680
+    .line 684
     :cond_1
     const/4 v4, 0x1
 
-    .line 682
+    .line 686
     .end local v3    # "i":I
     :goto_2
     return v4
@@ -1031,25 +1064,25 @@
     .locals 11
 
     .prologue
-    .line 477
+    .line 481
     iget-object v8, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     monitor-enter v8
 
-    .line 478
+    .line 482
     :try_start_0
     iget-object v7, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
 
     if-nez v7, :cond_0
 
-    .line 479
+    .line 483
     new-instance v0, Ljava/io/File;
 
     const-string v7, "/data/misc/sms"
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 480
+    .line 484
     .local v0, "dir":Ljava/io/File;
     new-instance v7, Landroid/util/AtomicFile;
 
@@ -1063,17 +1096,17 @@
 
     iput-object v7, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
 
-    .line 482
+    .line 486
     iget-object v7, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 484
+    .line 488
     const/4 v3, 0x0
 
-    .line 486
+    .line 490
     .local v3, "infile":Ljava/io/FileInputStream;
     :try_start_1
     iget-object v7, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
@@ -1082,27 +1115,27 @@
 
     move-result-object v3
 
-    .line 487
+    .line 491
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v5
 
-    .line 488
+    .line 492
     .local v5, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v7, 0x0
 
     invoke-interface {v5, v3, v7}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 490
+    .line 494
     const-string v7, "premium-sms-policy"
 
     invoke-static {v5, v7}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 493
+    .line 497
     :goto_0
     invoke-static {v5}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 495
+    .line 499
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1113,21 +1146,21 @@
 
     move-result-object v2
 
-    .line 496
+    .line 500
     .local v2, "element":Ljava/lang/String;
     if-nez v2, :cond_1
 
-    .line 523
+    .line 527
     if-eqz v3, :cond_0
 
-    .line 525
+    .line 529
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_9
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 531
+    .line 535
     .end local v0    # "dir":Ljava/io/File;
     .end local v2    # "element":Ljava/lang/String;
     .end local v3    # "infile":Ljava/io/FileInputStream;
@@ -1139,10 +1172,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 532
+    .line 536
     return-void
 
-    .line 498
+    .line 502
     .restart local v0    # "dir":Ljava/io/File;
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v3    # "infile":Ljava/io/FileInputStream;
@@ -1157,7 +1190,7 @@
 
     if-eqz v7, :cond_4
 
-    .line 499
+    .line 503
     const/4 v7, 0x0
 
     const-string v9, "name"
@@ -1166,7 +1199,7 @@
 
     move-result-object v4
 
-    .line 500
+    .line 504
     .local v4, "packageName":Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -1176,11 +1209,11 @@
 
     move-result-object v6
 
-    .line 501
+    .line 505
     .local v6, "policy":Ljava/lang/String;
     if-nez v4, :cond_2
 
-    .line 502
+    .line 506
     const-string v7, "SmsUsageMonitor"
 
     const-string v9, "Error: missing package name attribute"
@@ -1195,7 +1228,7 @@
 
     goto :goto_0
 
-    .line 514
+    .line 518
     .end local v2    # "element":Ljava/lang/String;
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -1203,10 +1236,10 @@
     :catch_0
     move-exception v7
 
-    .line 523
+    .line 527
     if-eqz v3, :cond_0
 
-    .line 525
+    .line 529
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -1215,13 +1248,13 @@
 
     goto :goto_1
 
-    .line 526
+    .line 530
     :catch_1
     move-exception v7
 
     goto :goto_1
 
-    .line 503
+    .line 507
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v4    # "packageName":Ljava/lang/String;
     .restart local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -1229,7 +1262,7 @@
     :cond_2
     if-nez v6, :cond_3
 
-    .line 504
+    .line 508
     :try_start_6
     const-string v7, "SmsUsageMonitor"
 
@@ -1245,7 +1278,7 @@
 
     goto :goto_0
 
-    .line 516
+    .line 520
     .end local v2    # "element":Ljava/lang/String;
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -1253,7 +1286,7 @@
     :catch_2
     move-exception v1
 
-    .line 517
+    .line 521
     .local v1, "e":Ljava/io/IOException;
     :try_start_7
     const-string v7, "SmsUsageMonitor"
@@ -1264,10 +1297,10 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 523
+    .line 527
     if-eqz v3, :cond_0
 
-    .line 525
+    .line 529
     :try_start_8
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -1276,13 +1309,13 @@
 
     goto :goto_1
 
-    .line 526
+    .line 530
     :catch_3
     move-exception v7
 
     goto :goto_1
 
-    .line 506
+    .line 510
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v4    # "packageName":Ljava/lang/String;
@@ -1310,11 +1343,11 @@
 
     goto :goto_0
 
-    .line 507
+    .line 511
     :catch_4
     move-exception v1
 
-    .line 508
+    .line 512
     .local v1, "e":Ljava/lang/NumberFormatException;
     :try_start_a
     const-string v7, "SmsUsageMonitor"
@@ -1347,7 +1380,7 @@
 
     goto :goto_0
 
-    .line 518
+    .line 522
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     .end local v2    # "element":Ljava/lang/String;
     .end local v4    # "packageName":Ljava/lang/String;
@@ -1356,7 +1389,7 @@
     :catch_5
     move-exception v1
 
-    .line 519
+    .line 523
     .restart local v1    # "e":Ljava/lang/NumberFormatException;
     :try_start_b
     const-string v7, "SmsUsageMonitor"
@@ -1367,10 +1400,10 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 523
+    .line 527
     if-eqz v3, :cond_0
 
-    .line 525
+    .line 529
     :try_start_c
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_c
@@ -1379,13 +1412,13 @@
 
     goto :goto_1
 
-    .line 526
+    .line 530
     :catch_6
     move-exception v7
 
     goto :goto_1
 
-    .line 511
+    .line 515
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -1421,13 +1454,13 @@
 
     goto/16 :goto_0
 
-    .line 520
+    .line 524
     .end local v2    # "element":Ljava/lang/String;
     .end local v5    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     :catch_7
     move-exception v1
 
-    .line 521
+    .line 525
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_e
     const-string v7, "SmsUsageMonitor"
@@ -1438,10 +1471,10 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_0
 
-    .line 523
+    .line 527
     if-eqz v3, :cond_0
 
-    .line 525
+    .line 529
     :try_start_f
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_f
@@ -1450,33 +1483,33 @@
 
     goto/16 :goto_1
 
-    .line 526
+    .line 530
     :catch_8
     move-exception v7
 
     goto/16 :goto_1
 
-    .line 523
+    .line 527
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catchall_0
     move-exception v7
 
     if-eqz v3, :cond_5
 
-    .line 525
+    .line 529
     :try_start_10
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_10
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_a
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
 
-    .line 527
+    .line 531
     :cond_5
     :goto_2
     :try_start_11
     throw v7
 
-    .line 531
+    .line 535
     .end local v0    # "dir":Ljava/io/File;
     .end local v3    # "infile":Ljava/io/FileInputStream;
     :catchall_1
@@ -1488,7 +1521,7 @@
 
     throw v7
 
-    .line 526
+    .line 530
     .restart local v0    # "dir":Ljava/io/File;
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v3    # "infile":Ljava/io/FileInputStream;
@@ -1511,12 +1544,12 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 686
+    .line 690
     const-string v0, "SmsUsageMonitor"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
+    .line 691
     return-void
 .end method
 
@@ -1545,7 +1578,7 @@
     .locals 10
 
     .prologue
-    .line 652
+    .line 656
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -1556,13 +1589,13 @@
 
     sub-long v0, v6, v8
 
-    .line 654
+    .line 658
     .local v0, "beginCheckPeriod":J
     iget-object v6, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     monitor-enter v6
 
-    .line 655
+    .line 659
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
@@ -1574,7 +1607,7 @@
 
     move-result-object v3
 
-    .line 656
+    .line 660
     .local v3, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     :cond_0
     :goto_0
@@ -1584,14 +1617,14 @@
 
     if-eqz v5, :cond_2
 
-    .line 657
+    .line 661
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 658
+    .line 662
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1599,7 +1632,7 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 659
+    .line 663
     .local v4, "oldList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1627,13 +1660,13 @@
 
     if-gez v5, :cond_0
 
-    .line 660
+    .line 664
     :cond_1
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 663
+    .line 667
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     .end local v3    # "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     .end local v4    # "oldList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
@@ -1653,7 +1686,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 664
+    .line 668
     return-void
 .end method
 
@@ -1661,15 +1694,15 @@
     .locals 9
 
     .prologue
-    .line 539
+    .line 543
     iget-object v6, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     monitor-enter v6
 
-    .line 540
+    .line 544
     const/4 v3, 0x0
 
-    .line 542
+    .line 546
     .local v3, "outfile":Ljava/io/FileOutputStream;
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
@@ -1678,18 +1711,18 @@
 
     move-result-object v3
 
-    .line 544
+    .line 548
     new-instance v2, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v2}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 545
+    .line 549
     .local v2, "out":Lorg/xmlpull/v1/XmlSerializer;
     const-string v5, "utf-8"
 
     invoke-interface {v2, v3, v5}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 547
+    .line 551
     const/4 v5, 0x0
 
     const/4 v7, 0x1
@@ -1700,14 +1733,14 @@
 
     invoke-interface {v2, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 549
+    .line 553
     const/4 v5, 0x0
 
     const-string v7, "premium-sms-policy"
 
     invoke-interface {v2, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 551
+    .line 555
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -1732,7 +1765,7 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 552
+    .line 556
     .local v4, "policy":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     const/4 v5, 0x0
 
@@ -1740,7 +1773,7 @@
 
     invoke-interface {v2, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 553
+    .line 557
     const/4 v7, 0x0
 
     const-string v8, "name"
@@ -1753,7 +1786,7 @@
 
     invoke-interface {v2, v7, v8, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 554
+    .line 558
     const/4 v7, 0x0
 
     const-string v8, "sms-policy"
@@ -1770,7 +1803,7 @@
 
     invoke-interface {v2, v7, v8, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 555
+    .line 559
     const/4 v5, 0x0
 
     const-string v7, "package"
@@ -1782,14 +1815,14 @@
 
     goto :goto_0
 
-    .line 562
+    .line 566
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "out":Lorg/xmlpull/v1/XmlSerializer;
     .end local v4    # "policy":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     :catch_0
     move-exception v0
 
-    .line 563
+    .line 567
     .local v0, "e":Ljava/io/IOException;
     :try_start_1
     const-string v5, "SmsUsageMonitor"
@@ -1798,15 +1831,15 @@
 
     invoke-static {v5, v7, v0}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 564
+    .line 568
     if-eqz v3, :cond_0
 
-    .line 565
+    .line 569
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v5, v3}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 568
+    .line 572
     .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     :goto_1
@@ -1814,10 +1847,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 569
+    .line 573
     return-void
 
-    .line 558
+    .line 562
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "out":Lorg/xmlpull/v1/XmlSerializer;
     :cond_1
@@ -1828,10 +1861,10 @@
 
     invoke-interface {v2, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 559
+    .line 563
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 561
+    .line 565
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPolicyFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v5, v3}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
@@ -1841,7 +1874,7 @@
 
     goto :goto_1
 
-    .line 568
+    .line 572
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "out":Lorg/xmlpull/v1/XmlSerializer;
     :catchall_0
@@ -1940,10 +1973,17 @@
 
     if-eqz v2, :cond_0
 
+    .line 435
+    const-string v2, "SmsUsageMonitor"
+
+    const-string v3, "isEmergencyNumber"
+
+    invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 436
     monitor-exit v1
 
-    .line 466
+    .line 470
     :goto_0
     return v0
 
@@ -1957,12 +1997,19 @@
 
     if-nez v2, :cond_1
 
+    .line 440
+    const-string v2, "SmsUsageMonitor"
+
+    const-string v3, "check disabled"
+
+    invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 441
     monitor-exit v1
 
     goto :goto_0
 
-    .line 469
+    .line 473
     :catchall_0
     move-exception v0
 
@@ -1974,7 +2021,7 @@
 
     .line 444
     :cond_1
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_5
 
     .line 445
     :try_start_1
@@ -2000,19 +2047,31 @@
 
     cmp-long v2, v2, v4
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_5
 
     .line 447
     :cond_2
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
+
+    .line 448
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPatternFile:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_3
 
     .line 449
+    const-string v2, "SmsUsageMonitor"
+
+    const-string v3, "Loading SMS Short Code patterns from file"
+
+    invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 450
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/SmsUsageMonitor;->getPatternMatcherFromFile(Ljava/lang/String;)Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
 
     move-result-object v2
@@ -2020,16 +2079,36 @@
     iput-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
 
     .line 454
-    :goto_1
-    iput-object p2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentCountry:Ljava/lang/String;
-
-    .line 458
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
 
-    if-eqz v2, :cond_5
+    if-nez v2, :cond_4
 
-    .line 459
+    .line 455
+    const-string v2, "SmsUsageMonitor"
+
+    const-string v3, "Loading SMS Short Code patterns from resource"
+
+    invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 456
+    invoke-direct {p0, p2}, Lcom/android/internal/telephony/SmsUsageMonitor;->getPatternMatcherFromResource(Ljava/lang/String;)Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
+
+    .line 458
+    :cond_4
+    iput-object p2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentCountry:Ljava/lang/String;
+
+    .line 462
+    :cond_5
+    iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
+
+    if-eqz v2, :cond_6
+
+    .line 463
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;->getNumberCategory(Ljava/lang/String;)I
@@ -2040,18 +2119,8 @@
 
     goto :goto_0
 
-    .line 452
-    :cond_4
-    invoke-direct {p0, p2}, Lcom/android/internal/telephony/SmsUsageMonitor;->getPatternMatcherFromResource(Ljava/lang/String;)Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCurrentPatternMatcher:Lcom/android/internal/telephony/SmsUsageMonitor$ShortCodePatternMatcher;
-
-    goto :goto_1
-
-    .line 462
-    :cond_5
+    .line 466
+    :cond_6
     const-string v2, "SmsUsageMonitor"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2080,29 +2149,29 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 463
+    .line 467
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
     const/4 v3, 0x5
 
-    if-gt v2, v3, :cond_6
+    if-gt v2, v3, :cond_7
 
-    .line 464
+    .line 468
     const/4 v0, 0x3
 
     monitor-exit v1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 466
-    :cond_6
+    .line 470
+    :cond_7
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method dispose()V
@@ -2123,15 +2192,15 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 583
+    .line 587
     invoke-static {p1}, Lcom/android/internal/telephony/SmsUsageMonitor;->checkCallerIsSystemOrSameApp(Ljava/lang/String;)V
 
-    .line 584
+    .line 588
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 585
+    .line 589
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
@@ -2141,16 +2210,16 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 586
+    .line 590
     .local v0, "policy":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 587
+    .line 591
     const/4 v1, 0x0
 
     monitor-exit v2
 
-    .line 589
+    .line 593
     :goto_0
     return v1
 
@@ -2163,7 +2232,7 @@
 
     goto :goto_0
 
-    .line 591
+    .line 595
     .end local v0    # "policy":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -2181,10 +2250,10 @@
     .param p2, "permission"    # I
 
     .prologue
-    .line 604
+    .line 608
     invoke-static {}, Lcom/android/internal/telephony/SmsUsageMonitor;->checkCallerIsSystemOrPhoneApp()V
 
-    .line 605
+    .line 609
     const/4 v0, 0x1
 
     if-lt p2, v0, :cond_0
@@ -2193,7 +2262,7 @@
 
     if-le p2, v0, :cond_1
 
-    .line 607
+    .line 611
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2219,13 +2288,13 @@
 
     throw v0
 
-    .line 609
+    .line 613
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 610
+    .line 614
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mPremiumSmsPolicy:Ljava/util/HashMap;
 
@@ -2235,12 +2304,12 @@
 
     invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 611
+    .line 615
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 613
+    .line 617
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/internal/telephony/SmsUsageMonitor$1;
@@ -2251,10 +2320,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 619
+    .line 623
     return-void
 
-    .line 611
+    .line 615
     :catchall_0
     move-exception v0
 

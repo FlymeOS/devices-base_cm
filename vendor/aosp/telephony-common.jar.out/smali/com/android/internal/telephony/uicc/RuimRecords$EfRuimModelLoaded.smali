@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1080
+    .line 1081
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimModelLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 1080
+    .line 1081
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimModelLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 1082
+    .line 1083
     const-string v0, "EF_RUIM_MODEL"
 
     return-object v0
@@ -63,7 +63,7 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 1086
+    .line 1087
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, [B
@@ -72,7 +72,7 @@
 
     check-cast v0, [B
 
-    .line 1088
+    .line 1089
     .local v0, "data":[B
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimModelLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -100,6 +100,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1089
+    .line 1090
     return-void
 .end method

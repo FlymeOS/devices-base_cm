@@ -26,6 +26,8 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "android.hardware.ICmHardwareService"
 
+.field static final TRANSACTION_get:I = 0x2
+
 .field static final TRANSACTION_getDisplayColorCalibration:I = 0x4
 
 .field static final TRANSACTION_getDisplayGammaCalibration:I = 0x7
@@ -42,9 +44,11 @@
 
 .field static final TRANSACTION_getSupportedFeatures_0:I = 0x1
 
+.field static final TRANSACTION_getThermalState:I = 0x10
+
 .field static final TRANSACTION_getVibratorIntensity:I = 0x9
 
-.field static final TRANSACTION_get_1:I = 0x2
+.field static final TRANSACTION_registerThermalListener:I = 0x11
 
 .field static final TRANSACTION_requireAdaptiveBacklightForSunlightEnhancement:I = 0xf
 
@@ -55,6 +59,8 @@
 .field static final TRANSACTION_setDisplayGammaCalibration:I = 0x8
 
 .field static final TRANSACTION_setVibratorIntensity:I = 0xa
+
+.field static final TRANSACTION_unRegisterThermalListener:I = 0x12
 
 
 # direct methods
@@ -150,7 +156,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 183
+    .line 211
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -577,9 +583,101 @@
 
     goto/16 :goto_0
 
-    .line 39
-    nop
+    .line 184
+    .end local v2    # "_result":Z
+    :sswitch_10
+    const-string v4, "android.hardware.ICmHardwareService"
 
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 185
+    invoke-virtual {p0}, Landroid/hardware/ICmHardwareService$Stub;->getThermalState()I
+
+    move-result v2
+
+    .line 186
+    .local v2, "_result":I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 187
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 192
+    .end local v2    # "_result":I
+    :sswitch_11
+    const-string v6, "android.hardware.ICmHardwareService"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 194
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v6
+
+    invoke-static {v6}, Landroid/hardware/IThermalListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/IThermalListenerCallback;
+
+    move-result-object v0
+
+    .line 195
+    .local v0, "_arg0":Landroid/hardware/IThermalListenerCallback;
+    invoke-virtual {p0, v0}, Landroid/hardware/ICmHardwareService$Stub;->registerThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
+
+    move-result v2
+
+    .line 196
+    .local v2, "_result":Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 197
+    if-eqz v2, :cond_7
+
+    move v4, v5
+
+    :cond_7
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 202
+    .end local v0    # "_arg0":Landroid/hardware/IThermalListenerCallback;
+    .end local v2    # "_result":Z
+    :sswitch_12
+    const-string v6, "android.hardware.ICmHardwareService"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 204
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v6
+
+    invoke-static {v6}, Landroid/hardware/IThermalListenerCallback$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/IThermalListenerCallback;
+
+    move-result-object v0
+
+    .line 205
+    .restart local v0    # "_arg0":Landroid/hardware/IThermalListenerCallback;
+    invoke-virtual {p0, v0}, Landroid/hardware/ICmHardwareService$Stub;->unRegisterThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
+
+    move-result v2
+
+    .line 206
+    .restart local v2    # "_result":Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 207
+    if-eqz v2, :cond_8
+
+    move v4, v5
+
+    :cond_8
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -597,6 +695,9 @@
         0xd -> :sswitch_d
         0xe -> :sswitch_e
         0xf -> :sswitch_f
+        0x10 -> :sswitch_10
+        0x11 -> :sswitch_11
+        0x12 -> :sswitch_12
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

@@ -280,7 +280,7 @@
 
     move-result-object v0
 
-    const v1, #android:bool@config_useMasterVolume#t
+    const v1, 0x1120013
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

@@ -368,22 +368,22 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 1030
+    .line 1026
     iget v0, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 1033
+    .line 1029
     iget v0, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
     if-nez v0, :cond_0
 
-    .line 1034
+    .line 1030
     invoke-direct {p0}, Landroid/content/res/AssetManager;->destroy()V
 
-    .line 1036
+    .line 1032
     :cond_0
     return-void
 .end method
@@ -494,14 +494,14 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 1023
+    .line 1019
     iget v0, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 1024
+    .line 1020
     return-void
 .end method
 
@@ -610,23 +610,23 @@
     .param p1, "paths"    # [Ljava/lang/String;
 
     .prologue
-    .line 725
+    .line 721
     if-nez p1, :cond_1
 
-    .line 726
+    .line 722
     const/4 v0, 0x0
 
-    .line 734
+    .line 730
     :cond_0
     return-object v0
 
-    .line 729
+    .line 725
     :cond_1
     array-length v2, p1
 
     new-array v0, v2, [I
 
-    .line 730
+    .line 726
     .local v0, "cookies":[I
     const/4 v1, 0x0
 
@@ -636,7 +636,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 731
+    .line 727
     aget-object v2, p1, v1
 
     invoke-virtual {p0, v2}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
@@ -645,7 +645,7 @@
 
     aput v2, v0, v1
 
-    .line 730
+    .line 726
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -663,45 +663,15 @@
 
     .line 670
     :try_start_0
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 671
     invoke-direct {p0, p1, p2, p3}, Landroid/content/res/AssetManager;->addCommonOverlayPathNative(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     monitor-exit p0
 
-    .line 674
-    :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    monitor-exit p0
-
-    goto :goto_0
-
-    .line 675
+    .line 671
     :catchall_0
     move-exception v0
 
@@ -720,10 +690,10 @@
     .param p4, "pkgIdOverride"    # I
 
     .prologue
-    .line 693
+    .line 689
     monitor-enter p0
 
-    .line 694
+    .line 690
     :try_start_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/content/res/AssetManager;->addIconPathNative(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I
 
@@ -733,7 +703,7 @@
 
     return v0
 
-    .line 695
+    .line 691
     :catchall_0
     move-exception v0
 
@@ -782,7 +752,7 @@
     .param p1, "cookie"    # I
 
     .prologue
-    .line 839
+    .line 835
     iget-object v0, p0, Landroid/content/res/AssetManager;->mThemeCookies:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -791,7 +761,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
+    .line 836
     return-void
 .end method
 
@@ -969,7 +939,7 @@
     .locals 1
 
     .prologue
-    .line 844
+    .line 840
     iget-object v0, p0, Landroid/content/res/AssetManager;->mAppName:Ljava/lang/String;
 
     return-object v0
@@ -1009,7 +979,7 @@
     .locals 1
 
     .prologue
-    .line 831
+    .line 827
     iget v0, p0, Landroid/content/res/AssetManager;->mCommonResCookie:I
 
     return v0
@@ -1019,7 +989,7 @@
     .locals 1
 
     .prologue
-    .line 779
+    .line 775
     iget-object v0, p0, Landroid/content/res/AssetManager;->mCommonResPackageName:Ljava/lang/String;
 
     return-object v0
@@ -1032,7 +1002,7 @@
     .locals 1
 
     .prologue
-    .line 821
+    .line 817
     iget v0, p0, Landroid/content/res/AssetManager;->mIconPackCookie:I
 
     return v0
@@ -1042,7 +1012,7 @@
     .locals 1
 
     .prologue
-    .line 763
+    .line 759
     iget-object v0, p0, Landroid/content/res/AssetManager;->mIconPackageName:Ljava/lang/String;
 
     return-object v0
@@ -1420,7 +1390,7 @@
     .end annotation
 
     .prologue
-    .line 811
+    .line 807
     iget-object v0, p0, Landroid/content/res/AssetManager;->mThemeCookies:Ljava/util/ArrayList;
 
     return-object v0
@@ -1430,7 +1400,7 @@
     .locals 1
 
     .prologue
-    .line 795
+    .line 791
     iget-object v0, p0, Landroid/content/res/AssetManager;->mThemePackageName:Ljava/lang/String;
 
     return-object v0
@@ -1506,7 +1476,7 @@
     .locals 1
 
     .prologue
-    .line 755
+    .line 751
     iget-boolean v0, p0, Landroid/content/res/AssetManager;->mThemeSupport:Z
 
     return v0
@@ -1516,7 +1486,7 @@
     .locals 1
 
     .prologue
-    .line 854
+    .line 850
     iget-object v0, p0, Landroid/content/res/AssetManager;->mThemeCookies:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2407,10 +2377,10 @@
     .param p2, "cookie"    # I
 
     .prologue
-    .line 710
+    .line 706
     monitor-enter p0
 
-    .line 711
+    .line 707
     :try_start_0
     invoke-direct {p0, p1, p2}, Landroid/content/res/AssetManager;->removeOverlayPathNative(Ljava/lang/String;I)Z
 
@@ -2420,7 +2390,7 @@
 
     return v0
 
-    .line 712
+    .line 708
     :catchall_0
     move-exception v0
 
@@ -2442,10 +2412,10 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 849
+    .line 845
     iput-object p1, p0, Landroid/content/res/AssetManager;->mAppName:Ljava/lang/String;
 
-    .line 850
+    .line 846
     return-void
 .end method
 
@@ -2454,10 +2424,10 @@
     .param p1, "cookie"    # I
 
     .prologue
-    .line 826
+    .line 822
     iput p1, p0, Landroid/content/res/AssetManager;->mCommonResCookie:I
 
-    .line 827
+    .line 823
     return-void
 .end method
 
@@ -2466,10 +2436,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 787
+    .line 783
     iput-object p1, p0, Landroid/content/res/AssetManager;->mCommonResPackageName:Ljava/lang/String;
 
-    .line 788
+    .line 784
     return-void
 .end method
 
@@ -2481,10 +2451,10 @@
     .param p1, "cookie"    # I
 
     .prologue
-    .line 816
+    .line 812
     iput p1, p0, Landroid/content/res/AssetManager;->mIconPackCookie:I
 
-    .line 817
+    .line 813
     return-void
 .end method
 
@@ -2493,10 +2463,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 771
+    .line 767
     iput-object p1, p0, Landroid/content/res/AssetManager;->mIconPackageName:Ljava/lang/String;
 
-    .line 772
+    .line 768
     return-void
 .end method
 
@@ -2508,10 +2478,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 803
+    .line 799
     iput-object p1, p0, Landroid/content/res/AssetManager;->mThemePackageName:Ljava/lang/String;
 
-    .line 804
+    .line 800
     return-void
 .end method
 
@@ -2520,10 +2490,10 @@
     .param p1, "themeSupport"    # Z
 
     .prologue
-    .line 745
+    .line 741
     iput-boolean p1, p0, Landroid/content/res/AssetManager;->mThemeSupport:Z
 
-    .line 746
+    .line 742
     return-void
 .end method
 

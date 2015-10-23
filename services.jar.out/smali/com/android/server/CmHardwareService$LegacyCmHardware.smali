@@ -25,34 +25,34 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/server/CmHardwareService;)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 75
+    .line 83
     iput-object p1, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->this$0:Lcom/android/server/CmHardwareService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
+    .line 81
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 76
+    .line 84
     invoke-static {}, Lorg/cyanogenmod/hardware/AdaptiveBacklight;->isSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 85
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 78
+    .line 86
     :cond_0
     invoke-static {}, Lorg/cyanogenmod/hardware/ColorEnhancement;->isSupported()Z
 
@@ -60,14 +60,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 79
+    .line 87
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 80
+    .line 88
     :cond_1
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayColorCalibration;->isSupported()Z
 
@@ -75,14 +75,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 81
+    .line 89
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 82
+    .line 90
     :cond_2
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayGammaCalibration;->isSupported()Z
 
@@ -90,14 +90,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 83
+    .line 91
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 84
+    .line 92
     :cond_3
     invoke-static {}, Lorg/cyanogenmod/hardware/HighTouchSensitivity;->isSupported()Z
 
@@ -105,14 +105,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 85
+    .line 93
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x10
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 86
+    .line 94
     :cond_4
     invoke-static {}, Lorg/cyanogenmod/hardware/KeyDisabler;->isSupported()Z
 
@@ -120,14 +120,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 87
+    .line 95
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 88
+    .line 96
     :cond_5
     invoke-static {}, Lorg/cyanogenmod/hardware/LongTermOrbits;->isSupported()Z
 
@@ -135,14 +135,14 @@
 
     if-eqz v0, :cond_6
 
-    .line 89
+    .line 97
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit8 v0, v0, 0x40
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 90
+    .line 98
     :cond_6
     invoke-static {}, Lorg/cyanogenmod/hardware/SerialNumber;->isSupported()Z
 
@@ -150,14 +150,14 @@
 
     if-eqz v0, :cond_7
 
-    .line 91
+    .line 99
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit16 v0, v0, 0x80
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 92
+    .line 100
     :cond_7
     invoke-static {}, Lorg/cyanogenmod/hardware/SunlightEnhancement;->isSupported()Z
 
@@ -165,14 +165,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 93
+    .line 101
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit16 v0, v0, 0x100
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 94
+    .line 102
     :cond_8
     invoke-static {}, Lorg/cyanogenmod/hardware/TapToWake;->isSupported()Z
 
@@ -180,14 +180,14 @@
 
     if-eqz v0, :cond_9
 
-    .line 95
+    .line 103
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit16 v0, v0, 0x200
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 96
+    .line 104
     :cond_9
     invoke-static {}, Lorg/cyanogenmod/hardware/VibratorHW;->isSupported()Z
 
@@ -195,14 +195,14 @@
 
     if-eqz v0, :cond_a
 
-    .line 97
+    .line 105
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit16 v0, v0, 0x400
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 98
+    .line 106
     :cond_a
     invoke-static {}, Lorg/cyanogenmod/hardware/TouchscreenHovering;->isSupported()Z
 
@@ -210,15 +210,32 @@
 
     if-eqz v0, :cond_b
 
-    .line 99
+    .line 107
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     or-int/lit16 v0, v0, 0x800
 
     iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
-    .line 100
+    .line 108
     :cond_b
+    invoke-static {}, Lorg/cyanogenmod/hardware/ThermalMonitor;->isSupported()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    .line 109
+    iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
+
+    const v1, 0x8000
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
+
+    .line 110
+    :cond_c
     return-void
 .end method
 
@@ -227,12 +244,12 @@
     .param p1, "rgb"    # [I
 
     .prologue
-    .line 168
+    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 169
+    .line 181
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -240,31 +257,31 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 170
+    .line 182
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 171
+    .line 183
     const/4 v1, 0x1
 
     aget v1, p1, v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 172
+    .line 184
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
+    .line 185
     const/4 v1, 0x2
 
     aget v1, p1, v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 174
+    .line 186
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -280,7 +297,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 151
+    .line 163
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_2
@@ -288,25 +305,25 @@
     :cond_0
     move-object v1, v3
 
-    .line 164
+    .line 176
     :cond_1
     :goto_0
     return-object v1
 
-    .line 154
+    .line 166
     :cond_2
     invoke-virtual {p1, p2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 156
+    .line 168
     .local v2, "strArray":[Ljava/lang/String;
     :try_start_0
     array-length v4, v2
 
     new-array v1, v4, [I
 
-    .line 157
+    .line 169
     .local v1, "intArray":[I
     const/4 v0, 0x0
 
@@ -316,7 +333,7 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 158
+    .line 170
     aget-object v4, v2, v0
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -327,12 +344,12 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 157
+    .line 169
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 161
+    .line 173
     .end local v0    # "i":I
     .end local v1    # "intArray":[I
     :catch_0
@@ -340,7 +357,7 @@
 
     move-object v1, v3
 
-    .line 164
+    .line 176
     goto :goto_0
 .end method
 
@@ -351,10 +368,10 @@
     .param p1, "feature"    # I
 
     .prologue
-    .line 107
+    .line 117
     sparse-switch p1, :sswitch_data_0
 
-    .line 123
+    .line 135
     # getter for: Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/CmHardwareService;->access$000()Ljava/lang/String;
 
@@ -386,13 +403,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 136
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 109
+    .line 119
     :sswitch_0
     invoke-static {}, Lorg/cyanogenmod/hardware/AdaptiveBacklight;->isEnabled()Z
 
@@ -400,7 +417,7 @@
 
     goto :goto_0
 
-    .line 111
+    .line 121
     :sswitch_1
     invoke-static {}, Lorg/cyanogenmod/hardware/ColorEnhancement;->isEnabled()Z
 
@@ -408,7 +425,7 @@
 
     goto :goto_0
 
-    .line 113
+    .line 123
     :sswitch_2
     invoke-static {}, Lorg/cyanogenmod/hardware/HighTouchSensitivity;->isEnabled()Z
 
@@ -416,7 +433,7 @@
 
     goto :goto_0
 
-    .line 115
+    .line 125
     :sswitch_3
     invoke-static {}, Lorg/cyanogenmod/hardware/KeyDisabler;->isActive()Z
 
@@ -424,7 +441,7 @@
 
     goto :goto_0
 
-    .line 117
+    .line 127
     :sswitch_4
     invoke-static {}, Lorg/cyanogenmod/hardware/SunlightEnhancement;->isEnabled()Z
 
@@ -432,7 +449,7 @@
 
     goto :goto_0
 
-    .line 119
+    .line 129
     :sswitch_5
     invoke-static {}, Lorg/cyanogenmod/hardware/TapToWake;->isEnabled()Z
 
@@ -440,7 +457,7 @@
 
     goto :goto_0
 
-    .line 121
+    .line 131
     :sswitch_6
     invoke-static {}, Lorg/cyanogenmod/hardware/TouchscreenHovering;->isEnabled()Z
 
@@ -448,7 +465,17 @@
 
     goto :goto_0
 
-    .line 107
+    .line 133
+    :sswitch_7
+    invoke-static {}, Lorg/cyanogenmod/hardware/ThermalMonitor;->isEnabled()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 117
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -458,6 +485,7 @@
         0x100 -> :sswitch_4
         0x200 -> :sswitch_5
         0x800 -> :sswitch_6
+        0x8000 -> :sswitch_7
     .end sparse-switch
 .end method
 
@@ -473,7 +501,7 @@
 
     const/4 v4, 0x0
 
-    .line 178
+    .line 190
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayColorCalibration;->getCurColors()Ljava/lang/String;
 
     move-result-object v2
@@ -484,7 +512,7 @@
 
     move-result-object v1
 
-    .line 179
+    .line 191
     .local v1, "rgb":[I
     if-eqz v1, :cond_0
 
@@ -492,7 +520,7 @@
 
     if-eq v2, v7, :cond_1
 
-    .line 180
+    .line 192
     :cond_0
     # getter for: Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/CmHardwareService;->access$000()Ljava/lang/String;
@@ -503,43 +531,43 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
+    .line 193
     const/4 v0, 0x0
 
-    .line 193
+    .line 205
     :goto_0
     return-object v0
 
-    .line 183
+    .line 195
     :cond_1
     const/4 v2, 0x6
 
     new-array v0, v2, [I
 
-    .line 184
+    .line 196
     .local v0, "currentCalibration":[I
     aget v2, v1, v4
 
     aput v2, v0, v4
 
-    .line 185
+    .line 197
     aget v2, v1, v5
 
     aput v2, v0, v5
 
-    .line 186
+    .line 198
     aget v2, v1, v6
 
     aput v2, v0, v6
 
-    .line 187
+    .line 199
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayColorCalibration;->getDefValue()I
 
     move-result v2
 
     aput v2, v0, v7
 
-    .line 189
+    .line 201
     const/4 v2, 0x4
 
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayColorCalibration;->getMinValue()I
@@ -548,7 +576,7 @@
 
     aput v3, v0, v2
 
-    .line 191
+    .line 203
     const/4 v2, 0x5
 
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayColorCalibration;->getMaxValue()I
@@ -573,7 +601,7 @@
 
     const/4 v4, 0x0
 
-    .line 205
+    .line 217
     invoke-static {p1}, Lorg/cyanogenmod/hardware/DisplayGammaCalibration;->getCurGamma(I)Ljava/lang/String;
 
     move-result-object v2
@@ -584,7 +612,7 @@
 
     move-result-object v1
 
-    .line 206
+    .line 218
     .local v1, "rgb":[I
     if-eqz v1, :cond_0
 
@@ -592,7 +620,7 @@
 
     if-eq v2, v7, :cond_1
 
-    .line 207
+    .line 219
     :cond_0
     # getter for: Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/CmHardwareService;->access$000()Ljava/lang/String;
@@ -603,43 +631,43 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
+    .line 220
     const/4 v0, 0x0
 
-    .line 218
+    .line 230
     :goto_0
     return-object v0
 
-    .line 210
+    .line 222
     :cond_1
     const/4 v2, 0x5
 
     new-array v0, v2, [I
 
-    .line 211
+    .line 223
     .local v0, "currentCalibration":[I
     aget v2, v1, v4
 
     aput v2, v0, v4
 
-    .line 212
+    .line 224
     aget v2, v1, v5
 
     aput v2, v0, v5
 
-    .line 213
+    .line 225
     aget v2, v1, v6
 
     aput v2, v0, v6
 
-    .line 214
+    .line 226
     invoke-static {p1}, Lorg/cyanogenmod/hardware/DisplayGammaCalibration;->getMinValue(I)I
 
     move-result v2
 
     aput v2, v0, v7
 
-    .line 216
+    .line 228
     const/4 v2, 0x4
 
     invoke-static {p1}, Lorg/cyanogenmod/hardware/DisplayGammaCalibration;->getMaxValue(I)I
@@ -655,12 +683,12 @@
     .locals 2
 
     .prologue
-    .line 244
+    .line 256
     invoke-static {}, Lorg/cyanogenmod/hardware/LongTermOrbits;->getDestinationLocation()Ljava/io/File;
 
     move-result-object v0
 
-    .line 245
+    .line 257
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -673,7 +701,7 @@
     .locals 2
 
     .prologue
-    .line 249
+    .line 261
     invoke-static {}, Lorg/cyanogenmod/hardware/LongTermOrbits;->getDownloadInterval()J
 
     move-result-wide v0
@@ -685,7 +713,7 @@
     .locals 1
 
     .prologue
-    .line 240
+    .line 252
     invoke-static {}, Lorg/cyanogenmod/hardware/LongTermOrbits;->getSourceLocation()Ljava/lang/String;
 
     move-result-object v0
@@ -697,7 +725,7 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 213
     invoke-static {}, Lorg/cyanogenmod/hardware/DisplayGammaCalibration;->getNumberOfControls()I
 
     move-result v0
@@ -709,7 +737,7 @@
     .locals 1
 
     .prologue
-    .line 253
+    .line 265
     invoke-static {}, Lorg/cyanogenmod/hardware/SerialNumber;->getSerialNumber()Ljava/lang/String;
 
     move-result-object v0
@@ -721,7 +749,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 113
     iget v0, p0, Lcom/android/server/CmHardwareService$LegacyCmHardware;->mSupportedFeatures:I
 
     return v0
@@ -731,12 +759,12 @@
     .locals 3
 
     .prologue
-    .line 226
+    .line 238
     const/4 v1, 0x5
 
     new-array v0, v1, [I
 
-    .line 227
+    .line 239
     .local v0, "vibrator":[I
     const/4 v1, 0x0
 
@@ -746,7 +774,7 @@
 
     aput v2, v0, v1
 
-    .line 228
+    .line 240
     const/4 v1, 0x1
 
     invoke-static {}, Lorg/cyanogenmod/hardware/VibratorHW;->getDefaultIntensity()I
@@ -755,7 +783,7 @@
 
     aput v2, v0, v1
 
-    .line 229
+    .line 241
     const/4 v1, 0x2
 
     invoke-static {}, Lorg/cyanogenmod/hardware/VibratorHW;->getMinIntensity()I
@@ -764,7 +792,7 @@
 
     aput v2, v0, v1
 
-    .line 230
+    .line 242
     const/4 v1, 0x3
 
     invoke-static {}, Lorg/cyanogenmod/hardware/VibratorHW;->getMaxIntensity()I
@@ -773,7 +801,7 @@
 
     aput v2, v0, v1
 
-    .line 231
+    .line 243
     const/4 v1, 0x4
 
     invoke-static {}, Lorg/cyanogenmod/hardware/VibratorHW;->getWarningThreshold()I
@@ -782,7 +810,7 @@
 
     aput v2, v0, v1
 
-    .line 232
+    .line 244
     return-object v0
 .end method
 
@@ -790,7 +818,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 269
     invoke-static {}, Lorg/cyanogenmod/hardware/SunlightEnhancement;->isAdaptiveBacklightRequired()Z
 
     move-result v0
@@ -804,10 +832,10 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 129
+    .line 141
     sparse-switch p1, :sswitch_data_0
 
-    .line 145
+    .line 157
     # getter for: Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/CmHardwareService;->access$000()Ljava/lang/String;
 
@@ -839,13 +867,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 158
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 131
+    .line 143
     :sswitch_0
     invoke-static {p2}, Lorg/cyanogenmod/hardware/AdaptiveBacklight;->setEnabled(Z)Z
 
@@ -853,7 +881,7 @@
 
     goto :goto_0
 
-    .line 133
+    .line 145
     :sswitch_1
     invoke-static {p2}, Lorg/cyanogenmod/hardware/ColorEnhancement;->setEnabled(Z)Z
 
@@ -861,7 +889,7 @@
 
     goto :goto_0
 
-    .line 135
+    .line 147
     :sswitch_2
     invoke-static {p2}, Lorg/cyanogenmod/hardware/HighTouchSensitivity;->setEnabled(Z)Z
 
@@ -869,7 +897,7 @@
 
     goto :goto_0
 
-    .line 137
+    .line 149
     :sswitch_3
     invoke-static {p2}, Lorg/cyanogenmod/hardware/KeyDisabler;->setActive(Z)Z
 
@@ -877,7 +905,7 @@
 
     goto :goto_0
 
-    .line 139
+    .line 151
     :sswitch_4
     invoke-static {p2}, Lorg/cyanogenmod/hardware/SunlightEnhancement;->setEnabled(Z)Z
 
@@ -885,7 +913,7 @@
 
     goto :goto_0
 
-    .line 141
+    .line 153
     :sswitch_5
     invoke-static {p2}, Lorg/cyanogenmod/hardware/TapToWake;->setEnabled(Z)Z
 
@@ -893,7 +921,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 155
     :sswitch_6
     invoke-static {p2}, Lorg/cyanogenmod/hardware/TouchscreenHovering;->setEnabled(Z)Z
 
@@ -901,7 +929,7 @@
 
     goto :goto_0
 
-    .line 129
+    .line 141
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -919,7 +947,7 @@
     .param p1, "rgb"    # [I
 
     .prologue
-    .line 197
+    .line 209
     invoke-direct {p0, p1}, Lcom/android/server/CmHardwareService$LegacyCmHardware;->rgbToString([I)Ljava/lang/String;
 
     move-result-object v0
@@ -937,7 +965,7 @@
     .param p2, "rgb"    # [I
 
     .prologue
-    .line 222
+    .line 234
     invoke-direct {p0, p2}, Lcom/android/server/CmHardwareService$LegacyCmHardware;->rgbToString([I)Ljava/lang/String;
 
     move-result-object v0
@@ -954,7 +982,7 @@
     .param p1, "intensity"    # I
 
     .prologue
-    .line 236
+    .line 248
     invoke-static {p1}, Lorg/cyanogenmod/hardware/VibratorHW;->setIntensity(I)Z
 
     move-result v0

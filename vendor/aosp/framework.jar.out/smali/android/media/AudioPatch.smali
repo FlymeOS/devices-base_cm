@@ -68,7 +68,7 @@
 
     .line 59
     .local v3, "s":Ljava/lang/StringBuilder;
-    const-string v6, "mHandle: "
+    const-string/jumbo v6, "mHandle: "
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

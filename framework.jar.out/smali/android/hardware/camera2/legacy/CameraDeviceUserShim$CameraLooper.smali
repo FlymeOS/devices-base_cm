@@ -3,8 +3,8 @@
 .source "CameraDeviceUserShim.java"
 
 # interfaces
-.implements Ljava/lang/AutoCloseable;
 .implements Ljava/lang/Runnable;
+.implements Ljava/lang/AutoCloseable;
 
 
 # annotations

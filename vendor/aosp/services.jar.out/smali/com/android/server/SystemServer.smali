@@ -804,10 +804,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1412
+    .line 1440
     const/4 v4, 0x0
 
-    .line 1413
+    .line 1441
     .local v4, "dpmObj":Ljava/lang/Object;
     :try_start_0
     const-string v6, "persist.dpm.feature"
@@ -818,7 +818,7 @@
 
     move-result v3
 
-    .line 1414
+    .line 1442
     .local v3, "dpmFeature":I
     const-string v6, "SystemServer"
 
@@ -842,14 +842,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1416
+    .line 1444
     if-lez v3, :cond_0
 
     const/16 v6, 0x10
 
     if-ge v3, v6, :cond_0
 
-    .line 1417
+    .line 1445
     new-instance v1, Ldalvik/system/PathClassLoader;
 
     const-string v6, "/system/framework/com.qti.dpmframework.jar"
@@ -860,7 +860,7 @@
 
     invoke-direct {v1, v6, v7}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 1420
+    .line 1448
     .local v1, "dpmClassLoader":Ldalvik/system/PathClassLoader;
     const-string v6, "com.qti.dpm.DpmService"
 
@@ -868,7 +868,7 @@
 
     move-result-object v0
 
-    .line 1421
+    .line 1449
     .local v0, "dpmClass":Ljava/lang/Class;
     const/4 v6, 0x1
 
@@ -884,7 +884,7 @@
 
     move-result-object v2
 
-    .line 1423
+    .line 1451
     .local v2, "dpmConstructor":Ljava/lang/reflect/Constructor;
     const/4 v6, 0x1
 
@@ -900,7 +900,7 @@
 
     move-result-object v4
 
-    .line 1425
+    .line 1453
     if-eqz v4, :cond_0
 
     :try_start_1
@@ -908,7 +908,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 1426
+    .line 1454
     const-string v6, "dpmservice"
 
     check-cast v4, Landroid/os/IBinder;
@@ -916,7 +916,7 @@
     .end local v4    # "dpmObj":Ljava/lang/Object;
     invoke-static {v6, v4}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 1427
+    .line 1455
     const-string v6, "SystemServer"
 
     const-string v7, "Created DPM Service"
@@ -926,7 +926,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1436
+    .line 1464
     .end local v0    # "dpmClass":Ljava/lang/Class;
     .end local v1    # "dpmClassLoader":Ldalvik/system/PathClassLoader;
     .end local v2    # "dpmConstructor":Ljava/lang/reflect/Constructor;
@@ -935,7 +935,7 @@
     :goto_0
     return-void
 
-    .line 1429
+    .line 1457
     .restart local v0    # "dpmClass":Ljava/lang/Class;
     .restart local v1    # "dpmClassLoader":Ldalvik/system/PathClassLoader;
     .restart local v2    # "dpmConstructor":Ljava/lang/reflect/Constructor;
@@ -943,7 +943,7 @@
     :catch_0
     move-exception v5
 
-    .line 1430
+    .line 1458
     .local v5, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v6, "SystemServer"
@@ -956,7 +956,7 @@
 
     goto :goto_0
 
-    .line 1433
+    .line 1461
     .end local v0    # "dpmClass":Ljava/lang/Class;
     .end local v1    # "dpmClassLoader":Ldalvik/system/PathClassLoader;
     .end local v2    # "dpmConstructor":Ljava/lang/reflect/Constructor;
@@ -965,13 +965,92 @@
     :catch_1
     move-exception v5
 
-    .line 1434
+    .line 1462
     .local v5, "e":Ljava/lang/Throwable;
     const-string v6, "SystemServer"
 
     const-string v7, "starting DPM Service"
 
     invoke-static {v6, v7, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method static final startNfcService(Landroid/content/Context;)V
+    .locals 6
+    .param p0, "context"    # Landroid/content/Context;
+
+    .prologue
+    .line 1420
+    invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
+
+    move-result-object v2
+
+    .line 1421
+    .local v2, "pm":Landroid/content/pm/IPackageManager;
+    if-nez v2, :cond_1
+
+    .line 1422
+    const-string v3, "SystemServer"
+
+    const-string v4, "Cannot get package manager, assuming no NFC feature"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1436
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1426
+    :cond_1
+    :try_start_0
+    const-string v3, "android.hardware.nfc"
+
+    invoke-interface {v2, v3}, Landroid/content/pm/IPackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 1427
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    .line 1428
+    .local v1, "intent":Landroid/content/Intent;
+    new-instance v3, Landroid/content/ComponentName;
+
+    const-string v4, "com.android.nfc"
+
+    const-string v5, "com.android.nfc.NfcBootstrapService"
+
+    invoke-direct {v3, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    .line 1430
+    sget-object v3, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
+
+    invoke-virtual {p0, v1, v3}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 1432
+    .end local v1    # "intent":Landroid/content/Intent;
+    :catch_0
+    move-exception v0
+
+    .line 1433
+    .local v0, "e":Landroid/os/RemoteException;
+    const-string v3, "SystemServer"
+
+    const-string v4, "Package manager query failed, assuming no NFC feature"
+
+    invoke-static {v3, v4, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 .end method
@@ -1187,7 +1266,7 @@
 
     move-result-object v4
 
-    const v5, 0x112009d
+    const v5, 0x112009e
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1209,7 +1288,7 @@
 
     move-result-object v4
 
-    const v5, 0x1070053
+    const v5, 0x1070054
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1815,7 +1894,7 @@
 
     move-result-object v5
 
-    const v8, 0x1040574
+    const v8, 0x104057d
 
     invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -2545,7 +2624,7 @@
 
     move-result-object v4
 
-    const v5, 0x112004c
+    const v5, 0x112004d
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3076,7 +3155,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120094
+    const v5, 0x1120095
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -5298,7 +5377,7 @@
 
     invoke-virtual {v4, v8}, Lcom/android/server/am/ActivityManagerService;->systemReady(Ljava/lang/Runnable;)V
 
-    .line 1400
+    .line 1409
     return-void
 
     .line 1216
@@ -5781,12 +5860,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1403
+    .line 1412
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1404
+    .line 1413
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -5798,11 +5877,11 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1407
+    .line 1416
     sget-object v1, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1408
+    .line 1417
     return-void
 .end method

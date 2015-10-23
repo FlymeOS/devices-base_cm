@@ -3,9 +3,9 @@
 .source "GestureInputFilter.java"
 
 # interfaces
-.implements Landroid/view/GestureDetector$OnDoubleTapListener;
-.implements Landroid/view/GestureDetector$OnGestureListener;
 .implements Landroid/view/IInputFilter;
+.implements Landroid/view/GestureDetector$OnGestureListener;
+.implements Landroid/view/GestureDetector$OnDoubleTapListener;
 
 
 # static fields

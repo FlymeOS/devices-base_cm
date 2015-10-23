@@ -103,6 +103,14 @@
     .end annotation
 .end method
 
+.method public abstract launchBoost()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract nap(J)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

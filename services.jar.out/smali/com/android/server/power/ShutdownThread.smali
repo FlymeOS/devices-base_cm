@@ -514,7 +514,7 @@
     .line 366
     .restart local v1    # "pd":Landroid/app/ProgressDialog;
     :cond_3
-    const v2, 0x10401cc
+    const v2, 0x10401d5
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -523,7 +523,7 @@
     invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 367
-    const v2, 0x10401d0
+    const v2, 0x10401d9
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1427,7 +1427,7 @@
 
     move-result-object v10
 
-    const v11, 0x1070041
+    const v11, 0x1070042
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1476,7 +1476,7 @@
 
     if-eqz v10, :cond_6
 
-    const v7, 0x10401d4
+    const v7, 0x10401dd
 
     .line 192
     .local v7, "resourceId":I
@@ -1558,7 +1558,7 @@
 
     if-eqz v10, :cond_8
 
-    const v10, 0x10401d3
+    const v10, 0x10401dc
 
     :goto_4
     invoke-virtual {v11, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1670,12 +1670,12 @@
 
     if-ne v6, v10, :cond_7
 
-    const v7, 0x10401d2
+    const v7, 0x10401db
 
     goto/16 :goto_3
 
     :cond_7
-    const v7, 0x10401d1
+    const v7, 0x10401da
 
     goto/16 :goto_3
 
@@ -1692,7 +1692,7 @@
     goto :goto_4
 
     :cond_9
-    const v10, 0x10401cc
+    const v10, 0x10401d5
 
     goto :goto_4
 

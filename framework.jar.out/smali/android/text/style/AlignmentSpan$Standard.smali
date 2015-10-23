@@ -3,8 +3,8 @@
 .source "AlignmentSpan.java"
 
 # interfaces
-.implements Landroid/text/ParcelableSpan;
 .implements Landroid/text/style/AlignmentSpan;
+.implements Landroid/text/ParcelableSpan;
 
 
 # annotations

@@ -3,8 +3,8 @@
 .source "ViewServer.java"
 
 # interfaces
-.implements Lcom/android/server/wm/WindowManagerService$WindowChangeListener;
 .implements Ljava/lang/Runnable;
+.implements Lcom/android/server/wm/WindowManagerService$WindowChangeListener;
 
 
 # annotations

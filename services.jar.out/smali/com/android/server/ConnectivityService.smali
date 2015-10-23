@@ -790,7 +790,7 @@
 
     move-result-object v2
 
-    const v3, 0x10400f3
+    const v3, 0x10400fc
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1045,7 +1045,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070016
+    const v3, 0x1070017
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1387,7 +1387,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070017
+    const v3, 0x1070018
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -10792,7 +10792,7 @@
 
     .line 3257
     :pswitch_0
-    const v9, 0x1040593
+    const v9, 0x104059c
 
     const/4 v10, 0x1
 
@@ -10814,7 +10814,7 @@
 
     .line 3258
     .local v8, "title":Ljava/lang/CharSequence;
-    const v9, 0x1040594
+    const v9, 0x104059d
 
     const/4 v10, 0x1
 
@@ -10899,7 +10899,7 @@
     .line 3243
     .restart local v4    # "notification":Landroid/app/Notification;
     :pswitch_1
-    const v9, 0x1040592
+    const v9, 0x104059b
 
     const/4 v10, 0x1
 
@@ -10921,7 +10921,7 @@
 
     .line 3244
     .restart local v8    # "title":Ljava/lang/CharSequence;
-    const v9, 0x1040594
+    const v9, 0x104059d
 
     const/4 v10, 0x1
 
@@ -10948,7 +10948,7 @@
     .end local v3    # "icon":I
     .end local v8    # "title":Ljava/lang/CharSequence;
     :pswitch_2
-    const v9, 0x1040593
+    const v9, 0x104059c
 
     const/4 v10, 0x1
 
@@ -15444,7 +15444,7 @@
 
     move-result-object v2
 
-    const v3, 0x10400f5
+    const v3, 0x10400fe
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -15588,7 +15588,7 @@
 
     move-result-object v1
 
-    const v2, 0x10400f6
+    const v2, 0x10400ff
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -17832,7 +17832,7 @@
 
     move-result-object v1
 
-    const v4, 0x1120091
+    const v4, 0x1120092
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 

@@ -3,8 +3,8 @@
 .source "SearchManager.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
 .implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations

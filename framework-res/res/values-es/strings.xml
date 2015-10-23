@@ -24,7 +24,7 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Este vídeo no se puede transmitir al dispositivo.</string>
     <string name="selectTextMode">Seleccionar texto</string>
     <string name="status_bar_notification_info_overflow">> 999</string>
-    <string name="profileNameDefault">Por defecto</string>
+    <string name="profileNameDefault">Predeterminado</string>
     <string name="profileNameWork">Trabajo</string>
     <string name="profileNameHome">Casa</string>
     <string name="profileNameSilent">Silencio</string>
@@ -33,7 +33,7 @@
     <string name="profileGroupPhone">Teléfono</string>
     <string name="profileGroupCalendar">Calendario</string>
     <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
+    <string name="profileGroupEmail">Correo electrónico</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Otro</string>
     <string name="profile_none">Ninguno</string>
@@ -216,6 +216,9 @@
     <string name="quick_settings_tile_flashlight_not_title">La linterna está encendida</string>
     <string name="quick_settings_tile_flashlight_not_summary">Toca para apagarla</string>
     <string name="storage_sd_dock_card">Tarjeta SD de la base</string>
+    <string name="fingerprint_default_name">Huella digital %d</string>
+    <string name="permlab_accessFingerprintService">acceder al servicio de huella digital</string>
+    <string name="permdesc_accessFingerprintService">Permite a una aplicación acceder al servicio de huella digital. La aplicación puede agregar, eliminar, renombrar y autenticar contra las huellas digitales</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e de %B de %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1229,7 +1232,7 @@ accede a la página "<b>google.com/accounts/recovery</b>.</string>
     <string name="whichHomeApplication">Selecciona una aplicación de inicio</string>
     <string name="whichHomeApplicationNamed">Usar %1$s como aplicación de inicio</string>
     <string name="alwaysUse">Usar siempre para esta acción</string>
-    <string name="use_a_different_app">Uitliza otra aplicación</string>
+    <string name="use_a_different_app">Utilizar otra aplicación</string>
     <string name="clearDefaultHintMsg">Para borrar los valores predeterminados, accede a Ajustes del sistema > Aplicaciones > Descargadas.</string>
     <string name="chooseActivity">Selecciona una acción</string>
     <string name="chooseUsbActivity">Seleccionar una aplicación para el dispositivo USB</string>
@@ -1792,4 +1795,12 @@ La función de ahorro de energía se desactiva automáticamente cuando el dispos
     <string name="stk_cc_ss_to_ss">La solicitud SS se ha modificado para la nueva solicitud SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">...</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB y red</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Red</string>
+    <string name="permlab_resetBatteryStats">restablecer estadísticas de batería</string>
+    <string name="permdesc_resetBatteryStats">Permite que la aplicación restablezca los datos actuales de uso de la batería.</string>
+    <string name="silent_mode_priority">Prioridad</string>
+    <string name="silent_mode_none">Ninguno</string>
 </resources>

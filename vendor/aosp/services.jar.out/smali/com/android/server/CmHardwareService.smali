@@ -2,6 +2,9 @@
 .super Landroid/hardware/ICmHardwareService$Stub;
 .source "CmHardwareService.java"
 
+# interfaces
+.implements Lorg/cyanogenmod/hardware/ThermalUpdateCallback;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -23,13 +26,26 @@
 
 .field private final mContext:Landroid/content/Context;
 
+.field private mCurrentThermalState:I
+
+.field private mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/RemoteCallbackList",
+            "<",
+            "Landroid/hardware/IThermalListenerCallback;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 42
+    .line 48
     const-class v0, Lcom/android/server/CmHardwareService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -46,20 +62,23 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 265
+    .line 277
     invoke-direct {p0}, Landroid/hardware/ICmHardwareService$Stub;-><init>()V
 
-    .line 266
+    .line 278
     iput-object p1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
-    .line 267
+    .line 279
     invoke-direct {p0, p1}, Lcom/android/server/CmHardwareService;->getImpl(Landroid/content/Context;)Lcom/android/server/CmHardwareService$CmHardwareInterface;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/CmHardwareService;->mCmHwImpl:Lcom/android/server/CmHardwareService$CmHardwareInterface;
 
-    .line 268
+    .line 280
+    invoke-direct {p0}, Lcom/android/server/CmHardwareService;->initialize()V
+
+    .line 281
     return-void
 .end method
 
@@ -67,7 +86,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 46
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -78,7 +97,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 262
+    .line 274
     new-instance v0, Lcom/android/server/CmHardwareService$LegacyCmHardware;
 
     invoke-direct {v0, p0}, Lcom/android/server/CmHardwareService$LegacyCmHardware;-><init>(Lcom/android/server/CmHardwareService;)V
@@ -86,12 +105,38 @@
     return-object v0
 .end method
 
+.method private initialize()V
+    .locals 1
+
+    .prologue
+    .line 284
+    invoke-static {}, Lorg/cyanogenmod/hardware/ThermalMonitor;->isSupported()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 285
+    invoke-static {p0}, Lorg/cyanogenmod/hardware/ThermalMonitor;->initialize(Lorg/cyanogenmod/hardware/ThermalUpdateCallback;)V
+
+    .line 286
+    new-instance v0, Landroid/os/RemoteCallbackList;
+
+    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    .line 288
+    :cond_0
+    return-void
+.end method
+
 .method private isSupported(I)Z
     .locals 1
     .param p1, "feature"    # I
 
     .prologue
-    .line 271
+    .line 291
     invoke-virtual {p0}, Lcom/android/server/CmHardwareService;->getSupportedFeatures()I
 
     move-result v0
@@ -118,7 +163,7 @@
     .param p1, "feature"    # I
 
     .prologue
-    .line 283
+    .line 303
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -127,14 +172,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
+    .line 305
     invoke-direct {p0, p1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 286
+    .line 306
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -163,10 +208,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
+    .line 307
     const/4 v0, 0x0
 
-    .line 289
+    .line 309
     :goto_0
     return v0
 
@@ -186,14 +231,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 305
+    .line 325
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 307
+    .line 327
     const/4 v1, 0x4
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -202,14 +247,14 @@
 
     if-nez v1, :cond_0
 
-    .line 308
+    .line 328
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Display color calibration is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
+    .line 331
     :goto_0
     return-object v0
 
@@ -230,14 +275,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 342
+    .line 362
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 344
+    .line 364
     const/16 v1, 0x8
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -246,14 +291,14 @@
 
     if-nez v1, :cond_0
 
-    .line 345
+    .line 365
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Display gamma calibration is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
+    .line 368
     :goto_0
     return-object v0
 
@@ -273,14 +318,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 397
+    .line 417
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 399
+    .line 419
     const/16 v1, 0x40
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -289,14 +334,14 @@
 
     if-nez v1, :cond_0
 
-    .line 400
+    .line 420
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Long term orbits is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
+    .line 423
     :goto_0
     return-object v0
 
@@ -314,7 +359,7 @@
     .locals 3
 
     .prologue
-    .line 408
+    .line 428
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -323,7 +368,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
+    .line 430
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -332,17 +377,17 @@
 
     if-nez v0, :cond_0
 
-    .line 411
+    .line 431
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v1, "Long term orbits is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
+    .line 432
     const-wide/16 v0, 0x0
 
-    .line 414
+    .line 434
     :goto_0
     return-wide v0
 
@@ -362,14 +407,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 386
+    .line 406
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
+    .line 408
     const/16 v1, 0x40
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -378,14 +423,14 @@
 
     if-nez v1, :cond_0
 
-    .line 389
+    .line 409
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Long term orbits is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
+    .line 412
     :goto_0
     return-object v0
 
@@ -403,7 +448,7 @@
     .locals 3
 
     .prologue
-    .line 331
+    .line 351
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -412,7 +457,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
+    .line 353
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -421,17 +466,17 @@
 
     if-nez v0, :cond_0
 
-    .line 334
+    .line 354
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v1, "Display gamma calibration is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
+    .line 355
     const/4 v0, 0x0
 
-    .line 337
+    .line 357
     :goto_0
     return v0
 
@@ -451,14 +496,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 419
+    .line 439
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
+    .line 441
     const/16 v1, 0x80
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -467,14 +512,14 @@
 
     if-nez v1, :cond_0
 
-    .line 422
+    .line 442
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Serial number is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
+    .line 445
     :goto_0
     return-object v0
 
@@ -492,7 +537,7 @@
     .locals 3
 
     .prologue
-    .line 276
+    .line 296
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -501,7 +546,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 278
+    .line 298
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mCmHwImpl:Lcom/android/server/CmHardwareService$CmHardwareInterface;
 
     invoke-interface {v0}, Lcom/android/server/CmHardwareService$CmHardwareInterface;->getSupportedFeatures()I
@@ -511,20 +556,55 @@
     return v0
 .end method
 
+.method public getThermalState()I
+    .locals 3
+
+    .prologue
+    .line 477
+    iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
+
+    const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 479
+    const v0, 0x8000
+
+    invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 480
+    iget v0, p0, Lcom/android/server/CmHardwareService;->mCurrentThermalState:I
+
+    .line 482
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
 .method public getVibratorIntensity()[I
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 364
+    .line 384
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
+    .line 386
     const/16 v1, 0x400
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -533,14 +613,14 @@
 
     if-nez v1, :cond_0
 
-    .line 367
+    .line 387
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Vibrator is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
+    .line 390
     :goto_0
     return-object v0
 
@@ -554,11 +634,12 @@
     goto :goto_0
 .end method
 
-.method public requireAdaptiveBacklightForSunlightEnhancement()Z
+.method public registerThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
     .locals 3
+    .param p1, "callback"    # Landroid/hardware/IThermalListenerCallback;
 
     .prologue
-    .line 430
+    .line 487
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -567,7 +648,46 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
+    .line 489
+    const v0, 0x8000
+
+    invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 490
+    iget-object v0, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
+
+    move-result v0
+
+    .line 492
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public requireAdaptiveBacklightForSunlightEnhancement()Z
+    .locals 3
+
+    .prologue
+    .line 450
+    iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
+
+    const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 452
     const/16 v0, 0x100
 
     invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -576,17 +696,17 @@
 
     if-nez v0, :cond_0
 
-    .line 433
+    .line 453
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v1, "Sunlight enhancement is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
+    .line 454
     const/4 v0, 0x0
 
-    .line 436
+    .line 456
     :goto_0
     return v0
 
@@ -606,7 +726,7 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 294
+    .line 314
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -615,14 +735,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
+    .line 316
     invoke-direct {p0, p1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 297
+    .line 317
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -651,10 +771,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
+    .line 318
     const/4 v0, 0x0
 
-    .line 300
+    .line 320
     :goto_0
     return v0
 
@@ -675,7 +795,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 316
+    .line 336
     iget-object v1, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -684,7 +804,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
+    .line 338
     const/4 v1, 0x4
 
     invoke-direct {p0, v1}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -693,18 +813,18 @@
 
     if-nez v1, :cond_0
 
-    .line 319
+    .line 339
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Display color calibration is not supported"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
+    .line 346
     :goto_0
     return v0
 
-    .line 322
+    .line 342
     :cond_0
     array-length v1, p1
 
@@ -712,7 +832,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 323
+    .line 343
     sget-object v1, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v2, "Invalid color calibration"
@@ -721,7 +841,7 @@
 
     goto :goto_0
 
-    .line 326
+    .line 346
     :cond_1
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mCmHwImpl:Lcom/android/server/CmHardwareService$CmHardwareInterface;
 
@@ -738,7 +858,7 @@
     .param p2, "rgb"    # [I
 
     .prologue
-    .line 353
+    .line 373
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -747,7 +867,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 355
+    .line 375
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -756,17 +876,17 @@
 
     if-nez v0, :cond_0
 
-    .line 356
+    .line 376
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v1, "Display gamma calibration is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
+    .line 377
     const/4 v0, 0x0
 
-    .line 359
+    .line 379
     :goto_0
     return v0
 
@@ -780,12 +900,67 @@
     goto :goto_0
 .end method
 
+.method public setThermalState(I)V
+    .locals 2
+    .param p1, "state"    # I
+
+    .prologue
+    .line 461
+    iput p1, p0, Lcom/android/server/CmHardwareService;->mCurrentThermalState:I
+
+    .line 462
+    iget-object v1, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    invoke-virtual {v1}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
+
+    move-result v0
+
+    .line 463
+    .local v0, "i":I
+    :goto_0
+    if-lez v0, :cond_0
+
+    .line 464
+    add-int/lit8 v0, v0, -0x1
+
+    .line 466
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    invoke-virtual {v1, v0}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/IThermalListenerCallback;
+
+    invoke-interface {v1, p1}, Landroid/hardware/IThermalListenerCallback;->onThermalChanged(I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 467
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    .line 472
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    invoke-virtual {v1}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
+
+    .line 473
+    return-void
+.end method
+
 .method public setVibratorIntensity(I)Z
     .locals 3
     .param p1, "intensity"    # I
 
     .prologue
-    .line 375
+    .line 395
     iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
@@ -794,7 +969,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 377
+    .line 397
     const/16 v0, 0x400
 
     invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
@@ -803,17 +978,17 @@
 
     if-nez v0, :cond_0
 
-    .line 378
+    .line 398
     sget-object v0, Lcom/android/server/CmHardwareService;->TAG:Ljava/lang/String;
 
     const-string v1, "Vibrator is not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
+    .line 399
     const/4 v0, 0x0
 
-    .line 381
+    .line 401
     :goto_0
     return v0
 
@@ -823,6 +998,46 @@
     invoke-interface {v0, p1}, Lcom/android/server/CmHardwareService$CmHardwareInterface;->setVibratorIntensity(I)Z
 
     move-result v0
+
+    goto :goto_0
+.end method
+
+.method public unRegisterThermalListener(Landroid/hardware/IThermalListenerCallback;)Z
+    .locals 3
+    .param p1, "callback"    # Landroid/hardware/IThermalListenerCallback;
+
+    .prologue
+    .line 497
+    iget-object v0, p0, Lcom/android/server/CmHardwareService;->mContext:Landroid/content/Context;
+
+    const-string v1, "android.permission.HARDWARE_ABSTRACTION_ACCESS"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 499
+    const v0, 0x8000
+
+    invoke-direct {p0, v0}, Lcom/android/server/CmHardwareService;->isSupported(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 500
+    iget-object v0, p0, Lcom/android/server/CmHardwareService;->mRemoteCallbackList:Landroid/os/RemoteCallbackList;
+
+    invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
+
+    move-result v0
+
+    .line 502
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

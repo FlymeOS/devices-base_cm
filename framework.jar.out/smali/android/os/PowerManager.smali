@@ -198,10 +198,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 987
+    .line 1003
     const/4 v1, 0x0
 
-    .line 988
+    .line 1004
     .local v1, "ret":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
@@ -209,7 +209,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 990
+    .line 1006
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -217,16 +217,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 991
+    .line 1007
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 992
+    .line 1008
     .local v0, "cn":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 993
+    .line 1009
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
@@ -237,13 +237,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1000
+    .line 1016
     .end local v0    # "cn":Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return-void
 
-    .line 996
+    .line 1012
     :catch_0
     move-exception v2
 
@@ -308,27 +308,7 @@
     .locals 2
 
     .prologue
-    .line 1280
-    iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x10e005b
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getDefaultKeyboardBrightness()I
-    .locals 2
-
-    .prologue
-    .line 1289
+    .line 1296
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -344,18 +324,38 @@
     return v0
 .end method
 
-.method public getDefaultPowerProfile()Ljava/lang/String;
+.method public getDefaultKeyboardBrightness()I
     .locals 2
 
     .prologue
-    .line 936
+    .line 1305
     iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x104011c
+    const v1, 0x10e005d
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDefaultPowerProfile()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 952
+    iget-object v0, p0, Landroid/os/PowerManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x1040125
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -375,7 +375,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0057
+    const v1, 0x10e0058
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -395,7 +395,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0056
+    const v1, 0x10e0057
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -415,7 +415,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0055
+    const v1, 0x10e0056
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -428,10 +428,10 @@
     .locals 2
 
     .prologue
-    .line 969
+    .line 985
     const/4 v0, 0x0
 
-    .line 970
+    .line 986
     .local v0, "ret":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
@@ -439,13 +439,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 972
+    .line 988
     :try_start_0
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v1, :cond_0
 
-    .line 973
+    .line 989
     iget-object v1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v1}, Landroid/os/IPowerManager;->getPowerProfile()Ljava/lang/String;
@@ -454,12 +454,12 @@
 
     move-result-object v0
 
-    .line 979
+    .line 995
     :cond_0
     :goto_0
     return-object v0
 
-    .line 975
+    .line 991
     :catch_0
     move-exception v1
 
@@ -510,7 +510,7 @@
     .locals 2
 
     .prologue
-    .line 923
+    .line 939
     invoke-virtual {p0}, Landroid/os/PowerManager;->getDefaultPowerProfile()Ljava/lang/String;
 
     move-result-object v0
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    const v1, 0x104011b
+    const v1, 0x1040124
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -652,6 +652,35 @@
     goto :goto_0
 .end method
 
+.method public launchBoost()V
+    .locals 1
+
+    .prologue
+    .line 905
+    :try_start_0
+    iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
+
+    if-eqz v0, :cond_0
+
+    .line 906
+    iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
+
+    invoke-interface {v0}, Landroid/os/IPowerManager;->launchBoost()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 910
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 908
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
 .method public nap(J)V
     .locals 1
     .param p1, "time"    # J
@@ -757,7 +786,7 @@
     .param p2, "key"    # I
 
     .prologue
-    .line 1270
+    .line 1286
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
@@ -765,11 +794,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1273
+    .line 1289
     :goto_0
     return-void
 
-    .line 1271
+    .line 1287
     :catch_0
     move-exception v0
 
@@ -781,25 +810,25 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 1252
+    .line 1268
     :try_start_0
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v0, :cond_0
 
-    .line 1253
+    .line 1269
     iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v0, p1}, Landroid/os/IPowerManager;->setKeyboardVisibility(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1257
+    .line 1273
     :cond_0
     :goto_0
     return-void
 
-    .line 1255
+    .line 1271
     :catch_0
     move-exception v0
 
@@ -811,14 +840,14 @@
     .param p1, "profile"    # Ljava/lang/String;
 
     .prologue
-    .line 947
+    .line 963
     invoke-virtual {p0}, Landroid/os/PowerManager;->hasPowerProfiles()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 948
+    .line 964
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Power profiles not enabled on this system!"
@@ -827,18 +856,18 @@
 
     throw v2
 
-    .line 951
+    .line 967
     :cond_0
     const/4 v0, 0x0
 
-    .line 953
+    .line 969
     .local v0, "changed":Z
     :try_start_0
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     if-eqz v2, :cond_1
 
-    .line 954
+    .line 970
     iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
     invoke-interface {v2, p1}, Landroid/os/IPowerManager;->setPowerProfile(Ljava/lang/String;)Z
@@ -847,15 +876,15 @@
 
     move-result v0
 
-    .line 959
+    .line 975
     :cond_1
     return v0
 
-    .line 956
+    .line 972
     :catch_0
     move-exception v1
 
-    .line 957
+    .line 973
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 

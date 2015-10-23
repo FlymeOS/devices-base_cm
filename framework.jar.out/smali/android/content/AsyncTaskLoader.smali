@@ -267,7 +267,7 @@
     .line 365
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mCancellingTask="
+    const-string/jumbo v0, "mCancellingTask="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

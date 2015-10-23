@@ -3,8 +3,8 @@
 .source "GlobalActions.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 .implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -351,7 +351,7 @@
 
     move-result-object v4
 
-    const v7, 0x112007f
+    const v7, 0x1120080
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1187,11 +1187,11 @@
 
     const v3, 0x1080373
 
-    const v4, 0x10401e1
+    const v4, 0x10401ea
 
-    const v5, 0x10401e2
+    const v5, 0x10401eb
 
-    const v6, 0x10401e3
+    const v6, 0x10401ec
 
     move-object v1, p0
 
@@ -1221,7 +1221,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070041
+    const v1, 0x1070042
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1840,7 +1840,7 @@
 
     const v1, 0x1080375
 
-    const v2, 0x10401db
+    const v2, 0x10401e4
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/internal/policy/impl/GlobalActions$6;-><init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
 
@@ -1887,7 +1887,7 @@
 
     const v1, 0x108002f
 
-    const v2, 0x10401e5
+    const v2, 0x10401ee
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/internal/policy/impl/GlobalActions$8;-><init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
 
@@ -1919,7 +1919,7 @@
 
     const v1, 0x1080382
 
-    const v2, 0x10401e4
+    const v2, 0x10401ed
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/internal/policy/impl/GlobalActions$7;-><init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
 

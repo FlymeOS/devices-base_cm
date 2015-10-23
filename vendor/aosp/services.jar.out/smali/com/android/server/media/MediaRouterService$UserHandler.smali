@@ -3,8 +3,8 @@
 .source "MediaRouterService.java"
 
 # interfaces
-.implements Lcom/android/server/media/RemoteDisplayProviderProxy$Callback;
 .implements Lcom/android/server/media/RemoteDisplayProviderWatcher$Callback;
+.implements Lcom/android/server/media/RemoteDisplayProviderProxy$Callback;
 
 
 # annotations

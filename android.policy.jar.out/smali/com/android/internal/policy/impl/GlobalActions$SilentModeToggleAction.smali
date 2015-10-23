@@ -31,11 +31,11 @@
 
     const v2, 0x1080322
 
-    const v3, 0x10401de
+    const v3, 0x10401e7
 
-    const v4, 0x10401df
+    const v4, 0x10401e8
 
-    const v5, 0x10401e0
+    const v5, 0x10401e9
 
     move-object v0, p0
 

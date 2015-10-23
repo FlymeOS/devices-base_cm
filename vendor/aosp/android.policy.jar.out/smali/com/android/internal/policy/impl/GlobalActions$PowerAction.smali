@@ -32,7 +32,7 @@
     .line 483
     const v0, 0x1080030
 
-    const v1, 0x10401d9
+    const v1, 0x10401e2
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
 

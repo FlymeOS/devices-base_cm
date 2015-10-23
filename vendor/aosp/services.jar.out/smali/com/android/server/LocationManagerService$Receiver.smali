@@ -3,8 +3,8 @@
 .source "LocationManagerService.java"
 
 # interfaces
-.implements Landroid/app/PendingIntent$OnFinished;
 .implements Landroid/os/IBinder$DeathRecipient;
+.implements Landroid/app/PendingIntent$OnFinished;
 
 
 # annotations

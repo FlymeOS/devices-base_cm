@@ -3870,7 +3870,7 @@
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 291
-    const-string v5, "mEnterAnim=#"
+    const-string/jumbo v5, "mEnterAnim=#"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -3954,7 +3954,7 @@
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 305
-    const-string v5, "mBreadCrumbTitleRes=#"
+    const-string/jumbo v5, "mBreadCrumbTitleRes=#"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -3992,7 +3992,7 @@
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 312
-    const-string v5, "mBreadCrumbShortTitleRes=#"
+    const-string/jumbo v5, "mBreadCrumbShortTitleRes=#"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -4387,6 +4387,8 @@
     return-void
 
     .line 327
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

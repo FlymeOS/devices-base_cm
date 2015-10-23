@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">抱歉，该视频不适合在此设备上播放。</string>
     <string name="selectTextMode">选择文字</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">默认</string>
-    <string name="profileNameWork">工作</string>
-    <string name="profileNameHome">住宅</string>
-    <string name="profileNameSilent">静音</string>
-    <string name="profileNameNight">夜晚</string>
-    <string name="profileNameAutomobile">汽车</string>
-    <string name="profileGroupPhone">电话</string>
-    <string name="profileGroupCalendar">日历</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">电子邮件</string>
-    <string name="profileGroupSMS">短信</string>
-    <string name="wildcardProfile">其他</string>
     <string name="profile_none">无</string>
     <string name="profile_picker_title">情景模式</string>
     <string name="global_action_choose_profile">情景模式</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">手电筒已开</string>
     <string name="quick_settings_tile_flashlight_not_summary">轻按以关闭</string>
     <string name="storage_sd_dock_card">底座 SD 卡</string>
+    <string name="fingerprint_default_name">指纹 %d</string>
+    <string name="permlab_accessFingerprintService">访问指纹服务</string>
+    <string name="permdesc_accessFingerprintService">允许应用访问指纹服务。应用可以添加、 删除、 重命名指纹，使用指纹进行身份验证</string>
     <string name="numeric_date_template" formatted="false">%s-%s-%s</string>
     <string name="month_day_year" formatted="false">%Y 年 %-m 月 %-e 日</string>
     <string name="time_of_day" formatted="false">%p %I:%M:%S</string>
@@ -1792,4 +1783,12 @@
     <string name="stk_cc_ss_to_ss">SS 请求已修改为新的 SS 请求。</string>
     <string name="ellipsis">...</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; 网络</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">网络</string>
+    <string name="permlab_resetBatteryStats">重置电池统计信息</string>
+    <string name="permdesc_resetBatteryStats">允许应用重置当前低电量电池使用数据。</string>
+    <string name="silent_mode_priority">优先级</string>
+    <string name="silent_mode_none">无</string>
 </resources>

@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Bu video bu cihazda akış için uygun değil.</string>
     <string name="selectTextMode">Metin seç</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Varsayılan</string>
-    <string name="profileNameWork">İş</string>
-    <string name="profileNameHome">Ev</string>
-    <string name="profileNameSilent">Sessiz</string>
-    <string name="profileNameNight">Gece</string>
-    <string name="profileNameAutomobile">Otomobil</string>
-    <string name="profileGroupPhone">Telefon</string>
-    <string name="profileGroupCalendar">Takvim</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Eposta</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Diğer</string>
     <string name="profile_none">Yok</string>
     <string name="profile_picker_title">Profiller</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Flaş ışığı açık</string>
     <string name="quick_settings_tile_flashlight_not_summary">Kapatmak için dokunun</string>
     <string name="storage_sd_dock_card">Ünite SD kartı</string>
+    <string name="fingerprint_default_name">Parmak izi %d</string>
+    <string name="permlab_accessFingerprintService">parmak izi hizmetine eriş</string>
+    <string name="permdesc_accessFingerprintService">Uygulamaların parmak izi hizmetine erişimini sağlar. Uygulama parmak izlerini ekleyebilir, silebilir, yeniden adlandırabilir ve yetkilendirebilir.</string>
     <string name="numeric_date_template" formatted="false">%s %s %s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ Cihazınız şarj olurken pil tasarrufu otomatik olarak kapatılır."</string>
     <string name="stk_cc_ss_to_ss">SS isteği yeni SS isteği olarak değiştirildi.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; ağ</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Ağ</string>
+    <string name="permlab_resetBatteryStats">pil istatistiklerini sıfırla</string>
+    <string name="permdesc_resetBatteryStats">Uygulamalara güncel düşük seviye pil kullanım verisini sıfırlama izni verir.</string>
+    <string name="silent_mode_priority">Öncelik</string>
+    <string name="silent_mode_none">Yok</string>
 </resources>

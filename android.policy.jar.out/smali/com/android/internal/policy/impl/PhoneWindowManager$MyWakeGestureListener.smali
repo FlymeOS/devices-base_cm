@@ -25,13 +25,13 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 880
+    .line 881
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 881
+    .line 882
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/WakeGestureListener;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 882
+    .line 883
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 5
 
     .prologue
-    .line 886
+    .line 887
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     # getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mLock:Ljava/lang/Object;
@@ -51,7 +51,7 @@
 
     monitor-enter v1
 
-    .line 887
+    .line 888
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 888
+    .line 889
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v2, 0x0
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 889
+    .line 890
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -90,14 +90,14 @@
     # invokes: Lcom/android/internal/policy/impl/PhoneWindowManager;->wakeUp(JZ)Z
     invoke-static {v0, v2, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$1200(Lcom/android/internal/policy/impl/PhoneWindowManager;JZ)Z
 
-    .line 891
+    .line 892
     :cond_0
     monitor-exit v1
 
-    .line 892
+    .line 893
     return-void
 
-    .line 891
+    .line 892
     :catchall_0
     move-exception v0
 

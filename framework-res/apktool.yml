@@ -1,4 +1,4 @@
-version: 2.0.0
+version: 2.0.3-8fee34-SNAPSHOT
 apkFileName: framework-res.apk
 isFrameworkApk: true
 sdkInfo:
@@ -8,6 +8,7 @@ packageInfo:
   forced-package-id: '1'
 versionInfo:
   versionCode: '22'
-  versionName: 5.1.1-53147724a4
-compressionType: false
+  versionName: 5.1.1-dff6d1befc
 sharedLibrary: false
+doNotCompress:
+- arsc

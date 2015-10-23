@@ -3,8 +3,8 @@
 .source "WindowManagerService.java"
 
 # interfaces
-.implements Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 .implements Lcom/android/server/Watchdog$Monitor;
+.implements Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
 
 # annotations
@@ -1281,7 +1281,7 @@
 
     move-result-object v7
 
-    const v8, 0x1120083
+    const v8, 0x1120084
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1294,7 +1294,7 @@
 
     move-result-object v7
 
-    const v8, 0x11200b0
+    const v8, 0x11200b1
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1649,7 +1649,7 @@
 
     move-result-object v7
 
-    const v8, 0x1120081
+    const v8, 0x1120082
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3758,7 +3758,7 @@
 
     move-result-object v11
 
-    const v12, 0x112004c
+    const v12, 0x112004d
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -33531,12 +33531,15 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 7600
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 7603
     invoke-static {}, Lcom/android/server/wm/InjectorWMS;->registerDragStateRegister()V
 
     return-object v5
 
+    .line 7589
     .end local v5    # "token":Landroid/os/IBinder;
     .restart local v16    # "token":Landroid/os/IBinder;
     :cond_1
@@ -44817,7 +44820,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120087
+    const v1, 0x1120088
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -46035,7 +46038,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120084
+    const v5, 0x1120085
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -46049,7 +46052,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120086
+    const v5, 0x1120087
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 

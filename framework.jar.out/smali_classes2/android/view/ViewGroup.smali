@@ -3,8 +3,8 @@
 .source "ViewGroup.java"
 
 # interfaces
-.implements Landroid/view/ViewManager;
 .implements Landroid/view/ViewParent;
+.implements Landroid/view/ViewManager;
 
 
 # annotations

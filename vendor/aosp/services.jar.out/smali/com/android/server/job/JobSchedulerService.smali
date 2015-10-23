@@ -3,8 +3,8 @@
 .source "JobSchedulerService.java"
 
 # interfaces
-.implements Lcom/android/server/job/JobCompletedListener;
 .implements Lcom/android/server/job/StateChangedListener;
+.implements Lcom/android/server/job/JobCompletedListener;
 
 
 # annotations

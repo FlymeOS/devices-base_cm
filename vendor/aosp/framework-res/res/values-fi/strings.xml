@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Tätä videota ei voi suoratoistaa tällä laitteella.</string>
     <string name="selectTextMode">Valitse tekstiä</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Oletus</string>
-    <string name="profileNameWork">Työ</string>
-    <string name="profileNameHome">Koti</string>
-    <string name="profileNameSilent">Äänetön</string>
-    <string name="profileNameNight">Yö</string>
-    <string name="profileNameAutomobile">Auto</string>
-    <string name="profileGroupPhone">Puhelin</string>
-    <string name="profileGroupCalendar">Kalenteri</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Sähköposti</string>
-    <string name="profileGroupSMS">Tekstiviesti</string>
-    <string name="wildcardProfile">Muu</string>
     <string name="profile_none">Ei mitään</string>
     <string name="profile_picker_title">Profiilit</string>
     <string name="global_action_choose_profile">Profiili</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Taskulamppu on päällä</string>
     <string name="quick_settings_tile_flashlight_not_summary">Paina sammuttaaksesi</string>
     <string name="storage_sd_dock_card">Telakoi SD-kortti</string>
+    <string name="fingerprint_default_name">Sormenjälki %d</string>
+    <string name="permlab_accessFingerprintService">käytä sormenjälkipalvelua</string>
+    <string name="permdesc_accessFingerprintService">Sallii sovelluksen käyttää sormenjälkipalvelua. Sovellus voi lisätä, poistaa, uudelleennimetä ja todentaa sormenjälkiä</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%-k.%M.%S</string>
@@ -1792,4 +1783,12 @@ Virransäästö poistuu käytöstä automaattisesti, kun laitteesi latautuu."</s
     <string name="stk_cc_ss_to_ss">SS-pyyntö muutettiin uudeksi SS-pyynnöksi.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; verkko</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Verkko</string>
+    <string name="permlab_resetBatteryStats">nollaa akun tilastot</string>
+    <string name="permdesc_resetBatteryStats">Sallii sovelluksen nollata nykyiset alemman tason akun käytön tilastot.</string>
+    <string name="silent_mode_priority">Prioriteetti</string>
+    <string name="silent_mode_none">Ei mitään</string>
 </resources>

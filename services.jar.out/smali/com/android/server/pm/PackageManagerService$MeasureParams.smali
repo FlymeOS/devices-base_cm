@@ -31,10 +31,10 @@
     .param p3, "observer"    # Landroid/content/pm/IPackageStatsObserver;
 
     .prologue
-    .line 9526
+    .line 9557
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 9527
+    .line 9558
     new-instance v0, Landroid/os/UserHandle;
 
     iget v1, p2, Landroid/content/pm/PackageStats;->userHandle:I
@@ -43,13 +43,13 @@
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/pm/PackageManagerService$HandlerParams;-><init>(Lcom/android/server/pm/PackageManagerService;Landroid/os/UserHandle;)V
 
-    .line 9528
+    .line 9559
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mObserver:Landroid/content/pm/IPackageStatsObserver;
 
-    .line 9529
+    .line 9560
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
-    .line 9530
+    .line 9561
     return-void
 .end method
 
@@ -59,12 +59,12 @@
     .locals 4
 
     .prologue
-    .line 9578
+    .line 9609
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mObserver:Landroid/content/pm/IPackageStatsObserver;
 
     if-eqz v1, :cond_0
 
-    .line 9580
+    .line 9611
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mObserver:Landroid/content/pm/IPackageStatsObserver;
 
@@ -76,16 +76,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9585
+    .line 9616
     :cond_0
     :goto_0
     return-void
 
-    .line 9581
+    .line 9612
     :catch_0
     move-exception v0
 
-    .line 9582
+    .line 9613
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PackageManager"
 
@@ -100,7 +100,7 @@
     .locals 3
 
     .prologue
-    .line 9589
+    .line 9620
     const-string v0, "PackageManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,7 +133,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9591
+    .line 9622
     return-void
 .end method
 
@@ -146,14 +146,14 @@
     .end annotation
 
     .prologue
-    .line 9541
+    .line 9572
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v4, v3, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 9542
+    .line 9573
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -174,32 +174,32 @@
 
     iput-boolean v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mSuccess:Z
 
-    .line 9543
+    .line 9574
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9545
+    .line 9576
     iget-boolean v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mSuccess:Z
 
     if-eqz v3, :cond_0
 
-    .line 9547
+    .line 9578
     invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 9548
+    .line 9579
     const/4 v0, 0x1
 
-    .line 9555
+    .line 9586
     .local v0, "mounted":Z
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 9556
+    .line 9587
     new-instance v2, Landroid/os/Environment$UserEnvironment;
 
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
@@ -208,7 +208,7 @@
 
     invoke-direct {v2, v3}, Landroid/os/Environment$UserEnvironment;-><init>(I)V
 
-    .line 9558
+    .line 9589
     .local v2, "userEnv":Landroid/os/Environment$UserEnvironment;
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
@@ -234,7 +234,7 @@
 
     iput-wide v4, v3, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
-    .line 9561
+    .line 9592
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
     iget-object v4, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -259,7 +259,7 @@
 
     iput-wide v4, v3, Landroid/content/pm/PackageStats;->externalDataSize:J
 
-    .line 9565
+    .line 9596
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
     iget-wide v4, v3, Landroid/content/pm/PackageStats;->externalDataSize:J
@@ -272,7 +272,7 @@
 
     iput-wide v4, v3, Landroid/content/pm/PackageStats;->externalDataSize:J
 
-    .line 9567
+    .line 9598
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
     iget-object v4, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -297,7 +297,7 @@
 
     iput-wide v4, v3, Landroid/content/pm/PackageStats;->externalMediaSize:J
 
-    .line 9570
+    .line 9601
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->mStats:Landroid/content/pm/PackageStats;
 
     iget-object v4, p0, Lcom/android/server/pm/PackageManagerService$MeasureParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -322,13 +322,13 @@
 
     iput-wide v4, v3, Landroid/content/pm/PackageStats;->externalObbSize:J
 
-    .line 9574
+    .line 9605
     .end local v0    # "mounted":Z
     .end local v2    # "userEnv":Landroid/os/Environment$UserEnvironment;
     :cond_0
     return-void
 
-    .line 9543
+    .line 9574
     :catchall_0
     move-exception v3
 
@@ -339,13 +339,13 @@
 
     throw v3
 
-    .line 9550
+    .line 9581
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 9551
+    .line 9582
     .local v1, "status":Ljava/lang/String;
     const-string v3, "mounted"
 
@@ -381,7 +381,7 @@
     .locals 2
 
     .prologue
-    .line 9534
+    .line 9565
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

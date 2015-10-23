@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Impossible de lire cette vidéo en streaming sur cet appareil.</string>
     <string name="selectTextMode">Sélectionner texte</string>
     <string name="status_bar_notification_info_overflow">>999</string>
-    <string name="profileNameDefault">Par défaut</string>
-    <string name="profileNameWork">Travail</string>
-    <string name="profileNameHome">Maison</string>
-    <string name="profileNameSilent">Silencieux</string>
-    <string name="profileNameNight">Nuit</string>
-    <string name="profileNameAutomobile">Voiture</string>
-    <string name="profileGroupPhone">Téléphone</string>
-    <string name="profileGroupCalendar">Agenda</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">E-mail</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Autre</string>
     <string name="profile_none">Aucun</string>
     <string name="profile_picker_title">Profils</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Lampe de poche allumé</string>
     <string name="quick_settings_tile_flashlight_not_summary">Appuyez pour éteindre</string>
     <string name="storage_sd_dock_card">Dock carte SD</string>
+    <string name="fingerprint_default_name">Empreinte digitale %d</string>
+    <string name="permlab_accessFingerprintService">"Service d'accès par empreinte digitale"</string>
+    <string name="permdesc_accessFingerprintService">"Permet à une application d'accéder au service d'empreintes digitales. L'application peut ajouter, supprimer, renommer et authentifier des empreintes digitales"</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@ L'économiseur de batterie s'éteint automatiquement lorsque votre appareil est 
     <string name="stk_cc_ss_to_ss">La requête SS a été remplacée par une autre requête SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">Réseau USB &amp;</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Réseau</string>
+    <string name="permlab_resetBatteryStats">réinitialiser les statistiques de la batterie</string>
+    <string name="permdesc_resetBatteryStats">"Permet à une application de réinitialiser les données actuelles d'utilisation de la batterie à faible niveau."</string>
+    <string name="silent_mode_priority">Priorité</string>
+    <string name="silent_mode_none">Aucun</string>
 </resources>

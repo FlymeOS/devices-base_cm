@@ -220,6 +220,7 @@
     <string name="fingerprint_default_name">[Fîñĝéŕþŕîñţ %d one two three]</string>
     <string name="permlab_accessFingerprintService">[åççéšš ƒîñĝéŕþŕîñţ šéŕVîçé one two three four]</string>
     <string name="permdesc_accessFingerprintService">[Åļļöŵš åñ åþþ ţö åççéšš ţĥé ƒîñĝéŕþŕîñţ šéŕVîçé. Ţĥé åþþ çåñ åðð, ðéļéţé, ŕéñåḿé åñð åûţĥéñţîçåţé åĝåîñšţ ƒîñĝéŕþŕîñţš one two three four five six seven eight nine ten eleven twelve thirteen fourteen fiveteen sixteen seventeen nineteen twent]</string>
+    <string name="subscription_change_disabled_wifi_ap">[Ðîšåɓļéð ŴîFî ĥöţšþöţ ðûé ţö ŠÎḾ šûɓšçŕîþţîöñ çĥåñĝé one two three four five six seven eight nine ten eleven]</string>
     <string name="widget_default_package_name">[ one]</string>
     <string name="widget_default_class_name">[ one]</string>
     <string name="db_default_journal_mode">[ÞÉŔŠÎŠŢ one two]</string>

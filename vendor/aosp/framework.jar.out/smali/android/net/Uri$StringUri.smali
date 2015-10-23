@@ -58,6 +58,7 @@
     iput v1, p0, Landroid/net/Uri$StringUri;->cachedFsi:I
 
     .line 531
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -1058,6 +1059,7 @@
     .line 535
     iget-object v1, p0, Landroid/net/Uri$StringUri;->scheme:Ljava/lang/String;
 
+    # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
     move-result-object v2

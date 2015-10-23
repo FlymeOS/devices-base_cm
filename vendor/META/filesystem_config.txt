@@ -207,7 +207,7 @@ system/bin/ime 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/input 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/insmod 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/installd 0 2000 755 selabel=u:object_r:installd_exec:s0 capabilities=0x0
-system/bin/install-recovery.sh 0 0 777 selabel=u:object_r:install_recovery_exec:s0 capabilities=0x0
+system/bin/install-recovery.sh 0 0 750 selabel=u:object_r:install_recovery_exec:s0 capabilities=0x0
 system/bin/ioctl 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/ionice 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/ip 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -342,7 +342,7 @@ system/bin/traceroute6 0 2000 755 selabel=u:object_r:system_file:s0 capabilities
 system/bin/tune2fs 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/uiautomator 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/umount 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/bin/uncrypt 0 0 777 selabel=u:object_r:uncrypt_exec:s0 capabilities=0x0
+system/bin/uncrypt 0 0 750 selabel=u:object_r:uncrypt_exec:s0 capabilities=0x0
 system/bin/uptime 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/usbhub 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/usbhub_init 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -891,8 +891,6 @@ system/lib/crtbegin_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=
 system/lib/crtend_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/drm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/drm/libfwdlockengine.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/egl 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/egl/egl.cfg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/audio.a2dp.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/audio_policy.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1216,11 +1214,9 @@ system/media/audio/alarms/Argon.ogg 0 0 644 selabel=u:object_r:system_file:s0 ca
 system/media/audio/alarms/Barium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Carbon.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/CyanAlarm.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/media/audio/alarms/Fermium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Helium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Krypton.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Neon.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/media/audio/alarms/Nobelium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/NuclearLaunch.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Osmium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/alarms/Oxygen.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

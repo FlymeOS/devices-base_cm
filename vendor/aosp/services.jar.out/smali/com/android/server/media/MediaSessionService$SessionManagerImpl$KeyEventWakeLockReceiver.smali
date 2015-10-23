@@ -3,8 +3,8 @@
 .source "MediaSessionService.java"
 
 # interfaces
-.implements Landroid/app/PendingIntent$OnFinished;
 .implements Ljava/lang/Runnable;
+.implements Landroid/app/PendingIntent$OnFinished;
 
 
 # annotations

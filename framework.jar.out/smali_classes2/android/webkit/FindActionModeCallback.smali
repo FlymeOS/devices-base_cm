@@ -3,8 +3,8 @@
 .source "FindActionModeCallback.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
 .implements Landroid/view/ActionMode$Callback;
+.implements Landroid/text/TextWatcher;
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/webkit/WebView$FindListener;
 
@@ -212,7 +212,7 @@
     .line 179
     iget-object v0, p0, Landroid/webkit/FindActionModeCallback;->mMatches:Landroid/widget/TextView;
 
-    const v1, 0x104063b
+    const v1, 0x1040644
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

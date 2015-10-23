@@ -3,8 +3,8 @@
 .source "PreferenceActivity.java"
 
 # interfaces
-.implements Landroid/preference/PreferenceFragment$OnPreferenceStartFragmentCallback;
 .implements Landroid/preference/PreferenceManager$OnPreferenceTreeClickListener;
+.implements Landroid/preference/PreferenceFragment$OnPreferenceStartFragmentCallback;
 
 
 # annotations

@@ -3,8 +3,8 @@
 .source "ThemeConfig.java"
 
 # interfaces
-.implements Landroid/os/Parcelable;
 .implements Ljava/lang/Cloneable;
+.implements Landroid/os/Parcelable;
 .implements Ljava/lang/Comparable;
 
 
@@ -194,7 +194,9 @@
 
     .prologue
     .line 182
-    const/4 v0, 0x0
+    invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
+
+    move-result v0
 
     invoke-static {p0, v0}, Landroid/content/res/ThemeConfig;->getBootThemeForUser(Landroid/content/ContentResolver;I)Landroid/content/res/ThemeConfig;
 

@@ -220,6 +220,7 @@
     <string name="fingerprint_default_name">‏‮Fingerprint‬‏ ‏‮‬‏%d</string>
     <string name="permlab_accessFingerprintService">‏‮access‬‏ ‏‮fingerprint‬‏ ‏‮service‬‏</string>
     <string name="permdesc_accessFingerprintService">‏‮Allows‬‏ ‏‮an‬‏ ‏‮app‬‏ ‏‮to‬‏ ‏‮access‬‏ ‏‮the‬‏ ‏‮fingerprint‬‏ ‏‮service.‬‏ ‏‮The‬‏ ‏‮app‬‏ ‏‮can‬‏ ‏‮add,‬‏ ‏‮delete,‬‏ ‏‮rename‬‏ ‏‮and‬‏ ‏‮authenticate‬‏ ‏‮against‬‏ ‏‮fingerprints‬‏</string>
+    <string name="subscription_change_disabled_wifi_ap">‏‮Disabled‬‏ ‏‮WiFi‬‏ ‏‮hotspot‬‏ ‏‮due‬‏ ‏‮to‬‏ ‏‮SIM‬‏ ‏‮subscription‬‏ ‏‮change‬‏</string>
     <string name="widget_default_package_name" />
     <string name="widget_default_class_name" />
     <string name="db_default_journal_mode">‏‮PERSIST‬‏</string>

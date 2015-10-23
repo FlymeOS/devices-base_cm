@@ -29,30 +29,30 @@
     .locals 1
 
     .prologue
-    .line 1259
+    .line 1260
     iput-object p1, p0, Lcom/android/server/ThemeService$SettingsObserver;->this$0:Lcom/android/server/ThemeService;
 
-    .line 1260
+    .line 1261
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1252
+    .line 1253
     sget-object v0, Landroid/provider/Settings$System;->DEFAULT_ALARM_ALERT_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/android/server/ThemeService$SettingsObserver;->ALARM_ALERT_URI:Landroid/net/Uri;
 
-    .line 1254
+    .line 1255
     sget-object v0, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/android/server/ThemeService$SettingsObserver;->NOTIFICATION_URI:Landroid/net/Uri;
 
-    .line 1256
+    .line 1257
     sget-object v0, Landroid/provider/Settings$System;->DEFAULT_RINGTONE_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/android/server/ThemeService$SettingsObserver;->RINGTONE_URI:Landroid/net/Uri;
 
-    .line 1261
+    .line 1262
     return-void
 .end method
 
@@ -64,19 +64,19 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1276
+    .line 1277
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 1277
+    .line 1278
     const/4 v1, 0x0
 
-    .line 1278
+    .line 1279
     .local v1, "changed":Z
     new-instance v0, Landroid/content/res/ThemeChangeRequest$Builder;
 
     invoke-direct {v0}, Landroid/content/res/ThemeChangeRequest$Builder;-><init>()V
 
-    .line 1279
+    .line 1280
     .local v0, "builder":Landroid/content/res/ThemeChangeRequest$Builder;
     iget-object v2, p0, Lcom/android/server/ThemeService$SettingsObserver;->ALARM_ALERT_URI:Landroid/net/Uri;
 
@@ -86,15 +86,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 1281
+    .line 1282
     const-string v2, ""
 
     invoke-virtual {v0, v2}, Landroid/content/res/ThemeChangeRequest$Builder;->setAlarm(Ljava/lang/String;)Landroid/content/res/ThemeChangeRequest$Builder;
 
-    .line 1282
+    .line 1283
     const/4 v1, 0x1
 
-    .line 1284
+    .line 1285
     :cond_0
     iget-object v2, p0, Lcom/android/server/ThemeService$SettingsObserver;->NOTIFICATION_URI:Landroid/net/Uri;
 
@@ -104,15 +104,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 1286
+    .line 1287
     const-string v2, ""
 
     invoke-virtual {v0, v2}, Landroid/content/res/ThemeChangeRequest$Builder;->setNotification(Ljava/lang/String;)Landroid/content/res/ThemeChangeRequest$Builder;
 
-    .line 1287
+    .line 1288
     const/4 v1, 0x1
 
-    .line 1289
+    .line 1290
     :cond_1
     iget-object v2, p0, Lcom/android/server/ThemeService$SettingsObserver;->RINGTONE_URI:Landroid/net/Uri;
 
@@ -122,19 +122,19 @@
 
     if-eqz v2, :cond_2
 
-    .line 1291
+    .line 1292
     const-string v2, ""
 
     invoke-virtual {v0, v2}, Landroid/content/res/ThemeChangeRequest$Builder;->setRingtone(Ljava/lang/String;)Landroid/content/res/ThemeChangeRequest$Builder;
 
-    .line 1292
+    .line 1293
     const/4 v1, 0x1
 
-    .line 1295
+    .line 1296
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 1296
+    .line 1297
     iget-object v2, p0, Lcom/android/server/ThemeService$SettingsObserver;->this$0:Lcom/android/server/ThemeService;
 
     invoke-virtual {v0}, Landroid/content/res/ThemeChangeRequest$Builder;->build()Landroid/content/res/ThemeChangeRequest;
@@ -148,7 +148,7 @@
     # invokes: Lcom/android/server/ThemeService;->updateProvider(Landroid/content/res/ThemeChangeRequest;J)V
     invoke-static {v2, v3, v4, v5}, Lcom/android/server/ThemeService;->access$1100(Lcom/android/server/ThemeService;Landroid/content/res/ThemeChangeRequest;J)V
 
-    .line 1298
+    .line 1299
     :cond_3
     return-void
 .end method
@@ -160,7 +160,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1264
+    .line 1265
     iget-object v1, p0, Lcom/android/server/ThemeService$SettingsObserver;->this$0:Lcom/android/server/ThemeService;
 
     # getter for: Lcom/android/server/ThemeService;->mContext:Landroid/content/Context;
@@ -172,30 +172,30 @@
 
     move-result-object v0
 
-    .line 1265
+    .line 1266
     .local v0, "cr":Landroid/content/ContentResolver;
     if-eqz p1, :cond_0
 
-    .line 1266
+    .line 1267
     iget-object v1, p0, Lcom/android/server/ThemeService$SettingsObserver;->ALARM_ALERT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1267
+    .line 1268
     iget-object v1, p0, Lcom/android/server/ThemeService$SettingsObserver;->NOTIFICATION_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1268
+    .line 1269
     iget-object v1, p0, Lcom/android/server/ThemeService$SettingsObserver;->RINGTONE_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1272
+    .line 1273
     :goto_0
     return-void
 
-    .line 1270
+    .line 1271
     :cond_0
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 

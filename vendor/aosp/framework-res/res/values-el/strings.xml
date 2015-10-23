@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Αυτό το βίντεο δεν είναι έγκυρο για ροή σε αυτή τη συσκευή.</string>
     <string name="selectTextMode">Επιλογή κειμένου</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Προεπιλογή</string>
-    <string name="profileNameWork">Εργασία</string>
-    <string name="profileNameHome">Σπίτι</string>
-    <string name="profileNameSilent">Αθόρυβο</string>
-    <string name="profileNameNight">Νύχτα</string>
-    <string name="profileNameAutomobile">Αυτοκίνητο</string>
-    <string name="profileGroupPhone">Τηλέφωνο</string>
-    <string name="profileGroupCalendar">Ημερολόγιο</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Ηλεκτρονικό ταχυδρομείο</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Άλλο</string>
     <string name="profile_none">Κανένα</string>
     <string name="profile_picker_title">Προφίλ</string>
     <string name="global_action_choose_profile">Προφίλ</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Ο φακός είναι ενεργοποιημένος</string>
     <string name="quick_settings_tile_flashlight_not_summary">Πιέστε για απενεργοποίηση</string>
     <string name="storage_sd_dock_card">Κάρτα SD βάσης σύνδεσης</string>
+    <string name="fingerprint_default_name">Δακτυλικό αποτύπωμα %d</string>
+    <string name="permlab_accessFingerprintService">πρόσβαση στην υπηρεσία δακτυλικών αποτυπωμάτων</string>
+    <string name="permdesc_accessFingerprintService">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία δακτυλικών αποτυπωμάτων. Η εφαρμογή μπορεί να προσθέσει, να διαγράψει, να μετονομάσει και να ταυτοποιήσει δακτυλικά αποτυπώματα</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -1792,4 +1783,12 @@
     <string name="stk_cc_ss_to_ss">Το αίτημα SS τροποποιήθηκε σε νέο αίτημα SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; δίκτυο</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Δίκτυο</string>
+    <string name="permlab_resetBatteryStats">επαναφορά στατιστικών μπαταρίας</string>
+    <string name="permdesc_resetBatteryStats">Επιτρέπει σε μια εφαρμογή να κάνει επαναφορά τα χαμηλού επιπέδου δεδομένα χρήσης μπαταρίας.</string>
+    <string name="silent_mode_priority">Προτεραιότητα</string>
+    <string name="silent_mode_none">Κανένα</string>
 </resources>

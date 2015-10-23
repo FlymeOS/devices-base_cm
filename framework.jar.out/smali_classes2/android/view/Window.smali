@@ -200,7 +200,7 @@
 
     .line 1323
     .local v1, "res":Landroid/content/res/Resources;
-    const v2, 0x11200ac
+    const v2, 0x11200ad
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -213,7 +213,7 @@
 
     .line 1327
     :cond_0
-    const v2, 0x11200ad
+    const v2, 0x11200ae
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1607,7 +1607,7 @@
     .param p1, "disable"    # Z
 
     .prologue
-    const/16 v1, 0x800
+    const/16 v1, 0x4000
 
     .line 928
     if-eqz p1, :cond_0

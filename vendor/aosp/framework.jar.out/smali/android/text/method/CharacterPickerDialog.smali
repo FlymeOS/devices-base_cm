@@ -3,8 +3,8 @@
 .source "CharacterPickerDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
 .implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations

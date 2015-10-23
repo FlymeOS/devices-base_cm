@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Denne videoen er ikke gyldig for direkteavspilling på enheten.</string>
     <string name="selectTextMode">Marker tekst</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Standard</string>
-    <string name="profileNameWork">Arbeid</string>
-    <string name="profileNameHome">Hjemme</string>
-    <string name="profileNameSilent">Stille</string>
-    <string name="profileNameNight">Natt</string>
-    <string name="profileNameAutomobile">Bil</string>
-    <string name="profileGroupPhone">Telefon</string>
-    <string name="profileGroupCalendar">Kalender</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">E-post</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Andre</string>
     <string name="profile_none">Ingen</string>
     <string name="profile_picker_title">Profiler</string>
     <string name="global_action_choose_profile">Profil</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Lommelykt er på</string>
     <string name="quick_settings_tile_flashlight_not_summary">Trykk for å slå av</string>
     <string name="storage_sd_dock_card">Dock SD-kort</string>
+    <string name="fingerprint_default_name">Fingeravtrykk %d</string>
+    <string name="permlab_accessFingerprintService">tilgang til fingeravtrykkstjenesten</string>
+    <string name="permdesc_accessFingerprintService">Gjør det mulig for en app å få tilgang til fingeravtrykkstjenesten. Appen kan legge til, slette, gi nytt navn på og godkjenne i forhold til fingeravtrykk</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,10 @@ Batterisparing slås av automatisk når enheten lader."</string>
     <string name="stk_cc_ss_to_ss">SS-forespørselen er endret til en ny SS-forespørsel.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
+    <string name="adb_active_custom_tile">ADB – %1$s</string>
+    <string name="adb_active_custom_tile_both">USB og nettverk</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Nettverk</string>
+    <string name="permlab_resetBatteryStats">tilbakestill batteristatistikk</string>
+    <string name="permdesc_resetBatteryStats">Tillater at et program kan tilbakestille nåværende bruksdata om lavt batteri.</string>
 </resources>

@@ -24,18 +24,6 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Відео не придатне для потокового передавання в цей пристрій.</string>
     <string name="selectTextMode">Вибрати текст</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profileNameDefault">Стандартний</string>
-    <string name="profileNameWork">Робота</string>
-    <string name="profileNameHome">Дім</string>
-    <string name="profileNameSilent">Беззвучний</string>
-    <string name="profileNameNight">Ніч</string>
-    <string name="profileNameAutomobile">Автомобіль</string>
-    <string name="profileGroupPhone">Телефон</string>
-    <string name="profileGroupCalendar">Календар</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Email</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Інше</string>
     <string name="profile_none">Немає</string>
     <string name="profile_picker_title">Профілі</string>
     <string name="global_action_choose_profile">Профіль</string>
@@ -216,6 +204,9 @@
     <string name="quick_settings_tile_flashlight_not_title">Ліхтарик увімкнений</string>
     <string name="quick_settings_tile_flashlight_not_summary">Торкніться, щоб вимкнути</string>
     <string name="storage_sd_dock_card">SD-карта док-станції</string>
+    <string name="fingerprint_default_name">Відбиток пальця %d</string>
+    <string name="permlab_accessFingerprintService">Доступ до відбитків пальців</string>
+    <string name="permdesc_accessFingerprintService">Дозволяє додатку отримувати доступ до служби відбитків пальців. Додаток зможе додавати, видаляти, перейменовувати збережені відбитки та використовувати їх для автентифікації</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y р.</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1792,4 +1783,12 @@
     <string name="stk_cc_ss_to_ss">Запит SS перетворено на новий запит SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB та мережі</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Мережа</string>
+    <string name="permlab_resetBatteryStats">скинути статистику акумулятора</string>
+    <string name="permdesc_resetBatteryStats">Дозволити програмі скидати дані про використання акумулятора.</string>
+    <string name="silent_mode_priority">Пріоритет</string>
+    <string name="silent_mode_none">Немає</string>
 </resources>

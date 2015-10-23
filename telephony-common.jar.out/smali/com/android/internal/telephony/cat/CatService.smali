@@ -375,7 +375,9 @@
     .line 889
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    const-string v2, "android.permission.RECEIVE_STK_COMMANDS"
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 890
     return-void
@@ -495,7 +497,9 @@
     .line 880
     iget-object v2, p0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    const-string v3, "android.permission.RECEIVE_STK_COMMANDS"
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 881
     return-void
@@ -574,7 +578,9 @@
     .line 461
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    const-string v2, "android.permission.RECEIVE_STK_COMMANDS"
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 462
     return-void
@@ -1806,7 +1812,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10406a1
+    const v3, 0x10406aa
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1899,7 +1905,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10406a0
+    const v3, 0x10406a9
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1957,7 +1963,7 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10406a2
+    const v3, 0x10406ab
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2003,7 +2009,7 @@
 
     move-result-object v2
 
-    const v3, 0x1120082
+    const v3, 0x1120083
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
     :try_end_0
@@ -2594,7 +2600,9 @@
     .line 475
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    const-string v2, "android.permission.RECEIVE_STK_COMMANDS"
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 476
     return-void
@@ -3747,7 +3755,7 @@
 
     move-result-object v0
 
-    const v1, 0x11200b4
+    const v1, 0x11200b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
