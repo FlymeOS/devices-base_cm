@@ -149,22 +149,18 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 21663
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 21664
     .local v0, "blurImgHeight":I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 21665
     .local v1, "blurImgWidth":I
-    const v2, 0x3e99999a    # 0.3f
+    const v2, 0x3ecccccd    # 0.4f
 
-    .line 21667
     .local v2, "contrast":F
     sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
