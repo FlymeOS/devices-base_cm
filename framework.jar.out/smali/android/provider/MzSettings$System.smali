@@ -311,6 +311,8 @@
 
 .field public static final STATUSBAR_BATTERY_PERCENT:Ljava/lang/String; = "statusbar_battery_percent"
 
+.field public static final VOICE_ASSISTENT_USE_IN_LOCKSCREEN:Ljava/lang/String; = "voice_assistent_use_in_lockscreen"
+
 
 # direct methods
 .method public constructor <init>()V
