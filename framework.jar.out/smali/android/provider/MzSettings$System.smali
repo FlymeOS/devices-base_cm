@@ -283,6 +283,8 @@
 
 .field public static final MZ_USE_FLYME_COMMUNICATION:Ljava/lang/String; = "mz_use_flyme_communication"
 
+.field public static final MZ_VPN_CONNECT_STATE:Ljava/lang/String; = "mz_vpn_connect_state"
+
 .field public static final NETWORK_PROVIDER_PACKAGE:Ljava/lang/String; = "network_provider_package"
 
 .field public static final NOTIFICATION_SOUND_FILE_PATH:Ljava/lang/String; = "notification_sound_file_path"

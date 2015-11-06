@@ -1,3 +1,5 @@
+#!/bin/bash
+
 
 jarBaseName=$1
 tempSmaliDir=$2
