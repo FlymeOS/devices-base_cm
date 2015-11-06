@@ -939,7 +939,7 @@
     const/4 v11, 0x0
 
     :goto_3
-    if-ge v11, v15, :cond_21
+    if-ge v11, v15, :cond_20
 
     .line 548
     move-object/from16 v0, v25
@@ -956,7 +956,7 @@
 
     move-result v27
 
-    if-eqz v27, :cond_f
+    if-eqz v27, :cond_e
 
     .line 551
     move-object/from16 v0, p0
@@ -1060,13 +1060,6 @@
 
     invoke-virtual {v14, v0}, Lcom/android/internal/view/menu/MenuItemImpl;->setIsActionButton(Z)V
 
-    .line 573
-    if-lez v17, :cond_e
-
-    .line 574
-    add-int/lit8 v17, v17, -0x1
-
-    .line 547
     .end local v9    # "groupId":I
     .end local v18    # "measuredWidth":I
     .end local v24    # "v":Landroid/view/View;
@@ -1098,35 +1091,19 @@
 
     goto :goto_4
 
-    .line 576
-    .restart local v9    # "groupId":I
-    .restart local v18    # "measuredWidth":I
-    :cond_e
-    const/16 v27, 0x0
-
-    move/from16 v0, v27
-
-    invoke-virtual {v14, v0}, Lcom/android/internal/view/menu/MenuItemImpl;->setIsActionButton(Z)V
-
-    goto :goto_5
-
-    .line 579
-    .end local v9    # "groupId":I
-    .end local v18    # "measuredWidth":I
     .end local v24    # "v":Landroid/view/View;
-    :cond_f
+    :cond_e
     invoke-virtual {v14}, Lcom/android/internal/view/menu/MenuItemImpl;->requestsActionButton()Z
 
     move-result v27
 
-    if-eqz v27, :cond_20
+    if-eqz v27, :cond_1f
 
-    .line 582
     invoke-virtual {v14}, Lcom/android/internal/view/menu/MenuItemImpl;->getGroupId()I
 
     move-result v9
 
-    .line 583
+    .line 576
     .restart local v9    # "groupId":I
     move-object/from16 v0, v23
 
@@ -1136,12 +1113,12 @@
 
     .line 584
     .local v12, "inGroup":Z
-    if-gtz v17, :cond_10
+    if-gtz v17, :cond_f
 
-    if-eqz v12, :cond_18
+    if-eqz v12, :cond_17
 
-    :cond_10
-    if-lez v26, :cond_18
+    :cond_f
+    if-lez v26, :cond_17
 
     move-object/from16 v0, p0
 
@@ -1149,19 +1126,17 @@
 
     move/from16 v27, v0
 
-    if-eqz v27, :cond_11
+    if-eqz v27, :cond_10
 
-    if-lez v7, :cond_18
+    if-lez v7, :cond_17
 
-    :cond_11
+    :cond_10
     const/4 v13, 0x1
 
-    .line 587
     .local v13, "isAction":Z
     :goto_6
-    if-eqz v13, :cond_15
+    if-eqz v13, :cond_14
 
-    .line 588
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/MzActionMenuPresenter;->mScrapActionButtonView:Landroid/view/View;
@@ -1186,24 +1161,22 @@
 
     move-object/from16 v27, v0
 
-    if-nez v27, :cond_12
+    if-nez v27, :cond_11
 
-    .line 590
     move-object/from16 v0, v24
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/widget/MzActionMenuPresenter;->mScrapActionButtonView:Landroid/view/View;
 
-    .line 592
-    :cond_12
+    :cond_11
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/widget/MzActionMenuPresenter;->mStrictWidthLimit:Z
 
     move/from16 v27, v0
 
-    if-eqz v27, :cond_19
+    if-eqz v27, :cond_18
 
     .line 593
     const/16 v27, 0x0
@@ -1218,46 +1191,37 @@
 
     move-result v6
 
-    .line 595
     .local v6, "cells":I
     sub-int/2addr v7, v6
 
-    .line 596
-    if-nez v6, :cond_13
+    if-nez v6, :cond_12
 
-    .line 597
     const/4 v13, 0x0
 
-    .line 602
     .end local v6    # "cells":I
-    :cond_13
+    :cond_12
     :goto_7
     invoke-virtual/range {v24 .. v24}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v18
 
-    .line 603
     .restart local v18    # "measuredWidth":I
     sub-int v26, v26, v18
 
-    .line 604
-    if-nez v8, :cond_14
+    if-nez v8, :cond_13
 
-    .line 605
     move/from16 v8, v18
 
-    .line 608
-    :cond_14
+    :cond_13
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/widget/MzActionMenuPresenter;->mStrictWidthLimit:Z
 
     move/from16 v27, v0
 
-    if-eqz v27, :cond_1b
+    if-eqz v27, :cond_1a
 
-    .line 609
-    if-ltz v26, :cond_1a
+    if-ltz v26, :cond_19
 
     const/16 v27, 0x1
 
@@ -1267,11 +1231,11 @@
     .line 616
     .end local v18    # "measuredWidth":I
     .end local v24    # "v":Landroid/view/View;
-    :cond_15
+    :cond_14
     :goto_9
-    if-eqz v13, :cond_1d
+    if-eqz v13, :cond_1c
 
-    if-eqz v9, :cond_1d
+    if-eqz v9, :cond_1c
 
     .line 617
     const/16 v27, 0x1
@@ -1282,29 +1246,25 @@
 
     invoke-virtual {v0, v9, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 631
-    :cond_16
-    if-eqz v13, :cond_17
+    :cond_15
+    if-eqz v13, :cond_16
 
     add-int/lit8 v17, v17, -0x1
 
-    .line 633
-    :cond_17
+    :cond_16
     invoke-virtual {v14, v13}, Lcom/android/internal/view/menu/MenuItemImpl;->setIsActionButton(Z)V
 
     goto/16 :goto_5
 
-    .line 584
     .end local v13    # "isAction":Z
-    :cond_18
+    :cond_17
     const/4 v13, 0x0
 
     goto :goto_6
 
-    .line 600
     .restart local v13    # "isAction":Z
     .restart local v24    # "v":Landroid/view/View;
-    :cond_19
+    :cond_18
     move-object/from16 v0, v24
 
     move/from16 v1, v20
@@ -1315,18 +1275,16 @@
 
     goto :goto_7
 
-    .line 609
     .restart local v18    # "measuredWidth":I
-    :cond_1a
+    :cond_19
     const/16 v27, 0x0
 
     goto :goto_8
 
-    .line 612
-    :cond_1b
+    :cond_1a
     add-int v27, v26, v8
 
-    if-lez v27, :cond_1c
+    if-lez v27, :cond_1b
 
     const/16 v27, 0x1
 
@@ -1335,18 +1293,16 @@
 
     goto :goto_9
 
-    :cond_1c
+    :cond_1b
     const/16 v27, 0x0
 
     goto :goto_a
 
-    .line 618
     .end local v18    # "measuredWidth":I
     .end local v24    # "v":Landroid/view/View;
-    :cond_1d
-    if-eqz v12, :cond_16
+    :cond_1c
+    if-eqz v12, :cond_15
 
-    .line 620
     const/16 v27, 0x0
 
     move-object/from16 v0, v23
@@ -1362,7 +1318,7 @@
     :goto_b
     move/from16 v0, v16
 
-    if-ge v0, v11, :cond_16
+    if-ge v0, v11, :cond_15
 
     .line 622
     move-object/from16 v0, v25
@@ -1383,38 +1339,36 @@
 
     move/from16 v0, v27
 
-    if-ne v0, v9, :cond_1f
+    if-ne v0, v9, :cond_1e
 
     .line 625
     invoke-virtual {v3}, Lcom/android/internal/view/menu/MenuItemImpl;->isActionButton()Z
 
     move-result v27
 
-    if-eqz v27, :cond_1e
+    if-eqz v27, :cond_1d
 
     add-int/lit8 v17, v17, 0x1
 
-    .line 626
-    :cond_1e
+    :cond_1d
     const/16 v27, 0x0
 
     move/from16 v0, v27
 
     invoke-virtual {v3, v0}, Lcom/android/internal/view/menu/MenuItemImpl;->setIsActionButton(Z)V
 
-    .line 621
-    :cond_1f
+    .line 626
+    :cond_1e
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_b
 
-    .line 636
     .end local v3    # "areYouMyGroupie":Lcom/android/internal/view/menu/MenuItemImpl;
     .end local v9    # "groupId":I
     .end local v12    # "inGroup":Z
     .end local v13    # "isAction":Z
     .end local v16    # "j":I
-    :cond_20
+    :cond_1f
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -1425,7 +1379,7 @@
 
     .line 639
     .end local v14    # "item":Lcom/android/internal/view/menu/MenuItemImpl;
-    :cond_21
+    :cond_20
     const/16 v27, 0x1
 
     return v27
