@@ -1039,7 +1039,7 @@
 
     if-eqz v3, :cond_1
 
-    const v3, 0x104054e
+    const v3, 0x1040543
 
     :goto_1
     invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1062,7 +1062,7 @@
 
     invoke-direct {v1, v0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x1080655
+    const v3, 0x1080657
 
     invoke-virtual {v1, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1164,7 +1164,7 @@
     .restart local v8    # "mNotificationMgr":Landroid/app/NotificationManager;
     .restart local v10    # "title":Ljava/lang/CharSequence;
     :cond_1
-    const v3, 0x104054f
+    const v3, 0x1040544
 
     goto :goto_1
 .end method

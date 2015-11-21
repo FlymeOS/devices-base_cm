@@ -119,7 +119,7 @@
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     .line 1879
-    const-string v3, "suggestions"
+    const-string/jumbo v3, "suggestions"
 
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -156,7 +156,7 @@
     if-ge v2, v1, :cond_1
 
     .line 1886
-    const-string v4, "query"
+    const-string/jumbo v4, "query"
 
     new-instance v5, Ljava/lang/StringBuilder;
 

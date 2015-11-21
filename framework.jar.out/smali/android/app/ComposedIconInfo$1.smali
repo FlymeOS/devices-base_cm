@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 127
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 130
+    .line 131
     new-instance v0, Landroid/app/ComposedIconInfo;
 
     const/4 v1, 0x0
@@ -57,10 +57,9 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 127
+    .line 128
     invoke-virtual {p0, p1}, Landroid/app/ComposedIconInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/app/ComposedIconInfo;
 
     move-result-object v0
@@ -73,7 +72,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 135
+    .line 136
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/app/ComposedIconInfo;
@@ -83,10 +82,9 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
-    .line 127
+    .line 128
     invoke-virtual {p0, p1}, Landroid/app/ComposedIconInfo$1;->newArray(I)[Landroid/app/ComposedIconInfo;
 
     move-result-object v0

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 11619
+    .line 11640
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ScreenStatusReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 11623
+    .line 11644
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -48,12 +48,12 @@
 
     if-nez v2, :cond_1
 
-    .line 11636
+    .line 11657
     :cond_0
     :goto_0
     return-void
 
-    .line 11626
+    .line 11647
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -67,27 +67,27 @@
 
     if-eqz v2, :cond_0
 
-    .line 11627
+    .line 11648
     const-string v2, "ActivityManager"
 
     const-string v3, "ICC has requested idle screen status"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11628
+    .line 11649
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "org.codeaurora.intent.action.stk.idle_screen"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 11629
+    .line 11650
     .local v0, "idleScreenIntent":Landroid/content/Intent;
     const/high16 v2, 0x10000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 11630
+    .line 11651
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$ScreenStatusReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/am/ActivityManagerService;->getFocusedStack()Lcom/android/server/am/ActivityStack;
@@ -98,13 +98,13 @@
 
     move-result v1
 
-    .line 11631
+    .line 11652
     .local v1, "isIdle":Z
     const-string v2, "SCREEN_IDLE"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 11632
+    .line 11653
     const-string v2, "ActivityManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -127,7 +127,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11634
+    .line 11655
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$ScreenStatusReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;

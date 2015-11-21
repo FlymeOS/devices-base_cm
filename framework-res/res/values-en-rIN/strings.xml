@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">"This video isn't valid for streaming to this device."</string>
     <string name="selectTextMode">Select text</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">None</string>
     <string name="profile_picker_title">Profiles</string>
     <string name="global_action_choose_profile">Profile</string>
+    <string name="profile_none">None</string>
     <string name="global_action_screenshot">Screenshot</string>
     <string name="permlab_receiveProtectedSms">receive protected SMS</string>
     <string name="permdesc_receiveProtectedSms">Allows the app to receive an incoming protected SMS.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Allows the app to change whether another app runs with Privacy Guard. When an app is running with Privacy Guard, it will not have access to personal data such as contacts, call logs, or messages.</string>
     <string name="privacy_guard_notification">Privacy Guard active</string>
     <string name="privacy_guard_notification_detail">%1$s will not be able to access personal data</string>
-    <string name="permlab_useHardwareFramework">use hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Allows an app access to the CM hardware framework.</string>
     <string name="permlab_setKeyguardWallpaper">set keyguard wallpaper</string>
     <string name="permdesc_setKeyguardWallpaper">Allows an app to change the lock screen wallpaper.</string>
     <string name="privacy_guard_dialog_title">Privacy Guard</string>

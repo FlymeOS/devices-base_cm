@@ -51,18 +51,13 @@
 # virtual methods
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # F
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Ljava/lang/Object;
 
     .prologue
     .line 25
     check-cast p2, [F
 
-    .end local p2    # "x1":Ljava/lang/Object;
     check-cast p3, [F
 
-    .end local p3    # "x2":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/animation/FloatArrayEvaluator;->evaluate(F[F[F)[F
 
     move-result-object v0

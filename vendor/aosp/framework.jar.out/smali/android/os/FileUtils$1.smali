@@ -64,17 +64,13 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 340
     check-cast p1, Ljava/io/File;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Ljava/io/File;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/os/FileUtils$1;->compare(Ljava/io/File;Ljava/io/File;)I
 
     move-result v0

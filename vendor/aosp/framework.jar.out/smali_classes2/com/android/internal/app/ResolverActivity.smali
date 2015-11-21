@@ -450,7 +450,7 @@
     if-nez v2, :cond_2
 
     .line 395
-    const v4, 0x1040627
+    const v4, 0x104061c
 
     iput v4, p0, Lcom/android/internal/app/ResolverActivity;->mProfileSwitchMessageId:I
 
@@ -480,7 +480,7 @@
     if-eqz v2, :cond_0
 
     .line 397
-    const v4, 0x1040628
+    const v4, 0x104061d
 
     iput v4, p0, Lcom/android/internal/app/ResolverActivity;->mProfileSwitchMessageId:I
 
@@ -996,7 +996,7 @@
     move v2, v1
 
     :goto_0
-    const v1, 0x1020370
+    const v1, 0x1020371
 
     if-ne v0, v1, :cond_1
 
@@ -1228,7 +1228,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e007a
+    const v3, 0x10e007e
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1453,7 +1453,7 @@
     invoke-virtual {v0, v1}, Lcom/android/internal/app/ResolverActivity;->setContentView(I)V
 
     .line 261
-    const v2, 0x102036e
+    const v2, 0x102036f
 
     move-object/from16 v0, p0
 
@@ -1693,7 +1693,7 @@
 
     .line 321
     :cond_c
-    const v2, 0x102035f
+    const v2, 0x1020360
 
     move-object/from16 v0, p0
 
@@ -1713,7 +1713,7 @@
     invoke-virtual {v10, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 324
-    const v2, 0x1020370
+    const v2, 0x1020371
 
     invoke-virtual {v10, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1726,7 +1726,7 @@
     iput-object v2, v0, Lcom/android/internal/app/ResolverActivity;->mAlwaysButton:Landroid/widget/Button;
 
     .line 325
-    const v2, 0x102036f
+    const v2, 0x1020370
 
     invoke-virtual {v10, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1753,7 +1753,7 @@
     if-eqz v2, :cond_e
 
     .line 332
-    const v2, 0x1020371
+    const v2, 0x1020372
 
     move-object/from16 v0, p0
 
@@ -1808,7 +1808,7 @@
 
     .line 351
     :cond_e
-    const v2, 0x102036d
+    const v2, 0x102036e
 
     move-object/from16 v0, p0
 
@@ -1916,7 +1916,7 @@
     invoke-virtual {v13, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 286
-    const v2, 0x102036e
+    const v2, 0x102036f
 
     move-object/from16 v0, p0
 
@@ -2683,7 +2683,7 @@
 
     move-result-object v5
 
-    const v6, 0x10406ae
+    const v6, 0x10406a3
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

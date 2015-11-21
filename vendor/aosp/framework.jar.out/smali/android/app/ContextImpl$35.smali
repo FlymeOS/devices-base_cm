@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 570
+    .line 571
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 572
+    .line 573
     new-instance v0, Landroid/telephony/SubscriptionManager;
 
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;

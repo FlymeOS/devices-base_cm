@@ -3,8 +3,8 @@
 .source "CalendarContract.java"
 
 # interfaces
-.implements Landroid/provider/BaseColumns;
 .implements Landroid/provider/CalendarContract$CalendarMetaDataColumns;
+.implements Landroid/provider/BaseColumns;
 
 
 # annotations

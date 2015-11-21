@@ -1,6 +1,9 @@
 .class Lcom/android/internal/policy/impl/GlobalActions$2;
-.super Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;
+.super Ljava/lang/Object;
 .source "GlobalActions.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # annotations
@@ -23,67 +26,66 @@
     .locals 0
 
     .prologue
-    .line 346
+    .line 361
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;-><init>(Lcom/android/internal/policy/impl/GlobalActions;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getLabelForAccessibility(Landroid/content/Context;)Ljava/lang/CharSequence;
-    .locals 1
-    .param p1, "context"    # Landroid/content/Context;
+.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 2
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "position"    # I
+    .param p4, "id"    # J
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 364
-    const/4 v0, 0x0
+    .line 365
+    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
+    iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    return-object v0
-.end method
+    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
+    invoke-static {v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$800(Lcom/android/internal/policy/impl/GlobalActions;)Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
-.method public onLongPress()Z
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 352
-    const/4 v0, 0x1
+    invoke-virtual {v1, p3}, Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;->getItem(I)Lcom/android/internal/policy/impl/GlobalActions$Action;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public onPress()V
-    .locals 1
+    .line 366
+    .local v0, "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
+    instance-of v1, v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
 
-    .prologue
-    .line 348
-    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
+    if-eqz v1, :cond_0
 
-    # invokes: Lcom/android/internal/policy/impl/GlobalActions;->createProfileDialog()V
-    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$700(Lcom/android/internal/policy/impl/GlobalActions;)V
+    .line 367
+    check-cast v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
 
-    .line 349
-    return-void
-.end method
+    .end local v0    # "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
+    invoke-interface {v0}, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;->onLongPress()Z
 
-.method public showBeforeProvisioning()Z
-    .locals 1
+    move-result v1
 
-    .prologue
-    .line 360
-    const/4 v0, 0x0
+    .line 369
+    :goto_0
+    return v1
 
-    return v0
-.end method
+    .restart local v0    # "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
+    :cond_0
+    const/4 v1, 0x0
 
-.method public showDuringKeyguard()Z
-    .locals 1
-
-    .prologue
-    .line 356
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 .end method

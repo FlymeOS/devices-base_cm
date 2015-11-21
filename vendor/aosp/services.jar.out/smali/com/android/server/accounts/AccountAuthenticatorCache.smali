@@ -212,9 +212,6 @@
 
 .method public bridge synthetic parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Landroid/content/res/Resources;
-    .param p2, "x1"    # Ljava/lang/String;
-    .param p3, "x2"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 44

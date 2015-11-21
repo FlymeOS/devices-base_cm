@@ -392,14 +392,11 @@
 
 .method public bridge synthetic onCallbackDied(Landroid/os/IInterface;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Landroid/os/IInterface;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 1329
     check-cast p1, Landroid/speech/tts/ITextToSpeechCallback;
 
-    .end local p1    # "x0":Landroid/os/IInterface;
     invoke-virtual {p0, p1, p2}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->onCallbackDied(Landroid/speech/tts/ITextToSpeechCallback;Ljava/lang/Object;)V
 
     return-void

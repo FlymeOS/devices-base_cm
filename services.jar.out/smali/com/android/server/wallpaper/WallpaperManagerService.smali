@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    const v1, 0x10400f1
+    const v1, 0x10400e6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3005,7 +3005,7 @@
     .line 1169
     const-string v3, "android.intent.extra.client_label"
 
-    const v4, 0x104062c
+    const v4, 0x1040621
 
     invoke-virtual {v11, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -3028,7 +3028,7 @@
 
     iget-object v6, v0, Lcom/android/server/wallpaper/WallpaperManagerService;->mContext:Landroid/content/Context;
 
-    const v7, 0x104062d
+    const v7, 0x1040622
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

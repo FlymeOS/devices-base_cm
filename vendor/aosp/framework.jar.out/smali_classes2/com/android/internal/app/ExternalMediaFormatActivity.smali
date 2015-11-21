@@ -206,7 +206,7 @@
 
     move-result v8
 
-    const v11, 0x1040687
+    const v11, 0x104067c
 
     if-ne v8, v11, :cond_2
 
@@ -219,7 +219,7 @@
 
     .line 89
     .local v4, "p":Lcom/android/internal/app/AlertController$AlertParams;
-    const v8, 0x10405e1
+    const v8, 0x10405d6
 
     invoke-virtual {p0, v8}, Lcom/android/internal/app/ExternalMediaFormatActivity;->getString(I)Ljava/lang/String;
 
@@ -230,7 +230,7 @@
     .line 90
     if-eqz v2, :cond_3
 
-    const v8, 0x10400a4
+    const v8, 0x104009a
 
     :goto_2
     invoke-virtual {p0, v8}, Lcom/android/internal/app/ExternalMediaFormatActivity;->getString(I)Ljava/lang/String;
@@ -254,7 +254,7 @@
     iput-object v8, v4, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
     .line 94
-    const v8, 0x10405e3
+    const v8, 0x10405d8
 
     invoke-virtual {p0, v8}, Lcom/android/internal/app/ExternalMediaFormatActivity;->getString(I)Ljava/lang/String;
 
@@ -303,7 +303,7 @@
     .restart local v2    # "isUsbStorage":Z
     .restart local v4    # "p":Lcom/android/internal/app/AlertController$AlertParams;
     :cond_3
-    const v8, 0x10400a5
+    const v8, 0x104009b
 
     goto :goto_2
 .end method

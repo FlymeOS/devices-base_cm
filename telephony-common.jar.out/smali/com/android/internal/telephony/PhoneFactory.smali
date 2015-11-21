@@ -1590,7 +1590,7 @@
 
     move-result-object v19
 
-    const v21, 0x112009d
+    const v21, 0x11200a4
 
     move-object/from16 v0, v19
 
@@ -2860,11 +2860,9 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 526
     long-to-int v0, p0
 
     invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->setDataSubscription(I)V
 
-    .line 527
     return-void
 .end method

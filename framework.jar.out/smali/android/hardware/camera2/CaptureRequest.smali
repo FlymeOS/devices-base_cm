@@ -1909,13 +1909,11 @@
 
 .method protected bridge synthetic getProtected(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 65
     check-cast p1, Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/CaptureRequest;->getProtected(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
 
     move-result-object v0

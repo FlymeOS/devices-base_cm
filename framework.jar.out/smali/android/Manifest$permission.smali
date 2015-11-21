@@ -272,8 +272,6 @@
 
 .field public static final GRANT_REVOKE_PERMISSIONS:Ljava/lang/String; = "android.permission.GRANT_REVOKE_PERMISSIONS"
 
-.field public static final HARDWARE_ABSTRACTION_ACCESS:Ljava/lang/String; = "android.permission.HARDWARE_ABSTRACTION_ACCESS"
-
 .field public static final HARDWARE_TEST:Ljava/lang/String; = "android.permission.HARDWARE_TEST"
 
 .field public static final HDMI_CEC:Ljava/lang/String; = "android.permission.HDMI_CEC"
@@ -478,6 +476,8 @@
 .field public static final REMOVE_TASKS:Ljava/lang/String; = "android.permission.REMOVE_TASKS"
 
 .field public static final REORDER_TASKS:Ljava/lang/String; = "android.permission.REORDER_TASKS"
+
+.field public static final RESET_BATTERY_STATS:Ljava/lang/String; = "android.permission.RESET_BATTERY_STATS"
 
 .field public static final RESTART_PACKAGES:Ljava/lang/String; = "android.permission.RESTART_PACKAGES"
     .annotation runtime Ljava/lang/Deprecated;

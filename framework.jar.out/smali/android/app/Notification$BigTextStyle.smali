@@ -158,7 +158,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x1020336
+    const v4, 0x1020337
 
     .line 3945
     iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
@@ -241,7 +241,7 @@
     .line 3961
     iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
 
-    const v3, 0x1020337
+    const v3, 0x1020338
 
     # invokes: Landroid/app/Notification$Builder;->addProfileBadge(Landroid/widget/RemoteViews;I)Z
     invoke-static {v2, v0, v3}, Landroid/app/Notification$Builder;->access$1500(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;I)Z

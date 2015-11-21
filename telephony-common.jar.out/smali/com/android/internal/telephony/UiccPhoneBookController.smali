@@ -1109,7 +1109,6 @@
     .end annotation
 
     .prologue
-    .line 155
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccPhoneBookController;->getAdnRecordsInEfForSubscriber(II)Ljava/util/List;
@@ -1130,7 +1129,6 @@
     .end annotation
 
     .prologue
-    .line 131
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccPhoneBookController;->getAdnRecordsSizeForSubscriber(II)[I
@@ -1155,7 +1153,6 @@
     .end annotation
 
     .prologue
-    .line 107
     long-to-int v1, p1
 
     move-object v0, p0
@@ -1193,7 +1190,6 @@
     .end annotation
 
     .prologue
-    .line 76
     long-to-int v1, p1
 
     move-object v0, p0

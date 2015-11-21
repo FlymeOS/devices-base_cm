@@ -140,7 +140,7 @@
 
     .line 3656
     .local v3, "topPadding":I
-    const v1, 0x1020346
+    const v1, 0x1020347
 
     move-object v0, p1
 
@@ -220,9 +220,9 @@
     .param p1, "layoutId"    # I
 
     .prologue
-    const v9, 0x1020346
+    const v9, 0x1020347
 
-    const v8, 0x102033b
+    const v8, 0x102033c
 
     const v7, 0x1020068
 
@@ -314,7 +314,7 @@
     invoke-virtual {v0, v8, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 3635
-    const v3, 0x1020348
+    const v3, 0x1020349
 
     invoke-virtual {v0, v3, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -351,7 +351,7 @@
     invoke-virtual {v0, v8, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 3640
-    const v3, 0x1020348
+    const v3, 0x1020349
 
     invoke-virtual {v0, v3, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 

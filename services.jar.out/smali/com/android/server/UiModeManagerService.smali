@@ -228,7 +228,7 @@
     .prologue
     const/4 v4, 0x0
 
-    const v10, 0x104063d
+    const v10, 0x1040632
 
     const/4 v1, 0x0
 
@@ -315,7 +315,7 @@
 
     .line 598
     .local v6, "n":Landroid/app/Notification;
-    const v3, 0x1080653
+    const v3, 0x1080655
 
     iput v3, v6, Landroid/app/Notification;->icon:I
 
@@ -352,7 +352,7 @@
 
     move-result-object v7
 
-    const v3, 0x104063e
+    const v3, 0x1040633
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -168,7 +168,7 @@
 
     .line 540
     .local v0, "values":Landroid/content/ContentValues;
-    const-string v1, "person"
+    const-string/jumbo v1, "person"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -215,7 +215,7 @@
 
     sget-object v2, Landroid/provider/Contacts$People;->GROUPS_PROJECTION:[Ljava/lang/String;
 
-    const-string v3, "name=?"
+    const-string/jumbo v3, "name=?"
 
     const/4 v0, 0x1
 
@@ -491,7 +491,7 @@
 
     .line 449
     .local v0, "uri":Landroid/net/Uri;
-    const-string v2, "update_contact_time"
+    const-string/jumbo v2, "update_contact_time"
 
     invoke-static {v0, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -536,7 +536,7 @@
     const/4 v3, 0x0
 
     .line 606
-    const-string v0, "photo"
+    const-string/jumbo v0, "photo"
 
     invoke-static {p1, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -648,7 +648,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "person=?"
+    const-string/jumbo v3, "person=?"
 
     const/4 v0, 0x1
 
@@ -662,7 +662,7 @@
 
     aput-object v5, v4, v0
 
-    const-string v5, "name ASC"
+    const-string/jumbo v5, "name ASC"
 
     move-object v0, p0
 
@@ -685,7 +685,7 @@
     const/4 v3, 0x0
 
     .line 592
-    const-string v2, "photo"
+    const-string/jumbo v2, "photo"
 
     invoke-static {p1, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -724,7 +724,7 @@
 
     sget-object v2, Landroid/provider/Contacts$People;->GROUPS_PROJECTION:[Ljava/lang/String;
 
-    const-string v3, "system_id=\'Contacts\'"
+    const-string/jumbo v3, "system_id=\'Contacts\'"
 
     move-object v0, p0
 

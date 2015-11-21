@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    const-string v2, "orig_id"
+    const-string/jumbo v2, "orig_id"
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -205,7 +205,7 @@
     move-result-object v6
 
     .line 584
-    const-string v7, "r"
+    const-string/jumbo v7, "r"
 
     invoke-virtual {p2, v6, v7}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
@@ -576,7 +576,7 @@
     if-eqz p8, :cond_7
 
     :try_start_5
-    const-string v14, "video_id="
+    const-string/jumbo v14, "video_id="
 
     .line 666
     .local v14, "column":Ljava/lang/String;
@@ -677,7 +677,7 @@
 
     move-result-object v4
 
-    const-string v6, "orig_id"
+    const-string/jumbo v6, "orig_id"
 
     invoke-static/range {p1 .. p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -897,9 +897,9 @@
 
     move-result-object v4
 
-    const-string v6, "thumbnails"
+    const-string/jumbo v6, "thumbnails"
 
-    const-string v8, "media"
+    const-string/jumbo v8, "media"
 
     invoke-virtual {v4, v6, v8}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

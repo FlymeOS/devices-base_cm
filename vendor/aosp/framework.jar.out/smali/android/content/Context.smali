@@ -54,8 +54,6 @@
 
 .field public static final CLIPBOARD_SERVICE:Ljava/lang/String; = "clipboard"
 
-.field public static final CMHW_SERVICE:Ljava/lang/String; = "cmhw"
-
 .field public static final CONNECTIVITY_SERVICE:Ljava/lang/String; = "connectivity"
 
 .field public static final CONSUMER_IR_SERVICE:Ljava/lang/String; = "consumer_ir"
@@ -144,8 +142,6 @@
 
 .field public static final PRINT_SERVICE:Ljava/lang/String; = "print"
 
-.field public static final PROFILE_SERVICE:Ljava/lang/String; = "profile"
-
 .field public static final RESTRICTIONS_SERVICE:Ljava/lang/String; = "restrictions"
 
 .field public static final SEARCH_SERVICE:Ljava/lang/String; = "search"
@@ -213,7 +209,7 @@
     .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3347
+    .line 3324
     return-void
 .end method
 
@@ -564,7 +560,7 @@
     .locals 1
 
     .prologue
-    .line 3520
+    .line 3497
     const/4 v0, 0x0
 
     return v0

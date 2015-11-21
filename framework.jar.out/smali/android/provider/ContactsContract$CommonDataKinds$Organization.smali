@@ -3,9 +3,9 @@
 .source "ContactsContract.java"
 
 # interfaces
+.implements Landroid/provider/ContactsContract$DataColumnsWithJoins;
 .implements Landroid/provider/ContactsContract$CommonDataKinds$CommonColumns;
 .implements Landroid/provider/ContactsContract$ContactCounts;
-.implements Landroid/provider/ContactsContract$DataColumnsWithJoins;
 
 
 # annotations
@@ -96,23 +96,28 @@
     .param p0, "type"    # I
 
     .prologue
+    .line 6622
     packed-switch p0, :pswitch_data_0
 
-    const v0, #android:string@orgTypeCustom#t
+    .line 6625
+    const v0, 0x104043a
 
     :goto_0
     return v0
 
+    .line 6623
     :pswitch_0
-    const v0, #android:string@orgTypeWork#t
+    const v0, 0x1040438
 
     goto :goto_0
 
+    .line 6624
     :pswitch_1
-    const v0, #android:string@orgTypeOther#t
+    const v0, 0x1040439
 
     goto :goto_0
 
+    .line 6622
     nop
 
     :pswitch_data_0

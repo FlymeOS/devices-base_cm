@@ -100,7 +100,7 @@
 
     new-array v2, v0, [Ljava/lang/String;
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     aput-object v0, v2, v7
 
@@ -175,7 +175,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

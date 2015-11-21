@@ -115,14 +115,11 @@
 
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 45
     check-cast p1, Landroid/hardware/camera2/params/StreamConfigurationDuration;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableStreamConfigurationDuration$MarshalerStreamConfigurationDuration;->marshal(Landroid/hardware/camera2/params/StreamConfigurationDuration;Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -173,7 +170,6 @@
 
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 45

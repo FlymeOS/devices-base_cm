@@ -14,8 +14,6 @@
 
 .field public static final GLOBAL_ACTION_KEY_POWER:Ljava/lang/String; = "power"
 
-.field public static final GLOBAL_ACTION_KEY_PROFILE:Ljava/lang/String; = "profile"
-
 .field public static final GLOBAL_ACTION_KEY_REBOOT:Ljava/lang/String; = "reboot"
 
 .field public static final GLOBAL_ACTION_KEY_SCREENSHOT:Ljava/lang/String; = "screenshot"
@@ -32,8 +30,8 @@
     .locals 3
 
     .prologue
-    .line 32
-    const/16 v0, 0xa
+    .line 31
+    const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -57,41 +55,35 @@
 
     const/4 v1, 0x3
 
-    const-string v2, "profile"
+    const-string v2, "airplane"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    const-string v2, "airplane"
+    const-string v2, "users"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "users"
+    const-string v2, "settings"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "settings"
+    const-string v2, "lockdown"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string v2, "lockdown"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x8
-
     const-string v2, "bugreport"
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
     const-string v2, "silent"
 
@@ -116,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 44
     sget-object v0, Lcom/android/internal/util/cm/PowerMenuConstants;->ALL_ACTIONS:[Ljava/lang/String;
 
     return-object v0

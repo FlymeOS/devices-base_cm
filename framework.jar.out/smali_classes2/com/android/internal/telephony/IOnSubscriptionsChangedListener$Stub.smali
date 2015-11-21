@@ -28,6 +28,8 @@
 
 .field static final TRANSACTION_onSubscriptionsChanged_0:I = 0x1
 
+.field static final TRANSACTION_onUnregistered_1:I = 0x2
+
 
 # direct methods
 .method public constructor <init>()V
@@ -120,7 +122,7 @@
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 52
+    .line 58
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -147,10 +149,24 @@
 
     goto :goto_0
 
+    .line 53
+    :sswitch_2
+    const-string v1, "com.android.internal.telephony.IOnSubscriptionsChangedListener"
+
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 54
+    invoke-virtual {p0}, Lcom/android/internal/telephony/IOnSubscriptionsChangedListener$Stub;->onUnregistered()V
+
+    goto :goto_0
+
     .line 38
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
+        0x2 -> :sswitch_2
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

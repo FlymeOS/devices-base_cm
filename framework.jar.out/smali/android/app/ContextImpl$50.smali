@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 674
+    .line 675
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +32,20 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 676
+    .line 677
     const-string v2, "launcherapps"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 677
+    .line 678
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/content/pm/ILauncherApps$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/ILauncherApps;
 
     move-result-object v1
 
-    .line 678
+    .line 679
     .local v1, "service":Landroid/content/pm/ILauncherApps;
     new-instance v2, Landroid/content/pm/LauncherApps;
 

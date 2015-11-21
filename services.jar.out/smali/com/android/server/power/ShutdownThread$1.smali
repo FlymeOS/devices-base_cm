@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 223
+    .line 224
     iput-boolean p1, p0, Lcom/android/server/power/ShutdownThread$1;->val$advancedReboot:Z
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$1;->val$context:Landroid/content/Context;
@@ -46,15 +46,15 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 226
+    .line 227
     iget-boolean v4, p0, Lcom/android/server/power/ShutdownThread$1;->val$advancedReboot:Z
 
     if-eqz v4, :cond_1
 
-    .line 227
+    .line 228
     const/4 v3, 0x0
 
-    .line 228
+    .line 229
     .local v3, "softReboot":Z
     check-cast p1, Landroid/app/AlertDialog;
 
@@ -63,19 +63,19 @@
 
     move-result-object v1
 
-    .line 229
+    .line 230
     .local v1, "reasonsList":Landroid/widget/ListView;
     invoke-virtual {v1}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
     move-result v2
 
-    .line 230
+    .line 231
     .local v2, "selected":I
     const/4 v4, -0x1
 
     if-eq v2, v4, :cond_0
 
-    .line 231
+    .line 232
     iget-object v4, p0, Lcom/android/server/power/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    .line 233
+    .line 234
     .local v0, "actions":[Ljava/lang/String;
     if-ltz v2, :cond_0
 
@@ -96,13 +96,13 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 234
+    .line 235
     aget-object v4, v0, v2
 
     # setter for: Lcom/android/server/power/ShutdownThread;->mRebootReason:Ljava/lang/String;
     invoke-static {v4}, Lcom/android/server/power/ShutdownThread;->access$002(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 235
+    .line 236
     aget-object v4, v0, v2
 
     const-string v5, "soft_reboot"
@@ -113,11 +113,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 236
+    .line 237
     # invokes: Lcom/android/server/power/ShutdownThread;->doSoftReboot()V
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$100()V
 
-    .line 245
+    .line 246
     .end local v0    # "actions":[Ljava/lang/String;
     .end local v1    # "reasonsList":Landroid/widget/ListView;
     .end local v2    # "selected":I
@@ -125,7 +125,7 @@
     :goto_0
     return-void
 
-    .line 242
+    .line 243
     .restart local v1    # "reasonsList":Landroid/widget/ListView;
     .restart local v2    # "selected":I
     .restart local v3    # "softReboot":Z
@@ -135,7 +135,7 @@
     # setter for: Lcom/android/server/power/ShutdownThread;->mReboot:Z
     invoke-static {v4}, Lcom/android/server/power/ShutdownThread;->access$202(Z)Z
 
-    .line 244
+    .line 245
     .end local v1    # "reasonsList":Landroid/widget/ListView;
     .end local v2    # "selected":I
     .end local v3    # "softReboot":Z

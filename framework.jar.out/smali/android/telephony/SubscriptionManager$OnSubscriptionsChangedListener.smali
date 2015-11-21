@@ -29,17 +29,17 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 311
+    .line 318
     new-instance v0, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener$1;
 
     invoke-direct {v0, p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener$1;-><init>(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;)V
 
     iput-object v0, p0, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;->mHandler:Landroid/os/Handler;
 
-    .line 333
+    .line 340
     new-instance v0, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener$2;
 
     invoke-direct {v0, p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener$2;-><init>(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;)V
@@ -54,7 +54,7 @@
     .param p0, "x0"    # Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
 
     .prologue
-    .line 306
+    .line 313
     iget-object v0, p0, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -65,12 +65,12 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 342
+    .line 353
     const-string v0, "SubscriptionManager"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
+    .line 354
     return-void
 .end method
 
@@ -80,6 +80,6 @@
     .locals 0
 
     .prologue
-    .line 327
+    .line 334
     return-void
 .end method

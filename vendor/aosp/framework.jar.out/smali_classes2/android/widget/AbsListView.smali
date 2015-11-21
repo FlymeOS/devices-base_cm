@@ -7856,7 +7856,6 @@
 
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 97
@@ -14974,13 +14973,11 @@
 
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
-    .param p1, "x0"    # Landroid/widget/Adapter;
 
     .prologue
     .line 97
     check-cast p1, Landroid/widget/ListAdapter;
 
-    .end local p1    # "x0":Landroid/widget/Adapter;
     invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void

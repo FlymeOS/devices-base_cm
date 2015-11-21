@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">यह वीडियो इस डिवाइस पर स्ट्रीमिंग के लिए मान्‍य नहीं है.</string>
     <string name="selectTextMode">लेख को चुनें</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">कोई नहीं</string>
     <string name="profile_picker_title">प्रोफ़ाइल</string>
     <string name="global_action_choose_profile">प्रोफ़ाइल</string>
+    <string name="profile_none">कोई नहीं</string>
     <string name="global_action_screenshot">स्क्रीनशॉट</string>
     <string name="permlab_receiveProtectedSms">रक्षित एसएमएस प्राप्त करें</string>
     <string name="permdesc_receiveProtectedSms">ऐप को आवक रक्षित एसएमएस प्राप्त करने देता है।</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">ऐप को इसे बदलने देता है कि कोई दूसरा ऐप गोपनीयता रक्षक के साथ चलेगा अथवा नहीं। जब ऐप गोपनीयता रक्षक के साथ चलता है, उसे संपर्क, कॉल लॉग, या संदेश जैसे निजी डेटा तक पहुँचने की अनुमति नहीं होगी।</string>
     <string name="privacy_guard_notification">गोपनीयता रक्षक सक्रिय है</string>
     <string name="privacy_guard_notification_detail">%1$s निजी डेटा में पहुँच नहीं सकेगा</string>
-    <string name="permlab_useHardwareFramework">हार्डवेयर ढाँचे का उपयोग करें</string>
-    <string name="permdesc_useHardwareFramework">ऐप को सीएम हार्डवेयर ढाँचे में पहुँचने देता है।</string>
     <string name="permlab_setKeyguardWallpaper">कुंजीकवच वॉलपेपर सेट करें</string>
     <string name="permdesc_setKeyguardWallpaper">ऐप को स्क्रीन वॉलपेपर लॉक को बदलने देता है।</string>
     <string name="privacy_guard_dialog_title">गोपनीयता रक्षक</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">यूएसबी और नेटवर्क पर एडीबी को सक्षम कर दिया गया</string>
     <string name="adb_active_generic_notification_message">डीबगिंग को अक्षम करने के लिए छुएँ।</string>
     <string name="usb_choose_notification_title">यूएसबी विकल्प चुनने के लिए छुएँ।</string>
+    <string name="adb_active_custom_tile">एडीबी - %1$s</string>
+    <string name="adb_active_custom_tile_both">यूएसबी और नेटवर्क</string>
+    <string name="adb_active_custom_tile_usb">यूएसबी</string>
+    <string name="adb_active_custom_tile_net">नेटवर्क</string>
     <string name="permlab_interceptPackageLaunch">ऐप लॉन्च का अंतररोधन करें</string>
     <string name="permdesc_interceptPackageLaunch">ऐप को दूसरे ऐपों के लॉन्च होने का अंतररोधन करने देता है</string>
     <string name="app_ops_access_camera">कैमरे में पहुँचें</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">अँगुली छाप %d</string>
     <string name="permlab_accessFingerprintService">अँगुली छाप सेवा में पहुँचें</string>
     <string name="permdesc_accessFingerprintService">किसी ऐप को अँगुली छाप सेवा में पहुँचने की अनुमति दें। यह ऐप अँगुली छाप के बल पर जोड़ सकता है, हटा सकता है, नाम बदल सकता है और प्रमाणित कर सकता है</string>
+    <string name="permlab_resetBatteryStats">बैटरी के आँकड़ों को रीसेट करें</string>
+    <string name="permdesc_resetBatteryStats">अनुप्रयोग को वर्तमान निम्न-स्तर के बैटरी उपयोग डेटा को रीसेट करने देता है।</string>
+    <string name="silent_mode_priority">वरीयता</string>
+    <string name="silent_mode_none">कुछ नहीं</string>
     <string name="numeric_date_template" formatted="false">%s-%s-%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -1783,10 +1789,4 @@
     <string name="stk_cc_ss_to_ss">SS अनुरोध को नए SS अनुरोध में बदल दिया गया है.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">एडीबी - %1$s</string>
-    <string name="adb_active_custom_tile_both">यूएसबी और नेटवर्क</string>
-    <string name="adb_active_custom_tile_usb">यूएसबी</string>
-    <string name="adb_active_custom_tile_net">नेटवर्क</string>
-    <string name="permlab_resetBatteryStats">बैटरी के आँकड़ों को रीसेट करें</string>
-    <string name="permdesc_resetBatteryStats">अनुप्रयोग को वर्तमान निम्न-स्तर के बैटरी उपयोग डेटा को रीसेट करने देता है।</string>
 </resources>

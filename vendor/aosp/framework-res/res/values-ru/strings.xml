@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Это видео не предназначено для потокового воспроизведения на данном устройстве.</string>
     <string name="selectTextMode">Выбрать текст</string>
     <string name="status_bar_notification_info_overflow">>999</string>
-    <string name="profile_none">Нет</string>
     <string name="profile_picker_title">Профили</string>
     <string name="global_action_choose_profile">Профиль</string>
+    <string name="profile_none">Нет</string>
     <string name="global_action_screenshot">Скриншот</string>
     <string name="permlab_receiveProtectedSms">Получение защищённых SMS</string>
     <string name="permdesc_receiveProtectedSms">Приложение сможет получать входящие защищённые SMS-сообщения.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Приложение сможет изменять состояние защищённого режима для других приложений. Когда приложение запущено в защищённом режиме, оно не получает доступ к персональным данным, таким как контакты, сообщения или журнал звонков.</string>
     <string name="privacy_guard_notification">Защищённый режим включён</string>
     <string name="privacy_guard_notification_detail">У «%1$s» нет доступа к персональным данным</string>
-    <string name="permlab_useHardwareFramework">Взаимодействие с оборудованием</string>
-    <string name="permdesc_useHardwareFramework">Приложение сможет получать доступ к подсистеме аппаратных абстракций CyanogenMod.</string>
     <string name="permlab_setKeyguardWallpaper">Установка обоев экрана блокировки</string>
     <string name="permdesc_setKeyguardWallpaper">Приложение сможет изменять обои экрана блокировки устройства.</string>
     <string name="privacy_guard_dialog_title">Защищённый режим</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">Отладка по сети и USB разрешена</string>
     <string name="adb_active_generic_notification_message">Нажмите, чтобы отключить отладку.</string>
     <string name="usb_choose_notification_title">Нажмите, чтобы выбрать режим USB-подключения.</string>
+    <string name="adb_active_custom_tile">Отладка %1$s</string>
+    <string name="adb_active_custom_tile_both">по сети и USB</string>
+    <string name="adb_active_custom_tile_usb">по USB</string>
+    <string name="adb_active_custom_tile_net">по сети</string>
     <string name="permlab_interceptPackageLaunch">Перехват запуска приложений</string>
     <string name="permdesc_interceptPackageLaunch">Приложение сможет перехватывать запуск других приложений на устройстве.</string>
     <string name="app_ops_access_camera">получить доступ к камере</string>
@@ -137,7 +139,7 @@
     <string name="permission_remember_choice">Запомнить разрешение</string>
     <string name="perf_profile_pwrsv">Экономия энергии</string>
     <string name="perf_profile_bal">Сбалансиров.</string>
-    <string name="perf_profile_perf">Производительность</string>
+    <string name="perf_profile_perf">Высокая производит.</string>
     <string name="theme_install_error_title">Не удалось установить тему</string>
     <string name="theme_install_error_message">Сбой при установке «%s»</string>
     <string name="theme_reset_notification_title">Тема отключена</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Отпечаток пальца %d</string>
     <string name="permlab_accessFingerprintService">Доступ к отпечаткам пальцев</string>
     <string name="permdesc_accessFingerprintService">Разрешение доступа к службе отпечатков пальцев. Приложение сможет добавлять, удалять, редактировать и использовать для авторизации отпечатки пальцев</string>
+    <string name="permlab_resetBatteryStats">Обнуление статистики батареи</string>
+    <string name="permdesc_resetBatteryStats">Разрешить приложению очищать данные об использовании аккумуляторной батареи устройства.</string>
+    <string name="silent_mode_priority">Важные</string>
+    <string name="silent_mode_none">Нет</string>
+    <string name="subscription_change_disabled_wifi_ap">Точка доступа Wi-Fi отключена из-за переключения SIM-карты</string>
+    <string name="notify_turn_wifi_off_title">Выключить Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y г.</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1783,12 +1791,6 @@
     <string name="stk_cc_ss_to_ss">SS-запрос преобразован в новый SS-запрос.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">...</string>
-    <string name="adb_active_custom_tile">Отладка %1$s</string>
-    <string name="adb_active_custom_tile_both">по сети и USB</string>
-    <string name="adb_active_custom_tile_usb">по USB</string>
-    <string name="adb_active_custom_tile_net">по сети</string>
-    <string name="permlab_resetBatteryStats">Обнуление статистики батареи</string>
-    <string name="permdesc_resetBatteryStats">Разрешить приложению очищать данные об использовании аккумуляторной батареи устройства.</string>
-    <string name="silent_mode_priority">Важные</string>
-    <string name="silent_mode_none">Нет</string>
+    <string name="permlab_thirdPartyKeyguard">Сторонний экран блокировки</string>
+    <string name="permdesc_thirdPartyKeyguard">Приложение сможет работать в качестве небезопасного метода блокировки экрана.</string>
 </resources>

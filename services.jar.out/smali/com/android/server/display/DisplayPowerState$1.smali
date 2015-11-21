@@ -56,13 +56,11 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 101
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/server/display/DisplayPowerState$1;->get(Lcom/android/server/display/DisplayPowerState;)Ljava/lang/Float;
 
     move-result-object v0
@@ -85,14 +83,11 @@
 
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # F
 
     .prologue
     .line 101
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/android/server/display/DisplayPowerState$1;->setValue(Lcom/android/server/display/DisplayPowerState;F)V
 
     return-void

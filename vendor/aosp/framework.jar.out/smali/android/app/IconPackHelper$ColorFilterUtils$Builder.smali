@@ -32,17 +32,17 @@
     .locals 1
 
     .prologue
-    .line 1006
+    .line 1007
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1007
+    .line 1008
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
-    .line 1008
+    .line 1009
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 1031
+    .line 1032
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->adjustAlpha(F)Landroid/graphics/ColorMatrix;
@@ -62,7 +62,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1032
+    .line 1033
     return-object p0
 .end method
 
@@ -71,7 +71,7 @@
     .param p1, "brightness"    # F
 
     .prologue
-    .line 1021
+    .line 1022
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->adjustBrightness(F)Landroid/graphics/ColorMatrix;
@@ -80,7 +80,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1022
+    .line 1023
     return-object p0
 .end method
 
@@ -88,7 +88,7 @@
     .locals 4
 
     .prologue
-    .line 1046
+    .line 1047
     iget-object v3, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     if-eqz v3, :cond_0
@@ -104,17 +104,17 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1052
+    .line 1053
     :cond_1
     return-object v1
 
-    .line 1048
+    .line 1049
     :cond_2
     new-instance v1, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v1}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 1049
+    .line 1050
     .local v1, "colorMatrix":Landroid/graphics/ColorMatrix;
     iget-object v3, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
@@ -136,7 +136,7 @@
 
     check-cast v0, Landroid/graphics/ColorMatrix;
 
-    .line 1050
+    .line 1051
     .local v0, "cm":Landroid/graphics/ColorMatrix;
     invoke-virtual {v1, v0}, Landroid/graphics/ColorMatrix;->postConcat(Landroid/graphics/ColorMatrix;)V
 
@@ -148,7 +148,7 @@
     .param p1, "contrast"    # F
 
     .prologue
-    .line 1026
+    .line 1027
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->adjustContrast(F)Landroid/graphics/ColorMatrix;
@@ -157,7 +157,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1027
+    .line 1028
     return-object p0
 .end method
 
@@ -166,7 +166,7 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 1011
+    .line 1012
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->adjustHue(F)Landroid/graphics/ColorMatrix;
@@ -175,7 +175,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1012
+    .line 1013
     return-object p0
 .end method
 
@@ -183,7 +183,7 @@
     .locals 2
 
     .prologue
-    .line 1036
+    .line 1037
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {}, Landroid/app/IconPackHelper$ColorFilterUtils;->invertColors()Landroid/graphics/ColorMatrix;
@@ -192,7 +192,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1037
+    .line 1038
     return-object p0
 .end method
 
@@ -201,7 +201,7 @@
     .param p1, "saturation"    # F
 
     .prologue
-    .line 1016
+    .line 1017
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->adjustSaturation(F)Landroid/graphics/ColorMatrix;
@@ -210,7 +210,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1017
+    .line 1018
     return-object p0
 .end method
 
@@ -219,7 +219,7 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 1041
+    .line 1042
     iget-object v0, p0, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->mMatrixList:Ljava/util/List;
 
     invoke-static {p1}, Landroid/app/IconPackHelper$ColorFilterUtils;->applyTint(I)Landroid/graphics/ColorMatrix;
@@ -228,6 +228,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1042
+    .line 1043
     return-object p0
 .end method

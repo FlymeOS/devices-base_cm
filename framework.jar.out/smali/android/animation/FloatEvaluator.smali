@@ -64,18 +64,13 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # F
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Ljava/lang/Object;
 
     .prologue
     .line 22
     check-cast p2, Ljava/lang/Number;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     check-cast p3, Ljava/lang/Number;
 
-    .end local p3    # "x2":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
 
     move-result-object v0

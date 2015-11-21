@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/CalendarContract$CalendarColumns;
 .implements Landroid/provider/CalendarContract$SyncColumns;
+.implements Landroid/provider/CalendarContract$CalendarColumns;
 
 
 # annotations
@@ -76,19 +76,19 @@
 
     const/4 v1, 0x4
 
-    const-string v2, "mutators"
+    const-string/jumbo v2, "mutators"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "ownerAccount"
+    const-string/jumbo v2, "ownerAccount"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "maxReminders"
+    const-string/jumbo v2, "maxReminders"
 
     aput-object v2, v0, v1
 

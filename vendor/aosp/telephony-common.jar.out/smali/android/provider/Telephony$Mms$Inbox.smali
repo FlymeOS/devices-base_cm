@@ -28,7 +28,7 @@
     .locals 1
 
     .prologue
-    .line 2204
+    .line 2211
     const-string v0, "content://mms/inbox"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -44,9 +44,9 @@
     .locals 0
 
     .prologue
-    .line 2197
+    .line 2204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2198
+    .line 2205
     return-void
 .end method

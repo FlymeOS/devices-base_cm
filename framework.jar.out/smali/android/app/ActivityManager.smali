@@ -2853,7 +2853,6 @@
     .end annotation
 
     .prologue
-    .line 1284
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager;->removeTask(I)Z
 
     move-result v0

@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +22,22 @@
 .method public abstract getBatteryLevelLow()Z
 .end method
 
+.method public abstract getDockBatteryLevel()I
+.end method
+
+.method public abstract getDockBatteryLevelLow()Z
+.end method
+
+.method public abstract getDockPlugType()I
+.end method
+
 .method public abstract getInvalidCharger()I
 .end method
 
 .method public abstract getPlugType()I
+.end method
+
+.method public abstract isDockBatterySupported()Z
 .end method
 
 .method public abstract isPowered(I)Z

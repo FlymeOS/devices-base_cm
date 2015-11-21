@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Tätä videota ei voi suoratoistaa tällä laitteella.</string>
     <string name="selectTextMode">Valitse tekstiä</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Ei mitään</string>
     <string name="profile_picker_title">Profiilit</string>
     <string name="global_action_choose_profile">Profiili</string>
+    <string name="profile_none">Ei mitään</string>
     <string name="global_action_screenshot">Kuvakaappaus</string>
     <string name="permlab_receiveProtectedSms">vastaanota suojattuja tekstiviestejä</string>
     <string name="permdesc_receiveProtectedSms">Sallii sovelluksen vastaanottaa suojattuja tekstiviestejä.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Sallii sovelluksen valita, milloin muut sovellukset käyttävät yksityisyyden suojausta. Kun sovellus käyttää yksityisyyden suojausta, sillä ei ole pääsyä henkilökohtaisiin tietoihin kuten yhteystietoihin, puhelulokeihin tai viesteihin.</string>
     <string name="privacy_guard_notification">Yksityisyyden suojaus käytössä</string>
     <string name="privacy_guard_notification_detail">Sovelluksella %1$s ei ole pääsyä henkilökohtaisiin tietoihin</string>
-    <string name="permlab_useHardwareFramework">käytä laitteiston kehystä</string>
-    <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn CM-laitteiston kehykseen.</string>
     <string name="permlab_setKeyguardWallpaper">aseta näppäinlukon taustakuva</string>
     <string name="permdesc_setKeyguardWallpaper">Sallii sovelluksen vaihtaa lukitusnäytön taustakuva.</string>
     <string name="privacy_guard_dialog_title">Yksityisyyden suojaus</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB verkon &amp; USB:n kautta käytössä</string>
     <string name="adb_active_generic_notification_message">Paina poistaaksesi vianetsinnän käytöstä.</string>
     <string name="usb_choose_notification_title">Kosketa valitaksesi USB-asetukset.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; verkko</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Verkko</string>
     <string name="permlab_interceptPackageLaunch">keskeytä sovelluksen käynnistys</string>
     <string name="permdesc_interceptPackageLaunch">Sallii sovelluksen keskeyttää toisen sovelluksen käynnistämisen</string>
     <string name="app_ops_access_camera">käyttää kameraa</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Sormenjälki %d</string>
     <string name="permlab_accessFingerprintService">käytä sormenjälkipalvelua</string>
     <string name="permdesc_accessFingerprintService">Sallii sovelluksen käyttää sormenjälkipalvelua. Sovellus voi lisätä, poistaa, uudelleennimetä ja todentaa sormenjälkiä</string>
+    <string name="permlab_resetBatteryStats">nollaa akun tilastot</string>
+    <string name="permdesc_resetBatteryStats">Sallii sovelluksen nollata nykyiset alemman tason akun käytön tilastot.</string>
+    <string name="silent_mode_priority">Prioriteetti</string>
+    <string name="silent_mode_none">Ei mitään</string>
+    <string name="subscription_change_disabled_wifi_ap">Wi-Fi-tukiasema poistettiin käytöstä SIMin vaihdon vuoksi</string>
+    <string name="notify_turn_wifi_off_title">Poista Wi-Fi käytöstä</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%-k.%M.%S</string>
@@ -1783,12 +1791,6 @@ Virransäästö poistuu käytöstä automaattisesti, kun laitteesi latautuu."</s
     <string name="stk_cc_ss_to_ss">SS-pyyntö muutettiin uudeksi SS-pyynnöksi.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; verkko</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Verkko</string>
-    <string name="permlab_resetBatteryStats">nollaa akun tilastot</string>
-    <string name="permdesc_resetBatteryStats">Sallii sovelluksen nollata nykyiset alemman tason akun käytön tilastot.</string>
-    <string name="silent_mode_priority">Prioriteetti</string>
-    <string name="silent_mode_none">Ei mitään</string>
+    <string name="permlab_thirdPartyKeyguard">kolmannen osapuolen lukitusnäyttö</string>
+    <string name="permdesc_thirdPartyKeyguard">Sallii sovellusta käytettävän epäturvallisena lukitusnäyttönä.</string>
 </resources>

@@ -84,7 +84,6 @@ phone2                                    u:object_r:radio_service:s0
 phone                                     u:object_r:radio_service:s0
 power                                     u:object_r:system_server_service:s0
 print                                     u:object_r:system_server_service:s0
-profile                                   u:object_r:system_server_service:s0
 processinfo                               u:object_r:system_server_service:s0
 procstats                                 u:object_r:system_server_service:s0
 radio.phonesubinfo                        u:object_r:radio_service:s0
@@ -132,3 +131,8 @@ themes                                    u:object_r:system_server_service:s0
 torch                                     u:object_r:system_server_service:s0
 killswitch                                u:object_r:system_server_service:s0
 cmstatusbar                               u:object_r:system_server_service:s0
+profile                                   u:object_r:system_server_service:s0
+cmpartnerinterface                        u:object_r:system_server_service:s0
+cmtelephonymanager                        u:object_r:system_server_service:s0
+cmhardware                                u:object_r:system_server_service:s0
+cmappsuggest                              u:object_r:system_server_service:s0

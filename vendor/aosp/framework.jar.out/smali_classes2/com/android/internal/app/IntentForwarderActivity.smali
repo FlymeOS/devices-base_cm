@@ -299,7 +299,7 @@
     if-eqz v12, :cond_0
 
     .line 65
-    const v11, 0x1040627
+    const v11, 0x104061c
 
     .line 66
     .local v11, "userMessageId":I
@@ -332,7 +332,7 @@
     if-eqz v12, :cond_1
 
     .line 68
-    const v11, 0x1040628
+    const v11, 0x104061d
 
     .line 69
     .restart local v11    # "userMessageId":I

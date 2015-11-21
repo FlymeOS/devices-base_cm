@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1057
+    .line 1062
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$5;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,14 +41,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1060
+    .line 1065
     const-string v1, "DelayedStopCounter"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1061
+    .line 1066
     .local v0, "counter":I
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$5;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -56,6 +56,6 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(III)V
 
-    .line 1062
+    .line 1067
     return-void
 .end method

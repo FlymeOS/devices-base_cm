@@ -99,7 +99,7 @@
     move-result-object p0
 
     .line 1339
-    const-string v5, "the "
+    const-string/jumbo v5, "the "
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

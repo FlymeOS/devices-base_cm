@@ -685,7 +685,7 @@
 
     .prologue
     .line 342
-    const v0, 0x1110012
+    const v0, 0x1110011
 
     .line 343
     .local v0, "id":I

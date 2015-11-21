@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 476
+    .line 477
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +37,7 @@
     .locals 2
 
     .prologue
-    .line 479
+    .line 480
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -46,7 +46,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->setSupplicantRunning(Z)V
 
-    .line 480
+    .line 481
     return-void
 .end method
 
@@ -57,21 +57,21 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 483
+    .line 484
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 515
+    .line 516
     :cond_0
     const/4 v1, 0x0
 
-    .line 518
+    .line 519
     :cond_1
     :goto_0
     return v1
 
-    .line 485
+    .line 486
     :sswitch_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -81,7 +81,7 @@
 
     move-result v0
 
-    .line 486
+    .line 487
     .local v0, "mWifiState":I
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -93,7 +93,7 @@
 
     if-nez v2, :cond_2
 
-    .line 487
+    .line 488
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiController;->mSettingsStore:Lcom/android/server/wifi/WifiSettingsStore;
@@ -104,7 +104,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 488
+    .line 489
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -117,7 +117,7 @@
     # invokes: Lcom/android/server/wifi/WifiController;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/WifiController;->access$2400(Lcom/android/server/wifi/WifiController;Lcom/android/internal/util/IState;)V
 
-    .line 493
+    .line 494
     :cond_2
     :goto_1
     const/4 v2, 0x2
@@ -128,7 +128,7 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 498
+    .line 499
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiController;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
@@ -137,7 +137,7 @@
 
     goto :goto_0
 
-    .line 490
+    .line 491
     :cond_3
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -153,7 +153,7 @@
 
     goto :goto_1
 
-    .line 505
+    .line 506
     .end local v0    # "mWifiState":I
     :sswitch_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -166,7 +166,7 @@
 
     if-nez v2, :cond_1
 
-    .line 506
+    .line 507
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -181,13 +181,13 @@
 
     goto :goto_0
 
-    .line 510
+    .line 511
     :sswitch_2
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-ne v2, v1, :cond_0
 
-    .line 511
+    .line 512
     iget-object v2, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiController$StaEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
@@ -202,7 +202,7 @@
 
     goto :goto_0
 
-    .line 483
+    .line 484
     nop
 
     :sswitch_data_0

@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 3254
+    .line 3263
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$BinderService$1;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
 
     iput-wide p2, p0, Lcom/android/server/power/PowerManagerService$BinderService$1;->val$eventTime:J
@@ -48,12 +48,12 @@
     .locals 6
 
     .prologue
-    .line 3257
+    .line 3266
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3259
+    .line 3268
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$BinderService$1;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
@@ -69,13 +69,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3261
+    .line 3270
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3263
+    .line 3272
     return-void
 
-    .line 3261
+    .line 3270
     :catchall_0
     move-exception v2
 

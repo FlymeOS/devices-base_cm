@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Je nám ľúto, ale toto video sa nedá streamovať do tohto zariadenia.</string>
     <string name="selectTextMode">Vybrať text</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Žiadny</string>
     <string name="profile_picker_title">Profily</string>
     <string name="global_action_choose_profile">Profil</string>
+    <string name="profile_none">Žiadny</string>
     <string name="global_action_screenshot">Snímka obrazovky</string>
     <string name="permlab_receiveProtectedSms">prijímať chránené SMS</string>
     <string name="permdesc_receiveProtectedSms">Umožňuje aplikácii prijímať chránené prichádzajúce SMS.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Umožňuje aplikácii určiť, či má byť iná aplikácia spustená s Ochranou súkromia. Keď je aplikácia spustená s Ochranou súkromia, nemá umožnený prístup k osobným údajom ako sú kontakty, denníky hovorov, alebo správy.</string>
     <string name="privacy_guard_notification">Aktívna ochrana súkromia</string>
     <string name="privacy_guard_notification_detail">Aplikácii %1$s nebude umožnený prístup k osobným údajom</string>
-    <string name="permlab_useHardwareFramework">používať hardvérový framework</string>
-    <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému frameworku CM.</string>
     <string name="permlab_setKeyguardWallpaper">nastaviť tapetu obrazovky uzamknutia</string>
     <string name="permdesc_setKeyguardWallpaper">Umožňuje aplikácii zmeniť tapetu obrazovky uzamknutia.</string>
     <string name="privacy_guard_dialog_title">Ochrana súkromia</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB cez USB a sieť povolené</string>
     <string name="adb_active_generic_notification_message">Dotykom zakážate ladenie.</string>
     <string name="usb_choose_notification_title">Dotykom vyberte možnosti pre USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB a sieť</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Sieť</string>
     <string name="permlab_interceptPackageLaunch">zachytiť spustenie aplikácie</string>
     <string name="permdesc_interceptPackageLaunch">Umožňuje aplikácii zachytiť spustenie ďalších aplikácií</string>
     <string name="app_ops_access_camera">prístup k fotoparátu</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Odtlačok prsta %d</string>
     <string name="permlab_accessFingerprintService">prístup k službe odtlačku prstov</string>
     <string name="permdesc_accessFingerprintService">Umožňuje prístup k službe odtlačku prstov. Aplikácia môže pridať, odstrániť, premenovať a vykonať overenie odtlačkov prstov</string>
+    <string name="permlab_resetBatteryStats">obnoviť štatistiky batérie</string>
+    <string name="permdesc_resetBatteryStats">Umožňuje aplikácii obnoviť aktuálne nízkoúrovňové údaje o využití batérie.</string>
+    <string name="silent_mode_priority">Priorita</string>
+    <string name="silent_mode_none">Žiadna</string>
+    <string name="subscription_change_disabled_wifi_ap">Wi-Fi hotspot bol zakázaný kvôli prepnutiu karty SIM</string>
+    <string name="notify_turn_wifi_off_title">Vypnúť Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1783,9 +1791,6 @@ Dlhodobé počúvanie pri vysokej hlasitosti môže poškodiť váš sluch."</st
     <string name="stk_cc_ss_to_ss">Žiadosť SS bola upravená na novú žiadosť SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Sieť</string>
-    <string name="permlab_resetBatteryStats">obnoviť štatistiky batérie</string>
-    <string name="permdesc_resetBatteryStats">Umožňuje aplikácii obnoviť aktuálne nízkoúrovňové údaje o využití batérie.</string>
+    <string name="permlab_thirdPartyKeyguard">zámok obrazovky tretej strany</string>
+    <string name="permdesc_thirdPartyKeyguard">Umožňuje použiť aplikáciu ako nezabezpečenú zámok obrazovky.</string>
 </resources>

@@ -99,14 +99,11 @@
 
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 34
     check-cast p1, Landroid/hardware/camera2/params/RggbChannelVector;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRggbChannelVector$MarshalerRggbChannelVector;->marshal(Landroid/hardware/camera2/params/RggbChannelVector;Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -151,7 +148,6 @@
 
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 34

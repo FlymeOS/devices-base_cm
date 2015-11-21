@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Impossible de lire cette vidéo en streaming sur cet appareil.</string>
     <string name="selectTextMode">Sélectionner texte</string>
     <string name="status_bar_notification_info_overflow">>999</string>
-    <string name="profile_none">Aucun</string>
     <string name="profile_picker_title">Profils</string>
     <string name="global_action_choose_profile">Profil</string>
+    <string name="profile_none">Aucun</string>
     <string name="global_action_screenshot">"Capture d'écran"</string>
     <string name="permlab_receiveProtectedSms">recevoir des SMS protégés</string>
     <string name="permdesc_receiveProtectedSms">"Permet à l'application de recevoir un SMS protégé."</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">"Permet à l'application d'en exécuter une autre avec la protection des données. Lorsqu'une application est exécutée avec la protection des données, elle n'aura pas accès aux données personnelles telles que les contacts, les journaux d'appels ou les messages."</string>
     <string name="privacy_guard_notification">Protection des données activée</string>
     <string name="privacy_guard_notification_detail">"%1$s ne sera pas en mesure d'accéder aux données personnelles"</string>
-    <string name="permlab_useHardwareFramework">Utiliser le framework matériel</string>
-    <string name="permdesc_useHardwareFramework">"Permet à une application l'accès au framework matériel de CM."</string>
     <string name="permlab_setKeyguardWallpaper">"Définir le fond d'écran de verrouillage"</string>
     <string name="permdesc_setKeyguardWallpaper">"Permet à l'application de changer le fond de l'écran de verrouillage."</string>
     <string name="privacy_guard_dialog_title">Protection des données</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB sur USB et réseau activé</string>
     <string name="adb_active_generic_notification_message">Appuyez pour désactiver le débogage.</string>
     <string name="usb_choose_notification_title">Appuyez pour choisir les options USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">Réseau USB &amp;</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Réseau</string>
     <string name="permlab_interceptPackageLaunch">"intercepter le lancement d'application"</string>
     <string name="permdesc_interceptPackageLaunch">"Permet à une application d'intercepter le lancement d'autres applications"</string>
     <string name="app_ops_access_camera">"accéder à l'appareil photo"</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">Empreinte digitale %d</string>
     <string name="permlab_accessFingerprintService">"Service d'accès par empreinte digitale"</string>
     <string name="permdesc_accessFingerprintService">"Permet à une application d'accéder au service d'empreintes digitales. L'application peut ajouter, supprimer, renommer et authentifier des empreintes digitales"</string>
+    <string name="permlab_resetBatteryStats">réinitialiser les statistiques de la batterie</string>
+    <string name="permdesc_resetBatteryStats">"Permet à une application de réinitialiser les données actuelles d'utilisation de la batterie à faible niveau."</string>
+    <string name="silent_mode_priority">Priorité</string>
+    <string name="silent_mode_none">Aucun</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1783,12 +1789,4 @@ L'économiseur de batterie s'éteint automatiquement lorsque votre appareil est 
     <string name="stk_cc_ss_to_ss">La requête SS a été remplacée par une autre requête SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">Réseau USB &amp;</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Réseau</string>
-    <string name="permlab_resetBatteryStats">réinitialiser les statistiques de la batterie</string>
-    <string name="permdesc_resetBatteryStats">"Permet à une application de réinitialiser les données actuelles d'utilisation de la batterie à faible niveau."</string>
-    <string name="silent_mode_priority">Priorité</string>
-    <string name="silent_mode_none">Aucun</string>
 </resources>

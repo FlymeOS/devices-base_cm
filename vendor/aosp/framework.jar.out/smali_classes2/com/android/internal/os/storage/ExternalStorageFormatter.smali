@@ -331,7 +331,7 @@
     if-nez v6, :cond_0
 
     .line 146
-    const v6, 0x104008d
+    const v6, 0x1040083
 
     invoke-virtual {p0, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
     :try_end_0
@@ -706,7 +706,7 @@
     .locals 14
 
     .prologue
-    const v13, 0x1040687
+    const v13, 0x104067c
 
     const/4 v9, 0x1
 
@@ -756,7 +756,7 @@
     if-nez v11, :cond_1
 
     .line 189
-    const v9, 0x104008d
+    const v9, 0x1040083
 
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
 
@@ -830,7 +830,7 @@
     :cond_2
     if-eqz v2, :cond_6
 
-    const v9, 0x10400ad
+    const v9, 0x10400a3
 
     :goto_2
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
@@ -872,7 +872,7 @@
     if-nez v9, :cond_7
 
     .line 218
-    const v9, 0x104008d
+    const v9, 0x1040083
 
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
     :try_end_1
@@ -965,7 +965,7 @@
     .line 208
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_6
-    const v9, 0x10400a6
+    const v9, 0x104009c
 
     goto :goto_2
 
@@ -1078,7 +1078,7 @@
     :cond_a
     if-eqz v2, :cond_b
 
-    const v9, 0x10400ae
+    const v9, 0x10400a4
 
     :goto_4
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
@@ -1086,7 +1086,7 @@
     .line 242
     if-eqz v2, :cond_c
 
-    const v7, 0x10400af
+    const v7, 0x10400a5
 
     .line 244
     .local v7, "toastTextResId":I
@@ -1112,13 +1112,13 @@
     .end local v3    # "mountService":Landroid/os/storage/IMountService;
     .end local v7    # "toastTextResId":I
     :cond_b
-    const v9, 0x10400a7
+    const v9, 0x104009d
 
     goto :goto_4
 
     .line 242
     :cond_c
-    const v7, 0x10400a8
+    const v7, 0x104009e
 
     goto :goto_5
 
@@ -1149,7 +1149,7 @@
     .line 321
     if-eqz v2, :cond_f
 
-    const v9, 0x10400b0
+    const v9, 0x10400a6
 
     :goto_6
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
@@ -1157,7 +1157,7 @@
     goto/16 :goto_0
 
     :cond_f
-    const v9, 0x10400a9
+    const v9, 0x104009f
 
     goto :goto_6
 
@@ -1174,7 +1174,7 @@
     .line 323
     if-eqz v2, :cond_11
 
-    const v9, 0x10400b1
+    const v9, 0x10400a7
 
     :goto_7
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
@@ -1182,7 +1182,7 @@
     goto/16 :goto_0
 
     :cond_11
-    const v9, 0x10400aa
+    const v9, 0x10400a0
 
     goto :goto_7
 
@@ -1199,7 +1199,7 @@
     .line 325
     if-eqz v2, :cond_13
 
-    const v9, 0x10400b2
+    const v9, 0x10400a8
 
     :goto_8
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
@@ -1207,7 +1207,7 @@
     goto/16 :goto_0
 
     :cond_13
-    const v9, 0x10400ab
+    const v9, 0x10400a1
 
     goto :goto_8
 
@@ -1224,7 +1224,7 @@
     .line 327
     if-eqz v2, :cond_15
 
-    const v9, 0x10400b3
+    const v9, 0x10400a9
 
     :goto_9
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
@@ -1232,13 +1232,13 @@
     goto/16 :goto_0
 
     :cond_15
-    const v9, 0x10400ac
+    const v9, 0x10400a2
 
     goto :goto_9
 
     .line 329
     :cond_16
-    const v9, 0x104064e
+    const v9, 0x1040643
 
     invoke-virtual {p0, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 

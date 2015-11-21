@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 775
+    .line 777
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$6$1;->this$1:Lcom/android/server/power/ShutdownThread$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 778
+    .line 780
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$6$1;->this$1:Lcom/android/server/power/ShutdownThread$6;
 
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread$6;->this$0:Lcom/android/server/power/ShutdownThread;
@@ -53,7 +53,7 @@
 
     monitor-enter v1
 
-    .line 779
+    .line 781
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$6$1;->this$1:Lcom/android/server/power/ShutdownThread$6;
 
@@ -64,7 +64,7 @@
     # setter for: Lcom/android/server/power/ShutdownThread;->isShutdownMusicPlaying:Z
     invoke-static {v0, v2}, Lcom/android/server/power/ShutdownThread;->access$602(Lcom/android/server/power/ShutdownThread;Z)Z
 
-    .line 780
+    .line 782
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$6$1;->this$1:Lcom/android/server/power/ShutdownThread$6;
 
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread$6;->this$0:Lcom/android/server/power/ShutdownThread;
@@ -76,13 +76,13 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 781
+    .line 783
     monitor-exit v1
 
-    .line 782
+    .line 784
     return-void
 
-    .line 781
+    .line 783
     :catchall_0
     move-exception v0
 

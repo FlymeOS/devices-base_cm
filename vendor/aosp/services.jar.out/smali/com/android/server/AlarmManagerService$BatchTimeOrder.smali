@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 404
+    .line 423
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,38 +46,38 @@
     .param p2, "b2"    # Lcom/android/server/AlarmManagerService$Batch;
 
     .prologue
-    .line 406
+    .line 425
     iget-wide v0, p1, Lcom/android/server/AlarmManagerService$Batch;->start:J
 
-    .line 407
+    .line 426
     .local v0, "when1":J
     iget-wide v2, p2, Lcom/android/server/AlarmManagerService$Batch;->start:J
 
-    .line 408
+    .line 427
     .local v2, "when2":J
     cmp-long v4, v0, v2
 
     if-lez v4, :cond_0
 
-    .line 409
+    .line 428
     const/4 v4, 0x1
 
-    .line 414
+    .line 433
     :goto_0
     return v4
 
-    .line 411
+    .line 430
     :cond_0
     cmp-long v4, v0, v2
 
     if-gez v4, :cond_1
 
-    .line 412
+    .line 431
     const/4 v4, -0x1
 
     goto :goto_0
 
-    .line 414
+    .line 433
     :cond_1
     const/4 v4, 0x0
 
@@ -86,17 +86,13 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 404
+    .line 423
     check-cast p1, Lcom/android/server/AlarmManagerService$Batch;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Lcom/android/server/AlarmManagerService$Batch;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/android/server/AlarmManagerService$BatchTimeOrder;->compare(Lcom/android/server/AlarmManagerService$Batch;Lcom/android/server/AlarmManagerService$Batch;)I
 
     move-result v0

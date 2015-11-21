@@ -1150,7 +1150,7 @@
 
     .line 299
     .local v3, "r":Landroid/content/res/Resources;
-    const v4, 0x104051f
+    const v4, 0x1040514
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1251,7 +1251,6 @@
 
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 51

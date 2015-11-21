@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 8765
+    .line 8793
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 8767
+    .line 8795
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-direct {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl;-><init>(Landroid/os/Parcel;)V
@@ -55,10 +55,9 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 8765
+    .line 8793
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl$3;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/os/BatteryStatsImpl;
 
     move-result-object v0
@@ -71,7 +70,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 8771
+    .line 8799
     new-array v0, p1, [Lcom/android/internal/os/BatteryStatsImpl;
 
     return-object v0
@@ -79,10 +78,9 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
-    .line 8765
+    .line 8793
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl$3;->newArray(I)[Lcom/android/internal/os/BatteryStatsImpl;
 
     move-result-object v0

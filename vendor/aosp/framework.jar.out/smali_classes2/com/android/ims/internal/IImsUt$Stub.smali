@@ -28,6 +28,8 @@
 
 .field static final TRANSACTION_close:I = 0x1
 
+.field static final TRANSACTION_queryCFForServiceClass:I = 0x13
+
 .field static final TRANSACTION_queryCLIP:I = 0x6
 
 .field static final TRANSACTION_queryCLIR:I = 0x5
@@ -156,7 +158,7 @@
     .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 246
+    .line 264
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v9
@@ -473,68 +475,77 @@
 
     move-result v4
 
-    .line 159
+    .line 160
     .local v4, "_arg3":I
-    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/android/ims/internal/IImsUt$Stub;->updateCallForward(IILjava/lang/String;I)I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v5
+
+    .local v5, "_arg4":I
+    move-object v0, p0
+
+    .line 161
+    invoke-virtual/range {v0 .. v5}, Lcom/android/ims/internal/IImsUt$Stub;->updateCallForward(IILjava/lang/String;II)I
 
     move-result v8
 
-    .line 160
+    .line 162
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
+    .line 163
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 166
+    .line 168
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
     .end local v4    # "_arg3":I
+    .end local v5    # "_arg4":I
     .end local v8    # "_result":I
     :sswitch_c
     const-string v0, "com.android.ims.internal.IImsUt"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
+    .line 170
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 170
+    .line 172
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 172
+    .line 174
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 174
+    .line 176
     .local v3, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 176
+    .line 178
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 178
-    .local v5, "_arg4":I
+    .line 180
+    .restart local v5    # "_arg4":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 180
+    .line 182
     .local v6, "_arg5":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -543,21 +554,21 @@
     .local v7, "_arg6":Ljava/lang/String;
     move-object v0, p0
 
-    .line 181
+    .line 183
     invoke-virtual/range {v0 .. v7}, Lcom/android/ims/internal/IImsUt$Stub;->updateCallForwardUncondTimer(IIIIIILjava/lang/String;)I
 
     move-result v8
 
-    .line 182
+    .line 184
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 183
+    .line 185
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 188
+    .line 190
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -571,7 +582,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 190
+    .line 192
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -580,51 +591,58 @@
 
     move v1, v9
 
-    .line 191
+    .line 194
     .local v1, "_arg0":Z
     :cond_1
-    invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->updateCallWaiting(Z)I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 195
+    .restart local v2    # "_arg1":I
+    invoke-virtual {p0, v1, v2}, Lcom/android/ims/internal/IImsUt$Stub;->updateCallWaiting(ZI)I
 
     move-result v8
 
-    .line 192
+    .line 196
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 193
+    .line 197
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 198
+    .line 202
     .end local v1    # "_arg0":Z
+    .end local v2    # "_arg1":I
     .end local v8    # "_result":I
     :sswitch_e
     const-string v0, "com.android.ims.internal.IImsUt"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 200
+    .line 204
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 201
+    .line 205
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->updateCLIR(I)I
 
     move-result v8
 
-    .line 202
+    .line 206
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 203
+    .line 207
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 208
+    .line 212
     .end local v1    # "_arg0":I
     .end local v8    # "_result":I
     :sswitch_f
@@ -632,7 +650,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 210
+    .line 214
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -641,23 +659,23 @@
 
     move v1, v9
 
-    .line 211
+    .line 215
     .local v1, "_arg0":Z
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->updateCLIP(Z)I
 
     move-result v8
 
-    .line 212
+    .line 216
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 213
+    .line 217
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 218
+    .line 222
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":I
     :sswitch_10
@@ -665,27 +683,27 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 220
+    .line 224
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 221
+    .line 225
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->updateCOLR(I)I
 
     move-result v8
 
-    .line 222
+    .line 226
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 223
+    .line 227
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 228
+    .line 232
     .end local v1    # "_arg0":I
     .end local v8    # "_result":I
     :sswitch_11
@@ -693,7 +711,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 230
+    .line 234
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -702,23 +720,23 @@
 
     move v1, v9
 
-    .line 231
+    .line 235
     .local v1, "_arg0":Z
     :cond_3
     invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->updateCOLP(Z)I
 
     move-result v8
 
-    .line 232
+    .line 236
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 233
+    .line 237
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 238
+    .line 242
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":I
     :sswitch_12
@@ -726,7 +744,7 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 240
+    .line 244
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -735,12 +753,51 @@
 
     move-result-object v1
 
-    .line 241
+    .line 245
     .local v1, "_arg0":Lcom/android/ims/internal/IImsUtListener;
     invoke-virtual {p0, v1}, Lcom/android/ims/internal/IImsUt$Stub;->setListener(Lcom/android/ims/internal/IImsUtListener;)V
 
-    .line 242
+    .line 246
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 251
+    .end local v1    # "_arg0":Lcom/android/ims/internal/IImsUtListener;
+    :sswitch_13
+    const-string v0, "com.android.ims.internal.IImsUt"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 253
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 255
+    .local v1, "_arg0":I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 257
+    .local v2, "_arg1":Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    .line 258
+    .restart local v3    # "_arg2":I
+    invoke-virtual {p0, v1, v2, v3}, Lcom/android/ims/internal/IImsUt$Stub;->queryCFForServiceClass(ILjava/lang/String;I)I
+
+    move-result v8
+
+    .line 259
+    .restart local v8    # "_result":I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 260
+    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
@@ -767,6 +824,7 @@
         0x10 -> :sswitch_10
         0x11 -> :sswitch_11
         0x12 -> :sswitch_12
+        0x13 -> :sswitch_13
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

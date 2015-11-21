@@ -4,10 +4,10 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/ContactsContract$ContactNameColumns;
-.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
-.implements Landroid/provider/ContactsContract$ContactStatusColumns;
 .implements Landroid/provider/ContactsContract$ContactsColumns;
+.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
+.implements Landroid/provider/ContactsContract$ContactNameColumns;
+.implements Landroid/provider/ContactsContract$ContactStatusColumns;
 
 
 # annotations
@@ -39,7 +39,7 @@
     .line 2119
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "profile"
+    const-string/jumbo v1, "profile"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -61,7 +61,7 @@
     .line 2137
     sget-object v0, Landroid/provider/ContactsContract$Profile;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v1, "raw_contacts"
+    const-string/jumbo v1, "raw_contacts"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 

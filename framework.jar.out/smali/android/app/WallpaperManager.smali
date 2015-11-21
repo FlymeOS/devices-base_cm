@@ -154,7 +154,7 @@
 
     .line 1320
     :cond_1
-    const v2, 0x10400f0
+    const v2, #android:string@default_wallpaper_component#t
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -416,7 +416,7 @@
 
     move-result-object v2
 
-    const v3, 0x108028c
+    const v3, #android:drawable@default_wallpaper#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -529,7 +529,7 @@
 
     move-result-object v1
 
-    const v2, 0x106000c
+    const v2, #android:color@black#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

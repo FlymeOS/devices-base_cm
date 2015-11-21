@@ -222,7 +222,6 @@
 
 .method public bridge synthetic convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
     .locals 1
-    .param p1, "x0"    # Landroid/database/Cursor;
 
     .prologue
     .line 38
@@ -317,8 +316,6 @@
 
 .method public bridge synthetic getChild(II)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
 
     .prologue
     .line 38
@@ -604,7 +601,6 @@
 
 .method public bridge synthetic getGroup(I)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
     .line 38

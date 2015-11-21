@@ -3,8 +3,8 @@
 .source "ContactsContract.java"
 
 # interfaces
-.implements Landroid/provider/ContactsContract$PresenceColumns;
 .implements Landroid/provider/ContactsContract$StatusColumns;
+.implements Landroid/provider/ContactsContract$PresenceColumns;
 
 
 # annotations
@@ -36,7 +36,7 @@
     .line 5279
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "status_updates"
+    const-string/jumbo v1, "status_updates"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -47,7 +47,7 @@
     .line 5284
     sget-object v0, Landroid/provider/ContactsContract$Profile;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v1, "status_updates"
+    const-string/jumbo v1, "status_updates"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -84,33 +84,40 @@
     .param p0, "status"    # I
 
     .prologue
+    .line 5294
     packed-switch p0, :pswitch_data_0
 
-    const v0, #android:drawable@presence_offline#t
+    .line 5306
+    const v0, 0x108006a
 
     :goto_0
     return v0
 
+    .line 5296
     :pswitch_0
-    const v0, #android:drawable@presence_online#t
+    const v0, 0x108006b
 
     goto :goto_0
 
+    .line 5299
     :pswitch_1
-    const v0, #android:drawable@presence_away#t
+    const v0, 0x1080067
 
     goto :goto_0
 
+    .line 5301
     :pswitch_2
-    const v0, #android:drawable@presence_busy#t
+    const v0, 0x1080068
 
     goto :goto_0
 
+    .line 5303
     :pswitch_3
-    const v0, #android:drawable@presence_invisible#t
+    const v0, 0x1080069
 
     goto :goto_0
 
+    .line 5294
     nop
 
     :pswitch_data_0

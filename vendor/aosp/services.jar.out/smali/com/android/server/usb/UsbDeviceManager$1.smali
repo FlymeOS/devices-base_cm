@@ -1,6 +1,9 @@
 .class Lcom/android/server/usb/UsbDeviceManager$1;
-.super Landroid/os/UEventObserver;
+.super Ljava/lang/Object;
 .source "UsbDeviceManager.java"
+
+# interfaces
+.implements Lcom/android/internal/util/cm/QSUtils$OnQSChanged;
 
 
 # annotations
@@ -23,70 +26,31 @@
     .locals 0
 
     .prologue
-    .line 150
+    .line 154
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
-    invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
-    .locals 3
-    .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
+.method public onQSChanged()V
+    .locals 1
 
     .prologue
-    .line 155
-    const-string v2, "USB_STATE"
+    .line 157
+    iget-object v0, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
-    invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 156
-    .local v1, "state":Ljava/lang/String;
-    const-string v2, "ACCESSORY"
-
-    invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
+    # getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
+    invoke-static {v0}, Lcom/android/server/usb/UsbDeviceManager;->access$100(Lcom/android/server/usb/UsbDeviceManager;)Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
     move-result-object v0
 
-    .line 157
-    .local v0, "accessory":Ljava/lang/String;
-    if-eqz v1, :cond_1
+    # invokes: Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->processQSChangedLocked()V
+    invoke-static {v0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->access$200(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
 
     .line 158
-    iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
-
-    # getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
-    invoke-static {v2}, Lcom/android/server/usb/UsbDeviceManager;->access$100(Lcom/android/server/usb/UsbDeviceManager;)Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateState(Ljava/lang/String;)V
-
-    .line 163
-    :cond_0
-    :goto_0
     return-void
-
-    .line 159
-    :cond_1
-    const-string v2, "START"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 161
-    iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
-
-    # invokes: Lcom/android/server/usb/UsbDeviceManager;->startAccessoryMode()V
-    invoke-static {v2}, Lcom/android/server/usb/UsbDeviceManager;->access$200(Lcom/android/server/usb/UsbDeviceManager;)V
-
-    goto :goto_0
 .end method

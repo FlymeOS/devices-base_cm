@@ -483,6 +483,26 @@
     return-void
 .end method
 
+.method public onUnregistered()V
+    .locals 2
+
+    .prologue
+    .line 584
+    iget-object v0, p0, Landroid/telephony/PhoneStateListener$2;->this$0:Landroid/telephony/PhoneStateListener;
+
+    # getter for: Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Landroid/telephony/PhoneStateListener;->access$000(Landroid/telephony/PhoneStateListener;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    .line 585
+    return-void
+.end method
+
 .method public onVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
     .locals 3
     .param p1, "lteState"    # Landroid/telephony/VoLteServiceState;

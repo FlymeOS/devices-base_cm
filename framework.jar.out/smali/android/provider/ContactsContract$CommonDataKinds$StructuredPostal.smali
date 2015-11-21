@@ -3,9 +3,9 @@
 .source "ContactsContract.java"
 
 # interfaces
+.implements Landroid/provider/ContactsContract$DataColumnsWithJoins;
 .implements Landroid/provider/ContactsContract$CommonDataKinds$CommonColumns;
 .implements Landroid/provider/ContactsContract$ContactCounts;
-.implements Landroid/provider/ContactsContract$DataColumnsWithJoins;
 
 
 # annotations
@@ -57,7 +57,7 @@
     .line 6198
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v1, "postals"
+    const-string/jumbo v1, "postals"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -121,28 +121,34 @@
     .param p0, "type"    # I
 
     .prologue
+    .line 6275
     packed-switch p0, :pswitch_data_0
 
-    const v0, #android:string@postalTypeCustom#t
+    .line 6279
+    const v0, 0x1040426
 
     :goto_0
     return v0
 
+    .line 6276
     :pswitch_0
-    const v0, #android:string@postalTypeHome#t
+    const v0, 0x1040427
 
     goto :goto_0
 
+    .line 6277
     :pswitch_1
-    const v0, #android:string@postalTypeWork#t
+    const v0, 0x1040428
 
     goto :goto_0
 
+    .line 6278
     :pswitch_2
-    const v0, #android:string@postalTypeOther#t
+    const v0, 0x1040429
 
     goto :goto_0
 
+    .line 6275
     nop
 
     :pswitch_data_0

@@ -1163,7 +1163,6 @@
 
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 74
@@ -1176,7 +1175,6 @@
 
 .method protected bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
     .line 74
@@ -1189,7 +1187,6 @@
 
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 74

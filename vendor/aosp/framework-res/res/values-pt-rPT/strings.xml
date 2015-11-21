@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Este vídeo não é válido para transmissão em fluxo contínuo neste aparelho.</string>
     <string name="selectTextMode">Selecionar texto</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Nenhum</string>
     <string name="profile_picker_title">Perfis</string>
     <string name="global_action_choose_profile">Perfil</string>
+    <string name="profile_none">Nenhum</string>
     <string name="global_action_screenshot">Capturar ecrã</string>
     <string name="permlab_receiveProtectedSms">receber SMS protegida</string>
     <string name="permdesc_receiveProtectedSms">Permite que a aplicação receba uma SMS protegida.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Permite à aplicação escolher se outra aplicação corre com Proteção da Privacidade. Quando uma aplicação corre com Proteção da Privacidade, não terá acesso a dados pessoais como contactos, registo de chamadas ou mensagens.</string>
     <string name="privacy_guard_notification">Proteção da Privacidade ativa</string>
     <string name="privacy_guard_notification_detail">%1$s não poderá aceder a dados pessoais</string>
-    <string name="permlab_useHardwareFramework">Utilizar a estrutura de hardware</string>
-    <string name="permdesc_useHardwareFramework">Permite o acesso duma aplicação à estrutura de hardware CM.</string>
     <string name="permlab_setKeyguardWallpaper">Definir a imagem de fundo do ecrã de bloqueio</string>
     <string name="permdesc_setKeyguardWallpaper">Permite a uma aplicação trocar a imagem de fundo do ecrã de bloqueio.</string>
     <string name="privacy_guard_dialog_title">Proteção da Privacidade</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ABD sobre USB e rede ativado</string>
     <string name="adb_active_generic_notification_message">Toque para desativar a depuração.</string>
     <string name="usb_choose_notification_title">Toque para escolher as opções USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; rede</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Rede</string>
     <string name="permlab_interceptPackageLaunch">Intercetar a inicialização de uma aplicação</string>
     <string name="permdesc_interceptPackageLaunch">Permite a uma aplicação intercetar a inicialização de outras aplicações</string>
     <string name="app_ops_access_camera">aceder à câmara</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Impressão digital %d</string>
     <string name="permlab_accessFingerprintService">aceder ao serviço de impressões digitais</string>
     <string name="permdesc_accessFingerprintService">Permite que uma aplicação aceda ao serviço de impressão digital. A aplicação pode adicionar, eliminar, mudar o nome e autenticar ao comparar impressões digitais</string>
+    <string name="permlab_resetBatteryStats">reiniciar estatísticas da bateria</string>
+    <string name="permdesc_resetBatteryStats">Permite a uma aplicação reiniciar os dados de utilização de baixo nível da bateria.</string>
+    <string name="silent_mode_priority">Prioridade</string>
+    <string name="silent_mode_none">Nenhum</string>
+    <string name="subscription_change_disabled_wifi_ap">Zona Wi-Fi portátil desligada devido à alteração da assinatura SIM</string>
+    <string name="notify_turn_wifi_off_title">Desligar Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e de %B de %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1783,12 +1791,6 @@ A poupança de bateria desliga-se automaticamente quando o dispositivo está a c
     <string name="stk_cc_ss_to_ss">O pedido SS foi modificado para um novo pedido SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; rede</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Rede</string>
-    <string name="permlab_resetBatteryStats">reiniciar estatísticas da bateria</string>
-    <string name="permdesc_resetBatteryStats">Permite a uma aplicação reiniciar os dados de utilização de baixo nível da bateria.</string>
-    <string name="silent_mode_priority">Prioridade</string>
-    <string name="silent_mode_none">Nenhum</string>
+    <string name="permlab_thirdPartyKeyguard">ecrã de bloqueio de terceiros</string>
+    <string name="permdesc_thirdPartyKeyguard">Permite que uma aplicação seja utilizada como ecrã de bloqueio inseguro.</string>
 </resources>

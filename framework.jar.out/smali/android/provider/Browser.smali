@@ -718,7 +718,7 @@
 
     const/4 v0, 0x0
 
-    const-string v3, "url"
+    const-string/jumbo v3, "url"
 
     aput-object v3, v2, v0
 
@@ -756,7 +756,7 @@
 
     const/4 v0, 0x0
 
-    const-string v4, "url"
+    const-string/jumbo v4, "url"
 
     aput-object v4, v2, v0
 
@@ -794,7 +794,7 @@
 
     const/4 v0, 0x0
 
-    const-string v1, "url"
+    const-string/jumbo v1, "url"
 
     aput-object v1, v2, v0
 
@@ -802,7 +802,7 @@
     .local v2, "projection":[Ljava/lang/String;
     sget-object v1, Landroid/provider/BrowserContract$History;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v3, "visits > 0"
+    const-string/jumbo v3, "visits > 0"
 
     const/4 v4, 0x0
 
@@ -963,7 +963,7 @@
     .line 272
     :cond_0
     :goto_0
-    const-string v0, "www."
+    const-string/jumbo v0, "www."
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -990,7 +990,7 @@
     new-instance v8, Ljava/lang/StringBuilder;
 
     .end local v8    # "whereClause":Ljava/lang/StringBuilder;
-    const-string v0, "url = "
+    const-string/jumbo v0, "url = "
 
     invoke-direct {v8, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1056,7 +1056,7 @@
 
     const/4 v0, 0x1
 
-    const-string v3, "visits"
+    const-string/jumbo v3, "visits"
 
     aput-object v3, v2, v0
 
@@ -1103,7 +1103,7 @@
     new-instance v8, Ljava/lang/StringBuilder;
 
     .end local v8    # "whereClause":Ljava/lang/StringBuilder;
-    const-string v0, "url = "
+    const-string/jumbo v0, "url = "
 
     invoke-direct {v8, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1119,7 +1119,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "www."
+    const-string/jumbo v1, "www."
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1217,12 +1217,12 @@
 
     .line 163
     .local v0, "i":Landroid/content/Intent;
-    const-string v1, "title"
+    const-string/jumbo v1, "title"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 164
-    const-string v1, "url"
+    const-string/jumbo v1, "url"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1239,7 +1239,8 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    const v0, #android:string@sendText#t
+    .line 199
+    const v0, 0x104057c
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1267,7 +1268,7 @@
 
     .line 216
     .local v1, "send":Landroid/content/Intent;
-    const-string v2, "text/plain"
+    const-string/jumbo v2, "text/plain"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1330,7 +1331,7 @@
 
     const/4 v0, 0x1
 
-    const-string v3, "url"
+    const-string/jumbo v3, "url"
 
     aput-object v3, v2, v0
 
@@ -1434,7 +1435,7 @@
     :try_start_1
     const-string v0, "browser"
 
-    const-string v1, "truncateHistory"
+    const-string/jumbo v1, "truncateHistory"
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
@@ -1499,7 +1500,7 @@
     if-eqz p2, :cond_1
 
     .line 322
-    const-string v7, "visits"
+    const-string/jumbo v7, "visits"
 
     const/4 v8, 0x1
 
@@ -1563,7 +1564,7 @@
     .restart local v5    # "values":Landroid/content/ContentValues;
     :cond_1
     :try_start_1
-    const-string v7, "user_entered"
+    const-string/jumbo v7, "user_entered"
 
     const/4 v8, 0x1
 
@@ -1588,7 +1589,7 @@
     :try_start_2
     const-string v7, "browser"
 
-    const-string v8, "updateVisitedHistory"
+    const-string/jumbo v8, "updateVisitedHistory"
 
     invoke-static {v7, v8, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1626,12 +1627,12 @@
     .line 341
     .local v4, "user_entered":I
     :goto_3
-    const-string v7, "url"
+    const-string/jumbo v7, "url"
 
     invoke-virtual {v5, v7, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 342
-    const-string v7, "visits"
+    const-string/jumbo v7, "visits"
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1649,7 +1650,7 @@
     invoke-virtual {v5, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 344
-    const-string v7, "title"
+    const-string/jumbo v7, "title"
 
     invoke-virtual {v5, v7, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1665,7 +1666,7 @@
     invoke-virtual {v5, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 346
-    const-string v7, "user_entered"
+    const-string/jumbo v7, "user_entered"
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

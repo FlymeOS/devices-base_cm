@@ -74,7 +74,6 @@
 # virtual methods
 .method public bridge synthetic equals(Ljava/lang/Object;)Z
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 25
@@ -87,7 +86,6 @@
 
 .method public bridge synthetic getSpanEnd(Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 25
@@ -100,7 +98,6 @@
 
 .method public bridge synthetic getSpanFlags(Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 25
@@ -113,7 +110,6 @@
 
 .method public bridge synthetic getSpanStart(Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 25
@@ -126,9 +122,6 @@
 
 .method public bridge synthetic getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Ljava/lang/Class;
 
     .prologue
     .line 25
@@ -153,9 +146,6 @@
 
 .method public bridge synthetic nextSpanTransition(IILjava/lang/Class;)I
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Ljava/lang/Class;
 
     .prologue
     .line 25

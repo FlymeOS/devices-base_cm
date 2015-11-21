@@ -67,26 +67,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 43
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 139
+    .line 140
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 44
+    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 45
+    .line 46
     iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 46
+    .line 47
     iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inPremultiplied:Z
 
-    .line 47
+    .line 48
     return-void
 .end method
 
@@ -99,14 +99,14 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 371
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->mCancel:Z
 
-    .line 371
+    .line 372
     invoke-direct {p0}, Landroid/graphics/BitmapFactory$Options;->requestCancel()V
 
-    .line 372
+    .line 373
     return-void
 .end method

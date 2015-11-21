@@ -1656,7 +1656,7 @@
 
     iget-object v4, v0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
-    const v5, 0x1040626
+    const v5, 0x104061b
 
     const/4 v6, 0x1
 
@@ -1946,7 +1946,7 @@
 
     .line 3010
     .local v10, "contextForUser":Landroid/content/Context;
-    const v4, 0x10401c1
+    const v4, 0x10401b6
 
     invoke-virtual {v10, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2584,7 +2584,7 @@
 
     move-result-object v21
 
-    const v22, 0x1040118
+    const v22, 0x104010d
 
     invoke-virtual/range {v21 .. v22}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -13055,15 +13055,11 @@
 
 .method public bridge synthetic onServiceChanged(Ljava/lang/Object;IZ)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Z
 
     .prologue
     .line 105
     check-cast p1, Landroid/accounts/AuthenticatorDescription;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountManagerService;->onServiceChanged(Landroid/accounts/AuthenticatorDescription;IZ)V
 
     return-void

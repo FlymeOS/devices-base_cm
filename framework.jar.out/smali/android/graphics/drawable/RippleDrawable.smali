@@ -1746,8 +1746,6 @@
 
 .method bridge synthetic createConstantState(Landroid/graphics/drawable/LayerDrawable$LayerState;Landroid/content/res/Resources;)Landroid/graphics/drawable/LayerDrawable$LayerState;
     .locals 1
-    .param p1, "x0"    # Landroid/graphics/drawable/LayerDrawable$LayerState;
-    .param p2, "x1"    # Landroid/content/res/Resources;
 
     .prologue
     .line 94

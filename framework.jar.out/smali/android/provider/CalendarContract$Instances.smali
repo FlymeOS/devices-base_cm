@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/CalendarContract$CalendarColumns;
 .implements Landroid/provider/CalendarContract$EventsColumns;
+.implements Landroid/provider/CalendarContract$CalendarColumns;
 
 
 # annotations
@@ -143,7 +143,7 @@
 
     move-result-object v1
 
-    const-string v3, "visible=?"
+    const-string/jumbo v3, "visible=?"
 
     sget-object v4, Landroid/provider/CalendarContract$Instances;->WHERE_CALENDARS_ARGS:[Ljava/lang/String;
 
@@ -193,7 +193,7 @@
 
     move-result-object v1
 
-    const-string v3, "visible=?"
+    const-string/jumbo v3, "visible=?"
 
     sget-object v4, Landroid/provider/CalendarContract$Instances;->WHERE_CALENDARS_ARGS:[Ljava/lang/String;
 

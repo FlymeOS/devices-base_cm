@@ -200,7 +200,7 @@
 
     .line 1323
     .local v1, "res":Landroid/content/res/Resources;
-    const v2, 0x11200ad
+    const v2, 0x11200b3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -213,7 +213,7 @@
 
     .line 1327
     :cond_0
-    const v2, 0x11200ae
+    const v2, 0x11200b4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 

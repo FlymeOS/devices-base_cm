@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     aput-object v2, v0, v1
 
@@ -418,7 +418,7 @@
 
     sget-object v7, Landroid/provider/Settings$NameValueCache;->SELECT_VALUE:[Ljava/lang/String;
 
-    const-string v8, "name=?"
+    const-string/jumbo v8, "name=?"
 
     const/4 v9, 0x1
 
@@ -678,7 +678,7 @@
 
     .line 1107
     .local v0, "arg":Landroid/os/Bundle;
-    const-string v3, "value"
+    const-string/jumbo v3, "value"
 
     invoke-virtual {v0, v3, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 

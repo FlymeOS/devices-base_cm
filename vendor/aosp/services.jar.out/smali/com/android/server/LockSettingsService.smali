@@ -37,7 +37,7 @@
     const/4 v3, 0x0
 
     .line 410
-    const/16 v0, 0x13
+    const/16 v0, 0x14
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -133,17 +133,23 @@
 
     const/16 v1, 0x10
 
-    const-string v2, "lock_pattern_size"
+    const-string v2, "lock_screen_pass_to_security_view"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    const-string v2, "lock_pattern_dotsvisible"
+    const-string v2, "lock_pattern_size"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
+
+    const-string v2, "lock_pattern_dotsvisible"
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x13
 
     const-string v2, "lock_pattern_show_error_path"
 
@@ -151,7 +157,7 @@
 
     sput-object v0, Lcom/android/server/LockSettingsService;->VALID_SETTINGS:[Ljava/lang/String;
 
-    .line 433
+    .line 434
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "lock_screen_owner_info_enabled"
@@ -418,23 +424,23 @@
     .locals 2
 
     .prologue
-    .line 439
+    .line 440
     const-string v1, "mount"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 440
+    .line 441
     .local v0, "service":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 441
+    .line 442
     invoke-static {v0}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 443
+    .line 444
     :goto_0
     return-object v1
 

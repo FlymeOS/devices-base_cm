@@ -685,7 +685,7 @@
     .param p2, "resId"    # I
 
     .prologue
-    const v4, 0x102034a
+    const v4, 0x102034b
 
     const/16 v3, 0x8
 
@@ -698,12 +698,12 @@
 
     .line 2763
     .local v0, "profileBadge":Landroid/graphics/Bitmap;
-    const v2, 0x1020337
+    const v2, 0x1020338
 
     invoke-virtual {p1, v2, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2764
-    const v2, 0x1020347
+    const v2, 0x1020348
 
     invoke-virtual {p1, v2, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -723,7 +723,7 @@
     if-ne p2, v4, :cond_0
 
     .line 2774
-    const v2, 0x1020348
+    const v2, 0x1020349
 
     invoke-virtual {p1, v2, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -748,7 +748,7 @@
     .line 3107
     const-string/jumbo v0, "setBackgroundResource"
 
-    const v4, 0x10804f4
+    const v4, 0x10804f6
 
     invoke-virtual {p1, v1, v0, v4}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
@@ -958,7 +958,7 @@
     if-eqz v3, :cond_6
 
     .line 2851
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     move-object/from16 v0, p0
 
@@ -973,7 +973,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 2852
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     const/4 v4, 0x0
 
@@ -1065,14 +1065,14 @@
     if-eqz v3, :cond_e
 
     .line 2909
-    const v3, 0x1020345
+    const v3, 0x1020346
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2910
-    const v3, 0x1020345
+    const v3, 0x1020346
 
     const-string/jumbo v4, "setBase"
 
@@ -1095,7 +1095,7 @@
     invoke-virtual {v2, v3, v4, v6, v7}, Landroid/widget/RemoteViews;->setLong(ILjava/lang/String;J)V
 
     .line 2912
-    const v3, 0x1020345
+    const v3, 0x1020346
 
     const-string/jumbo v4, "setStarted"
 
@@ -1106,7 +1106,7 @@
     .line 2920
     :cond_3
     :goto_3
-    const v3, 0x1020346
+    const v3, 0x1020347
 
     const/4 v4, 0x0
 
@@ -1145,7 +1145,7 @@
     .line 2925
     if-eqz v10, :cond_f
 
-    const v3, 0x1020347
+    const v3, 0x1020348
 
     :goto_4
     move-object/from16 v0, p0
@@ -1165,7 +1165,7 @@
 
     .line 2933
     :cond_4
-    const v4, 0x1020348
+    const v4, 0x1020349
 
     if-eqz v13, :cond_10
 
@@ -1175,7 +1175,7 @@
     invoke-virtual {v2, v4, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2934
-    const v4, 0x102033b
+    const v4, 0x102033c
 
     if-eqz v13, :cond_11
 
@@ -1248,7 +1248,7 @@
     if-le v3, v14, :cond_7
 
     .line 2858
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     move-object/from16 v0, p0
 
@@ -1274,7 +1274,7 @@
 
     .line 2865
     :goto_7
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     const/4 v4, 0x0
 
@@ -1294,7 +1294,7 @@
 
     .line 2863
     .local v11, "f":Ljava/text/NumberFormat;
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     move-object/from16 v0, p0
 
@@ -1320,7 +1320,7 @@
     .end local v11    # "f":Ljava/text/NumberFormat;
     .end local v14    # "tooBig":I
     :cond_8
-    const v3, 0x1020349
+    const v3, 0x102034a
 
     const/16 v4, 0x8
 
@@ -1476,7 +1476,7 @@
 
     .line 2925
     :cond_f
-    const v3, 0x102034a
+    const v3, 0x102034b
 
     goto/16 :goto_4
 
@@ -1499,7 +1499,7 @@
     .param p1, "layoutId"    # I
 
     .prologue
-    const v6, 0x102032f
+    const v6, 0x1020330
 
     const/4 v5, 0x0
 
@@ -1527,7 +1527,7 @@
     invoke-virtual {v1, v6, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2999
-    const v4, 0x1020338
+    const v4, 0x1020339
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -1669,7 +1669,7 @@
     .param p1, "action"    # Landroid/app/Notification$Action;
 
     .prologue
-    const v1, 0x1020330
+    const v1, 0x1020331
 
     const/4 v3, 0x0
 
@@ -2360,7 +2360,7 @@
 
     .line 3062
     :cond_0
-    const v0, 0x1020330
+    const v0, 0x1020331
 
     const/4 v1, 0x0
 
@@ -2519,7 +2519,7 @@
     :cond_1
     const-string/jumbo v0, "setBackgroundResource"
 
-    const v2, 0x10804f4
+    const v2, 0x10804f6
 
     invoke-virtual {p2, v1, v0, v2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
@@ -2924,7 +2924,7 @@
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2807
-    const v0, 0x1020349
+    const v0, 0x102034a
 
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -2934,12 +2934,12 @@
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2809
-    const v0, 0x1020348
+    const v0, 0x1020349
 
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2810
-    const v0, 0x102033b
+    const v0, 0x102033c
 
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -2949,7 +2949,7 @@
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2812
-    const v0, 0x1020345
+    const v0, 0x1020346
 
     invoke-virtual {p1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
@@ -2967,7 +2967,7 @@
     .param p1, "big"    # Landroid/widget/RemoteViews;
 
     .prologue
-    const v2, 0x102032f
+    const v2, 0x1020330
 
     const/16 v1, 0x8
 
@@ -2975,7 +2975,7 @@
     invoke-virtual {p1, v2, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 2987
-    const v0, 0x1020338
+    const v0, 0x1020339
 
     invoke-virtual {p1, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 

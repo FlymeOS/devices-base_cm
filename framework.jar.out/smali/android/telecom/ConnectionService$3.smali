@@ -378,9 +378,7 @@
     .param p2, "capabilities"    # I
 
     .prologue
-    .line 492
     invoke-virtual {p0, p1, p2}, Landroid/telecom/ConnectionService$3;->onConnectionCapabilitiesChanged(Landroid/telecom/Conference;I)V
 
-    .line 493
     return-void
 .end method

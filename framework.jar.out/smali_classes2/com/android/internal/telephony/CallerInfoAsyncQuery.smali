@@ -538,7 +538,6 @@
     .param p5, "subId"    # J
 
     .prologue
-    .line 458
     long-to-int v5, p5
 
     move v0, p0

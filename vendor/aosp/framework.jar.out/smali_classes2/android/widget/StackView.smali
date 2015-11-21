@@ -2332,7 +2332,6 @@
 
 .method bridge synthetic createOrReuseLayoutParams(Landroid/view/View;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "x0"    # Landroid/view/View;
 
     .prologue
     .line 49

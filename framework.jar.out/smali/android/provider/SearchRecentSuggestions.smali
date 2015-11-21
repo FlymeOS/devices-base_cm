@@ -67,7 +67,7 @@
 
     aput-object v1, v0, v3
 
-    const-string v1, "query"
+    const-string/jumbo v1, "query"
 
     aput-object v1, v0, v4
 
@@ -90,7 +90,7 @@
 
     aput-object v1, v0, v3
 
-    const-string v1, "query"
+    const-string/jumbo v1, "query"
 
     aput-object v1, v0, v4
 
@@ -274,7 +274,7 @@
 
     .line 199
     :cond_0
-    const-string v5, "query"
+    const-string/jumbo v5, "query"
 
     invoke-virtual {v4, v5, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -312,7 +312,7 @@
     .local v1, "e":Ljava/lang/RuntimeException;
     const-string v5, "SearchSuggestions"
 
-    const-string v6, "saveRecentQuery"
+    const-string/jumbo v6, "saveRecentQuery"
 
     invoke-static {v5, v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -382,7 +382,7 @@
     :cond_1
     new-instance v0, Landroid/provider/SearchRecentSuggestions$1;
 
-    const-string v1, "saveRecentQuery"
+    const-string/jumbo v1, "saveRecentQuery"
 
     invoke-direct {v0, p0, v1, p1, p2}, Landroid/provider/SearchRecentSuggestions$1;-><init>(Landroid/provider/SearchRecentSuggestions;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -467,7 +467,7 @@
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string v2, "SearchSuggestions"
 
-    const-string v3, "truncateHistory"
+    const-string/jumbo v3, "truncateHistory"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

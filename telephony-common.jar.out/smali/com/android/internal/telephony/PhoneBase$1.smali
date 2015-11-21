@@ -119,14 +119,39 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 113
+    .line 119
     .end local v0    # "extraPhoneId":I
     :cond_0
     :goto_0
     return-void
 
-    .line 106
+    .line 107
     :cond_1
+    const-string v1, "android:phoneid"
+
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 108
+    const-string v1, "android:phoneid"
+
+    invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
+
+    invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneBase;->getPhoneId()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_0
+
+    .line 112
+    :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -137,9 +162,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 107
+    .line 113
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v2, 0x1
@@ -147,15 +172,15 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 108
+    .line 114
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V
 
     goto :goto_0
 
-    .line 109
-    :cond_2
+    .line 115
+    :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -168,7 +193,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 110
+    .line 116
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v2, 0x0
@@ -176,7 +201,7 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 111
+    .line 117
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V

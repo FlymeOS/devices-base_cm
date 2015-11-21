@@ -1454,13 +1454,11 @@
 
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
-    .param p1, "x0"    # Landroid/widget/Adapter;
 
     .prologue
     .line 61
     check-cast p1, Landroid/widget/SpinnerAdapter;
 
-    .end local p1    # "x0":Landroid/widget/Adapter;
     invoke-virtual {p0, p1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     return-void

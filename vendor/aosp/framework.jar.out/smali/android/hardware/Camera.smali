@@ -951,10 +951,10 @@
     .param p0, "parameters"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 2183
+    .line 2192
     if-nez p0, :cond_0
 
-    .line 2184
+    .line 2193
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string/jumbo v3, "parameters must not be null"
@@ -963,14 +963,14 @@
 
     throw v2
 
-    .line 2187
+    .line 2196
     :cond_0
     # invokes: Landroid/hardware/Camera$Parameters;->getOuter()Landroid/hardware/Camera;
     invoke-static {p0}, Landroid/hardware/Camera$Parameters;->access$1800(Landroid/hardware/Camera$Parameters;)Landroid/hardware/Camera;
 
     move-result-object v0
 
-    .line 2188
+    .line 2197
     .local v0, "camera":Landroid/hardware/Camera;
     new-instance v1, Landroid/hardware/Camera$Parameters;
 
@@ -980,11 +980,11 @@
 
     invoke-direct {v1, v0, v2}, Landroid/hardware/Camera$Parameters;-><init>(Landroid/hardware/Camera;Landroid/hardware/Camera$1;)V
 
-    .line 2189
+    .line 2198
     .local v1, "p":Landroid/hardware/Camera$Parameters;
     invoke-virtual {v1, p0}, Landroid/hardware/Camera$Parameters;->copyFrom(Landroid/hardware/Camera$Parameters;)V
 
-    .line 2191
+    .line 2200
     return-object v1
 .end method
 
@@ -1019,6 +1019,9 @@
 .end method
 
 .method private final native native_setup(Ljava/lang/Object;IILjava/lang/String;)I
+.end method
+
+.method private final native native_stopLongshot()V
 .end method
 
 .method private final native native_takePicture(I)V
@@ -1550,27 +1553,27 @@
     .locals 4
 
     .prologue
-    .line 2161
+    .line 2170
     new-instance v1, Landroid/hardware/Camera$Parameters;
 
     const/4 v3, 0x0
 
     invoke-direct {v1, p0, v3}, Landroid/hardware/Camera$Parameters;-><init>(Landroid/hardware/Camera;Landroid/hardware/Camera$1;)V
 
-    .line 2162
+    .line 2171
     .local v1, "p":Landroid/hardware/Camera$Parameters;
     invoke-direct {p0}, Landroid/hardware/Camera;->native_getParameters()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2163
+    .line 2172
     .local v2, "s":Ljava/lang/String;
     invoke-virtual {v1, v2}, Landroid/hardware/Camera$Parameters;->unflatten(Ljava/lang/String;)V
 
-    .line 2165
+    .line 2174
     const/4 v0, -0x1
 
-    .line 2166
+    .line 2175
     .local v0, "focus_pos":I
     invoke-virtual {v1}, Landroid/hardware/Camera$Parameters;->getCurrentFocusPosition()Ljava/lang/String;
 
@@ -1578,7 +1581,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 2167
+    .line 2176
     invoke-virtual {v1}, Landroid/hardware/Camera$Parameters;->getCurrentFocusPosition()Ljava/lang/String;
 
     move-result-object v3
@@ -1587,7 +1590,7 @@
 
     move-result v0
 
-    .line 2169
+    .line 2178
     :cond_0
     return v0
 .end method
@@ -2368,6 +2371,17 @@
     iput-boolean v0, p0, Landroid/hardware/Camera;->mFaceDetectionRunning:Z
 
     .line 1776
+    return-void
+.end method
+
+.method public final stopLongshot()V
+    .locals 0
+
+    .prologue
+    .line 2120
+    invoke-direct {p0}, Landroid/hardware/Camera;->native_stopLongshot()V
+
+    .line 2121
     return-void
 .end method
 

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 587
+    .line 589
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$9;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 593
+    .line 595
     const-string v1, "android.net.NETWORK_TEMPLATE"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -48,7 +48,7 @@
 
     check-cast v0, Landroid/net/NetworkTemplate;
 
-    .line 594
+    .line 596
     .local v0, "template":Landroid/net/NetworkTemplate;
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$9;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -56,6 +56,6 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->performSnooze(Landroid/net/NetworkTemplate;I)V
 
-    .line 595
+    .line 597
     return-void
 .end method

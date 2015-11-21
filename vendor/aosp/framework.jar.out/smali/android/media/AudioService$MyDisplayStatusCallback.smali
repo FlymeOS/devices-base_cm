@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 5667
+    .line 5736
     iput-object p1, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .param p2, "x1"    # Landroid/media/AudioService$1;
 
     .prologue
-    .line 5667
+    .line 5736
     invoke-direct {p0, p1}, Landroid/media/AudioService$MyDisplayStatusCallback;-><init>(Landroid/media/AudioService;)V
 
     return-void
@@ -53,7 +53,7 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 5669
+    .line 5738
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mHdmiManager:Landroid/hardware/hdmi/HdmiControlManager;
@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 5670
+    .line 5739
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mHdmiManager:Landroid/hardware/hdmi/HdmiControlManager;
@@ -73,7 +73,7 @@
 
     monitor-enter v1
 
-    .line 5671
+    .line 5740
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
@@ -85,9 +85,9 @@
 
     :goto_0
     # setter for: Landroid/media/AudioService;->mHdmiCecSink:Z
-    invoke-static {v2, v0}, Landroid/media/AudioService;->access$9902(Landroid/media/AudioService;Z)Z
+    invoke-static {v2, v0}, Landroid/media/AudioService;->access$10102(Landroid/media/AudioService;Z)Z
 
-    .line 5673
+    .line 5742
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     # invokes: Landroid/media/AudioService;->isPlatformTelevision()Z
@@ -100,13 +100,13 @@
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mHdmiCecSink:Z
-    invoke-static {v0}, Landroid/media/AudioService;->access$9900(Landroid/media/AudioService;)Z
+    invoke-static {v0}, Landroid/media/AudioService;->access$10100(Landroid/media/AudioService;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5674
+    .line 5743
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     iget v2, v0, Landroid/media/AudioService;->mFixedVolumeDevices:I
@@ -115,27 +115,27 @@
 
     iput v2, v0, Landroid/media/AudioService;->mFixedVolumeDevices:I
 
-    .line 5676
+    .line 5745
     :cond_0
     iget-object v0, p0, Landroid/media/AudioService$MyDisplayStatusCallback;->this$0:Landroid/media/AudioService;
 
     # invokes: Landroid/media/AudioService;->checkAllFixedVolumeDevices()V
-    invoke-static {v0}, Landroid/media/AudioService;->access$10000(Landroid/media/AudioService;)V
+    invoke-static {v0}, Landroid/media/AudioService;->access$10200(Landroid/media/AudioService;)V
 
-    .line 5677
+    .line 5746
     monitor-exit v1
 
-    .line 5679
+    .line 5748
     :cond_1
     return-void
 
-    .line 5671
+    .line 5740
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 5677
+    .line 5746
     :catchall_0
     move-exception v0
 

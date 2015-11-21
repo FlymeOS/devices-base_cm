@@ -77,13 +77,11 @@
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 81
     check-cast p1, Ljava/lang/Integer;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/server/hdmi/HdmiCecController$2;->apply(Ljava/lang/Integer;)Z
 
     move-result v0

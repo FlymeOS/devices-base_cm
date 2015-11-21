@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/Contacts$PeopleColumns;
 .implements Landroid/provider/Contacts$PhonesColumns;
+.implements Landroid/provider/Contacts$PeopleColumns;
 
 
 # annotations

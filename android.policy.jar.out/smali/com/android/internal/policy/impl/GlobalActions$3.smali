@@ -1,14 +1,11 @@
 .class Lcom/android/internal/policy/impl/GlobalActions$3;
-.super Ljava/lang/Object;
+.super Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
 .source "GlobalActions.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/GlobalActions;->createDialog()Lcom/android/internal/policy/impl/GlobalActions$GlobalActionsDialog;
+    value = Lcom/android/internal/policy/impl/GlobalActions;->getScreenshotAction()Lcom/android/internal/policy/impl/GlobalActions$Action;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,70 +19,52 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
     .locals 0
+    .param p2, "x0"    # I
+    .param p3, "x1"    # I
 
     .prologue
-    .line 388
+    .line 446
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 2
-    .param p2, "view"    # Landroid/view/View;
-    .param p3, "position"    # I
-    .param p4, "id"    # J
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public onPress()V
+    .locals 1
 
     .prologue
-    .line 392
-    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
+    .line 449
+    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$3;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
-    invoke-static {v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$900(Lcom/android/internal/policy/impl/GlobalActions;)Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
+    # invokes: Lcom/android/internal/policy/impl/GlobalActions;->takeScreenshot()V
+    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1100(Lcom/android/internal/policy/impl/GlobalActions;)V
 
-    move-result-object v1
+    .line 450
+    return-void
+.end method
 
-    invoke-virtual {v1, p3}, Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;->getItem(I)Lcom/android/internal/policy/impl/GlobalActions$Action;
+.method public showBeforeProvisioning()Z
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 457
+    const/4 v0, 0x1
 
-    .line 393
-    .local v0, "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
-    instance-of v1, v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
+    return v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public showDuringKeyguard()Z
+    .locals 1
 
-    .line 394
-    check-cast v0, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;
+    .prologue
+    .line 453
+    const/4 v0, 0x1
 
-    .end local v0    # "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
-    invoke-interface {v0}, Lcom/android/internal/policy/impl/GlobalActions$LongPressAction;->onLongPress()Z
-
-    move-result v1
-
-    .line 396
-    :goto_0
-    return v1
-
-    .restart local v0    # "action":Lcom/android/internal/policy/impl/GlobalActions$Action;
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_0
+    return v0
 .end method

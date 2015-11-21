@@ -23,9 +23,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Esti videu nun pue tresmitise al preséu.</string>
     <string name="selectTextMode">Esbillar testu</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Darréu</string>
     <string name="profile_picker_title">Perfiles</string>
     <string name="global_action_choose_profile">Perfil</string>
+    <string name="profile_none">Darréu</string>
     <string name="global_action_screenshot">Capturar pantalla</string>
     <string name="permlab_receiveProtectedSms">recibir SMS protexíos</string>
     <string name="permdesc_receiveProtectedSms">"Permite que l'aplicación reciba mensaxes SMS entrantes protexíos."</string>
@@ -47,8 +47,6 @@
     <string name="permdesc_changePrivacyGuardState">"Permite que l'aplicación cambie l'estáu de privacidá d'otra. Cuando una aplicación s'executa cola privacidá habilitada, nun va poder acceder a los datos personales, talos como contautos, mensaxes o rexistros de llamaes."</string>
     <string name="privacy_guard_notification">Privacidá activada</string>
     <string name="privacy_guard_notification_detail">%1$s nun va poder acceder a los datos personales</string>
-    <string name="permlab_useHardwareFramework">usar marcu de hardware</string>
-    <string name="permdesc_useHardwareFramework">"Permite que l'aplicación acceda al marcu de hardware de CM."</string>
     <string name="permlab_setKeyguardWallpaper">"Afita'l fondu de pantalla de bloquéu"</string>
     <string name="permdesc_setKeyguardWallpaper">"Permite que l'aplicación afite'l fondu de la pantalla de bloquéu."</string>
     <string name="privacy_guard_dialog_title">Privacidá</string>
@@ -68,6 +66,10 @@
     <string name="adb_both_active_notification_title">ADB sobre USB y rede habilitáu</string>
     <string name="adb_active_generic_notification_message">Toca pa deshabilitar la depuración.</string>
     <string name="usb_choose_notification_title">Toca pa escoyer opciones de USB</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB y rede</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Rede</string>
     <string name="permlab_interceptPackageLaunch">"interceutar la execución d'aplicaciones"</string>
     <string name="permdesc_interceptPackageLaunch">"Permite que l'aplicación interceute la execución d'otres aplicaciones"</string>
     <string name="app_ops_access_camera">acceder a la cámara</string>
@@ -199,6 +201,14 @@
     <string name="live_display_outdoor">Esterior (lluz del sol)</string>
     <string name="live_display_outdoor_summary">Usar namái axustes del esterior</string>
     <string name="live_display_hint">LiveDisplay pue amenorgar reducir la fatiga visual y ayudar a dormir pela nueche. ¡Toca equí pa probalu!</string>
+    <string name="quick_settings_tile_flashlight_not_title">La llinterna ta prendida</string>
+    <string name="quick_settings_tile_flashlight_not_summary">"Toca p'apagar"</string>
+    <string name="fingerprint_default_name">Buelga %d</string>
+    <string name="permdesc_accessFingerprintService">"Permite a un aplicación acceder el serviciu de buelgues dixitales. L'aplicación pue amestar, desaniciar, renomar y autenticase escontra les buelgues dixitales"</string>
+    <string name="silent_mode_priority">Prioridá</string>
+    <string name="silent_mode_none">Dengún</string>
+    <string name="subscription_change_disabled_wifi_ap">"Deshabilitóse'l puntu Wi-Fi pola mor del cambéu de la soscripción de la SIM"</string>
+    <string name="notify_turn_wifi_off_title">Apagar Wi-Fi</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>
@@ -1436,7 +1446,6 @@ pa la cuenta %s"</string>
     <string name="chooser_wallpaper">Camudar fondu de pantalla</string>
     <string name="notification_listener_binding_label">Deteutor de notificaciones</string>
     <string name="condition_provider_service_binding_label">Fornidor de condiciones</string>
-    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN activada</string>
     <string name="vpn_title_long">VPN activada por %s</string>
     <string name="vpn_text">"Toca p'alministrar la rede."</string>
@@ -1756,9 +1765,6 @@ Escuchar soníos al altu la lleva mentanto llargos períodos de tiempu pue daña
     <string name="deleted_key">%1$s desaniciáu</string>
     <string name="managed_profile_label_badge">%1$s de trabayu</string>
     <string name="time_placeholder">--</string>
-    <string name="radial_numbers_typeface">sans-serif</string>
-    <string name="sans_serif">sans-serif</string>
-    <string name="day_of_week_label_typeface">sans-serif</string>
     <string name="lock_to_app_toast">Pa desactivar esta pantalla, caltén primíos al empar los botones de retrocesu y Visión xeneral.</string>
     <string name="lock_to_app_toast_accessible">"Pa desactivar esta pantalla, caltén primíu'l botón Visión xeneral."</string>
     <string name="lock_to_app_toast_locked">Fixóse la pantalla. La organización nun pue desactivala.</string>

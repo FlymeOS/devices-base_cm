@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 543
+    .line 544
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 545
+    .line 546
     new-instance v0, Landroid/hardware/SystemSensorManager;
 
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;

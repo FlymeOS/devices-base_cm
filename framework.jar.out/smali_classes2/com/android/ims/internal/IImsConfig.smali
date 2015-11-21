@@ -23,6 +23,22 @@
     .end annotation
 .end method
 
+.method public abstract getPacketCount(Lcom/android/ims/ImsConfigListener;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getPacketErrorCount(Lcom/android/ims/ImsConfigListener;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getProvisionedStringValue(I)Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -39,7 +55,23 @@
     .end annotation
 .end method
 
+.method public abstract getVideoQuality(Lcom/android/ims/ImsConfigListener;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getVolteProvisioned()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getWifiCallingPreference(Lcom/android/ims/ImsConfigListener;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -64,6 +96,22 @@
 .end method
 
 .method public abstract setProvisionedValue(II)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setVideoQuality(ILcom/android/ims/ImsConfigListener;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setWifiCallingPreference(IILcom/android/ims/ImsConfigListener;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

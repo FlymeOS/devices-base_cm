@@ -294,7 +294,7 @@
     .line 2933
     iget-object v3, p0, Landroid/widget/Editor$ActionPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
-    const v4, 0x1080707
+    const v4, 0x1080709
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
@@ -382,7 +382,7 @@
     .line 2951
     iget-object v3, p0, Landroid/widget/Editor$ActionPopupWindow;->mReplaceTextView:Landroid/widget/TextView;
 
-    const v4, 0x1040546
+    const v4, 0x104053b
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 

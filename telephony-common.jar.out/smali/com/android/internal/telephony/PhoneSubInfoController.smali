@@ -1241,7 +1241,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 233
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getCompleteVoiceMailNumberForSubscriber(I)Ljava/lang/String;
@@ -1256,7 +1255,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 349
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getGroupIdLevel1ForSubscriber(I)Ljava/lang/String;
@@ -1271,7 +1269,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 138
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getIccSerialNumberForSubscriber(I)Ljava/lang/String;
@@ -1293,7 +1290,6 @@
     .end annotation
 
     .prologue
-    .line 330
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/PhoneSubInfoController;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
@@ -1308,7 +1304,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 83
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getImeiForSubscriber(I)Ljava/lang/String;
@@ -1323,7 +1318,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 176
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getLine1AlphaTagForSubscriber(I)Ljava/lang/String;
@@ -1338,7 +1332,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 157
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getLine1NumberForSubscriber(I)Ljava/lang/String;
@@ -1353,7 +1346,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 195
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getMsisdnForSubscriber(I)Ljava/lang/String;
@@ -1368,7 +1360,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 116
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getSubscriberIdForSubscriber(I)Ljava/lang/String;
@@ -1383,7 +1374,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 252
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getVoiceMailAlphaTagForSubscriber(I)Ljava/lang/String;
@@ -1398,7 +1388,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 214
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoController;->getVoiceMailNumberForSubscriber(I)Ljava/lang/String;

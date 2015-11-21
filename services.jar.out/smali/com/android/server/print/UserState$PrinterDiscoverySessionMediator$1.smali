@@ -44,13 +44,11 @@
 # virtual methods
 .method public bridge synthetic onCallbackDied(Landroid/os/IInterface;)V
     .locals 0
-    .param p1, "x0"    # Landroid/os/IInterface;
 
     .prologue
     .line 955
     check-cast p1, Landroid/print/IPrinterDiscoveryObserver;
 
-    .end local p1    # "x0":Landroid/os/IInterface;
     invoke-virtual {p0, p1}, Lcom/android/server/print/UserState$PrinterDiscoverySessionMediator$1;->onCallbackDied(Landroid/print/IPrinterDiscoveryObserver;)V
 
     return-void

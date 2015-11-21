@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 573
+    .line 575
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,13 +39,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 579
+    .line 581
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->setRestrictBackground(Z)V
 
-    .line 580
+    .line 582
     return-void
 .end method

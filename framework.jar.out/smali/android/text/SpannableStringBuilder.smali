@@ -2930,7 +2930,6 @@
 # virtual methods
 .method public bridge synthetic append(C)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # C
 
     .prologue
     .line 33
@@ -2943,7 +2942,6 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 33
@@ -2956,9 +2954,6 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;II)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/CharSequence;
-    .param p2, "x1"    # I
-    .param p3, "x2"    # I
 
     .prologue
     .line 33
@@ -3077,7 +3072,6 @@
 
 .method public bridge synthetic append(C)Ljava/lang/Appendable;
     .locals 1
-    .param p1, "x0"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3095,7 +3089,6 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/CharSequence;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3113,9 +3106,6 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/CharSequence;
-    .param p2, "x1"    # I
-    .param p3, "x2"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3348,8 +3338,6 @@
 
 .method public bridge synthetic delete(II)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
 
     .prologue
     .line 33
@@ -4924,8 +4912,6 @@
 
 .method public bridge synthetic insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 33
@@ -4938,10 +4924,6 @@
 
 .method public bridge synthetic insert(ILjava/lang/CharSequence;II)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # Ljava/lang/CharSequence;
-    .param p3, "x2"    # I
-    .param p4, "x3"    # I
 
     .prologue
     .line 33
@@ -5257,9 +5239,6 @@
 
 .method public bridge synthetic replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 33
@@ -5272,11 +5251,6 @@
 
 .method public bridge synthetic replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Ljava/lang/CharSequence;
-    .param p4, "x3"    # I
-    .param p5, "x4"    # I
 
     .prologue
     .line 33

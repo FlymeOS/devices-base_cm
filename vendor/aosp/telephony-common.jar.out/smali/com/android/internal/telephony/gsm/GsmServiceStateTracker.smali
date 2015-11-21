@@ -4709,7 +4709,7 @@
 
     move-result-object v8
 
-    const v9, 0x1120059
+    const v9, 0x112005f
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -4792,7 +4792,7 @@
 
     .line 2025
     .local v2, "details":Ljava/lang/CharSequence;
-    const v8, 0x1040189
+    const v8, 0x104017e
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -4914,7 +4914,7 @@
     const/16 v5, 0x378
 
     .line 2035
-    const v8, 0x104018a
+    const v8, 0x104017f
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -4933,7 +4933,7 @@
 
     .line 2041
     :pswitch_3
-    const v8, 0x104018d
+    const v8, 0x1040182
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -4944,7 +4944,7 @@
 
     .line 2044
     :pswitch_4
-    const v8, 0x104018c
+    const v8, 0x1040181
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -4955,7 +4955,7 @@
 
     .line 2047
     :pswitch_5
-    const v8, 0x104018b
+    const v8, 0x1040180
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -7327,7 +7327,7 @@
 
     move-result-object v18
 
-    const v19, 0x112005e
+    const v19, 0x1120064
 
     invoke-virtual/range {v18 .. v19}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -9109,7 +9109,7 @@
 
     move-result-object v23
 
-    const v24, 0x1120058
+    const v24, 0x112005e
 
     invoke-virtual/range {v23 .. v24}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -11325,7 +11325,7 @@
     .locals 12
 
     .prologue
-    const v11, 0x1040464
+    const v11, 0x1040459
 
     const/4 v10, 0x2
 
@@ -11385,7 +11385,7 @@
 
     move-result-object v9
 
-    const v10, 0x104047c
+    const v10, 0x1040471
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

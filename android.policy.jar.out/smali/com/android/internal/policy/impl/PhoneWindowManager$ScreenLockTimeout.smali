@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 6650
+    .line 6726
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +42,10 @@
     .locals 2
 
     .prologue
-    .line 6655
+    .line 6731
     monitor-enter p0
 
-    .line 6657
+    .line 6733
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 6658
+    .line 6734
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardServiceDelegate;->doKeyguardTimeout(Landroid/os/Bundle;)V
 
-    .line 6660
+    .line 6736
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -70,18 +70,18 @@
 
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLockScreenTimerActive:Z
 
-    .line 6661
+    .line 6737
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;
 
-    .line 6662
+    .line 6738
     monitor-exit p0
 
-    .line 6663
+    .line 6739
     return-void
 
-    .line 6662
+    .line 6738
     :catchall_0
     move-exception v0
 
@@ -97,9 +97,9 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 6666
+    .line 6742
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;
 
-    .line 6667
+    .line 6743
     return-void
 .end method

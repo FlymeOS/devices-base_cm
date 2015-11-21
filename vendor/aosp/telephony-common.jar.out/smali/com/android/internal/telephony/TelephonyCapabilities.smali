@@ -53,7 +53,7 @@
     if-ne v0, v1, :cond_0
 
     .line 106
-    const v0, 0x1040172
+    const v0, 0x1040167
 
     .line 112
     :goto_0
@@ -70,7 +70,7 @@
     if-ne v0, v1, :cond_1
 
     .line 108
-    const v0, 0x1040173
+    const v0, 0x1040168
 
     goto :goto_0
 

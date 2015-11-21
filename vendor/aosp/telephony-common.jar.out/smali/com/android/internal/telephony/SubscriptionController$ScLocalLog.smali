@@ -37,27 +37,27 @@
     .param p1, "maxLines"    # I
 
     .prologue
-    .line 105
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
+    .line 107
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mLog:Ljava/util/LinkedList;
 
-    .line 107
+    .line 108
     iput p1, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mMaxLines:I
 
-    .line 108
+    .line 109
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mNow:Landroid/text/format/Time;
 
-    .line 109
+    .line 110
     return-void
 .end method
 
@@ -70,12 +70,12 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 122
+    .line 123
     monitor-enter p0
 
     const/16 v0, 0xa
 
-    .line 123
+    .line 124
     .local v0, "LOOPS_PER_FLUSH":I
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mLog:Ljava/util/LinkedList;
@@ -86,14 +86,14 @@
 
     move-result-object v3
 
-    .line 124
+    .line 125
     .local v3, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
     .local v1, "i":I
     move v2, v1
 
-    .line 125
+    .line 126
     .end local v1    # "i":I
     .local v2, "i":I
     :goto_0
@@ -103,7 +103,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 126
+    .line 127
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +142,7 @@
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 128
+    .line 129
     rem-int/lit8 v4, v1, 0xa
 
     if-nez v4, :cond_1
@@ -157,13 +157,13 @@
     .restart local v2    # "i":I
     goto :goto_0
 
-    .line 130
+    .line 131
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 122
+    .line 123
     .end local v2    # "i":I
     .end local v3    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catchall_0
@@ -188,7 +188,7 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 112
+    .line 113
     monitor-enter p0
 
     :try_start_0
@@ -196,24 +196,24 @@
 
     if-lez v2, :cond_0
 
-    .line 113
+    .line 114
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
-    .line 114
+    .line 115
     .local v0, "pid":I
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v1
 
-    .line 115
+    .line 116
     .local v1, "tid":I
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mNow:Landroid/text/format/Time;
 
     invoke-virtual {v2}, Landroid/text/format/Time;->setToNow()V
 
-    .line 116
+    .line 117
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mLog:Ljava/util/LinkedList;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -268,7 +268,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 118
     :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController$ScLocalLog;->mLog:Ljava/util/LinkedList;
 
@@ -288,7 +288,7 @@
 
     goto :goto_0
 
-    .line 112
+    .line 113
     .end local v0    # "pid":I
     .end local v1    # "tid":I
     :catchall_0
@@ -298,7 +298,7 @@
 
     throw v2
 
-    .line 119
+    .line 120
     :cond_0
     monitor-exit p0
 

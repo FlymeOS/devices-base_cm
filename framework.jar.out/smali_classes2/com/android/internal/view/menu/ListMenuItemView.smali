@@ -379,7 +379,7 @@
 
     .line 95
     :cond_0
-    const v0, 0x102031f
+    const v0, 0x1020320
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/ListMenuItemView;->findViewById(I)Landroid/view/View;
 

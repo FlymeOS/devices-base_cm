@@ -2902,7 +2902,6 @@
     .end annotation
 
     .prologue
-    .line 252
     long-to-int v1, p1
 
     move-object v0, p0
@@ -2945,7 +2944,6 @@
     .end annotation
 
     .prologue
-    .line 274
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccSmsController;->getAllMessagesFromIccEfForSubscriber(ILjava/lang/String;)Ljava/util/List;
@@ -2960,7 +2958,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 571
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/UiccSmsController;->getImsSmsFormatForSubscriber(I)Ljava/lang/String;
@@ -2976,7 +2973,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 482
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/UiccSmsController;->getPremiumSmsPermissionForSubscriber(ILjava/lang/String;)I
@@ -2994,12 +2990,10 @@
     .param p5, "receivedIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 585
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3, p4, p5}, Lcom/android/internal/telephony/UiccSmsController;->injectSmsPdu(I[BLjava/lang/String;Landroid/app/PendingIntent;)V
 
-    .line 586
     return-void
 .end method
 
@@ -3008,7 +3002,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 519
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/UiccSmsController;->isImsSmsSupportedForSubscriber(I)Z
@@ -3030,7 +3023,6 @@
     .param p9, "deliveryIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 299
     long-to-int v1, p1
 
     move-object v0, p0
@@ -3051,7 +3043,6 @@
 
     invoke-virtual/range {v0 .. v8}, Lcom/android/internal/telephony/UiccSmsController;->sendDataForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 301
     return-void
 .end method
 
@@ -3089,7 +3080,6 @@
     .end annotation
 
     .prologue
-    .line 382
     .local p6, "parts":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p7, "sentIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
     .local p8, "deliveryIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
@@ -3111,7 +3101,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/telephony/UiccSmsController;->sendMultipartTextForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
-    .line 383
     return-void
 .end method
 
@@ -3145,7 +3134,6 @@
     .end annotation
 
     .prologue
-    .line 678
     .local p6, "sentIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
     .local p7, "deliveryIntents":Ljava/util/List;, "Ljava/util/List<Landroid/app/PendingIntent;>;"
     long-to-int v1, p1
@@ -3164,7 +3152,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/UiccSmsController;->sendStoredMultipartText(ILjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
-    .line 679
     return-void
 .end method
 
@@ -3183,7 +3170,6 @@
     .end annotation
 
     .prologue
-    .line 658
     long-to-int v1, p1
 
     move-object v0, p0
@@ -3200,7 +3186,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/UiccSmsController;->sendStoredText(ILjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 659
     return-void
 .end method
 
@@ -3215,7 +3200,6 @@
     .param p8, "deliveryIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 337
     long-to-int v1, p1
 
     move-object v0, p0
@@ -3234,7 +3218,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/telephony/UiccSmsController;->sendTextForSubscriber(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 338
     return-void
 .end method
 
@@ -3245,12 +3228,10 @@
     .param p4, "permission"    # I
 
     .prologue
-    .line 500
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/UiccSmsController;->setPremiumSmsPermissionForSubscriber(ILjava/lang/String;I)V
 
-    .line 501
     return-void
 .end method
 
@@ -3268,7 +3249,6 @@
     .end annotation
 
     .prologue
-    .line 229
     long-to-int v1, p1
 
     move-object v0, p0

@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 943
+    .line 946
     iput-object p1, p0, Landroid/telecom/ConnectionService$5$1;->this$1:Landroid/telecom/ConnectionService$5;
 
     iput-object p2, p0, Landroid/telecom/ConnectionService$5$1;->val$componentNames:Ljava/util/List;
@@ -48,7 +48,7 @@
     .locals 4
 
     .prologue
-    .line 946
+    .line 949
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -69,7 +69,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 947
+    .line 950
     iget-object v1, p0, Landroid/telecom/ConnectionService$5$1;->this$1:Landroid/telecom/ConnectionService$5;
 
     iget-object v1, v1, Landroid/telecom/ConnectionService$5;->this$0:Landroid/telecom/ConnectionService;
@@ -101,12 +101,12 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/telecom/RemoteConnectionManager;->addConnectionService(Landroid/content/ComponentName;Lcom/android/internal/telecom/IConnectionService;)V
 
-    .line 946
+    .line 949
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 951
+    .line 954
     :cond_0
     iget-object v1, p0, Landroid/telecom/ConnectionService$5$1;->this$1:Landroid/telecom/ConnectionService$5;
 
@@ -115,7 +115,7 @@
     # invokes: Landroid/telecom/ConnectionService;->onAccountsInitialized()V
     invoke-static {v1}, Landroid/telecom/ConnectionService;->access$3100(Landroid/telecom/ConnectionService;)V
 
-    .line 952
+    .line 955
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,6 +142,6 @@
 
     invoke-static {p0, v1, v2}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 953
+    .line 956
     return-void
 .end method

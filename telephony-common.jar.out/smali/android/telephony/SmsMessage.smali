@@ -533,7 +533,7 @@
 
     .line 407
     .local v4, "r":Landroid/content/res/Resources;
-    const v9, 0x1120099
+    const v9, 0x11200a0
 
     invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2054,11 +2054,9 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 124
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Landroid/telephony/SmsMessage;->setSubId(I)V
 
-    .line 125
     return-void
 .end method

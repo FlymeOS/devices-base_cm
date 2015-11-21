@@ -593,7 +593,7 @@
 
     .line 259
     .local v0, "res":Landroid/content/res/Resources;
-    const v2, 0x1040478
+    const v2, 0x104046d
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -602,7 +602,7 @@
     iput-object v2, p0, Landroid/widget/MediaController;->mPlayDescription:Ljava/lang/CharSequence;
 
     .line 261
-    const v2, 0x1040477
+    const v2, 0x104046c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -611,7 +611,7 @@
     iput-object v2, p0, Landroid/widget/MediaController;->mPauseDescription:Ljava/lang/CharSequence;
 
     .line 263
-    const v2, 0x1020322
+    const v2, 0x1020323
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -640,7 +640,7 @@
 
     .line 269
     :cond_0
-    const v2, 0x1020323
+    const v2, 0x1020324
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -687,7 +687,7 @@
 
     .line 281
     :cond_1
-    const v2, 0x1020321
+    const v2, 0x1020322
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -732,7 +732,7 @@
 
     .line 294
     :cond_2
-    const v2, 0x1020324
+    const v2, 0x1020325
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -762,7 +762,7 @@
 
     .line 298
     :cond_3
-    const v2, 0x1020320
+    const v2, 0x1020321
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -792,7 +792,7 @@
 
     .line 303
     :cond_4
-    const v2, 0x1020326
+    const v2, 0x1020327
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -847,7 +847,7 @@
     iput-object v2, p0, Landroid/widget/MediaController;->mEndTime:Landroid/widget/TextView;
 
     .line 313
-    const v2, 0x1020325
+    const v2, 0x1020326
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

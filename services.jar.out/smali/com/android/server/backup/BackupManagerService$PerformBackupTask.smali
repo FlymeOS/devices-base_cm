@@ -3282,7 +3282,7 @@
     .local v6, "filepos":J
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/server/backup/BackupManagerService$PerformBackupTask;->mBackupDataName:Ljava/io/File;
+    iget-object v14, v0, Lcom/android/server/backup/BackupManagerService$PerformBackupTask;->mBackupData:Landroid/os/ParcelFileDescriptor;
 
     if-nez v14, :cond_1
 

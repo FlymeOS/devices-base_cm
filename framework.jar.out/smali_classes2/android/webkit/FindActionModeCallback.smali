@@ -116,7 +116,7 @@
     .line 62
     iget-object v0, p0, Landroid/webkit/FindActionModeCallback;->mCustomView:Landroid/view/View;
 
-    const v1, 0x10203d6
+    const v1, 0x10203d7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
     .line 179
     iget-object v0, p0, Landroid/webkit/FindActionModeCallback;->mMatches:Landroid/widget/TextView;
 
-    const v1, 0x1040644
+    const v1, 0x1040639
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -508,7 +508,7 @@
 
     .line 240
     :pswitch_data_0
-    .packed-switch 0x10203e9
+    .packed-switch 0x10203ea
         :pswitch_0
         :pswitch_1
     .end packed-switch

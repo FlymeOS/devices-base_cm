@@ -112,17 +112,13 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 349
     check-cast p1, Landroid/content/pm/PackageItemInfo;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Landroid/content/pm/PackageItemInfo;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageItemInfo$DisplayNameComparator;->compare(Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageItemInfo;)I
 
     move-result v0

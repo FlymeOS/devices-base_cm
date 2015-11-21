@@ -30,19 +30,19 @@
     .param p3, "replacement"    # Ljava/lang/String;
 
     .prologue
-    .line 178
+    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 179
+    .line 180
     iput p1, p0, Landroid/telephony/PhoneNumberUtils$RewriteRule;->countryCodePrefix:I
 
-    .line 180
+    .line 181
     iput-object p2, p0, Landroid/telephony/PhoneNumberUtils$RewriteRule;->isoCountryCode:Ljava/lang/String;
 
-    .line 181
+    .line 182
     iput-object p3, p0, Landroid/telephony/PhoneNumberUtils$RewriteRule;->replacement:Ljava/lang/String;
 
-    .line 182
+    .line 183
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .param p1, "dialStr"    # Ljava/lang/String;
 
     .prologue
-    .line 185
+    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

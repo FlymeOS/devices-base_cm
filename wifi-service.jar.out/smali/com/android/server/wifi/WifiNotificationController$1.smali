@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 118
     iput-object p1, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 109
+    .line 121
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +52,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 110
+    .line 122
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     const-string v1, "wifi_state"
@@ -66,18 +66,18 @@
     # setter for: Lcom/android/server/wifi/WifiNotificationController;->mWifiState:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiNotificationController;->access$002(Lcom/android/server/wifi/WifiNotificationController;I)I
 
-    .line 112
+    .line 124
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     # invokes: Lcom/android/server/wifi/WifiNotificationController;->resetNotification()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiNotificationController;->access$100(Lcom/android/server/wifi/WifiNotificationController;)V
 
-    .line 130
+    .line 142
     :cond_0
     :goto_0
     return-void
 
-    .line 113
+    .line 125
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 115
+    .line 127
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     const-string v0, "networkInfo"
@@ -105,8 +105,8 @@
     # setter for: Lcom/android/server/wifi/WifiNotificationController;->mNetworkInfo:Landroid/net/NetworkInfo;
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiNotificationController;->access$202(Lcom/android/server/wifi/WifiNotificationController;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
-    .line 118
-    sget-object v0, Lcom/android/server/wifi/WifiNotificationController$2;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
+    .line 130
+    sget-object v0, Lcom/android/server/wifi/WifiNotificationController$3;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 122
+    .line 134
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
@@ -138,7 +138,7 @@
 
     goto :goto_0
 
-    .line 125
+    .line 137
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -152,7 +152,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 127
+    .line 139
     iget-object v0, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiNotificationController$1;->this$0:Lcom/android/server/wifi/WifiNotificationController;
@@ -178,7 +178,7 @@
 
     goto :goto_0
 
-    .line 118
+    .line 130
     nop
 
     :pswitch_data_0

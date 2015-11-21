@@ -110,7 +110,18 @@
     return-void
 .end method
 
-.method static synthetic access$200(Landroid/bluetooth/le/BluetoothLeAdvertiser;Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/AdvertiseSettings;)V
+.method static synthetic access$200(Landroid/bluetooth/le/BluetoothLeAdvertiser;)Landroid/bluetooth/BluetoothAdapter;
+    .locals 1
+    .param p0, "x0"    # Landroid/bluetooth/le/BluetoothLeAdvertiser;
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Landroid/bluetooth/le/BluetoothLeAdvertiser;Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/AdvertiseSettings;)V
     .locals 0
     .param p0, "x0"    # Landroid/bluetooth/le/BluetoothLeAdvertiser;
     .param p1, "x1"    # Landroid/bluetooth/le/AdvertiseCallback;

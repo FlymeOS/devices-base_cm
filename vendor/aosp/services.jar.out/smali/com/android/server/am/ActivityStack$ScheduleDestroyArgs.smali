@@ -27,15 +27,15 @@
     .param p2, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 250
+    .line 251
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 251
+    .line 252
     iput-object p1, p0, Lcom/android/server/am/ActivityStack$ScheduleDestroyArgs;->mOwner:Lcom/android/server/am/ProcessRecord;
 
-    .line 252
+    .line 253
     iput-object p2, p0, Lcom/android/server/am/ActivityStack$ScheduleDestroyArgs;->mReason:Ljava/lang/String;
 
-    .line 253
+    .line 254
     return-void
 .end method

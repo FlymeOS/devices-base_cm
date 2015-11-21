@@ -92,22 +92,15 @@
 
 .method protected bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Z
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Ljava/lang/Object;
-    .param p4, "x3"    # Ljava/lang/Object;
 
     .prologue
     .line 53
     check-cast p2, Ljava/lang/Integer;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     check-cast p3, Landroid/net/wifi/p2p/WifiP2pGroup;
 
-    .end local p3    # "x2":Ljava/lang/Object;
     check-cast p4, Landroid/net/wifi/p2p/WifiP2pGroup;
 
-    .end local p4    # "x3":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/net/wifi/p2p/WifiP2pGroupList$1;->entryRemoved(ZLjava/lang/Integer;Landroid/net/wifi/p2p/WifiP2pGroup;Landroid/net/wifi/p2p/WifiP2pGroup;)V
 
     return-void

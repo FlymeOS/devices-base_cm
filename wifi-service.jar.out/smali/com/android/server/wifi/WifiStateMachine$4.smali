@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1027
+    .line 1032
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,12 +47,12 @@
 
     const/4 v11, -0x1
 
-    .line 1030
+    .line 1035
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1032
+    .line 1037
     .local v0, "action":Ljava/lang/String;
     const-string v10, "android.intent.action.SCREEN_ON"
 
@@ -62,17 +62,17 @@
 
     if-eqz v10, :cond_1
 
-    .line 1033
+    .line 1038
     iget-object v9, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v9, v12, v8}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
-    .line 1053
+    .line 1058
     :cond_0
     :goto_0
     return-void
 
-    .line 1034
+    .line 1039
     :cond_1
     const-string v10, "android.intent.action.SCREEN_OFF"
 
@@ -82,14 +82,14 @@
 
     if-eqz v10, :cond_2
 
-    .line 1035
+    .line 1040
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v8, v12, v9}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
     goto :goto_0
 
-    .line 1036
+    .line 1041
     :cond_2
     const-string v10, "com.android.server.WifiManager.action.REFRESH_BATCHED_SCAN"
 
@@ -99,7 +99,7 @@
 
     if-eqz v10, :cond_3
 
-    .line 1037
+    .line 1042
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->startNextBatchedScanAsync()V
@@ -107,7 +107,7 @@
 
     goto :goto_0
 
-    .line 1038
+    .line 1043
     :cond_3
     const-string v10, "com.quicinc.cne.CNE_PREFERENCE_CHANGED"
 
@@ -117,14 +117,14 @@
 
     if-eqz v10, :cond_4
 
-    .line 1039
+    .line 1044
     const-string v8, "cneFeatureId"
 
     invoke-virtual {p2, v8, v11}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1040
+    .line 1045
     .local v3, "featureId":I
     const-string v8, "cneFeatureParameter"
 
@@ -132,7 +132,7 @@
 
     move-result v4
 
-    .line 1041
+    .line 1046
     .local v4, "featureParam":I
     const-string v8, "cneParameterValue"
 
@@ -140,7 +140,7 @@
 
     move-result v5
 
-    .line 1042
+    .line 1047
     .local v5, "featureVal":I
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -149,7 +149,7 @@
 
     goto :goto_0
 
-    .line 1043
+    .line 1048
     .end local v3    # "featureId":I
     .end local v4    # "featureParam":I
     .end local v5    # "featureVal":I
@@ -162,14 +162,14 @@
 
     if-eqz v10, :cond_5
 
-    .line 1044
+    .line 1049
     const-string v8, "state"
 
     invoke-virtual {p2, v8, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 1045
+    .line 1050
     .local v7, "state":I
     iget-object v8, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -178,7 +178,7 @@
 
     goto :goto_0
 
-    .line 1046
+    .line 1051
     .end local v7    # "state":I
     :cond_5
     const-string v10, "blacklist_bad_bssid"
@@ -189,14 +189,14 @@
 
     if-eqz v10, :cond_0
 
-    .line 1048
+    .line 1053
     const-string v10, "blacklistBSSID"
 
     invoke-virtual {p2, v10, v11}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 1049
+    .line 1054
     .local v1, "blacklist":I
     const-string v10, "BSSIDToBlacklist"
 
@@ -204,7 +204,7 @@
 
     move-result-object v2
 
-    .line 1050
+    .line 1055
     .local v2, "bssid":Ljava/lang/String;
     const-string v10, "blacklistReason"
 
@@ -212,7 +212,7 @@
 
     move-result v6
 
-    .line 1051
+    .line 1056
     .local v6, "reason":I
     iget-object v10, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 

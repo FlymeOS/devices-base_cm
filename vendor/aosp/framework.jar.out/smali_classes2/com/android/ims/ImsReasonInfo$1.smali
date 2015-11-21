@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 368
+    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 371
+    .line 381
     new-instance v0, Lcom/android/ims/ImsReasonInfo;
 
     invoke-direct {v0, p1}, Lcom/android/ims/ImsReasonInfo;-><init>(Landroid/os/Parcel;)V
@@ -55,10 +55,9 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 368
+    .line 378
     invoke-virtual {p0, p1}, Lcom/android/ims/ImsReasonInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/ims/ImsReasonInfo;
 
     move-result-object v0
@@ -71,7 +70,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 376
+    .line 386
     new-array v0, p1, [Lcom/android/ims/ImsReasonInfo;
 
     return-object v0
@@ -79,10 +78,9 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
-    .line 368
+    .line 378
     invoke-virtual {p0, p1}, Lcom/android/ims/ImsReasonInfo$1;->newArray(I)[Lcom/android/ims/ImsReasonInfo;
 
     move-result-object v0

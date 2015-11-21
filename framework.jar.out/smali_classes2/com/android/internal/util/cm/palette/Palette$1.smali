@@ -69,13 +69,11 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 176
     check-cast p1, [Landroid/graphics/Bitmap;
 
-    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/internal/util/cm/palette/Palette$1;->doInBackground([Landroid/graphics/Bitmap;)Lcom/android/internal/util/cm/palette/Palette;
 
     move-result-object v0
@@ -99,13 +97,11 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 176
     check-cast p1, Lcom/android/internal/util/cm/palette/Palette;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/android/internal/util/cm/palette/Palette$1;->onPostExecute(Lcom/android/internal/util/cm/palette/Palette;)V
 
     return-void

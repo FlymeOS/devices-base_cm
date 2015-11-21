@@ -2036,7 +2036,7 @@
 
     iget-object v3, p0, Lcom/android/server/ThemeService;->mContext:Landroid/content/Context;
 
-    const v4, 0x1040099
+    const v4, 0x104008f
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2048,7 +2048,7 @@
 
     iget-object v3, p0, Lcom/android/server/ThemeService;->mContext:Landroid/content/Context;
 
-    const v4, 0x104009a
+    const v4, 0x1040090
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

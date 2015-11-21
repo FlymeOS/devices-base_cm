@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 403
+    .line 402
     invoke-direct {p0}, Landroid/app/ContextImpl$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -31,14 +31,14 @@
     .locals 3
 
     .prologue
-    .line 405
+    .line 404
     const-string v1, "hdmi_control"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 406
+    .line 405
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/hardware/hdmi/HdmiControlManager;
 

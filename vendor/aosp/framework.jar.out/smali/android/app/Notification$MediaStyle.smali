@@ -72,7 +72,7 @@
 
     const/4 v3, -0x1
 
-    const v1, 0x1020330
+    const v1, 0x1020331
 
     .line 4264
     iget-object v4, p1, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
@@ -185,7 +185,7 @@
     .locals 8
 
     .prologue
-    const v7, 0x1020339
+    const v7, 0x102033a
 
     .line 4306
     iget-object v4, p0, Landroid/app/Notification$MediaStyle;->mBuilder:Landroid/app/Notification$Builder;
@@ -288,7 +288,7 @@
     .locals 11
 
     .prologue
-    const v9, 0x1020339
+    const v9, 0x102033a
 
     const/4 v6, 0x0
 
@@ -509,7 +509,7 @@
     if-eqz v2, :cond_1
 
     .line 4347
-    const v2, 0x1020345
+    const v2, 0x1020346
 
     invoke-virtual {p1, v2, v1}, Landroid/widget/RemoteViews;->setTextColor(II)V
 
@@ -526,7 +526,7 @@
     invoke-virtual {p1, v2, v1}, Landroid/widget/RemoteViews;->setTextColor(II)V
 
     .line 4354
-    const v2, 0x1020349
+    const v2, 0x102034a
 
     invoke-virtual {p1, v2, v1}, Landroid/widget/RemoteViews;->setTextColor(II)V
 

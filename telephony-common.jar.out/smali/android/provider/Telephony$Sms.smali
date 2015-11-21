@@ -692,7 +692,6 @@
     .param p9, "deliveryReport"    # Z
 
     .prologue
-    .line 389
     long-to-int v0, p0
 
     move-object v1, p2
@@ -732,7 +731,6 @@
     .param p10, "threadId"    # J
 
     .prologue
-    .line 442
     long-to-int v1, p0
 
     move-object v2, p2

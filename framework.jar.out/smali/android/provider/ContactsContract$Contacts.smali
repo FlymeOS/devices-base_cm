@@ -4,11 +4,11 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/ContactsContract$ContactCounts;
-.implements Landroid/provider/ContactsContract$ContactNameColumns;
-.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
-.implements Landroid/provider/ContactsContract$ContactStatusColumns;
 .implements Landroid/provider/ContactsContract$ContactsColumns;
+.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
+.implements Landroid/provider/ContactsContract$ContactNameColumns;
+.implements Landroid/provider/ContactsContract$ContactStatusColumns;
+.implements Landroid/provider/ContactsContract$ContactCounts;
 
 
 # annotations
@@ -138,7 +138,7 @@
     .line 1589
     sget-object v0, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v1, "strequent"
+    const-string/jumbo v1, "strequent"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -515,7 +515,7 @@
     .line 2013
     .local v8, "displayPhotoUri":Landroid/net/Uri;
     :try_start_0
-    const-string v0, "r"
+    const-string/jumbo v0, "r"
 
     invoke-virtual {p0, v8, v0}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
@@ -544,7 +544,7 @@
     .line 2020
     .end local v8    # "displayPhotoUri":Landroid/net/Uri;
     :cond_1
-    const-string v0, "photo"
+    const-string/jumbo v0, "photo"
 
     invoke-static {p1, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 

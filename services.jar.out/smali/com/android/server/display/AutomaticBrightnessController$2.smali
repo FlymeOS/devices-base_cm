@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 571
+    .line 590
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$2;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 574
+    .line 593
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController$2;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     const/4 v1, 0x1
@@ -48,6 +48,6 @@
     # invokes: Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightness(Z)V
     invoke-static {v0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->access$300(Lcom/android/server/display/AutomaticBrightnessController;Z)V
 
-    .line 575
+    .line 594
     return-void
 .end method

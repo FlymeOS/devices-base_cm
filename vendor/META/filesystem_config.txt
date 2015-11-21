@@ -166,6 +166,7 @@ system/bin/clear 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/cmp 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/content 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/cp 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/curl 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/dalvikvm 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/dalvikvm32 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/date 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -887,6 +888,7 @@ system/framework/voip-common.jar 0 0 644 selabel=u:object_r:system_file:s0 capab
 system/framework/wifi-service.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/framework/wm.jar 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/content-types.properties 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/crtbegin_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/crtend_so.o 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/drm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -962,6 +964,7 @@ system/lib/libcompiler_rt.so 0 0 644 selabel=u:object_r:system_file:s0 capabilit
 system/lib/libcrypto.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libc.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libc++.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libcurl.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libcurve25519-old.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libcutils.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libdefcontainer_jni.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -989,7 +992,8 @@ system/lib/libext2_uuid.so 0 0 644 selabel=u:object_r:system_file:s0 capabilitie
 system/lib/libext4_utils.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libexternal.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libf2fs_sparseblock.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/libFFmpegExtractor.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libffmpeg_extractor.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libffmpeg_omx.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libffmpeg_utils.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libFFTEm.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libfilterfw.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1137,8 +1141,6 @@ system/lib/libstagefright_soft_aacenc.so 0 0 644 selabel=u:object_r:system_file:
 system/lib/libstagefright_soft_amrdec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libstagefright_soft_amrnbenc.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libstagefright_soft_amrwbenc.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/libstagefright_soft_ffmpegadec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/libstagefright_soft_ffmpegvdec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libstagefright_soft_flacenc.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libstagefright_soft_g711dec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libstagefright_soft_gsmdec.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1304,7 +1306,6 @@ system/media/audio/notifications/Strontium.ogg 0 0 644 selabel=u:object_r:system
 system/media/audio/notifications/Syrma.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/TaDa.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Talitha.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/media/audio/notifications/Tejat.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Tethys.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Thallium.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/notifications/Tinkerbell.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1458,6 +1459,8 @@ system/priv-app/CellBroadcastReceiver 0 0 755 selabel=u:object_r:system_file:s0 
 system/priv-app/CellBroadcastReceiver/CellBroadcastReceiver.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMAccount 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMAccount/CMAccount.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/CMSettingsProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/CMSettingsProvider/CMSettingsProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMUpdater 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMUpdater/CMUpdater.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Contacts 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0

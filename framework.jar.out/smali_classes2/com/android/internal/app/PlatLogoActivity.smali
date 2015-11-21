@@ -437,7 +437,7 @@
     .end local v2    # "highlight":Landroid/graphics/drawable/ShapeDrawable;
     .end local v4    # "platlogo":Landroid/graphics/drawable/Drawable;
     :cond_0
-    const v7, 0x1080549
+    const v7, 0x108054b
 
     goto/16 :goto_0
 .end method

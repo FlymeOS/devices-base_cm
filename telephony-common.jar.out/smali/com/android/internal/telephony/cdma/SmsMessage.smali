@@ -86,7 +86,7 @@
 
     .line 532
     .local v1, "r":Landroid/content/res/Resources;
-    const v2, 0x1120099
+    const v2, 0x11200a0
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2630,7 +2630,7 @@
     if-eqz v10, :cond_4
 
     .line 980
-    const v12, 0x112009a
+    const v12, 0x11200a1
 
     invoke-virtual {v10, v12}, Landroid/content/res/Resources;->getBoolean(I)Z
 

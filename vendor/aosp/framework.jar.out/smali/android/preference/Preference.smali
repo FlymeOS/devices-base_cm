@@ -875,13 +875,11 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 80
     check-cast p1, Landroid/preference/Preference;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/preference/Preference;->compareTo(Landroid/preference/Preference;)I
 
     move-result v0
@@ -1935,7 +1933,7 @@
 
     .line 572
     :cond_5
-    const v6, 0x1020359
+    const v6, 0x102035a
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

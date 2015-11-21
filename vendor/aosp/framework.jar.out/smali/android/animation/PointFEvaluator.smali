@@ -113,18 +113,13 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # F
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Ljava/lang/Object;
 
     .prologue
     .line 23
     check-cast p2, Landroid/graphics/PointF;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     check-cast p3, Landroid/graphics/PointF;
 
-    .end local p3    # "x2":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/animation/PointFEvaluator;->evaluate(FLandroid/graphics/PointF;Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
     move-result-object v0

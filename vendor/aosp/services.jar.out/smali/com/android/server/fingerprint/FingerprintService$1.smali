@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 72
+    .line 74
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,12 +38,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 74
+    .line 76
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 80
+    .line 82
     const-string v0, "FingerprintService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,11 +68,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 84
     :goto_0
     return-void
 
-    .line 76
+    .line 78
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 74
+    .line 76
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_0

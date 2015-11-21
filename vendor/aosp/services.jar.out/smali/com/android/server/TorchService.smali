@@ -507,7 +507,7 @@
 
     iget-object v2, p0, Lcom/android/server/TorchService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10400d9
+    const v3, 0x10400cf
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -519,7 +519,7 @@
 
     iget-object v2, p0, Lcom/android/server/TorchService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10400da
+    const v3, 0x10400d0
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1251,7 +1251,7 @@
     if-eqz p1, :cond_0
 
     .line 148
-    const v3, 0x10400d9
+    const v3, 0x10400cf
 
     invoke-direct {p0}, Lcom/android/server/TorchService;->buildNotification()Landroid/app/Notification;
 
@@ -1270,7 +1270,7 @@
 
     .line 150
     :cond_0
-    const v3, 0x10400d9
+    const v3, 0x10400cf
 
     :try_start_1
     invoke-virtual {v2, v3}, Landroid/app/NotificationManager;->cancel(I)V

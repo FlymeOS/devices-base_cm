@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 195
     new-instance v0, Landroid/net/NetworkRequest$1;
 
     invoke-direct {v0}, Landroid/net/NetworkRequest$1;-><init>()V
@@ -121,7 +121,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 188
     const/4 v0, 0x0
 
     return v0
@@ -134,12 +134,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 209
+    .line 215
     instance-of v2, p1, Landroid/net/NetworkRequest;
 
     if-nez v2, :cond_1
 
-    .line 211
+    .line 217
     :cond_0
     :goto_0
     return v1
@@ -147,10 +147,10 @@
     :cond_1
     move-object v0, p1
 
-    .line 210
+    .line 216
     check-cast v0, Landroid/net/NetworkRequest;
 
-    .line 211
+    .line 217
     .local v0, "that":Landroid/net/NetworkRequest;
     iget v2, v0, Landroid/net/NetworkRequest;->legacyType:I
 
@@ -197,7 +197,7 @@
     .locals 2
 
     .prologue
-    .line 219
+    .line 225
     iget v0, p0, Landroid/net/NetworkRequest;->requestId:I
 
     iget v1, p0, Landroid/net/NetworkRequest;->legacyType:I
@@ -223,7 +223,7 @@
     .locals 2
 
     .prologue
-    .line 204
+    .line 210
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,21 +287,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 185
+    .line 191
     iget-object v0, p0, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 186
+    .line 192
     iget v0, p0, Landroid/net/NetworkRequest;->legacyType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
+    .line 193
     iget v0, p0, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 188
+    .line 194
     return-void
 .end method

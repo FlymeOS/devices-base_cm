@@ -70,11 +70,11 @@
     .line 1313
     new-array v0, v5, [Ljava/lang/String;
 
-    const-string v1, "minutes"
+    const-string/jumbo v1, "minutes"
 
     aput-object v1, v0, v3
 
-    const-string v1, "method"
+    const-string/jumbo v1, "method"
 
     aput-object v1, v0, v4
 
@@ -128,11 +128,11 @@
 
     aput-object v1, v0, v3
 
-    const-string v1, "name"
+    const-string/jumbo v1, "name"
 
     aput-object v1, v0, v4
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     aput-object v1, v0, v5
 
@@ -234,7 +234,7 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1367
-    const-string v2, "title"
+    const-string/jumbo v2, "title"
 
     move-object/from16 v0, p1
 
@@ -262,7 +262,7 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1371
-    const-string v2, "selfAttendeeStatus"
+    const-string/jumbo v2, "selfAttendeeStatus"
 
     move-object/from16 v0, p1
 
@@ -353,14 +353,14 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1385
-    const-string v2, "rrule"
+    const-string/jumbo v2, "rrule"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1386
-    const-string v2, "rdate"
+    const-string/jumbo v2, "rdate"
 
     move-object/from16 v0, p1
 
@@ -381,28 +381,28 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1389
-    const-string v2, "original_sync_id"
+    const-string/jumbo v2, "original_sync_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1390
-    const-string v2, "original_id"
+    const-string/jumbo v2, "original_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1391
-    const-string v2, "originalInstanceTime"
+    const-string/jumbo v2, "originalInstanceTime"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1393
-    const-string v2, "originalAllDay"
+    const-string/jumbo v2, "originalAllDay"
 
     move-object/from16 v0, p1
 
@@ -458,14 +458,14 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1402
-    const-string v2, "uid2445"
+    const-string/jumbo v2, "uid2445"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1403
-    const-string v2, "organizer"
+    const-string/jumbo v2, "organizer"
 
     move-object/from16 v0, p1
 
@@ -493,7 +493,7 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1407
-    const-string v2, "mutators"
+    const-string/jumbo v2, "mutators"
 
     move-object/from16 v0, p1
 
@@ -514,70 +514,70 @@
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1410
-    const-string v2, "sync_data1"
+    const-string/jumbo v2, "sync_data1"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1411
-    const-string v2, "sync_data2"
+    const-string/jumbo v2, "sync_data2"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1412
-    const-string v2, "sync_data3"
+    const-string/jumbo v2, "sync_data3"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1413
-    const-string v2, "sync_data4"
+    const-string/jumbo v2, "sync_data4"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1414
-    const-string v2, "sync_data5"
+    const-string/jumbo v2, "sync_data5"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1415
-    const-string v2, "sync_data6"
+    const-string/jumbo v2, "sync_data6"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1416
-    const-string v2, "sync_data7"
+    const-string/jumbo v2, "sync_data7"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1417
-    const-string v2, "sync_data8"
+    const-string/jumbo v2, "sync_data8"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1418
-    const-string v2, "sync_data9"
+    const-string/jumbo v2, "sync_data9"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v9, v2}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1419
-    const-string v2, "sync_data10"
+    const-string/jumbo v2, "sync_data10"
 
     move-object/from16 v0, p1
 
@@ -712,7 +712,7 @@
 
     .line 1447
     .local v14, "reminderValues":Landroid/content/ContentValues;
-    const-string v2, "minutes"
+    const-string/jumbo v2, "minutes"
 
     const/4 v3, 0x0
 
@@ -727,7 +727,7 @@
     invoke-virtual {v14, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1448
-    const-string v2, "method"
+    const-string/jumbo v2, "method"
 
     const/4 v3, 0x1
 
@@ -1054,7 +1054,7 @@
     invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1505
-    const-string v2, "name"
+    const-string/jumbo v2, "name"
 
     const/4 v3, 0x1
 
@@ -1065,7 +1065,7 @@
     invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1507
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     const/4 v3, 0x2
 

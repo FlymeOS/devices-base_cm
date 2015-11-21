@@ -5,8 +5,8 @@
 # interfaces
 .implements Landroid/provider/BaseColumns;
 .implements Landroid/provider/CalendarContract$CalendarAlertsColumns;
-.implements Landroid/provider/CalendarContract$CalendarColumns;
 .implements Landroid/provider/CalendarContract$EventsColumns;
+.implements Landroid/provider/CalendarContract$CalendarColumns;
 
 
 # annotations
@@ -352,7 +352,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 2272
-    const-string v3, "receivedTime"
+    const-string/jumbo v3, "receivedTime"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -361,7 +361,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 2273
-    const-string v3, "notifyTime"
+    const-string/jumbo v3, "notifyTime"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -370,7 +370,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 2274
-    const-string v3, "state"
+    const-string/jumbo v3, "state"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -379,7 +379,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 2275
-    const-string v3, "minutes"
+    const-string/jumbo v3, "minutes"
 
     invoke-static/range {p9 .. p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -431,7 +431,7 @@
     .local v4, "projection":[Ljava/lang/String;
     sget-object v3, Landroid/provider/CalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v5, "state=0 AND alarmTime<? AND alarmTime>? AND end>=?"
+    const-string/jumbo v5, "state=0 AND alarmTime<? AND alarmTime>? AND end>=?"
 
     const/4 v2, 0x3
 

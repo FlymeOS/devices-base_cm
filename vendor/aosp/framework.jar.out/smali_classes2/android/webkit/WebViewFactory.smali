@@ -1005,7 +1005,7 @@
 
     .line 81
     .local v0, "initialApp":Landroid/app/Application;
-    const v2, 0x104011e
+    const v2, 0x1040113
 
     invoke-virtual {v0, v2}, Landroid/app/Application;->getString(I)Ljava/lang/String;
 
@@ -1026,7 +1026,7 @@
 
     .restart local v1    # "pkg":Ljava/lang/String;
     :cond_0
-    const v2, 0x104011d
+    const v2, 0x1040112
 
     invoke-virtual {v0, v2}, Landroid/app/Application;->getString(I)Ljava/lang/String;
 

@@ -90,6 +90,10 @@
     <integer name="config_screenBrightnessSettingMaximum">255</integer>
     <integer name="config_screenBrightnessSettingDefault">82</integer>
     <integer name="config_screenBrightnessDoze">1</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">3000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessLightSensorRate">1000</integer>
+    <integer name="config_autoBrightnessAmbientLightHorizon">10000</integer>
     <integer name="config_screenBrightnessDim">1</integer>
     <integer name="config_screenBrightnessDark">1</integer>
     <integer name="config_buttonBrightnessSettingDefault">255</integer>

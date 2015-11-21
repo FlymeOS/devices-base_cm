@@ -127,17 +127,13 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 581
     check-cast p1, Landroid/widget/AppSecurityPermissions$MyPermissionGroupInfo;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Landroid/widget/AppSecurityPermissions$MyPermissionGroupInfo;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/widget/AppSecurityPermissions$PermissionGroupInfoComparator;->compare(Landroid/widget/AppSecurityPermissions$MyPermissionGroupInfo;Landroid/widget/AppSecurityPermissions$MyPermissionGroupInfo;)I
 
     move-result v0

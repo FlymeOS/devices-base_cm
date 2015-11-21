@@ -185,7 +185,7 @@
 
     .line 1323
     :cond_0
-    const-string v0, "pre:"
+    const-string/jumbo v0, "pre:"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -237,7 +237,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "the value is not a valid encoded protocol, "
+    const-string/jumbo v2, "the value is not a valid encoded protocol, "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -297,7 +297,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "pre:"
+    const-string/jumbo v1, "pre:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -326,29 +326,35 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 1398
     const-string v0, ""
 
+    .line 1399
     .local v0, "display":Ljava/lang/CharSequence;
     packed-switch p1, :pswitch_data_0
 
-    const v3, #android:string@untitled#t
+    .line 1435
+    const v3, 0x104000f
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1437
     :cond_0
     :goto_0
     return-object v0
 
+    .line 1401
     :pswitch_0
     if-eqz p2, :cond_1
 
+    .line 1402
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const/high16 v4, #android:array@emailAddressTypes#i
+    const/high16 v4, 0x1070000
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -399,7 +405,7 @@
 
     move-result-object v3
 
-    const v4, #android:array@postalAddressTypes#t
+    const v4, 0x1070004
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 

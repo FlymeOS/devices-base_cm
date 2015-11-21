@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1453
+    .line 1516
     iput-object p1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     invoke-direct {p0}, Lcom/android/ims/ImsConnectionStateListener;-><init>()V
@@ -50,18 +50,18 @@
 
     const/4 v3, 0x1
 
-    .line 1495
+    .line 1564
     if-ne p1, v3, :cond_c
 
-    .line 1496
+    .line 1565
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2100(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2400(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v0
 
-    .line 1498
+    .line 1567
     .local v0, "tmpIsVtEnabled":Z
     aget v1, p3, v4
 
@@ -71,14 +71,14 @@
 
     if-ne v1, v6, :cond_1
 
-    .line 1502
+    .line 1571
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVolteEnabled:Z
-    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2202(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2502(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1504
+    .line 1573
     :cond_1
     aget v1, p3, v3
 
@@ -88,14 +88,14 @@
 
     if-ne v1, v7, :cond_3
 
-    .line 1508
+    .line 1577
     :cond_2
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2102(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2402(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1510
+    .line 1579
     :cond_3
     array-length v1, p3
 
@@ -113,14 +113,14 @@
 
     if-ne v1, v5, :cond_5
 
-    .line 1515
+    .line 1584
     :cond_4
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsUtEnabled:Z
-    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2302(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2602(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1517
+    .line 1586
     :cond_5
     aget v1, p2, v4
 
@@ -130,20 +130,20 @@
 
     if-ne v1, v6, :cond_7
 
-    .line 1521
+    .line 1590
     :cond_6
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVolteEnabled:Z
-    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2202(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2502(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1522
+    .line 1591
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsSrvccCompleted:Z
     invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$202(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1524
+    .line 1593
     :cond_7
     aget v1, p2, v3
 
@@ -153,20 +153,20 @@
 
     if-ne v1, v7, :cond_9
 
-    .line 1528
+    .line 1597
     :cond_8
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2102(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2402(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1529
+    .line 1598
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsSrvccCompleted:Z
     invoke-static {v1, v4}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$202(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1531
+    .line 1600
     :cond_9
     array-length v1, p2
 
@@ -184,25 +184,25 @@
 
     if-ne v1, v5, :cond_b
 
-    .line 1536
+    .line 1605
     :cond_a
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # setter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsUtEnabled:Z
-    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2302(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
+    invoke-static {v1, v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2602(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;Z)Z
 
-    .line 1539
+    .line 1608
     :cond_b
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2100(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2400(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v1
 
     if-eq v0, v1, :cond_c
 
-    .line 1540
+    .line 1609
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -210,13 +210,13 @@
     iget-object v2, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v2}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2100(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v2}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2400(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyForVideoCapabilityChanged(Z)V
 
-    .line 1544
+    .line 1613
     .end local v0    # "tmpIsVtEnabled":Z
     :cond_c
     iget-object v1, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
@@ -234,7 +234,7 @@
     iget-object v3, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVolteEnabled:Z
-    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2200(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2500(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v3
 
@@ -251,7 +251,7 @@
     iget-object v3, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsVtEnabled:Z
-    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2100(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2400(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v3
 
@@ -268,7 +268,7 @@
     iget-object v3, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     # getter for: Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mIsUtEnabled:Z
-    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2300(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
+    invoke-static {v3}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->access$2600(Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;)Z
 
     move-result v3
 
@@ -282,22 +282,22 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1546
+    .line 1615
     return-void
 .end method
 
 .method public onImsConnected()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 1456
+    .line 1519
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     const-string v1, "onImsConnected"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1457
+    .line 1520
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -306,7 +306,20 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
 
-    .line 1458
+    .line 1521
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    new-instance v1, Landroid/telephony/VoLteServiceState;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2}, Landroid/telephony/VoLteServiceState;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
+
+    .line 1523
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -315,31 +328,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setImsRegistered(Z)V
 
-    .line 1459
-    return-void
-.end method
-
-.method public onImsDisconnected()V
-    .locals 2
-
-    .prologue
-    .line 1469
-    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
-
-    const-string v1, "onImsDisconnected"
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
-
-    .line 1470
-    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
-
-    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
-
-    .line 1471
+    .line 1524
     return-void
 .end method
 
@@ -348,7 +337,7 @@
     .param p1, "imsReasonInfo"    # Lcom/android/ims/ImsReasonInfo;
 
     .prologue
-    .line 1463
+    .line 1528
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -371,7 +360,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1464
+    .line 1529
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -380,31 +369,20 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
 
-    .line 1465
-    return-void
-.end method
-
-.method public onImsProgressing()V
-    .locals 2
-
-    .prologue
-    .line 1475
-    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
-
-    const-string v1, "onImsProgressing"
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
-
-    .line 1476
+    .line 1530
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
 
-    const/4 v1, 0x1
+    new-instance v1, Landroid/telephony/VoLteServiceState;
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
+    const/4 v2, 0x5
 
-    .line 1477
+    invoke-direct {v1, v2}, Landroid/telephony/VoLteServiceState;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
+
+    .line 1532
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -413,46 +391,22 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setImsRegistered(Z)V
 
-    .line 1478
+    .line 1533
     return-void
 .end method
 
-.method public onImsResumed()V
-    .locals 2
+.method public onImsProgressing()V
+    .locals 3
 
     .prologue
-    .line 1482
+    .line 1537
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
-    const-string v1, "onImsResumed"
+    const-string v1, "onImsProgressing"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1483
-    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
-
-    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
-
-    .line 1484
-    return-void
-.end method
-
-.method public onImsSuspended()V
-    .locals 2
-
-    .prologue
-    .line 1488
-    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
-
-    const-string v1, "onImsSuspended"
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
-
-    .line 1489
+    .line 1538
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -461,7 +415,103 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
 
-    .line 1490
+    .line 1539
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    new-instance v1, Landroid/telephony/VoLteServiceState;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2}, Landroid/telephony/VoLteServiceState;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
+
+    .line 1541
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setImsRegistered(Z)V
+
+    .line 1542
+    return-void
+.end method
+
+.method public onImsResumed()V
+    .locals 3
+
+    .prologue
+    .line 1546
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    const-string v1, "onImsResumed"
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
+
+    .line 1547
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
+
+    .line 1548
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    new-instance v1, Landroid/telephony/VoLteServiceState;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2}, Landroid/telephony/VoLteServiceState;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
+
+    .line 1551
+    return-void
+.end method
+
+.method public onImsSuspended()V
+    .locals 3
+
+    .prologue
+    .line 1555
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    const-string v1, "onImsSuspended"
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
+
+    .line 1556
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->setServiceState(I)V
+
+    .line 1557
+    iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
+
+    new-instance v1, Landroid/telephony/VoLteServiceState;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2}, Landroid/telephony/VoLteServiceState;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhone;->notifyVoLteServiceStateChanged(Landroid/telephony/VoLteServiceState;)V
+
+    .line 1559
     return-void
 .end method
 
@@ -470,7 +520,7 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 1550
+    .line 1619
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -493,7 +543,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->log(Ljava/lang/String;)V
 
-    .line 1551
+    .line 1620
     iget-object v0, p0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker$5;->this$0:Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;
 
     iget-object v0, v0, Lcom/android/internal/telephony/imsphone/ImsPhoneCallTracker;->mPhone:Lcom/android/internal/telephony/imsphone/ImsPhone;
@@ -502,6 +552,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneBase;->setVoiceMessageCount(I)V
 
-    .line 1552
+    .line 1621
     return-void
 .end method

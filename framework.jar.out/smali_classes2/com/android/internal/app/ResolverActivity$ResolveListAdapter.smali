@@ -1462,7 +1462,6 @@
 
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
     .line 792

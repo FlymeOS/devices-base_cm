@@ -90,7 +90,7 @@
     .line 440
     sget-object v0, Landroid/provider/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "previews"
+    const-string/jumbo v1, "previews"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -127,79 +127,79 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "statusbar_background"
+    const-string/jumbo v2, "statusbar_background"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string v2, "statusbar_bluetooth_icon"
+    const-string/jumbo v2, "statusbar_bluetooth_icon"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string v2, "statusbar_wifi_icon"
+    const-string/jumbo v2, "statusbar_wifi_icon"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x3
 
-    const-string v2, "statusbar_signal_icon"
+    const-string/jumbo v2, "statusbar_signal_icon"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    const-string v2, "statusbar_battery_portrait"
+    const-string/jumbo v2, "statusbar_battery_portrait"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "statusbar_battery_landscape"
+    const-string/jumbo v2, "statusbar_battery_landscape"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "statusbar_battery_circle"
+    const-string/jumbo v2, "statusbar_battery_circle"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string v2, "statusbar_clock_text_color"
+    const-string/jumbo v2, "statusbar_clock_text_color"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string v2, "wifi_combo_margin_end"
+    const-string/jumbo v2, "wifi_combo_margin_end"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string v2, "navbar_background"
+    const-string/jumbo v2, "navbar_background"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string v2, "navbar_back_button"
+    const-string/jumbo v2, "navbar_back_button"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    const-string v2, "navbar_home_button"
+    const-string/jumbo v2, "navbar_home_button"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string v2, "navbar_recent_button"
+    const-string/jumbo v2, "navbar_recent_button"
 
     aput-object v2, v0, v1
 
@@ -223,19 +223,19 @@
 
     const/16 v1, 0x10
 
-    const-string v2, "wallpaper_full"
+    const-string/jumbo v2, "wallpaper_full"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    const-string v2, "wallpaper_preview"
+    const-string/jumbo v2, "wallpaper_preview"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    const-string v2, "wallpaper_thumbnail"
+    const-string/jumbo v2, "wallpaper_thumbnail"
 
     aput-object v2, v0, v1
 
@@ -253,13 +253,13 @@
 
     const/16 v1, 0x15
 
-    const-string v2, "style_preview"
+    const-string/jumbo v2, "style_preview"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x16
 
-    const-string v2, "style_thumbnail"
+    const-string/jumbo v2, "style_thumbnail"
 
     aput-object v2, v0, v1
 

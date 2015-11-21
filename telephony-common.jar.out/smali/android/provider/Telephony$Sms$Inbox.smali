@@ -138,7 +138,6 @@
     .param p7, "read"    # Z
 
     .prologue
-    .line 611
     long-to-int v0, p0
 
     move-object v1, p2

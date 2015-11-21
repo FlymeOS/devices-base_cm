@@ -99,9 +99,9 @@
 
     move-result-object v1
 
-    const-string v3, "selected=1"
+    const-string/jumbo v3, "selected=1"
 
-    const-string v5, "startDay"
+    const-string/jumbo v5, "startDay"
 
     move-object v0, p0
 

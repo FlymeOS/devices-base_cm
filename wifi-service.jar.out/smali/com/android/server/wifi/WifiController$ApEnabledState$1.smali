@@ -17,6 +17,8 @@
 # instance fields
 .field firstChange:Z
 
+.field lastSub:Landroid/telephony/SubscriptionInfo;
+
 .field final synthetic this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
 
@@ -25,12 +27,12 @@
     .locals 1
 
     .prologue
-    .line 614
+    .line 615
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
     invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
 
-    .line 615
+    .line 616
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->firstChange:Z
@@ -41,66 +43,113 @@
 
 # virtual methods
 .method public onSubscriptionsChanged()V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 618
-    iget-boolean v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->firstChange:Z
-
-    if-eqz v0, :cond_0
+    const/4 v4, 0x0
 
     .line 620
-    iput-boolean v3, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->firstChange:Z
+    iget-object v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
-    .line 628
+    iget-object v1, v1, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
+
+    # getter for: Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/wifi/WifiController;->access$3700(Lcom/android/server/wifi/WifiController;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionInfo()Landroid/telephony/SubscriptionInfo;
+
+    move-result-object v0
+
+    .line 622
+    .local v0, "currentSub":Landroid/telephony/SubscriptionInfo;
+    iget-boolean v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->firstChange:Z
+
+    if-eqz v1, :cond_1
+
+    .line 623
+    iput-object v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->lastSub:Landroid/telephony/SubscriptionInfo;
+
+    .line 625
+    iput-boolean v4, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->firstChange:Z
+
+    .line 643
+    :cond_0
     :goto_0
     return-void
 
-    .line 623
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
+    .line 628
+    :cond_1
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
+    .line 632
+    iget-object v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->lastSub:Landroid/telephony/SubscriptionInfo;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->lastSub:Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v2
+
+    if-eq v1, v2, :cond_0
+
+    .line 637
+    :cond_2
+    iput-object v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->lastSub:Landroid/telephony/SubscriptionInfo;
+
+    .line 638
+    iget-object v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
+
+    iget-object v1, v1, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # getter for: Lcom/android/server/wifi/WifiController;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$3700(Lcom/android/server/wifi/WifiController;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/wifi/WifiController;->access$3700(Lcom/android/server/wifi/WifiController;)Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    const v1, 0x10400df
+    const v2, 0x10400d9
 
-    invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v1, v2, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 626
-    iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
+    .line 641
+    iget-object v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
-    iget-object v0, v0, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
+    iget-object v1, v1, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
-    const-string v1, "disabling Wifi AP due to Subscription change"
+    const-string v2, "disabling Wifi AP due to Subscription change"
 
     # invokes: Lcom/android/server/wifi/WifiController;->log(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/android/server/wifi/WifiController;->access$3800(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/server/wifi/WifiController;->access$3800(Lcom/android/server/wifi/WifiController;Ljava/lang/String;)V
 
-    .line 627
-    iget-object v0, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
+    .line 642
+    iget-object v1, p0, Lcom/android/server/wifi/WifiController$ApEnabledState$1;->this$1:Lcom/android/server/wifi/WifiController$ApEnabledState;
 
-    iget-object v0, v0, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
+    iget-object v1, v1, Lcom/android/server/wifi/WifiController$ApEnabledState;->this$0:Lcom/android/server/wifi/WifiController;
 
-    const v1, 0x2600a
+    const v2, 0x2600a
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v3, v3, v2}, Lcom/android/server/wifi/WifiController;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v1, v2, v4, v4, v3}, Lcom/android/server/wifi/WifiController;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 .end method

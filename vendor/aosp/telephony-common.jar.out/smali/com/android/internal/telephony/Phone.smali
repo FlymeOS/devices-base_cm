@@ -183,6 +183,8 @@
 
 .field public static final REASON_SIM_LOADED:Ljava/lang/String; = "simLoaded"
 
+.field public static final REASON_SIM_NOT_READY:Ljava/lang/String; = "simNotReady"
+
 .field public static final REASON_SINGLE_PDN_ARBITRATION:Ljava/lang/String; = "SinglePdnArbitration"
 
 .field public static final REASON_VOICE_CALL_ENDED:Ljava/lang/String; = "2GVoiceCallEnded"
@@ -203,7 +205,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 142
     sget v0, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
     sput v0, Lcom/android/internal/telephony/Phone;->PREFERRED_NT_MODE:I
@@ -228,6 +230,14 @@
 .end method
 
 .method public abstract addParticipant(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/android/internal/telephony/CallStateException;
+        }
+    .end annotation
+.end method
+
+.method public abstract addParticipant(Ljava/lang/String;Landroid/os/Message;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/android/internal/telephony/CallStateException;
@@ -332,6 +342,9 @@
 .end method
 
 .method public abstract getBackgroundCall()Lcom/android/internal/telephony/Call;
+.end method
+
+.method public abstract getBaseServiceState()Landroid/telephony/ServiceState;
 .end method
 
 .method public abstract getCallBarringOption(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V

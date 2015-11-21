@@ -24,21 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Este vídeo no se puede transmitir al dispositivo.</string>
     <string name="selectTextMode">Seleccionar texto</string>
     <string name="status_bar_notification_info_overflow">> 999</string>
-    <string name="profileNameDefault">Predeterminado</string>
-    <string name="profileNameWork">Trabajo</string>
-    <string name="profileNameHome">Casa</string>
-    <string name="profileNameSilent">Silencio</string>
-    <string name="profileNameNight">Noche</string>
-    <string name="profileNameAutomobile">Coche</string>
-    <string name="profileGroupPhone">Teléfono</string>
-    <string name="profileGroupCalendar">Calendario</string>
-    <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Correo electrónico</string>
-    <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Otro</string>
-    <string name="profile_none">Ninguno</string>
     <string name="profile_picker_title">Perfiles</string>
     <string name="global_action_choose_profile">Perfil</string>
+    <string name="profile_none">Ninguno</string>
     <string name="global_action_screenshot">Capturar pantalla</string>
     <string name="permlab_receiveProtectedSms">recibir SMS protegidos</string>
     <string name="permdesc_receiveProtectedSms">Permite que la aplicación reciba mensajes SMS entrantes protegidos.</string>
@@ -60,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Permite que la aplicación cambie el estado de privacidad de otra. Cuando una aplicación se ejecuta con la privacidad habilitada, no podrá acceder a los datos personales, tales como contactos, mensajes o registros de llamadas.</string>
     <string name="privacy_guard_notification">Privacidad activada</string>
     <string name="privacy_guard_notification_detail">%1$s no podrá acceder a los datos personales</string>
-    <string name="permlab_useHardwareFramework">usar marco de hardware</string>
-    <string name="permdesc_useHardwareFramework">Permite que la aplicación acceda al marco de hardware de CM.</string>
     <string name="permlab_setKeyguardWallpaper">establecer fondo de pantalla de bloqueo</string>
     <string name="permdesc_setKeyguardWallpaper">Permite que la aplicación establezca el fondo de pantalla de bloqueo.</string>
     <string name="privacy_guard_dialog_title">Privacidad</string>
@@ -81,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB sobre USB y red activado</string>
     <string name="adb_active_generic_notification_message">Toca para desactivar la depuración.</string>
     <string name="usb_choose_notification_title">Toca para elegir opciones de USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB y red</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Red</string>
     <string name="permlab_interceptPackageLaunch">interceptar la ejecución de aplicaciones</string>
     <string name="permdesc_interceptPackageLaunch">Permite que la aplicación intercepte la ejecución de otras aplicaciones</string>
     <string name="app_ops_access_camera">acceder a la cámara</string>
@@ -219,6 +209,12 @@
     <string name="fingerprint_default_name">Huella digital %d</string>
     <string name="permlab_accessFingerprintService">acceder al servicio de huella digital</string>
     <string name="permdesc_accessFingerprintService">Permite a una aplicación acceder al servicio de huella digital. La aplicación puede agregar, eliminar, renombrar y autenticar contra las huellas digitales</string>
+    <string name="permlab_resetBatteryStats">restablecer estadísticas de batería</string>
+    <string name="permdesc_resetBatteryStats">Permite que la aplicación restablezca los datos actuales de uso de la batería.</string>
+    <string name="silent_mode_priority">Prioridad</string>
+    <string name="silent_mode_none">Ninguno</string>
+    <string name="subscription_change_disabled_wifi_ap">Zona Wi-Fi deshabilitado debido a un cambio de suscripción en la SIM</string>
+    <string name="notify_turn_wifi_off_title">Desactivar Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e de %B de %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1795,12 +1791,6 @@ La función de ahorro de energía se desactiva automáticamente cuando el dispos
     <string name="stk_cc_ss_to_ss">La solicitud SS se ha modificado para la nueva solicitud SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">...</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB y red</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Red</string>
-    <string name="permlab_resetBatteryStats">restablecer estadísticas de batería</string>
-    <string name="permdesc_resetBatteryStats">Permite que la aplicación restablezca los datos actuales de uso de la batería.</string>
-    <string name="silent_mode_priority">Prioridad</string>
-    <string name="silent_mode_none">Ninguno</string>
+    <string name="permlab_thirdPartyKeyguard">pantalla de bloqueo con aplicación de terceros</string>
+    <string name="permdesc_thirdPartyKeyguard">Permite a una aplicación ser utilizada como pantalla de bloqueo insegura.</string>
 </resources>

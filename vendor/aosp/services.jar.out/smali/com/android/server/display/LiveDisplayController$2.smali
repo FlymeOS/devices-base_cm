@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 270
+    .line 279
     iput-object p1, p0, Lcom/android/server/display/LiveDisplayController$2;->this$0:Lcom/android/server/display/LiveDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 273
+    .line 282
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController$2;->this$0:Lcom/android/server/display/LiveDisplayController;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -57,6 +57,6 @@
     # invokes: Lcom/android/server/display/LiveDisplayController;->setDisplayTemperature(I)V
     invoke-static {v1, v0}, Lcom/android/server/display/LiveDisplayController;->access$500(Lcom/android/server/display/LiveDisplayController;I)V
 
-    .line 274
+    .line 283
     return-void
 .end method

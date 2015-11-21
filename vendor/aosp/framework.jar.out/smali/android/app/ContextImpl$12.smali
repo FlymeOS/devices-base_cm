@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 415
+    .line 414
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,14 +32,14 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 417
+    .line 416
     const-string v1, "connectivity"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 418
+    .line 417
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/net/ConnectivityManager;
 

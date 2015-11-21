@@ -57,7 +57,7 @@
 
     iget-object v1, p0, Landroid/provider/SearchIndexablesProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "settings/indexables_xml_res"
+    const-string/jumbo v2, "settings/indexables_xml_res"
 
     const/4 v3, 0x1
 
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Landroid/provider/SearchIndexablesProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "settings/indexables_raw"
+    const-string/jumbo v2, "settings/indexables_raw"
 
     const/4 v3, 0x2
 
@@ -79,7 +79,7 @@
 
     iget-object v1, p0, Landroid/provider/SearchIndexablesProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "settings/non_indexables_key"
+    const-string/jumbo v2, "settings/non_indexables_key"
 
     const/4 v3, 0x3
 
@@ -199,22 +199,27 @@
 
     throw v0
 
+    .line 155
     :pswitch_0
-    const-string v0, "vnd.android.cursor.dir/indexables_xml_res"
+    const-string/jumbo v0, "vnd.android.cursor.dir/indexables_xml_res"
 
+    .line 159
     :goto_0
     return-object v0
 
+    .line 157
     :pswitch_1
-    const-string v0, "vnd.android.cursor.dir/indexables_raw"
+    const-string/jumbo v0, "vnd.android.cursor.dir/indexables_raw"
 
     goto :goto_0
 
+    .line 159
     :pswitch_2
-    const-string v0, "vnd.android.cursor.dir/non_indexables_key"
+    const-string/jumbo v0, "vnd.android.cursor.dir/non_indexables_key"
 
     goto :goto_0
 
+    .line 153
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

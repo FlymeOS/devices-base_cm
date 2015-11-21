@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 362
+    .line 364
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 365
+    .line 367
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 366
+    .line 368
     :try_start_0
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -56,26 +56,26 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 367
+    .line 369
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iput-boolean p1, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mRestrictPower:Z
 
-    .line 368
+    .line 370
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForGlobalChangeLocked(Z)V
 
-    .line 370
+    .line 372
     :cond_0
     monitor-exit v1
 
-    .line 371
+    .line 373
     return-void
 
-    .line 370
+    .line 372
     :catchall_0
     move-exception v0
 

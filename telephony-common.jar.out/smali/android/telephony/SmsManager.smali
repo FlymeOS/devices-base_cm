@@ -3143,7 +3143,6 @@
     .locals 2
 
     .prologue
-    .line 1217
     invoke-static {}, Landroid/telephony/SmsManager;->getDefaultSmsSubscriptionId()I
 
     move-result v0
@@ -3158,7 +3157,6 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 715
     long-to-int v0, p0
 
     invoke-static {v0}, Landroid/telephony/SmsManager;->getSmsManagerForSubscriptionId(I)Landroid/telephony/SmsManager;
@@ -3173,7 +3171,6 @@
     .param p1, "messageIdentifier"    # I
 
     .prologue
-    .line 988
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/telephony/SmsManager;->disableCellBroadcast(II)Z
@@ -3189,7 +3186,6 @@
     .param p2, "endMessageId"    # I
 
     .prologue
-    .line 1082
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/telephony/SmsManager;->disableCellBroadcastRange(III)Z
@@ -3204,7 +3200,6 @@
     .param p1, "messageIdentifier"    # I
 
     .prologue
-    .line 947
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/telephony/SmsManager;->enableCellBroadcast(II)Z
@@ -3220,7 +3215,6 @@
     .param p2, "endMessageId"    # I
 
     .prologue
-    .line 1035
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/telephony/SmsManager;->enableCellBroadcastRange(III)Z
@@ -3234,7 +3228,6 @@
     .locals 2
 
     .prologue
-    .line 769
     invoke-virtual {p0}, Landroid/telephony/SmsManager;->getSubscriptionId()I
 
     move-result v0
@@ -3250,10 +3243,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1243
     const/4 v1, 0x0
 
-    .line 1245
     .local v1, "iccISms":Lcom/android/internal/telephony/ISms;
     :try_start_0
     const-string v3, "isms"
@@ -3266,7 +3257,6 @@
 
     move-result-object v1
 
-    .line 1246
     invoke-interface {v1}, Lcom/android/internal/telephony/ISms;->isSMSPromptEnabled()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -3274,24 +3264,19 @@
 
     move-result v2
 
-    .line 1250
     :goto_0
     return v2
 
-    .line 1247
     :catch_0
     move-exception v0
 
-    .line 1248
     .local v0, "ex":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 1249
     .end local v0    # "ex":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 1250
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_0
 .end method

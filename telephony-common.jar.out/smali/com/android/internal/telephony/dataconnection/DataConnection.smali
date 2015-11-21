@@ -1714,7 +1714,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e007d
+    const v2, 0x10e0081
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2893,7 +2893,7 @@
     .line 981
     .end local v6    # "type":Ljava/lang/String;
     :cond_4
-    invoke-static {v4}, Landroid/net/ConnectivityManager;->maybeMarkCapabilitiesRestricted(Landroid/net/NetworkCapabilities;)V
+    invoke-virtual {v4}, Landroid/net/NetworkCapabilities;->maybeMarkCapabilitiesRestricted()V
 
     .line 983
     .end local v0    # "arr$":[Ljava/lang/String;

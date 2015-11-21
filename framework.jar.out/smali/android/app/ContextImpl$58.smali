@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 731
+    .line 732
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 733
+    .line 734
     new-instance v0, Landroid/net/NetworkScoreManager;
 
     invoke-direct {v0, p1}, Landroid/net/NetworkScoreManager;-><init>(Landroid/content/Context;)V

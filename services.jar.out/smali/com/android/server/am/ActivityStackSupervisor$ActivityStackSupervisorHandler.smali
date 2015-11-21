@@ -24,13 +24,13 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 3539
+    .line 3554
     iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 3540
+    .line 3555
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3541
+    .line 3556
     return-void
 .end method
 
@@ -43,14 +43,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3544
+    .line 3559
     iget-object v1, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 3545
+    .line 3560
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -65,13 +65,13 @@
 
     invoke-virtual {v2, v0, v3, v4}, Lcom/android/server/am/ActivityStackSupervisor;->activityIdleInternalLocked(Landroid/os/IBinder;ZLandroid/content/res/Configuration;)Lcom/android/server/am/ActivityRecord;
 
-    .line 3546
+    .line 3561
     monitor-exit v1
 
-    .line 3547
+    .line 3562
     return-void
 
-    .line 3546
+    .line 3561
     :catchall_0
     move-exception v0
 
@@ -93,17 +93,17 @@
 
     const/4 v7, 0x0
 
-    .line 3551
+    .line 3566
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 3707
+    .line 3722
     :cond_0
     :goto_0
     return-void
 
-    .line 3554
+    .line 3569
     :pswitch_0
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -113,14 +113,14 @@
 
     if-eqz v8, :cond_1
 
-    .line 3555
+    .line 3570
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-boolean v7, v8, Lcom/android/server/am/ActivityManagerService;->mDidDexOpt:Z
 
-    .line 3556
+    .line 3571
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mHandler:Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;
@@ -131,13 +131,13 @@
 
     move-result-object v4
 
-    .line 3557
+    .line 3572
     .local v4, "nmsg":Landroid/os/Message;
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v7, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 3558
+    .line 3573
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mHandler:Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 3563
+    .line 3578
     .end local v4    # "nmsg":Landroid/os/Message;
     :cond_1
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -157,7 +157,7 @@
 
     goto :goto_0
 
-    .line 3567
+    .line 3582
     :pswitch_1
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -167,7 +167,7 @@
 
     goto :goto_0
 
-    .line 3570
+    .line 3585
     :pswitch_2
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -175,13 +175,13 @@
 
     monitor-enter v8
 
-    .line 3571
+    .line 3586
     :try_start_0
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v7}, Lcom/android/server/am/ActivityStackSupervisor;->resumeTopActivitiesLocked()Z
 
-    .line 3572
+    .line 3587
     monitor-exit v8
 
     goto :goto_0
@@ -195,7 +195,7 @@
 
     throw v7
 
-    .line 3575
+    .line 3590
     :pswitch_3
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -203,7 +203,7 @@
 
     monitor-enter v8
 
-    .line 3576
+    .line 3591
     :try_start_1
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -215,26 +215,26 @@
 
     if-eqz v7, :cond_2
 
-    .line 3577
+    .line 3592
     const-string v7, "ActivityManager"
 
     const-string v9, "Sleep timeout!  Sleeping now."
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3578
+    .line 3593
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     const/4 v9, 0x1
 
     iput-boolean v9, v7, Lcom/android/server/am/ActivityStackSupervisor;->mSleepTimeout:Z
 
-    .line 3579
+    .line 3594
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v7}, Lcom/android/server/am/ActivityStackSupervisor;->checkReadyForSleepLocked()V
 
-    .line 3581
+    .line 3596
     :cond_2
     monitor-exit v8
 
@@ -249,7 +249,7 @@
 
     throw v7
 
-    .line 3584
+    .line 3599
     :pswitch_4
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -259,14 +259,14 @@
 
     if-eqz v8, :cond_3
 
-    .line 3585
+    .line 3600
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v8, v8, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-boolean v7, v8, Lcom/android/server/am/ActivityManagerService;->mDidDexOpt:Z
 
-    .line 3586
+    .line 3601
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mHandler:Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;
@@ -277,7 +277,7 @@
 
     goto :goto_0
 
-    .line 3589
+    .line 3604
     :cond_3
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -285,7 +285,7 @@
 
     monitor-enter v8
 
-    .line 3590
+    .line 3605
     :try_start_2
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -297,21 +297,21 @@
 
     if-eqz v7, :cond_4
 
-    .line 3591
+    .line 3606
     const-string v7, "ActivityManager"
 
     const-string v9, "Launch timeout has expired, giving up wake lock!"
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3596
+    .line 3611
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mLaunchingActivity:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v7}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 3598
+    .line 3613
     :cond_4
     monitor-exit v8
 
@@ -326,7 +326,7 @@
 
     throw v7
 
-    .line 3601
+    .line 3616
     :pswitch_5
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -336,7 +336,7 @@
 
     goto/16 :goto_0
 
-    .line 3604
+    .line 3619
     :pswitch_6
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -346,7 +346,7 @@
 
     goto/16 :goto_0
 
-    .line 3607
+    .line 3622
     :pswitch_7
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -356,21 +356,21 @@
 
     goto/16 :goto_0
 
-    .line 3610
+    .line 3625
     :pswitch_8
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
 
-    .line 3611
+    .line 3626
     .local v1, "container":Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
     iget-object v0, v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->mCallback:Landroid/app/IActivityContainerCallback;
 
-    .line 3612
+    .line 3627
     .local v0, "callback":Landroid/app/IActivityContainerCallback;
     if-eqz v0, :cond_0
 
-    .line 3614
+    .line 3629
     :try_start_3
     invoke-virtual {v1}, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->asBinder()Landroid/os/IBinder;
 
@@ -387,7 +387,7 @@
 
     goto/16 :goto_0
 
-    .line 3615
+    .line 3630
     :catch_0
     move-exception v7
 
@@ -396,10 +396,10 @@
     :cond_5
     move v6, v7
 
-    .line 3614
+    .line 3629
     goto :goto_1
 
-    .line 3622
+    .line 3637
     .end local v0    # "callback":Landroid/app/IActivityContainerCallback;
     .end local v1    # "container":Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
     :pswitch_9
@@ -413,7 +413,7 @@
 
     if-nez v8, :cond_6
 
-    .line 3623
+    .line 3638
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     new-instance v9, Lcom/android/server/am/LockTaskNotify;
@@ -429,7 +429,7 @@
     # setter for: Lcom/android/server/am/ActivityStackSupervisor;->mLockTaskNotify:Lcom/android/server/am/LockTaskNotify;
     invoke-static {v8, v9}, Lcom/android/server/am/ActivityStackSupervisor;->access$002(Lcom/android/server/am/ActivityStackSupervisor;Lcom/android/server/am/LockTaskNotify;)Lcom/android/server/am/LockTaskNotify;
 
-    .line 3625
+    .line 3640
     :cond_6
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -442,7 +442,7 @@
 
     invoke-virtual {v8, v9}, Lcom/android/server/am/LockTaskNotify;->show(Z)V
 
-    .line 3626
+    .line 3641
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget v9, p1, Landroid/os/Message;->arg2:I
@@ -453,7 +453,7 @@
     # setter for: Lcom/android/server/am/ActivityStackSupervisor;->mLockTaskIsLocked:Z
     invoke-static {v8, v6}, Lcom/android/server/am/ActivityStackSupervisor;->access$102(Lcom/android/server/am/ActivityStackSupervisor;Z)Z
 
-    .line 3627
+    .line 3642
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
@@ -463,10 +463,10 @@
 
     if-eqz v7, :cond_8
 
-    .line 3628
+    .line 3643
     const/high16 v3, 0x3bf0000
 
-    .line 3630
+    .line 3645
     .local v3, "flags":I
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -477,12 +477,12 @@
 
     if-nez v7, :cond_7
 
-    .line 3631
+    .line 3646
     const/high16 v7, 0x1200000
 
     xor-int/2addr v3, v7
 
-    .line 3634
+    .line 3649
     :cond_7
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -510,7 +510,7 @@
 
     invoke-interface {v7, v3, v8, v9}, Lcom/android/internal/statusbar/IStatusBarService;->disable(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 3637
+    .line 3652
     .end local v3    # "flags":I
     :cond_8
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -528,7 +528,7 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/wm/WindowManagerService;->disableKeyguard(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 3638
+    .line 3653
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getDevicePolicyManager()Landroid/app/admin/IDevicePolicyManager;
@@ -538,7 +538,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 3639
+    .line 3654
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getDevicePolicyManager()Landroid/app/admin/IDevicePolicyManager;
@@ -560,11 +560,11 @@
 
     goto/16 :goto_0
 
-    .line 3642
+    .line 3657
     :catch_1
     move-exception v2
 
-    .line 3643
+    .line 3658
     .local v2, "ex":Landroid/os/RemoteException;
     new-instance v7, Ljava/lang/RuntimeException;
 
@@ -576,10 +576,10 @@
     :cond_9
     move v6, v7
 
-    .line 3626
+    .line 3641
     goto :goto_2
 
-    .line 3649
+    .line 3664
     :pswitch_a
     :try_start_5
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -591,7 +591,7 @@
 
     if-eqz v8, :cond_a
 
-    .line 3650
+    .line 3665
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
@@ -620,7 +620,7 @@
 
     invoke-interface {v8, v9, v10, v11}, Lcom/android/internal/statusbar/IStatusBarService;->disable(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 3653
+    .line 3668
     :cond_a
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -635,7 +635,7 @@
 
     invoke-virtual {v8, v9}, Lcom/android/server/wm/WindowManagerService;->reenableKeyguard(Landroid/os/IBinder;)V
 
-    .line 3654
+    .line 3669
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getDevicePolicyManager()Landroid/app/admin/IDevicePolicyManager;
@@ -645,7 +645,7 @@
 
     if-eqz v8, :cond_b
 
-    .line 3655
+    .line 3670
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     # invokes: Lcom/android/server/am/ActivityStackSupervisor;->getDevicePolicyManager()Landroid/app/admin/IDevicePolicyManager;
@@ -661,7 +661,7 @@
 
     invoke-interface {v8, v9, v10, v11}, Landroid/app/admin/IDevicePolicyManager;->notifyLockTaskModeChanged(ZLjava/lang/String;I)V
 
-    .line 3658
+    .line 3673
     :cond_b
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -672,7 +672,7 @@
 
     if-nez v8, :cond_c
 
-    .line 3659
+    .line 3674
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     new-instance v9, Lcom/android/server/am/LockTaskNotify;
@@ -688,7 +688,7 @@
     # setter for: Lcom/android/server/am/ActivityStackSupervisor;->mLockTaskNotify:Lcom/android/server/am/LockTaskNotify;
     invoke-static {v8, v9}, Lcom/android/server/am/ActivityStackSupervisor;->access$002(Lcom/android/server/am/ActivityStackSupervisor;Lcom/android/server/am/LockTaskNotify;)Lcom/android/server/am/LockTaskNotify;
 
-    .line 3661
+    .line 3676
     :cond_c
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -703,7 +703,7 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 3663
+    .line 3678
     :try_start_6
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -723,7 +723,7 @@
 
     if-eqz v8, :cond_d
 
-    .line 3666
+    .line 3681
     .local v6, "shouldLockKeyguard":Z
     :goto_3
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -737,7 +737,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 3667
+    .line 3682
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -746,14 +746,14 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/wm/WindowManagerService;->lockNow(Landroid/os/Bundle;)V
 
-    .line 3668
+    .line 3683
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v7, v7, Lcom/android/server/am/ActivityStackSupervisor;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/wm/WindowManagerService;->dismissKeyguard()V
 
-    .line 3669
+    .line 3684
     new-instance v7, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v8, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
@@ -773,7 +773,7 @@
 
     goto/16 :goto_0
 
-    .line 3672
+    .line 3687
     .end local v6    # "shouldLockKeyguard":Z
     :catch_2
     move-exception v7
@@ -783,14 +783,14 @@
     :cond_d
     move v6, v7
 
-    .line 3663
+    .line 3678
     goto :goto_3
 
-    .line 3675
+    .line 3690
     :catch_3
     move-exception v2
 
-    .line 3676
+    .line 3691
     .restart local v2    # "ex":Landroid/os/RemoteException;
     new-instance v7, Ljava/lang/RuntimeException;
 
@@ -798,22 +798,22 @@
 
     throw v7
 
-    .line 3680
+    .line 3695
     .end local v2    # "ex":Landroid/os/RemoteException;
     :pswitch_b
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
 
-    .line 3681
+    .line 3696
     .restart local v1    # "container":Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
     iget-object v0, v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->mCallback:Landroid/app/IActivityContainerCallback;
 
-    .line 3682
+    .line 3697
     .restart local v0    # "callback":Landroid/app/IActivityContainerCallback;
     if-eqz v0, :cond_0
 
-    .line 3684
+    .line 3699
     :try_start_7
     invoke-virtual {v1}, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->asBinder()Landroid/os/IBinder;
 
@@ -825,13 +825,13 @@
 
     goto/16 :goto_0
 
-    .line 3685
+    .line 3700
     :catch_4
     move-exception v7
 
     goto/16 :goto_0
 
-    .line 3690
+    .line 3705
     .end local v0    # "callback":Landroid/app/IActivityContainerCallback;
     .end local v1    # "container":Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
     :pswitch_c
@@ -841,7 +841,7 @@
 
     monitor-enter v8
 
-    .line 3691
+    .line 3706
     :try_start_8
     const-string v7, "ActivityManager"
 
@@ -867,12 +867,12 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3693
+    .line 3708
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
 
-    .line 3694
+    .line 3709
     .restart local v1    # "container":Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;
     iget-object v7, v1, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->mStack:Lcom/android/server/am/ActivityStack;
 
@@ -880,10 +880,10 @@
 
     invoke-virtual {v7, v9}, Lcom/android/server/am/ActivityStack;->finishAllActivitiesLocked(Z)V
 
-    .line 3695
+    .line 3710
     invoke-virtual {v1}, Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;->onTaskListEmptyLocked()V
 
-    .line 3696
+    .line 3711
     monitor-exit v8
 
     goto/16 :goto_0
@@ -898,7 +898,7 @@
 
     throw v7
 
-    .line 3699
+    .line 3714
     :pswitch_d
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -906,7 +906,7 @@
 
     monitor-enter v8
 
-    .line 3700
+    .line 3715
     :try_start_9
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -916,16 +916,16 @@
 
     move-result-object v5
 
-    .line 3701
+    .line 3716
     .local v5, "r":Lcom/android/server/am/ActivityRecord;
     if-eqz v5, :cond_e
 
-    .line 3702
+    .line 3717
     iget-object v7, p0, Lcom/android/server/am/ActivityStackSupervisor$ActivityStackSupervisorHandler;->this$0:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v7, v5}, Lcom/android/server/am/ActivityStackSupervisor;->handleLaunchTaskBehindCompleteLocked(Lcom/android/server/am/ActivityRecord;)V
 
-    .line 3704
+    .line 3719
     :cond_e
     monitor-exit v8
 
@@ -941,7 +941,7 @@
 
     throw v7
 
-    .line 3551
+    .line 3566
     nop
 
     :pswitch_data_0

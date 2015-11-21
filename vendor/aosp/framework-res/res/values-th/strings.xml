@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">วิดีโอนี้ไม่สามารถสตรีมไปยังอุปกรณ์นี้</string>
     <string name="selectTextMode">เลือกข้อความ</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">ไม่มี</string>
     <string name="profile_picker_title">โปรไฟล์</string>
     <string name="global_action_choose_profile">โปรไฟล์</string>
+    <string name="profile_none">ไม่มี</string>
     <string name="global_action_screenshot">ถ่ายภาพหน้าจอ</string>
     <string name="permlab_receiveProtectedSms">รับ SMS ที่ได้รับการป้องกัน</string>
     <string name="permdesc_receiveProtectedSms">อนุญาตให้แอปรับ SMS ที่ได้รับการป้องกัน</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">อนุญาตให้แอปเปลี่ยนแปลงเมื่อมีแอปอื่นทำงานโดยใช้การป้องกันความเป็นส่วนตัวอยู่ เมื่อแอปกำลังทำงานโดยการป้องกันความเป็นส่วนตัว มันจะไม่สามารถเข้าถึงข้อมวลส่วนตัว เช่น รายชื่อผู้ติดต่อ ประวัติการโทร หรือ ข้อความได้</string>
     <string name="privacy_guard_notification">การป้องกันความเป็นส่วนตัวทำงาน</string>
     <string name="privacy_guard_notification_detail">%1$s จะไม่สามารถเข้าถึงข้อมูลส่วนตัวได้</string>
-    <string name="permlab_useHardwareFramework">ใช้ฮาร์ดแวร์เฟรมเวิร์ค</string>
-    <string name="permdesc_useHardwareFramework">อนุญาตให้แอปเข้าถึง CM ฮาร์ดแวร์เฟรมเวิร์ค</string>
     <string name="permlab_setKeyguardWallpaper">ตั้งภาพล็อคหน้าจอ</string>
     <string name="permdesc_setKeyguardWallpaper">อนุญาตให้แอปเปลี่ยนภาพล็อคหน้าจอได้</string>
     <string name="privacy_guard_dialog_title">ป้องกันความเป็นส่วนตัว</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB บน USB และ &amp; เครือข่ายถูกเปิดใช้งาน</string>
     <string name="adb_active_generic_notification_message">แตะเพื่อปิดใช้งานการแก้ไขข้อบกพร่อง</string>
     <string name="usb_choose_notification_title">แตะเพื่อเลือกตัวเลือก USB</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; เครือข่าย</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">เครือข่าย</string>
     <string name="permlab_interceptPackageLaunch">ขัดขวางการเปิดแอป</string>
     <string name="permdesc_interceptPackageLaunch">อนุญาตให้แอปขัดขวางการเปิดแอปอื่นได้</string>
     <string name="app_ops_access_camera">เข้าถึงกล้อง</string>
@@ -204,6 +206,13 @@
     <string name="quick_settings_tile_flashlight_not_title">ไฟฉายเปิดอยู่</string>
     <string name="quick_settings_tile_flashlight_not_summary">แตะเพื่อปิด</string>
     <string name="storage_sd_dock_card">แท่น SD card</string>
+    <string name="fingerprint_default_name">ลายนิ้วมือ %d</string>
+    <string name="permlab_accessFingerprintService">การเข้าถึงบริการลายนิ้วมือ</string>
+    <string name="permdesc_accessFingerprintService">อนุญาตให้แอพเข้าถึงบริการลายนิ้วมือ แอพสามารถเพิ่ม ลบ ตั้งชื่อใหม่ และรับรองความถูกต้องโดยเปรียบเทียบกับลายนิ้วมือ</string>
+    <string name="permlab_resetBatteryStats">ตั้งค่าสถิติแบตเตอรี่ใหม่</string>
+    <string name="permdesc_resetBatteryStats">อนุญาตให้แอพพลิเคชันตั้งค่าข้อมูลการใช้แบตเตอรี่ระดับต่ำในปัจจุบันใหม่</string>
+    <string name="silent_mode_priority">ระดับความสำคัญ</string>
+    <string name="silent_mode_none">ไม่มี</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>

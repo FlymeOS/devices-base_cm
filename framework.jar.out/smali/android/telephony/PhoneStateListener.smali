@@ -153,12 +153,12 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 585
+    .line 589
     const-string v0, "PhoneStateListener"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 586
+    .line 590
     return-void
 .end method
 
@@ -335,12 +335,10 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 263
     long-to-int v0, p1
 
     invoke-direct {p0, v0}, Landroid/telephony/PhoneStateListener;-><init>(I)V
 
-    .line 264
     return-void
 .end method
 
@@ -350,11 +348,9 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 339
     long-to-int v0, p1
 
     invoke-direct {p0, v0, p3}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
 
-    .line 340
     return-void
 .end method

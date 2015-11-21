@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/CalendarContract$CalendarColumns;
-.implements Landroid/provider/CalendarContract$EventsColumns;
 .implements Landroid/provider/CalendarContract$SyncColumns;
+.implements Landroid/provider/CalendarContract$EventsColumns;
+.implements Landroid/provider/CalendarContract$CalendarColumns;
 
 
 # annotations
@@ -194,13 +194,13 @@
 
     const/16 v1, 0x16
 
-    const-string v2, "sync_events"
+    const-string/jumbo v2, "sync_events"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x17
 
-    const-string v2, "visible"
+    const-string/jumbo v2, "visible"
 
     aput-object v2, v0, v1
 
@@ -219,63 +219,63 @@
 
     aput-object v1, v0, v4
 
-    const-string v1, "mutators"
+    const-string/jumbo v1, "mutators"
 
     aput-object v1, v0, v5
 
-    const-string v1, "sync_data1"
+    const-string/jumbo v1, "sync_data1"
 
     aput-object v1, v0, v6
 
-    const-string v1, "sync_data2"
+    const-string/jumbo v1, "sync_data2"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string v2, "sync_data3"
+    const-string/jumbo v2, "sync_data3"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "sync_data4"
+    const-string/jumbo v2, "sync_data4"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string v2, "sync_data5"
+    const-string/jumbo v2, "sync_data5"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string v2, "sync_data6"
+    const-string/jumbo v2, "sync_data6"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string v2, "sync_data7"
+    const-string/jumbo v2, "sync_data7"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string v2, "sync_data8"
+    const-string/jumbo v2, "sync_data8"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    const-string v2, "sync_data9"
+    const-string/jumbo v2, "sync_data9"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string v2, "sync_data10"
+    const-string/jumbo v2, "sync_data10"
 
     aput-object v2, v0, v1
 

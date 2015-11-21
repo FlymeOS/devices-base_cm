@@ -148,7 +148,6 @@
 
 .method public bridge synthetic writeNewStateDescription(Landroid/os/ParcelFileDescriptor;)V
     .locals 0
-    .param p1, "x0"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
     .line 38

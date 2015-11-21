@@ -81,7 +81,7 @@
     .line 74
     .end local v1    # "fingerprint":Landroid/hardware/fingerprint/Fingerprint;
     :cond_2
-    const v4, 0x10400dc
+    const v4, 0x10400d2
 
     const/4 v5, 0x1
 

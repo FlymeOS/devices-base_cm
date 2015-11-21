@@ -256,7 +256,7 @@
 
     sput-object v3, Landroid/os/Build;->CPU_ABI2:Ljava/lang/String;
 
-    .line 602
+    .line 617
     :goto_1
     const-string/jumbo v3, "ro.build.type"
 
@@ -266,7 +266,7 @@
 
     sput-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    .line 605
+    .line 620
     const-string/jumbo v3, "ro.build.tags"
 
     invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -275,14 +275,14 @@
 
     sput-object v3, Landroid/os/Build;->TAGS:Ljava/lang/String;
 
-    .line 608
+    .line 623
     invoke-static {}, Landroid/os/Build;->deriveFingerprint()Ljava/lang/String;
 
     move-result-object v3
 
     sput-object v3, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    .line 673
+    .line 688
     const-string/jumbo v3, "ro.build.date.utc"
 
     invoke-static {v3}, Landroid/os/Build;->getLong(Ljava/lang/String;)J
@@ -295,7 +295,7 @@
 
     sput-wide v4, Landroid/os/Build;->TIME:J
 
-    .line 674
+    .line 689
     const-string/jumbo v3, "ro.build.user"
 
     invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -304,7 +304,7 @@
 
     sput-object v3, Landroid/os/Build;->USER:Ljava/lang/String;
 
-    .line 675
+    .line 690
     const-string/jumbo v3, "ro.build.host"
 
     invoke-static {v3}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -313,7 +313,7 @@
 
     sput-object v3, Landroid/os/Build;->HOST:Ljava/lang/String;
 
-    .line 681
+    .line 696
     const-string/jumbo v3, "ro.debuggable"
 
     invoke-static {v3, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -346,7 +346,7 @@
     :cond_2
     move v1, v2
 
-    .line 681
+    .line 696
     goto :goto_2
 .end method
 
@@ -357,7 +357,7 @@
     .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 204
+    .line 219
     return-void
 .end method
 
@@ -396,14 +396,14 @@
 
     const/16 v3, 0x2f
 
-    .line 615
+    .line 630
     const-string/jumbo v1, "ro.build.fingerprint"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 616
+    .line 631
     .local v0, "finger":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -411,7 +411,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 617
+    .line 632
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -528,7 +528,7 @@
 
     move-result-object v0
 
-    .line 626
+    .line 641
     :cond_0
     return-object v0
 .end method
@@ -537,7 +537,7 @@
     .locals 3
 
     .prologue
-    .line 637
+    .line 652
     const-string/jumbo v1, "ro.build.fingerprint"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -550,7 +550,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 639
+    .line 654
     :try_start_0
     const-string/jumbo v1, "ro.build.fingerprint"
 
@@ -560,18 +560,18 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 644
+    .line 659
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     :cond_0
     :goto_0
     return-void
 
-    .line 640
+    .line 655
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_0
     move-exception v0
 
-    .line 641
+    .line 656
     .restart local v0    # "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "Build"
 
@@ -587,7 +587,7 @@
     .param p0, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 707
+    .line 722
     :try_start_0
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -599,15 +599,15 @@
 
     move-result-wide v2
 
-    .line 709
+    .line 724
     :goto_0
     return-wide v2
 
-    .line 708
+    .line 723
     :catch_0
     move-exception v0
 
-    .line 709
+    .line 724
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-wide/16 v2, -0x1
 
@@ -618,7 +618,7 @@
     .locals 2
 
     .prologue
-    .line 689
+    .line 704
     const-string v0, "gsm.version.baseband"
 
     const/4 v1, 0x0
@@ -635,7 +635,7 @@
     .param p0, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 693
+    .line 708
     const-string/jumbo v0, "unknown"
 
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -651,12 +651,12 @@
     .param p1, "separator"    # Ljava/lang/String;
 
     .prologue
-    .line 697
+    .line 712
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 698
+    .line 713
     .local v0, "value":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -664,12 +664,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 699
+    .line 714
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 701
+    .line 716
     :goto_0
     return-object v1
 
@@ -687,14 +687,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 653
+    .line 668
     const-string/jumbo v3, "ro.build.fingerprint"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 654
+    .line 669
     .local v0, "system":Ljava/lang/String;
     const-string/jumbo v3, "ro.vendor.build.fingerprint"
 
@@ -702,7 +702,7 @@
 
     move-result-object v1
 
-    .line 656
+    .line 671
     .local v1, "vendor":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -710,18 +710,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 657
+    .line 672
     const-string v3, "Build"
 
     const-string v4, "Required ro.build.fingerprint is empty!"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 669
+    .line 684
     :goto_0
     return v2
 
-    .line 661
+    .line 676
     :cond_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -729,14 +729,14 @@
 
     if-nez v3, :cond_1
 
-    .line 662
+    .line 677
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 663
+    .line 678
     const-string v3, "Build"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -771,7 +771,7 @@
 
     goto :goto_0
 
-    .line 669
+    .line 684
     :cond_1
     const/4 v2, 0x1
 

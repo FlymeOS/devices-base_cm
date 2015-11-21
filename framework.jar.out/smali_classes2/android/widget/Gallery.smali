@@ -3792,7 +3792,6 @@
     .locals 1
 
     .prologue
-    .line 538
     invoke-virtual {p0}, Landroid/widget/Gallery;->getChildCount()I
 
     move-result v0
@@ -3845,12 +3844,10 @@
 
     invoke-virtual {p0, v4}, Landroid/widget/Gallery;->reportScrollStateChange(I)V
 
-    .line 549
     :cond_0
     :goto_0
     return-void
 
-    .line 540
     :cond_1
     iget v3, p0, Landroid/widget/Gallery;->mLastScrollState:I
 
@@ -3939,6 +3936,5 @@
 
     invoke-virtual {p0}, Landroid/widget/Gallery;->invokeOnItemScrollListener()V
 
-    .line 1380
     return-void
 .end method

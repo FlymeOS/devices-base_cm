@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">이 기기로 스트리밍하기에 적합하지 않은 동영상입니다.</string>
     <string name="selectTextMode">텍스트 선택</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">없음</string>
     <string name="profile_picker_title">프로필</string>
     <string name="global_action_choose_profile">프로필</string>
+    <string name="profile_none">없음</string>
     <string name="global_action_screenshot">스크린샷</string>
     <string name="permlab_receiveProtectedSms">보안 SMS 수신</string>
     <string name="permdesc_receiveProtectedSms">앱이 들어오는 보안 SMS를 수신할 수 있도록 허용합니다.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">다른 앱이 프라이버시 가드와 함께 실행될 것인지 변경할 수 있도록 앱을 허용합니다. 앱이 프라이버시 가드와 함께 실행중일 땐 연락처, 통화 기록, 메시지 등의 개인 정보에 접근할 수 없게 됩니다.</string>
     <string name="privacy_guard_notification">프라이버시 가드 활성화</string>
     <string name="privacy_guard_notification_detail">%1$s은(는) 개인 데이터에 접근할 수 없습니다.</string>
-    <string name="permlab_useHardwareFramework">하드웨어 프레임워크 사용</string>
-    <string name="permdesc_useHardwareFramework">앱이 CM 하드웨어 프레임워크에 접근할 수 있도록 허용합니다.</string>
     <string name="permlab_setKeyguardWallpaper">잠금화면 배경 설정</string>
     <string name="permdesc_setKeyguardWallpaper">앱이 잠금화면 배경을 바꿀 수 있도록 허용합니다.</string>
     <string name="privacy_guard_dialog_title">프라이버시 가드</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">USB 및 네트워크 ADB 활성화됨</string>
     <string name="adb_active_generic_notification_message">디버깅을 사용하지 않으려면 터치하세요.</string>
     <string name="usb_choose_notification_title">터치하여 USB 연결 방식을 선택합니다.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB 및 네트워크</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">네트워크</string>
     <string name="permlab_interceptPackageLaunch">앱 실행 차단</string>
     <string name="permdesc_interceptPackageLaunch">앱이 다른 앱의 실행 차단 허용</string>
     <string name="app_ops_access_camera">카메라에 액세스</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">지문 %d</string>
     <string name="permlab_accessFingerprintService">지문 서비스에 접근</string>
     <string name="permdesc_accessFingerprintService">이 앱이 지문 서비스를 사용할 수 있도록 허용합니다. 이 앱은 지문을 추가, 삭제, 이름 변경, 인증할 수 있습니다</string>
+    <string name="permlab_resetBatteryStats">배터리 통계 재설정</string>
+    <string name="permdesc_resetBatteryStats">앱이 현재의 배터리 사용 데이터를 초기화할 수 있도록 허용합니다.</string>
+    <string name="silent_mode_priority">우선순위</string>
+    <string name="silent_mode_none">없음</string>
     <string name="numeric_date_template" formatted="false">%s. %s. %s.</string>
     <string name="month_day_year" formatted="false">%Y년 %-m월 %-e일</string>
     <string name="time_of_day" formatted="false">%p %-l:%M:%S</string>
@@ -1783,12 +1789,4 @@
     <string name="stk_cc_ss_to_ss">SS 요청이 새로운 SS 요청으로 수정됩니다.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB 및 네트워크</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">네트워크</string>
-    <string name="permlab_resetBatteryStats">배터리 통계 재설정</string>
-    <string name="permdesc_resetBatteryStats">앱이 현재의 배터리 사용 데이터를 초기화할 수 있도록 허용합니다.</string>
-    <string name="silent_mode_priority">우선순위</string>
-    <string name="silent_mode_none">없음</string>
 </resources>

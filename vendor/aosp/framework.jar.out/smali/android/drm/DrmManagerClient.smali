@@ -481,7 +481,7 @@
     .locals 2
 
     .prologue
-    .line 904
+    .line 915
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-nez v0, :cond_0
@@ -490,7 +490,7 @@
 
     if-nez v0, :cond_0
 
-    .line 905
+    .line 916
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DrmManagerClient.InfoHandler"
@@ -499,12 +499,12 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
-    .line 906
+    .line 917
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 907
+    .line 918
     new-instance v0, Landroid/drm/DrmManagerClient$InfoHandler;
 
     iget-object v1, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
@@ -517,7 +517,7 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
-    .line 909
+    .line 920
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DrmManagerClient.EventHandler"
@@ -526,12 +526,12 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
-    .line 910
+    .line 921
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 911
+    .line 922
     new-instance v0, Landroid/drm/DrmManagerClient$EventHandler;
 
     iget-object v1, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
@@ -544,7 +544,7 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
-    .line 913
+    .line 924
     :cond_0
     return-void
 .end method
@@ -553,7 +553,7 @@
     .locals 2
 
     .prologue
-    .line 916
+    .line 927
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -562,7 +562,7 @@
 
     invoke-direct {p0, v0, v1}, Landroid/drm/DrmManagerClient;->_setListeners(ILjava/lang/Object;)V
 
-    .line 917
+    .line 928
     return-void
 .end method
 
@@ -1314,6 +1314,22 @@
     move-result v0
 
     return v0
+.end method
+
+.method public getInternalInfo(Ljava/lang/String;Ljava/io/FileDescriptor;)Ljava/lang/String;
+    .locals 1
+    .param p1, "actionPath"    # Ljava/lang/String;
+    .param p2, "fd"    # Ljava/io/FileDescriptor;
+
+    .prologue
+    .line 870
+    iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
+
+    invoke-direct {p0, v0, p1, p2}, Landroid/drm/DrmManagerClient;->_getOriginalMimeType(ILjava/lang/String;Ljava/io/FileDescriptor;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public getMetadata(Landroid/net/Uri;)Landroid/content/ContentValues;

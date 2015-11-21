@@ -458,7 +458,7 @@
     .line 574
     iget-object v0, p0, Lcom/android/internal/widget/WaveView;->mContext:Landroid/content/Context;
 
-    const v1, 0x104067d
+    const v1, 0x1040672
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -566,7 +566,7 @@
     .line 173
     new-instance v3, Lcom/android/internal/widget/DrawableHolder;
 
-    const v4, 0x1080753
+    const v4, 0x1080755
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/WaveView;->createDrawable(I)Landroid/graphics/drawable/BitmapDrawable;
 
@@ -615,7 +615,7 @@
     .line 181
     new-instance v3, Lcom/android/internal/widget/DrawableHolder;
 
-    const v4, 0x1080751
+    const v4, 0x1080753
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/WaveView;->createDrawable(I)Landroid/graphics/drawable/BitmapDrawable;
 
@@ -664,7 +664,7 @@
     .line 189
     new-instance v3, Lcom/android/internal/widget/DrawableHolder;
 
-    const v4, 0x1080752
+    const v4, 0x1080754
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/WaveView;->createDrawable(I)Landroid/graphics/drawable/BitmapDrawable;
 
@@ -711,7 +711,7 @@
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 197
-    const v3, 0x1080754
+    const v3, 0x1080756
 
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/WaveView;->createDrawable(I)Landroid/graphics/drawable/BitmapDrawable;
 

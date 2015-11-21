@@ -5844,7 +5844,6 @@
     .param p2, "subId"    # J
 
     .prologue
-    .line 947
     long-to-int v0, p2
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/CallManager;->canConference(Lcom/android/internal/telephony/Call;I)Z
@@ -5860,7 +5859,6 @@
     .param p2, "subId"    # J
 
     .prologue
-    .line 1173
     long-to-int v0, p2
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/CallManager;->canTransfer(Lcom/android/internal/telephony/Call;I)Z
@@ -5875,12 +5873,10 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 1096
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->clearDisconnected(I)V
 
-    .line 1097
     return-void
 .end method
 
@@ -5889,7 +5885,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 1998
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall(I)Lcom/android/internal/telephony/Call;
@@ -5904,7 +5899,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2151
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getActiveFgCallState(I)Lcom/android/internal/telephony/Call$State;
@@ -5928,7 +5922,6 @@
     .end annotation
 
     .prologue
-    .line 2207
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getBgCallConnections(I)Ljava/util/List;
@@ -5943,7 +5936,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 526
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getBgPhone(I)Lcom/android/internal/telephony/Phone;
@@ -5967,7 +5959,6 @@
     .end annotation
 
     .prologue
-    .line 2179
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgCallConnections(I)Ljava/util/List;
@@ -5982,7 +5973,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2235
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgCallLatestConnection(I)Lcom/android/internal/telephony/Connection;
@@ -5997,7 +5987,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 507
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFgPhone(I)Lcom/android/internal/telephony/Phone;
@@ -6012,7 +6001,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 2085
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall(I)Lcom/android/internal/telephony/Call;

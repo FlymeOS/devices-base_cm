@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 13943
+    .line 13964
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +68,7 @@
 
     const/4 v1, -0x1
 
-    .line 13947
+    .line 13968
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -83,7 +83,7 @@
 
     if-eq v3, v0, :cond_1
 
-    .line 13948
+    .line 13969
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -100,17 +100,17 @@
 
     move v0, v1
 
-    .line 13953
+    .line 13974
     :goto_0
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 13948
+    .line 13969
     goto :goto_0
 
-    .line 13950
+    .line 13971
     :cond_1
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -130,7 +130,7 @@
 
     if-eq v3, v0, :cond_3
 
-    .line 13951
+    .line 13972
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -159,7 +159,7 @@
 
     goto :goto_1
 
-    .line 13953
+    .line 13974
     :cond_3
     const/4 v0, 0x0
 
@@ -168,17 +168,13 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 13943
+    .line 13964
     check-cast p1, Landroid/util/Pair;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Landroid/util/Pair;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$20;->compare(Landroid/util/Pair;Landroid/util/Pair;)I
 
     move-result v0

@@ -1648,6 +1648,14 @@
 
     cmpl-float v0, v0, v1
 
+    if-nez v0, :cond_0
+
+    iget v0, p0, Landroid/app/ComposedIconInfo;->iconScale:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v0, v0, v1
+
     if-eqz v0, :cond_1
 
     :cond_0

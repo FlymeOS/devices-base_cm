@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Ovaj videozapis nije valjan za streaming na ovaj uređaj.</string>
     <string name="selectTextMode">Odabir teksta</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Ništa</string>
     <string name="profile_picker_title">Profili</string>
     <string name="global_action_choose_profile">Profil</string>
+    <string name="profile_none">Ništa</string>
     <string name="global_action_screenshot">Snimak zaslona</string>
     <string name="permgrouplab_security">Sigurnost</string>
     <string name="permgroupdesc_security">Dopuštenja vezana za sigurnosne informacije uređaja.</string>
@@ -44,8 +44,6 @@
     <string name="permdesc_changePrivacyGuardState">Dopušta aplikaciji odrediti hoće li druga aplikacija biti pokrenuta pod Nadzorom Privatnosti. Kada ja aplikacija pod Nadzorom Privatnosti, neće imati pristup osobnim podacima kao što su kontakti, zapisi poziva ili poruke.</string>
     <string name="privacy_guard_notification">Nadzor privatnosti aktivan</string>
     <string name="privacy_guard_notification_detail">%1$s neće moći pristupiti osobnim podacima</string>
-    <string name="permlab_useHardwareFramework">koristiti hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Dopušta aplikaciji pristupiti CM hardware framework.</string>
     <string name="permlab_setKeyguardWallpaper">postaviti pozadinu zaslona zaključavanja</string>
     <string name="permdesc_setKeyguardWallpaper">Dozvoljava aplikaciji promjenu pozadine zaslona zaključavanja.</string>
     <string name="privacy_guard_dialog_title">Nadzor privatnosti</string>

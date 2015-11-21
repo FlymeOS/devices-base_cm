@@ -23,9 +23,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">ڤیدیۆکە لەکارە نیە لەسەر ئەم ئامێرە.</string>
     <string name="selectTextMode">هەڵبژاردنی دەق</string>
     <string name="status_bar_notification_info_overflow">+٩٩٩</string>
-    <string name="profile_none">هیچ</string>
     <string name="profile_picker_title">زانیاری تایبەتیەکان</string>
     <string name="global_action_choose_profile">زانیاری تایبەتی</string>
+    <string name="profile_none">هیچ</string>
     <string name="global_action_screenshot">وێنەگرتنی ڕوونما</string>
     <string name="permlab_receiveProtectedSms">وەرگرتنی کورتەنامەی پارێزراو</string>
     <string name="permdesc_receiveProtectedSms">ڕێگە بە بەرنامەکە بدە کە کورتەنامە پارێزراوەکەی داهاتوو وەربگرێت.</string>
@@ -47,8 +47,6 @@
     <string name="permdesc_changePrivacyGuardState">ڕێگە دان بە بەرنامەکە بۆ گۆڕینی کەشوهەوای بەرنامەیەکی تر لە تایبەتی. کاتێک بەرنامەکە ئەکەوێتە کار لەگەڵ تایبەتی .هیچ ڕێگەیەکی نیە بۆ ئەوەی زانیاری تایبیەتیت بەکاربهێنێت وەکو ،ناوەکان،تەلەفۆن لۆگ یان نامە.</string>
     <string name="privacy_guard_notification">پاسەوانی تایبەتی چالاکراوە</string>
     <string name="privacy_guard_notification_detail">%1$s ناتوانێت زانیاری تایبەتی بەکاربهێنێت</string>
-    <string name="permlab_useHardwareFramework">به‌کارهێنانی هاردوێر بۆ کاری چوارچێوه‌</string>
-    <string name="permdesc_useHardwareFramework">ڕێگه‌دان به‌ به‌رنامه‌یه‌ک بۆ ده‌سته‌ڵاتی چوارچێوه‌ کاری CM.</string>
     <string name="permlab_setKeyguardWallpaper">دانانی کلیلە پارێز بۆ دیوارپۆش</string>
     <string name="permdesc_setKeyguardWallpaper">ڕێگەدان: بە بەرنامەیەک بۆ گۆڕینی قوفڵی ڕوونمای دیوارپۆش.</string>
     <string name="privacy_guard_dialog_title">پاسەوانی تایبەتی</string>
@@ -1313,7 +1311,6 @@ for account %s."</string>
     <string name="wallpaper_binding_label">وێنەی سەرشاشە</string>
     <string name="chooser_wallpaper">گۆڕینی دیوارپۆش</string>
     <string name="notification_listener_binding_label">گوێگری تێبینییەکان</string>
-    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN چالاکرا</string>
     <string name="vpn_title_long">VPN چالاکراو لەلایەن %s</string>
     <string name="vpn_text">دەست لێدە بۆ بەڕێوەبردنی تۆڕەکە.</string>

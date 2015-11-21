@@ -1389,7 +1389,7 @@
 
     .prologue
     .line 402
-    const v0, 0x1040463
+    const v0, 0x1040458
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1398,7 +1398,7 @@
     iput-object v0, p0, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     .line 404
-    const v0, 0x1080548
+    const v0, 0x108054a
 
     iput v0, p0, Lcom/android/internal/telephony/CallerInfo;->photoResource:I
 
@@ -1641,7 +1641,6 @@
     .param p2, "subId"    # J
 
     .prologue
-    .line 350
     long-to-int v0, p2
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/telephony/CallerInfo;->getCallerInfo(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/internal/telephony/CallerInfo;
@@ -1656,7 +1655,6 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 452
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/CallerInfo;->markAsVoiceMail(I)Lcom/android/internal/telephony/CallerInfo;

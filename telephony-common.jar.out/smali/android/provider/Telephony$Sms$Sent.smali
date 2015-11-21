@@ -135,7 +135,6 @@
     .param p6, "date"    # Ljava/lang/Long;
 
     .prologue
-    .line 675
     long-to-int v0, p0
 
     move-object v1, p2

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 388
+    .line 387
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 390
+    .line 389
     new-instance v0, Landroid/media/AudioManager;
 
     invoke-direct {v0, p1}, Landroid/media/AudioManager;-><init>(Landroid/content/Context;)V

@@ -1,14 +1,11 @@
 .class Lcom/android/internal/policy/impl/GlobalActions$4;
-.super Ljava/lang/Object;
+.super Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
 .source "GlobalActions.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/GlobalActions;->createProfileDialog()V
+    value = Lcom/android/internal/policy/impl/GlobalActions;->getBugReportAction()Lcom/android/internal/policy/impl/GlobalActions$Action;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,72 +17,154 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-.field final synthetic val$profileManager:Landroid/app/ProfileManager;
-
-.field final synthetic val$profiles:[Landroid/app/Profile;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;[Landroid/app/Profile;Landroid/app/ProfileManager;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
     .locals 0
+    .param p2, "x0"    # I
+    .param p3, "x1"    # I
 
     .prologue
-    .line 428
+    .line 464
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    iput-object p2, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->val$profiles:[Landroid/app/Profile;
-
-    iput-object p3, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->val$profileManager:Landroid/app/ProfileManager;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
-    .param p2, "which"    # I
+.method public bridge synthetic getStatus()Ljava/lang/CharSequence;
+    .locals 1
 
     .prologue
-    .line 430
-    if-gez p2, :cond_0
+    .line 464
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/GlobalActions$4;->getStatus()Ljava/lang/String;
 
-    .line 435
-    :goto_0
-    return-void
+    move-result-object v0
 
-    .line 432
-    :cond_0
+    return-object v0
+.end method
+
+.method public getStatus()Ljava/lang/String;
+    .locals 5
+
+    .prologue
+    .line 509
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->val$profiles:[Landroid/app/Profile;
+    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$200(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
 
-    aget-object v1, v1, p2
+    move-result-object v0
 
-    # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mChosenProfile:Landroid/app/Profile;
-    invoke-static {v0, v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$1002(Lcom/android/internal/policy/impl/GlobalActions;Landroid/app/Profile;)Landroid/app/Profile;
+    const v1, 0x10401db
 
-    .line 433
-    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->val$profileManager:Landroid/app/ProfileManager;
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mChosenProfile:Landroid/app/Profile;
-    invoke-static {v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$1000(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/app/Profile;
+    const/4 v3, 0x0
+
+    sget-object v4, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    sget-object v4, Landroid/os/Build;->ID:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public onPress()V
+    .locals 4
+
+    .prologue
+    .line 467
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$4;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$200(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 468
+    .local v0, "builder":Landroid/app/AlertDialog$Builder;
+    const v2, 0x10401d9
+
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    .line 469
+    const v2, 0x10401da
+
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    .line 470
+    const/high16 v2, 0x1040000
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 471
+    const v2, 0x1040563
+
+    new-instance v3, Lcom/android/internal/policy/impl/GlobalActions$4$1;
+
+    invoke-direct {v3, p0}, Lcom/android/internal/policy/impl/GlobalActions$4$1;-><init>(Lcom/android/internal/policy/impl/GlobalActions$4;)V
+
+    invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 494
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Profile;->getUuid()Ljava/util/UUID;
+    .line 495
+    .local v1, "dialog":Landroid/app/AlertDialog;
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/app/ProfileManager;->setActiveProfile(Ljava/util/UUID;)V
+    const/16 v3, 0x7d9
 
-    .line 434
-    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
+    invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
 
-    goto :goto_0
+    .line 496
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+
+    .line 497
+    return-void
+.end method
+
+.method public showBeforeProvisioning()Z
+    .locals 1
+
+    .prologue
+    .line 504
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public showDuringKeyguard()Z
+    .locals 1
+
+    .prologue
+    .line 500
+    const/4 v0, 0x1
+
+    return v0
 .end method

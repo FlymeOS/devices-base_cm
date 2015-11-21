@@ -215,6 +215,14 @@
     .end annotation
 .end method
 
+.method public abstract getCountryCode()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getDhcpInfo()Landroid/net/DhcpInfo;
     .annotation system Ldalvik/annotation/Throws;
         value = {

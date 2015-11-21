@@ -395,7 +395,7 @@
     if-nez v11, :cond_0
 
     .line 307
-    const v11, 0x10e0081
+    const v11, 0x10e0085
 
     invoke-virtual {v6, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -479,7 +479,7 @@
     iput v11, p0, Landroid/view/ViewConfiguration;->mMaximumFlingVelocity:I
 
     .line 347
-    const v11, 0x10e0079
+    const v11, 0x10e007d
 
     invoke-virtual {v6, v11}, Landroid/content/res/Resources;->getInteger(I)I
 

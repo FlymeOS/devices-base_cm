@@ -95,7 +95,7 @@
     .line 73
     const/4 v4, -0x1
 
-    const v5, 0x1040623
+    const v5, 0x1040618
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -112,7 +112,7 @@
     .line 76
     const/4 v4, -0x2
 
-    const v5, 0x1040624
+    const v5, 0x1040619
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -129,7 +129,7 @@
     invoke-virtual {p0, v4, v5, v6}, Lcom/android/server/PermissionDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
     .line 79
-    const v4, 0x1040040
+    const v4, 0x1040032
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -206,7 +206,7 @@
     .line 89
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mView:Landroid/view/View;
 
-    const v5, 0x1020350
+    const v5, 0x1020351
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
     .local v3, "tv":Landroid/widget/TextView;
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mView:Landroid/view/View;
 
-    const v5, 0x1020352
+    const v5, 0x1020353
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +246,7 @@
     :cond_0
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mContext:Landroid/content/Context;
 
-    const v5, 0x1040041
+    const v5, 0x1040033
 
     new-array v6, v9, [Ljava/lang/Object;
 

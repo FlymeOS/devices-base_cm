@@ -2437,7 +2437,6 @@
     .locals 2
 
     .prologue
-    .line 738
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
 
     move-result-object v0
@@ -2633,7 +2632,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1075
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView;->mPopup:Landroid/widget/ListPopupWindow;
 
     const/4 v1, 0x0
@@ -2643,7 +2641,6 @@
     :goto_0
     return-void
 
-    .line 878
     :cond_0
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView;->mPopup:Landroid/widget/ListPopupWindow;
 

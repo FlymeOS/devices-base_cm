@@ -28,7 +28,7 @@
 
 .field static final TRANSACTION_addIdleTimer:I = 0x33
 
-.field static final TRANSACTION_addInterfaceToLocalNetwork:I = 0x51
+.field static final TRANSACTION_addInterfaceToLocalNetwork:I = 0x52
 
 .field static final TRANSACTION_addInterfaceToNetwork:I = 0x48
 
@@ -40,7 +40,7 @@
 
 .field static final TRANSACTION_addVpnUidRanges:I = 0x3d
 
-.field static final TRANSACTION_allowProtect:I = 0x4f
+.field static final TRANSACTION_allowProtect:I = 0x50
 
 .field static final TRANSACTION_attachPppd:I = 0x21
 
@@ -48,13 +48,13 @@
 
 .field static final TRANSACTION_clearInterfaceAddresses:I = 0x6
 
-.field static final TRANSACTION_clearPermission:I = 0x4e
+.field static final TRANSACTION_clearPermission:I = 0x4f
 
 .field static final TRANSACTION_createPhysicalNetwork:I = 0x45
 
 .field static final TRANSACTION_createVirtualNetwork:I = 0x46
 
-.field static final TRANSACTION_denyProtect:I = 0x50
+.field static final TRANSACTION_denyProtect:I = 0x51
 
 .field static final TRANSACTION_detachPppd:I = 0x22
 
@@ -110,7 +110,7 @@
 
 .field static final TRANSACTION_removeInterfaceAlert:I = 0x2f
 
-.field static final TRANSACTION_removeInterfaceFromLocalNetwork:I = 0x52
+.field static final TRANSACTION_removeInterfaceFromLocalNetwork:I = 0x53
 
 .field static final TRANSACTION_removeInterfaceFromNetwork:I = 0x49
 
@@ -162,7 +162,9 @@
 
 .field static final TRANSACTION_setMtu:I = 0x10
 
-.field static final TRANSACTION_setPermission:I = 0x4d
+.field static final TRANSACTION_setNetworkPermission:I = 0x4d
+
+.field static final TRANSACTION_setPermission:I = 0x4e
 
 .field static final TRANSACTION_setUidNetworkRules:I = 0x31
 
@@ -280,7 +282,7 @@
     .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 919
+    .line 932
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -2593,31 +2595,38 @@
 
     move-result v1
 
-    .line 778
-    .local v1, "_arg0":I
-    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->createPhysicalNetwork(I)V
-
     .line 779
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    .local v1, "_arg0":I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
 
     .line 780
+    .local v2, "_arg1":Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->createPhysicalNetwork(ILjava/lang/String;)V
+
+    .line 781
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 782
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 784
+    .line 786
     .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_46
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 786
+    .line 788
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 788
+    .line 790
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2627,7 +2636,7 @@
 
     const/4 v2, 0x1
 
-    .line 790
+    .line 792
     .local v2, "_arg1":Z
     :goto_1c
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2638,20 +2647,20 @@
 
     const/4 v3, 0x1
 
-    .line 791
+    .line 793
     .restart local v3    # "_arg2":Z
     :goto_1d
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/INetworkManagementService$Stub;->createVirtualNetwork(IZZ)V
 
-    .line 792
+    .line 794
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 793
+    .line 795
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 788
+    .line 790
     .end local v2    # "_arg1":Z
     .end local v3    # "_arg2":Z
     :cond_1b
@@ -2659,14 +2668,14 @@
 
     goto :goto_1c
 
-    .line 790
+    .line 792
     .restart local v2    # "_arg1":Z
     :cond_1c
     const/4 v3, 0x0
 
     goto :goto_1d
 
-    .line 797
+    .line 799
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Z
     :sswitch_47
@@ -2674,54 +2683,54 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 799
+    .line 801
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 800
+    .line 802
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->removeNetwork(I)V
 
-    .line 801
+    .line 803
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 802
+    .line 804
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 806
+    .line 808
     .end local v1    # "_arg0":I
     :sswitch_48
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 808
+    .line 810
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 810
+    .line 812
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 811
+    .line 813
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->addInterfaceToNetwork(Ljava/lang/String;I)V
 
-    .line 812
+    .line 814
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 813
+    .line 815
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 817
+    .line 819
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     :sswitch_49
@@ -2729,30 +2738,30 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 819
+    .line 821
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 821
+    .line 823
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 822
+    .line 824
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->removeInterfaceFromNetwork(Ljava/lang/String;I)V
 
-    .line 823
+    .line 825
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 824
+    .line 826
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 828
+    .line 830
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     :sswitch_4a
@@ -2760,12 +2769,12 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 830
+    .line 832
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 832
+    .line 834
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2773,7 +2782,7 @@
 
     if-eqz v0, :cond_1d
 
-    .line 833
+    .line 835
     sget-object v0, Landroid/net/RouteInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -2782,26 +2791,26 @@
 
     check-cast v2, Landroid/net/RouteInfo;
 
-    .line 839
+    .line 841
     .local v2, "_arg1":Landroid/net/RouteInfo;
     :goto_1e
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 840
+    .line 842
     .local v3, "_arg2":I
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/INetworkManagementService$Stub;->addLegacyRouteForNetId(ILandroid/net/RouteInfo;I)V
 
-    .line 841
+    .line 843
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 842
+    .line 844
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 836
+    .line 838
     .end local v2    # "_arg1":Landroid/net/RouteInfo;
     .end local v3    # "_arg2":I
     :cond_1d
@@ -2810,7 +2819,7 @@
     .restart local v2    # "_arg1":Landroid/net/RouteInfo;
     goto :goto_1e
 
-    .line 846
+    .line 848
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Landroid/net/RouteInfo;
     :sswitch_4b
@@ -2818,156 +2827,187 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 848
+    .line 850
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 849
+    .line 851
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->setDefaultNetId(I)V
 
-    .line 850
+    .line 852
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 851
+    .line 853
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 855
+    .line 857
     .end local v1    # "_arg0":I
     :sswitch_4c
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 856
+    .line 858
     invoke-virtual {p0}, Landroid/os/INetworkManagementService$Stub;->clearDefaultNetId()V
 
-    .line 857
+    .line 859
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 858
+    .line 860
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 862
+    .line 864
     :sswitch_4d
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 864
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
     .line 866
-    .local v1, "_arg0":Ljava/lang/String;
-    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 868
+    .restart local v1    # "_arg0":I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 867
-    .local v2, "_arg1":[I
-    invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->setPermission(Ljava/lang/String;[I)V
+    .line 869
+    .local v2, "_arg1":Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->setNetworkPermission(ILjava/lang/String;)V
 
-    .line 868
+    .line 870
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 869
+    .line 871
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 873
-    .end local v1    # "_arg0":Ljava/lang/String;
-    .end local v2    # "_arg1":[I
+    .line 875
+    .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_4e
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 875
-    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
+    .line 877
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 876
-    .local v1, "_arg0":[I
-    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->clearPermission([I)V
+    .line 879
+    .local v1, "_arg0":Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
-    .line 877
+    move-result-object v2
+
+    .line 880
+    .local v2, "_arg1":[I
+    invoke-virtual {p0, v1, v2}, Landroid/os/INetworkManagementService$Stub;->setPermission(Ljava/lang/String;[I)V
+
+    .line 881
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 878
+    .line 882
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 882
-    .end local v1    # "_arg0":[I
+    .line 886
+    .end local v1    # "_arg0":Ljava/lang/String;
+    .end local v2    # "_arg1":[I
     :sswitch_4f
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 884
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    .line 888
+    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
-    move-result v1
+    move-result-object v1
 
-    .line 885
-    .local v1, "_arg0":I
-    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->allowProtect(I)V
+    .line 889
+    .local v1, "_arg0":[I
+    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->clearPermission([I)V
 
-    .line 886
+    .line 890
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 887
+    .line 891
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 891
-    .end local v1    # "_arg0":I
+    .line 895
+    .end local v1    # "_arg0":[I
     :sswitch_50
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 893
+    .line 897
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 894
-    .restart local v1    # "_arg0":I
-    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->denyProtect(I)V
+    .line 898
+    .local v1, "_arg0":I
+    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->allowProtect(I)V
 
-    .line 895
+    .line 899
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 896
+    .line 900
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 900
+    .line 904
     .end local v1    # "_arg0":I
     :sswitch_51
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 902
+    .line 906
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 907
+    .restart local v1    # "_arg0":I
+    invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->denyProtect(I)V
+
+    .line 908
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 909
+    const/4 v0, 0x1
+
+    goto/16 :goto_0
+
+    .line 913
+    .end local v1    # "_arg0":I
+    :sswitch_52
+    const-string v0, "android.os.INetworkManagementService"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 915
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 904
+    .line 917
     .local v1, "_arg0":Ljava/lang/String;
     sget-object v0, Landroid/net/RouteInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -2975,39 +3015,39 @@
 
     move-result-object v10
 
-    .line 905
+    .line 918
     .local v10, "_arg1":Ljava/util/List;, "Ljava/util/List<Landroid/net/RouteInfo;>;"
     invoke-virtual {p0, v1, v10}, Landroid/os/INetworkManagementService$Stub;->addInterfaceToLocalNetwork(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 906
+    .line 919
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 907
+    .line 920
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 911
+    .line 924
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v10    # "_arg1":Ljava/util/List;, "Ljava/util/List<Landroid/net/RouteInfo;>;"
-    :sswitch_52
+    :sswitch_53
     const-string v0, "android.os.INetworkManagementService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 913
+    .line 926
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 914
+    .line 927
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/INetworkManagementService$Stub;->removeInterfaceFromLocalNetwork(Ljava/lang/String;)V
 
-    .line 915
+    .line 928
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 916
+    .line 929
     const/4 v0, 0x1
 
     goto/16 :goto_0
@@ -3097,6 +3137,7 @@
         0x50 -> :sswitch_50
         0x51 -> :sswitch_51
         0x52 -> :sswitch_52
+        0x53 -> :sswitch_53
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

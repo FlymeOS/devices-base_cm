@@ -91,16 +91,16 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
     .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
-    const/4 v0, 0x2
-
-    iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
+    iput v1, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioQuality:I
 
     .line 80
     const/4 v0, 0x3
@@ -108,9 +108,7 @@
     iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
     .line 81
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
+    iput v1, p0, Lcom/android/ims/ImsStreamMediaProfile;->mVideoQuality:I
 
     .line 82
     const/4 v0, -0x1

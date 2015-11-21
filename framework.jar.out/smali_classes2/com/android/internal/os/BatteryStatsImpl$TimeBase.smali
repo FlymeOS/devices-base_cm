@@ -50,10 +50,10 @@
     .locals 1
 
     .prologue
-    .line 458
+    .line 459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 459
+    .line 460
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,12 +70,12 @@
     .param p1, "observer"    # Lcom/android/internal/os/BatteryStatsImpl$TimeBaseObs;
 
     .prologue
-    .line 503
+    .line 504
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 504
+    .line 505
     return-void
 .end method
 
@@ -85,16 +85,16 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 548
+    .line 549
     packed-switch p3, :pswitch_data_0
 
-    .line 556
+    .line 557
     const-wide/16 v0, 0x0
 
     :goto_0
     return-wide v0
 
-    .line 550
+    .line 551
     :pswitch_0
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
@@ -106,7 +106,7 @@
 
     goto :goto_0
 
-    .line 552
+    .line 553
     :pswitch_1
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 554
+    .line 555
     :pswitch_2
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 548
+    .line 549
     nop
 
     :pswitch_data_0
@@ -143,16 +143,16 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 536
+    .line 537
     packed-switch p3, :pswitch_data_0
 
-    .line 544
+    .line 545
     const-wide/16 v0, 0x0
 
     :goto_0
     return-wide v0
 
-    .line 538
+    .line 539
     :pswitch_0
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
@@ -164,7 +164,7 @@
 
     goto :goto_0
 
-    .line 540
+    .line 541
     :pswitch_1
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 542
+    .line 543
     :pswitch_2
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
@@ -184,7 +184,7 @@
 
     goto :goto_0
 
-    .line 536
+    .line 537
     nop
 
     :pswitch_data_0
@@ -205,14 +205,14 @@
 
     const-wide/16 v4, 0x3e8
 
-    .line 474
+    .line 475
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 475
+    .line 476
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -224,68 +224,68 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 476
+    .line 477
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 477
+    .line 478
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 478
+    .line 479
     const-string v1, "mUptime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 479
+    .line 480
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
     div-long/2addr v2, v4
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 480
+    .line 481
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 481
+    .line 482
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 482
+    .line 483
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 483
+    .line 484
     const-string v1, "mRealtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 484
+    .line 485
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
     div-long/2addr v2, v4
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 485
+    .line 486
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 486
+    .line 487
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 487
+    .line 488
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 488
+    .line 489
     const-string v1, "mPastUptime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 489
+    .line 490
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
     div-long/2addr v2, v4
@@ -296,14 +296,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 490
+    .line 491
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     div-long/2addr v2, v4
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 491
+    .line 492
     const-string v1, "mUnpluggedUptime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -314,25 +314,25 @@
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 492
+    .line 493
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 493
+    .line 494
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 494
+    .line 495
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 495
+    .line 496
     const-string v1, "mPastRealtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 496
+    .line 497
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
     div-long/2addr v2, v4
@@ -343,14 +343,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 497
+    .line 498
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     div-long/2addr v2, v4
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 498
+    .line 499
     const-string v1, "mUnpluggedRealtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -361,14 +361,14 @@
 
     invoke-static {v0, v2, v3}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
 
-    .line 499
+    .line 500
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 500
+    .line 501
     return-void
 .end method
 
@@ -377,23 +377,23 @@
     .param p1, "curTime"    # J
 
     .prologue
-    .line 568
+    .line 569
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
-    .line 569
+    .line 570
     .local v0, "time":J
     iget-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
     if-eqz v2, :cond_0
 
-    .line 570
+    .line 571
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     sub-long v2, p1, v2
 
     add-long/2addr v0, v2
 
-    .line 572
+    .line 573
     :cond_0
     return-wide v0
 .end method
@@ -402,7 +402,7 @@
     .locals 2
 
     .prologue
-    .line 580
+    .line 581
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     return-wide v0
@@ -413,23 +413,23 @@
     .param p1, "curTime"    # J
 
     .prologue
-    .line 560
+    .line 561
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
-    .line 561
+    .line 562
     .local v0, "time":J
     iget-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
     if-eqz v2, :cond_0
 
-    .line 562
+    .line 563
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     sub-long v2, p1, v2
 
     add-long/2addr v0, v2
 
-    .line 564
+    .line 565
     :cond_0
     return-wide v0
 .end method
@@ -438,7 +438,7 @@
     .locals 2
 
     .prologue
-    .line 576
+    .line 577
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     return-wide v0
@@ -452,25 +452,25 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 513
+    .line 514
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
-    .line 514
+    .line 515
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
-    .line 515
+    .line 516
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
-    .line 516
+    .line 517
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
-    .line 517
+    .line 518
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
-    .line 518
+    .line 519
     iput-wide p3, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
-    .line 519
+    .line 520
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
@@ -479,7 +479,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
 
-    .line 520
+    .line 521
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
@@ -488,7 +488,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedRealtime:J
 
-    .line 521
+    .line 522
     return-void
 .end method
 
@@ -496,7 +496,7 @@
     .locals 1
 
     .prologue
-    .line 584
+    .line 585
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
     return v0
@@ -507,68 +507,68 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 626
+    .line 627
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
-
-    .line 627
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
     .line 628
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
     .line 629
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
     .line 630
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     .line 631
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
     .line 632
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
     .line 633
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     .line 634
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedRealtime:J
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
 
     .line 635
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedRealtime:J
+
+    .line 636
     return-void
 .end method
 
@@ -577,21 +577,21 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 616
+    .line 617
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
-    .line 617
+    .line 618
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
-    .line 618
+    .line 619
     return-void
 .end method
 
@@ -600,7 +600,7 @@
     .param p1, "observer"    # Lcom/android/internal/os/BatteryStatsImpl$TimeBaseObs;
 
     .prologue
-    .line 507
+    .line 508
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -609,7 +609,7 @@
 
     if-nez v0, :cond_0
 
-    .line 508
+    .line 509
     const-string v0, "BatteryStatsImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -632,7 +632,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 510
+    .line 511
     :cond_0
     return-void
 .end method
@@ -645,36 +645,36 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 524
+    .line 525
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 525
+    .line 526
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
-    .line 526
+    .line 527
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
-    .line 533
+    .line 534
     :goto_0
     return-void
 
-    .line 528
+    .line 529
     :cond_0
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
-    .line 529
+    .line 530
     iput-wide p3, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
-    .line 530
+    .line 531
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
 
-    .line 531
+    .line 532
     invoke-virtual {p0, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
     move-result-wide v0
@@ -691,31 +691,31 @@
     .param p4, "realtime"    # J
 
     .prologue
-    .line 588
+    .line 589
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
     if-eq v1, p1, :cond_2
 
-    .line 589
+    .line 590
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRunning:Z
 
-    .line 590
+    .line 591
     if-eqz p1, :cond_0
 
-    .line 591
+    .line 592
     iput-wide p2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
-    .line 592
+    .line 593
     iput-wide p4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
-    .line 593
+    .line 594
     invoke-virtual {p0, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
 
-    .line 594
+    .line 595
     .local v4, "batteryUptime":J
     invoke-virtual {p0, p4, p5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
@@ -723,7 +723,7 @@
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedRealtime:J
 
-    .line 596
+    .line 597
     .local v6, "batteryRealtime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
@@ -737,7 +737,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 597
+    .line 598
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -750,12 +750,12 @@
 
     invoke-interface/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$TimeBaseObs;->onTimeStarted(JJJ)V
 
-    .line 596
+    .line 597
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 600
+    .line 601
     .end local v0    # "i":I
     .end local v4    # "batteryUptime":J
     .end local v6    # "batteryRealtime":J
@@ -770,7 +770,7 @@
 
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastUptime:J
 
-    .line 601
+    .line 602
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
     iget-wide v8, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
@@ -781,18 +781,18 @@
 
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mPastRealtime:J
 
-    .line 603
+    .line 604
     invoke-virtual {p0, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
     move-result-wide v4
 
-    .line 604
+    .line 605
     .restart local v4    # "batteryUptime":J
     invoke-virtual {p0, p4, p5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
     move-result-wide v6
 
-    .line 606
+    .line 607
     .restart local v6    # "batteryRealtime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
@@ -806,7 +806,7 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 607
+    .line 608
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -819,16 +819,16 @@
 
     invoke-interface/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$TimeBaseObs;->onTimeStopped(JJJ)V
 
-    .line 606
+    .line 607
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 610
+    .line 611
     :cond_1
     const/4 v1, 0x1
 
-    .line 612
+    .line 613
     .end local v0    # "i":I
     .end local v4    # "batteryUptime":J
     .end local v6    # "batteryRealtime":J
@@ -850,21 +850,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 621
+    .line 622
     invoke-virtual {p0, p2, p3, v2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeUptime(JI)J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 622
+    .line 623
     invoke-virtual {p0, p4, p5, v2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeRealtime(JI)J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 623
+    .line 624
     return-void
 .end method
 
@@ -875,54 +875,54 @@
     .param p4, "realtime"    # J
 
     .prologue
-    .line 638
+    .line 639
     invoke-virtual {p0, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
 
     move-result-wide v2
 
-    .line 639
+    .line 640
     .local v2, "runningUptime":J
     invoke-virtual {p0, p4, p5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
 
     move-result-wide v0
 
-    .line 640
+    .line 641
     .local v0, "runningRealtime":J
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 641
+    .line 642
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 642
+    .line 643
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUptimeStart:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 643
+    .line 644
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 644
+    .line 645
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 645
+    .line 646
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mRealtimeStart:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 646
+    .line 647
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedUptime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 647
+    .line 648
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->mUnpluggedRealtime:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 648
+    .line 649
     return-void
 .end method

@@ -23,6 +23,14 @@
     .end annotation
 .end method
 
+.method public abstract queryCFForServiceClass(ILjava/lang/String;I)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract queryCLIP()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -135,7 +143,7 @@
     .end annotation
 .end method
 
-.method public abstract updateCallForward(IILjava/lang/String;I)I
+.method public abstract updateCallForward(IILjava/lang/String;II)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -151,7 +159,7 @@
     .end annotation
 .end method
 
-.method public abstract updateCallWaiting(Z)I
+.method public abstract updateCallWaiting(ZI)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

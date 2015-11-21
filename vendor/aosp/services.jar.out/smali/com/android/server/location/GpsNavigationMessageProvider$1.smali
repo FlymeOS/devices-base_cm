@@ -71,7 +71,6 @@
 
 .method public bridge synthetic execute(Landroid/os/IInterface;)V
     .locals 0
-    .param p1, "x0"    # Landroid/os/IInterface;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -82,7 +81,6 @@
     .line 42
     check-cast p1, Landroid/location/IGpsNavigationMessageListener;
 
-    .end local p1    # "x0":Landroid/os/IInterface;
     invoke-virtual {p0, p1}, Lcom/android/server/location/GpsNavigationMessageProvider$1;->execute(Landroid/location/IGpsNavigationMessageListener;)V
 
     return-void

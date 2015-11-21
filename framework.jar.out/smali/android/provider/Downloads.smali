@@ -40,7 +40,7 @@
 
     sget-object v1, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v2, "notificationpackage=? AND notificationclass=?"
+    const-string/jumbo v2, "notificationpackage=? AND notificationclass=?"
 
     const/4 v3, 0x2
 

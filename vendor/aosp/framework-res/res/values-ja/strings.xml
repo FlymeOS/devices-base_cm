@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">この動画はこの端末にストリーミングできません。</string>
     <string name="selectTextMode">テキストを選択</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">なし</string>
     <string name="profile_picker_title">プロファイル</string>
     <string name="global_action_choose_profile">プロファイル</string>
+    <string name="profile_none">なし</string>
     <string name="global_action_screenshot">スクリーンショット</string>
     <string name="permlab_receiveProtectedSms">保護されたSMSの受信</string>
     <string name="permdesc_receiveProtectedSms">保護されたSMSの受信をアプリに許可します。</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">他のアプリでプライバシーガードを有効にするかどうかの変更をアプリに許可します。プライバシーガードを有効にしてアプリを実行すると、そのアプリは連絡先、通話履歴、メッセージなどの個人データにアクセスできなくなります。</string>
     <string name="privacy_guard_notification">プライバシーガードが有効です</string>
     <string name="privacy_guard_notification_detail">%1$sは個人データにアクセスできません</string>
-    <string name="permlab_useHardwareFramework">ハードウェアフレームワークの使用</string>
-    <string name="permdesc_useHardwareFramework">CMハードウェアフレームワークへのアクセスをアプリに許可します。</string>
     <string name="permlab_setKeyguardWallpaper">キーガードの壁紙の設定</string>
     <string name="permdesc_setKeyguardWallpaper">ロック画面の壁紙の変更をアプリに許可します。</string>
     <string name="privacy_guard_dialog_title">プライバシーガード</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">USBとネットワーク経由のADBが有効です</string>
     <string name="adb_active_generic_notification_message">タップしてデバッグを無効にします。</string>
     <string name="usb_choose_notification_title">タップしてUSBオプションを選択します。</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USBとネットワーク</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">ネットワーク</string>
     <string name="permlab_interceptPackageLaunch">アプリの起動の監視</string>
     <string name="permdesc_interceptPackageLaunch">他のアプリの起動を監視することをアプリに許可します</string>
     <string name="app_ops_access_camera">カメラへのアクセス</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">指紋%d</string>
     <string name="permlab_accessFingerprintService">指紋サービスへのアクセス</string>
     <string name="permdesc_accessFingerprintService">指紋サービスへのアクセスをアプリに許可します。アプリは指紋を追加、削除および認証することができます。</string>
+    <string name="permlab_resetBatteryStats">電池統計情報のリセット</string>
+    <string name="permdesc_resetBatteryStats">現在の電池消費量の低レベルデータをリセットすることをアプリに許可します。</string>
+    <string name="silent_mode_priority">優先順位</string>
+    <string name="silent_mode_none">なし</string>
+    <string name="subscription_change_disabled_wifi_ap">SIMサブスクリプションの変更によってWi-Fiアクセスポイントが無効になりました</string>
+    <string name="notify_turn_wifi_off_title">Wi-FiをOFFにする</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%Y年%-m月%-e日</string>
     <string name="time_of_day" formatted="false">%-k:%M:%S</string>
@@ -1783,12 +1791,6 @@
     <string name="stk_cc_ss_to_ss">SSリクエストは新しいSSリクエストに変更されました。</string>
     <string name="ellipsis">...</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USBとネットワーク</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">ネットワーク</string>
-    <string name="permlab_resetBatteryStats">電池統計情報のリセット</string>
-    <string name="permdesc_resetBatteryStats">現在の電池消費量の低レベルデータをリセットすることをアプリに許可します。</string>
-    <string name="silent_mode_priority">優先順位</string>
-    <string name="silent_mode_none">なし</string>
+    <string name="permlab_thirdPartyKeyguard">サードパーティのロック画面</string>
+    <string name="permdesc_thirdPartyKeyguard">パスワードのないロック画面として使用されることをアプリに許可します。</string>
 </resources>

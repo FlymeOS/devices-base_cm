@@ -555,7 +555,6 @@
     .end annotation
 
     .prologue
-    .line 259
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getCompleteVoiceMailNumberForSubscriber(I)Ljava/lang/String;
@@ -575,7 +574,6 @@
     .end annotation
 
     .prologue
-    .line 199
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getGroupIdLevel1ForSubscriber(I)Ljava/lang/String;
@@ -595,7 +593,6 @@
     .end annotation
 
     .prologue
-    .line 209
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIccSerialNumberForSubscriber(I)Ljava/lang/String;
@@ -612,7 +609,6 @@
     .param p4, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 317
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
@@ -632,7 +628,6 @@
     .end annotation
 
     .prologue
-    .line 167
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getImeiForSubscriber(I)Ljava/lang/String;
@@ -652,7 +647,6 @@
     .end annotation
 
     .prologue
-    .line 229
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getLine1AlphaTagForSubscriber(I)Ljava/lang/String;
@@ -672,7 +666,6 @@
     .end annotation
 
     .prologue
-    .line 219
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getLine1NumberForSubscriber(I)Ljava/lang/String;
@@ -692,7 +685,6 @@
     .end annotation
 
     .prologue
-    .line 239
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getMsisdnForSubscriber(I)Ljava/lang/String;
@@ -712,7 +704,6 @@
     .end annotation
 
     .prologue
-    .line 189
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getSubscriberIdForSubscriber(I)Ljava/lang/String;
@@ -732,7 +723,6 @@
     .end annotation
 
     .prologue
-    .line 269
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getVoiceMailAlphaTagForSubscriber(I)Ljava/lang/String;
@@ -752,7 +742,6 @@
     .end annotation
 
     .prologue
-    .line 249
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;->getVoiceMailNumberForSubscriber(I)Ljava/lang/String;

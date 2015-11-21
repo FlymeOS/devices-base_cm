@@ -12,9 +12,9 @@
     <string name="selectAll">Elekti ĉiujn</string>
     <string name="unknownName">Nekonate</string>
     <string name="untitled">&lt;Sentitola></string>
-    <string name="profile_none">Nenio</string>
     <string name="profile_picker_title">Profiloj</string>
     <string name="global_action_choose_profile">Profilo</string>
+    <string name="profile_none">Nenio</string>
     <string name="global_action_screenshot">Ekrankopio</string>
     <string name="permlab_receiveProtectedSms">Alvenis protektita SMS</string>
     <string name="permdesc_receiveProtectedSms">Permesi al la aplikaĵo ricevi alvenintan protektitan SMS.</string>
@@ -36,8 +36,6 @@
     <string name="permdesc_changePrivacyGuardState">Permesas al la aplikaĵo ŝanĝi ĉu alia aplikaĵo funkcias kun protektado de datumoj. Kiam aplikaĵo funkcias kun protektado de datumoj, ĝi ne rajtos aliri al personaj datumoj kiel kontaktuloj, protokoloj de alvokoj, aŭ mesaĝoj.</string>
     <string name="privacy_guard_notification">Protektado de datumoj aktiva</string>
     <string name="privacy_guard_notification_detail">%1$s ne povos aliri personajn datumojn</string>
-    <string name="permlab_useHardwareFramework">uzi la materialan framon</string>
-    <string name="permdesc_useHardwareFramework">Permesi al aplikaĵo aliron al la materialan framon de CM.</string>
     <string name="permlab_setKeyguardWallpaper">difini la ŝlosan ekranfonon</string>
     <string name="permdesc_setKeyguardWallpaper">Permesas al aplikaĵo ŝanĝi la ŝlosan fonekranon.</string>
     <string name="privacy_guard_dialog_title">Protektado de datumoj</string>
@@ -57,6 +55,10 @@
     <string name="adb_both_active_notification_title">ADB sur USB &amp; reto aktiva</string>
     <string name="adb_active_generic_notification_message">Tuŝeti por malŝalti sencimigon.</string>
     <string name="usb_choose_notification_title">Tuŝetu por elekti USB opciojn.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; reto</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Reto</string>
     <string name="permlab_interceptPackageLaunch">interkapti lanĉadon de aplikaĵo</string>
     <string name="permdesc_interceptPackageLaunch">Permesas aplikaĵon interkapti lanĉadon de aliaj aplikaĵoj</string>
     <string name="app_ops_access_camera">aliri al fotilo</string>
@@ -403,8 +405,4 @@
     <string name="write_fail_reason_cancelled">Nuligite</string>
     <string name="reason_unknown">nekonate</string>
     <string name="done_label">Farite</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; reto</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Reto</string>
 </resources>

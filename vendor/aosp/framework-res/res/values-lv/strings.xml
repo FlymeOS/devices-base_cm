@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Šis video nav derīgs straumēšanai uz šo ierīci.</string>
     <string name="selectTextMode">Atlasīt tekstu</string>
     <string name="status_bar_notification_info_overflow">Pārsniedz</string>
-    <string name="profile_none">Neviens</string>
     <string name="profile_picker_title">Profili</string>
     <string name="global_action_choose_profile">Profils</string>
+    <string name="profile_none">Neviens</string>
     <string name="global_action_screenshot">Ekrānattēls</string>
     <string name="permlab_receiveProtectedSms">saņemt aizsargātu īsziņu</string>
     <string name="permdesc_receiveProtectedSms">Ļauj lietotnēm saņemt aizsargātu ienākošo īsziņu.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Ļauj lietotnei mainīties pat ja cita lietotne lieto Privātuma Sargu. Kad lietotne darbojas ar privātuma sargu, tai nebūs pieejas personīgajiem datiem, kā kontakti, zvanu saraksts, vai īsziņas.</string>
     <string name="privacy_guard_notification">Privātuma Sargs ir aktīvs</string>
     <string name="privacy_guard_notification_detail">%1$s nevarēs piekļūt personīgajiem datiem</string>
-    <string name="permlab_useHardwareFramework">izmantot aparatūras ietvaru</string>
-    <string name="permdesc_useHardwareFramework">Ļauj lietotnei piekļūt CM aparatūras ietvaram.</string>
     <string name="permlab_setKeyguardWallpaper">iestatīt taustiņslēga tapeti</string>
     <string name="permdesc_setKeyguardWallpaper">Ļauj lietotnei manīt slēgekrāna tapeti.</string>
     <string name="privacy_guard_dialog_title">Privātuma sargs</string>

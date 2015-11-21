@@ -102,7 +102,7 @@
     .line 13
     sget-object v0, Landroid/provider/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "themes"
+    const-string/jumbo v1, "themes"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 

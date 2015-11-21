@@ -972,7 +972,6 @@
     .param p4, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 319
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3, p4}, Lcom/android/internal/telephony/PhoneSubInfo;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;

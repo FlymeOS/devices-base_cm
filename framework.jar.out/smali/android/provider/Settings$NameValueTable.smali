@@ -64,12 +64,12 @@
 
     .line 1048
     .local v1, "values":Landroid/content/ContentValues;
-    const-string v2, "name"
+    const-string/jumbo v2, "name"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1049
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

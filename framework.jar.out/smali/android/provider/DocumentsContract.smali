@@ -141,7 +141,7 @@
 
     move-result-object v0
 
-    const-string v1, "tree"
+    const-string/jumbo v1, "tree"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -275,7 +275,7 @@
 
     move-result-object v0
 
-    const-string v1, "tree"
+    const-string/jumbo v1, "tree"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -327,7 +327,7 @@
 
     move-result-object v0
 
-    const-string v1, "root"
+    const-string/jumbo v1, "root"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -337,7 +337,7 @@
 
     move-result-object v0
 
-    const-string v1, "recent"
+    const-string/jumbo v1, "recent"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -371,7 +371,7 @@
 
     move-result-object v0
 
-    const-string v1, "root"
+    const-string/jumbo v1, "root"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -408,7 +408,7 @@
 
     move-result-object v0
 
-    const-string v1, "root"
+    const-string/jumbo v1, "root"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -443,7 +443,7 @@
 
     move-result-object v0
 
-    const-string v1, "root"
+    const-string/jumbo v1, "root"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -453,13 +453,13 @@
 
     move-result-object v0
 
-    const-string v1, "search"
+    const-string/jumbo v1, "search"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    const-string v1, "query"
+    const-string/jumbo v1, "query"
 
     invoke-virtual {v0, v1, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -493,7 +493,7 @@
 
     move-result-object v0
 
-    const-string v1, "tree"
+    const-string/jumbo v1, "tree"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -530,12 +530,12 @@
 
     .line 914
     .local v0, "in":Landroid/os/Bundle;
-    const-string v2, "uri"
+    const-string/jumbo v2, "uri"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 915
-    const-string v2, "mime_type"
+    const-string/jumbo v2, "mime_type"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -555,7 +555,7 @@
 
     .line 919
     .local v1, "out":Landroid/os/Bundle;
-    const-string v2, "uri"
+    const-string/jumbo v2, "uri"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -649,7 +649,7 @@
 
     .line 985
     .local v0, "in":Landroid/os/Bundle;
-    const-string v1, "uri"
+    const-string/jumbo v1, "uri"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -785,7 +785,7 @@
 
     if-lt v1, v2, :cond_1
 
-    const-string v1, "tree"
+    const-string/jumbo v1, "tree"
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1326,7 +1326,7 @@
 
     if-lt v1, v2, :cond_0
 
-    const-string v1, "root"
+    const-string/jumbo v1, "root"
 
     const/4 v2, 0x0
 
@@ -1384,7 +1384,7 @@
 
     .prologue
     .line 771
-    const-string v0, "query"
+    const-string/jumbo v0, "query"
 
     invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1413,7 +1413,7 @@
 
     if-lt v1, v2, :cond_0
 
-    const-string v1, "tree"
+    const-string/jumbo v1, "tree"
 
     const/4 v2, 0x0
 
@@ -1524,7 +1524,7 @@
 
     if-ne v2, v3, :cond_0
 
-    const-string v2, "tree"
+    const-string/jumbo v2, "tree"
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1632,7 +1632,7 @@
 
     .prologue
     .line 781
-    const-string v0, "manage"
+    const-string/jumbo v0, "manage"
 
     const/4 v1, 0x0
 
@@ -1665,7 +1665,7 @@
 
     if-lt v2, v3, :cond_0
 
-    const-string v2, "tree"
+    const-string/jumbo v2, "tree"
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1910,7 +1910,7 @@
 
     .line 953
     .local v0, "in":Landroid/os/Bundle;
-    const-string v3, "uri"
+    const-string/jumbo v3, "uri"
 
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -1930,7 +1930,7 @@
 
     .line 957
     .local v1, "out":Landroid/os/Bundle;
-    const-string v3, "uri"
+    const-string/jumbo v3, "uri"
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -2027,9 +2027,9 @@
 
     move-result-object v0
 
-    const-string v1, "manage"
+    const-string/jumbo v1, "manage"
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 

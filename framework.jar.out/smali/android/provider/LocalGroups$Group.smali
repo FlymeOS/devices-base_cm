@@ -85,7 +85,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/provider/LocalGroups$Group;->setId(J)V
 
     .line 96
-    const-string v1, "title"
+    const-string/jumbo v1, "title"
 
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -216,13 +216,13 @@
     .line 131
     sget-object v2, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v3, "mimetype=? and data1=?"
+    const-string/jumbo v3, "mimetype=? and data1=?"
 
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/String;
 
-    const-string v5, "vnd.android.cursor.item/local-groups"
+    const-string/jumbo v5, "vnd.android.cursor.item/local-groups"
 
     aput-object v5, v4, v1
 
@@ -389,7 +389,7 @@
 
     .line 103
     .local v0, "values":Landroid/content/ContentValues;
-    const-string v1, "title"
+    const-string/jumbo v1, "title"
 
     invoke-virtual {p0}, Landroid/provider/LocalGroups$Group;->getTitle()Ljava/lang/String;
 

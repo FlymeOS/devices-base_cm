@@ -56,6 +56,8 @@
 
 .field static final TRANSACTION_onSignalStrengthsChanged:I = 0x9
 
+.field static final TRANSACTION_onUnregistered:I = 0x11
+
 .field static final TRANSACTION_onVoLteServiceStateChanged:I = 0xf
 
 
@@ -152,7 +154,7 @@
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 213
+    .line 219
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -621,6 +623,18 @@
 
     goto/16 :goto_0
 
+    .line 214
+    .end local v0    # "_arg0":[B
+    :sswitch_11
+    const-string v4, "com.android.internal.telephony.IPhoneStateListener"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 215
+    invoke-virtual {p0}, Lcom/android/internal/telephony/IPhoneStateListener$Stub;->onUnregistered()V
+
+    goto/16 :goto_0
+
     .line 38
     :sswitch_data_0
     .sparse-switch
@@ -640,6 +654,7 @@
         0xe -> :sswitch_e
         0xf -> :sswitch_f
         0x10 -> :sswitch_10
+        0x11 -> :sswitch_11
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

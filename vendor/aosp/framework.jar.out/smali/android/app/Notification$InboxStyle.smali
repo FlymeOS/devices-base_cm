@@ -294,7 +294,7 @@
     .restart local v4    # "largeText":Z
     .restart local v10    # "subTextSize":F
     :cond_3
-    const v12, 0x1020344
+    const v12, 0x1020345
 
     iget-object v11, p0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
 
@@ -310,7 +310,7 @@
     invoke-virtual {v1, v12, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 4113
-    const v12, 0x1020343
+    const v12, 0x1020344
 
     iget-object v11, p0, Landroid/app/Notification$InboxStyle;->mTexts:Ljava/util/ArrayList;
 
@@ -339,7 +339,7 @@
     .line 4120
     iget-object v11, p0, Landroid/app/Notification$InboxStyle;->mBuilder:Landroid/app/Notification$Builder;
 
-    const v12, 0x1020337
+    const v12, 0x1020338
 
     # invokes: Landroid/app/Notification$Builder;->addProfileBadge(Landroid/widget/RemoteViews;I)Z
     invoke-static {v11, v1, v12}, Landroid/app/Notification$Builder;->access$1500(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;I)Z
@@ -364,13 +364,13 @@
 
     :array_0
     .array-data 4
-        0x102033c
         0x102033d
         0x102033e
         0x102033f
         0x1020340
         0x1020341
         0x1020342
+        0x1020343
     .end array-data
 .end method
 

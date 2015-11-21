@@ -1281,7 +1281,7 @@
 
     move-result-object v7
 
-    const v8, 0x1120084
+    const v8, 0x112008a
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1294,7 +1294,7 @@
 
     move-result-object v7
 
-    const v8, 0x11200b1
+    const v8, 0x11200b7
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1649,7 +1649,7 @@
 
     move-result-object v7
 
-    const v8, 0x1120082
+    const v8, 0x1120088
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3758,7 +3758,7 @@
 
     move-result-object v11
 
-    const v12, 0x112004d
+    const v12, 0x1120053
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -44820,7 +44820,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120088
+    const v1, 0x112008e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -46038,7 +46038,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120085
+    const v5, 0x112008b
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -46052,7 +46052,7 @@
 
     move-result-object v4
 
-    const v5, 0x1120087
+    const v5, 0x112008d
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 

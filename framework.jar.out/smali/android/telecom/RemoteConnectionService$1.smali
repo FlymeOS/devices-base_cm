@@ -1246,9 +1246,7 @@
     .param p2, "callCapabilities"    # I
 
     .prologue
-    .line 173
     invoke-virtual {p0, p1, p2}, Landroid/telecom/RemoteConnectionService$1;->setConnectionCapabilities(Ljava/lang/String;I)V
 
-    .line 174
     return-void
 .end method

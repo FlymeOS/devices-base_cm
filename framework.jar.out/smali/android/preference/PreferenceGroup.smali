@@ -174,13 +174,11 @@
 
 .method public bridge synthetic addItemFromInflater(Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 45
     check-cast p1, Landroid/preference/Preference;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/preference/PreferenceGroup;->addItemFromInflater(Landroid/preference/Preference;)V
 
     return-void

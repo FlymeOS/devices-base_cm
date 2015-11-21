@@ -52,6 +52,8 @@
 # instance fields
 .field public code:I
 
+.field public history:[Ljava/lang/String;
+
 .field public index:I
 
 .field public notificationType:I
@@ -78,7 +80,7 @@
     .locals 3
 
     .prologue
-    .line 66
+    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,6 +131,18 @@
     iget v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->index:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " history: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->history:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

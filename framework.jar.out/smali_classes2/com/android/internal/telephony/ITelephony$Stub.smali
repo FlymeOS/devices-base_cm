@@ -34,7 +34,7 @@
 
 .field static final TRANSACTION_call:I = 0x2
 
-.field static final TRANSACTION_checkCarrierPrivilegesForPackage:I = 0x69
+.field static final TRANSACTION_checkCarrierPrivilegesForPackage_104:I = 0x69
 
 .field static final TRANSACTION_dial:I = 0x1
 
@@ -68,7 +68,7 @@
 
 .field static final TRANSACTION_getAtrUsingSubId:I = 0x72
 
-.field static final TRANSACTION_getCalculatedPreferredNetworkType:I = 0x5e
+.field static final TRANSACTION_getCalculatedPreferredNetworkType_93:I = 0x5e
 
 .field static final TRANSACTION_getCallState:I = 0x2d
 
@@ -114,7 +114,7 @@
 
 .field static final TRANSACTION_getLine1AlphaTagForDisplay_108:I = 0x6d
 
-.field static final TRANSACTION_getLine1NumberForDisplay_107:I = 0x6c
+.field static final TRANSACTION_getLine1NumberForDisplay:I = 0x6c
 
 .field static final TRANSACTION_getLteOnCdmaModeForSubscriber:I = 0x47
 
@@ -162,15 +162,15 @@
 
 .field static final TRANSACTION_iccOpenLogicalChannelUsingSubId:I = 0x50
 
-.field static final TRANSACTION_iccTransmitApduBasicChannelUsingSubId:I = 0x56
+.field static final TRANSACTION_iccTransmitApduBasicChannel:I = 0x55
 
-.field static final TRANSACTION_iccTransmitApduBasicChannel_84:I = 0x55
+.field static final TRANSACTION_iccTransmitApduBasicChannelUsingSubId_85:I = 0x56
 
 .field static final TRANSACTION_iccTransmitApduLogicalChannelUsingSubId_83:I = 0x54
 
 .field static final TRANSACTION_iccTransmitApduLogicalChannel_82:I = 0x53
 
-.field static final TRANSACTION_invokeOemRilRequestRaw:I = 0x70
+.field static final TRANSACTION_invokeOemRilRequestRaw_111:I = 0x70
 
 .field static final TRANSACTION_isDataConnectivityPossible:I = 0x29
 
@@ -196,7 +196,7 @@
 
 .field static final TRANSACTION_isSimPinEnabled:I = 0x11
 
-.field static final TRANSACTION_isVideoCallingEnabled:I = 0x76
+.field static final TRANSACTION_isVideoCallingEnabled_117:I = 0x76
 
 .field static final TRANSACTION_needMobileRadioShutdown:I = 0x73
 
@@ -206,9 +206,9 @@
 
 .field static final TRANSACTION_nvResetConfig:I = 0x5d
 
-.field static final TRANSACTION_nvWriteCdmaPrl_91:I = 0x5c
+.field static final TRANSACTION_nvWriteCdmaPrl:I = 0x5c
 
-.field static final TRANSACTION_nvWriteItem:I = 0x5b
+.field static final TRANSACTION_nvWriteItem_90:I = 0x5b
 
 .field static final TRANSACTION_revokeProtectedSmsAddress:I = 0x4d
 
@@ -224,7 +224,7 @@
 
 .field static final TRANSACTION_setOperatorBrandOverride_109:I = 0x6e
 
-.field static final TRANSACTION_setPreferredNetworkType_96:I = 0x61
+.field static final TRANSACTION_setPreferredNetworkType:I = 0x61
 
 .field static final TRANSACTION_setRadio:I = 0x1e
 

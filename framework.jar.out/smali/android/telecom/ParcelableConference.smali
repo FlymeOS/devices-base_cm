@@ -427,7 +427,6 @@
     .locals 1
 
     .prologue
-    .line 103
     invoke-virtual {p0}, Landroid/telecom/ParcelableConference;->getConnectionCapabilities()I
 
     move-result v0

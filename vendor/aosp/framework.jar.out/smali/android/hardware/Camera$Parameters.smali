@@ -492,12 +492,12 @@
     .locals 2
 
     .prologue
-    .line 2724
+    .line 2733
     iput-object p1, p0, Landroid/hardware/Camera$Parameters;->this$0:Landroid/hardware/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2725
+    .line 2734
     new-instance v0, Ljava/util/LinkedHashMap;
 
     const/16 v1, 0x40
@@ -506,7 +506,7 @@
 
     iput-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
-    .line 2726
+    .line 2735
     return-void
 .end method
 
@@ -516,7 +516,7 @@
     .param p2, "x1"    # Landroid/hardware/Camera$1;
 
     .prologue
-    .line 2349
+    .line 2358
     invoke-direct {p0, p1}, Landroid/hardware/Camera$Parameters;-><init>(Landroid/hardware/Camera;)V
 
     return-void
@@ -527,7 +527,7 @@
     .param p0, "x0"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 2349
+    .line 2358
     invoke-direct {p0}, Landroid/hardware/Camera$Parameters;->getOuter()Landroid/hardware/Camera;
 
     move-result-object v0
@@ -540,52 +540,52 @@
     .param p1, "pixel_format"    # I
 
     .prologue
-    .line 3342
+    .line 3351
     sparse-switch p1, :sswitch_data_0
 
-    .line 3349
+    .line 3358
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 3343
+    .line 3352
     :sswitch_0
     const-string/jumbo v0, "yuv422sp"
 
     goto :goto_0
 
-    .line 3344
+    .line 3353
     :sswitch_1
     const-string/jumbo v0, "yuv420sp"
 
     goto :goto_0
 
-    .line 3345
+    .line 3354
     :sswitch_2
     const-string/jumbo v0, "yuv422i-yuyv"
 
     goto :goto_0
 
-    .line 3346
+    .line 3355
     :sswitch_3
     const-string/jumbo v0, "yuv420p"
 
     goto :goto_0
 
-    .line 3347
+    .line 3356
     :sswitch_4
     const-string/jumbo v0, "rgb565"
 
     goto :goto_0
 
-    .line 3348
+    .line 3357
     :sswitch_5
     const-string v0, "jpeg"
 
     goto :goto_0
 
-    .line 3342
+    .line 3351
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_4
@@ -603,7 +603,7 @@
     .param p2, "defaultValue"    # F
 
     .prologue
-    .line 4413
+    .line 4422
     :try_start_0
     iget-object v1, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
@@ -619,17 +619,17 @@
 
     move-result p2
 
-    .line 4415
+    .line 4424
     .end local p2    # "defaultValue":F
     :goto_0
     return p2
 
-    .line 4414
+    .line 4423
     .restart local p2    # "defaultValue":F
     :catch_0
     move-exception v0
 
-    .line 4415
+    .line 4424
     .local v0, "ex":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -640,7 +640,7 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 4422
+    .line 4431
     :try_start_0
     iget-object v1, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
@@ -656,17 +656,17 @@
 
     move-result p2
 
-    .line 4424
+    .line 4433
     .end local p2    # "defaultValue":I
     :goto_0
     return p2
 
-    .line 4423
+    .line 4432
     .restart local p2    # "defaultValue":I
     :catch_0
     move-exception v0
 
-    .line 4424
+    .line 4433
     .local v0, "ex":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -675,7 +675,7 @@
     .locals 1
 
     .prologue
-    .line 2744
+    .line 2753
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->this$0:Landroid/hardware/Camera;
 
     return-object v0
@@ -688,15 +688,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3354
+    .line 3363
     if-nez p1, :cond_1
 
-    .line 3375
+    .line 3384
     :cond_0
     :goto_0
     return v0
 
-    .line 3357
+    .line 3366
     :cond_1
     const-string/jumbo v1, "yuv422sp"
 
@@ -706,12 +706,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 3358
+    .line 3367
     const/16 v0, 0x10
 
     goto :goto_0
 
-    .line 3360
+    .line 3369
     :cond_2
     const-string/jumbo v1, "yuv420sp"
 
@@ -721,12 +721,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 3361
+    .line 3370
     const/16 v0, 0x11
 
     goto :goto_0
 
-    .line 3363
+    .line 3372
     :cond_3
     const-string/jumbo v1, "yuv422i-yuyv"
 
@@ -736,12 +736,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 3364
+    .line 3373
     const/16 v0, 0x14
 
     goto :goto_0
 
-    .line 3366
+    .line 3375
     :cond_4
     const-string/jumbo v1, "yuv420p"
 
@@ -751,12 +751,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 3367
+    .line 3376
     const v0, 0x32315659
 
     goto :goto_0
 
-    .line 3369
+    .line 3378
     :cond_5
     const-string/jumbo v1, "rgb565"
 
@@ -766,12 +766,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 3370
+    .line 3379
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 3372
+    .line 3381
     :cond_6
     const-string v1, "jpeg"
 
@@ -781,7 +781,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3373
+    .line 3382
     const/16 v0, 0x100
 
     goto :goto_0
@@ -793,17 +793,17 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 2858
+    .line 2867
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2859
+    .line 2868
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2860
+    .line 2869
     return-void
 .end method
 
@@ -815,17 +815,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4522
+    .line 4531
     if-nez p1, :cond_1
 
     if-nez p2, :cond_1
 
-    .line 4524
+    .line 4533
     :cond_0
     :goto_0
     return v0
 
-    .line 4523
+    .line 4532
     :cond_1
     if-eqz p1, :cond_2
 
@@ -835,7 +835,7 @@
 
     if-nez v1, :cond_0
 
-    .line 4524
+    .line 4533
     :cond_2
     const/4 v0, 0x0
 
@@ -860,25 +860,25 @@
     .local p2, "areas":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Area;>;"
     const/16 v5, 0x2c
 
-    .line 2863
+    .line 2872
     if-nez p2, :cond_0
 
-    .line 2864
+    .line 2873
     const-string v4, "(0,0,0,0,0)"
 
     invoke-virtual {p0, p1, v4}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2885
+    .line 2894
     :goto_0
     return-void
 
-    .line 2866
+    .line 2875
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2867
+    .line 2876
     .local v1, "buffer":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
@@ -890,66 +890,66 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 2868
+    .line 2877
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/Camera$Area;
 
-    .line 2869
+    .line 2878
     .local v0, "area":Landroid/hardware/Camera$Area;
     iget-object v3, v0, Landroid/hardware/Camera$Area;->rect:Landroid/graphics/Rect;
 
-    .line 2870
+    .line 2879
     .local v3, "rect":Landroid/graphics/Rect;
     const/16 v4, 0x28
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2871
+    .line 2880
     iget v4, v3, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2872
+    .line 2881
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2873
+    .line 2882
     iget v4, v3, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2874
+    .line 2883
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2875
+    .line 2884
     iget v4, v3, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2876
+    .line 2885
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2877
+    .line 2886
     iget v4, v3, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2878
+    .line 2887
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2879
+    .line 2888
     iget v4, v0, Landroid/hardware/Camera$Area;->weight:I
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2880
+    .line 2889
     const/16 v4, 0x29
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2881
+    .line 2890
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -960,13 +960,13 @@
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2867
+    .line 2876
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2883
+    .line 2892
     .end local v0    # "area":Landroid/hardware/Camera$Area;
     .end local v3    # "rect":Landroid/graphics/Rect;
     :cond_2
@@ -995,16 +995,16 @@
     .end annotation
 
     .prologue
-    .line 4360
+    .line 4369
     if-nez p1, :cond_1
 
     const/4 v3, 0x0
 
-    .line 4368
+    .line 4377
     :cond_0
     return-object v3
 
-    .line 4362
+    .line 4371
     :cond_1
     new-instance v2, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1012,16 +1012,16 @@
 
     invoke-direct {v2, v4}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4363
+    .line 4372
     .local v2, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v2, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4364
+    .line 4373
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4365
+    .line 4374
     .local v3, "substrings":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-interface {v2}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1041,7 +1041,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4366
+    .line 4375
     .local v1, "s":Ljava/lang/String;
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1070,8 +1070,14 @@
 
     const/4 v11, 0x0
 
-    .line 4489
+    .line 4498
     if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_0
 
     invoke-virtual {p1, v11}, Ljava/lang/String;->charAt(I)C
 
@@ -1095,7 +1101,7 @@
 
     if-eq v7, v8, :cond_2
 
-    .line 4491
+    .line 4500
     :cond_0
     const-string v7, "Camera"
 
@@ -1121,28 +1127,28 @@
 
     move-object v5, v6
 
-    .line 4518
+    .line 4527
     :cond_1
     :goto_0
     return-object v5
 
-    .line 4495
+    .line 4504
     :cond_2
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4496
+    .line 4505
     .local v5, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/Camera$Area;>;"
     const/4 v3, 0x1
 
-    .line 4497
+    .line 4506
     .local v3, "fromIndex":I
     const/4 v7, 0x5
 
     new-array v1, v7, [I
 
-    .line 4499
+    .line 4508
     .local v1, "array":[I
     :cond_3
     const-string v7, "),("
@@ -1151,7 +1157,7 @@
 
     move-result v2
 
-    .line 4500
+    .line 4509
     .local v2, "endIndex":I
     const/4 v7, -0x1
 
@@ -1163,7 +1169,7 @@
 
     add-int/lit8 v2, v7, -0x1
 
-    .line 4501
+    .line 4510
     :cond_4
     invoke-virtual {p1, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1171,7 +1177,7 @@
 
     invoke-direct {p0, v7, v1}, Landroid/hardware/Camera$Parameters;->splitInt(Ljava/lang/String;[I)V
 
-    .line 4502
+    .line 4511
     new-instance v4, Landroid/graphics/Rect;
 
     aget v7, v1, v11
@@ -1188,7 +1194,7 @@
 
     invoke-direct {v4, v7, v8, v9, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 4503
+    .line 4512
     .local v4, "rect":Landroid/graphics/Rect;
     new-instance v7, Landroid/hardware/Camera$Area;
 
@@ -1200,10 +1206,10 @@
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4504
+    .line 4513
     add-int/lit8 v3, v2, 0x3
 
-    .line 4505
+    .line 4514
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -1212,7 +1218,7 @@
 
     if-ne v2, v7, :cond_3
 
-    .line 4507
+    .line 4516
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v7
@@ -1223,7 +1229,7 @@
 
     goto :goto_0
 
-    .line 4509
+    .line 4518
     :cond_5
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -1231,18 +1237,18 @@
 
     if-ne v7, v12, :cond_1
 
-    .line 4510
+    .line 4519
     invoke-virtual {v5, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/Camera$Area;
 
-    .line 4511
+    .line 4520
     .local v0, "area":Landroid/hardware/Camera$Area;
     iget-object v4, v0, Landroid/hardware/Camera$Area;->rect:Landroid/graphics/Rect;
 
-    .line 4512
+    .line 4521
     iget v7, v4, Landroid/graphics/Rect;->left:I
 
     if-nez v7, :cond_1
@@ -1265,7 +1271,7 @@
 
     move-object v5, v6
 
-    .line 4514
+    .line 4523
     goto :goto_0
 .end method
 
@@ -1287,17 +1293,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 5724
+    .line 5733
     if-nez p1, :cond_1
 
     move-object v1, v5
 
-    .line 5733
+    .line 5742
     :cond_0
     :goto_0
     return-object v1
 
-    .line 5725
+    .line 5734
     :cond_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1305,16 +1311,16 @@
 
     invoke-direct {v4, v6}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 5726
+    .line 5735
     .local v4, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v4, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 5727
+    .line 5736
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5728
+    .line 5737
     .local v1, "coordinateList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/Camera$Coordinate;>;"
     invoke-interface {v4}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1335,13 +1341,13 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 5729
+    .line 5738
     .local v3, "s":Ljava/lang/String;
     invoke-direct {p0, v3}, Landroid/hardware/Camera$Parameters;->strToCoordinate(Ljava/lang/String;)Landroid/hardware/Camera$Coordinate;
 
     move-result-object v0
 
-    .line 5730
+    .line 5739
     .local v0, "coordinate":Landroid/hardware/Camera$Coordinate;
     if-eqz v0, :cond_2
 
@@ -1349,7 +1355,7 @@
 
     goto :goto_1
 
-    .line 5732
+    .line 5741
     .end local v0    # "coordinate":Landroid/hardware/Camera$Coordinate;
     .end local v3    # "s":Ljava/lang/String;
     :cond_3
@@ -1370,14 +1376,14 @@
     .param p2, "output"    # [F
 
     .prologue
-    .line 4400
+    .line 4409
     if-nez p1, :cond_1
 
-    .line 4408
+    .line 4417
     :cond_0
     return-void
 
-    .line 4402
+    .line 4411
     :cond_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1385,14 +1391,14 @@
 
     invoke-direct {v4, v5}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4403
+    .line 4412
     .local v4, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v4, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4404
+    .line 4413
     const/4 v1, 0x0
 
-    .line 4405
+    .line 4414
     .local v1, "index":I
     invoke-interface {v4}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1412,7 +1418,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 4406
+    .line 4415
     .local v3, "s":Ljava/lang/String;
     add-int/lit8 v2, v1, 0x1
 
@@ -1426,7 +1432,7 @@
 
     move v1, v2
 
-    .line 4407
+    .line 4416
     .end local v2    # "index":I
     .restart local v1    # "index":I
     goto :goto_0
@@ -1450,17 +1456,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4374
+    .line 4383
     if-nez p1, :cond_1
 
     move-object v3, v4
 
-    .line 4383
+    .line 4392
     :cond_0
     :goto_0
     return-object v3
 
-    .line 4376
+    .line 4385
     :cond_1
     new-instance v2, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1468,16 +1474,16 @@
 
     invoke-direct {v2, v5}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4377
+    .line 4386
     .local v2, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v2, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4378
+    .line 4387
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4379
+    .line 4388
     .local v3, "substrings":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1497,7 +1503,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4380
+    .line 4389
     .local v1, "s":Ljava/lang/String;
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1511,7 +1517,7 @@
 
     goto :goto_1
 
-    .line 4382
+    .line 4391
     .end local v1    # "s":Ljava/lang/String;
     :cond_2
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -1531,14 +1537,14 @@
     .param p2, "output"    # [I
 
     .prologue
-    .line 4387
+    .line 4396
     if-nez p1, :cond_1
 
-    .line 4396
+    .line 4405
     :cond_0
     return-void
 
-    .line 4389
+    .line 4398
     :cond_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1546,14 +1552,14 @@
 
     invoke-direct {v4, v5}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4390
+    .line 4399
     .local v4, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v4, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4391
+    .line 4400
     const/4 v1, 0x0
 
-    .line 4392
+    .line 4401
     .local v1, "index":I
     invoke-interface {v4}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1573,7 +1579,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 4393
+    .line 4402
     .local v3, "s":Ljava/lang/String;
     const-string v5, "\\s"
 
@@ -1583,7 +1589,7 @@
 
     move-result-object v3
 
-    .line 4394
+    .line 4403
     add-int/lit8 v2, v1, 0x1
 
     .end local v1    # "index":I
@@ -1596,7 +1602,7 @@
 
     move v1, v2
 
-    .line 4395
+    .line 4404
     .end local v2    # "index":I
     .restart local v1    # "index":I
     goto :goto_0
@@ -1618,8 +1624,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4464
+    .line 4473
     if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
 
     const/4 v5, 0x0
 
@@ -1645,7 +1657,7 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 4466
+    .line 4475
     :cond_0
     const-string v5, "Camera"
 
@@ -1671,29 +1683,29 @@
 
     move-object v3, v4
 
-    .line 4482
+    .line 4491
     :cond_1
     :goto_0
     return-object v3
 
-    .line 4470
+    .line 4479
     :cond_2
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4471
+    .line 4480
     .local v3, "rangeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[I>;"
     const/4 v1, 0x1
 
-    .line 4473
+    .line 4482
     .local v1, "fromIndex":I
     :cond_3
     const/4 v5, 0x2
 
     new-array v2, v5, [I
 
-    .line 4474
+    .line 4483
     .local v2, "range":[I
     const-string v5, "),("
 
@@ -1701,7 +1713,7 @@
 
     move-result v0
 
-    .line 4475
+    .line 4484
     .local v0, "endIndex":I
     const/4 v5, -0x1
 
@@ -1713,7 +1725,7 @@
 
     add-int/lit8 v0, v5, -0x1
 
-    .line 4476
+    .line 4485
     :cond_4
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1721,13 +1733,13 @@
 
     invoke-direct {p0, v5, v2}, Landroid/hardware/Camera$Parameters;->splitInt(Ljava/lang/String;[I)V
 
-    .line 4477
+    .line 4486
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4478
+    .line 4487
     add-int/lit8 v1, v0, 0x3
 
-    .line 4479
+    .line 4488
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -1736,7 +1748,7 @@
 
     if-ne v0, v5, :cond_3
 
-    .line 4481
+    .line 4490
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v5
@@ -1766,17 +1778,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4431
+    .line 4440
     if-nez p1, :cond_1
 
     move-object v3, v5
 
-    .line 4441
+    .line 4450
     :cond_0
     :goto_0
     return-object v3
 
-    .line 4433
+    .line 4442
     :cond_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1784,16 +1796,16 @@
 
     invoke-direct {v4, v6}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4434
+    .line 4443
     .local v4, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v4, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4435
+    .line 4444
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4436
+    .line 4445
     .local v3, "sizeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/Camera$Size;>;"
     invoke-interface {v4}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
@@ -1814,13 +1826,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4437
+    .line 4446
     .local v1, "s":Ljava/lang/String;
     invoke-direct {p0, v1}, Landroid/hardware/Camera$Parameters;->strToSize(Ljava/lang/String;)Landroid/hardware/Camera$Size;
 
     move-result-object v2
 
-    .line 4438
+    .line 4447
     .local v2, "size":Landroid/hardware/Camera$Size;
     if-eqz v2, :cond_2
 
@@ -1828,7 +1840,7 @@
 
     goto :goto_1
 
-    .line 4440
+    .line 4449
     .end local v1    # "s":Ljava/lang/String;
     .end local v2    # "size":Landroid/hardware/Camera$Size;
     :cond_3
@@ -1850,14 +1862,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5739
+    .line 5748
     if-nez p1, :cond_0
 
-    .line 5749
+    .line 5758
     :goto_0
     return-object v3
 
-    .line 5741
+    .line 5750
     :cond_0
     const/16 v4, 0x78
 
@@ -1865,20 +1877,20 @@
 
     move-result v0
 
-    .line 5742
+    .line 5751
     .local v0, "pos":I
     const/4 v4, -0x1
 
     if-eq v0, v4, :cond_1
 
-    .line 5743
+    .line 5752
     const/4 v3, 0x0
 
     invoke-virtual {p1, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5744
+    .line 5753
     .local v1, "x":Ljava/lang/String;
     add-int/lit8 v3, v0, 0x1
 
@@ -1886,7 +1898,7 @@
 
     move-result-object v2
 
-    .line 5745
+    .line 5754
     .local v2, "y":Ljava/lang/String;
     new-instance v3, Landroid/hardware/Camera$Coordinate;
 
@@ -1904,7 +1916,7 @@
 
     goto :goto_0
 
-    .line 5748
+    .line 5757
     .end local v1    # "x":Ljava/lang/String;
     .end local v2    # "y":Ljava/lang/String;
     :cond_1
@@ -1940,14 +1952,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4447
+    .line 4456
     if-nez p1, :cond_0
 
-    .line 4457
+    .line 4466
     :goto_0
     return-object v3
 
-    .line 4449
+    .line 4458
     :cond_0
     const/16 v4, 0x78
 
@@ -1955,20 +1967,20 @@
 
     move-result v1
 
-    .line 4450
+    .line 4459
     .local v1, "pos":I
     const/4 v4, -0x1
 
     if-eq v1, v4, :cond_1
 
-    .line 4451
+    .line 4460
     const/4 v3, 0x0
 
     invoke-virtual {p1, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4452
+    .line 4461
     .local v2, "width":Ljava/lang/String;
     add-int/lit8 v3, v1, 0x1
 
@@ -1976,7 +1988,7 @@
 
     move-result-object v0
 
-    .line 4453
+    .line 4462
     .local v0, "height":Ljava/lang/String;
     new-instance v3, Landroid/hardware/Camera$Size;
 
@@ -1994,7 +2006,7 @@
 
     goto :goto_0
 
-    .line 4456
+    .line 4465
     .end local v0    # "height":Ljava/lang/String;
     .end local v2    # "width":Ljava/lang/String;
     :cond_1
@@ -2030,10 +2042,10 @@
     .param p1, "other"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 2736
+    .line 2745
     if-nez p1, :cond_0
 
-    .line 2737
+    .line 2746
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string/jumbo v1, "other must not be null"
@@ -2042,7 +2054,7 @@
 
     throw v0
 
-    .line 2740
+    .line 2749
     :cond_0
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
@@ -2050,7 +2062,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->putAll(Ljava/util/Map;)V
 
-    .line 2741
+    .line 2750
     return-void
 .end method
 
@@ -2060,7 +2072,7 @@
     .end annotation
 
     .prologue
-    .line 2767
+    .line 2776
     const-string v2, "Camera"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2089,7 +2101,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2768
+    .line 2777
     iget-object v2, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v2}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
@@ -2114,7 +2126,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 2769
+    .line 2778
     .local v1, "k":Ljava/lang/String;
     const-string v3, "Camera"
 
@@ -2158,7 +2170,7 @@
 
     goto :goto_0
 
-    .line 2771
+    .line 2780
     .end local v1    # "k":Ljava/lang/String;
     :cond_0
     return-void
@@ -2168,14 +2180,14 @@
     .locals 4
 
     .prologue
-    .line 2782
+    .line 2791
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v3, 0x80
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2783
+    .line 2792
     .local v0, "flattened":Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
@@ -2201,16 +2213,16 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2784
+    .line 2793
     .local v2, "k":Ljava/lang/String;
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2785
+    .line 2794
     const-string v3, "="
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2786
+    .line 2795
     iget-object v3, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2221,14 +2233,14 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2787
+    .line 2796
     const-string v3, ";"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2790
+    .line 2799
     .end local v2    # "k":Ljava/lang/String;
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -2239,7 +2251,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 2791
+    .line 2800
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2252,7 +2264,7 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 2894
+    .line 2903
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2268,7 +2280,7 @@
     .locals 1
 
     .prologue
-    .line 5325
+    .line 5334
     const-string v0, "ae-bracket-hdr"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2282,7 +2294,7 @@
     .locals 1
 
     .prologue
-    .line 3608
+    .line 3617
     const-string v0, "antibanding"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2296,7 +2308,7 @@
     .locals 1
 
     .prologue
-    .line 5439
+    .line 5448
     const-string v0, "auto-exposure"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2310,14 +2322,14 @@
     .locals 2
 
     .prologue
-    .line 3903
+    .line 3912
     const-string v1, "auto-exposure-lock"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3904
+    .line 3913
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -2332,14 +2344,14 @@
     .locals 2
 
     .prologue
-    .line 3975
+    .line 3984
     const-string v1, "auto-whitebalance-lock"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3976
+    .line 3985
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -2354,7 +2366,7 @@
     .locals 1
 
     .prologue
-    .line 5540
+    .line 5549
     const-string v0, "camera-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2368,7 +2380,7 @@
     .locals 1
 
     .prologue
-    .line 3571
+    .line 3580
     const-string v0, "effect"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2382,7 +2394,7 @@
     .locals 1
 
     .prologue
-    .line 5629
+    .line 5638
     const-string v0, "continuous-af"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2396,7 +2408,7 @@
     .locals 1
 
     .prologue
-    .line 5170
+    .line 5179
     const-string v0, "contrast"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2410,7 +2422,7 @@
     .locals 1
 
     .prologue
-    .line 5570
+    .line 5579
     const-string/jumbo v0, "manual-focus-position"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2424,7 +2436,7 @@
     .locals 1
 
     .prologue
-    .line 5618
+    .line 5627
     const-string v0, "denoise"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2438,7 +2450,7 @@
     .locals 2
 
     .prologue
-    .line 3803
+    .line 3812
     const-string v0, "exposure-compensation"
 
     const/4 v1, 0x0
@@ -2454,7 +2466,7 @@
     .locals 2
 
     .prologue
-    .line 3851
+    .line 3860
     const-string v0, "exposure-compensation-step"
 
     const/4 v1, 0x0
@@ -2470,7 +2482,7 @@
     .locals 1
 
     .prologue
-    .line 5393
+    .line 5402
     const-string v0, "exposure-time"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2484,7 +2496,7 @@
     .locals 1
 
     .prologue
-    .line 5678
+    .line 5687
     const-string v0, "face-detection"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2498,7 +2510,7 @@
     .locals 1
 
     .prologue
-    .line 3699
+    .line 3708
     const-string v0, "flash-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2512,7 +2524,7 @@
     .locals 1
 
     .prologue
-    .line 3771
+    .line 3780
     const-string v0, "focal-length"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2539,7 +2551,7 @@
     .end annotation
 
     .prologue
-    .line 4160
+    .line 4169
     const-string v0, "focus-areas"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2558,7 +2570,7 @@
     .param p1, "output"    # [F
 
     .prologue
-    .line 4098
+    .line 4107
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -2567,7 +2579,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 4099
+    .line 4108
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2577,7 +2589,7 @@
 
     throw v0
 
-    .line 4102
+    .line 4111
     :cond_1
     const-string v0, "focus-distances"
 
@@ -2587,7 +2599,7 @@
 
     invoke-direct {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->splitFloat(Ljava/lang/String;[F)V
 
-    .line 4103
+    .line 4112
     return-void
 .end method
 
@@ -2595,7 +2607,7 @@
     .locals 1
 
     .prologue
-    .line 3739
+    .line 3748
     const-string v0, "focus-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2609,7 +2621,7 @@
     .locals 1
 
     .prologue
-    .line 3781
+    .line 3790
     const-string v0, "horizontal-view-angle"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2627,7 +2639,7 @@
     .locals 1
 
     .prologue
-    .line 5366
+    .line 5375
     const-string v0, "iso"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2642,7 +2654,7 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 2904
+    .line 2913
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2662,7 +2674,7 @@
     .locals 1
 
     .prologue
-    .line 3072
+    .line 3081
     const-string v0, "jpeg-quality"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2676,7 +2688,7 @@
     .locals 1
 
     .prologue
-    .line 3053
+    .line 3062
     const-string v0, "jpeg-thumbnail-quality"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2690,7 +2702,7 @@
     .locals 4
 
     .prologue
-    .line 3021
+    .line 3030
     new-instance v0, Landroid/hardware/Camera$Size;
 
     iget-object v1, p0, Landroid/hardware/Camera$Parameters;->this$0:Landroid/hardware/Camera;
@@ -2716,7 +2728,7 @@
     .locals 1
 
     .prologue
-    .line 5420
+    .line 5429
     const-string v0, "lensshade"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2730,7 +2742,7 @@
     .locals 1
 
     .prologue
-    .line 5179
+    .line 5188
     const-string/jumbo v0, "max-contrast"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2744,7 +2756,7 @@
     .locals 2
 
     .prologue
-    .line 3828
+    .line 3837
     const-string/jumbo v0, "max-exposure-compensation"
 
     const/4 v1, 0x0
@@ -2760,7 +2772,7 @@
     .locals 1
 
     .prologue
-    .line 5411
+    .line 5420
     const-string/jumbo v0, "max-exposure-time"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2774,7 +2786,7 @@
     .locals 2
 
     .prologue
-    .line 4250
+    .line 4259
     const-string/jumbo v0, "max-num-detected-faces-hw"
 
     const/4 v1, 0x0
@@ -2790,7 +2802,7 @@
     .locals 2
 
     .prologue
-    .line 4114
+    .line 4123
     const-string/jumbo v0, "max-num-focus-areas"
 
     const/4 v1, 0x0
@@ -2806,7 +2818,7 @@
     .locals 2
 
     .prologue
-    .line 4182
+    .line 4191
     const-string/jumbo v0, "max-num-metering-areas"
 
     const/4 v1, 0x0
@@ -2822,7 +2834,7 @@
     .locals 1
 
     .prologue
-    .line 5197
+    .line 5206
     const-string/jumbo v0, "max-saturation"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2836,7 +2848,7 @@
     .locals 1
 
     .prologue
-    .line 5161
+    .line 5170
     const-string/jumbo v0, "max-sharpness"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -2850,7 +2862,7 @@
     .locals 1
 
     .prologue
-    .line 5493
+    .line 5502
     const-string/jumbo v0, "max-wb-cct"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2864,7 +2876,7 @@
     .locals 2
 
     .prologue
-    .line 4040
+    .line 4049
     const-string/jumbo v0, "max-zoom"
 
     const/4 v1, 0x0
@@ -2880,7 +2892,7 @@
     .locals 1
 
     .prologue
-    .line 5457
+    .line 5466
     const-string/jumbo v0, "mce"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2903,7 +2915,7 @@
     .end annotation
 
     .prologue
-    .line 4226
+    .line 4235
     const-string/jumbo v0, "metering-areas"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2921,7 +2933,7 @@
     .locals 2
 
     .prologue
-    .line 3839
+    .line 3848
     const-string/jumbo v0, "min-exposure-compensation"
 
     const/4 v1, 0x0
@@ -2937,7 +2949,7 @@
     .locals 1
 
     .prologue
-    .line 5402
+    .line 5411
     const-string/jumbo v0, "min-exposure-time"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2951,7 +2963,7 @@
     .locals 1
 
     .prologue
-    .line 3320
+    .line 3329
     const-string/jumbo v0, "picture-format"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2969,14 +2981,14 @@
     .locals 2
 
     .prologue
-    .line 3279
+    .line 3288
     const-string/jumbo v1, "picture-size"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3280
+    .line 3289
     .local v0, "pair":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->strToSize(Ljava/lang/String;)Landroid/hardware/Camera$Size;
 
@@ -2989,7 +3001,7 @@
     .locals 1
 
     .prologue
-    .line 5347
+    .line 5356
     const-string/jumbo v0, "power-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3003,14 +3015,14 @@
     .locals 2
 
     .prologue
-    .line 2993
+    .line 3002
     const-string/jumbo v1, "preferred-preview-size-for-video"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2994
+    .line 3003
     .local v0, "pair":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->strToSize(Ljava/lang/String;)Landroid/hardware/Camera$Size;
 
@@ -3023,7 +3035,7 @@
     .locals 1
 
     .prologue
-    .line 3232
+    .line 3241
     const-string/jumbo v0, "preview-format"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3042,7 +3054,7 @@
     .param p1, "range"    # [I
 
     .prologue
-    .line 3139
+    .line 3148
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -3051,7 +3063,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 3140
+    .line 3149
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3061,7 +3073,7 @@
 
     throw v0
 
-    .line 3143
+    .line 3152
     :cond_1
     const-string/jumbo v0, "preview-fps-range"
 
@@ -3071,7 +3083,7 @@
 
     invoke-direct {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->splitInt(Ljava/lang/String;[I)V
 
-    .line 3144
+    .line 3153
     return-void
 .end method
 
@@ -3081,7 +3093,7 @@
     .end annotation
 
     .prologue
-    .line 3097
+    .line 3106
     const-string/jumbo v0, "preview-frame-rate"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -3095,7 +3107,7 @@
     .locals 1
 
     .prologue
-    .line 5280
+    .line 5289
     const-string/jumbo v0, "preview-frame-rate-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3109,14 +3121,14 @@
     .locals 2
 
     .prologue
-    .line 2942
+    .line 2951
     const-string/jumbo v1, "preview-size"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2943
+    .line 2952
     .local v0, "pair":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->strToSize(Ljava/lang/String;)Landroid/hardware/Camera$Size;
 
@@ -3129,7 +3141,7 @@
     .locals 1
 
     .prologue
-    .line 5257
+    .line 5266
     const-string/jumbo v0, "redeye-reduction"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3143,7 +3155,7 @@
     .locals 1
 
     .prologue
-    .line 5188
+    .line 5197
     const-string/jumbo v0, "saturation"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -3157,7 +3169,7 @@
     .locals 1
 
     .prologue
-    .line 5300
+    .line 5309
     const-string/jumbo v0, "scene-detect"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3171,7 +3183,7 @@
     .locals 1
 
     .prologue
-    .line 3656
+    .line 3665
     const-string/jumbo v0, "scene-mode"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3185,7 +3197,7 @@
     .locals 1
 
     .prologue
-    .line 5658
+    .line 5667
     const-string/jumbo v0, "selectable-zone-af"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -3199,7 +3211,7 @@
     .locals 1
 
     .prologue
-    .line 5152
+    .line 5161
     const-string/jumbo v0, "sharpness"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
@@ -3222,14 +3234,14 @@
     .end annotation
 
     .prologue
-    .line 3629
+    .line 3638
     const-string v1, "antibanding-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3630
+    .line 3639
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3251,14 +3263,14 @@
     .end annotation
 
     .prologue
-    .line 4927
+    .line 4936
     const-string v1, "auto-exposure-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4928
+    .line 4937
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3280,14 +3292,14 @@
     .end annotation
 
     .prologue
-    .line 3592
+    .line 3601
     const-string v1, "effect-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3593
+    .line 3602
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3309,14 +3321,14 @@
     .end annotation
 
     .prologue
-    .line 4983
+    .line 4992
     const-string v1, "continuous-af-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4984
+    .line 4993
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3338,14 +3350,14 @@
     .end annotation
 
     .prologue
-    .line 4995
+    .line 5004
     const-string v1, "denoise-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4996
+    .line 5005
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3367,14 +3379,14 @@
     .end annotation
 
     .prologue
-    .line 5018
+    .line 5027
     const-string v1, "face-detection-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5019
+    .line 5028
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3396,14 +3408,14 @@
     .end annotation
 
     .prologue
-    .line 3720
+    .line 3729
     const-string v1, "flash-mode-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3721
+    .line 3730
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3425,14 +3437,14 @@
     .end annotation
 
     .prologue
-    .line 3760
+    .line 3769
     const-string v1, "focus-mode-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3761
+    .line 3770
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3454,14 +3466,14 @@
     .end annotation
 
     .prologue
-    .line 4829
+    .line 4838
     const-string v1, "hfr-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4830
+    .line 4839
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitSize(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3483,14 +3495,14 @@
     .end annotation
 
     .prologue
-    .line 4905
+    .line 4914
     const-string v1, "histogram-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4906
+    .line 4915
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3512,14 +3524,14 @@
     .end annotation
 
     .prologue
-    .line 4883
+    .line 4892
     const-string v1, "iso-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4884
+    .line 4893
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3541,14 +3553,14 @@
     .end annotation
 
     .prologue
-    .line 3033
+    .line 3042
     const-string v1, "jpeg-thumbnail-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3034
+    .line 3043
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitSize(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3570,14 +3582,14 @@
     .end annotation
 
     .prologue
-    .line 4894
+    .line 4903
     const-string v1, "lensshade-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4895
+    .line 4904
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3599,14 +3611,14 @@
     .end annotation
 
     .prologue
-    .line 4938
+    .line 4947
     const-string/jumbo v1, "mce-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4939
+    .line 4948
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3628,20 +3640,20 @@
     .end annotation
 
     .prologue
-    .line 3331
+    .line 3340
     const-string/jumbo v5, "picture-format-values"
 
     invoke-virtual {p0, v5}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 3332
+    .line 3341
     .local v4, "str":Ljava/lang/String;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3333
+    .line 3342
     .local v1, "formats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-direct {p0, v4}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3666,17 +3678,17 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 3334
+    .line 3343
     .local v3, "s":Ljava/lang/String;
     invoke-direct {p0, v3}, Landroid/hardware/Camera$Parameters;->pixelFormatForCameraFormat(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3335
+    .line 3344
     .local v0, "f":I
     if-eqz v0, :cond_0
 
-    .line 3336
+    .line 3345
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -3685,7 +3697,7 @@
 
     goto :goto_0
 
-    .line 3338
+    .line 3347
     .end local v0    # "f":I
     .end local v3    # "s":Ljava/lang/String;
     :cond_1
@@ -3705,14 +3717,14 @@
     .end annotation
 
     .prologue
-    .line 3290
+    .line 3299
     const-string/jumbo v1, "picture-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3291
+    .line 3300
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitSize(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3734,20 +3746,20 @@
     .end annotation
 
     .prologue
-    .line 3246
+    .line 3255
     const-string/jumbo v5, "preview-format-values"
 
     invoke-virtual {p0, v5}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 3247
+    .line 3256
     .local v4, "str":Ljava/lang/String;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3248
+    .line 3257
     .local v1, "formats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-direct {p0, v4}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3772,17 +3784,17 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 3249
+    .line 3258
     .local v3, "s":Ljava/lang/String;
     invoke-direct {p0, v3}, Landroid/hardware/Camera$Parameters;->pixelFormatForCameraFormat(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3250
+    .line 3259
     .local v0, "f":I
     if-eqz v0, :cond_0
 
-    .line 3251
+    .line 3260
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -3791,7 +3803,7 @@
 
     goto :goto_0
 
-    .line 3253
+    .line 3262
     .end local v0    # "f":I
     .end local v3    # "s":Ljava/lang/String;
     :cond_1
@@ -3809,14 +3821,14 @@
     .end annotation
 
     .prologue
-    .line 3164
+    .line 3173
     const-string/jumbo v1, "preview-fps-range-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3165
+    .line 3174
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitRange(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3838,14 +3850,14 @@
     .end annotation
 
     .prologue
-    .line 4860
+    .line 4869
     const-string/jumbo v1, "preview-frame-rate-mode-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4861
+    .line 4870
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3870,14 +3882,14 @@
     .end annotation
 
     .prologue
-    .line 3109
+    .line 3118
     const-string/jumbo v1, "preview-frame-rate-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3110
+    .line 3119
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitInt(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3899,14 +3911,14 @@
     .end annotation
 
     .prologue
-    .line 2953
+    .line 2962
     const-string/jumbo v1, "preview-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2954
+    .line 2963
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitSize(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3928,14 +3940,14 @@
     .end annotation
 
     .prologue
-    .line 5030
+    .line 5039
     const-string/jumbo v1, "redeye-reduction-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5031
+    .line 5040
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3957,14 +3969,14 @@
     .end annotation
 
     .prologue
-    .line 4872
+    .line 4881
     const-string/jumbo v1, "scene-detect-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4873
+    .line 4882
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -3986,14 +3998,14 @@
     .end annotation
 
     .prologue
-    .line 3683
+    .line 3692
     const-string/jumbo v1, "scene-mode-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3684
+    .line 3693
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4015,14 +4027,14 @@
     .end annotation
 
     .prologue
-    .line 5006
+    .line 5015
     const-string/jumbo v1, "selectable-zone-af-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5007
+    .line 5016
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4044,14 +4056,14 @@
     .end annotation
 
     .prologue
-    .line 4916
+    .line 4925
     const-string/jumbo v1, "skinToneEnhancement-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4917
+    .line 4926
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4073,14 +4085,14 @@
     .end annotation
 
     .prologue
-    .line 4841
+    .line 4850
     const-string/jumbo v1, "touch-af-aec-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4842
+    .line 4851
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4102,14 +4114,14 @@
     .end annotation
 
     .prologue
-    .line 4960
+    .line 4969
     const-string/jumbo v1, "video-hdr-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4961
+    .line 4970
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4131,14 +4143,14 @@
     .end annotation
 
     .prologue
-    .line 4971
+    .line 4980
     const-string/jumbo v1, "video-hfr-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4972
+    .line 4981
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4160,14 +4172,14 @@
     .end annotation
 
     .prologue
-    .line 5717
+    .line 5726
     const-string/jumbo v1, "video-rotation-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5718
+    .line 5727
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4189,14 +4201,14 @@
     .end annotation
 
     .prologue
-    .line 2973
+    .line 2982
     const-string/jumbo v1, "video-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2974
+    .line 2983
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->splitSize(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4218,14 +4230,14 @@
     .end annotation
 
     .prologue
-    .line 3551
+    .line 3560
     const-string/jumbo v1, "whitebalance-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3552
+    .line 3561
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4247,14 +4259,14 @@
     .end annotation
 
     .prologue
-    .line 4949
+    .line 4958
     const-string/jumbo v1, "zsl-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4950
+    .line 4959
     .local v0, "str":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->split(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4267,7 +4279,7 @@
     .locals 1
 
     .prologue
-    .line 5236
+    .line 5245
     const-string/jumbo v0, "touch-af-aec"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4281,14 +4293,14 @@
     .locals 2
 
     .prologue
-    .line 5072
+    .line 5081
     const-string/jumbo v1, "touch-index-aec"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5073
+    .line 5082
     .local v0, "pair":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->strToCoordinate(Ljava/lang/String;)Landroid/hardware/Camera$Coordinate;
 
@@ -4301,14 +4313,14 @@
     .locals 2
 
     .prologue
-    .line 5096
+    .line 5105
     const-string/jumbo v1, "touch-index-af"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5097
+    .line 5106
     .local v0, "pair":Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/hardware/Camera$Parameters;->strToCoordinate(Ljava/lang/String;)Landroid/hardware/Camera$Coordinate;
 
@@ -4321,7 +4333,7 @@
     .locals 1
 
     .prologue
-    .line 3791
+    .line 3800
     const-string/jumbo v0, "vertical-view-angle"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4339,7 +4351,7 @@
     .locals 1
 
     .prologue
-    .line 5598
+    .line 5607
     const-string/jumbo v0, "video-hdr"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4353,7 +4365,7 @@
     .locals 1
 
     .prologue
-    .line 5580
+    .line 5589
     const-string/jumbo v0, "video-hfr"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4367,7 +4379,7 @@
     .locals 1
 
     .prologue
-    .line 5699
+    .line 5708
     const-string/jumbo v0, "video-rotation"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4381,14 +4393,14 @@
     .locals 2
 
     .prologue
-    .line 4340
+    .line 4349
     const-string/jumbo v1, "video-stabilization"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4341
+    .line 4350
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4403,7 +4415,7 @@
     .locals 1
 
     .prologue
-    .line 5502
+    .line 5511
     const-string/jumbo v0, "wb-manual-cct"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4417,7 +4429,7 @@
     .locals 1
 
     .prologue
-    .line 5484
+    .line 5493
     const-string/jumbo v0, "min-wb-cct"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4431,7 +4443,7 @@
     .locals 1
 
     .prologue
-    .line 3524
+    .line 3533
     const-string/jumbo v0, "whitebalance"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4445,7 +4457,7 @@
     .locals 1
 
     .prologue
-    .line 5511
+    .line 5520
     const-string/jumbo v0, "zsl"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4459,7 +4471,7 @@
     .locals 2
 
     .prologue
-    .line 4002
+    .line 4011
     const-string/jumbo v0, "zoom"
 
     const/4 v1, 0x0
@@ -4484,7 +4496,7 @@
     .end annotation
 
     .prologue
-    .line 4054
+    .line 4063
     const-string/jumbo v0, "zoom-ratios"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -4502,14 +4514,14 @@
     .locals 2
 
     .prologue
-    .line 3917
+    .line 3926
     const-string v1, "auto-exposure-lock-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3918
+    .line 3927
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4524,14 +4536,14 @@
     .locals 2
 
     .prologue
-    .line 3989
+    .line 3998
     const-string v1, "auto-whitebalance-lock-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3990
+    .line 3999
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4546,14 +4558,14 @@
     .locals 2
 
     .prologue
-    .line 5142
+    .line 5151
     const-string/jumbo v1, "power-mode-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5143
+    .line 5152
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4568,14 +4580,14 @@
     .locals 2
 
     .prologue
-    .line 4064
+    .line 4073
     const-string/jumbo v1, "smooth-zoom-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4065
+    .line 4074
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4590,14 +4602,14 @@
     .locals 2
 
     .prologue
-    .line 4303
+    .line 4312
     const-string/jumbo v1, "video-snapshot-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4304
+    .line 4313
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4612,14 +4624,14 @@
     .locals 2
 
     .prologue
-    .line 4353
+    .line 4362
     const-string/jumbo v1, "video-stabilization-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4354
+    .line 4363
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4634,14 +4646,14 @@
     .locals 2
 
     .prologue
-    .line 4026
+    .line 4035
     const-string/jumbo v1, "zoom-supported"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4027
+    .line 4036
     .local v0, "str":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -4657,12 +4669,12 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 2819
+    .line 2828
     iget-object v0, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2820
+    .line 2829
     return-void
 .end method
 
@@ -4670,47 +4682,47 @@
     .locals 1
 
     .prologue
-    .line 3498
+    .line 3507
     const-string v0, "gps-latitude-ref"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3499
+    .line 3508
     const-string v0, "gps-latitude"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3500
+    .line 3509
     const-string v0, "gps-longitude-ref"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3501
+    .line 3510
     const-string v0, "gps-longitude"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3502
+    .line 3511
     const-string v0, "gps-altitude-ref"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3503
+    .line 3512
     const-string v0, "gps-altitude"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3504
+    .line 3513
     const-string v0, "gps-timestamp"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3505
+    .line 3514
     const-string v0, "gps-processing-method"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->remove(Ljava/lang/String;)V
 
-    .line 3506
+    .line 3515
     return-void
 .end method
 
@@ -4721,10 +4733,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2754
+    .line 2763
     if-ne p0, p1, :cond_1
 
-    .line 2757
+    .line 2766
     :cond_0
     :goto_0
     return v0
@@ -4754,14 +4766,14 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 2848
+    .line 2857
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Landroid/hardware/Camera$Parameters;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2849
+    .line 2858
     return-void
 .end method
 
@@ -4779,7 +4791,7 @@
 
     const/4 v1, -0x1
 
-    .line 2829
+    .line 2838
     invoke-virtual {p1, v4}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -4798,7 +4810,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 2830
+    .line 2839
     :cond_0
     const-string v0, "Camera"
 
@@ -4828,11 +4840,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2839
+    .line 2848
     :goto_0
     return-void
 
-    .line 2833
+    .line 2842
     :cond_1
     invoke-virtual {p2, v4}, Ljava/lang/String;->indexOf(I)I
 
@@ -4852,7 +4864,7 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 2834
+    .line 2843
     :cond_2
     const-string v0, "Camera"
 
@@ -4884,7 +4896,7 @@
 
     goto :goto_0
 
-    .line 2838
+    .line 2847
     :cond_3
     invoke-direct {p0, p1, p2}, Landroid/hardware/Camera$Parameters;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -4896,12 +4908,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5356
+    .line 5365
     const-string v0, "ae-bracket-hdr"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5357
+    .line 5366
     return-void
 .end method
 
@@ -4910,12 +4922,12 @@
     .param p1, "antibanding"    # Ljava/lang/String;
 
     .prologue
-    .line 3618
+    .line 3627
     const-string v0, "antibanding"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3619
+    .line 3628
     return-void
 .end method
 
@@ -4924,12 +4936,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5448
+    .line 5457
     const-string v0, "auto-exposure"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5449
+    .line 5458
     return-void
 .end method
 
@@ -4938,7 +4950,7 @@
     .param p1, "toggle"    # Z
 
     .prologue
-    .line 3888
+    .line 3897
     const-string v1, "auto-exposure-lock"
 
     if-eqz p1, :cond_0
@@ -4948,10 +4960,10 @@
     :goto_0
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3889
+    .line 3898
     return-void
 
-    .line 3888
+    .line 3897
     :cond_0
     const-string v0, "false"
 
@@ -4963,12 +4975,12 @@
     .param p1, "auto_hdr"    # Ljava/lang/String;
 
     .prologue
-    .line 5529
+    .line 5538
     const-string v0, "auto-hdr-enable"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5530
+    .line 5539
     return-void
 .end method
 
@@ -4977,7 +4989,7 @@
     .param p1, "toggle"    # Z
 
     .prologue
-    .line 3958
+    .line 3967
     const-string v1, "auto-whitebalance-lock"
 
     if-eqz p1, :cond_0
@@ -4987,10 +4999,10 @@
     :goto_0
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3959
+    .line 3968
     return-void
 
-    .line 3958
+    .line 3967
     :cond_0
     const-string v0, "false"
 
@@ -5002,12 +5014,12 @@
     .param p1, "cameraMode"    # I
 
     .prologue
-    .line 5549
+    .line 5558
     const-string v0, "camera-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 5550
+    .line 5559
     return-void
 .end method
 
@@ -5016,12 +5028,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 3581
+    .line 3590
     const-string v0, "effect"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3582
+    .line 3591
     return-void
 .end method
 
@@ -5030,12 +5042,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5648
+    .line 5657
     const-string v0, "continuous-af"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5649
+    .line 5658
     return-void
 .end method
 
@@ -5044,7 +5056,7 @@
     .param p1, "contrast"    # I
 
     .prologue
-    .line 5118
+    .line 5127
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getMaxContrast()I
@@ -5053,7 +5065,7 @@
 
     if-le p1, v0, :cond_1
 
-    .line 5119
+    .line 5128
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5079,7 +5091,7 @@
 
     throw v0
 
-    .line 5122
+    .line 5131
     :cond_1
     const-string v0, "contrast"
 
@@ -5089,7 +5101,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5123
+    .line 5132
     return-void
 .end method
 
@@ -5098,12 +5110,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5639
+    .line 5648
     const-string v0, "denoise"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5640
+    .line 5649
     return-void
 .end method
 
@@ -5112,12 +5124,12 @@
     .param p1, "dateTime"    # Ljava/lang/String;
 
     .prologue
-    .line 5225
+    .line 5234
     const-string v0, "exif-datetime"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5226
+    .line 5235
     return-void
 .end method
 
@@ -5126,12 +5138,12 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 3817
+    .line 3826
     const-string v0, "exposure-compensation"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3818
+    .line 3827
     return-void
 .end method
 
@@ -5140,7 +5152,7 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 5384
+    .line 5393
     const-string v0, "exposure-time"
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5149,7 +5161,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5385
+    .line 5394
     return-void
 .end method
 
@@ -5158,12 +5170,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5689
+    .line 5698
     const-string v0, "face-detection"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5690
+    .line 5699
     return-void
 .end method
 
@@ -5172,12 +5184,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 3709
+    .line 3718
     const-string v0, "flash-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3710
+    .line 3719
     return-void
 .end method
 
@@ -5194,13 +5206,13 @@
     .end annotation
 
     .prologue
-    .line 4170
+    .line 4179
     .local p1, "focusAreas":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Area;>;"
     const-string v0, "focus-areas"
 
     invoke-direct {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 4171
+    .line 4180
     return-void
 .end method
 
@@ -5209,12 +5221,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 3749
+    .line 3758
     const-string v0, "focus-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3750
+    .line 3759
     return-void
 .end method
 
@@ -5224,7 +5236,7 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 5560
+    .line 5569
     const-string/jumbo v0, "manual-focus-pos-type"
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5233,7 +5245,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5561
+    .line 5570
     const-string/jumbo v0, "manual-focus-position"
 
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5242,7 +5254,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5562
+    .line 5571
     return-void
 .end method
 
@@ -5251,8 +5263,76 @@
     .param p1, "altitude"    # D
 
     .prologue
-    .line 3470
+    .line 3479
     const-string v0, "gps-altitude"
+
+    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3480
+    return-void
+.end method
+
+.method public setGpsAltitudeRef(D)V
+    .locals 3
+    .param p1, "altRef"    # D
+
+    .prologue
+    .line 5048
+    const-string v0, "gps-altitude-ref"
+
+    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5049
+    return-void
+.end method
+
+.method public setGpsLatitude(D)V
+    .locals 3
+    .param p1, "latitude"    # D
+
+    .prologue
+    .line 3460
+    const-string v0, "gps-latitude"
+
+    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3461
+    return-void
+.end method
+
+.method public setGpsLatitudeRef(Ljava/lang/String;)V
+    .locals 1
+    .param p1, "latRef"    # Ljava/lang/String;
+
+    .prologue
+    .line 5215
+    const-string v0, "gps-latitude-ref"
+
+    invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5216
+    return-void
+.end method
+
+.method public setGpsLongitude(D)V
+    .locals 3
+    .param p1, "longitude"    # D
+
+    .prologue
+    .line 3470
+    const-string v0, "gps-longitude"
 
     invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
@@ -5264,85 +5344,17 @@
     return-void
 .end method
 
-.method public setGpsAltitudeRef(D)V
-    .locals 3
-    .param p1, "altRef"    # D
-
-    .prologue
-    .line 5039
-    const-string v0, "gps-altitude-ref"
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5040
-    return-void
-.end method
-
-.method public setGpsLatitude(D)V
-    .locals 3
-    .param p1, "latitude"    # D
-
-    .prologue
-    .line 3451
-    const-string v0, "gps-latitude"
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3452
-    return-void
-.end method
-
-.method public setGpsLatitudeRef(Ljava/lang/String;)V
-    .locals 1
-    .param p1, "latRef"    # Ljava/lang/String;
-
-    .prologue
-    .line 5206
-    const-string v0, "gps-latitude-ref"
-
-    invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5207
-    return-void
-.end method
-
-.method public setGpsLongitude(D)V
-    .locals 3
-    .param p1, "longitude"    # D
-
-    .prologue
-    .line 3461
-    const-string v0, "gps-longitude"
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3462
-    return-void
-.end method
-
 .method public setGpsLongitudeRef(Ljava/lang/String;)V
     .locals 1
     .param p1, "lonRef"    # Ljava/lang/String;
 
     .prologue
-    .line 5215
+    .line 5224
     const-string v0, "gps-longitude-ref"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5216
+    .line 5225
     return-void
 .end method
 
@@ -5351,12 +5363,12 @@
     .param p1, "processing_method"    # Ljava/lang/String;
 
     .prologue
-    .line 3490
+    .line 3499
     const-string v0, "gps-processing-method"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3491
+    .line 3500
     return-void
 .end method
 
@@ -5365,7 +5377,7 @@
     .param p1, "status"    # D
 
     .prologue
-    .line 5049
+    .line 5058
     const-string v0, "gps-status"
 
     invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
@@ -5374,7 +5386,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5050
+    .line 5059
     return-void
 .end method
 
@@ -5383,7 +5395,7 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 3480
+    .line 3489
     const-string v0, "gps-timestamp"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -5392,7 +5404,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3481
+    .line 3490
     return-void
 .end method
 
@@ -5401,12 +5413,12 @@
     .param p1, "iso"    # Ljava/lang/String;
 
     .prologue
-    .line 5375
+    .line 5384
     const-string v0, "iso"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5376
+    .line 5385
     return-void
 .end method
 
@@ -5415,12 +5427,12 @@
     .param p1, "quality"    # I
 
     .prologue
-    .line 3063
+    .line 3072
     const-string v0, "jpeg-quality"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3064
+    .line 3073
     return-void
 .end method
 
@@ -5429,12 +5441,12 @@
     .param p1, "quality"    # I
 
     .prologue
-    .line 3044
+    .line 3053
     const-string v0, "jpeg-thumbnail-quality"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3045
+    .line 3054
     return-void
 .end method
 
@@ -5444,17 +5456,17 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 3010
+    .line 3019
     const-string v0, "jpeg-thumbnail-width"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3011
+    .line 3020
     const-string v0, "jpeg-thumbnail-height"
 
     invoke-virtual {p0, v0, p2}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3012
+    .line 3021
     return-void
 .end method
 
@@ -5463,12 +5475,12 @@
     .param p1, "lensshade"    # Ljava/lang/String;
 
     .prologue
-    .line 5429
+    .line 5438
     const-string v0, "lensshade"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5430
+    .line 5439
     return-void
 .end method
 
@@ -5477,12 +5489,12 @@
     .param p1, "mce"    # Ljava/lang/String;
 
     .prologue
-    .line 5466
+    .line 5475
     const-string/jumbo v0, "mce"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5467
+    .line 5476
     return-void
 .end method
 
@@ -5499,13 +5511,13 @@
     .end annotation
 
     .prologue
-    .line 4237
+    .line 4246
     .local p1, "meteringAreas":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Area;>;"
     const-string/jumbo v0, "metering-areas"
 
     invoke-direct {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 4238
+    .line 4247
     return-void
 .end method
 
@@ -5514,16 +5526,16 @@
     .param p1, "pixel_format"    # I
 
     .prologue
-    .line 3304
+    .line 3313
     invoke-direct {p0, p1}, Landroid/hardware/Camera$Parameters;->cameraFormatForPixelFormat(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3305
+    .line 3314
     .local v0, "s":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 3306
+    .line 3315
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5548,13 +5560,13 @@
 
     throw v1
 
-    .line 3310
+    .line 3319
     :cond_0
     const-string/jumbo v1, "picture-format"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3311
+    .line 3320
     return-void
 .end method
 
@@ -5564,7 +5576,7 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 3268
+    .line 3277
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5595,13 +5607,13 @@
 
     move-result-object v0
 
-    .line 3269
+    .line 3278
     .local v0, "v":Ljava/lang/String;
     const-string/jumbo v1, "picture-size"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3270
+    .line 3279
     return-void
 .end method
 
@@ -5610,12 +5622,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5335
+    .line 5344
     const-string/jumbo v0, "power-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5336
+    .line 5345
     return-void
 .end method
 
@@ -5624,16 +5636,16 @@
     .param p1, "pixel_format"    # I
 
     .prologue
-    .line 3214
+    .line 3223
     invoke-direct {p0, p1}, Landroid/hardware/Camera$Parameters;->cameraFormatForPixelFormat(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3215
+    .line 3224
     .local v0, "s":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 3216
+    .line 3225
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5658,13 +5670,13 @@
 
     throw v1
 
-    .line 3220
+    .line 3229
     :cond_0
     const-string/jumbo v1, "preview-format"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3221
+    .line 3230
     return-void
 .end method
 
@@ -5674,7 +5686,7 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 3126
+    .line 3135
     const-string/jumbo v0, "preview-fps-range"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5707,7 +5719,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3127
+    .line 3136
     return-void
 .end method
 
@@ -5718,12 +5730,12 @@
     .end annotation
 
     .prologue
-    .line 3084
+    .line 3093
     const-string/jumbo v0, "preview-frame-rate"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 3085
+    .line 3094
     return-void
 .end method
 
@@ -5732,12 +5744,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5289
+    .line 5298
     const-string/jumbo v0, "preview-frame-rate-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5290
+    .line 5299
     return-void
 .end method
 
@@ -5747,7 +5759,7 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 2931
+    .line 2940
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5778,13 +5790,13 @@
 
     move-result-object v0
 
-    .line 2932
+    .line 2941
     .local v0, "v":Ljava/lang/String;
     const-string/jumbo v1, "preview-size"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2933
+    .line 2942
     return-void
 .end method
 
@@ -5793,7 +5805,7 @@
     .param p1, "hint"    # Z
 
     .prologue
-    .line 4272
+    .line 4281
     const-string/jumbo v1, "recording-hint"
 
     if-eqz p1, :cond_0
@@ -5803,10 +5815,10 @@
     :goto_0
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4273
+    .line 4282
     return-void
 
-    .line 4272
+    .line 4281
     :cond_0
     const-string v0, "false"
 
@@ -5818,12 +5830,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5270
+    .line 5279
     const-string/jumbo v0, "redeye-reduction"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5271
+    .line 5280
     return-void
 .end method
 
@@ -5832,7 +5844,7 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 3435
+    .line 3444
     if-eqz p1, :cond_0
 
     const/16 v0, 0x5a
@@ -5847,7 +5859,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3437
+    .line 3446
     :cond_0
     const-string/jumbo v0, "rotation"
 
@@ -5857,10 +5869,10 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3442
+    .line 3451
     return-void
 
-    .line 3439
+    .line 3448
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5892,7 +5904,7 @@
     .param p1, "saturation"    # I
 
     .prologue
-    .line 5131
+    .line 5140
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getMaxSaturation()I
@@ -5901,7 +5913,7 @@
 
     if-le p1, v0, :cond_1
 
-    .line 5132
+    .line 5141
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5927,7 +5939,7 @@
 
     throw v0
 
-    .line 5135
+    .line 5144
     :cond_1
     const-string/jumbo v0, "saturation"
 
@@ -5937,7 +5949,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5136
+    .line 5145
     return-void
 .end method
 
@@ -5946,12 +5958,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5313
+    .line 5322
     const-string/jumbo v0, "scene-detect"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5314
+    .line 5323
     return-void
 .end method
 
@@ -5960,12 +5972,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 3672
+    .line 3681
     const-string/jumbo v0, "scene-mode"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3673
+    .line 3682
     return-void
 .end method
 
@@ -5974,12 +5986,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5667
+    .line 5676
     const-string/jumbo v0, "selectable-zone-af"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5668
+    .line 5677
     return-void
 .end method
 
@@ -5988,7 +6000,7 @@
     .param p1, "sharpness"    # I
 
     .prologue
-    .line 5105
+    .line 5114
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getMaxSharpness()I
@@ -5997,7 +6009,7 @@
 
     if-le p1, v0, :cond_1
 
-    .line 5106
+    .line 5115
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -6023,7 +6035,7 @@
 
     throw v0
 
-    .line 5109
+    .line 5118
     :cond_1
     const-string/jumbo v0, "sharpness"
 
@@ -6033,7 +6045,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5110
+    .line 5119
     return-void
 .end method
 
@@ -6042,12 +6054,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5246
+    .line 5255
     const-string/jumbo v0, "touch-af-aec"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5247
+    .line 5256
     return-void
 .end method
 
@@ -6057,7 +6069,7 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 5060
+    .line 5069
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6088,13 +6100,13 @@
 
     move-result-object v0
 
-    .line 5061
+    .line 5070
     .local v0, "v":Ljava/lang/String;
     const-string/jumbo v1, "touch-index-aec"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5062
+    .line 5071
     return-void
 .end method
 
@@ -6104,7 +6116,7 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 5084
+    .line 5093
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6135,13 +6147,13 @@
 
     move-result-object v0
 
-    .line 5085
+    .line 5094
     .local v0, "v":Ljava/lang/String;
     const-string/jumbo v1, "touch-index-af"
 
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5086
+    .line 5095
     return-void
 .end method
 
@@ -6150,12 +6162,12 @@
     .param p1, "videohdr"    # Ljava/lang/String;
 
     .prologue
-    .line 5607
+    .line 5616
     const-string/jumbo v0, "video-hdr"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5608
+    .line 5617
     return-void
 .end method
 
@@ -6164,12 +6176,12 @@
     .param p1, "hfr"    # Ljava/lang/String;
 
     .prologue
-    .line 5589
+    .line 5598
     const-string/jumbo v0, "video-hfr"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5590
+    .line 5599
     return-void
 .end method
 
@@ -6178,12 +6190,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 5708
+    .line 5717
     const-string/jumbo v0, "video-rotation"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5709
+    .line 5718
     return-void
 .end method
 
@@ -6192,7 +6204,7 @@
     .param p1, "toggle"    # Z
 
     .prologue
-    .line 4328
+    .line 4337
     const-string/jumbo v1, "video-stabilization"
 
     if-eqz p1, :cond_0
@@ -6202,10 +6214,10 @@
     :goto_0
     invoke-virtual {p0, v1, v0}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4329
+    .line 4338
     return-void
 
-    .line 4328
+    .line 4337
     :cond_0
     const-string v0, "false"
 
@@ -6217,7 +6229,7 @@
     .param p1, "cct"    # I
 
     .prologue
-    .line 5475
+    .line 5484
     const-string/jumbo v0, "wb-manual-cct"
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -6226,7 +6238,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5476
+    .line 5485
     return-void
 .end method
 
@@ -6235,14 +6247,14 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 3537
+    .line 3546
     const-string/jumbo v1, "whitebalance"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3538
+    .line 3547
     .local v0, "oldValue":Ljava/lang/String;
     invoke-direct {p0, p1, v0}, Landroid/hardware/Camera$Parameters;->same(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -6250,17 +6262,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 3541
+    .line 3550
     :goto_0
     return-void
 
-    .line 3539
+    .line 3548
     :cond_0
     const-string/jumbo v1, "whitebalance"
 
     invoke-virtual {p0, v1, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3540
+    .line 3549
     const-string v1, "auto-whitebalance-lock"
 
     const-string v2, "false"
@@ -6275,12 +6287,12 @@
     .param p1, "zsl"    # Ljava/lang/String;
 
     .prologue
-    .line 5520
+    .line 5529
     const-string/jumbo v0, "zsl"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5521
+    .line 5530
     return-void
 .end method
 
@@ -6289,12 +6301,12 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 4016
+    .line 4025
     const-string/jumbo v0, "zoom"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
-    .line 4017
+    .line 4026
     return-void
 .end method
 
@@ -6303,23 +6315,23 @@
     .param p1, "flattened"    # Ljava/lang/String;
 
     .prologue
-    .line 2803
+    .line 2812
     iget-object v6, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v6}, Ljava/util/LinkedHashMap;->clear()V
 
-    .line 2805
+    .line 2814
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
     const/16 v6, 0x3b
 
     invoke-direct {v4, v6}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 2806
+    .line 2815
     .local v4, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v4, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 2807
+    .line 2816
     invoke-interface {v4}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -6339,7 +6351,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2808
+    .line 2817
     .local v2, "kv":Ljava/lang/String;
     const/16 v6, 0x3d
 
@@ -6347,20 +6359,20 @@
 
     move-result v3
 
-    .line 2809
+    .line 2818
     .local v3, "pos":I
     const/4 v6, -0x1
 
     if-eq v3, v6, :cond_0
 
-    .line 2812
+    .line 2821
     const/4 v6, 0x0
 
     invoke-virtual {v2, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2813
+    .line 2822
     .local v1, "k":Ljava/lang/String;
     add-int/lit8 v6, v3, 0x1
 
@@ -6368,7 +6380,7 @@
 
     move-result-object v5
 
-    .line 2814
+    .line 2823
     .local v5, "v":Ljava/lang/String;
     iget-object v6, p0, Landroid/hardware/Camera$Parameters;->mMap:Ljava/util/LinkedHashMap;
 
@@ -6376,7 +6388,7 @@
 
     goto :goto_0
 
-    .line 2816
+    .line 2825
     .end local v1    # "k":Ljava/lang/String;
     .end local v2    # "kv":Ljava/lang/String;
     .end local v3    # "pos":I

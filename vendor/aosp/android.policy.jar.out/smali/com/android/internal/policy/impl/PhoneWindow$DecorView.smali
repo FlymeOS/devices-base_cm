@@ -237,7 +237,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e00a8
+    const v1, 0x10e00ac
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -658,7 +658,7 @@
 
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mContext:Landroid/content/Context;
 
-    const v12, 0x104009d
+    const v12, 0x1040093
 
     const/4 v13, 0x1
 
@@ -5044,7 +5044,7 @@
     .end local v2    # "baseTheme":Landroid/content/res/Resources$Theme;
     .end local v5    # "outValue":Landroid/util/TypedValue;
     :cond_8
-    const v8, 0x1020379
+    const v8, 0x102037a
 
     invoke-virtual {p0, v8}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->findViewById(I)Landroid/view/View;
 

@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">சாதனத்தில் ஸ்ட்ரீம் செய்வதற்கு இது சரியான வீடியோ அல்ல.</string>
     <string name="selectTextMode">உரையைத் தேர்வுசெய்க</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">இவற்றில் எதுவுமில்லை</string>
     <string name="profile_picker_title">சுயவிவரங்கள்</string>
     <string name="global_action_choose_profile">சுயவிவரம்</string>
+    <string name="profile_none">இவற்றில் எதுவுமில்லை</string>
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
     <string name="permdesc_changePrivacyGuardState">பயன்பாட்டை மற்றொரு பயன்பாடு தனியுரிமை பாதுகாப்பு கொண்டு இயங்குமா என்பதை மாற்ற அனுமதிக்கிறது. ஒரு பயன்பாடு தனியுரிமை பாதுகாப்பு கொண்டு இயங்கும் போது, இது போன்ற தொடர்புகள், அழைப்பு பதிவுகள், மற்றும் செய்திகள் போன்ற தனிப்பட்ட தரவுக்கான அணுகல் இருக்காது.</string>
     <string name="privacy_guard_notification">தனியுரிமை பாதுகாப்பு செயலில்</string>

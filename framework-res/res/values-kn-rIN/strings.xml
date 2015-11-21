@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">ಈ ಸಾಧನಲ್ಲಿ ಸ್ಟ್ರೀಮ್ ಮಾಡಲು ಈ ವೀಡಿಯೊ ಮಾನ್ಯವಾಗಿಲ್ಲ.</string>
     <string name="selectTextMode">ಪಠ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">ಶೂನ್ಯ</string>
     <string name="profile_picker_title">ಪ್ರೊಫೈಲ್ಸ್</string>
     <string name="global_action_choose_profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="profile_none">ಶೂನ್ಯ</string>
     <string name="global_action_screenshot">ಸ್ಕ್ರೀನ್‍ಶಾಟ್</string>
     <string name="permlab_receiveProtectedSms">ಸಂರಕ್ಷಿತ ಎಸ್ಎಂಎಸ್ ಸ್ವೀಕರಿಸಿ</string>
     <string name="permdesc_receiveProtectedSms">ಆಪ್‍ಗೆ ಒಳಬರುವ ಸಂರಕ್ಷಿತ ಎಸ್ಎಂಎಸ್ ಸ್ವೀಕರಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">ಆಪ್‍ಗೆ ಇತರೆ ಆಪ್ ಗೌಪ್ಯತಾ ರಕ್ಷಕದ ಜೊತೆ ಚಲಿಸಲು ಅಗುತ್ತದೆಯೆ ಅಥವ ಇಲ್ಲವೇ ಎಂಬುದನ್ನು ಬದಲಾಯಿಸಲು ಅನುಮತಿಸುತ್ತದೆ. ಒಂದು ಆಪ್ Privacy Guard ಜೊತೆ ಚಲಿಸುತ್ತಿದ್ದಲ್ಲಿ, ಅದಕ್ಕೆ ವಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗುವಿದಿಲ್ಲ, ಉದಾಹರಣೆಗೆ ಸಂಪರ್ಕಗಳು, ಕರೆ ಲಾಗ್ಸ್, ಅಥವ ಸಂದೇಶಗಳು.</string>
     <string name="privacy_guard_notification">ಗೌಪ್ಯತಾ ರಕ್ಷಕ ಸಕ್ರಿಯ</string>
     <string name="privacy_guard_notification_detail">%1$sಗೆ ಖಾಸಗಿ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ</string>
-    <string name="permlab_useHardwareFramework">ಹಾರ್ಡ್‍ವೇರ್ ಫ್ರೇಮ್‍ವರ್ಕ್ ಬಳಕೆ</string>
-    <string name="permdesc_useHardwareFramework">ಒಂದು ಆಪ್‍ಗೆ CM ಹಾರ್ಡ್‍ವೇರ್ ಫ್ರೇಮ್‍ವರ್ಕ್ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_setKeyguardWallpaper">ಕೀಗಾರ್ಡ್ ವಾಲ್‍ಪೇಪರ್ ಹೊಂದಿಕೆ</string>
     <string name="permdesc_setKeyguardWallpaper">ಒಂದು ಆಪ್‍ಗೆ ಲಾಕ್ ಪರದೆಯ ವಾಲ್‍ಪೇಪರ್ ಬದಲಾಯಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="privacy_guard_dialog_title">ಗೌಪ್ಯತಾ ರಕ್ಷಕ</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ಯುಎಸ್‍ಬಿಯಿಂದ ಎಡಿಬಿ &amp; ನೆಟ್‍ವರ್ಕ್ ಸಕ್ರಿಯಗೊಂಡಿದೆ</string>
     <string name="adb_active_generic_notification_message">ಡೀಬಗ್ಗಿಂಗ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಸ್ಪರ್ಶಿಸಿ.</string>
     <string name="usb_choose_notification_title">ಯುಎಸ್‍ಬಿ ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಲು ಸ್ಪರ್ಶಿಸಿ.</string>
+    <string name="adb_active_custom_tile">ಎಡಿಬಿ - %1$s</string>
+    <string name="adb_active_custom_tile_both">ಯುಎಸ್‍ಬಿ &amp; ನೆಟ್‍ವರ್ಕ್</string>
+    <string name="adb_active_custom_tile_usb">ಯುಎಸ್‍ಬಿ</string>
+    <string name="adb_active_custom_tile_net">ನೆಟ್‍ವರ್ಕ್</string>
     <string name="permlab_interceptPackageLaunch">ಆಪ್ ಆರಂಭ ಪ್ರತಿಬಂಧ</string>
     <string name="permdesc_interceptPackageLaunch">ಆಪ್‍ಗೆ ಇತರೆ ಆಪ್‍ಗಳು ಆರಂಭಗೊಳ್ಳುವುದನ್ನು ಪ್ರತಿಬಂಧಿಸಲು ಅನುವುಮಾಡುತ್ತದೆ</string>
     <string name="app_ops_access_camera">ಕ್ಯಾಮೆರಾ ಪ್ರವೇಶ</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">ಫಿಂಗರ್‍ಪ್ರಿಂಟ್ %d</string>
     <string name="permlab_accessFingerprintService">ಫಿಂಗರ್‍ಪ್ರಿಂಟ್ ಸೇವೆಯನ್ನು ಪ್ರವೇಶಿಸು</string>
     <string name="permdesc_accessFingerprintService">ಆಪ್‍ಗೆ ಫಿಂಗರ್‍ಪ್ರಿಂಟ್ ಸೇವೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ. ಆಪ್ ಫಿಂಗರ್‍ಪ್ರಿಂಟ್ಸ್ ಬಲದ ಮೇಲೆ ಸೇರಿಸಬಹುದು, ಅಳಿಸಬಹುದು, ಮರುಹೆಸರಿಸಬಹುದು ಹಾಗು ದೃಢೀಕರಿಸಬಹುದು</string>
+    <string name="permlab_resetBatteryStats">ಬ್ಯಾಟರಿ ಅಂಕಿಅಂಶಗಳನ್ನು ಮರುಹೊಂದಿಸು</string>
+    <string name="permdesc_resetBatteryStats">ಒಂದು ಅಪ್ಲಿಕೇಶನ್‍ಗೆ ಪ್ರಸ್ತುತ ಕಡಿಮೆ-ಮಟ್ಟದ ಬ್ಯಾಟರಿ ಬಳಕೆ ಡೇಟಾವನ್ನು ಮರುಹೊಂದಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
+    <string name="silent_mode_priority">ಆದ್ಯತೆ</string>
+    <string name="silent_mode_none">ಶೂನ್ಯ</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>
@@ -1778,12 +1784,4 @@
     <string name="stk_cc_ss_to_ss">SS ವಿನಂತಿಯನ್ನು ಹೊಸ SS ವಿನಂತಿಗೆ ಮಾರ್ಪಡಿಸಲಾಗಿದೆ.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ಎಡಿಬಿ - %1$s</string>
-    <string name="adb_active_custom_tile_both">ಯುಎಸ್‍ಬಿ &amp; ನೆಟ್‍ವರ್ಕ್</string>
-    <string name="adb_active_custom_tile_usb">ಯುಎಸ್‍ಬಿ</string>
-    <string name="adb_active_custom_tile_net">ನೆಟ್‍ವರ್ಕ್</string>
-    <string name="permlab_resetBatteryStats">ಬ್ಯಾಟರಿ ಅಂಕಿಅಂಶಗಳನ್ನು ಮರುಹೊಂದಿಸು</string>
-    <string name="permdesc_resetBatteryStats">ಒಂದು ಅಪ್ಲಿಕೇಶನ್‍ಗೆ ಪ್ರಸ್ತುತ ಕಡಿಮೆ-ಮಟ್ಟದ ಬ್ಯಾಟರಿ ಬಳಕೆ ಡೇಟಾವನ್ನು ಮರುಹೊಂದಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="silent_mode_priority">ಆದ್ಯತೆ</string>
-    <string name="silent_mode_none">ಶೂನ್ಯ</string>
 </resources>

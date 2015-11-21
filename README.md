@@ -4,7 +4,7 @@
 
 *Base device for CyanogenMod 12.1, as a basis for all the other CyanogenMod 12.1 devices.*
 
-目前的 *patch* 基于 *cm-12.1* 的 ***snapshot*** 版本 ***cm-12.1-YOG4P*** 制作，会跟随 *cm-12.1* 的版本进行同步更新。
+目前的 *patch* 基于 *cm-12.1* 的 ***snapshot*** 版本 ***cm-12.1-YOG7D*** 制作，会跟随 *cm-12.1* 的版本进行同步更新。
 
 ********
 

@@ -58,13 +58,11 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 1145
     check-cast p1, [Landroid/view/View;
 
-    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->doInBackground([Landroid/view/View;)Ljava/lang/Void;
 
     move-result-object v0

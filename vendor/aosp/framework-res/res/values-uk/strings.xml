@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Відео не придатне для потокового передавання в цей пристрій.</string>
     <string name="selectTextMode">Вибрати текст</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Немає</string>
     <string name="profile_picker_title">Профілі</string>
     <string name="global_action_choose_profile">Профіль</string>
+    <string name="profile_none">Немає</string>
     <string name="global_action_screenshot">Скріншот</string>
     <string name="permlab_receiveProtectedSms">отримувати захищені SMS</string>
     <string name="permdesc_receiveProtectedSms">Дозволяє програмі отримувати захищені SMS.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Програма може вибрати, чи буде друга програма працювати в захищеному режимі. Коли програму запущено в захищеному режимі, вона не отримає доступ до персональних даних, таких як контакти, повідомлення чи журнал дзвінків.</string>
     <string name="privacy_guard_notification">Сторож Приватності активний</string>
     <string name="privacy_guard_notification_detail">%1$s буде заборонено доступ до персональних даних</string>
-    <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
-    <string name="permdesc_useHardwareFramework">Програма може отримувати доступ до підсистемних апаратних абстракцій CyanogenMod.</string>
     <string name="permlab_setKeyguardWallpaper">встановлення шпалер екрану блокування</string>
     <string name="permdesc_setKeyguardWallpaper">Дозволяє програмі міняти шпалери екрану блокування.</string>
     <string name="privacy_guard_dialog_title">Сторож Приватності</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB по USB та мережі увімкнено</string>
     <string name="adb_active_generic_notification_message">Торкніться, аби вимкнути налагодження.</string>
     <string name="usb_choose_notification_title">Натисніть для вибору налаштувань USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB та мережі</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Мережа</string>
     <string name="permlab_interceptPackageLaunch">Перехоплення запуску додатку</string>
     <string name="permdesc_interceptPackageLaunch">Дозволити додатку перехоплювати запуски інших додатків</string>
     <string name="app_ops_access_camera">доступ до камери</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">Відбиток пальця %d</string>
     <string name="permlab_accessFingerprintService">Доступ до відбитків пальців</string>
     <string name="permdesc_accessFingerprintService">Дозволяє додатку отримувати доступ до служби відбитків пальців. Додаток зможе додавати, видаляти, перейменовувати збережені відбитки та використовувати їх для автентифікації</string>
+    <string name="permlab_resetBatteryStats">скинути статистику акумулятора</string>
+    <string name="permdesc_resetBatteryStats">Дозволити програмі скидати дані про використання акумулятора.</string>
+    <string name="silent_mode_priority">Пріоритет</string>
+    <string name="silent_mode_none">Немає</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e %B %Y р.</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1783,12 +1789,4 @@
     <string name="stk_cc_ss_to_ss">Запит SS перетворено на новий запит SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB та мережі</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Мережа</string>
-    <string name="permlab_resetBatteryStats">скинути статистику акумулятора</string>
-    <string name="permdesc_resetBatteryStats">Дозволити програмі скидати дані про використання акумулятора.</string>
-    <string name="silent_mode_priority">Пріоритет</string>
-    <string name="silent_mode_none">Немає</string>
 </resources>

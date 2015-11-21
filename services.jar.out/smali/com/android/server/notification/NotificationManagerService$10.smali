@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/notification/NotificationManagerService;
 
-.field final synthetic val$notifId:I
+.field final synthetic val$notifIdString:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/notification/NotificationManagerService;I)V
+.method constructor <init>(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 2664
+    .line 2800
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$10;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    iput p2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifId:I
+    iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifIdString:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,23 +46,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2667
+    .line 2803
     # getter for: Lcom/android/server/notification/NotificationManagerService;->UPDATE_MSG_URI:Landroid/net/Uri;
-    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$5800()Landroid/net/Uri;
+    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$6900()Landroid/net/Uri;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifId:I
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifIdString:Ljava/lang/String;
 
     invoke-static {v1, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 2668
+    .line 2805
     .local v0, "updateUri":Landroid/net/Uri;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$10;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -80,6 +76,6 @@
 
     invoke-virtual {v1, v0, v2, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 2670
+    .line 2807
     return-void
 .end method

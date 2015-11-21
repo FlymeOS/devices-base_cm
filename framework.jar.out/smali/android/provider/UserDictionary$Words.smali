@@ -178,7 +178,7 @@
 
     .line 172
     .local v3, "values":Landroid/content/ContentValues;
-    const-string v4, "word"
+    const-string/jumbo v4, "word"
 
     invoke-virtual {v3, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -213,7 +213,7 @@
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 176
-    const-string v4, "shortcut"
+    const-string/jumbo v4, "shortcut"
 
     invoke-virtual {v3, v4, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

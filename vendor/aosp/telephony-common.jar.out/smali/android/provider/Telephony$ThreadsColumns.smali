@@ -37,3 +37,5 @@
 .field public static final SNIPPET_CHARSET:Ljava/lang/String; = "snippet_cs"
 
 .field public static final TYPE:Ljava/lang/String; = "type"
+
+.field public static final UNREAD_MESSAGE_COUNT:Ljava/lang/String; = "unread_message_count"

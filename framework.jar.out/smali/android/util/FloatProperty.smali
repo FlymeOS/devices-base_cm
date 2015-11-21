@@ -62,15 +62,12 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 31
     .local p0, "this":Landroid/util/FloatProperty;, "Landroid/util/FloatProperty<TT;>;"
     check-cast p2, Ljava/lang/Float;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/util/FloatProperty;->set(Ljava/lang/Object;Ljava/lang/Float;)V
 
     return-void

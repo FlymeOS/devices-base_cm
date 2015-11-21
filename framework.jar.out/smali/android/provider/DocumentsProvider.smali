@@ -203,7 +203,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "root"
+    const-string/jumbo v2, "root"
 
     const/4 v3, 0x1
 
@@ -214,7 +214,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "root/*"
+    const-string/jumbo v2, "root/*"
 
     const/4 v3, 0x2
 
@@ -225,7 +225,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "root/*/recent"
+    const-string/jumbo v2, "root/*/recent"
 
     const/4 v3, 0x3
 
@@ -236,7 +236,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "root/*/search"
+    const-string/jumbo v2, "root/*/search"
 
     const/4 v3, 0x4
 
@@ -269,7 +269,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "tree/*/document/*"
+    const-string/jumbo v2, "tree/*/document/*"
 
     const/4 v3, 0x7
 
@@ -280,7 +280,7 @@
 
     iget-object v1, p0, Landroid/provider/DocumentsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "tree/*/document/*/children"
+    const-string/jumbo v2, "tree/*/document/*/children"
 
     const/16 v3, 0x8
 
@@ -391,7 +391,7 @@
 
     .line 627
     .local v2, "context":Landroid/content/Context;
-    const-string v12, "uri"
+    const-string/jumbo v12, "uri"
 
     move-object/from16 v0, p3
 
@@ -488,7 +488,7 @@
     invoke-virtual {p0, v5, v12}, Landroid/provider/DocumentsProvider;->enforceWritePermissionInner(Landroid/net/Uri;Landroid/os/IBinder;)V
 
     .line 642
-    const-string v12, "mime_type"
+    const-string/jumbo v12, "mime_type"
 
     move-object/from16 v0, p3
 
@@ -520,7 +520,7 @@
 
     .line 651
     .local v10, "newDocumentUri":Landroid/net/Uri;
-    const-string v12, "uri"
+    const-string/jumbo v12, "uri"
 
     invoke-virtual {v11, v12, v10}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
     :try_end_0
@@ -631,7 +631,7 @@
     .line 671
     .end local v8    # "modeFlags":I
     :cond_4
-    const-string v12, "uri"
+    const-string/jumbo v12, "uri"
 
     invoke-virtual {v11, v12, v10}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -851,7 +851,7 @@
     if-eqz v2, :cond_0
 
     .line 407
-    const-string v1, "mime_type"
+    const-string/jumbo v1, "mime_type"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
@@ -906,7 +906,7 @@
 
     .line 518
     :pswitch_1
-    const-string v1, "vnd.android.document/root"
+    const-string/jumbo v1, "vnd.android.document/root"
 
     goto :goto_0
 
@@ -941,6 +941,7 @@
 
     goto :goto_0
 
+    .line 516
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1

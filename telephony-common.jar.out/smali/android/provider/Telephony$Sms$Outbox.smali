@@ -145,7 +145,6 @@
     .param p8, "threadId"    # J
 
     .prologue
-    .line 801
     long-to-int v1, p0
 
     move-object v2, p2

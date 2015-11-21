@@ -109,6 +109,14 @@
     return-void
 .end method
 
+.method public onConferenceStarted()V
+    .locals 0
+
+    .prologue
+    .line 345
+    return-void
+.end method
+
 .method public onConferenceablesChanged(Landroid/telecom/Connection;Ljava/util/List;)V
     .locals 0
     .param p1, "c"    # Landroid/telecom/Connection;

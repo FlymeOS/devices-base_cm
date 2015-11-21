@@ -51,10 +51,6 @@
 
 .method public bridge synthetic buildConfig(IIILandroid/media/AudioGainConfig;)Landroid/media/AudioPortConfig;
     .locals 1
-    .param p1, "x0"    # I
-    .param p2, "x1"    # I
-    .param p3, "x2"    # I
-    .param p4, "x3"    # Landroid/media/AudioGainConfig;
 
     .prologue
     .line 27

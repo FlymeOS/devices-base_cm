@@ -67,12 +67,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 121
-    const v0, 0x1010071
+    const v0, #android:attr@gridViewStyle#t
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 122
     return-void
 .end method
 
@@ -8284,13 +8282,11 @@
 
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
-    .param p1, "x0"    # Landroid/widget/Adapter;
 
     .prologue
     .line 60
     check-cast p1, Landroid/widget/ListAdapter;
 
-    .end local p1    # "x0":Landroid/widget/Adapter;
     invoke-virtual {p0, p1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void

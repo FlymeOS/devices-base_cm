@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 437
+    .line 436
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -28,14 +28,28 @@
 
 # virtual methods
 .method public createService(Landroid/app/ContextImpl;)Ljava/lang/Object;
-    .locals 1
+    .locals 3
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
+    .line 438
+    const-string v2, "batterymanager"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
     .line 439
-    new-instance v0, Landroid/os/BatteryManager;
+    .local v0, "b":Landroid/os/IBinder;
+    invoke-static {v0}, Landroid/app/IBatteryService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IBatteryService;
 
-    invoke-direct {v0}, Landroid/os/BatteryManager;-><init>()V
+    move-result-object v1
 
-    return-object v0
+    .line 440
+    .local v1, "service":Landroid/app/IBatteryService;
+    new-instance v2, Landroid/os/BatteryManager;
+
+    invoke-direct {v2, v1}, Landroid/os/BatteryManager;-><init>(Landroid/app/IBatteryService;)V
+
+    return-object v2
 .end method

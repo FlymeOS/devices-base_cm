@@ -32,7 +32,15 @@
 
 .field static final TRANSACTION_getAwakeTimeBattery:I = 0x44
 
+.field static final TRANSACTION_getAwakeTimeDockBattery:I = 0x4a
+
+.field static final TRANSACTION_getAwakeTimeDockPlugged:I = 0x4b
+
 .field static final TRANSACTION_getAwakeTimePlugged:I = 0x45
+
+.field static final TRANSACTION_getDockStatistics:I = 0x46
+
+.field static final TRANSACTION_getDockStatisticsStream:I = 0x47
 
 .field static final TRANSACTION_getStatistics:I = 0x9
 
@@ -162,7 +170,11 @@
 
 .field static final TRANSACTION_noteWifiSupplicantStateChanged:I = 0x2e
 
+.field static final TRANSACTION_resetStatistics:I = 0x48
+
 .field static final TRANSACTION_setBatteryState:I = 0x43
+
+.field static final TRANSACTION_setDockBatteryState:I = 0x49
 
 
 # direct methods
@@ -254,7 +266,7 @@
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 832
+    .line 896
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -2967,6 +2979,231 @@
 
     goto/16 :goto_0
 
+    .line 833
+    .end local v18    # "_result":J
+    :sswitch_46
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 834
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getDockStatistics()[B
+
+    move-result-object v18
+
+    .line 835
+    .local v18, "_result":[B
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 836
+    move-object/from16 v0, p3
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    .line 837
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 841
+    .end local v18    # "_result":[B
+    :sswitch_47
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 842
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getDockStatisticsStream()Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v18
+
+    .line 843
+    .local v18, "_result":Landroid/os/ParcelFileDescriptor;
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 844
+    if-eqz v18, :cond_18
+
+    .line 845
+    const/4 v4, 0x1
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 846
+    const/4 v4, 0x1
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, p3
+
+    invoke-virtual {v0, v1, v4}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
+
+    .line 851
+    :goto_19
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 849
+    :cond_18
+    const/4 v4, 0x0
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_19
+
+    .line 855
+    .end local v18    # "_result":Landroid/os/ParcelFileDescriptor;
+    :sswitch_48
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 856
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->resetStatistics()V
+
+    .line 857
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 858
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 862
+    :sswitch_49
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 864
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v5
+
+    .line 866
+    .restart local v5    # "_arg0":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    .line 868
+    .restart local v6    # "_arg1":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v7
+
+    .line 870
+    .restart local v7    # "_arg2":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v8
+
+    .line 872
+    .restart local v8    # "_arg3":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v9
+
+    .line 874
+    .restart local v9    # "_arg4":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v10
+
+    .restart local v10    # "_arg5":I
+    move-object/from16 v4, p0
+
+    .line 875
+    invoke-virtual/range {v4 .. v10}, Lcom/android/internal/app/IBatteryStats$Stub;->setDockBatteryState(IIIIII)V
+
+    .line 876
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 877
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 881
+    .end local v5    # "_arg0":I
+    .end local v6    # "_arg1":I
+    .end local v7    # "_arg2":I
+    .end local v8    # "_arg3":I
+    .end local v9    # "_arg4":I
+    .end local v10    # "_arg5":I
+    :sswitch_4a
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 882
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimeDockBattery()J
+
+    move-result-wide v18
+
+    .line 883
+    .local v18, "_result":J
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 884
+    move-object/from16 v0, p3
+
+    move-wide/from16 v1, v18
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 885
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 889
+    .end local v18    # "_result":J
+    :sswitch_4b
+    const-string v4, "com.android.internal.app.IBatteryStats"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 890
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/IBatteryStats$Stub;->getAwakeTimeDockPlugged()J
+
+    move-result-wide v18
+
+    .line 891
+    .restart local v18    # "_result":J
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 892
+    move-object/from16 v0, p3
+
+    move-wide/from16 v1, v18
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 893
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
     .line 38
     :sswitch_data_0
     .sparse-switch
@@ -3039,6 +3276,12 @@
         0x43 -> :sswitch_43
         0x44 -> :sswitch_44
         0x45 -> :sswitch_45
+        0x46 -> :sswitch_46
+        0x47 -> :sswitch_47
+        0x48 -> :sswitch_48
+        0x49 -> :sswitch_49
+        0x4a -> :sswitch_4a
+        0x4b -> :sswitch_4b
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

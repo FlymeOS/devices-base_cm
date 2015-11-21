@@ -237,22 +237,15 @@
 
 .method protected bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Z
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Ljava/lang/Object;
-    .param p4, "x3"    # Ljava/lang/Object;
 
     .prologue
     .line 1251
     check-cast p2, Ljava/lang/String;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     check-cast p3, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .end local p3    # "x2":Ljava/lang/Object;
     check-cast p4, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .end local p4    # "x3":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->entryRemoved(ZLjava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
     return-void

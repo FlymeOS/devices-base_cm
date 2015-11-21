@@ -139,6 +139,7 @@
     <item type="id" name="option1">false</item>
     <item type="id" name="option2">false</item>
     <item type="id" name="option3">false</item>
+    <item type="id" name="option4">false</item>
     <item type="id" name="grant_credentials_permission_message_header">false</item>
     <item type="id" name="packages_list">false</item>
     <item type="id" name="permission_icon">false</item>

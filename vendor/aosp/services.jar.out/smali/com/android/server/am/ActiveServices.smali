@@ -922,16 +922,6 @@
 
     if-lez v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/server/am/ActiveServices;->mRestartingServices:Ljava/util/ArrayList;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
     .line 1336
     const/4 v14, 0x0
 

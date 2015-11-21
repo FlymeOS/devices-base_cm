@@ -121,7 +121,7 @@
 
     .line 3820
     :cond_1
-    const v3, 0x102033a
+    const v3, 0x102033b
 
     iget-object v4, p0, Landroid/app/Notification$BigPictureStyle;->mPicture:Landroid/graphics/Bitmap;
 
@@ -158,7 +158,7 @@
 
     if-eqz v2, :cond_3
 
-    const v3, 0x1020347
+    const v3, 0x1020348
 
     :goto_1
     # invokes: Landroid/app/Notification$Builder;->addProfileBadge(Landroid/widget/RemoteViews;I)Z
@@ -179,7 +179,7 @@
     .line 3825
     .restart local v2    # "twoTextLines":Z
     :cond_3
-    const v3, 0x102034a
+    const v3, 0x102034b
 
     goto :goto_1
 .end method

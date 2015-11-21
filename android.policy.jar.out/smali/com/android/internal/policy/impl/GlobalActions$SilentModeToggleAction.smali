@@ -23,25 +23,25 @@
     .locals 6
 
     .prologue
-    .line 1183
+    .line 1081
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$SilentModeToggleAction;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    .line 1184
+    .line 1082
     const v1, 0x1080323
 
     const v2, 0x1080322
 
-    const v3, 0x10401e7
+    const v3, 0x10401dc
 
-    const v4, 0x10401e8
+    const v4, 0x10401dd
 
-    const v5, 0x10401e9
+    const v5, 0x10401de
 
     move-object v0, p0
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;-><init>(IIIII)V
 
-    .line 1189
+    .line 1087
     return-void
 .end method
 
@@ -52,14 +52,14 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 1192
+    .line 1090
     if-eqz p1, :cond_0
 
-    .line 1193
+    .line 1091
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SilentModeToggleAction;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1900(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1700(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/media/AudioManager;
 
     move-result-object v0
 
@@ -67,16 +67,16 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 1197
+    .line 1095
     :goto_0
     return-void
 
-    .line 1195
+    .line 1093
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SilentModeToggleAction;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1900(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1700(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/media/AudioManager;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 1204
+    .line 1102
     const/4 v0, 0x0
 
     return v0
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 1200
+    .line 1098
     const/4 v0, 0x1
 
     return v0

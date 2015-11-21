@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Αυτό το βίντεο δεν είναι έγκυρο για ροή σε αυτή τη συσκευή.</string>
     <string name="selectTextMode">Επιλογή κειμένου</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Κανένα</string>
     <string name="profile_picker_title">Προφίλ</string>
     <string name="global_action_choose_profile">Προφίλ</string>
+    <string name="profile_none">Κανένα</string>
     <string name="global_action_screenshot">Στιγμιότυπο οθόνης</string>
     <string name="permlab_receiveProtectedSms">λήψη προστατευμένων SMS</string>
     <string name="permdesc_receiveProtectedSms">Επιτρέπει στην εφαρμογή να λαμβάνει εισερχόμενα προστατευμένα SMS.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Επιτρέπει στην εφαρμογή τον χειρισμό άλλων εφαρμογών με την Προστασία Απορρήτου. Όταν μια εφαρμογή τρέχει με την Προστασία Απορρήτου, δεν θα έχει πρόσβαση στα προσωπικά σας δεδομένα όπως επαφές, μηνύματα ή το αρχείο κλήσεων.</string>
     <string name="privacy_guard_notification">Προστασία Απορρήτου ενεργή</string>
     <string name="privacy_guard_notification_detail">%1$s δεν θα μπορεί να έχει πρόσβαση στα προσωπικά σας δεδομένα</string>
-    <string name="permlab_useHardwareFramework">χρήση του πλαισίου υλικού</string>
-    <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του CM.</string>
     <string name="permlab_setKeyguardWallpaper">ορισμός ταπετσαρίας οθόνης κλειδώματος</string>
     <string name="permdesc_setKeyguardWallpaper">Επιτρέπει σε μια εφαρμογή την αλλαγή της ταπετσαρίας της οθόνης κλειδώματος.</string>
     <string name="privacy_guard_dialog_title">Προστασία Απορρήτου</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB μέσω USB &amp; δικτύου ενεργοποιημένο</string>
     <string name="adb_active_generic_notification_message">Αγγίξτε για απενεργοποίηση του εντοπισμού σφαλμάτων.</string>
     <string name="usb_choose_notification_title">Αγγίξτε για να ρυθμίσετε τη σύνδεση μέσω USB.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; δίκτυο</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Δίκτυο</string>
     <string name="permlab_interceptPackageLaunch">παρεμπόδιση έναρξης εφαρμογών</string>
     <string name="permdesc_interceptPackageLaunch">Επιτρέπει σε μια εφαρμογή να παρεμποδίσει την έναρξη άλλων εφαρμογών</string>
     <string name="app_ops_access_camera">πρόσβαση στην φωτογρ. μηχανή</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Δακτυλικό αποτύπωμα %d</string>
     <string name="permlab_accessFingerprintService">πρόσβαση στην υπηρεσία δακτυλικών αποτυπωμάτων</string>
     <string name="permdesc_accessFingerprintService">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία δακτυλικών αποτυπωμάτων. Η εφαρμογή μπορεί να προσθέσει, να διαγράψει, να μετονομάσει και να ταυτοποιήσει δακτυλικά αποτυπώματα</string>
+    <string name="permlab_resetBatteryStats">επαναφορά στατιστικών μπαταρίας</string>
+    <string name="permdesc_resetBatteryStats">Επιτρέπει σε μια εφαρμογή να κάνει επαναφορά τα χαμηλού επιπέδου δεδομένα χρήσης μπαταρίας.</string>
+    <string name="silent_mode_priority">Προτεραιότητα</string>
+    <string name="silent_mode_none">Κανένα</string>
+    <string name="subscription_change_disabled_wifi_ap">Το Wi-Fi hotspot απενεργοποιήθηκε λόγω αλλαγής συνδρομής SIM</string>
+    <string name="notify_turn_wifi_off_title">Απενεργοποίηση Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -1783,12 +1791,6 @@
     <string name="stk_cc_ss_to_ss">Το αίτημα SS τροποποιήθηκε σε νέο αίτημα SS.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; δίκτυο</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Δίκτυο</string>
-    <string name="permlab_resetBatteryStats">επαναφορά στατιστικών μπαταρίας</string>
-    <string name="permdesc_resetBatteryStats">Επιτρέπει σε μια εφαρμογή να κάνει επαναφορά τα χαμηλού επιπέδου δεδομένα χρήσης μπαταρίας.</string>
-    <string name="silent_mode_priority">Προτεραιότητα</string>
-    <string name="silent_mode_none">Κανένα</string>
+    <string name="permlab_thirdPartyKeyguard">χρήση ως οθόνη κλειδώματος</string>
+    <string name="permdesc_thirdPartyKeyguard">Επιτρέπει σε μια εφαρμογή να χρησιμοποιηθεί ως μια ανασφαλής οθόνη κλειδώματος.</string>
 </resources>

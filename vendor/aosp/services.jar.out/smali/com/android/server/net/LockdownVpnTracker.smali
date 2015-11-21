@@ -574,9 +574,9 @@
     if-le v0, v1, :cond_b
 
     .line 156
-    const v17, 0x1040637
+    const v17, 0x104062c
 
-    const v18, 0x108075d
+    const v18, 0x108075f
 
     move-object/from16 v0, p0
 
@@ -626,9 +626,9 @@
     invoke-static {v10}, Lcom/android/server/EventLogTags;->writeLockdownVpnConnecting(I)V
 
     .line 162
-    const v17, 0x1040635
+    const v17, 0x104062a
 
-    const v18, 0x108075d
+    const v18, 0x108075f
 
     move-object/from16 v0, p0
 
@@ -705,9 +705,9 @@
     invoke-static {v0, v1, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 172
-    const v17, 0x1040637
+    const v17, 0x104062c
 
-    const v18, 0x108075d
+    const v18, 0x108075f
 
     move-object/from16 v0, p0
 
@@ -729,9 +729,9 @@
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 176
-    const v17, 0x1040637
+    const v17, 0x104062c
 
-    const v18, 0x108075d
+    const v18, 0x108075f
 
     move-object/from16 v0, p0
 
@@ -834,9 +834,9 @@
     invoke-static {v10}, Lcom/android/server/EventLogTags;->writeLockdownVpnConnected(I)V
 
     .line 191
-    const v17, 0x1040636
+    const v17, 0x104062b
 
-    const v18, 0x108075c
+    const v18, 0x108075e
 
     move-object/from16 v0, p0
 
@@ -1216,7 +1216,7 @@
 
     iget-object v2, p0, Lcom/android/server/net/LockdownVpnTracker;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040638
+    const v3, 0x104062d
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1248,7 +1248,7 @@
 
     iget-object v3, p0, Lcom/android/server/net/LockdownVpnTracker;->mContext:Landroid/content/Context;
 
-    const v4, 0x104063b
+    const v4, 0x1040630
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

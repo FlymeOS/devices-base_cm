@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Bideo hau ezin da gailuan zuzenean erreproduzitu.</string>
     <string name="selectTextMode">Hautatu testua</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Bat ere ez</string>
     <string name="profile_picker_title">Profilak</string>
     <string name="global_action_choose_profile">Profila</string>
+    <string name="profile_none">Bat ere ez</string>
     <string name="global_action_screenshot">Pantaila-argazkia</string>
     <string name="permlab_receiveProtectedSms">jaso SMS babestua</string>
     <string name="permdesc_receiveProtectedSms">SMS mezu babestua jasotzea ahalbidetzen dio aplikazioari.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Beste aplikazio bat Privacy Guard menpean dagoen aldatzea ahalbidetzen dio aplikazioari. Aplikazio bat Privacy Guard menpean dagoenean ezin izango du datu pertsonalik ikusi, ez kontakturik, ez dei erregistrorik, ezta mezurik ere.</string>
     <string name="privacy_guard_notification">Privacy Guard aktibo</string>
     <string name="privacy_guard_notification_detail">%1$s aplikazioak ezingo du datu pertsonalik irakurri</string>
-    <string name="permlab_useHardwareFramework">Hardware markoa erabili</string>
-    <string name="permdesc_useHardwareFramework">Aplikazioari hardware markorako sarbidea gaitzen dio.</string>
     <string name="permlab_setKeyguardWallpaper">Ezarri blokeo-pantailarako horma-papera</string>
     <string name="permdesc_setKeyguardWallpaper">Blokeo-pantailarako horma-papera aldatzea ahalbidetzen dio aplikazioari.</string>
     <string name="privacy_guard_dialog_title">Privacy Guard</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">USB eta sare gaineko ADB gaitua</string>
     <string name="adb_active_generic_notification_message">Sakatu arazketa ezgaitzeko.</string>
     <string name="usb_choose_notification_title">Ukitu USB aukerak hautatzeko.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB eta sarea</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Sarea</string>
     <string name="permlab_interceptPackageLaunch">Eragotzi aplikazioak abiaraztea</string>
     <string name="permdesc_interceptPackageLaunch">Beste aplikazioak abiaraztea eragoztea ahalbidetzen dio aplikazioari</string>
     <string name="app_ops_access_camera">kamera atzitu</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">%d. hatz-marka</string>
     <string name="permlab_accessFingerprintService">atzitu hatz-marka zerbitzua</string>
     <string name="permdesc_accessFingerprintService">Hatz-marka zerbitzua atzitzea ahalbidetzen dio aplikazioari. Aplikazioak hatz-markak gehitu, ezabatu edo izenez aldatu ahal izango ditu eta hauek erabilita identifikatu</string>
+    <string name="permlab_resetBatteryStats">leheneratu bateria estatistikak</string>
+    <string name="permdesc_resetBatteryStats">Bateriaren maila baxuko erabilera datuak leheneratzea ahalbidetzen dio aplikazioari.</string>
+    <string name="silent_mode_priority">Lehentasuna</string>
+    <string name="silent_mode_none">Bat ere ez</string>
+    <string name="subscription_change_disabled_wifi_ap">Wi-Fi gunea desgaitu da SIM harpidetza aldatu delako</string>
+    <string name="notify_turn_wifi_off_title">Ezgaitu Wi-Fia</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>
@@ -1778,12 +1786,6 @@ Gailua kargatzen ezarri orduko desaktibatzen da bateria-aurrezlea."</string>
     <string name="stk_cc_ss_to_ss">SS eskaera SS eskaera berrira aldatu da.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB eta sarea</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Sarea</string>
-    <string name="permlab_resetBatteryStats">leheneratu bateria estatistikak</string>
-    <string name="permdesc_resetBatteryStats">Bateriaren maila baxuko erabilera datuak leheneratzea ahalbidetzen dio aplikazioari.</string>
-    <string name="silent_mode_priority">Lehentasuna</string>
-    <string name="silent_mode_none">Bat ere ez</string>
+    <string name="permlab_thirdPartyKeyguard">hirugarrengoen blokeo pantaila</string>
+    <string name="permdesc_thirdPartyKeyguard">Aplikazio bat blokeo pantaila ez seguru gisa erabiltzea ahalbidetzen du.</string>
 </resources>

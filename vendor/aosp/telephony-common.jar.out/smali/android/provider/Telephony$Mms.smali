@@ -47,7 +47,7 @@
     .locals 2
 
     .prologue
-    .line 2091
+    .line 2098
     const-string v0, "content://mms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2096
+    .line 2103
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "report-request"
@@ -67,7 +67,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_REQUEST_URI:Landroid/net/Uri;
 
-    .line 2102
+    .line 2109
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "report-status"
@@ -78,7 +78,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_STATUS_URI:Landroid/net/Uri;
 
-    .line 2119
+    .line 2126
     const-string v0, "\\s*(\"[^\"]*\"|[^<>\"]+)\\s*<([^<>]+)>\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -94,10 +94,10 @@
     .locals 0
 
     .prologue
-    .line 2085
+    .line 2092
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2086
+    .line 2093
     return-void
 .end method
 
@@ -106,14 +106,14 @@
     .param p0, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 2147
+    .line 2154
     sget-object v1, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 2149
+    .line 2156
     .local v0, "match":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -121,14 +121,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 2150
+    .line 2157
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2152
+    .line 2159
     .end local p0    # "address":Ljava/lang/String;
     :cond_0
     return-object p0
@@ -139,27 +139,27 @@
     .param p0, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 2163
+    .line 2170
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 2164
+    .line 2171
     const/4 v2, 0x0
 
-    .line 2169
+    .line 2176
     :goto_0
     return v2
 
-    .line 2167
+    .line 2174
     :cond_0
     invoke-static {p0}, Landroid/provider/Telephony$Mms;->extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2168
+    .line 2175
     .local v1, "s":Ljava/lang/String;
     sget-object v2, Landroid/util/Patterns;->EMAIL_ADDRESS:Ljava/util/regex/Pattern;
 
@@ -167,7 +167,7 @@
 
     move-result-object v0
 
-    .line 2169
+    .line 2176
     .local v0, "match":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -181,21 +181,21 @@
     .param p0, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 2180
+    .line 2187
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2181
+    .line 2188
     const/4 v1, 0x0
 
-    .line 2185
+    .line 2192
     :goto_0
     return v1
 
-    .line 2184
+    .line 2191
     :cond_0
     sget-object v1, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    .line 2185
+    .line 2192
     .local v0, "match":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -220,7 +220,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2128
+    .line 2135
     sget-object v1, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -246,7 +246,7 @@
     .param p3, "orderBy"    # Ljava/lang/String;
 
     .prologue
-    .line 2138
+    .line 2145
     sget-object v1, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

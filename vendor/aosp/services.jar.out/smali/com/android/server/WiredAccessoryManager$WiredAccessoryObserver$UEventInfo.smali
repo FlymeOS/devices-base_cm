@@ -35,24 +35,24 @@
     .param p5, "stateNbits"    # I
 
     .prologue
-    .line 441
+    .line 453
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->this$1:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 442
+    .line 454
     iput-object p2, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mDevName:Ljava/lang/String;
 
-    .line 443
+    .line 455
     iput p3, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mState1Bits:I
 
-    .line 444
+    .line 456
     iput p4, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mState2Bits:I
 
-    .line 445
+    .line 457
     iput p5, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mStateNbits:I
 
-    .line 446
+    .line 458
     return-void
 .end method
 
@@ -62,7 +62,7 @@
     .locals 2
 
     .prologue
-    .line 459
+    .line 471
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getSwitchStatePath()Ljava/lang/String;
@@ -71,7 +71,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 460
+    .line 472
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -86,7 +86,7 @@
     .param p2, "switchState"    # I
 
     .prologue
-    .line 464
+    .line 476
     iget v2, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mState1Bits:I
 
     iget v3, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mState2Bits:I
@@ -99,7 +99,7 @@
 
     xor-int/lit8 v0, v2, -0x1
 
-    .line 465
+    .line 477
     .local v0, "preserveMask":I
     const/4 v2, 0x1
 
@@ -107,7 +107,7 @@
 
     iget v1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mState1Bits:I
 
-    .line 469
+    .line 481
     .local v1, "setBits":I
     :goto_0
     and-int v2, p1, v0
@@ -116,7 +116,7 @@
 
     return v2
 
-    .line 465
+    .line 477
     .end local v1    # "setBits":I
     :cond_0
     const/4 v2, 0x2
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 448
+    .line 460
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->mDevName:Ljava/lang/String;
 
     return-object v0
@@ -156,7 +156,7 @@
     .locals 5
 
     .prologue
-    .line 451
+    .line 463
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v1, "/devices/virtual/switch/%s"
@@ -182,7 +182,7 @@
     .locals 5
 
     .prologue
-    .line 455
+    .line 467
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v1, "/sys/class/switch/%s/state"

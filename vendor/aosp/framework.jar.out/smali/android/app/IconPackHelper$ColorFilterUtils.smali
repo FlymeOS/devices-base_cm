@@ -63,10 +63,10 @@
     .locals 0
 
     .prologue
-    .line 822
+    .line 823
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1003
+    .line 1004
     return-void
 .end method
 
@@ -77,21 +77,21 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 980
+    .line 981
     const/high16 v1, 0x42c80000    # 100.0f
 
     div-float/2addr p0, v1
 
-    .line 981
+    .line 982
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 982
+    .line 983
     .local v0, "cm":Landroid/graphics/ColorMatrix;
     invoke-virtual {v0, v2, v2, v2, p0}, Landroid/graphics/ColorMatrix;->setScale(FFFF)V
 
-    .line 984
+    .line 985
     return-object v0
 .end method
 
@@ -100,23 +100,23 @@
     .param p0, "brightness"    # F
 
     .prologue
-    .line 959
+    .line 960
     const/high16 v1, 0x42c80000    # 100.0f
 
     div-float/2addr p0, v1
 
-    .line 960
+    .line 961
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 961
+    .line 962
     .local v0, "cm":Landroid/graphics/ColorMatrix;
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, p0, p0, p0, v1}, Landroid/graphics/ColorMatrix;->setScale(FFFF)V
 
-    .line 963
+    .line 964
     return-object v0
 .end method
 
@@ -129,14 +129,14 @@
 
     const/4 v4, 0x0
 
-    .line 967
+    .line 968
     const/high16 v2, 0x42c80000    # 100.0f
 
     div-float v2, p0, v2
 
     add-float p0, v2, v5
 
-    .line 968
+    .line 969
     const/high16 v2, -0x41000000    # -0.5f
 
     mul-float/2addr v2, p0
@@ -149,7 +149,7 @@
 
     mul-float v1, v2, v3
 
-    .line 969
+    .line 970
     .local v1, "o":F
     const/16 v2, 0x14
 
@@ -235,7 +235,7 @@
 
     aput v4, v0, v2
 
-    .line 976
+    .line 977
     .local v0, "matrix":[F
     new-instance v2, Landroid/graphics/ColorMatrix;
 
@@ -253,12 +253,12 @@
 
     const/4 v10, 0x0
 
-    .line 914
+    .line 915
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 915
+    .line 916
     .local v0, "cm":Landroid/graphics/ColorMatrix;
     const/high16 v7, 0x43340000    # 180.0f
 
@@ -268,12 +268,12 @@
 
     mul-float p0, v7, v8
 
-    .line 916
+    .line 917
     cmpl-float v7, p0, v10
 
     if-eqz v7, :cond_0
 
-    .line 917
+    .line 918
     float-to-double v8, p0
 
     invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
@@ -282,7 +282,7 @@
 
     double-to-float v1, v8
 
-    .line 918
+    .line 919
     .local v1, "cosVal":F
     float-to-double v8, p0
 
@@ -292,19 +292,19 @@
 
     double-to-float v6, v8
 
-    .line 919
+    .line 920
     .local v6, "sinVal":F
     const v4, 0x3e5a1cac    # 0.213f
 
-    .line 920
+    .line 921
     .local v4, "lumR":F
     const v3, 0x3f370a3d    # 0.715f
 
-    .line 921
+    .line 922
     .local v3, "lumG":F
     const v2, 0x3d9374bc    # 0.072f
 
-    .line 922
+    .line 923
     .local v2, "lumB":F
     const/16 v7, 0x19
 
@@ -516,11 +516,11 @@
 
     aput v11, v5, v7
 
-    .line 934
+    .line 935
     .local v5, "mat":[F
     invoke-virtual {v0, v5}, Landroid/graphics/ColorMatrix;->set([F)V
 
-    .line 936
+    .line 937
     .end local v1    # "cosVal":F
     .end local v2    # "lumB":F
     .end local v3    # "lumG":F
@@ -536,21 +536,21 @@
     .param p0, "saturation"    # F
 
     .prologue
-    .line 940
+    .line 941
     const/high16 v1, 0x42c80000    # 100.0f
 
     div-float/2addr p0, v1
 
-    .line 941
+    .line 942
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    .line 942
+    .line 943
     .local v0, "cm":Landroid/graphics/ColorMatrix;
     invoke-virtual {v0, p0}, Landroid/graphics/ColorMatrix;->setSaturation(F)V
 
-    .line 944
+    .line 945
     return-object v0
 .end method
 
@@ -563,7 +563,7 @@
 
     const/4 v7, 0x0
 
-    .line 988
+    .line 989
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v5
@@ -574,7 +574,7 @@
 
     div-float v0, v5, v6
 
-    .line 989
+    .line 990
     .local v0, "alpha":F
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
@@ -584,7 +584,7 @@
 
     mul-float v4, v5, v0
 
-    .line 990
+    .line 991
     .local v4, "red":F
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
@@ -594,7 +594,7 @@
 
     mul-float v2, v5, v0
 
-    .line 991
+    .line 992
     .local v2, "green":F
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -604,7 +604,7 @@
 
     mul-float v1, v5, v0
 
-    .line 993
+    .line 994
     .local v1, "blue":F
     const/16 v5, 0x14
 
@@ -690,7 +690,7 @@
 
     aput v7, v3, v5
 
-    .line 1000
+    .line 1001
     .local v3, "matrix":[F
     new-instance v5, Landroid/graphics/ColorMatrix;
 
@@ -706,7 +706,7 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 904
+    .line 905
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -724,7 +724,7 @@
     .param p1, "defaultValue"    # I
 
     .prologue
-    .line 897
+    .line 898
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -736,17 +736,17 @@
 
     move-result p1
 
-    .line 899
+    .line 900
     .end local p1    # "defaultValue":I
     :goto_0
     return p1
 
-    .line 898
+    .line 899
     .restart local p1    # "defaultValue":I
     :catch_0
     move-exception v0
 
-    .line 899
+    .line 900
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -755,14 +755,14 @@
     .locals 2
 
     .prologue
-    .line 948
+    .line 949
     const/16 v1, 0x14
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_0
 
-    .line 955
+    .line 956
     .local v0, "matrix":[F
     new-instance v1, Landroid/graphics/ColorMatrix;
 
@@ -770,7 +770,7 @@
 
     return-object v1
 
-    .line 948
+    .line 949
     nop
 
     :array_0
@@ -816,12 +816,12 @@
 
     const/4 v8, 0x0
 
-    .line 845
+    .line 846
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 846
+    .line 847
     .local v7, "tag":Ljava/lang/String;
     const-string v9, "filter"
 
@@ -831,24 +831,24 @@
 
     if-nez v9, :cond_0
 
-    .line 892
+    .line 893
     :goto_0
     return v8
 
-    .line 848
+    .line 849
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v1
 
-    .line 850
+    .line 851
     .local v1, "attrCount":I
     const/4 v0, 0x0
 
     .local v0, "attr":Ljava/lang/String;
     move v2, v1
 
-    .line 852
+    .line 853
     .end local v1    # "attrCount":I
     .local v2, "attrCount":I
     :goto_1
@@ -858,12 +858,12 @@
     .restart local v1    # "attrCount":I
     if-lez v2, :cond_1
 
-    .line 853
+    .line 854
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 854
+    .line 855
     .local v3, "attrName":Ljava/lang/String;
     const-string/jumbo v9, "name"
 
@@ -873,7 +873,7 @@
 
     if-eqz v9, :cond_9
 
-    .line 855
+    .line 856
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -884,7 +884,7 @@
     .restart local v2    # "attrCount":I
     goto :goto_1
 
-    .line 858
+    .line 859
     .end local v2    # "attrCount":I
     .end local v3    # "attrName":Ljava/lang/String;
     .restart local v1    # "attrCount":I
@@ -893,7 +893,7 @@
 
     move-result-object v4
 
-    .line 859
+    .line 860
     .local v4, "content":Ljava/lang/String;
     if-eqz v0, :cond_2
 
@@ -905,12 +905,12 @@
 
     if-lez v9, :cond_2
 
-    .line 860
+    .line 861
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 861
+    .line 862
     const-string v9, "hue"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -919,7 +919,7 @@
 
     if-eqz v9, :cond_3
 
-    .line 862
+    .line 863
     invoke-static {v4, v8}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v8
@@ -932,13 +932,13 @@
 
     move-result v6
 
-    .line 863
+    .line 864
     .local v6, "intValue":I
     int-to-float v8, v6
 
     invoke-virtual {p1, v8}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->hue(F)Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
-    .line 892
+    .line 893
     .end local v6    # "intValue":I
     :cond_2
     :goto_2
@@ -946,7 +946,7 @@
 
     goto :goto_0
 
-    .line 864
+    .line 865
     :cond_3
     const-string/jumbo v9, "saturation"
 
@@ -956,7 +956,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 865
+    .line 866
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -965,7 +965,7 @@
 
     move-result v6
 
-    .line 867
+    .line 868
     .restart local v6    # "intValue":I
     int-to-float v8, v6
 
@@ -973,7 +973,7 @@
 
     goto :goto_2
 
-    .line 868
+    .line 869
     .end local v6    # "intValue":I
     :cond_4
     const-string v9, "invert"
@@ -984,7 +984,7 @@
 
     if-eqz v9, :cond_5
 
-    .line 869
+    .line 870
     const-string/jumbo v8, "true"
 
     invoke-virtual {v8, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -993,12 +993,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 870
+    .line 871
     invoke-virtual {p1}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->invertColors()Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
 
     goto :goto_2
 
-    .line 872
+    .line 873
     :cond_5
     const-string v9, "brightness"
 
@@ -1008,7 +1008,7 @@
 
     if-eqz v9, :cond_6
 
-    .line 873
+    .line 874
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -1017,7 +1017,7 @@
 
     move-result v6
 
-    .line 875
+    .line 876
     .restart local v6    # "intValue":I
     int-to-float v8, v6
 
@@ -1025,7 +1025,7 @@
 
     goto :goto_2
 
-    .line 876
+    .line 877
     .end local v6    # "intValue":I
     :cond_6
     const-string v9, "contrast"
@@ -1036,7 +1036,7 @@
 
     if-eqz v9, :cond_7
 
-    .line 877
+    .line 878
     invoke-static {v4, v8}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v8
@@ -1047,7 +1047,7 @@
 
     move-result v6
 
-    .line 879
+    .line 880
     .restart local v6    # "intValue":I
     int-to-float v8, v6
 
@@ -1055,7 +1055,7 @@
 
     goto :goto_2
 
-    .line 880
+    .line 881
     .end local v6    # "intValue":I
     :cond_7
     const-string v9, "alpha"
@@ -1066,7 +1066,7 @@
 
     if-eqz v9, :cond_8
 
-    .line 881
+    .line 882
     invoke-static {v4, v10}, Landroid/app/IconPackHelper$ColorFilterUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v9
@@ -1075,7 +1075,7 @@
 
     move-result v6
 
-    .line 882
+    .line 883
     .restart local v6    # "intValue":I
     int-to-float v8, v6
 
@@ -1083,7 +1083,7 @@
 
     goto :goto_2
 
-    .line 883
+    .line 884
     .end local v6    # "intValue":I
     :cond_8
     const-string/jumbo v8, "tint"
@@ -1094,13 +1094,13 @@
 
     if-eqz v8, :cond_2
 
-    .line 885
+    .line 886
     :try_start_0
     invoke-static {v4}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 886
+    .line 887
     .restart local v6    # "intValue":I
     invoke-virtual {p1, v6}, Landroid/app/IconPackHelper$ColorFilterUtils$Builder;->tint(I)Landroid/app/IconPackHelper$ColorFilterUtils$Builder;
     :try_end_0
@@ -1108,12 +1108,12 @@
 
     goto :goto_2
 
-    .line 887
+    .line 888
     .end local v6    # "intValue":I
     :catch_0
     move-exception v5
 
-    .line 888
+    .line 889
     .local v5, "e":Ljava/lang/IllegalArgumentException;
     # getter for: Landroid/app/IconPackHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/app/IconPackHelper;->access$000()Ljava/lang/String;

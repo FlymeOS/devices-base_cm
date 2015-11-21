@@ -60,11 +60,6 @@
 # virtual methods
 .method public bridge synthetic foundNonMonotonic(Landroid/net/NetworkStats;ILandroid/net/NetworkStats;ILjava/lang/Object;)V
     .locals 6
-    .param p1, "x0"    # Landroid/net/NetworkStats;
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Landroid/net/NetworkStats;
-    .param p4, "x3"    # I
-    .param p5, "x4"    # Ljava/lang/Object;
 
     .prologue
     .line 1219

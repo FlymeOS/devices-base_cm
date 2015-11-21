@@ -2906,6 +2906,10 @@
 
     const/16 v9, 0x7f
 
+    if-eq v7, v9, :cond_7
+
+    const/16 v9, 0x3f
+
     if-ne v7, v9, :cond_8
 
     .line 588

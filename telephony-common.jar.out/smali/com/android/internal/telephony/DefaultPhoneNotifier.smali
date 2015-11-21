@@ -1455,11 +1455,9 @@
     .param p3, "rawData"    # [B
 
     .prologue
-    .line 312
     long-to-int v0, p1
 
     invoke-virtual {p0, v0, p3}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyOemHookRawEventForSubscriber(I[B)V
 
-    .line 313
     return-void
 .end method

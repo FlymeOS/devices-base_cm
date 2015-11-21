@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 764
+    .line 766
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$6;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,12 +38,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 767
+    .line 769
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 768
+    .line 770
     .local v1, "path":Ljava/lang/String;
     new-instance v2, Landroid/media/MediaPlayer;
 
@@ -52,7 +52,7 @@
     # setter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v2}, Lcom/android/server/power/ShutdownThread;->access$402(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer;
 
-    .line 771
+    .line 773
     :try_start_0
     # getter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Landroid/media/MediaPlayer;
@@ -61,7 +61,7 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 772
+    .line 774
     # getter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Landroid/media/MediaPlayer;
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {v2, v1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 773
+    .line 775
     # getter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Landroid/media/MediaPlayer;
 
@@ -77,7 +77,7 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepare()V
 
-    .line 774
+    .line 776
     # getter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Landroid/media/MediaPlayer;
 
@@ -85,7 +85,7 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->start()V
 
-    .line 775
+    .line 777
     # getter for: Lcom/android/server/power/ShutdownThread;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Landroid/media/MediaPlayer;
 
@@ -99,15 +99,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 787
+    .line 789
     :goto_0
     return-void
 
-    .line 784
+    .line 786
     :catch_0
     move-exception v0
 
-    .line 785
+    .line 787
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "ShutdownThread"
 

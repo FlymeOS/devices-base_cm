@@ -37,8 +37,6 @@
 # instance fields
 .field private mAnimator:Landroid/animation/ValueAnimator;
 
-.field private final mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
 .field private final mColorAdjustment:[F
 
 .field private mColorEnhancement:Z
@@ -51,15 +49,19 @@
 
 .field private mDayTemperature:I
 
-.field private final mDefaultDayTemperature:I
+.field private mDefaultDayTemperature:I
 
-.field private final mDefaultNightTemperature:I
+.field private mDefaultNightTemperature:I
 
-.field private final mDefaultOutdoorLux:I
+.field private mDefaultOutdoorLux:I
 
 .field private final mHandler:Landroid/os/Handler;
 
+.field private mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
 .field private mHintCounter:I
+
+.field private mInitialized:Z
 
 .field private mLowPerformance:Z
 
@@ -71,7 +73,7 @@
 
 .field private mNightTemperature:I
 
-.field private final mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
+.field private mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
 
 .field private mOutdoorMode:Z
 
@@ -81,7 +83,7 @@
 
 .field private final mTwilightListener:Lcom/android/server/twilight/TwilightListener;
 
-.field private final mTwilightManager:Lcom/android/server/twilight/TwilightManager;
+.field private mTwilightManager:Lcom/android/server/twilight/TwilightManager;
 
 .field private mUseColorEnhancement:Z
 
@@ -95,7 +97,7 @@
     .locals 1
 
     .prologue
-    .line 617
+    .line 629
     const/16 v0, 0x240
 
     new-array v0, v0, [D
@@ -688,271 +690,79 @@
 .end method
 
 .method constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
-    .locals 7
+    .locals 3
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
-    const/4 v6, 0x2
-
-    const/4 v2, 0x0
-
-    const/4 v5, 0x1
-
-    .line 114
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 66
-    const/16 v1, 0x1964
-
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
-
-    .line 67
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
+    .line 118
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
-    new-array v1, v3, [F
+    .line 67
+    const/16 v0, 0x1964
 
-    fill-array-data v1, :array_0
+    iput v0, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
 
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
+    .line 68
+    const/4 v0, 0x0
 
-    .line 88
-    new-array v1, v3, [F
+    iput v0, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
 
-    fill-array-data v1, :array_1
+    .line 89
+    new-array v0, v2, [F
 
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mRGB:[F
+    fill-array-data v0, :array_0
 
-    .line 91
-    iput-boolean v2, p0, Lcom/android/server/display/LiveDisplayController;->mSunset:Z
+    iput-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
-    .line 104
-    iput-boolean v2, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
+    .line 90
+    new-array v0, v2, [F
 
-    .line 105
-    new-instance v1, Lcom/android/server/display/LiveDisplayController$1;
+    fill-array-data v0, :array_1
 
-    invoke-direct {v1, p0}, Lcom/android/server/display/LiveDisplayController$1;-><init>(Lcom/android/server/display/LiveDisplayController;)V
+    iput-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mRGB:[F
 
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPowerModeListener:Landroid/os/PowerManagerInternal$LowPowerModeListener;
+    .line 93
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mSunset:Z
 
-    .line 556
-    new-instance v1, Lcom/android/server/display/LiveDisplayController$3;
+    .line 103
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mInitialized:Z
 
-    invoke-direct {v1, p0}, Lcom/android/server/display/LiveDisplayController$3;-><init>(Lcom/android/server/display/LiveDisplayController;)V
-
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
-
-    .line 115
-    iput-object p1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
-
-    .line 116
-    new-instance v1, Lcom/android/server/display/LiveDisplayController$LiveDisplayHandler;
-
-    invoke-direct {v1, p0, p2}, Lcom/android/server/display/LiveDisplayController$LiveDisplayHandler;-><init>(Lcom/android/server/display/LiveDisplayController;Landroid/os/Looper;)V
-
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
-
-    .line 117
-    const-string v1, "cmhw"
-
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/CmHardwareManager;
-
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    .line 119
-    const-class v1, Lcom/android/server/twilight/TwilightManager;
-
-    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/server/twilight/TwilightManager;
-
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightManager:Lcom/android/server/twilight/TwilightManager;
-
-    .line 120
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightManager:Lcom/android/server/twilight/TwilightManager;
-
-    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
-
-    iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
-
-    invoke-interface {v1, v2, v3}, Lcom/android/server/twilight/TwilightManager;->registerListener(Lcom/android/server/twilight/TwilightListener;Landroid/os/Handler;)V
-
-    .line 122
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x10e0088
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultDayTemperature:I
-
-    .line 124
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x10e0089
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultNightTemperature:I
-
-    .line 126
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x10e008a
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultOutdoorLux:I
-
-    .line 131
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string v2, "live_display_hinted"
-
-    const/4 v3, -0x3
-
-    const/4 v4, -0x2
-
-    invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
-
-    .line 136
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    const/16 v2, 0x100
-
-    invoke-virtual {v1, v2}, Landroid/hardware/CmHardwareManager;->isSupported(I)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseOutdoorMode:Z
-
-    .line 139
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    invoke-virtual {v1, v5}, Landroid/hardware/CmHardwareManager;->isSupported(I)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseLowPower:Z
-
-    .line 141
-    iget-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseLowPower:Z
-
-    if-eqz v1, :cond_0
-
-    .line 142
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    invoke-virtual {v1, v5}, Landroid/hardware/CmHardwareManager;->get(I)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPower:Z
-
-    .line 145
-    :cond_0
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    invoke-virtual {v1, v6}, Landroid/hardware/CmHardwareManager;->isSupported(I)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseColorEnhancement:Z
-
-    .line 147
-    iget-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseColorEnhancement:Z
-
-    if-eqz v1, :cond_1
-
-    .line 148
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
-
-    invoke-virtual {v1, v6}, Landroid/hardware/CmHardwareManager;->get(I)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mColorEnhancement:Z
-
-    .line 152
-    :cond_1
-    invoke-direct {p0}, Lcom/android/server/display/LiveDisplayController;->updateSettings()V
-
-    .line 154
-    new-instance v1, Lcom/android/server/display/LiveDisplayController$SettingsObserver;
-
-    invoke-direct {v1, p0}, Lcom/android/server/display/LiveDisplayController$SettingsObserver;-><init>(Lcom/android/server/display/LiveDisplayController;)V
-
-    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
-
-    .line 155
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
-
-    invoke-virtual {v1, v5}, Lcom/android/server/display/LiveDisplayController$SettingsObserver;->register(Z)V
-
-    .line 157
-    const-class v1, Landroid/os/PowerManagerInternal;
-
-    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManagerInternal;
-
-    .line 158
-    .local v0, "pmi":Landroid/os/PowerManagerInternal;
-    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPowerModeListener:Landroid/os/PowerManagerInternal$LowPowerModeListener;
-
-    invoke-virtual {v0, v1}, Landroid/os/PowerManagerInternal;->registerLowPowerModeObserver(Landroid/os/PowerManagerInternal$LowPowerModeListener;)V
-
-    .line 159
-    invoke-virtual {v0}, Landroid/os/PowerManagerInternal;->getLowPowerModeEnabled()Z
-
-    move-result v1
-
+    .line 108
     iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
 
-    .line 160
+    .line 109
+    new-instance v0, Lcom/android/server/display/LiveDisplayController$1;
+
+    invoke-direct {v0, p0}, Lcom/android/server/display/LiveDisplayController$1;-><init>(Lcom/android/server/display/LiveDisplayController;)V
+
+    iput-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mLowPowerModeListener:Landroid/os/PowerManagerInternal$LowPowerModeListener;
+
+    .line 565
+    new-instance v0, Lcom/android/server/display/LiveDisplayController$3;
+
+    invoke-direct {v0, p0}, Lcom/android/server/display/LiveDisplayController$3;-><init>(Lcom/android/server/display/LiveDisplayController;)V
+
+    iput-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
+
+    .line 119
+    iput-object p1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    .line 120
+    new-instance v0, Lcom/android/server/display/LiveDisplayController$LiveDisplayHandler;
+
+    invoke-direct {v0, p0, p2}, Lcom/android/server/display/LiveDisplayController$LiveDisplayHandler;-><init>(Lcom/android/server/display/LiveDisplayController;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
+
+    .line 121
     return-void
 
-    .line 87
+    .line 89
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -960,7 +770,7 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 88
+    .line 90
     :array_1
     .array-data 4
         0x0
@@ -975,7 +785,7 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 52
+    .line 53
     iput-boolean p1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
 
     return p1
@@ -986,44 +796,45 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/display/LiveDisplayController;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
-
-    .prologue
-    .line 52
-    invoke-direct {p0}, Lcom/android/server/display/LiveDisplayController;->updateLowPowerMode()V
-
-    return-void
-.end method
-
-.method static synthetic access$1100(Lcom/android/server/display/LiveDisplayController;Lcom/android/server/twilight/TwilightState;)V
+.method static synthetic access$1000(Lcom/android/server/display/LiveDisplayController;Lcom/android/server/twilight/TwilightState;)V
     .locals 0
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
     .param p1, "x1"    # Lcom/android/server/twilight/TwilightState;
 
     .prologue
-    .line 52
-    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateUserHint(Lcom/android/server/twilight/TwilightState;)V
+    .line 53
+    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateColorEnhancement(Lcom/android/server/twilight/TwilightState;)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/display/LiveDisplayController;)I
-    .locals 1
+.method static synthetic access$1100(Lcom/android/server/display/LiveDisplayController;)V
+    .locals 0
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
-    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
+    .line 53
+    invoke-direct {p0}, Lcom/android/server/display/LiveDisplayController;->updateLowPowerMode()V
 
-    return v0
+    return-void
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/display/LiveDisplayController;Lcom/android/server/twilight/TwilightState;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
+    .param p1, "x1"    # Lcom/android/server/twilight/TwilightState;
+
+    .prologue
+    .line 53
+    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateUserHint(Lcom/android/server/twilight/TwilightState;)V
+
+    return-void
 .end method
 
 .method static synthetic access$1300(Lcom/android/server/display/LiveDisplayController;)I
@@ -1031,8 +842,8 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
-    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
+    .line 53
+    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
     return v0
 .end method
@@ -1042,8 +853,8 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
-    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mDayTemperature:I
+    .line 53
+    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
 
     return v0
 .end method
@@ -1053,7 +864,18 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
+    iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mDayTemperature:I
+
+    return v0
+.end method
+
+.method static synthetic access$1600(Lcom/android/server/display/LiveDisplayController;)I
+    .locals 1
+    .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
+
+    .prologue
+    .line 53
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mNightTemperature:I
 
     return v0
@@ -1064,7 +886,7 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -1075,7 +897,7 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -1086,7 +908,7 @@
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
     invoke-direct {p0}, Lcom/android/server/display/LiveDisplayController;->updateSettings()V
 
     return-void
@@ -1098,33 +920,32 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 52
+    .line 53
     invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->setDisplayTemperature(I)V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/display/LiveDisplayController;)Lcom/android/server/twilight/TwilightManager;
+.method static synthetic access$600(Lcom/android/server/display/LiveDisplayController;)Z
     .locals 1
     .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
 
     .prologue
-    .line 52
+    .line 53
+    iget-boolean v0, p0, Lcom/android/server/display/LiveDisplayController;->mInitialized:Z
+
+    return v0
+.end method
+
+.method static synthetic access$700(Lcom/android/server/display/LiveDisplayController;)Lcom/android/server/twilight/TwilightManager;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
+
+    .prologue
+    .line 53
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightManager:Lcom/android/server/twilight/TwilightManager;
 
     return-object v0
-.end method
-
-.method static synthetic access$700(Lcom/android/server/display/LiveDisplayController;Lcom/android/server/twilight/TwilightState;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/server/display/LiveDisplayController;
-    .param p1, "x1"    # Lcom/android/server/twilight/TwilightState;
-
-    .prologue
-    .line 52
-    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateColorTemperature(Lcom/android/server/twilight/TwilightState;)V
-
-    return-void
 .end method
 
 .method static synthetic access$800(Lcom/android/server/display/LiveDisplayController;Lcom/android/server/twilight/TwilightState;)V
@@ -1133,8 +954,8 @@
     .param p1, "x1"    # Lcom/android/server/twilight/TwilightState;
 
     .prologue
-    .line 52
-    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateOutdoorMode(Lcom/android/server/twilight/TwilightState;)V
+    .line 53
+    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateColorTemperature(Lcom/android/server/twilight/TwilightState;)V
 
     return-void
 .end method
@@ -1145,8 +966,8 @@
     .param p1, "x1"    # Lcom/android/server/twilight/TwilightState;
 
     .prologue
-    .line 52
-    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateColorEnhancement(Lcom/android/server/twilight/TwilightState;)V
+    .line 53
+    invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->updateOutdoorMode(Lcom/android/server/twilight/TwilightState;)V
 
     return-void
 .end method
@@ -1168,7 +989,7 @@
 
     const/4 v0, 0x0
 
-    .line 443
+    .line 452
     cmp-long v2, p2, v6
 
     if-ltz v2, :cond_0
@@ -1188,12 +1009,12 @@
     :cond_0
     move v0, v1
 
-    .line 458
+    .line 467
     :cond_1
     :goto_0
     return v0
 
-    .line 448
+    .line 457
     :cond_2
     add-long v2, p2, v8
 
@@ -1201,7 +1022,7 @@
 
     if-gez v2, :cond_3
 
-    .line 449
+    .line 458
     sub-long v2, p0, p2
 
     long-to-float v2, v2
@@ -1214,7 +1035,7 @@
 
     goto :goto_0
 
-    .line 453
+    .line 462
     :cond_3
     sub-long v2, p4, v8
 
@@ -1222,7 +1043,7 @@
 
     if-lez v2, :cond_1
 
-    .line 454
+    .line 463
     sub-long v2, p4, p0
 
     long-to-float v2, v2
@@ -1241,19 +1062,19 @@
     .param p1, "state"    # Lcom/android/server/twilight/TwilightState;
 
     .prologue
-    .line 469
+    .line 478
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 471
+    .line 480
     .local v6, "adjustment":F
     if-eqz p1, :cond_0
 
-    .line 472
+    .line 481
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 473
+    .line 482
     .local v0, "now":J
     invoke-virtual {p1}, Lcom/android/server/twilight/TwilightState;->getYesterdaySunset()J
 
@@ -1281,7 +1102,7 @@
 
     mul-float v6, v7, v2
 
-    .line 477
+    .line 486
     .end local v0    # "now":J
     :cond_0
     iget v2, p0, Lcom/android/server/display/LiveDisplayController;->mNightTemperature:I
@@ -1307,7 +1128,7 @@
     .param p1, "a"    # F
 
     .prologue
-    .line 430
+    .line 439
     sget-object v0, Lcom/android/server/display/LiveDisplayController;->sColorTable:[D
 
     aget-wide v0, v0, p0
@@ -1334,16 +1155,16 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 499
+    .line 508
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     if-ne v0, p1, :cond_0
 
-    .line 507
+    .line 516
     :goto_0
     return-void
 
-    .line 502
+    .line 511
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
@@ -1357,7 +1178,7 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 506
+    .line 515
     iput p1, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     goto :goto_0
@@ -1367,7 +1188,7 @@
     .locals 6
 
     .prologue
-    .line 486
+    .line 495
     :try_start_0
     const-string v3, "SurfaceFlinger"
 
@@ -1375,22 +1196,22 @@
 
     move-result-object v2
 
-    .line 487
+    .line 496
     .local v2, "flinger":Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 488
+    .line 497
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 489
+    .line 498
     .local v0, "data":Landroid/os/Parcel;
     const-string v3, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 490
+    .line 499
     const/16 v3, 0x3ec
 
     const/4 v4, 0x0
@@ -1399,22 +1220,22 @@
 
     invoke-interface {v2, v3, v0, v4, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 491
+    .line 500
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 496
+    .line 505
     .end local v0    # "data":Landroid/os/Parcel;
     :cond_0
     :goto_0
     return-void
 
-    .line 493
+    .line 502
     :catch_0
     move-exception v1
 
-    .line 494
+    .line 503
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v3, "LiveDisplay"
 
@@ -1432,24 +1253,24 @@
     .prologue
     const/high16 v8, 0x3f800000    # 1.0f
 
-    .line 280
+    .line 289
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
 
-    .line 282
+    .line 291
     invoke-static {p1}, Lcom/android/server/display/LiveDisplayController;->temperatureToRGB(I)[F
 
     move-result-object v3
 
-    .line 284
+    .line 293
     .local v3, "rgb":[F
     iget-boolean v4, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
 
     if-nez v4, :cond_0
 
-    .line 285
+    .line 294
     const/4 v4, 0x0
 
     aget v5, v3, v4
@@ -1464,7 +1285,7 @@
 
     aput v5, v3, v4
 
-    .line 286
+    .line 295
     const/4 v4, 0x1
 
     aget v5, v3, v4
@@ -1479,7 +1300,7 @@
 
     aput v5, v3, v4
 
-    .line 287
+    .line 296
     const/4 v4, 0x2
 
     aget v5, v3, v4
@@ -1494,7 +1315,7 @@
 
     aput v5, v3, v4
 
-    .line 290
+    .line 299
     :cond_0
     const/4 v4, 0x0
 
@@ -1540,13 +1361,13 @@
 
     if-nez v4, :cond_1
 
-    .line 334
+    .line 343
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 295
+    .line 304
     :cond_1
     const/4 v4, 0x0
 
@@ -1559,7 +1380,7 @@
 
     invoke-static {v3, v4, v5, v6, v7}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 297
+    .line 306
     const-string v4, "LiveDisplay"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1630,18 +1451,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
-    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    .line 309
+    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
     const/4 v5, 0x4
 
-    invoke-virtual {v4, v5}, Landroid/hardware/CmHardwareManager;->isSupported(I)Z
+    invoke-virtual {v4, v5}, Lcyanogenmod/hardware/CMHardwareManager;->isSupported(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 302
+    .line 311
     iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1656,16 +1477,16 @@
 
     invoke-static {v4, v5, v6, v7}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 307
-    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    .line 316
+    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
-    invoke-virtual {v4}, Landroid/hardware/CmHardwareManager;->getDisplayColorCalibrationMax()I
+    invoke-virtual {v4}, Lcyanogenmod/hardware/CMHardwareManager;->getDisplayColorCalibrationMax()I
 
     move-result v2
 
-    .line 308
+    .line 317
     .local v2, "max":I
-    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
     const/4 v5, 0x3
 
@@ -1731,16 +1552,16 @@
 
     aput v7, v5, v6
 
-    invoke-virtual {v4, v5}, Landroid/hardware/CmHardwareManager;->setDisplayColorCalibration([I)Z
+    invoke-virtual {v4, v5}, Lcyanogenmod/hardware/CMHardwareManager;->setDisplayColorCalibration([I)Z
 
-    .line 313
+    .line 322
     invoke-static {}, Lcom/android/server/display/LiveDisplayController;->screenRefresh()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_0
 
-    .line 280
+    .line 289
     .end local v2    # "max":I
     .end local v3    # "rgb":[F
     :catchall_0
@@ -1750,12 +1571,12 @@
 
     throw v4
 
-    .line 315
+    .line 324
     .restart local v3    # "rgb":[F
     :cond_2
     const/4 v1, 0x0
 
-    .line 316
+    .line 325
     .local v1, "colorMatrixStr":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -1782,7 +1603,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 317
+    .line 326
     :cond_3
     const/16 v4, 0x10
 
@@ -1954,7 +1775,7 @@
 
     aput-object v5, v0, v4
 
-    .line 322
+    .line 331
     .local v0, "colorMatrix":[Ljava/lang/Float;
     const-string v4, " "
 
@@ -1962,7 +1783,7 @@
 
     move-result-object v1
 
-    .line 327
+    .line 336
     .end local v0    # "colorMatrix":[Ljava/lang/Float;
     :cond_4
     iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
@@ -1977,7 +1798,7 @@
 
     invoke-static {v4, v5, v1, v6}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 332
+    .line 341
     iget-object v4, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     const/4 v5, -0x2
@@ -1994,7 +1815,7 @@
     .param p0, "degreesK"    # I
 
     .prologue
-    .line 422
+    .line 431
     const/16 v3, 0x3e8
 
     const/16 v4, 0x4e20
@@ -2003,7 +1824,7 @@
 
     move-result v2
 
-    .line 423
+    .line 432
     .local v2, "k":I
     rem-int/lit8 v3, v2, 0x64
 
@@ -2013,7 +1834,7 @@
 
     div-float v0, v3, v4
 
-    .line 424
+    .line 433
     .local v0, "a":F
     add-int/lit16 v3, v2, -0x3e8
 
@@ -2021,7 +1842,7 @@
 
     mul-int/lit8 v1, v3, 0x3
 
-    .line 426
+    .line 435
     .local v1, "i":I
     const/4 v3, 0x3
 
@@ -2069,7 +1890,7 @@
 
     const/4 v0, 0x1
 
-    .line 370
+    .line 379
     monitor-enter p0
 
     :try_start_0
@@ -2079,14 +1900,14 @@
 
     if-nez v3, :cond_1
 
-    .line 389
+    .line 398
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 374
+    .line 383
     :cond_1
     :try_start_1
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
@@ -2109,7 +1930,7 @@
 
     move v1, v0
 
-    .line 379
+    .line 388
     .local v1, "value":Z
     :goto_1
     iget-boolean v3, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
@@ -2134,7 +1955,7 @@
 
     if-nez v3, :cond_4
 
-    .line 383
+    .line 392
     .local v0, "enabled":Z
     :cond_2
     :goto_2
@@ -2142,21 +1963,21 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 387
-    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    .line 396
+    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
     const/4 v3, 0x2
 
-    invoke-virtual {v2, v3, v0}, Landroid/hardware/CmHardwareManager;->set(IZ)Z
+    invoke-virtual {v2, v3, v0}, Lcyanogenmod/hardware/CMHardwareManager;->set(IZ)Z
 
-    .line 388
+    .line 397
     iput-boolean v0, p0, Lcom/android/server/display/LiveDisplayController;->mColorEnhancement:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 370
+    .line 379
     .end local v0    # "enabled":Z
     .end local v1    # "value":Z
     :catchall_0
@@ -2169,14 +1990,14 @@
     :cond_3
     move v1, v2
 
-    .line 374
+    .line 383
     goto :goto_1
 
     .restart local v1    # "value":Z
     :cond_4
     move v0, v2
 
-    .line 379
+    .line 388
     goto :goto_2
 .end method
 
@@ -2189,13 +2010,13 @@
 
     const/4 v2, 0x1
 
-    .line 256
+    .line 265
     monitor-enter p0
 
     :try_start_0
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mDayTemperature:I
 
-    .line 257
+    .line 266
     .local v0, "temperature":I
     iget v1, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
@@ -2205,23 +2026,23 @@
 
     if-eqz v1, :cond_3
 
-    .line 258
+    .line 267
     :cond_0
     const/16 v0, 0x1964
 
-    .line 265
+    .line 274
     :cond_1
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_2
 
-    .line 266
+    .line 275
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 268
+    .line 277
     :cond_2
     const/4 v1, 0x2
 
@@ -2243,7 +2064,7 @@
 
     iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
-    .line 269
+    .line 278
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
     iget v2, p0, Lcom/android/server/display/LiveDisplayController;->mColorTemperature:I
@@ -2260,7 +2081,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 270
+    .line 279
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v2, Lcom/android/server/display/LiveDisplayController$2;
@@ -2269,37 +2090,37 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 276
+    .line 285
     iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 277
+    .line 286
     monitor-exit p0
 
     return-void
 
-    .line 259
+    .line 268
     :cond_3
     :try_start_1
     iget v1, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
     if-ne v1, v2, :cond_4
 
-    .line 260
+    .line 269
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mNightTemperature:I
 
     goto :goto_0
 
-    .line 261
+    .line 270
     :cond_4
     iget v1, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
     if-ne v1, v3, :cond_1
 
-    .line 262
+    .line 271
     invoke-direct {p0, p1}, Lcom/android/server/display/LiveDisplayController;->getTwilightK(Lcom/android/server/twilight/TwilightState;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2308,7 +2129,7 @@
 
     goto :goto_0
 
-    .line 256
+    .line 265
     .end local v0    # "temperature":I
     :catchall_0
     move-exception v1
@@ -2326,7 +2147,7 @@
 
     const/4 v0, 0x1
 
-    .line 395
+    .line 404
     monitor-enter p0
 
     :try_start_0
@@ -2336,14 +2157,14 @@
 
     if-nez v3, :cond_1
 
-    .line 412
+    .line 421
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 399
+    .line 408
     :cond_1
     :try_start_1
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
@@ -2366,7 +2187,7 @@
 
     move v1, v0
 
-    .line 404
+    .line 413
     .local v1, "value":Z
     :goto_1
     if-eqz v1, :cond_3
@@ -2381,28 +2202,28 @@
 
     if-gez v3, :cond_3
 
-    .line 406
+    .line 415
     .local v0, "enabled":Z
     :goto_2
     iget-boolean v2, p0, Lcom/android/server/display/LiveDisplayController;->mLowPower:Z
 
     if-eq v0, v2, :cond_0
 
-    .line 410
-    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    .line 419
+    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3, v0}, Landroid/hardware/CmHardwareManager;->set(IZ)Z
+    invoke-virtual {v2, v3, v0}, Lcyanogenmod/hardware/CMHardwareManager;->set(IZ)Z
 
-    .line 411
+    .line 420
     iput-boolean v0, p0, Lcom/android/server/display/LiveDisplayController;->mLowPower:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 395
+    .line 404
     .end local v0    # "enabled":Z
     .end local v1    # "value":Z
     :catchall_0
@@ -2415,14 +2236,14 @@
     :cond_2
     move v1, v2
 
-    .line 399
+    .line 408
     goto :goto_1
 
     .restart local v1    # "value":Z
     :cond_3
     move v0, v2
 
-    .line 404
+    .line 413
     goto :goto_2
 .end method
 
@@ -2435,7 +2256,7 @@
 
     const/4 v0, 0x1
 
-    .line 343
+    .line 352
     monitor-enter p0
 
     :try_start_0
@@ -2445,14 +2266,14 @@
 
     if-nez v3, :cond_1
 
-    .line 364
+    .line 373
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 347
+    .line 356
     :cond_1
     :try_start_1
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
@@ -2475,7 +2296,7 @@
 
     move v1, v0
 
-    .line 352
+    .line 361
     .local v1, "value":Z
     :goto_1
     iget-boolean v3, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
@@ -2514,7 +2335,7 @@
 
     if-lez v3, :cond_4
 
-    .line 358
+    .line 367
     .local v0, "enabled":Z
     :cond_2
     :goto_2
@@ -2522,21 +2343,21 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 362
-    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mCmHardwareManager:Landroid/hardware/CmHardwareManager;
+    .line 371
+    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
 
     const/16 v3, 0x100
 
-    invoke-virtual {v2, v3, v0}, Landroid/hardware/CmHardwareManager;->set(IZ)Z
+    invoke-virtual {v2, v3, v0}, Lcyanogenmod/hardware/CMHardwareManager;->set(IZ)Z
 
-    .line 363
+    .line 372
     iput-boolean v0, p0, Lcom/android/server/display/LiveDisplayController;->mOutdoorMode:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 343
+    .line 352
     .end local v0    # "enabled":Z
     .end local v1    # "value":Z
     :catchall_0
@@ -2549,14 +2370,14 @@
     :cond_3
     move v1, v2
 
-    .line 347
+    .line 356
     goto :goto_1
 
     .restart local v1    # "value":Z
     :cond_4
     move v0, v2
 
-    .line 352
+    .line 361
     goto :goto_2
 .end method
 
@@ -2574,7 +2395,7 @@
 
     const/4 v6, 0x0
 
-    .line 163
+    .line 172
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2591,7 +2412,7 @@
 
     iput v3, p0, Lcom/android/server/display/LiveDisplayController;->mDayTemperature:I
 
-    .line 167
+    .line 176
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2608,7 +2429,7 @@
 
     iput v3, p0, Lcom/android/server/display/LiveDisplayController;->mNightTemperature:I
 
-    .line 171
+    .line 180
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2623,15 +2444,15 @@
 
     iput v3, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
-    .line 177
+    .line 186
     iget v3, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
     if-eqz v3, :cond_0
 
-    .line 178
+    .line 187
     invoke-direct {p0, v7}, Lcom/android/server/display/LiveDisplayController;->saveUserHint(I)V
 
-    .line 182
+    .line 191
     :cond_0
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
@@ -2645,13 +2466,13 @@
 
     move-result-object v1
 
-    .line 185
+    .line 194
     .local v1, "colorAdjustmentTemp":Ljava/lang/String;
     if-nez v1, :cond_3
 
     const/4 v0, 0x0
 
-    .line 187
+    .line 196
     .local v0, "colorAdjustment":[Ljava/lang/String;
     :goto_0
     if-eqz v0, :cond_1
@@ -2662,7 +2483,7 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 188
+    .line 197
     :cond_1
     const/4 v3, 0x3
 
@@ -2681,7 +2502,7 @@
 
     aput-object v3, v0, v9
 
-    .line 191
+    .line 200
     .restart local v0    # "colorAdjustment":[Ljava/lang/String;
     :cond_2
     :try_start_0
@@ -2699,7 +2520,7 @@
 
     aput v5, v3, v4
 
-    .line 192
+    .line 201
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
     const/4 v4, 0x1
@@ -2714,7 +2535,7 @@
 
     aput v5, v3, v4
 
-    .line 193
+    .line 202
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
     const/4 v4, 0x2
@@ -2731,16 +2552,16 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
+    .line 210
     :goto_1
     iget v3, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
 
     invoke-virtual {p0, v3}, Lcom/android/server/display/LiveDisplayController;->updateLiveDisplay(F)V
 
-    .line 202
+    .line 211
     return-void
 
-    .line 185
+    .line 194
     .end local v0    # "colorAdjustment":[Ljava/lang/String;
     :cond_3
     const-string v3, " "
@@ -2751,12 +2572,12 @@
 
     goto :goto_0
 
-    .line 194
+    .line 203
     .restart local v0    # "colorAdjustment":[Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 195
+    .line 204
     .local v2, "e":Ljava/lang/NumberFormatException;
     const-string v3, "LiveDisplay"
 
@@ -2766,17 +2587,17 @@
 
     invoke-static {v3, v4, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 196
+    .line 205
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
     aput v10, v3, v6
 
-    .line 197
+    .line 206
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
     aput v10, v3, v7
 
-    .line 198
+    .line 207
     iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mColorAdjustment:[F
 
     aput v10, v3, v9
@@ -2789,25 +2610,25 @@
     .param p1, "state"    # Lcom/android/server/twilight/TwilightState;
 
     .prologue
-    const v9, 0x10400d7
+    const v9, 0x10400cd
 
     const/4 v6, 0x0
 
     const/4 v5, 0x1
 
-    .line 520
+    .line 529
     if-eqz p1, :cond_0
 
     iget v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     if-ne v7, v5, :cond_1
 
-    .line 554
+    .line 563
     :cond_0
     :goto_0
     return-void
 
-    .line 523
+    .line 532
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/twilight/TwilightState;->isNight()Z
 
@@ -2821,7 +2642,7 @@
 
     move v4, v5
 
-    .line 524
+    .line 533
     .local v4, "transition":Z
     :goto_1
     invoke-virtual {p1}, Lcom/android/server/twilight/TwilightState;->isNight()Z
@@ -2830,40 +2651,40 @@
 
     iput-boolean v7, p0, Lcom/android/server/display/LiveDisplayController;->mSunset:Z
 
-    .line 525
+    .line 534
     if-eqz v4, :cond_0
 
-    .line 529
+    .line 538
     iget v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     if-gtz v7, :cond_2
 
-    .line 530
+    .line 539
     iget v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
-    .line 531
+    .line 540
     iget v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     invoke-direct {p0, v7}, Lcom/android/server/display/LiveDisplayController;->saveUserHint(I)V
 
-    .line 533
+    .line 542
     :cond_2
     iget v7, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
 
     if-nez v7, :cond_0
 
-    .line 535
+    .line 544
     new-instance v1, Landroid/content/Intent;
 
     const-string v7, "android.settings.LIVEDISPLAY_SETTINGS"
 
     invoke-direct {v1, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 536
+    .line 545
     .local v1, "intent":Landroid/content/Intent;
     iget-object v7, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
@@ -2873,7 +2694,7 @@
 
     move-result-object v3
 
-    .line 538
+    .line 547
     .local v3, "result":Landroid/app/PendingIntent;
     new-instance v6, Landroid/app/Notification$Builder;
 
@@ -2887,7 +2708,7 @@
 
     move-result-object v7
 
-    const v8, 0x10400cc
+    const v8, 0x10400c2
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2943,7 +2764,7 @@
 
     move-result-object v0
 
-    .line 548
+    .line 557
     .local v0, "builder":Landroid/app/Notification$Builder;
     iget-object v6, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
 
@@ -2955,7 +2776,7 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-    .line 550
+    .line 559
     .local v2, "nm":Landroid/app/NotificationManager;
     const/4 v6, 0x0
 
@@ -2967,7 +2788,7 @@
 
     invoke-virtual {v2, v6, v5, v7, v8}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 552
+    .line 561
     invoke-direct {p0, v5}, Lcom/android/server/display/LiveDisplayController;->saveUserHint(I)V
 
     goto/16 :goto_0
@@ -2980,7 +2801,7 @@
     :cond_3
     move v4, v6
 
-    .line 523
+    .line 532
     goto/16 :goto_1
 .end method
 
@@ -2997,15 +2818,15 @@
 
     const/4 v2, 0x0
 
-    .line 594
+    .line 606
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 595
+    .line 607
     const-string v0, "LiveDisplay Controller Configuration:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 596
+    .line 608
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3028,7 +2849,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
+    .line 609
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3051,15 +2872,15 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 598
+    .line 610
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 599
+    .line 611
     const-string v0, "LiveDisplay Controller State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 600
+    .line 612
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3087,7 +2908,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 601
+    .line 613
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3110,7 +2931,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 602
+    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3133,7 +2954,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 603
+    .line 615
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3192,7 +3013,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 605
+    .line 617
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3251,7 +3072,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
+    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3283,7 +3104,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 607
+    .line 619
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3315,7 +3136,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 608
+    .line 620
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3347,10 +3168,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 609
+    .line 621
     return-void
 
-    .line 600
+    .line 612
     :cond_0
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mMode:I
 
@@ -3360,35 +3181,239 @@
 
     goto/16 :goto_0
 
-    .line 606
+    .line 618
     :cond_1
     const-string v0, "N/A"
 
     goto :goto_1
 
-    .line 607
+    .line 619
     :cond_2
     const-string v0, "N/A"
 
     goto :goto_2
 
-    .line 608
+    .line 620
     :cond_3
     const-string v0, "N/A"
 
     goto :goto_3
 .end method
 
+.method systemReady()V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x2
+
+    const/4 v5, 0x1
+
+    .line 124
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcyanogenmod/hardware/CMHardwareManager;->getInstance(Landroid/content/Context;)Lcyanogenmod/hardware/CMHardwareManager;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    .line 126
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x10e008c
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultDayTemperature:I
+
+    .line 128
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x10e008d
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultNightTemperature:I
+
+    .line 130
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x10e008e
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mDefaultOutdoorLux:I
+
+    .line 135
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "live_display_hinted"
+
+    const/4 v3, -0x3
+
+    const/4 v4, -0x2
+
+    invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/LiveDisplayController;->mHintCounter:I
+
+    .line 140
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    const/16 v2, 0x100
+
+    invoke-virtual {v1, v2}, Lcyanogenmod/hardware/CMHardwareManager;->isSupported(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseOutdoorMode:Z
+
+    .line 143
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    invoke-virtual {v1, v5}, Lcyanogenmod/hardware/CMHardwareManager;->isSupported(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseLowPower:Z
+
+    .line 145
+    iget-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseLowPower:Z
+
+    if-eqz v1, :cond_0
+
+    .line 146
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    invoke-virtual {v1, v5}, Lcyanogenmod/hardware/CMHardwareManager;->get(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPower:Z
+
+    .line 149
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    invoke-virtual {v1, v6}, Lcyanogenmod/hardware/CMHardwareManager;->isSupported(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseColorEnhancement:Z
+
+    .line 151
+    iget-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mUseColorEnhancement:Z
+
+    if-eqz v1, :cond_1
+
+    .line 152
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mHardware:Lcyanogenmod/hardware/CMHardwareManager;
+
+    invoke-virtual {v1, v6}, Lcyanogenmod/hardware/CMHardwareManager;->get(I)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mColorEnhancement:Z
+
+    .line 156
+    :cond_1
+    invoke-direct {p0}, Lcom/android/server/display/LiveDisplayController;->updateSettings()V
+
+    .line 158
+    new-instance v1, Lcom/android/server/display/LiveDisplayController$SettingsObserver;
+
+    invoke-direct {v1, p0}, Lcom/android/server/display/LiveDisplayController$SettingsObserver;-><init>(Lcom/android/server/display/LiveDisplayController;)V
+
+    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
+
+    .line 159
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mObserver:Lcom/android/server/display/LiveDisplayController$SettingsObserver;
+
+    invoke-virtual {v1, v5}, Lcom/android/server/display/LiveDisplayController$SettingsObserver;->register(Z)V
+
+    .line 161
+    const-class v1, Landroid/os/PowerManagerInternal;
+
+    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManagerInternal;
+
+    .line 162
+    .local v0, "pmi":Landroid/os/PowerManagerInternal;
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPowerModeListener:Landroid/os/PowerManagerInternal$LowPowerModeListener;
+
+    invoke-virtual {v0, v1}, Landroid/os/PowerManagerInternal;->registerLowPowerModeObserver(Landroid/os/PowerManagerInternal$LowPowerModeListener;)V
+
+    .line 163
+    invoke-virtual {v0}, Landroid/os/PowerManagerInternal;->getLowPowerModeEnabled()Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/android/server/display/LiveDisplayController;->mLowPerformance:Z
+
+    .line 165
+    const-class v1, Lcom/android/server/twilight/TwilightManager;
+
+    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/twilight/TwilightManager;
+
+    iput-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightManager:Lcom/android/server/twilight/TwilightManager;
+
+    .line 166
+    iget-object v1, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightManager:Lcom/android/server/twilight/TwilightManager;
+
+    iget-object v2, p0, Lcom/android/server/display/LiveDisplayController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
+
+    iget-object v3, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
+
+    invoke-interface {v1, v2, v3}, Lcom/android/server/twilight/TwilightManager;->registerListener(Lcom/android/server/twilight/TwilightListener;Landroid/os/Handler;)V
+
+    .line 168
+    iput-boolean v5, p0, Lcom/android/server/display/LiveDisplayController;->mInitialized:Z
+
+    .line 169
+    return-void
+.end method
+
 .method public updateLiveDisplay()V
     .locals 1
 
     .prologue
-    .line 246
+    .line 255
     iget v0, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
 
     invoke-virtual {p0, v0}, Lcom/android/server/display/LiveDisplayController;->updateLiveDisplay(F)V
 
-    .line 247
+    .line 256
     return-void
 .end method
 
@@ -3397,20 +3422,20 @@
     .param p1, "lux"    # F
 
     .prologue
-    .line 250
+    .line 259
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/android/server/display/LiveDisplayController;->mCurrentLux:F
 
-    .line 251
+    .line 260
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 252
+    .line 261
     iget-object v0, p0, Lcom/android/server/display/LiveDisplayController;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -3419,12 +3444,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 253
+    .line 262
     monitor-exit p0
 
     return-void
 
-    .line 250
+    .line 259
     :catchall_0
     move-exception v0
 

@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">סרטון זה אינו חוקי להעברה כמדיה זורמת למכשיר זה.</string>
     <string name="selectTextMode">בחר טקסט</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">ללא</string>
     <string name="profile_picker_title">פרופילים</string>
     <string name="global_action_choose_profile">פרופיל</string>
+    <string name="profile_none">ללא</string>
     <string name="global_action_screenshot">צילום מסך</string>
     <string name="permlab_receiveProtectedSms">קבלת הודעות SMS מוגנות</string>
     <string name="permdesc_receiveProtectedSms">מאפשר ליישום לקבל הודעות SMS מוגנות.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">מאפשר ליישום לקבוע האם יישום אחר יפעל תחת שומר הפרטיות. כאשר יישום פועל תחת שומר הפרטיות, לא תהיה לו גישה למידע פרטי כמו אנשי קשר, יומן שיחות והודעות.</string>
     <string name="privacy_guard_notification">שומר הפרטיות פעיל</string>
     <string name="privacy_guard_notification_detail">%1$s לא יוכל לגשת למידע אישי</string>
-    <string name="permlab_useHardwareFramework">השתמש במסגרת חומרתית</string>
-    <string name="permdesc_useHardwareFramework">אפשר ליישום לגשת למסגרת החומרתית של CM.</string>
     <string name="permlab_setKeyguardWallpaper">הגדרת טפט למסך הנעילה</string>
     <string name="permdesc_setKeyguardWallpaper">מאפשר ליישום לשנות את הטפט של מסך הנעילה.</string>
     <string name="privacy_guard_dialog_title">שומר הפרטיות</string>
@@ -69,7 +67,11 @@
     <string name="adb_both_active_notification_title">ADB דרך USB ורשת מופעל</string>
     <string name="adb_active_generic_notification_message">לחץ לעצירת איתור באגים.</string>
     <string name="usb_choose_notification_title">לחץ כדי לבחור אפשרויות USB.</string>
-    <string name="permlab_interceptPackageLaunch">יירט הפעלת יישום</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB ורשת</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">רשת</string>
+    <string name="permlab_interceptPackageLaunch">יירוט הפעלת יישום</string>
     <string name="permdesc_interceptPackageLaunch">מאפשר ליישום ליירט הפעלה של יישומים אחרים</string>
     <string name="app_ops_access_camera">גישה למצלמה</string>
     <string name="app_ops_access_location">גישה למיקום שלך</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">טביעת אצבע %d</string>
     <string name="permlab_accessFingerprintService">גישה לשירות טביעות אצבע</string>
     <string name="permdesc_accessFingerprintService">אפשר ליישום לגשת לשירות טביעות אצבע. היישום יוכל להוסיף, למחוק, לשנות שם ולבצע אימות מול טביעות אצבע</string>
+    <string name="permlab_resetBatteryStats">איפוס סטטיסטיקות סוללה</string>
+    <string name="permdesc_resetBatteryStats">אפשר ליישום לאפס נתוני רמה-נמוכה של השימוש בסוללה.</string>
+    <string name="silent_mode_priority">עדיפות</string>
+    <string name="silent_mode_none">ללא</string>
+    <string name="subscription_change_disabled_wifi_ap">נקודת Wi-Fi חמה הושבתה עקב שינוי מנוי SIM</string>
+    <string name="notify_turn_wifi_off_title">כיבוי Wi-Fi</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%-e ב%B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1783,12 +1791,6 @@
     <string name="stk_cc_ss_to_ss">‏בקשת SS שונתה לבקשת SS חדשה.</string>
     <string name="ellipsis">...</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB ורשת</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">רשת</string>
-    <string name="permlab_resetBatteryStats">איפוס סטטיסטיקות סוללה</string>
-    <string name="permdesc_resetBatteryStats">אפשר ליישום לאפס נתוני רמה-נמוכה של השימוש בסוללה.</string>
-    <string name="silent_mode_priority">עדיפות</string>
-    <string name="silent_mode_none">ללא</string>
+    <string name="permlab_thirdPartyKeyguard">מסך נעילה של צד שלישי</string>
+    <string name="permdesc_thirdPartyKeyguard">מאפשר ליישום לשמש כמסך נעילה לא מאובטח.</string>
 </resources>

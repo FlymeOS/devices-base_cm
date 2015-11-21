@@ -54,7 +54,7 @@
 
     .line 103
     .local v1, "nm":Landroid/app/NotificationManager;
-    const v4, 0x104009b
+    const v4, 0x1040091
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -62,7 +62,7 @@
 
     .line 104
     .local v3, "title":Ljava/lang/String;
-    const v4, 0x104009c
+    const v4, 0x1040092
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

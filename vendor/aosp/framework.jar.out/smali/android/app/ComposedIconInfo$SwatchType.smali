@@ -56,7 +56,7 @@
 
     const/4 v3, 0x0
 
-    .line 140
+    .line 141
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "None"
@@ -65,7 +65,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->None:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 141
+    .line 142
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "Vibrant"
@@ -74,7 +74,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->Vibrant:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 142
+    .line 143
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "VibrantLight"
@@ -83,7 +83,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->VibrantLight:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 143
+    .line 144
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "VibrantDark"
@@ -92,7 +92,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->VibrantDark:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 144
+    .line 145
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "Muted"
@@ -101,7 +101,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->Muted:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 145
+    .line 146
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "MutedLight"
@@ -112,7 +112,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->MutedLight:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 146
+    .line 147
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     const-string v1, "MutedDark"
@@ -123,7 +123,7 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->MutedDark:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 139
+    .line 140
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/app/ComposedIconInfo$SwatchType;
@@ -174,7 +174,7 @@
     .end annotation
 
     .prologue
-    .line 139
+    .line 140
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -185,7 +185,7 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 139
+    .line 140
     const-class v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -201,7 +201,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 140
     sget-object v0, Landroid/app/ComposedIconInfo$SwatchType;->$VALUES:[Landroid/app/ComposedIconInfo$SwatchType;
 
     invoke-virtual {v0}, [Landroid/app/ComposedIconInfo$SwatchType;->clone()Ljava/lang/Object;

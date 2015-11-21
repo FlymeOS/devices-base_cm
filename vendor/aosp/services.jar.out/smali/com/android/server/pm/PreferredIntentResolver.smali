@@ -30,15 +30,11 @@
 # virtual methods
 .method protected bridge synthetic dumpFilter(Ljava/io/PrintWriter;Ljava/lang/String;Landroid/content/IntentFilter;)V
     .locals 0
-    .param p1, "x0"    # Ljava/io/PrintWriter;
-    .param p2, "x1"    # Ljava/lang/String;
-    .param p3, "x2"    # Landroid/content/IntentFilter;
 
     .prologue
     .line 23
     check-cast p3, Lcom/android/server/pm/PreferredActivity;
 
-    .end local p3    # "x2":Landroid/content/IntentFilter;
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PreferredIntentResolver;->dumpFilter(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/pm/PreferredActivity;)V
 
     return-void
@@ -62,14 +58,11 @@
 
 .method protected bridge synthetic isPackageForFilter(Ljava/lang/String;Landroid/content/IntentFilter;)Z
     .locals 1
-    .param p1, "x0"    # Ljava/lang/String;
-    .param p2, "x1"    # Landroid/content/IntentFilter;
 
     .prologue
     .line 23
     check-cast p2, Lcom/android/server/pm/PreferredActivity;
 
-    .end local p2    # "x1":Landroid/content/IntentFilter;
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PreferredIntentResolver;->isPackageForFilter(Ljava/lang/String;Lcom/android/server/pm/PreferredActivity;)Z
 
     move-result v0
@@ -101,7 +94,6 @@
 
 .method protected bridge synthetic newArray(I)[Landroid/content/IntentFilter;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
     .line 23

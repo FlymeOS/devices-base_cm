@@ -70,9 +70,13 @@
 
 .field static final TRANSACTION_callSessionResumed:I = 0x8
 
+.field static final TRANSACTION_callSessionRetryErrorReceived_31:I = 0x20
+
 .field static final TRANSACTION_callSessionStartFailed:I = 0x3
 
 .field static final TRANSACTION_callSessionStarted:I = 0x2
+
+.field static final TRANSACTION_callSessionSuppServiceReceived:I = 0x1f
 
 .field static final TRANSACTION_callSessionTerminated:I = 0x4
 
@@ -178,7 +182,7 @@
     .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 510
+    .line 542
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -1672,6 +1676,110 @@
     .restart local v1    # "_arg1":Lcom/android/ims/ImsReasonInfo;
     goto :goto_18
 
+    .line 511
+    .end local v0    # "_arg0":Lcom/android/ims/internal/IImsCallSession;
+    .end local v1    # "_arg1":Lcom/android/ims/ImsReasonInfo;
+    :sswitch_1f
+    const-string v5, "com.android.ims.internal.IImsCallSessionListener"
+
+    invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 513
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/android/ims/internal/IImsCallSession$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/ims/internal/IImsCallSession;
+
+    move-result-object v0
+
+    .line 515
+    .restart local v0    # "_arg0":Lcom/android/ims/internal/IImsCallSession;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v5
+
+    if-eqz v5, :cond_18
+
+    .line 516
+    sget-object v5, Lcom/android/ims/ImsSuppServiceNotification;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/ims/ImsSuppServiceNotification;
+
+    .line 521
+    .local v1, "_arg1":Lcom/android/ims/ImsSuppServiceNotification;
+    :goto_19
+    invoke-virtual {p0, v0, v1}, Lcom/android/ims/internal/IImsCallSessionListener$Stub;->callSessionSuppServiceReceived(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsSuppServiceNotification;)V
+
+    .line 522
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 519
+    .end local v1    # "_arg1":Lcom/android/ims/ImsSuppServiceNotification;
+    :cond_18
+    const/4 v1, 0x0
+
+    .restart local v1    # "_arg1":Lcom/android/ims/ImsSuppServiceNotification;
+    goto :goto_19
+
+    .line 527
+    .end local v0    # "_arg0":Lcom/android/ims/internal/IImsCallSession;
+    .end local v1    # "_arg1":Lcom/android/ims/ImsSuppServiceNotification;
+    :sswitch_20
+    const-string v5, "com.android.ims.internal.IImsCallSessionListener"
+
+    invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 529
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/android/ims/internal/IImsCallSession$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/ims/internal/IImsCallSession;
+
+    move-result-object v0
+
+    .line 531
+    .restart local v0    # "_arg0":Lcom/android/ims/internal/IImsCallSession;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v5
+
+    if-eqz v5, :cond_19
+
+    .line 532
+    sget-object v5, Lcom/android/ims/ImsReasonInfo;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/ims/ImsReasonInfo;
+
+    .line 537
+    .local v1, "_arg1":Lcom/android/ims/ImsReasonInfo;
+    :goto_1a
+    invoke-virtual {p0, v0, v1}, Lcom/android/ims/internal/IImsCallSessionListener$Stub;->callSessionRetryErrorReceived(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+
+    .line 538
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 535
+    .end local v1    # "_arg1":Lcom/android/ims/ImsReasonInfo;
+    :cond_19
+    const/4 v1, 0x0
+
+    .restart local v1    # "_arg1":Lcom/android/ims/ImsReasonInfo;
+    goto :goto_1a
+
     .line 44
     :sswitch_data_0
     .sparse-switch
@@ -1705,6 +1813,8 @@
         0x1c -> :sswitch_1c
         0x1d -> :sswitch_1d
         0x1e -> :sswitch_1e
+        0x1f -> :sswitch_1f
+        0x20 -> :sswitch_20
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

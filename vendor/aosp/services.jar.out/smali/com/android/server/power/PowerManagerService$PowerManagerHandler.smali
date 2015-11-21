@@ -24,17 +24,17 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2818
+    .line 2827
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 2819
+    .line 2828
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2820
+    .line 2829
     return-void
 .end method
 
@@ -45,17 +45,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2824
+    .line 2833
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2839
+    .line 2848
     :goto_0
     :pswitch_0
     return-void
 
-    .line 2826
+    .line 2835
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -64,7 +64,7 @@
 
     goto :goto_0
 
-    .line 2829
+    .line 2838
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 2832
+    .line 2841
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -82,14 +82,14 @@
 
     goto :goto_0
 
-    .line 2835
+    .line 2844
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # invokes: Lcom/android/server/power/PowerManagerService;->cleanupProximity()V
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2600(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 2836
+    .line 2845
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Runnable;
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 2824
+    .line 2833
     nop
 
     :pswitch_data_0

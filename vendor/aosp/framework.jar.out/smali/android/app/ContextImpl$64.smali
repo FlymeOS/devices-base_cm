@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 777
+    .line 778
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -28,26 +28,32 @@
 
 # virtual methods
 .method public createService(Landroid/app/ContextImpl;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 779
-    invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
+    .line 780
+    const-string/jumbo v2, "themes"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 780
-    .local v0, "outerContext":Landroid/content/Context;
-    new-instance v1, Landroid/app/ProfileManager;
+    .line 781
+    .local v0, "b":Landroid/os/IBinder;
+    invoke-static {v0}, Landroid/content/res/IThemeService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/res/IThemeService;
 
-    iget-object v2, p1, Landroid/app/ContextImpl;->mMainThread:Landroid/app/ActivityThread;
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/app/ActivityThread;->getHandler()Landroid/os/Handler;
+    .line 782
+    .local v1, "service":Landroid/content/res/IThemeService;
+    new-instance v2, Landroid/content/res/ThemeManager;
 
-    move-result-object v2
+    invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 
-    invoke-direct {v1, v0, v2}, Landroid/app/ProfileManager;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    move-result-object v3
 
-    return-object v1
+    invoke-direct {v2, v3, v1}, Landroid/content/res/ThemeManager;-><init>(Landroid/content/Context;Landroid/content/res/IThemeService;)V
+
+    return-object v2
 .end method

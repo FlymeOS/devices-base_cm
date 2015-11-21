@@ -58,7 +58,7 @@
 
     .prologue
     .line 90
-    const v0, 0x1040681
+    const v0, 0x1040676
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/widget/ToolbarWidgetWrapper;-><init>(Landroid/widget/Toolbar;ZI)V
 

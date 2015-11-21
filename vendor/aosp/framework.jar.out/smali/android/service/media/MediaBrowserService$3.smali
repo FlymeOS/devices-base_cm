@@ -55,13 +55,11 @@
 # virtual methods
 .method bridge synthetic onResultSent(Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 423
     check-cast p1, Ljava/util/List;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/service/media/MediaBrowserService$3;->onResultSent(Ljava/util/List;)V
 
     return-void

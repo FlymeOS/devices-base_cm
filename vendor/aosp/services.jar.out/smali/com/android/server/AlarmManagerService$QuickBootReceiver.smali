@@ -27,23 +27,23 @@
     .locals 4
 
     .prologue
-    .line 2073
+    .line 2104
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$QuickBootReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 2074
+    .line 2105
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 2075
+    .line 2106
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "org.codeaurora.quickboot.appkilled"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2076
+    .line 2107
     invoke-virtual {p1}, Lcom/android/server/AlarmManagerService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -54,7 +54,7 @@
 
     invoke-virtual {v1, p0, v0, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 2078
+    .line 2109
     return-void
 .end method
 
@@ -66,16 +66,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2082
+    .line 2113
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2083
+    .line 2114
     .local v0, "action":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 2084
+    .line 2115
     .local v6, "pkgList":[Ljava/lang/String;
     const-string v8, "org.codeaurora.quickboot.appkilled"
 
@@ -85,21 +85,21 @@
 
     if-eqz v8, :cond_2
 
-    .line 2085
+    .line 2116
     const-string v8, "android.intent.extra.PACKAGES"
 
     invoke-virtual {p2, v8}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 2086
+    .line 2117
     if-eqz v6, :cond_2
 
     array-length v8, v6
 
     if-lez v8, :cond_2
 
-    .line 2087
+    .line 2118
     move-object v1, v6
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -114,13 +114,13 @@
 
     aget-object v5, v1, v3
 
-    .line 2088
+    .line 2119
     .local v5, "pkg":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/AlarmManagerService$QuickBootReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-virtual {v8, v5}, Lcom/android/server/AlarmManagerService;->removeLocked(Ljava/lang/String;)V
 
-    .line 2089
+    .line 2120
     iget-object v8, p0, Lcom/android/server/AlarmManagerService$QuickBootReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v8, v8, Lcom/android/server/AlarmManagerService;->mBroadcastStats:Landroid/util/SparseArray;
@@ -135,7 +135,7 @@
     :goto_1
     if-ltz v2, :cond_1
 
-    .line 2090
+    .line 2121
     iget-object v8, p0, Lcom/android/server/AlarmManagerService$QuickBootReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v8, v8, Lcom/android/server/AlarmManagerService;->mBroadcastStats:Landroid/util/SparseArray;
@@ -146,7 +146,7 @@
 
     check-cast v7, Landroid/util/ArrayMap;
 
-    .line 2091
+    .line 2122
     .local v7, "uidStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$BroadcastStats;>;"
     invoke-virtual {v7, v5}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -154,34 +154,34 @@
 
     if-eqz v8, :cond_0
 
-    .line 2092
+    .line 2123
     invoke-virtual {v7}, Landroid/util/ArrayMap;->size()I
 
     move-result v8
 
     if-gtz v8, :cond_0
 
-    .line 2093
+    .line 2124
     iget-object v8, p0, Lcom/android/server/AlarmManagerService$QuickBootReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v8, v8, Lcom/android/server/AlarmManagerService;->mBroadcastStats:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v2}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 2089
+    .line 2120
     :cond_0
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 2087
+    .line 2118
     .end local v7    # "uidStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$BroadcastStats;>;"
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 2100
+    .line 2131
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "i":I
     .end local v3    # "i$":I

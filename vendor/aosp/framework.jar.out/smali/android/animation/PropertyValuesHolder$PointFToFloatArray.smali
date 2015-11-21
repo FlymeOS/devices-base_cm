@@ -54,13 +54,11 @@
 # virtual methods
 .method public bridge synthetic convert(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 1572
     check-cast p1, Landroid/graphics/PointF;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/animation/PropertyValuesHolder$PointFToFloatArray;->convert(Landroid/graphics/PointF;)[F
 
     move-result-object v0

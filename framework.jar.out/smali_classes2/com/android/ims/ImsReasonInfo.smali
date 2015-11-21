@@ -101,13 +101,23 @@
 
 .field public static final CODE_SIP_REQUEST_TIMEOUT:I = 0x14f
 
-.field public static final CODE_SIP_SERVER_ERROR:I = 0x162
+.field public static final CODE_SIP_SERVER_BAD_GATEWAY:I = 0x161
+
+.field public static final CODE_SIP_SERVER_ERROR:I = 0x167
 
 .field public static final CODE_SIP_SERVER_INTERNAL_ERROR:I = 0x15f
 
-.field public static final CODE_SIP_SERVER_TIMEOUT:I = 0x161
+.field public static final CODE_SIP_SERVER_MESSAGE_TOOLARGE:I = 0x165
 
-.field public static final CODE_SIP_SERVICE_UNAVAILABLE:I = 0x160
+.field public static final CODE_SIP_SERVER_NOT_IMPLEMENTED:I = 0x160
+
+.field public static final CODE_SIP_SERVER_PRECONDITION_FAILURE:I = 0x166
+
+.field public static final CODE_SIP_SERVER_TIMEOUT:I = 0x163
+
+.field public static final CODE_SIP_SERVER_VERSION_UNSUPPORTED:I = 0x164
+
+.field public static final CODE_SIP_SERVICE_UNAVAILABLE:I = 0x162
 
 .field public static final CODE_SIP_TEMPRARILY_UNAVAILABLE:I = 0x150
 
@@ -194,7 +204,7 @@
     .locals 1
 
     .prologue
-    .line 368
+    .line 378
     new-instance v0, Lcom/android/ims/ImsReasonInfo$1;
 
     invoke-direct {v0}, Lcom/android/ims/ImsReasonInfo$1;-><init>()V
@@ -210,24 +220,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 285
+    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 286
+    .line 296
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 287
+    .line 297
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 288
+    .line 298
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 289
+    .line 299
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 290
+    .line 300
     return-void
 .end method
 
@@ -237,26 +247,26 @@
     .param p2, "extraCode"    # I
 
     .prologue
-    .line 296
+    .line 306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 297
+    .line 307
     div-int/lit8 v0, p1, 0x64
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 298
+    .line 308
     iput p1, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 299
+    .line 309
     iput p2, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 300
+    .line 310
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 301
+    .line 311
     return-void
 .end method
 
@@ -267,24 +277,24 @@
     .param p3, "extraMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 303
+    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 304
+    .line 314
     div-int/lit8 v0, p1, 0x64
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 305
+    .line 315
     iput p1, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 306
+    .line 316
     iput p2, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 307
+    .line 317
     iput-object p3, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 308
+    .line 318
     return-void
 .end method
 
@@ -293,13 +303,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 292
+    .line 302
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 293
+    .line 303
     invoke-direct {p0, p1}, Lcom/android/ims/ImsReasonInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 294
+    .line 304
     return-void
 .end method
 
@@ -308,35 +318,35 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 362
+    .line 372
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
-    .line 363
+    .line 373
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
-    .line 364
+    .line 374
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
-    .line 365
+    .line 375
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
-    .line 366
+    .line 376
     return-void
 .end method
 
@@ -346,7 +356,7 @@
     .locals 1
 
     .prologue
-    .line 350
+    .line 360
     const/4 v0, 0x0
 
     return v0
@@ -356,7 +366,7 @@
     .locals 1
 
     .prologue
-    .line 314
+    .line 324
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
     return v0
@@ -366,7 +376,7 @@
     .locals 1
 
     .prologue
-    .line 321
+    .line 331
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
     return v0
@@ -376,7 +386,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 338
     iget-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     return-object v0
@@ -386,7 +396,7 @@
     .locals 1
 
     .prologue
-    .line 335
+    .line 345
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
     return v0
@@ -396,7 +406,7 @@
     .locals 2
 
     .prologue
-    .line 344
+    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -468,26 +478,26 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 355
+    .line 365
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mReasonType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 356
+    .line 366
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 357
+    .line 367
     iget v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 358
+    .line 368
     iget-object v0, p0, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 359
+    .line 369
     return-void
 .end method

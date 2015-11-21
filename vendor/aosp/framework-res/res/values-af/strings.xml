@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Hierdie video is nie geldig vir stroming na hierdie toestel nie.</string>
     <string name="selectTextMode">Kies teks</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Geen</string>
     <string name="profile_picker_title">Profiele</string>
     <string name="global_action_choose_profile">Profiel</string>
+    <string name="profile_none">Geen</string>
     <string name="global_action_screenshot">Skermfoto</string>
     <string name="permlab_receiveProtectedSms">ontvang beskermde SMS</string>
     <string name="permdesc_receiveProtectedSms">"Laat die program toe om 'n beskermde inkomende SMS te ontvang."</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">"Laat 'n program toe om te bepaal of 'n ander program met of sonder Privaatheidswag kan loop. Wanneer Privaatheidswag geaktiveer is kan die program nie toegang kry tot persoonlike data soos kontakte, boodskappe en oproep geskiedenis nie."</string>
     <string name="privacy_guard_notification">Privaatheidswag aktief</string>
     <string name="privacy_guard_notification_detail">%1$s het nie toegang tot persoonlike data nie</string>
-    <string name="permlab_useHardwareFramework">gebruik hardeware raamwerk</string>
-    <string name="permdesc_useHardwareFramework">Laat program toegang tot die CM hardeware raamwerk.</string>
     <string name="permlab_setKeyguardWallpaper">Stel slotskerm agtergrond in</string>
     <string name="permdesc_setKeyguardWallpaper">"Laat 'n program toe om die slotskerm agtergrond te verander."</string>
     <string name="privacy_guard_dialog_title">Privaatheidswag</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB oor USB &amp; netwerk is aktief</string>
     <string name="adb_active_generic_notification_message">Raak om ontfouting af te skakel.</string>
     <string name="usb_choose_notification_title">Raak om USB opsies te kies.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; netwerk</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Netwerk</string>
     <string name="permlab_interceptPackageLaunch">onderskep program begin</string>
     <string name="permdesc_interceptPackageLaunch">"Laat 'n program toe om ander programme te onderskep as dit begin"</string>
     <string name="app_ops_access_camera">toegang tot die kamera</string>
@@ -207,6 +209,12 @@
     <string name="fingerprint_default_name">Vingerafdruk %d</string>
     <string name="permlab_accessFingerprintService">kry toegang tot vingerafdruk diens</string>
     <string name="permdesc_accessFingerprintService">"Laat 'n program toegang tot die vingerafdruk diens. Die program kan byvoeg, verwyder, hernoem en staaf teen vingerafdrukke"</string>
+    <string name="permlab_resetBatteryStats">herstel battery statistieke</string>
+    <string name="permdesc_resetBatteryStats">"Laat 'n program om die huidige lae-vlak battery gebruik data te herstel."</string>
+    <string name="silent_mode_priority">Prioriteit</string>
+    <string name="silent_mode_none">Geen</string>
+    <string name="subscription_change_disabled_wifi_ap">Deaktiveer Wi-Fi warmkol weens SIM inskrywing verandering</string>
+    <string name="notify_turn_wifi_off_title">Skakel Wi-Fi af</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -1783,12 +1791,4 @@ Batterybespaarder skakel outomaties af wanneer jou toestel besig is om te laai."
     <string name="stk_cc_ss_to_ss">SS-versoek is gewysig tot nuwe SS-versoek.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; netwerk</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Netwerk</string>
-    <string name="permlab_resetBatteryStats">herstel battery statistieke</string>
-    <string name="permdesc_resetBatteryStats">"Laat 'n program om die huidige lae-vlak battery gebruik data te herstel."</string>
-    <string name="silent_mode_priority">Prioriteit</string>
-    <string name="silent_mode_none">Geen</string>
 </resources>

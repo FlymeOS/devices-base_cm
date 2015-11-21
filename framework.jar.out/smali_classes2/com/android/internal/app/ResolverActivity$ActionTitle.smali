@@ -60,9 +60,9 @@
 
     const/4 v2, 0x0
 
-    const v10, 0x104055c
+    const v10, 0x1040551
 
-    const v9, 0x104055b
+    const v9, 0x1040550
 
     .line 123
     new-instance v0, Lcom/android/internal/app/ResolverActivity$ActionTitle;
@@ -71,9 +71,9 @@
 
     const-string v3, "android.intent.action.VIEW"
 
-    const v4, 0x1040557
+    const v4, 0x104054c
 
-    const v5, 0x1040558
+    const v5, 0x104054d
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
@@ -86,9 +86,9 @@
 
     const-string v6, "android.intent.action.EDIT"
 
-    const v7, 0x1040559
+    const v7, 0x104054e
 
-    const v8, 0x104055a
+    const v8, 0x104054f
 
     move v5, v11
 
@@ -156,9 +156,9 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x1040555
+    const v7, 0x104054a
 
-    const v8, 0x1040556
+    const v8, 0x104054b
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
@@ -173,9 +173,9 @@
 
     const-string v6, "android.intent.action.MAIN"
 
-    const v7, 0x104055d
+    const v7, 0x1040552
 
-    const v8, 0x104055e
+    const v8, 0x1040553
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 

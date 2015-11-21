@@ -1,4 +1,4 @@
-.class public final Lcom/android/internal/os/BatteryStatsImpl;
+.class public Lcom/android/internal/os/BatteryStatsImpl;
 .super Landroid/os/BatteryStats;
 .source "BatteryStatsImpl.java"
 
@@ -641,12 +641,12 @@
     .locals 1
 
     .prologue
-    .line 391
+    .line 392
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
 
-    .line 401
+    .line 402
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -655,7 +655,7 @@
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsImpl;->PROC_WAKELOCKS_FORMAT:[I
 
-    .line 411
+    .line 412
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -664,7 +664,7 @@
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsImpl;->WAKEUP_SOURCES_FORMAT:[I
 
-    .line 8764
+    .line 8792
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$3;
 
     invoke-direct {v0}, Lcom/android/internal/os/BatteryStatsImpl$3;-><init>()V
@@ -673,7 +673,7 @@
 
     return-void
 
-    .line 401
+    .line 402
     nop
 
     :array_0
@@ -686,7 +686,7 @@
         0x2009
     .end array-data
 
-    .line 411
+    .line 412
     :array_1
     .array-data 4
         0x1009
@@ -713,395 +713,384 @@
 
     const/4 v1, 0x0
 
-    .line 446
+    .line 447
     invoke-direct {p0}, Landroid/os/BatteryStats;-><init>()V
 
-    .line 154
+    .line 155
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
-    .line 159
+    .line 160
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
-    .line 166
+    .line 167
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
-    .line 167
+    .line 168
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullTimers:Ljava/util/ArrayList;
 
-    .line 168
+    .line 169
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWindowTimers:Ljava/util/ArrayList;
 
-    .line 169
+    .line 170
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorTimers:Landroid/util/SparseArray;
 
-    .line 171
+    .line 172
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiRunningTimers:Ljava/util/ArrayList;
 
-    .line 172
+    .line 173
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullWifiLockTimers:Ljava/util/ArrayList;
 
-    .line 173
+    .line 174
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastTimers:Ljava/util/ArrayList;
 
-    .line 174
+    .line 175
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanTimers:Ljava/util/ArrayList;
 
-    .line 175
+    .line 176
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiBatchedScanTimers:Landroid/util/SparseArray;
 
-    .line 177
+    .line 178
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 178
+    .line 179
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 181
+    .line 182
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
-    .line 185
+    .line 186
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 189
+    .line 190
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 197
+    .line 198
     new-instance v0, Landroid/os/BatteryStats$HistoryEventTracker;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryEventTracker;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
-    .line 200
+    .line 201
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
-    .line 201
+    .line 202
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 206
+    .line 207
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
-    .line 207
+    .line 208
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 208
+    .line 209
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 209
+    .line 210
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 210
+    .line 211
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 211
+    .line 212
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
-    .line 215
+    .line 216
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 216
+    .line 217
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 217
+    .line 218
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 218
+    .line 219
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
-    .line 219
+    .line 220
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
 
-    .line 220
+    .line 221
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
-    .line 221
+    .line 222
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryUptime:J
 
-    .line 223
+    .line 224
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 253
+    .line 254
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 256
+    .line 257
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
-    .line 257
+    .line 258
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 277
+    .line 278
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
-    .line 278
+    .line 279
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
-    .line 279
+    .line 280
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 284
+    .line 285
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
-    .line 285
+    .line 286
     const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 288
+    .line 289
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 290
+    .line 291
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 299
+    .line 300
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
-    .line 300
+    .line 301
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 302
+    .line 303
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
-    .line 303
+    .line 304
     const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 305
+    .line 306
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
-    .line 306
+    .line 307
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 312
+    .line 313
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
-    .line 313
+    .line 314
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 315
+    .line 316
     sget v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 352
+    .line 353
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 353
+    .line 354
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
-    .line 354
+    .line 355
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 360
+    .line 361
     const/16 v0, 0xc8
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
 
-    .line 366
+    .line 367
     const/16 v0, 0xc8
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
 
-    .line 368
+    .line 369
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
-    .line 371
+    .line 372
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 373
+    .line 374
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
-    .line 374
+    .line 375
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
-    .line 375
+    .line 376
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
-    .line 384
+    .line 385
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
-    .line 393
+    .line 394
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
-    .line 394
+    .line 395
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupUptimeMs:J
 
-    .line 395
+    .line 396
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
-    .line 423
+    .line 424
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
-    .line 424
+    .line 425
     const/4 v0, 0x3
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
-    .line 430
+    .line 431
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelockFileStats:Ljava/util/Map;
 
-    .line 433
+    .line 434
     new-instance v0, Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-direct {v0}, Lcom/android/internal/net/NetworkStatsFactory;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
-
-    .line 434
-    new-instance v0, Landroid/net/NetworkStats;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
-
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 435
     new-instance v0, Landroid/net/NetworkStats;
@@ -1112,7 +1101,7 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 436
     new-instance v0, Landroid/net/NetworkStats;
@@ -1123,7 +1112,7 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 437
     new-instance v0, Landroid/net/NetworkStats;
@@ -1134,66 +1123,77 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
+
+    .line 438
+    new-instance v0, Landroid/net/NetworkStats;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
+
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 439
+    .line 440
     new-instance v0, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v0}, Landroid/net/NetworkStats$Entry;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStatsEntry:Landroid/net/NetworkStats$Entry;
 
-    .line 441
+    .line 442
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
-    .line 443
+    .line 444
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:[Ljava/lang/String;
 
-    .line 2307
+    .line 2308
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
 
-    .line 2308
+    .line 2309
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates2:I
 
-    .line 2678
+    .line 2679
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitialAcquireWakeUid:I
 
-    .line 3762
+    .line 3763
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
-    .line 3792
+    .line 3793
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
-    .line 3834
+    .line 3835
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
-    .line 7646
+    .line 7674
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7647
+    .line 7675
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 447
+    .line 448
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
-    .line 448
+    .line 449
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCheckinFile:Lcom/android/internal/os/AtomicFile;
 
-    .line 449
+    .line 450
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    .line 450
+    .line 451
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->clearHistoryLocked()V
 
-    .line 451
+    .line 452
     return-void
 .end method
 
@@ -1212,395 +1212,384 @@
 
     const/4 v1, 0x0
 
-    .line 6467
+    .line 6468
     invoke-direct {p0}, Landroid/os/BatteryStats;-><init>()V
 
-    .line 154
+    .line 155
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
-    .line 159
+    .line 160
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
-    .line 166
+    .line 167
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
-    .line 167
+    .line 168
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullTimers:Ljava/util/ArrayList;
 
-    .line 168
+    .line 169
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWindowTimers:Ljava/util/ArrayList;
 
-    .line 169
+    .line 170
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorTimers:Landroid/util/SparseArray;
 
-    .line 171
+    .line 172
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiRunningTimers:Ljava/util/ArrayList;
 
-    .line 172
+    .line 173
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullWifiLockTimers:Ljava/util/ArrayList;
 
-    .line 173
+    .line 174
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastTimers:Ljava/util/ArrayList;
 
-    .line 174
+    .line 175
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanTimers:Ljava/util/ArrayList;
 
-    .line 175
+    .line 176
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiBatchedScanTimers:Landroid/util/SparseArray;
 
-    .line 177
+    .line 178
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 178
+    .line 179
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 181
+    .line 182
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
-    .line 185
+    .line 186
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 189
+    .line 190
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 197
+    .line 198
     new-instance v0, Landroid/os/BatteryStats$HistoryEventTracker;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryEventTracker;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
-    .line 200
+    .line 201
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
-    .line 201
+    .line 202
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 206
+    .line 207
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
-    .line 207
+    .line 208
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 208
+    .line 209
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 209
+    .line 210
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 210
+    .line 211
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 211
+    .line 212
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
-    .line 215
+    .line 216
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 216
+    .line 217
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 217
+    .line 218
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 218
+    .line 219
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
-    .line 219
+    .line 220
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
 
-    .line 220
+    .line 221
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
-    .line 221
+    .line 222
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryUptime:J
 
-    .line 223
+    .line 224
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v0}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 253
+    .line 254
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 256
+    .line 257
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
-    .line 257
+    .line 258
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 277
+    .line 278
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
-    .line 278
+    .line 279
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
-    .line 279
+    .line 280
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 284
+    .line 285
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
-    .line 285
+    .line 286
     const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 288
+    .line 289
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 290
+    .line 291
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 299
+    .line 300
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
-    .line 300
+    .line 301
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 302
+    .line 303
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
-    .line 303
+    .line 304
     const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 305
+    .line 306
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
-    .line 306
+    .line 307
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 312
+    .line 313
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
-    .line 313
+    .line 314
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 315
+    .line 316
     sget v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 352
+    .line 353
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 353
+    .line 354
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
-    .line 354
+    .line 355
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 360
+    .line 361
     const/16 v0, 0xc8
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
 
-    .line 366
+    .line 367
     const/16 v0, 0xc8
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
 
-    .line 368
+    .line 369
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
-    .line 371
+    .line 372
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 373
+    .line 374
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
-    .line 374
+    .line 375
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
-    .line 375
+    .line 376
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
-    .line 384
+    .line 385
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
-    .line 393
+    .line 394
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
-    .line 394
+    .line 395
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupUptimeMs:J
 
-    .line 395
+    .line 396
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
-    .line 423
+    .line 424
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
-    .line 424
+    .line 425
     const/4 v0, 0x3
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
-    .line 430
+    .line 431
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelockFileStats:Ljava/util/Map;
 
-    .line 433
+    .line 434
     new-instance v0, Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-direct {v0}, Lcom/android/internal/net/NetworkStatsFactory;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
-
-    .line 434
-    new-instance v0, Landroid/net/NetworkStats;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
-
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 435
     new-instance v0, Landroid/net/NetworkStats;
@@ -1611,7 +1600,7 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 436
     new-instance v0, Landroid/net/NetworkStats;
@@ -1622,7 +1611,7 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
 
     .line 437
     new-instance v0, Landroid/net/NetworkStats;
@@ -1633,69 +1622,80 @@
 
     invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
+    iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
+
+    .line 438
+    new-instance v0, Landroid/net/NetworkStats;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v2, v3, v6}, Landroid/net/NetworkStats;-><init>(JI)V
+
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 439
+    .line 440
     new-instance v0, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v0}, Landroid/net/NetworkStats$Entry;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStatsEntry:Landroid/net/NetworkStats$Entry;
 
-    .line 441
+    .line 442
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
-    .line 443
+    .line 444
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:[Ljava/lang/String;
 
-    .line 2307
+    .line 2308
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
 
-    .line 2308
+    .line 2309
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates2:I
 
-    .line 2678
+    .line 2679
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitialAcquireWakeUid:I
 
-    .line 3762
+    .line 3763
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
-    .line 3792
+    .line 3793
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
-    .line 3834
+    .line 3835
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
-    .line 7646
+    .line 7674
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7647
+    .line 7675
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 6468
+    .line 6469
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
-    .line 6469
+    .line 6470
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCheckinFile:Lcom/android/internal/os/AtomicFile;
 
-    .line 6470
+    .line 6471
     iput-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    .line 6471
+    .line 6472
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->clearHistoryLocked()V
 
-    .line 6472
+    .line 6473
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 6473
+    .line 6474
     return-void
 .end method
 
@@ -1705,442 +1705,442 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 6399
+    .line 6400
     invoke-direct {p0}, Landroid/os/BatteryStats;-><init>()V
 
-    .line 154
+    .line 155
     new-instance v1, Landroid/util/SparseIntArray;
 
     invoke-direct {v1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
-    .line 159
+    .line 160
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
-    .line 166
+    .line 167
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
-    .line 167
+    .line 168
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullTimers:Ljava/util/ArrayList;
 
-    .line 168
+    .line 169
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWindowTimers:Ljava/util/ArrayList;
 
-    .line 169
+    .line 170
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorTimers:Landroid/util/SparseArray;
 
-    .line 171
+    .line 172
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiRunningTimers:Ljava/util/ArrayList;
 
-    .line 172
+    .line 173
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFullWifiLockTimers:Ljava/util/ArrayList;
 
-    .line 173
+    .line 174
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastTimers:Ljava/util/ArrayList;
 
-    .line 174
+    .line 175
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanTimers:Ljava/util/ArrayList;
 
-    .line 175
+    .line 176
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiBatchedScanTimers:Landroid/util/SparseArray;
 
-    .line 177
+    .line 178
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 178
+    .line 179
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoTurnedOnTimers:Ljava/util/ArrayList;
 
-    .line 181
+    .line 182
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
-    .line 185
+    .line 186
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 189
+    .line 190
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-direct {v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
-    .line 197
+    .line 198
     new-instance v1, Landroid/os/BatteryStats$HistoryEventTracker;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryEventTracker;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
-    .line 200
+    .line 201
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
-    .line 201
+    .line 202
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 206
+    .line 207
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
-    .line 207
+    .line 208
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 208
+    .line 209
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 209
+    .line 210
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 210
+    .line 211
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 211
+    .line 212
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
-    .line 215
+    .line 216
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 216
+    .line 217
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 217
+    .line 218
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 218
+    .line 219
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
-    .line 219
+    .line 220
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
 
-    .line 220
+    .line 221
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
-    .line 221
+    .line 222
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryUptime:J
 
-    .line 223
+    .line 224
     new-instance v1, Landroid/os/BatteryStats$HistoryItem;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryItem;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 253
+    .line 254
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 256
+    .line 257
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
-    .line 257
+    .line 258
     const/4 v1, 0x5
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 277
+    .line 278
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
-    .line 278
+    .line 279
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
-    .line 279
+    .line 280
     const/4 v1, 0x5
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 284
+    .line 285
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
-    .line 285
+    .line 286
     const/16 v1, 0x11
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 288
+    .line 289
     const/4 v1, 0x4
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 290
+    .line 291
     const/4 v1, 0x4
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 299
+    .line 300
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
-    .line 300
+    .line 301
     const/16 v1, 0x8
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 302
+    .line 303
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
-    .line 303
+    .line 304
     const/16 v1, 0xd
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 305
+    .line 306
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
-    .line 306
+    .line 307
     const/4 v1, 0x5
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 312
+    .line 313
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
-    .line 313
+    .line 314
     const/4 v1, 0x4
 
     new-array v1, v1, [Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 315
+    .line 316
     sget v1, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 352
+    .line 353
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 353
+    .line 354
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
-    .line 354
+    .line 355
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 360
+    .line 361
     const/16 v1, 0xc8
 
     new-array v1, v1, [J
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
 
-    .line 366
+    .line 367
     const/16 v1, 0xc8
 
     new-array v1, v1, [J
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
 
-    .line 368
+    .line 369
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
-    .line 371
+    .line 372
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 373
+    .line 374
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
-    .line 374
+    .line 375
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
-    .line 375
+    .line 376
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
-    .line 384
+    .line 385
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
-    .line 393
+    .line 394
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
-    .line 394
+    .line 395
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupUptimeMs:J
 
-    .line 395
+    .line 396
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
-    .line 423
+    .line 424
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
-    .line 424
+    .line 425
     const/4 v1, 0x3
 
     new-array v1, v1, [J
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
-    .line 430
+    .line 431
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelockFileStats:Ljava/util/Map;
 
-    .line 433
+    .line 434
     new-instance v1, Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-direct {v1}, Lcom/android/internal/net/NetworkStatsFactory;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
-    .line 434
+    .line 435
     new-instance v1, Landroid/net/NetworkStats;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2153,7 +2153,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
-    .line 435
+    .line 436
     new-instance v1, Landroid/net/NetworkStats;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2166,7 +2166,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
 
-    .line 436
+    .line 437
     new-instance v1, Landroid/net/NetworkStats;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2179,7 +2179,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 437
+    .line 438
     new-instance v1, Landroid/net/NetworkStats;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2192,84 +2192,124 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 439
+    .line 440
     new-instance v1, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v1}, Landroid/net/NetworkStats$Entry;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStatsEntry:Landroid/net/NetworkStats$Entry;
 
-    .line 441
+    .line 442
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
-    .line 443
+    .line 444
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:[Ljava/lang/String;
 
-    .line 2307
+    .line 2308
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates:I
 
-    .line 2308
+    .line 2309
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChangedStates2:I
 
-    .line 2678
+    .line 2679
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitialAcquireWakeUid:I
 
-    .line 3762
+    .line 3763
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
-    .line 3792
+    .line 3793
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
-    .line 3834
+    .line 3835
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
-    .line 7646
+    .line 7674
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7647
+    .line 7675
     new-instance v1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 6400
+    .line 6401
     if-eqz p1, :cond_0
 
-    .line 6401
+    .line 6402
     new-instance v1, Lcom/android/internal/util/JournaledFile;
 
     new-instance v6, Ljava/io/File;
 
-    const-string v7, "batterystats.bin"
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStatsName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, ".bin"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
 
     invoke-direct {v6, p1, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     new-instance v7, Ljava/io/File;
 
-    const-string v8, "batterystats.bin.tmp"
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStatsName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ".bin.tmp"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
 
     invoke-direct {v7, p1, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -2277,13 +2317,33 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
-    .line 6406
+    .line 6407
     :goto_0
     new-instance v1, Lcom/android/internal/os/AtomicFile;
 
     new-instance v6, Ljava/io/File;
 
-    const-string v7, "batterystats-checkin.bin"
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStatsName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, "-checkin.bin"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
 
     invoke-direct {v6, p1, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -2291,7 +2351,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCheckinFile:Lcom/android/internal/os/AtomicFile;
 
-    .line 6407
+    .line 6408
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -2302,14 +2362,14 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    .line 6408
+    .line 6409
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
-    .line 6409
+    .line 6410
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2324,7 +2384,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6410
+    .line 6411
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2333,7 +2393,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 6411
+    .line 6412
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2350,12 +2410,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6410
+    .line 6411
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 6404
+    .line 6405
     .end local v0    # "i":I
     :cond_0
     const/4 v1, 0x0
@@ -2364,7 +2424,7 @@
 
     goto :goto_0
 
-    .line 6413
+    .line 6414
     .restart local v0    # "i":I
     :cond_1
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2381,7 +2441,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6414
+    .line 6415
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2396,7 +2456,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6415
+    .line 6416
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2411,7 +2471,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6416
+    .line 6417
     const/4 v0, 0x0
 
     :goto_2
@@ -2419,7 +2479,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 6417
+    .line 6418
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2436,12 +2496,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6416
+    .line 6417
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 6420
+    .line 6421
     :cond_2
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -2457,7 +2517,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6421
+    .line 6422
     const/4 v0, 0x0
 
     :goto_3
@@ -2465,7 +2525,7 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 6422
+    .line 6423
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2482,12 +2542,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6421
+    .line 6422
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 6425
+    .line 6426
     :cond_3
     const/4 v0, 0x0
 
@@ -2496,7 +2556,7 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 6426
+    .line 6427
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -2507,7 +2567,7 @@
 
     aput-object v6, v1, v0
 
-    .line 6427
+    .line 6428
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -2518,12 +2578,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6425
+    .line 6426
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 6429
+    .line 6430
     :cond_4
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -2539,7 +2599,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6430
+    .line 6431
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2554,7 +2614,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6431
+    .line 6432
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -2563,7 +2623,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 6432
+    .line 6433
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -2572,7 +2632,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 6433
+    .line 6434
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -2581,7 +2641,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 6434
+    .line 6435
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2596,7 +2656,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6435
+    .line 6436
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2611,7 +2671,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6436
+    .line 6437
     const/4 v0, 0x0
 
     :goto_5
@@ -2619,7 +2679,7 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 6437
+    .line 6438
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2636,12 +2696,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6436
+    .line 6437
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
-    .line 6439
+    .line 6440
     :cond_5
     const/4 v0, 0x0
 
@@ -2650,7 +2710,7 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 6440
+    .line 6441
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2667,12 +2727,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6439
+    .line 6440
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 6442
+    .line 6443
     :cond_6
     const/4 v0, 0x0
 
@@ -2681,7 +2741,7 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 6443
+    .line 6444
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2698,12 +2758,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6442
+    .line 6443
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
-    .line 6446
+    .line 6447
     :cond_7
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -2719,7 +2779,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6447
+    .line 6448
     const/4 v0, 0x0
 
     :goto_8
@@ -2727,7 +2787,7 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 6448
+    .line 6449
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     new-instance v6, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -2744,12 +2804,12 @@
 
     aput-object v6, v1, v0
 
-    .line 6447
+    .line 6448
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_8
 
-    .line 6450
+    .line 6451
     :cond_8
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -2765,7 +2825,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6451
+    .line 6452
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2780,7 +2840,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6452
+    .line 6453
     new-instance v1, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v6, 0x0
@@ -2795,14 +2855,14 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 6453
+    .line 6454
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
-    .line 6454
+    .line 6455
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -2811,7 +2871,7 @@
 
     mul-long v4, v6, v8
 
-    .line 6455
+    .line 6456
     .local v4, "uptime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2821,49 +2881,49 @@
 
     mul-long v2, v6, v8
 
-    .line 6456
+    .line 6457
     .local v2, "realtime":J
     invoke-virtual {p0, v4, v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->initTimes(JJ)V
 
-    .line 6457
+    .line 6458
     sget-object v1, Landroid/os/Build;->ID:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
 
-    .line 6458
+    .line 6459
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStartLevel:I
 
-    .line 6459
+    .line 6460
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
-    .line 6460
+    .line 6461
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
 
-    .line 6461
+    .line 6462
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 6462
+    .line 6463
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
-    .line 6463
+    .line 6464
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->initDischarge()V
 
-    .line 6464
+    .line 6465
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->clearHistoryLocked()V
 
-    .line 6465
+    .line 6466
     return-void
 .end method
 
@@ -2872,7 +2932,7 @@
     .param p0, "x0"    # Lcom/android/internal/os/BatteryStatsImpl;
 
     .prologue
-    .line 85
+    .line 86
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCallback:Lcom/android/internal/os/BatteryStatsImpl$BatteryCallback;
 
     return-object v0
@@ -2888,12 +2948,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2290
+    .line 2291
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIteratingHistory:Z
 
     if-eqz v0, :cond_0
 
-    .line 2291
+    .line 2292
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Can\'t do this while iterating history!"
@@ -2902,7 +2962,7 @@
 
     throw v0
 
-    .line 2293
+    .line 2294
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
@@ -2912,14 +2972,14 @@
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 2294
+    .line 2295
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-virtual {v0, v1}, Landroid/os/BatteryStats$HistoryItem;->setTo(Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2295
+    .line 2296
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
@@ -2928,7 +2988,7 @@
 
     invoke-virtual {v0, v2, v3, p5, p6}, Landroid/os/BatteryStats$HistoryItem;->setTo(JBLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2296
+    .line 2297
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
@@ -2937,24 +2997,24 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl;->writeHistoryDelta(Landroid/os/Parcel;Landroid/os/BatteryStats$HistoryItem;Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2297
+    .line 2298
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
 
-    .line 2298
+    .line 2299
     iput-object v4, p6, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2299
+    .line 2300
     iput-object v4, p6, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2300
+    .line 2301
     const/4 v0, 0x0
 
     iput v0, p6, Landroid/os/BatteryStats$HistoryItem;->eventCode:I
 
-    .line 2301
+    .line 2302
     iput-object v4, p6, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2305
+    .line 2306
     return-void
 .end method
 
@@ -2968,7 +3028,7 @@
     .param p7, "elapsedRealtime"    # J
 
     .prologue
-    .line 6974
+    .line 6985
     const-wide/16 v6, 0x0
 
     cmp-long v3, p2, v6
@@ -2977,10 +3037,10 @@
 
     if-lez p4, :cond_2
 
-    .line 6975
+    .line 6986
     sub-long v0, p7, p2
 
-    .line 6976
+    .line 6987
     .local v0, "duration":J
     const/4 v2, 0x0
 
@@ -2988,7 +3048,7 @@
     :goto_0
     if-ge v2, p4, :cond_1
 
-    .line 6977
+    .line 6988
     const/4 v3, 0x0
 
     const/4 v6, 0x1
@@ -2999,28 +3059,28 @@
 
     invoke-static {p0, v3, p0, v6, v7}, Ljava/lang/System;->arraycopy([JI[JII)V
 
-    .line 6978
+    .line 6989
     sub-int v3, p4, v2
 
     int-to-long v6, v3
 
     div-long v4, v0, v6
 
-    .line 6979
+    .line 6990
     .local v4, "thisDuration":J
     sub-long/2addr v0, v4
 
-    .line 6980
+    .line 6991
     const-wide v6, 0xffffffffffL
 
     cmp-long v3, v4, v6
 
     if-lez v3, :cond_0
 
-    .line 6981
+    .line 6992
     const-wide v4, 0xffffffffffL
 
-    .line 6983
+    .line 6994
     :cond_0
     const/4 v3, 0x0
 
@@ -3028,25 +3088,25 @@
 
     aput-wide v6, p0, v3
 
-    .line 6976
+    .line 6987
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 6985
+    .line 6996
     .end local v4    # "thisDuration":J
     :cond_1
     add-int/2addr p1, p4
 
-    .line 6986
+    .line 6997
     array-length v3, p0
 
     if-le p1, v3, :cond_2
 
-    .line 6987
+    .line 6998
     array-length p1, p0
 
-    .line 6990
+    .line 7001
     .end local v0    # "duration":J
     .end local v2    # "i":I
     :cond_2
@@ -3058,7 +3118,7 @@
     .param p1, "h"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2046
+    .line 2047
     iget-byte v0, p1, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
     shl-int/lit8 v0, v0, 0x19
@@ -3091,10 +3151,10 @@
     .param p1, "h"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2052
+    .line 2053
     const/4 v0, 0x0
 
-    .line 2053
+    .line 2054
     .local v0, "plugType":I
     iget-byte v1, p1, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
@@ -3102,10 +3162,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 2054
+    .line 2055
     const/4 v0, 0x1
 
-    .line 2060
+    .line 2061
     :cond_0
     :goto_0
     iget-byte v1, p1, Landroid/os/BatteryStats$HistoryItem;->batteryStatus:B
@@ -3138,7 +3198,7 @@
 
     return v1
 
-    .line 2055
+    .line 2056
     :cond_1
     iget-byte v1, p1, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
@@ -3146,12 +3206,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 2056
+    .line 2057
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 2057
+    .line 2058
     :cond_2
     iget-byte v1, p1, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
@@ -3159,7 +3219,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 2058
+    .line 2059
     const/4 v0, 0x3
 
     goto :goto_0
@@ -3171,21 +3231,21 @@
     .param p2, "numSteps"    # I
 
     .prologue
-    .line 7312
+    .line 7328
     if-gtz p2, :cond_0
 
-    .line 7313
+    .line 7329
     const-wide/16 v4, -0x1
 
-    .line 7319
+    .line 7335
     :goto_0
     return-wide v4
 
-    .line 7315
+    .line 7331
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 7316
+    .line 7332
     .local v2, "total":J
     const/4 v0, 0x0
 
@@ -3193,7 +3253,7 @@
     :goto_1
     if-ge v0, p2, :cond_1
 
-    .line 7317
+    .line 7333
     aget-wide v4, p1, v0
 
     const-wide v6, 0xffffffffffL
@@ -3202,12 +3262,12 @@
 
     add-long/2addr v2, v4
 
-    .line 7316
+    .line 7332
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 7319
+    .line 7335
     :cond_1
     int-to-long v4, p2
 
@@ -3224,30 +3284,30 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3931
+    .line 3932
     invoke-static {p0, p1}, Lcom/android/internal/util/ArrayUtils;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3932
+    .line 3933
     .local v0, "index":I
     if-ltz v0, :cond_2
 
-    .line 3933
+    .line 3934
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x1
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 3934
+    .line 3935
     .local v1, "newArray":[Ljava/lang/String;
     if-lez v0, :cond_0
 
-    .line 3935
+    .line 3936
     invoke-static {p0, v3, v1, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3937
+    .line 3938
     :cond_0
     array-length v2, p0
 
@@ -3255,7 +3315,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 3938
+    .line 3939
     add-int/lit8 v2, v0, 0x1
 
     array-length v3, p0
@@ -3266,7 +3326,7 @@
 
     invoke-static {p0, v2, v1, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3942
+    .line 3943
     .end local v1    # "newArray":[Ljava/lang/String;
     :cond_1
     :goto_0
@@ -3286,20 +3346,20 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3241
+    .line 3242
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
     if-ne v0, v1, :cond_0
 
-    .line 3244
+    .line 3245
     if-ne p1, v1, :cond_0
 
     if-lez p2, :cond_0
 
-    .line 3246
+    .line 3247
     const/4 p1, 0x0
 
-    .line 3250
+    .line 3251
     :cond_0
     return p1
 .end method
@@ -3308,19 +3368,19 @@
     .locals 3
 
     .prologue
-    .line 1865
+    .line 1866
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-eqz v1, :cond_0
 
-    .line 1866
+    .line 1867
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothHeadset;->getConnectedDevices()Ljava/util/List;
 
     move-result-object v0
 
-    .line 1867
+    .line 1868
     .local v0, "deviceList":Ljava/util/List;, "Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -3328,7 +3388,7 @@
 
     if-lez v1, :cond_0
 
-    .line 1868
+    .line 1869
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     const/4 v1, 0x0
@@ -3343,7 +3403,7 @@
 
     move-result v1
 
-    .line 1871
+    .line 1872
     .end local v0    # "deviceList":Ljava/util/List;, "Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     :goto_0
     return v1
@@ -3362,19 +3422,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3921
+    .line 3922
     invoke-static {p0, p1}, Lcom/android/internal/util/ArrayUtils;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v1
 
     if-ltz v1, :cond_0
 
-    .line 3927
+    .line 3928
     .end local p0    # "array":[Ljava/lang/String;
     :goto_0
     return-object p0
 
-    .line 3924
+    .line 3925
     .restart local p0    # "array":[Ljava/lang/String;
     :cond_0
     array-length v1, p0
@@ -3383,20 +3443,20 @@
 
     new-array v0, v1, [Ljava/lang/String;
 
-    .line 3925
+    .line 3926
     .local v0, "newArray":[Ljava/lang/String;
     array-length v1, p0
 
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3926
+    .line 3927
     array-length v1, p0
 
     aput-object p1, v0, v1
 
     move-object p0, v0
 
-    .line 3927
+    .line 3928
     goto :goto_0
 .end method
 
@@ -3406,7 +3466,7 @@
     .param p3, "uptimeMs"    # J
 
     .prologue
-    .line 6765
+    .line 6776
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -3415,7 +3475,7 @@
 
     if-ge v6, v1, :cond_3
 
-    .line 6766
+    .line 6777
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
     if-nez v1, :cond_1
@@ -3424,13 +3484,13 @@
 
     if-ne v6, v1, :cond_1
 
-    .line 6765
+    .line 6776
     :cond_0
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 6770
+    .line 6781
     :cond_1
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
@@ -3438,11 +3498,11 @@
 
     move-result-object v0
 
-    .line 6771
+    .line 6782
     .local v0, "active":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     if-eqz v0, :cond_0
 
-    .line 6774
+    .line 6785
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -3465,7 +3525,7 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 6775
+    .line 6786
     .local v9, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3473,7 +3533,7 @@
 
     check-cast v12, Landroid/util/SparseIntArray;
 
-    .line 6776
+    .line 6787
     .local v12, "uids":Landroid/util/SparseIntArray;
     const/4 v11, 0x0
 
@@ -3485,7 +3545,7 @@
 
     if-ge v11, v1, :cond_2
 
-    .line 6777
+    .line 6788
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -3504,12 +3564,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 6776
+    .line 6787
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 6782
+    .line 6793
     .end local v0    # "active":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     .end local v9    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     .end local v10    # "i$":Ljava/util/Iterator;
@@ -3536,10 +3596,10 @@
     .end annotation
 
     .prologue
-    .line 1759
+    .line 1760
     const/16 v21, 0x0
 
-    .line 1763
+    .line 1764
     .local v21, "numUpdatedWlNames":I
     const/4 v15, 0x0
 
@@ -3563,18 +3623,18 @@
 
     goto :goto_0
 
-    .line 1764
+    .line 1765
     :cond_0
     add-int/lit8 v4, v15, 0x1
 
     .local v4, "endIndex":I
     move v3, v4
 
-    .line 1766
+    .line 1767
     .local v3, "startIndex":I
     monitor-enter p0
 
-    .line 1767
+    .line 1768
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3582,24 +3642,28 @@
 
     move-object/from16 v19, v0
 
-    .line 1769
+    .line 1770
     .local v19, "m":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
-    sget v2, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v2
 
     add-int/lit8 v2, v2, 0x1
 
-    sput v2, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    move-object/from16 v0, p0
 
-    .line 1770
+    invoke-virtual {v0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->setKernelWakelockUpdateVersion(I)V
+
+    .line 1771
     :goto_1
     move/from16 v0, p2
 
     if-ge v4, v0, :cond_a
 
-    .line 1771
+    .line 1772
     move v4, v3
 
-    .line 1772
+    .line 1773
     :goto_2
     move/from16 v0, p2
 
@@ -3615,40 +3679,40 @@
 
     if-eqz v2, :cond_1
 
-    .line 1773
+    .line 1774
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1774
+    .line 1775
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
-    .line 1777
+    .line 1778
     add-int/lit8 v2, p2, -0x1
 
     if-lt v4, v2, :cond_2
 
-    .line 1778
+    .line 1779
     monitor-exit p0
 
-    .line 1835
+    .line 1836
     :goto_3
     return-object v19
 
-    .line 1781
+    .line 1782
     :cond_2
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksName:[Ljava/lang/String;
 
-    .line 1782
+    .line 1783
     .local v6, "nameStringArray":[Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/android/internal/os/BatteryStatsImpl;->mProcWakelocksData:[J
 
-    .line 1786
+    .line 1787
     .local v7, "wlData":[J
     move/from16 v17, v3
 
@@ -3658,7 +3722,7 @@
 
     if-ge v0, v4, :cond_4
 
-    .line 1787
+    .line 1788
     aget-byte v2, p1, v17
 
     and-int/lit16 v2, v2, 0x80
@@ -3669,13 +3733,13 @@
 
     aput-byte v2, p1, v17
 
-    .line 1786
+    .line 1787
     :cond_3
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_4
 
-    .line 1789
+    .line 1790
     :cond_4
     if-eqz p3, :cond_6
 
@@ -3690,13 +3754,13 @@
 
     move-result v22
 
-    .line 1794
+    .line 1795
     .local v22, "parsed":Z
     const/4 v2, 0x0
 
     aget-object v20, v6, v2
 
-    .line 1795
+    .line 1796
     .local v20, "name":Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -3704,11 +3768,11 @@
 
     long-to-int v11, v8
 
-    .line 1797
+    .line 1798
     .local v11, "count":I
     if-eqz p3, :cond_7
 
-    .line 1799
+    .line 1800
     const/4 v2, 0x2
 
     aget-wide v8, v7, v2
@@ -3717,7 +3781,7 @@
 
     mul-long v12, v8, v24
 
-    .line 1805
+    .line 1806
     .local v12, "totalTime":J
     :goto_6
     if-eqz v22, :cond_5
@@ -3728,17 +3792,19 @@
 
     if-lez v2, :cond_5
 
-    .line 1806
+    .line 1807
     invoke-interface/range {v19 .. v20}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_8
 
-    .line 1807
+    .line 1808
     new-instance v9, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
 
-    sget v14, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v14
 
     move-object/from16 v10, p0
 
@@ -3750,18 +3816,18 @@
 
     invoke-interface {v0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1809
+    .line 1810
     add-int/lit8 v21, v21, 0x1
 
-    .line 1823
+    .line 1824
     :cond_5
     :goto_7
     move v3, v4
 
-    .line 1824
+    .line 1825
     goto :goto_1
 
-    .line 1789
+    .line 1790
     .end local v11    # "count":I
     .end local v12    # "totalTime":J
     .end local v20    # "name":Ljava/lang/String;
@@ -3771,7 +3837,7 @@
 
     goto :goto_5
 
-    .line 1802
+    .line 1803
     .restart local v11    # "count":I
     .restart local v20    # "name":Ljava/lang/String;
     .restart local v22    # "parsed":Z
@@ -3791,7 +3857,7 @@
     .restart local v12    # "totalTime":J
     goto :goto_6
 
-    .line 1811
+    .line 1812
     :cond_8
     invoke-interface/range {v19 .. v20}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3799,17 +3865,19 @@
 
     check-cast v18, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
 
-    .line 1812
+    .line 1813
     .local v18, "kwlStats":Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
     move-object/from16 v0, v18
 
     iget v2, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mVersion:I
 
-    sget v5, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v5
 
     if-ne v2, v5, :cond_9
 
-    .line 1813
+    .line 1814
     move-object/from16 v0, v18
 
     iget v2, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mCount:I
@@ -3820,7 +3888,7 @@
 
     iput v2, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mCount:I
 
-    .line 1814
+    .line 1815
     move-object/from16 v0, v18
 
     iget-wide v8, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mTotalTime:J
@@ -3833,7 +3901,7 @@
 
     goto :goto_7
 
-    .line 1836
+    .line 1837
     .end local v6    # "nameStringArray":[Ljava/lang/String;
     .end local v7    # "wlData":[J
     .end local v11    # "count":I
@@ -3852,7 +3920,7 @@
 
     throw v2
 
-    .line 1816
+    .line 1817
     .restart local v6    # "nameStringArray":[Ljava/lang/String;
     .restart local v7    # "wlData":[J
     .restart local v11    # "count":I
@@ -3868,24 +3936,26 @@
 
     iput v11, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mCount:I
 
-    .line 1817
+    .line 1818
     move-object/from16 v0, v18
 
     iput-wide v12, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mTotalTime:J
 
-    .line 1818
-    sget v2, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    .line 1819
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v2
 
     move-object/from16 v0, v18
 
     iput v2, v0, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mVersion:I
 
-    .line 1819
+    .line 1820
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_7
 
-    .line 1826
+    .line 1827
     .end local v6    # "nameStringArray":[Ljava/lang/String;
     .end local v7    # "wlData":[J
     .end local v11    # "count":I
@@ -3903,7 +3973,7 @@
 
     if-eq v2, v0, :cond_c
 
-    .line 1828
+    .line 1829
     invoke-interface/range {v19 .. v19}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v2
@@ -3912,7 +3982,7 @@
 
     move-result-object v16
 
-    .line 1829
+    .line 1830
     .local v16, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
     :cond_b
     :goto_8
@@ -3922,7 +3992,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 1830
+    .line 1831
     invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -3931,16 +4001,18 @@
 
     iget v2, v2, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mVersion:I
 
-    sget v5, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v5
 
     if-eq v2, v5, :cond_b
 
-    .line 1831
+    .line 1832
     invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->remove()V
 
     goto :goto_8
 
-    .line 1835
+    .line 1836
     .end local v16    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
     :cond_c
     monitor-exit p0
@@ -3956,24 +4028,24 @@
     .param p2, "tag"    # Landroid/os/BatteryStats$HistoryTag;
 
     .prologue
-    .line 1908
+    .line 1909
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
     iput-object v0, p2, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 1909
+    .line 1910
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryUids:[I
 
     aget v0, v0, p1
 
     iput v0, p2, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 1910
+    .line 1911
     iput p1, p2, Landroid/os/BatteryStats$HistoryTag;->poolIdx:I
 
-    .line 1911
+    .line 1912
     return-void
 .end method
 
@@ -3993,16 +4065,16 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1717
+    .line 1718
     const/16 v8, 0x2000
 
     new-array v0, v8, [B
 
-    .line 1719
+    .line 1720
     .local v0, "buffer":[B
     const/4 v6, 0x0
 
-    .line 1723
+    .line 1724
     .local v6, "wakeup_sources":Z
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
@@ -4014,7 +4086,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 1733
+    .line 1734
     .local v4, "is":Ljava/io/FileInputStream;
     :goto_0
     :try_start_1
@@ -4022,31 +4094,31 @@
 
     move-result v5
 
-    .line 1734
+    .line 1735
     .local v5, "len":I
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 1739
+    .line 1740
     if-lez v5, :cond_0
 
-    .line 1741
+    .line 1742
     const/4 v3, 0x0
 
     .local v3, "i":I
     :goto_1
     if-ge v3, v5, :cond_0
 
-    .line 1742
+    .line 1743
     aget-byte v7, v0, v3
 
     if-nez v7, :cond_1
 
-    .line 1743
+    .line 1744
     move v5, v3
 
-    .line 1749
+    .line 1750
     .end local v3    # "i":I
     :cond_0
     invoke-direct {p0, v0, v5, v6}, Lcom/android/internal/os/BatteryStatsImpl;->parseProcWakelocks([BIZ)Ljava/util/Map;
@@ -4058,11 +4130,11 @@
     :goto_2
     return-object v7
 
-    .line 1724
+    .line 1725
     :catch_0
     move-exception v1
 
-    .line 1726
+    .line 1727
     .local v1, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     new-instance v4, Ljava/io/FileInputStream;
@@ -4074,32 +4146,32 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1727
+    .line 1728
     .restart local v4    # "is":Ljava/io/FileInputStream;
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 1728
+    .line 1729
     .end local v4    # "is":Ljava/io/FileInputStream;
     :catch_1
     move-exception v2
 
-    .line 1729
+    .line 1730
     .local v2, "e2":Ljava/io/FileNotFoundException;
     goto :goto_2
 
-    .line 1735
+    .line 1736
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .end local v2    # "e2":Ljava/io/FileNotFoundException;
     :catch_2
     move-exception v1
 
-    .line 1736
+    .line 1737
     .local v1, "e":Ljava/io/IOException;
     goto :goto_2
 
-    .line 1741
+    .line 1742
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v3    # "i":I
     .restart local v4    # "is":Ljava/io/FileInputStream;
@@ -4117,23 +4189,23 @@
     .param p5, "uptimeMs"    # J
 
     .prologue
-    .line 6948
+    .line 6959
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
     if-eqz v0, :cond_0
 
-    .line 6949
+    .line 6960
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iput-wide p1, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
-    .line 6950
+    .line 6961
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
-    .line 6951
+    .line 6962
     iput-wide p3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
 
-    .line 6952
+    .line 6963
     const/4 v6, 0x5
 
     iget-object v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -4143,61 +4215,6 @@
     move-wide v2, p3
 
     move-wide v4, p5
-
-    invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
-
-    .line 6954
-    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
-
-    .line 6956
-    :cond_0
-    return-void
-.end method
-
-.method private recordShutdownLocked(JJ)V
-    .locals 9
-    .param p1, "elapsedRealtimeMs"    # J
-    .param p3, "uptimeMs"    # J
-
-    .prologue
-    .line 6959
-    iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
-
-    if-eqz v0, :cond_0
-
-    .line 6960
-    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
-
-    .line 6961
-    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
-
-    iget-wide v0, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
-
-    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
-
-    .line 6962
-    iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
-
-    .line 6963
-    const/16 v6, 0x8
-
-    iget-object v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
-
-    move-object v1, p0
-
-    move-wide v2, p1
-
-    move-wide v4, p3
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
 
@@ -4213,13 +4230,68 @@
     return-void
 .end method
 
+.method private recordShutdownLocked(JJ)V
+    .locals 9
+    .param p1, "elapsedRealtimeMs"    # J
+    .param p3, "uptimeMs"    # J
+
+    .prologue
+    .line 6970
+    iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
+
+    if-eqz v0, :cond_0
+
+    .line 6971
+    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
+
+    .line 6972
+    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
+
+    iget-wide v0, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
+
+    iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
+
+    .line 6973
+    iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
+
+    .line 6974
+    const/16 v6, 0x8
+
+    iget-object v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
+
+    move-object v1, p0
+
+    move-wide v2, p1
+
+    move-wide v4, p3
+
+    invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
+
+    .line 6976
+    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
+
+    .line 6978
+    :cond_0
+    return-void
+.end method
+
 .method private requestWakelockCpuUpdate()V
     .locals 4
 
     .prologue
     const/4 v2, 0x1
 
-    .line 2629
+    .line 2630
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->hasMessages(I)Z
@@ -4228,14 +4300,14 @@
 
     if-nez v1, :cond_0
 
-    .line 2630
+    .line 2631
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 2631
+    .line 2632
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
@@ -4243,7 +4315,7 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2633
+    .line 2634
     .end local v0    # "m":Landroid/os/Message;
     :cond_0
     return-void
@@ -4261,10 +4333,10 @@
 
     const/4 v8, 0x0
 
-    .line 6693
+    .line 6704
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
-    .line 6694
+    .line 6705
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -4279,86 +4351,86 @@
 
     invoke-virtual {p0, v4, v5, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl;->initTimes(JJ)V
 
-    .line 6695
+    .line 6706
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6696
+    .line 6707
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v9, :cond_0
 
-    .line 6697
+    .line 6708
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6696
+    .line 6707
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 6699
+    .line 6710
     :cond_0
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6700
+    .line 6711
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6701
+    .line 6712
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6702
+    .line 6713
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6703
+    .line 6714
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6704
+    .line 6715
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6705
+    .line 6716
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v9, :cond_1
 
-    .line 6706
+    .line 6717
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6705
+    .line 6716
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 6708
+    .line 6719
     :cond_1
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6709
+    .line 6720
     const/4 v0, 0x0
 
     :goto_2
@@ -4366,81 +4438,81 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 6710
+    .line 6721
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6709
+    .line 6720
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 6712
+    .line 6723
     :cond_2
     const/4 v0, 0x0
 
     :goto_3
     if-ge v0, v10, :cond_3
 
-    .line 6713
+    .line 6724
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->reset(Z)V
 
-    .line 6714
+    .line 6725
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->reset(Z)V
 
-    .line 6712
+    .line 6723
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 6716
+    .line 6727
     :cond_3
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6717
+    .line 6728
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6718
+    .line 6729
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->reset(Z)V
 
-    .line 6719
+    .line 6730
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->reset(Z)V
 
-    .line 6720
+    .line 6731
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->reset(Z)V
 
-    .line 6721
+    .line 6732
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6722
+    .line 6733
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6723
+    .line 6734
     const/4 v0, 0x0
 
     :goto_4
@@ -4448,19 +4520,19 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 6724
+    .line 6735
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6723
+    .line 6734
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 6726
+    .line 6737
     :cond_4
     const/4 v0, 0x0
 
@@ -4469,62 +4541,62 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 6727
+    .line 6738
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6726
+    .line 6737
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
-    .line 6729
+    .line 6740
     :cond_5
     const/4 v0, 0x0
 
     :goto_6
     if-ge v0, v9, :cond_6
 
-    .line 6730
+    .line 6741
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6729
+    .line 6740
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 6732
+    .line 6743
     :cond_6
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6733
+    .line 6744
     const/4 v0, 0x0
 
     :goto_7
     if-ge v0, v10, :cond_7
 
-    .line 6734
+    .line 6745
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v0
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->reset(Z)Z
 
-    .line 6733
+    .line 6744
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
-    .line 6736
+    .line 6747
     :cond_7
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggedNumConnectivityChange:I
 
@@ -4532,7 +4604,7 @@
 
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
-    .line 6738
+    .line 6749
     const/4 v0, 0x0
 
     :goto_8
@@ -4544,7 +4616,7 @@
 
     if-ge v0, v3, :cond_9
 
-    .line 6739
+    .line 6750
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -4559,7 +4631,7 @@
 
     if-eqz v3, :cond_8
 
-    .line 6740
+    .line 6751
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -4570,16 +4642,16 @@
 
     invoke-virtual {v3, v4}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 6741
+    .line 6752
     add-int/lit8 v0, v0, -0x1
 
-    .line 6738
+    .line 6749
     :cond_8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_8
 
-    .line 6745
+    .line 6756
     :cond_9
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
@@ -4589,7 +4661,7 @@
 
     if-lez v3, :cond_b
 
-    .line 6746
+    .line 6757
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4614,7 +4686,7 @@
 
     check-cast v2, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 6747
+    .line 6758
     .local v2, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -4622,14 +4694,14 @@
 
     goto :goto_9
 
-    .line 6749
+    .line 6760
     .end local v2    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_a
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 6752
+    .line 6763
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_b
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
@@ -4640,7 +4712,7 @@
 
     if-lez v3, :cond_d
 
-    .line 6753
+    .line 6764
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4665,7 +4737,7 @@
 
     check-cast v2, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 6754
+    .line 6765
     .restart local v2    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -4673,22 +4745,22 @@
 
     goto :goto_a
 
-    .line 6756
+    .line 6767
     .end local v2    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_c
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 6759
+    .line 6770
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_d
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->initDischarge()V
 
-    .line 6761
+    .line 6772
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->clearHistoryLocked()V
 
-    .line 6762
+    .line 6773
     return-void
 .end method
 
@@ -4699,12 +4771,12 @@
     .param p5, "reset"    # Z
 
     .prologue
-    .line 6933
+    .line 6944
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 6934
+    .line 6945
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -4713,17 +4785,17 @@
 
     iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
-    .line 6935
+    .line 6946
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-wide v0, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
-    .line 6936
+    .line 6947
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
 
-    .line 6937
+    .line 6948
     if-eqz p5, :cond_1
 
     const/4 v6, 0x7
@@ -4739,24 +4811,24 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 6940
+    .line 6951
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     const-wide/16 v2, 0x0
 
     iput-wide v2, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
-    .line 6941
+    .line 6952
     if-eqz p5, :cond_0
 
-    .line 6942
+    .line 6953
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl;->initActiveHistoryEventsLocked(JJ)V
 
-    .line 6944
+    .line 6955
     :cond_0
     return-void
 
-    .line 6937
+    .line 6948
     :cond_1
     const/4 v6, 0x5
 
@@ -4772,61 +4844,61 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 3254
+    .line 3255
     const/4 v3, 0x0
 
-    .line 3255
+    .line 3256
     .local v3, "scanning":Z
     const/4 v2, 0x0
 
-    .line 3257
+    .line 3258
     .local v2, "newHistory":Z
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
-    .line 3258
+    .line 3259
     iput p2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSimStateRaw:I
 
-    .line 3259
+    .line 3260
     iput p3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
-    .line 3261
+    .line 3262
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3262
+    .line 3263
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3264
+    .line 3265
     .local v4, "uptime":J
     if-ne p2, v7, :cond_0
 
-    .line 3267
+    .line 3268
     if-ne p1, v7, :cond_0
 
     if-lez p3, :cond_0
 
-    .line 3269
+    .line 3270
     const/4 p1, 0x0
 
-    .line 3274
+    .line 3275
     :cond_0
     const/4 v6, 0x3
 
     if-ne p1, v6, :cond_8
 
-    .line 3275
+    .line 3276
     const/4 p3, -0x1
 
-    .line 3295
+    .line 3296
     :cond_1
     :goto_0
     if-nez v3, :cond_2
 
-    .line 3297
+    .line 3298
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->isRunningLocked()Z
@@ -4835,7 +4907,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 3298
+    .line 3299
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -4846,21 +4918,21 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3301
+    .line 3302
     const/4 v2, 0x1
 
-    .line 3302
+    .line 3303
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3306
+    .line 3307
     :cond_2
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
     if-eq v6, p1, :cond_3
 
-    .line 3307
+    .line 3308
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -4875,24 +4947,24 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3311
+    .line 3312
     const/4 v2, 0x1
 
-    .line 3312
+    .line 3313
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceState:I
 
-    .line 3315
+    .line 3316
     :cond_3
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
     if-eq v6, p3, :cond_6
 
-    .line 3316
+    .line 3317
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
     if-ltz v6, :cond_4
 
-    .line 3317
+    .line 3318
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
@@ -4901,11 +4973,11 @@
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3320
+    .line 3321
     :cond_4
     if-ltz p3, :cond_9
 
-    .line 3321
+    .line 3322
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v6, v6, p3
@@ -4916,14 +4988,14 @@
 
     if-nez v6, :cond_5
 
-    .line 3322
+    .line 3323
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v6, v6, p3
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3324
+    .line 3325
     :cond_5
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -4939,38 +5011,38 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3328
+    .line 3329
     const/4 v2, 0x1
 
-    .line 3332
+    .line 3333
     :goto_1
     iput p3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBin:I
 
-    .line 3335
+    .line 3336
     :cond_6
     if-eqz v2, :cond_7
 
-    .line 3336
+    .line 3337
     invoke-virtual {p0, v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3338
+    .line 3339
     :cond_7
     return-void
 
-    .line 3278
+    .line 3279
     :cond_8
     if-eqz p1, :cond_1
 
-    .line 3283
+    .line 3284
     if-ne p1, v7, :cond_1
 
-    .line 3284
+    .line 3285
     const/4 v3, 0x1
 
-    .line 3285
+    .line 3286
     const/4 p3, 0x0
 
-    .line 3286
+    .line 3287
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->isRunningLocked()Z
@@ -4979,7 +5051,7 @@
 
     if-nez v6, :cond_1
 
-    .line 3287
+    .line 3288
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -4990,17 +5062,17 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3288
+    .line 3289
     const/4 v2, 0x1
 
-    .line 3291
+    .line 3292
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
     goto/16 :goto_0
 
-    .line 3330
+    .line 3331
     :cond_9
     const/4 v6, -0x1
 
@@ -5015,7 +5087,7 @@
     .param p2, "elapsedRealtimeMs"    # J
 
     .prologue
-    .line 7145
+    .line 7161
     const-string v3, "net.qtaguid_enabled"
 
     const/4 v4, 0x0
@@ -5026,12 +5098,12 @@
 
     if-nez v3, :cond_1
 
-    .line 7260
+    .line 7276
     :cond_0
     :goto_0
     return-void
 
-    .line 7147
+    .line 7163
     :cond_1
     and-int/lit8 v3, p1, 0x1
 
@@ -5045,14 +5117,14 @@
 
     if-lez v3, :cond_6
 
-    .line 7149
+    .line 7165
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
     move-object/from16 v16, v0
 
-    .line 7151
+    .line 7167
     .local v16, "last":Landroid/net/NetworkStats;
     :try_start_0
     move-object/from16 v0, p0
@@ -5077,7 +5149,7 @@
 
     move-result-object v20
 
-    .line 7158
+    .line 7174
     .local v20, "snapshot":Landroid/net/NetworkStats;
     move-object/from16 v0, v20
 
@@ -5085,21 +5157,21 @@
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mCurMobileSnapshot:Landroid/net/NetworkStats;
 
-    .line 7159
+    .line 7175
     move-object/from16 v0, v16
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastMobileSnapshot:Landroid/net/NetworkStats;
 
-    .line 7161
+    .line 7177
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v3, :cond_6
 
-    .line 7162
+    .line 7178
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -5116,13 +5188,13 @@
 
     move-result-object v12
 
-    .line 7164
+    .line 7180
     .local v12, "delta":Landroid/net/NetworkStats;
     move-object/from16 v0, p0
 
     iput-object v12, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStats:Landroid/net/NetworkStats;
 
-    .line 7166
+    .line 7182
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -5133,19 +5205,19 @@
 
     move-result-wide v18
 
-    .line 7168
+    .line 7184
     .local v18, "radioTime":J
     invoke-virtual {v12}, Landroid/net/NetworkStats;->getTotalPackets()J
 
     move-result-wide v22
 
-    .line 7170
+    .line 7186
     .local v22, "totalPackets":J
     invoke-virtual {v12}, Landroid/net/NetworkStats;->size()I
 
     move-result v17
 
-    .line 7171
+    .line 7187
     .local v17, "size":I
     const/4 v15, 0x0
 
@@ -5155,7 +5227,7 @@
 
     if-ge v15, v0, :cond_5
 
-    .line 7172
+    .line 7188
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStatsEntry:Landroid/net/NetworkStats$Entry;
@@ -5164,7 +5236,7 @@
 
     move-result-object v14
 
-    .line 7174
+    .line 7190
     .local v14, "entry":Landroid/net/NetworkStats$Entry;
     iget-wide v4, v14, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
@@ -5182,14 +5254,14 @@
 
     if-nez v3, :cond_3
 
-    .line 7171
+    .line 7187
     :cond_2
     :goto_2
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 7153
+    .line 7169
     .end local v12    # "delta":Landroid/net/NetworkStats;
     .end local v14    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v15    # "i":I
@@ -5200,7 +5272,7 @@
     :catch_0
     move-exception v13
 
-    .line 7154
+    .line 7170
     .local v13, "e":Ljava/io/IOException;
     const-string v3, "BatteryStatsImpl"
 
@@ -5210,7 +5282,7 @@
 
     goto/16 :goto_0
 
-    .line 7176
+    .line 7192
     .end local v13    # "e":Ljava/io/IOException;
     .restart local v12    # "delta":Landroid/net/NetworkStats;
     .restart local v14    # "entry":Landroid/net/NetworkStats$Entry;
@@ -5234,7 +5306,7 @@
 
     move-result-object v2
 
-    .line 7177
+    .line 7193
     .local v2, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     const/4 v3, 0x0
 
@@ -5244,7 +5316,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteNetworkActivityLocked(IJJ)V
 
-    .line 7179
+    .line 7195
     const/4 v3, 0x1
 
     iget-wide v4, v14, Landroid/net/NetworkStats$Entry;->txBytes:J
@@ -5253,37 +5325,37 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteNetworkActivityLocked(IJJ)V
 
-    .line 7182
+    .line 7198
     const-wide/16 v4, 0x0
 
     cmp-long v3, v18, v4
 
     if-lez v3, :cond_4
 
-    .line 7184
+    .line 7200
     iget-wide v4, v14, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
     iget-wide v6, v14, Landroid/net/NetworkStats$Entry;->txPackets:J
 
     add-long v8, v4, v6
 
-    .line 7185
+    .line 7201
     .local v8, "appPackets":J
     mul-long v4, v18, v8
 
     div-long v10, v4, v22
 
-    .line 7186
+    .line 7202
     .local v10, "appRadioTime":J
     invoke-virtual {v2, v10, v11}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteMobileRadioActiveTimeLocked(J)V
 
-    .line 7189
+    .line 7205
     sub-long v18, v18, v10
 
-    .line 7190
+    .line 7206
     sub-long v22, v22, v8
 
-    .line 7193
+    .line 7209
     .end local v8    # "appPackets":J
     .end local v10    # "appRadioTime":J
     :cond_4
@@ -5299,7 +5371,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7195
+    .line 7211
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5312,7 +5384,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7197
+    .line 7213
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5325,7 +5397,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7199
+    .line 7215
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5340,7 +5412,7 @@
 
     goto :goto_2
 
-    .line 7203
+    .line 7219
     .end local v2    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     .end local v14    # "entry":Landroid/net/NetworkStats$Entry;
     :cond_5
@@ -5350,7 +5422,7 @@
 
     if-lez v3, :cond_6
 
-    .line 7205
+    .line 7221
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5359,7 +5431,7 @@
 
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7206
+    .line 7222
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5368,7 +5440,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7211
+    .line 7227
     .end local v12    # "delta":Landroid/net/NetworkStats;
     .end local v15    # "i":I
     .end local v16    # "last":Landroid/net/NetworkStats;
@@ -5389,14 +5461,14 @@
 
     if-lez v3, :cond_0
 
-    .line 7213
+    .line 7229
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
 
     move-object/from16 v16, v0
 
-    .line 7215
+    .line 7231
     .restart local v16    # "last":Landroid/net/NetworkStats;
     :try_start_1
     move-object/from16 v0, p0
@@ -5421,7 +5493,7 @@
 
     move-result-object v20
 
-    .line 7222
+    .line 7238
     .restart local v20    # "snapshot":Landroid/net/NetworkStats;
     move-object/from16 v0, v20
 
@@ -5429,21 +5501,21 @@
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mCurWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 7223
+    .line 7239
     move-object/from16 v0, v16
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastWifiSnapshot:Landroid/net/NetworkStats;
 
-    .line 7225
+    .line 7241
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v3, :cond_0
 
-    .line 7226
+    .line 7242
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -5460,18 +5532,18 @@
 
     move-result-object v12
 
-    .line 7228
+    .line 7244
     .restart local v12    # "delta":Landroid/net/NetworkStats;
     move-object/from16 v0, p0
 
     iput-object v12, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStats:Landroid/net/NetworkStats;
 
-    .line 7230
+    .line 7246
     invoke-virtual {v12}, Landroid/net/NetworkStats;->size()I
 
     move-result v17
 
-    .line 7231
+    .line 7247
     .restart local v17    # "size":I
     const/4 v15, 0x0
 
@@ -5481,7 +5553,7 @@
 
     if-ge v15, v0, :cond_0
 
-    .line 7232
+    .line 7248
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTmpNetworkStatsEntry:Landroid/net/NetworkStats$Entry;
@@ -5490,7 +5562,7 @@
 
     move-result-object v14
 
-    .line 7241
+    .line 7257
     .restart local v14    # "entry":Landroid/net/NetworkStats$Entry;
     iget-wide v4, v14, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
@@ -5508,14 +5580,14 @@
 
     if-nez v3, :cond_8
 
-    .line 7231
+    .line 7247
     :cond_7
     :goto_4
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_3
 
-    .line 7217
+    .line 7233
     .end local v12    # "delta":Landroid/net/NetworkStats;
     .end local v14    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v15    # "i":I
@@ -5524,7 +5596,7 @@
     :catch_1
     move-exception v13
 
-    .line 7218
+    .line 7234
     .restart local v13    # "e":Ljava/io/IOException;
     const-string v3, "BatteryStatsImpl"
 
@@ -5534,7 +5606,7 @@
 
     goto/16 :goto_0
 
-    .line 7243
+    .line 7259
     .end local v13    # "e":Ljava/io/IOException;
     .restart local v12    # "delta":Landroid/net/NetworkStats;
     .restart local v14    # "entry":Landroid/net/NetworkStats$Entry;
@@ -5556,7 +5628,7 @@
 
     move-result-object v2
 
-    .line 7244
+    .line 7260
     .restart local v2    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     const/4 v3, 0x2
 
@@ -5566,7 +5638,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteNetworkActivityLocked(IJJ)V
 
-    .line 7246
+    .line 7262
     const/4 v3, 0x3
 
     iget-wide v4, v14, Landroid/net/NetworkStats$Entry;->txBytes:J
@@ -5575,7 +5647,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteNetworkActivityLocked(IJJ)V
 
-    .line 7249
+    .line 7265
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5588,7 +5660,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7251
+    .line 7267
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5601,7 +5673,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7253
+    .line 7269
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5614,7 +5686,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->addCountLocked(J)V
 
-    .line 7255
+    .line 7271
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -5635,7 +5707,7 @@
     .param p1, "tag"    # Landroid/os/BatteryStats$HistoryTag;
 
     .prologue
-    .line 1891
+    .line 1892
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5644,39 +5716,39 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1893
+    .line 1894
     .local v1, "idxObj":Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
-    .line 1894
+    .line 1895
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 1904
+    .line 1905
     .local v0, "idx":I
     :goto_0
     return v0
 
-    .line 1896
+    .line 1897
     .end local v0    # "idx":I
     :cond_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 1897
+    .line 1898
     .restart local v0    # "idx":I
     new-instance v2, Landroid/os/BatteryStats$HistoryTag;
 
     invoke-direct {v2}, Landroid/os/BatteryStats$HistoryTag;-><init>()V
 
-    .line 1898
+    .line 1899
     .local v2, "key":Landroid/os/BatteryStats$HistoryTag;
     invoke-virtual {v2, p1}, Landroid/os/BatteryStats$HistoryTag;->setTo(Landroid/os/BatteryStats$HistoryTag;)V
 
-    .line 1899
+    .line 1900
     iput v0, p1, Landroid/os/BatteryStats$HistoryTag;->poolIdx:I
 
-    .line 1900
+    .line 1901
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5685,14 +5757,14 @@
 
     invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1901
+    .line 1902
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
     add-int/lit8 v3, v3, 0x1
 
     iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 1902
+    .line 1903
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
     iget-object v4, v2, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
@@ -5719,7 +5791,7 @@
     .param p5, "cur"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2191
+    .line 2192
     move-object/from16 v0, p0
 
     iget-boolean v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
@@ -5732,12 +5804,12 @@
 
     if-nez v5, :cond_1
 
-    .line 2286
+    .line 2287
     :cond_0
     :goto_0
     return-void
 
-    .line 2195
+    .line 2196
     :cond_1
     move-object/from16 v0, p0
 
@@ -5753,7 +5825,7 @@
 
     sub-long v16, v6, v8
 
-    .line 2196
+    .line 2197
     .local v16, "timeDiff":J
     move-object/from16 v0, p0
 
@@ -5767,7 +5839,7 @@
 
     xor-int v12, v5, v6
 
-    .line 2197
+    .line 2198
     .local v12, "diffStates":I
     move-object/from16 v0, p0
 
@@ -5781,7 +5853,7 @@
 
     xor-int v13, v5, v6
 
-    .line 2198
+    .line 2199
     .local v13, "diffStates2":I
     move-object/from16 v0, p0
 
@@ -5797,7 +5869,7 @@
 
     xor-int v14, v5, v6
 
-    .line 2199
+    .line 2200
     .local v14, "lastDiffStates":I
     move-object/from16 v0, p0
 
@@ -5813,7 +5885,7 @@
 
     xor-int v15, v5, v6
 
-    .line 2205
+    .line 2206
     .local v15, "lastDiffStates2":I
     move-object/from16 v0, p0
 
@@ -5960,7 +6032,7 @@
 
     if-ne v5, v6, :cond_8
 
-    .line 2223
+    .line 2224
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -5971,7 +6043,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Parcel;->setDataSize(I)V
 
-    .line 2224
+    .line 2225
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -5982,14 +6054,14 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 2225
+    .line 2226
     const/4 v5, -0x1
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 2226
+    .line 2227
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
@@ -6002,7 +6074,7 @@
 
     sub-long p1, v6, v8
 
-    .line 2230
+    .line 2231
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
@@ -6011,7 +6083,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 2231
+    .line 2232
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->localWakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6020,7 +6092,7 @@
 
     iput-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2232
+    .line 2233
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6033,7 +6105,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/BatteryStats$HistoryTag;->setTo(Landroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2237
+    .line 2238
     :cond_5
     move-object/from16 v0, p0
 
@@ -6043,7 +6115,7 @@
 
     if-eqz v5, :cond_6
 
-    .line 2238
+    .line 2239
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->localWakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6052,7 +6124,7 @@
 
     iput-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2239
+    .line 2240
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6065,7 +6137,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/BatteryStats$HistoryTag;->setTo(Landroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2244
+    .line 2245
     :cond_6
     move-object/from16 v0, p0
 
@@ -6075,7 +6147,7 @@
 
     if-eqz v5, :cond_7
 
-    .line 2245
+    .line 2246
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
@@ -6086,7 +6158,7 @@
 
     iput v5, v0, Landroid/os/BatteryStats$HistoryItem;->eventCode:I
 
-    .line 2246
+    .line 2247
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->localEventTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6095,7 +6167,7 @@
 
     iput-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2247
+    .line 2248
     move-object/from16 v0, p5
 
     iget-object v5, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
@@ -6108,7 +6180,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/BatteryStats$HistoryTag;->setTo(Landroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2249
+    .line 2250
     :cond_7
     move-object/from16 v0, p0
 
@@ -6120,7 +6192,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/BatteryStats$HistoryItem;->setTo(Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2252
+    .line 2253
     :cond_8
     move-object/from16 v0, p0
 
@@ -6130,27 +6202,27 @@
 
     move-result v4
 
-    .line 2253
+    .line 2254
     .local v4, "dataSize":I
     const/high16 v5, 0x40000
 
     if-lt v4, v5, :cond_b
 
-    .line 2254
+    .line 2255
     move-object/from16 v0, p0
 
     iget-boolean v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
     if-nez v5, :cond_9
 
-    .line 2255
+    .line 2256
     const/4 v5, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
-    .line 2256
+    .line 2257
     const/4 v10, 0x0
 
     move-object/from16 v5, p0
@@ -6163,7 +6235,7 @@
 
     invoke-direct/range {v5 .. v11}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2257
+    .line 2258
     const/4 v10, 0x6
 
     move-object/from16 v5, p0
@@ -6178,7 +6250,7 @@
 
     goto/16 :goto_0
 
-    .line 2265
+    .line 2266
     :cond_9
     move-object/from16 v0, p0
 
@@ -6232,7 +6304,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 2274
+    .line 2275
     :cond_a
     const/4 v10, 0x0
 
@@ -6248,11 +6320,11 @@
 
     goto/16 :goto_0
 
-    .line 2278
+    .line 2279
     :cond_b
     if-nez v4, :cond_c
 
-    .line 2280
+    .line 2281
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -6261,7 +6333,7 @@
 
     iput-wide v6, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
-    .line 2281
+    .line 2282
     move-object/from16 v0, p5
 
     iget-wide v6, v0, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
@@ -6270,14 +6342,14 @@
 
     iput-wide v6, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
-    .line 2282
+    .line 2283
     move-wide/from16 v0, p1
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
 
-    .line 2283
+    .line 2284
     const/4 v10, 0x7
 
     move-object/from16 v5, p0
@@ -6290,7 +6362,7 @@
 
     invoke-direct/range {v5 .. v11}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJBLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2285
+    .line 2286
     :cond_c
     const/4 v10, 0x0
 
@@ -6316,12 +6388,12 @@
     .param p7, "uid"    # I
 
     .prologue
-    .line 2394
+    .line 2395
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iput p5, v0, Landroid/os/BatteryStats$HistoryItem;->eventCode:I
 
-    .line 2395
+    .line 2396
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -6330,24 +6402,24 @@
 
     iput-object v1, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2396
+    .line 2397
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v0, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
     iput-object p6, v0, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 2397
+    .line 2398
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v0, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
     iput p7, v0, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 2398
+    .line 2399
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2399
+    .line 2400
     return-void
 .end method
 
@@ -6358,10 +6430,10 @@
     .param p5, "cur"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2331
+    .line 2332
     invoke-virtual/range {p0 .. p5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryBufferLocked(JJLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2334
+    .line 2335
     return-void
 .end method
 
@@ -6371,7 +6443,7 @@
     .param p3, "uptimeMs"    # J
 
     .prologue
-    .line 2311
+    .line 2312
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
@@ -6382,14 +6454,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 2312
+    .line 2313
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
     sub-long v16, p1, v4
 
-    .line 2313
+    .line 2314
     .local v16, "diffElapsed":J
     move-object/from16 v0, p0
 
@@ -6397,7 +6469,7 @@
 
     sub-long v18, p3, v4
 
-    .line 2314
+    .line 2315
     .local v18, "diffUptime":J
     const-wide/16 v4, 0x14
 
@@ -6407,12 +6479,12 @@
 
     if-gez v4, :cond_0
 
-    .line 2315
+    .line 2316
     sub-long v4, v16, v18
 
     sub-long v6, p1, v4
 
-    .line 2316
+    .line 2317
     .local v6, "wakeElapsedTime":J
     move-object/from16 v0, p0
 
@@ -6424,7 +6496,7 @@
 
     invoke-virtual {v4, v5}, Landroid/os/BatteryStats$HistoryItem;->setTo(Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2317
+    .line 2318
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -6433,7 +6505,7 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2318
+    .line 2319
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -6442,7 +6514,7 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2319
+    .line 2320
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -6451,7 +6523,7 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->eventCode:I
 
-    .line 2320
+    .line 2321
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -6464,7 +6536,7 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2321
+    .line 2322
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryAddTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -6475,7 +6547,7 @@
 
     invoke-virtual/range {v5 .. v10}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordInnerLocked(JJLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2324
+    .line 2325
     .end local v6    # "wakeElapsedTime":J
     .end local v16    # "diffElapsed":J
     .end local v18    # "diffUptime":J
@@ -6492,21 +6564,21 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2325
+    .line 2326
     move-wide/from16 v0, p1
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
-    .line 2326
+    .line 2327
     move-wide/from16 v0, p3
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryUptime:J
 
-    .line 2327
+    .line 2328
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -6519,7 +6591,7 @@
 
     invoke-virtual/range {v9 .. v14}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordInnerLocked(JJLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2328
+    .line 2329
     return-void
 .end method
 
@@ -6531,19 +6603,19 @@
     .param p6, "cur"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2402
+    .line 2403
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCache:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2403
+    .line 2404
     .local v0, "rec":Landroid/os/BatteryStats$HistoryItem;
     if-eqz v0, :cond_0
 
-    .line 2404
+    .line 2405
     iget-object v1, v0, Landroid/os/BatteryStats$HistoryItem;->next:Landroid/os/BatteryStats$HistoryItem;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCache:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2408
+    .line 2409
     :goto_0
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
@@ -6551,13 +6623,13 @@
 
     invoke-virtual {v0, v2, v3, p5, p6}, Landroid/os/BatteryStats$HistoryItem;->setTo(JBLandroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2410
+    .line 2411
     invoke-virtual {p0, v0}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 2411
+    .line 2412
     return-void
 
-    .line 2406
+    .line 2407
     :cond_0
     new-instance v0, Landroid/os/BatteryStats$HistoryItem;
 
@@ -6573,41 +6645,41 @@
     .param p1, "rec"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2414
+    .line 2415
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryItems:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryItems:I
 
-    .line 2415
+    .line 2416
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/os/BatteryStats$HistoryItem;->next:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2416
+    .line 2417
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryEnd:Landroid/os/BatteryStats$HistoryItem;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastEnd:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2417
+    .line 2418
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryEnd:Landroid/os/BatteryStats$HistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 2418
+    .line 2419
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryEnd:Landroid/os/BatteryStats$HistoryItem;
 
     iput-object p1, v0, Landroid/os/BatteryStats$HistoryItem;->next:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2419
+    .line 2420
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryEnd:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 2423
+    .line 2424
     :goto_0
     return-void
 
-    .line 2421
+    .line 2422
     :cond_0
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryEnd:Landroid/os/BatteryStats$HistoryItem;
 
@@ -6622,12 +6694,12 @@
     .param p2, "appUid"    # I
 
     .prologue
-    .line 2483
+    .line 2484
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 2484
+    .line 2485
     return-void
 .end method
 
@@ -6636,17 +6708,17 @@
     .param p1, "uptimeMs"    # J
 
     .prologue
-    .line 2800
+    .line 2801
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 2801
+    .line 2802
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupUptimeMs:J
 
     sub-long v0, p1, v4
 
-    .line 2802
+    .line 2803
     .local v0, "deltaUptime":J
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
@@ -6654,25 +6726,25 @@
 
     move-result-object v2
 
-    .line 2803
+    .line 2804
     .local v2, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->addCurrentReportedCount(I)V
 
-    .line 2804
+    .line 2805
     const-wide/16 v4, 0x3e8
 
     mul-long/2addr v4, v0
 
     invoke-virtual {v2, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->addCurrentReportedTotalTime(J)V
 
-    .line 2805
+    .line 2806
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
-    .line 2807
+    .line 2808
     .end local v0    # "deltaUptime":J
     .end local v2    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_0
@@ -6687,71 +6759,71 @@
 
     const-wide/16 v2, 0x0
 
-    .line 2436
+    .line 2437
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
-    .line 2437
+    .line 2438
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
 
-    .line 2438
+    .line 2439
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryElapsedRealtime:J
 
-    .line 2439
+    .line 2440
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mTrackRunningHistoryUptime:J
-
-    .line 2441
-    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
-
-    invoke-virtual {v0, v4}, Landroid/os/Parcel;->setDataSize(I)V
 
     .line 2442
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
-    invoke-virtual {v0, v4}, Landroid/os/Parcel;->setDataPosition(I)V
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->setDataSize(I)V
 
     .line 2443
+    iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    .line 2444
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     const/high16 v1, 0x20000
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataCapacity(I)V
 
-    .line 2444
+    .line 2445
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-virtual {v0}, Landroid/os/BatteryStats$HistoryItem;->clear()V
 
-    .line 2445
+    .line 2446
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-virtual {v0}, Landroid/os/BatteryStats$HistoryItem;->clear()V
 
-    .line 2446
+    .line 2447
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 2447
+    .line 2448
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 2448
+    .line 2449
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 2449
+    .line 2450
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBufferLastPos:I
 
-    .line 2450
+    .line 2451
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryOverflow:Z
 
-    .line 2451
+    .line 2452
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
-    .line 2452
+    .line 2453
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
 
-    .line 2453
+    .line 2454
     return-void
 .end method
 
@@ -6759,14 +6831,14 @@
     .locals 2
 
     .prologue
-    .line 2187
+    .line 2188
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     const/4 v1, -0x1
 
     iput-byte v1, v0, Landroid/os/BatteryStats$HistoryItem;->cmd:B
 
-    .line 2188
+    .line 2189
     return-void
 .end method
 
@@ -6774,41 +6846,41 @@
     .locals 5
 
     .prologue
-    .line 7689
+    .line 7717
     monitor-enter p0
 
-    .line 7690
+    .line 7718
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7691
+    .line 7719
     .local v1, "next":Landroid/os/Parcel;
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7692
+    .line 7720
     if-nez v1, :cond_0
 
-    .line 7693
+    .line 7721
     monitor-exit p0
 
-    .line 7713
+    .line 7741
     :goto_0
     return-void
 
-    .line 7696
+    .line 7724
     :cond_0
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 7697
+    .line 7725
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7700
+    .line 7728
     :try_start_1
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -6820,7 +6892,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 7701
+    .line 7729
     .local v2, "stream":Ljava/io/FileOutputStream;
     invoke-virtual {v1}, Landroid/os/Parcel;->marshall()[B
 
@@ -6828,16 +6900,16 @@
 
     invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 7702
+    .line 7730
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 7703
+    .line 7731
     invoke-static {v2}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    .line 7704
+    .line 7732
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    .line 7705
+    .line 7733
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     invoke-virtual {v3}, Lcom/android/internal/util/JournaledFile;->commit()V
@@ -6845,17 +6917,17 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 7710
+    .line 7738
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 7711
+    .line 7739
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     goto :goto_0
 
-    .line 7697
+    .line 7725
     .end local v1    # "next":Landroid/os/Parcel;
     .end local v2    # "stream":Ljava/io/FileOutputStream;
     :catchall_0
@@ -6868,12 +6940,12 @@
 
     throw v3
 
-    .line 7706
+    .line 7734
     .restart local v1    # "next":Landroid/os/Parcel;
     :catch_0
     move-exception v0
 
-    .line 7707
+    .line 7735
     .local v0, "e":Ljava/io/IOException;
     :try_start_3
     const-string v3, "BatteryStats"
@@ -6882,31 +6954,31 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 7708
+    .line 7736
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     invoke-virtual {v3}, Lcom/android/internal/util/JournaledFile;->rollback()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 7710
+    .line 7738
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 7711
+    .line 7739
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     goto :goto_0
 
-    .line 7710
+    .line 7738
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 7711
+    .line 7739
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWriteLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -6920,7 +6992,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7297
+    .line 7313
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeRealtime(JI)J
@@ -6936,7 +7008,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7307
+    .line 7323
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeRealtime(JI)J
@@ -6952,7 +7024,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7302
+    .line 7318
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeUptime(JI)J
@@ -6969,17 +7041,17 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 7350
+    .line 7366
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     if-nez v4, :cond_1
 
-    .line 7373
+    .line 7389
     :cond_0
     :goto_0
     return-wide v2
 
-    .line 7366
+    .line 7382
     :cond_1
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
@@ -6987,7 +7059,7 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 7369
+    .line 7385
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
 
     iget v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
@@ -6996,7 +7068,7 @@
 
     move-result-wide v0
 
-    .line 7370
+    .line 7386
     .local v0, "msPerLevel":J
     const-wide/16 v4, 0x0
 
@@ -7004,7 +7076,7 @@
 
     if-lez v4, :cond_0
 
-    .line 7373
+    .line 7389
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
     int-to-long v2, v2
@@ -7024,7 +7096,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7292
+    .line 7308
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->computeUptime(JI)J
@@ -7041,17 +7113,17 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 7386
+    .line 7402
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     if-eqz v4, :cond_1
 
-    .line 7410
+    .line 7426
     :cond_0
     :goto_0
     return-wide v2
 
-    .line 7403
+    .line 7419
     :cond_1
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
@@ -7059,7 +7131,7 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 7406
+    .line 7422
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
 
     iget v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
@@ -7068,7 +7140,7 @@
 
     move-result-wide v0
 
-    .line 7407
+    .line 7423
     .local v0, "msPerLevel":J
     const-wide/16 v4, 0x0
 
@@ -7076,7 +7148,7 @@
 
     if-lez v4, :cond_0
 
-    .line 7410
+    .line 7426
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
     rsub-int/lit8 v2, v2, 0x64
@@ -7098,16 +7170,16 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7282
+    .line 7298
     packed-switch p3, :pswitch_data_0
 
-    .line 7287
+    .line 7303
     const-wide/16 v0, 0x0
 
     :goto_0
     return-wide v0
 
-    .line 7283
+    .line 7299
     :pswitch_0
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtime:J
 
@@ -7119,7 +7191,7 @@
 
     goto :goto_0
 
-    .line 7284
+    .line 7300
     :pswitch_1
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtimeStart:J
 
@@ -7127,7 +7199,7 @@
 
     goto :goto_0
 
-    .line 7285
+    .line 7301
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -7139,7 +7211,7 @@
 
     goto :goto_0
 
-    .line 7282
+    .line 7298
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -7154,16 +7226,16 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 7272
+    .line 7288
     packed-switch p3, :pswitch_data_0
 
-    .line 7277
+    .line 7293
     const-wide/16 v0, 0x0
 
     :goto_0
     return-wide v0
 
-    .line 7273
+    .line 7289
     :pswitch_0
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUptime:J
 
@@ -7175,7 +7247,7 @@
 
     goto :goto_0
 
-    .line 7274
+    .line 7290
     :pswitch_1
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUptimeStart:J
 
@@ -7183,7 +7255,7 @@
 
     goto :goto_0
 
-    .line 7275
+    .line 7291
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -7195,7 +7267,7 @@
 
     goto :goto_0
 
-    .line 7272
+    .line 7288
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -7208,7 +7280,7 @@
     .locals 1
 
     .prologue
-    .line 7756
+    .line 7784
     const/4 v0, 0x0
 
     return v0
@@ -7219,7 +7291,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 7594
+    .line 7622
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -7234,11 +7306,11 @@
 
     check-cast v20, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 7595
+    .line 7623
     .local v20, "wifiUid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v20, :cond_5
 
-    .line 7596
+    .line 7624
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v22
@@ -7257,7 +7329,7 @@
 
     move-result-wide v14
 
-    .line 7597
+    .line 7625
     .local v14, "uSecTime":J
     move-object/from16 v0, v20
 
@@ -7275,7 +7347,7 @@
     :goto_0
     if-ltz v5, :cond_5
 
-    .line 7598
+    .line 7626
     move-object/from16 v0, v20
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStats:Landroid/util/ArrayMap;
@@ -7290,7 +7362,7 @@
 
     check-cast v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
-    .line 7599
+    .line 7627
     .local v6, "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     move-object/from16 v0, p0
 
@@ -7300,7 +7372,7 @@
 
     move-result-wide v12
 
-    .line 7600
+    .line 7628
     .local v12, "totalRunningTime":J
     const/4 v4, 0x0
 
@@ -7320,7 +7392,7 @@
 
     if-ge v4, v0, :cond_4
 
-    .line 7601
+    .line 7629
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -7335,7 +7407,7 @@
 
     check-cast v9, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 7602
+    .line 7630
     .local v9, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     iget v0, v9, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mUid:I
 
@@ -7349,14 +7421,14 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 7603
+    .line 7631
     move/from16 v0, p1
 
     invoke-virtual {v9, v14, v15, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getWifiRunningTime(JI)J
 
     move-result-wide v18
 
-    .line 7604
+    .line 7632
     .local v18, "uidRunningTime":J
     const-wide/16 v22, 0x0
 
@@ -7364,7 +7436,7 @@
 
     if-lez v21, :cond_3
 
-    .line 7605
+    .line 7633
     const-string v21, "*wifi*"
 
     move-object/from16 v0, v21
@@ -7373,7 +7445,7 @@
 
     move-result-object v16
 
-    .line 7606
+    .line 7634
     .local v16, "uidProc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     move/from16 v0, p1
 
@@ -7381,13 +7453,13 @@
 
     move-result-wide v10
 
-    .line 7607
+    .line 7635
     .local v10, "time":J
     mul-long v22, v10, v18
 
     div-long v10, v22, v12
 
-    .line 7608
+    .line 7636
     move-object/from16 v0, v16
 
     iget-wide v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mUserTime:J
@@ -7402,7 +7474,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mUserTime:J
 
-    .line 7609
+    .line 7637
     iget-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mUserTime:J
 
     move-wide/from16 v22, v0
@@ -7413,19 +7485,19 @@
 
     iput-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mUserTime:J
 
-    .line 7610
+    .line 7638
     move/from16 v0, p1
 
     invoke-virtual {v6, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->getSystemTime(I)J
 
     move-result-wide v10
 
-    .line 7611
+    .line 7639
     mul-long v22, v10, v18
 
     div-long v10, v22, v12
 
-    .line 7612
+    .line 7640
     move-object/from16 v0, v16
 
     iget-wide v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
@@ -7440,7 +7512,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
 
-    .line 7613
+    .line 7641
     iget-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
 
     move-wide/from16 v22, v0
@@ -7451,19 +7523,19 @@
 
     iput-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
 
-    .line 7614
+    .line 7642
     move/from16 v0, p1
 
     invoke-virtual {v6, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->getForegroundTime(I)J
 
     move-result-wide v10
 
-    .line 7615
+    .line 7643
     mul-long v22, v10, v18
 
     div-long v10, v22, v12
 
-    .line 7616
+    .line 7644
     move-object/from16 v0, v16
 
     iget-wide v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
@@ -7478,7 +7550,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
 
-    .line 7617
+    .line 7645
     iget-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
 
     move-wide/from16 v22, v0
@@ -7489,7 +7561,7 @@
 
     iput-wide v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
 
-    .line 7618
+    .line 7646
     const/4 v7, 0x0
 
     .local v7, "sb":I
@@ -7508,18 +7580,18 @@
 
     if-ge v7, v0, :cond_2
 
-    .line 7619
+    .line 7647
     iget-object v0, v6, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
 
     move-object/from16 v21, v0
 
     aget-object v8, v21, v7
 
-    .line 7620
+    .line 7648
     .local v8, "sc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
     if-eqz v8, :cond_1
 
-    .line 7621
+    .line 7649
     move/from16 v0, p1
 
     invoke-virtual {v8, v0}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->getCountLocked(I)I
@@ -7530,12 +7602,12 @@
 
     int-to-long v10, v0
 
-    .line 7622
+    .line 7650
     mul-long v22, v10, v18
 
     div-long v10, v22, v12
 
-    .line 7623
+    .line 7651
     move-object/from16 v0, v16
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -7544,11 +7616,11 @@
 
     aget-object v17, v21, v7
 
-    .line 7624
+    .line 7652
     .local v17, "uidSc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
     if-nez v17, :cond_0
 
-    .line 7625
+    .line 7653
     new-instance v17, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
 
     .end local v17    # "uidSc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -7564,7 +7636,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;)V
 
-    .line 7626
+    .line 7654
     .restart local v17    # "uidSc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
     move-object/from16 v0, v16
 
@@ -7574,7 +7646,7 @@
 
     aput-object v17, v21, v7
 
-    .line 7628
+    .line 7656
     :cond_0
     move-object/from16 v0, v17
 
@@ -7588,7 +7660,7 @@
 
     invoke-virtual/range {v21 .. v22}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    .line 7629
+    .line 7657
     iget-object v0, v8, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-object/from16 v21, v0
@@ -7605,19 +7677,19 @@
 
     invoke-virtual/range {v21 .. v22}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    .line 7618
+    .line 7646
     .end local v17    # "uidSc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
     :cond_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 7632
+    .line 7660
     .end local v8    # "sc":Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
     :cond_2
     sub-long v12, v12, v18
 
-    .line 7600
+    .line 7628
     .end local v7    # "sb":I
     .end local v10    # "time":J
     .end local v16    # "uidProc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
@@ -7627,14 +7699,14 @@
 
     goto/16 :goto_1
 
-    .line 7597
+    .line 7625
     .end local v9    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_4
     add-int/lit8 v5, v5, -0x1
 
     goto/16 :goto_0
 
-    .line 7638
+    .line 7666
     .end local v4    # "i":I
     .end local v5    # "ip":I
     .end local v6    # "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
@@ -7653,10 +7725,10 @@
     .param p5, "histStart"    # J
 
     .prologue
-    .line 8843
+    .line 8871
     invoke-super/range {p0 .. p6}, Landroid/os/BatteryStats;->dumpLocked(Landroid/content/Context;Ljava/io/PrintWriter;IIJ)V
 
-    .line 8844
+    .line 8872
     return-void
 .end method
 
@@ -7668,21 +7740,21 @@
     .param p4, "cpuSpeedTimes"    # [J
 
     .prologue
-    .line 2857
+    .line 2858
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 2858
+    .line 2859
     .local v1, "N":I
     if-eqz p1, :cond_5
 
-    .line 2859
+    .line 2860
     const/4 v7, 0x0
 
-    .line 2860
+    .line 2861
     .local v7, "num":I
     const/4 v4, 0x0
 
@@ -7690,7 +7762,7 @@
     :goto_0
     if-ge v4, v1, :cond_1
 
-    .line 2861
+    .line 2862
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7699,16 +7771,16 @@
 
     check-cast v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 2862
+    .line 2863
     .local v9, "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     iget-boolean v11, v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
     if-eqz v11, :cond_0
 
-    .line 2863
+    .line 2864
     iget-object v10, v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mUid:Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2866
+    .line 2867
     .local v10, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v10, :cond_0
 
@@ -7718,28 +7790,28 @@
 
     if-eq v11, v12, :cond_0
 
-    .line 2867
+    .line 2868
     add-int/lit8 v7, v7, 0x1
 
-    .line 2860
+    .line 2861
     .end local v10    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 2871
+    .line 2872
     .end local v9    # "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     :cond_1
     if-eqz v7, :cond_3
 
-    .line 2872
+    .line 2873
     const/4 v4, 0x0
 
     :goto_1
     if-ge v4, v1, :cond_3
 
-    .line 2873
+    .line 2874
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7748,16 +7820,16 @@
 
     check-cast v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 2874
+    .line 2875
     .restart local v9    # "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     iget-boolean v11, v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
     if-eqz v11, :cond_2
 
-    .line 2875
+    .line 2876
     iget-object v10, v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mUid:Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2876
+    .line 2877
     .restart local v10    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v10, :cond_2
 
@@ -7767,40 +7839,40 @@
 
     if-eq v11, v12, :cond_2
 
-    .line 2877
+    .line 2878
     div-int v6, p2, v7
 
-    .line 2878
+    .line 2879
     .local v6, "myUTime":I
     div-int v5, p3, v7
 
-    .line 2879
+    .line 2880
     .local v5, "mySTime":I
     sub-int/2addr p2, v6
 
-    .line 2880
+    .line 2881
     sub-int p3, p3, v5
 
-    .line 2881
+    .line 2882
     add-int/lit8 v7, v7, -0x1
 
-    .line 2882
+    .line 2883
     const-string v11, "*wakelock*"
 
     invoke-virtual {v10, v11}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
     move-result-object v8
 
-    .line 2883
+    .line 2884
     .local v8, "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     invoke-virtual {v8, v6, v5}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->addCpuTimeLocked(II)V
 
-    .line 2884
+    .line 2885
     move-object/from16 v0, p4
 
     invoke-virtual {v8, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->addSpeedStepTimes([J)V
 
-    .line 2872
+    .line 2873
     .end local v5    # "mySTime":I
     .end local v6    # "myUTime":I
     .end local v8    # "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
@@ -7810,14 +7882,14 @@
 
     goto :goto_1
 
-    .line 2891
+    .line 2892
     .end local v9    # "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     :cond_3
     if-nez p2, :cond_4
 
     if-eqz p3, :cond_5
 
-    .line 2892
+    .line 2893
     :cond_4
     const/16 v11, 0x3e8
 
@@ -7825,29 +7897,29 @@
 
     move-result-object v10
 
-    .line 2893
+    .line 2894
     .restart local v10    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v10, :cond_5
 
-    .line 2894
+    .line 2895
     const-string v11, "*lost*"
 
     invoke-virtual {v10, v11}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
     move-result-object v8
 
-    .line 2895
+    .line 2896
     .restart local v8    # "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     move/from16 v0, p3
 
     invoke-virtual {v8, p2, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->addCpuTimeLocked(II)V
 
-    .line 2896
+    .line 2897
     move-object/from16 v0, p4
 
     invoke-virtual {v8, v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->addSpeedStepTimes([J)V
 
-    .line 2901
+    .line 2902
     .end local v4    # "i":I
     .end local v7    # "num":I
     .end local v8    # "proc":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
@@ -7859,13 +7931,13 @@
 
     move-result v2
 
-    .line 2902
+    .line 2903
     .local v2, "NL":I
     if-eq v1, v2, :cond_6
 
     const/4 v3, 0x1
 
-    .line 2903
+    .line 2904
     .local v3, "diff":Z
     :goto_2
     const/4 v4, 0x0
@@ -7876,7 +7948,7 @@
 
     if-nez v3, :cond_8
 
-    .line 2904
+    .line 2905
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7896,12 +7968,12 @@
     :goto_4
     or-int/2addr v3, v11
 
-    .line 2903
+    .line 2904
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 2902
+    .line 2903
     .end local v3    # "diff":Z
     .end local v4    # "i":I
     :cond_6
@@ -7909,7 +7981,7 @@
 
     goto :goto_2
 
-    .line 2904
+    .line 2905
     .restart local v3    # "diff":Z
     .restart local v4    # "i":I
     :cond_7
@@ -7917,17 +7989,17 @@
 
     goto :goto_4
 
-    .line 2906
+    .line 2907
     :cond_8
     if-nez v3, :cond_9
 
-    .line 2907
+    .line 2908
     const/4 v4, 0x0
 
     :goto_5
     if-ge v4, v2, :cond_b
 
-    .line 2908
+    .line 2909
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7940,19 +8012,19 @@
 
     iput-boolean v12, v11, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
-    .line 2907
+    .line 2908
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_5
 
-    .line 2913
+    .line 2914
     :cond_9
     const/4 v4, 0x0
 
     :goto_6
     if-ge v4, v2, :cond_a
 
-    .line 2914
+    .line 2915
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7965,24 +8037,24 @@
 
     iput-boolean v12, v11, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
-    .line 2913
+    .line 2914
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_6
 
-    .line 2916
+    .line 2917
     :cond_a
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->clear()V
 
-    .line 2917
+    .line 2918
     const/4 v4, 0x0
 
     :goto_7
     if-ge v4, v1, :cond_b
 
-    .line 2918
+    .line 2919
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7991,23 +8063,23 @@
 
     check-cast v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 2919
+    .line 2920
     .restart local v9    # "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     const/4 v11, 0x1
 
     iput-boolean v11, v9, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
-    .line 2920
+    .line 2921
     iget-object v11, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2917
+    .line 2918
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_7
 
-    .line 2922
+    .line 2923
     .end local v9    # "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     :cond_b
     return-void
@@ -8017,12 +8089,12 @@
     .locals 2
 
     .prologue
-    .line 6619
+    .line 6630
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIteratingHistory:Z
 
-    .line 6620
+    .line 6631
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -8033,12 +8105,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 6621
+    .line 6632
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
-    .line 6622
+    .line 6633
     return-void
 .end method
 
@@ -8046,12 +8118,12 @@
     .locals 2
 
     .prologue
-    .line 6538
+    .line 6549
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIteratingHistory:Z
 
-    .line 6539
+    .line 6550
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -8062,12 +8134,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 6540
+    .line 6551
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryIterator:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 6541
+    .line 6552
     return-void
 .end method
 
@@ -8075,7 +8147,7 @@
     .locals 3
 
     .prologue
-    .line 7263
+    .line 7279
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getBatteryUptimeLocked()J
 
     move-result-wide v0
@@ -8093,7 +8165,7 @@
     .locals 4
 
     .prologue
-    .line 7267
+    .line 7283
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -8116,7 +8188,7 @@
     .param p1, "curTime"    # J
 
     .prologue
-    .line 7432
+    .line 7448
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getRealtime(J)J
@@ -8131,7 +8203,7 @@
     .param p1, "curTime"    # J
 
     .prologue
-    .line 7427
+    .line 7443
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->getUptime(J)J
@@ -8145,7 +8217,7 @@
     .locals 6
 
     .prologue
-    .line 7422
+    .line 7438
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -8169,7 +8241,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4099
+    .line 4100
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -8183,27 +8255,27 @@
     .locals 2
 
     .prologue
-    .line 1875
+    .line 1876
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1876
+    .line 1877
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingCount:I
 
-    .line 1880
+    .line 1881
     :goto_0
     return v0
 
-    .line 1877
+    .line 1878
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-eqz v0, :cond_1
 
-    .line 1878
+    .line 1879
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCurrentBluetoothPingCount()I
 
     move-result v0
@@ -8214,7 +8286,7 @@
 
     goto :goto_0
 
-    .line 1880
+    .line 1881
     :cond_1
     const/4 v0, 0x0
 
@@ -8227,7 +8299,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4109
+    .line 4110
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -8246,7 +8318,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4104
+    .line 4105
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -8262,7 +8334,7 @@
     .locals 1
 
     .prologue
-    .line 7418
+    .line 7434
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
 
     return-object v0
@@ -8272,7 +8344,7 @@
     .locals 1
 
     .prologue
-    .line 7536
+    .line 7552
     sget v0, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
 
     return v0
@@ -8283,26 +8355,26 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 7481
+    .line 7497
     if-nez p1, :cond_1
 
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getHighDischargeAmountSinceCharge()I
 
     move-result v0
 
-    .line 7484
+    .line 7500
     .local v0, "dischargeAmount":I
     :goto_0
     if-gez v0, :cond_0
 
-    .line 7485
+    .line 7501
     const/4 v0, 0x0
 
-    .line 7487
+    .line 7503
     :cond_0
     return v0
 
-    .line 7481
+    .line 7497
     .end local v0    # "dischargeAmount":I
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getDischargeStartLevel()I
@@ -8322,14 +8394,14 @@
     .locals 3
 
     .prologue
-    .line 7513
+    .line 7529
     monitor-enter p0
 
-    .line 7514
+    .line 7530
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 7515
+    .line 7531
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8347,7 +8419,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7517
+    .line 7533
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8356,13 +8428,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7519
+    .line 7535
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7520
+    .line 7536
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8378,14 +8450,14 @@
     .locals 3
 
     .prologue
-    .line 7524
+    .line 7540
     monitor-enter p0
 
-    .line 7525
+    .line 7541
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
 
-    .line 7526
+    .line 7542
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8403,7 +8475,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7528
+    .line 7544
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8412,13 +8484,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7530
+    .line 7546
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7531
+    .line 7547
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8434,14 +8506,14 @@
     .locals 3
 
     .prologue
-    .line 7491
+    .line 7507
     monitor-enter p0
 
-    .line 7492
+    .line 7508
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 7493
+    .line 7509
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8459,7 +8531,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7495
+    .line 7511
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8468,13 +8540,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7497
+    .line 7513
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7498
+    .line 7514
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8490,14 +8562,14 @@
     .locals 3
 
     .prologue
-    .line 7502
+    .line 7518
     monitor-enter p0
 
-    .line 7503
+    .line 7519
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
-    .line 7504
+    .line 7520
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8515,7 +8587,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7506
+    .line 7522
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8524,13 +8596,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7508
+    .line 7524
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7509
+    .line 7525
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8546,10 +8618,10 @@
     .locals 1
 
     .prologue
-    .line 7448
+    .line 7464
     monitor-enter p0
 
-    .line 7449
+    .line 7465
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getDischargeCurrentLevelLocked()I
 
@@ -8559,7 +8631,7 @@
 
     return v0
 
-    .line 7450
+    .line 7466
     :catchall_0
     move-exception v0
 
@@ -8574,7 +8646,7 @@
     .locals 1
 
     .prologue
-    .line 7454
+    .line 7470
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
     return v0
@@ -8584,10 +8656,10 @@
     .locals 1
 
     .prologue
-    .line 7437
+    .line 7453
     monitor-enter p0
 
-    .line 7438
+    .line 7454
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getDischargeStartLevelLocked()I
 
@@ -8597,7 +8669,7 @@
 
     return v0
 
-    .line 7439
+    .line 7455
     :catchall_0
     move-exception v0
 
@@ -8612,7 +8684,7 @@
     .locals 1
 
     .prologue
-    .line 7443
+    .line 7459
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
     return v0
@@ -8622,7 +8694,7 @@
     .locals 1
 
     .prologue
-    .line 7381
+    .line 7397
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
 
     return-object v0
@@ -8632,7 +8704,7 @@
     .locals 1
 
     .prologue
-    .line 4160
+    .line 4161
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
 
     return-object v0
@@ -8643,7 +8715,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4117
+    .line 4118
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
@@ -8661,7 +8733,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4113
+    .line 4114
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -8677,7 +8749,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4065
+    .line 4066
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -8691,14 +8763,14 @@
     .locals 3
 
     .prologue
-    .line 7470
+    .line 7486
     monitor-enter p0
 
-    .line 7471
+    .line 7487
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
 
-    .line 7472
+    .line 7488
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8710,7 +8782,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7473
+    .line 7489
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8719,13 +8791,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7475
+    .line 7491
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7476
+    .line 7492
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8741,7 +8813,7 @@
     .locals 2
 
     .prologue
-    .line 6626
+    .line 6637
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
     return-wide v0
@@ -8751,7 +8823,7 @@
     .locals 2
 
     .prologue
-    .line 6583
+    .line 6594
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
     array-length v0, v0
@@ -8771,7 +8843,7 @@
     .locals 1
 
     .prologue
-    .line 6576
+    .line 6587
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
     array-length v0, v0
@@ -8784,7 +8856,7 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 6588
+    .line 6599
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
     aget-object v0, v0, p1
@@ -8797,7 +8869,7 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 6593
+    .line 6604
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryUids:[I
 
     aget v0, v0, p1
@@ -8809,7 +8881,7 @@
     .locals 1
 
     .prologue
-    .line 6544
+    .line 6555
     const/high16 v0, 0x40000
 
     return v0
@@ -8819,7 +8891,7 @@
     .locals 1
 
     .prologue
-    .line 6548
+    .line 6559
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v0}, Landroid/os/Parcel;->dataSize()I
@@ -8835,7 +8907,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 3985
+    .line 3986
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -8849,7 +8921,7 @@
     .locals 1
 
     .prologue
-    .line 4168
+    .line 4169
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     return v0
@@ -8870,7 +8942,7 @@
     .end annotation
 
     .prologue
-    .line 388
+    .line 389
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     return-object v0
@@ -8881,7 +8953,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1856
+    .line 1857
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -8890,11 +8962,11 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 1857
+    .line 1858
     .local v0, "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-nez v0, :cond_0
 
-    .line 1858
+    .line 1859
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
     .end local v0    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
@@ -8904,14 +8976,34 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Z)V
 
-    .line 1859
+    .line 1860
     .restart local v0    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1861
+    .line 1862
     :cond_0
+    return-object v0
+.end method
+
+.method protected getKernelWakelockUpdateVersion()I
+    .locals 1
+
+    .prologue
+    .line 7560
+    sget v0, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+
+    return v0
+.end method
+
+.method protected getLogName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 6483
+    const-string v0, "BatteryStats"
+
     return-object v0
 .end method
 
@@ -8919,14 +9011,14 @@
     .locals 3
 
     .prologue
-    .line 7459
+    .line 7475
     monitor-enter p0
 
-    .line 7460
+    .line 7476
     :try_start_0
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
 
-    .line 7461
+    .line 7477
     .local v0, "val":I
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
@@ -8938,7 +9030,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7462
+    .line 7478
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -8949,13 +9041,13 @@
 
     add-int/2addr v0, v1
 
-    .line 7464
+    .line 7480
     :cond_0
     monitor-exit p0
 
     return v0
 
-    .line 7465
+    .line 7481
     .end local v0    # "val":I
     :catchall_0
     move-exception v1
@@ -8972,7 +9064,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 3993
+    .line 3994
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
@@ -8988,7 +9080,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 3989
+    .line 3990
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -9003,7 +9095,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4049
+    .line 4050
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->getCountLocked(I)J
@@ -9018,7 +9110,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4045
+    .line 4046
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
@@ -9034,7 +9126,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4041
+    .line 4042
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -9049,7 +9141,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4057
+    .line 4058
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->getCountLocked(I)J
@@ -9066,7 +9158,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4053
+    .line 4054
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->getCountLocked(I)J
@@ -9082,7 +9174,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4122
+    .line 4123
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -9091,7 +9183,7 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 4123
+    .line 4124
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v0, v0, p1
@@ -9100,7 +9192,7 @@
 
     move-result-wide v0
 
-    .line 4125
+    .line 4126
     :goto_0
     return-wide v0
 
@@ -9116,7 +9208,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4131
+    .line 4132
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -9125,7 +9217,7 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 4132
+    .line 4133
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     aget-object v0, v0, p1
@@ -9134,7 +9226,7 @@
 
     move-result-wide v0
 
-    .line 4134
+    .line 4135
     :goto_0
     return-wide v0
 
@@ -9153,21 +9245,21 @@
 
     const/4 v6, 0x0
 
-    .line 6598
+    .line 6609
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v8}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v1
 
-    .line 6599
+    .line 6610
     .local v1, "pos":I
     if-nez v1, :cond_0
 
-    .line 6600
+    .line 6611
     invoke-virtual {p1}, Landroid/os/BatteryStats$HistoryItem;->clear()V
 
-    .line 6602
+    .line 6613
     :cond_0
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
@@ -9179,12 +9271,12 @@
 
     move v0, v7
 
-    .line 6603
+    .line 6614
     .local v0, "end":Z
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 6614
+    .line 6625
     :goto_1
     return v6
 
@@ -9192,25 +9284,25 @@
     :cond_1
     move v0, v6
 
-    .line 6602
+    .line 6613
     goto :goto_0
 
-    .line 6607
+    .line 6618
     .restart local v0    # "end":Z
     :cond_2
     iget-wide v2, p1, Landroid/os/BatteryStats$HistoryItem;->time:J
 
-    .line 6608
+    .line 6619
     .local v2, "lastRealtime":J
     iget-wide v4, p1, Landroid/os/BatteryStats$HistoryItem;->currentTime:J
 
-    .line 6609
+    .line 6620
     .local v4, "lastWalltime":J
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {p0, v6, p1}, Lcom/android/internal/os/BatteryStatsImpl;->readHistoryDelta(Landroid/os/Parcel;Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 6610
+    .line 6621
     iget-byte v6, p1, Landroid/os/BatteryStats$HistoryItem;->cmd:B
 
     const/4 v8, 0x5
@@ -9229,7 +9321,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 6612
+    .line 6623
     iget-wide v8, p1, Landroid/os/BatteryStats$HistoryItem;->time:J
 
     sub-long/2addr v8, v2
@@ -9241,7 +9333,7 @@
     :cond_3
     move v6, v7
 
-    .line 6614
+    .line 6625
     goto :goto_1
 .end method
 
@@ -9256,7 +9348,7 @@
 
     const/4 v6, 0x0
 
-    .line 6505
+    .line 6516
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v1}, Landroid/os/Parcel;->dataPosition()I
@@ -9273,19 +9365,19 @@
 
     move v8, v7
 
-    .line 6506
+    .line 6517
     .local v8, "end":Z
     :goto_0
     if-nez v8, :cond_0
 
-    .line 6507
+    .line 6518
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-virtual {p0, v1, v3}, Lcom/android/internal/os/BatteryStatsImpl;->readHistoryDelta(Landroid/os/Parcel;Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 6508
+    .line 6519
     iget-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
@@ -9303,29 +9395,29 @@
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
-    .line 6510
+    .line 6521
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryIterator:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 6511
+    .line 6522
     .local v0, "cur":Landroid/os/BatteryStats$HistoryItem;
     if-nez v0, :cond_4
 
-    .line 6512
+    .line 6523
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
     if-nez v1, :cond_1
 
     if-nez v8, :cond_1
 
-    .line 6513
+    .line 6524
     const-string v1, "BatteryStatsImpl"
 
     const-string v3, "Old history ends before new history!"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6533
+    .line 6544
     :cond_1
     :goto_2
     return v6
@@ -9335,35 +9427,35 @@
     :cond_2
     move v8, v6
 
-    .line 6505
+    .line 6516
     goto :goto_0
 
     .restart local v8    # "end":Z
     :cond_3
     move v1, v6
 
-    .line 6508
+    .line 6519
     goto :goto_1
 
-    .line 6517
+    .line 6528
     .restart local v0    # "cur":Landroid/os/BatteryStats$HistoryItem;
     :cond_4
     invoke-virtual {p1, v0}, Landroid/os/BatteryStats$HistoryItem;->setTo(Landroid/os/BatteryStats$HistoryItem;)V
 
-    .line 6518
+    .line 6529
     iget-object v1, v0, Landroid/os/BatteryStats$HistoryItem;->next:Landroid/os/BatteryStats$HistoryItem;
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryIterator:Landroid/os/BatteryStats$HistoryItem;
 
-    .line 6519
+    .line 6530
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
     if-nez v1, :cond_5
 
-    .line 6520
+    .line 6531
     if-eqz v8, :cond_6
 
-    .line 6521
+    .line 6532
     const-string v1, "BatteryStatsImpl"
 
     const-string v3, "New history ends before old history!"
@@ -9374,10 +9466,10 @@
     :goto_3
     move v6, v7
 
-    .line 6533
+    .line 6544
     goto :goto_2
 
-    .line 6522
+    .line 6533
     :cond_6
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
@@ -9387,7 +9479,7 @@
 
     if-nez v1, :cond_5
 
-    .line 6523
+    .line 6534
     new-instance v2, Lcom/android/internal/util/FastPrintWriter;
 
     new-instance v1, Landroid/util/LogWriter;
@@ -9400,18 +9492,18 @@
 
     invoke-direct {v2, v1}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 6524
+    .line 6535
     .local v2, "pw":Ljava/io/PrintWriter;
     const-string v1, "Histories differ!"
 
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6525
+    .line 6536
     const-string v1, "Old history:"
 
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6526
+    .line 6537
     new-instance v1, Landroid/os/BatteryStats$HistoryPrinter;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryPrinter;-><init>()V
@@ -9420,12 +9512,12 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/os/BatteryStats$HistoryPrinter;->printNextItem(Ljava/io/PrintWriter;Landroid/os/BatteryStats$HistoryItem;JZZ)V
 
-    .line 6527
+    .line 6538
     const-string v1, "New history:"
 
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 6528
+    .line 6539
     new-instance v1, Landroid/os/BatteryStats$HistoryPrinter;
 
     invoke-direct {v1}, Landroid/os/BatteryStats$HistoryPrinter;-><init>()V
@@ -9434,7 +9526,7 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/os/BatteryStats$HistoryPrinter;->printNextItem(Ljava/io/PrintWriter;Landroid/os/BatteryStats$HistoryItem;JZZ)V
 
-    .line 6530
+    .line 6541
     invoke-virtual {v2}, Ljava/io/PrintWriter;->flush()V
 
     goto :goto_3
@@ -9444,7 +9536,7 @@
     .locals 1
 
     .prologue
-    .line 7414
+    .line 7430
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
     return v0
@@ -9455,32 +9547,32 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 3997
+    .line 3998
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
-    .line 3998
+    .line 3999
     .local v0, "val":I
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 3999
+    .line 4000
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLoadedNumConnectivityChange:I
 
     sub-int/2addr v0, v1
 
-    .line 4003
+    .line 4004
     :cond_0
     :goto_0
     return v0
 
-    .line 4000
+    .line 4001
     :cond_1
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_0
 
-    .line 4001
+    .line 4002
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggedNumConnectivityChange:I
 
     sub-int/2addr v0, v1
@@ -9492,7 +9584,7 @@
     .locals 1
 
     .prologue
-    .line 7377
+    .line 7393
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
     return v0
@@ -9504,17 +9596,17 @@
     .param p2, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 7573
+    .line 7601
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 7574
+    .line 7602
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 7575
+    .line 7603
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getPackageStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
 
@@ -9527,7 +9619,7 @@
     .locals 1
 
     .prologue
-    .line 4164
+    .line 4165
     const/16 v0, 0x74
 
     return v0
@@ -9539,7 +9631,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4037
+    .line 4038
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -9558,7 +9650,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4032
+    .line 4033
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -9575,7 +9667,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 4011
+    .line 4012
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
@@ -9591,7 +9683,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4007
+    .line 4008
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -9607,7 +9699,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4022
+    .line 4023
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -9623,7 +9715,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4027
+    .line 4028
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -9642,7 +9734,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4016
+    .line 4017
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -9660,17 +9752,17 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 7563
+    .line 7591
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 7564
+    .line 7592
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 7565
+    .line 7593
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
@@ -9688,12 +9780,12 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 2933
+    .line 2934
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2934
+    .line 2935
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -9702,11 +9794,11 @@
 
     check-cast v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2935
+    .line 2936
     .local v1, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v1, :cond_1
 
-    .line 2936
+    .line 2937
     iget-object v4, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mPids:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -9715,11 +9807,11 @@
 
     check-cast v0, Landroid/os/BatteryStats$Uid$Pid;
 
-    .line 2937
+    .line 2938
     .local v0, "p":Landroid/os/BatteryStats$Uid$Pid;
     if-eqz v0, :cond_1
 
-    .line 2938
+    .line 2939
     iget-wide v4, v0, Landroid/os/BatteryStats$Uid$Pid;->mWakeSumMs:J
 
     iget v6, v0, Landroid/os/BatteryStats$Uid$Pid;->mWakeNesting:I
@@ -9733,7 +9825,7 @@
     :cond_0
     add-long/2addr v2, v4
 
-    .line 2941
+    .line 2942
     .end local v0    # "p":Landroid/os/BatteryStats$Uid$Pid;
     :cond_1
     return-wide v2
@@ -9746,7 +9838,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 3980
+    .line 3981
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -9763,7 +9855,7 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 3975
+    .line 3976
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
@@ -9779,7 +9871,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 3971
+    .line 3972
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -9796,17 +9888,17 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 7583
+    .line 7611
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 7584
+    .line 7612
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 7585
+    .line 7613
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getServiceStatsLocked(Ljava/lang/String;Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
 
@@ -9819,28 +9911,28 @@
     .locals 8
 
     .prologue
-    .line 4143
+    .line 4144
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isStartClockTimeValid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4146
+    .line 4147
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
-    .line 4147
+    .line 4148
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isStartClockTimeValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4148
+    .line 4149
     iget-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -9855,7 +9947,7 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->recordCurrentTimeChangeLocked(JJJ)V
 
-    .line 4152
+    .line 4153
     :cond_0
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
@@ -9866,7 +9958,7 @@
     .locals 1
 
     .prologue
-    .line 6631
+    .line 6642
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
     return v0
@@ -9876,8 +9968,18 @@
     .locals 1
 
     .prologue
-    .line 4156
+    .line 4157
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method protected getStatsName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 6478
+    const-string v0, "batterystats"
 
     return-object v0
 .end method
@@ -9895,7 +9997,7 @@
     .end annotation
 
     .prologue
-    .line 4172
+    .line 4173
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     return-object v0
@@ -9906,7 +10008,7 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 7543
+    .line 7571
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -9915,23 +10017,23 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 7544
+    .line 7572
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-nez v0, :cond_0
 
-    .line 7545
+    .line 7573
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     .end local v0    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-direct {v0, p0, p1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;-><init>(Lcom/android/internal/os/BatteryStatsImpl;I)V
 
-    .line 7546
+    .line 7574
     .restart local v0    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 7548
+    .line 7576
     :cond_0
     return-object v0
 .end method
@@ -9951,7 +10053,7 @@
     .end annotation
 
     .prologue
-    .line 398
+    .line 399
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
     return-object v0
@@ -9962,7 +10064,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1706
+    .line 1707
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -9971,11 +10073,11 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 1707
+    .line 1708
     .local v0, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-nez v0, :cond_0
 
-    .line 1708
+    .line 1709
     new-instance v0, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
     .end local v0    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
@@ -9985,13 +10087,13 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Z)V
 
-    .line 1709
+    .line 1710
     .restart local v0    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1711
+    .line 1712
     :cond_0
     return-object v0
 .end method
@@ -10002,7 +10104,7 @@
     .param p3, "which"    # I
 
     .prologue
-    .line 4061
+    .line 4062
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
@@ -10018,7 +10120,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4095
+    .line 4096
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10037,7 +10139,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4090
+    .line 4091
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10055,7 +10157,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4075
+    .line 4076
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10074,7 +10176,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4070
+    .line 4071
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10092,7 +10194,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4085
+    .line 4086
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10111,7 +10213,7 @@
     .param p4, "which"    # I
 
     .prologue
-    .line 4080
+    .line 4081
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v0, v0, p1
@@ -10131,37 +10233,37 @@
 
     const/4 v0, 0x0
 
-    .line 6653
+    .line 6664
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
 
-    .line 6654
+    .line 6665
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
 
-    .line 6655
+    .line 6666
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 6656
+    .line 6667
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
-    .line 6657
+    .line 6668
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 6658
+    .line 6669
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
 
-    .line 6659
+    .line 6670
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepTime:J
 
-    .line 6660
+    .line 6671
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
-    .line 6661
+    .line 6672
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepTime:J
 
-    .line 6662
+    .line 6673
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
-    .line 6663
+    .line 6674
     return-void
 .end method
 
@@ -10173,36 +10275,36 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 6643
+    .line 6654
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
-    .line 6644
+    .line 6655
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->init(JJ)V
 
-    .line 6645
+    .line 6656
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->init(JJ)V
 
-    .line 6646
+    .line 6657
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtime:J
 
-    .line 6647
+    .line 6658
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUptime:J
 
-    .line 6648
+    .line 6659
     iput-wide p3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtimeStart:J
 
-    .line 6649
+    .line 6660
     iput-wide p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUptimeStart:J
 
-    .line 6650
+    .line 6661
     return-void
 .end method
 
@@ -10210,7 +10312,7 @@
     .locals 1
 
     .prologue
-    .line 6635
+    .line 6646
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     return v0
@@ -10220,7 +10322,7 @@
     .locals 2
 
     .prologue
-    .line 6639
+    .line 6650
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
     const/4 v1, 0x2
@@ -10242,7 +10344,7 @@
     .locals 4
 
     .prologue
-    .line 4139
+    .line 4140
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
     const-wide v2, 0x757b12c00L
@@ -10267,7 +10369,7 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 2494
+    .line 2495
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
     const/4 v2, -0x1
@@ -10276,7 +10378,7 @@
 
     move-result v0
 
-    .line 2495
+    .line 2496
     .local v0, "isolated":I
     if-lez v0, :cond_0
 
@@ -10296,12 +10398,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3556
+    .line 3557
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3557
+    .line 3558
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
@@ -10312,7 +10414,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteActivityPausedLocked(J)V
 
-    .line 3558
+    .line 3559
     return-void
 .end method
 
@@ -10321,12 +10423,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3551
+    .line 3552
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3552
+    .line 3553
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
@@ -10337,7 +10439,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteActivityResumedLocked(J)V
 
-    .line 3553
+    .line 3554
     return-void
 .end method
 
@@ -10346,33 +10448,33 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3468
+    .line 3469
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3482
+    .line 3483
     :goto_0
     return-void
 
-    .line 3471
+    .line 3472
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3472
+    .line 3473
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3473
+    .line 3474
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3474
+    .line 3475
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
@@ -10382,7 +10484,7 @@
 
     if-nez v4, :cond_1
 
-    .line 3475
+    .line 3476
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -10393,15 +10495,15 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3478
+    .line 3479
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3479
+    .line 3480
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3481
+    .line 3482
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -10417,29 +10519,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3453
+    .line 3454
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3454
+    .line 3455
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3455
+    .line 3456
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3456
+    .line 3457
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3457
+    .line 3458
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -10450,15 +10552,15 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3460
+    .line 3461
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3461
+    .line 3462
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3463
+    .line 3464
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
@@ -10466,14 +10568,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
-    .line 3464
+    .line 3465
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteAudioTurnedOnLocked(J)V
 
-    .line 3465
+    .line 3466
     return-void
 .end method
 
@@ -10481,23 +10583,23 @@
     .locals 7
 
     .prologue
-    .line 3738
+    .line 3739
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
     if-eqz v4, :cond_0
 
-    .line 3739
+    .line 3740
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3740
+    .line 3741
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3741
+    .line 3742
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -10509,20 +10611,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3744
+    .line 3745
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3745
+    .line 3746
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
-    .line 3746
+    .line 3747
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3748
+    .line 3749
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -10533,23 +10635,23 @@
     .locals 7
 
     .prologue
-    .line 3725
+    .line 3726
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
     if-nez v4, :cond_0
 
-    .line 3726
+    .line 3727
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3727
+    .line 3728
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3728
+    .line 3729
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -10561,20 +10663,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3731
+    .line 3732
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3732
+    .line 3733
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
-    .line 3733
+    .line 3734
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3735
+    .line 3736
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -10586,23 +10688,23 @@
     .param p1, "bluetoothState"    # I
 
     .prologue
-    .line 3752
+    .line 3753
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
     if-eq v2, p1, :cond_1
 
-    .line 3753
+    .line 3754
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3754
+    .line 3755
     .local v0, "elapsedRealtime":J
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
     if-ltz v2, :cond_0
 
-    .line 3755
+    .line 3756
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
@@ -10611,18 +10713,18 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3757
+    .line 3758
     :cond_0
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothState:I
 
-    .line 3758
+    .line 3759
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v2, v2, p1
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3760
+    .line 3761
     .end local v0    # "elapsedRealtime":J
     :cond_1
     return-void
@@ -10643,24 +10745,24 @@
     .param p11, "newUnimportantForLogging"    # Z
 
     .prologue
-    .line 2773
+    .line 2774
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v10
 
-    .line 2774
+    .line 2775
     .local v10, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v12
 
-    .line 2778
+    .line 2779
     .local v12, "uptime":J
     invoke-virtual/range {p6 .. p6}, Landroid/os/WorkSource;->size()I
 
     move-result v2
 
-    .line 2779
+    .line 2780
     .local v2, "NN":I
     const/4 v15, 0x0
 
@@ -10668,7 +10770,7 @@
     :goto_0
     if-ge v15, v2, :cond_0
 
-    .line 2780
+    .line 2781
     move-object/from16 v0, p6
 
     invoke-virtual {v0, v15}, Landroid/os/WorkSource;->get(I)I
@@ -10689,25 +10791,25 @@
 
     invoke-virtual/range {v3 .. v13}, Lcom/android/internal/os/BatteryStatsImpl;->noteStartWakeLocked(IILjava/lang/String;Ljava/lang/String;IZJJ)V
 
-    .line 2779
+    .line 2780
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_0
 
-    .line 2783
+    .line 2784
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/WorkSource;->size()I
 
     move-result v14
 
-    .line 2784
+    .line 2785
     .local v14, "NO":I
     const/4 v15, 0x0
 
     :goto_1
     if-ge v15, v14, :cond_1
 
-    .line 2785
+    .line 2786
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v15}, Landroid/os/WorkSource;->get(I)I
@@ -10726,12 +10828,12 @@
 
     invoke-virtual/range {v4 .. v13}, Lcom/android/internal/os/BatteryStatsImpl;->noteStopWakeLocked(IILjava/lang/String;Ljava/lang/String;IJJ)V
 
-    .line 2784
+    .line 2785
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 2787
+    .line 2788
     :cond_1
     return-void
 .end method
@@ -10742,18 +10844,18 @@
     .param p2, "extra"    # Ljava/lang/String;
 
     .prologue
-    .line 3133
+    .line 3134
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3134
+    .line 3135
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3135
+    .line 3136
     .local v4, "uptime":J
     const/16 v6, 0x9
 
@@ -10765,14 +10867,14 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 3137
+    .line 3138
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
-    .line 3138
+    .line 3139
     return-void
 .end method
 
@@ -10782,24 +10884,24 @@
     .prologue
     const-wide/16 v12, 0x1f4
 
-    .line 2509
+    .line 2510
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 2510
+    .line 2511
     .local v2, "currentTime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 2511
+    .line 2512
     .local v4, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 2512
+    .line 2513
     .local v6, "uptime":J
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isStartClockTimeValid()Z
 
@@ -10807,7 +10909,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2514
+    .line 2515
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
     const-wide/16 v10, 0x0
@@ -10816,7 +10918,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2515
+    .line 2516
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockTime:J
 
     iget-wide v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastRecordedClockRealtime:J
@@ -10825,7 +10927,7 @@
 
     add-long v8, v0, v10
 
-    .line 2517
+    .line 2518
     .local v8, "expectedClockTime":J
     sub-long v0, v8, v12
 
@@ -10839,7 +10941,7 @@
 
     if-gtz v0, :cond_1
 
-    .line 2528
+    .line 2529
     .end local v8    # "expectedClockTime":J
     :cond_0
     :goto_0
@@ -10848,17 +10950,17 @@
     :cond_1
     move-object v1, p0
 
-    .line 2524
+    .line 2525
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->recordCurrentTimeChangeLocked(JJJ)V
 
-    .line 2525
+    .line 2526
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isStartClockTimeValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2526
+    .line 2527
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
     goto :goto_0
@@ -10871,12 +10973,12 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 2499
+    .line 2500
     invoke-virtual {p0, p3}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p3
 
-    .line 2500
+    .line 2501
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -10887,17 +10989,17 @@
 
     if-nez v0, :cond_0
 
-    .line 2506
+    .line 2507
     :goto_0
     return-void
 
-    .line 2503
+    .line 2504
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2504
+    .line 2505
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -10912,7 +11014,7 @@
 
     move v8, p3
 
-    .line 2505
+    .line 2506
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -10922,24 +11024,24 @@
     .locals 7
 
     .prologue
-    .line 3584
+    .line 3585
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3585
+    .line 3586
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3586
+    .line 3587
     .local v2, "uptime":J
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
     if-eqz v4, :cond_0
 
-    .line 3587
+    .line 3588
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -10950,20 +11052,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3590
+    .line 3591
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3591
+    .line 3592
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
-    .line 3592
+    .line 3593
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3594
+    .line 3595
     :cond_0
     return-void
 .end method
@@ -10972,23 +11074,23 @@
     .locals 7
 
     .prologue
-    .line 3571
+    .line 3572
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
     if-nez v4, :cond_0
 
-    .line 3572
+    .line 3573
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3573
+    .line 3574
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3574
+    .line 3575
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -11000,20 +11102,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3577
+    .line 3578
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3578
+    .line 3579
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
-    .line 3579
+    .line 3580
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3581
+    .line 3582
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -11025,12 +11127,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3865
+    .line 3866
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3866
+    .line 3867
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -11038,19 +11140,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3867
+    .line 3868
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteFullWifiLockAcquiredLocked(I)V
 
-    .line 3866
+    .line 3867
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3869
+    .line 3870
     :cond_0
     return-void
 .end method
@@ -11060,29 +11162,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3765
+    .line 3766
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3766
+    .line 3767
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3767
+    .line 3768
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3768
+    .line 3769
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3769
+    .line 3770
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -11093,10 +11195,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3772
+    .line 3773
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3774
+    .line 3775
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
@@ -11104,14 +11206,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
-    .line 3775
+    .line 3776
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteFullWifiLockAcquiredLocked(J)V
 
-    .line 3776
+    .line 3777
     return-void
 .end method
 
@@ -11120,12 +11222,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3872
+    .line 3873
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3873
+    .line 3874
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -11133,19 +11235,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3874
+    .line 3875
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteFullWifiLockReleasedLocked(I)V
 
-    .line 3873
+    .line 3874
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3876
+    .line 3877
     :cond_0
     return-void
 .end method
@@ -11155,23 +11257,23 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3779
+    .line 3780
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3780
+    .line 3781
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3781
+    .line 3782
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3782
+    .line 3783
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
@@ -11179,12 +11281,12 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
-    .line 3783
+    .line 3784
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiFullLockNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3784
+    .line 3785
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -11195,10 +11297,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3787
+    .line 3788
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3789
+    .line 3790
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -11206,7 +11308,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteFullWifiLockReleasedLocked(J)V
 
-    .line 3790
+    .line 3791
     return-void
 .end method
 
@@ -11215,35 +11317,35 @@
     .param p1, "interactive"    # Z
 
     .prologue
-    .line 3120
+    .line 3121
     iget-boolean v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractive:Z
 
     if-eq v2, p1, :cond_0
 
-    .line 3121
+    .line 3122
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3122
+    .line 3123
     .local v0, "elapsedRealtime":J
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractive:Z
 
-    .line 3124
+    .line 3125
     if-eqz p1, :cond_1
 
-    .line 3125
+    .line 3126
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3130
+    .line 3131
     .end local v0    # "elapsedRealtime":J
     :cond_0
     :goto_0
     return-void
 
-    .line 3127
+    .line 3128
     .restart local v0    # "elapsedRealtime":J
     :cond_1
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -11261,23 +11363,23 @@
     .prologue
     const/16 v6, 0x4006
 
-    .line 2618
+    .line 2619
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2619
+    .line 2620
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2620
+    .line 2621
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2621
+    .line 2622
     .local v4, "uptime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -11285,7 +11387,7 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStopJobLocked(Ljava/lang/String;J)V
 
-    .line 2622
+    .line 2623
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -11296,7 +11398,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2626
+    .line 2627
     :goto_0
     return-void
 
@@ -11307,7 +11409,7 @@
 
     move v8, p2
 
-    .line 2625
+    .line 2626
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -11321,23 +11423,23 @@
     .prologue
     const v6, 0x8006
 
-    .line 2607
+    .line 2608
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2608
+    .line 2609
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2609
+    .line 2610
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2610
+    .line 2611
     .local v4, "uptime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -11345,7 +11447,7 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStartJobLocked(Ljava/lang/String;J)V
 
-    .line 2611
+    .line 2612
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -11356,7 +11458,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2615
+    .line 2616
     :goto_0
     return-void
 
@@ -11367,7 +11469,7 @@
 
     move v8, p2
 
-    .line 2614
+    .line 2615
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -11378,17 +11480,17 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3180
+    .line 3181
     iget-boolean v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabled:Z
 
     if-eq v3, p1, :cond_0
 
-    .line 3181
+    .line 3182
     if-eqz p1, :cond_1
 
     const/4 v2, 0x4
 
-    .line 3182
+    .line 3183
     .local v2, "stepState":I
     :goto_0
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
@@ -11403,7 +11505,7 @@
 
     iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 3183
+    .line 3184
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
     and-int/lit8 v3, v3, -0x5
@@ -11412,25 +11514,25 @@
 
     iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
-    .line 3184
+    .line 3185
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3185
+    .line 3186
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3186
+    .line 3187
     .local v4, "uptime":J
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabled:Z
 
-    .line 3187
+    .line 3188
     if-eqz p1, :cond_2
 
-    .line 3188
+    .line 3189
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v6, v3, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -11441,29 +11543,29 @@
 
     iput v6, v3, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3191
+    .line 3192
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3198
+    .line 3199
     :goto_1
     invoke-virtual {p0, v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3200
+    .line 3201
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "stepState":I
     .end local v4    # "uptime":J
     :cond_0
     return-void
 
-    .line 3181
+    .line 3182
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 3193
+    .line 3194
     .restart local v0    # "elapsedRealtime":J
     .restart local v2    # "stepState":I
     .restart local v4    # "uptime":J
@@ -11478,7 +11580,7 @@
 
     iput v6, v3, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3196
+    .line 3197
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
@@ -11492,24 +11594,24 @@
     .param p2, "timestampNs"    # J
 
     .prologue
-    .line 3141
+    .line 3142
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3142
+    .line 3143
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
 
-    .line 3143
+    .line 3144
     .local v8, "uptime":J
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
     if-eq v1, p1, :cond_1
 
-    .line 3145
+    .line 3146
     sget v1, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_MEDIUM:I
 
     if-eq p1, v1, :cond_0
@@ -11521,18 +11623,18 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3148
+    .line 3149
     .local v0, "active":Z
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 3149
+    .line 3150
     move-wide v6, v2
 
     .local v6, "realElapsedRealtimeMs":J
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveStartTime:J
 
-    .line 3150
+    .line 3151
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v10, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -11543,57 +11645,57 @@
 
     iput v10, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3166
+    .line 3167
     :goto_1
     invoke-virtual {p0, v2, v3, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3167
+    .line 3168
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 3168
+    .line 3169
     if-eqz v0, :cond_6
 
-    .line 3169
+    .line 3170
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3170
+    .line 3171
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3177
+    .line 3178
     .end local v0    # "active":Z
     .end local v6    # "realElapsedRealtimeMs":J
     :cond_1
     :goto_2
     return-void
 
-    .line 3145
+    .line 3146
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3152
+    .line 3153
     .restart local v0    # "active":Z
     :cond_3
     const-wide/32 v10, 0xf4240
 
     div-long v6, p2, v10
 
-    .line 3153
+    .line 3154
     .restart local v6    # "realElapsedRealtimeMs":J
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveStartTime:J
 
-    .line 3154
+    .line 3155
     .local v4, "lastUpdateTimeMs":J
     cmp-long v1, v6, v4
 
     if-gez v1, :cond_5
 
-    .line 3155
+    .line 3156
     const-string v1, "BatteryStatsImpl"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -11626,10 +11728,10 @@
 
     invoke-static {v1, v10}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3157
+    .line 3158
     move-wide v6, v2
 
-    .line 3162
+    .line 3163
     :cond_4
     :goto_3
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -11644,13 +11746,13 @@
 
     goto :goto_1
 
-    .line 3158
+    .line 3159
     :cond_5
     cmp-long v1, v6, v2
 
     if-gez v1, :cond_4
 
-    .line 3159
+    .line 3160
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     sub-long v10, v2, v6
@@ -11659,19 +11761,19 @@
 
     goto :goto_3
 
-    .line 3172
+    .line 3173
     .end local v4    # "lastUpdateTimeMs":J
     :cond_6
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3173
+    .line 3174
     const/4 v1, 0x1
 
     invoke-direct {p0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl;->updateNetworkActivityLocked(IJ)V
 
-    .line 3174
+    .line 3175
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
@@ -11685,18 +11787,18 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 3946
+    .line 3947
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3961
+    .line 3962
     :goto_0
     return-void
 
-    .line 3947
+    .line 3948
     :cond_0
     invoke-static {p2}, Landroid/net/ConnectivityManager;->isNetworkTypeMobile(I)Z
 
@@ -11704,7 +11806,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3948
+    .line 3949
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->includeInStringArray([Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
@@ -11713,7 +11815,7 @@
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
-    .line 3954
+    .line 3955
     :goto_1
     invoke-static {p2}, Landroid/net/ConnectivityManager;->isNetworkTypeWifi(I)Z
 
@@ -11721,7 +11823,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 3955
+    .line 3956
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:[Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->includeInStringArray([Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
@@ -11732,7 +11834,7 @@
 
     goto :goto_0
 
-    .line 3951
+    .line 3952
     :cond_1
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileIfaces:[Ljava/lang/String;
 
@@ -11744,7 +11846,7 @@
 
     goto :goto_1
 
-    .line 3958
+    .line 3959
     :cond_2
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiIfaces:[Ljava/lang/String;
 
@@ -11761,7 +11863,7 @@
     .locals 4
 
     .prologue
-    .line 3967
+    .line 3968
     const v0, 0xffff
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -11770,7 +11872,7 @@
 
     invoke-direct {p0, v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->updateNetworkActivityLocked(IJ)V
 
-    .line 3968
+    .line 3969
     return-void
 .end method
 
@@ -11780,38 +11882,38 @@
     .param p2, "hasData"    # Z
 
     .prologue
-    .line 3355
+    .line 3356
     const/4 v0, 0x0
 
-    .line 3356
+    .line 3357
     .local v0, "bin":I
     if-eqz p2, :cond_0
 
-    .line 3357
+    .line 3358
     packed-switch p1, :pswitch_data_0
 
-    .line 3404
+    .line 3405
     const/16 v0, 0x10
 
-    .line 3409
+    .line 3410
     :cond_0
     :goto_0
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
     if-eq v1, v0, :cond_2
 
-    .line 3410
+    .line 3411
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3411
+    .line 3412
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3412
+    .line 3413
     .local v4, "uptime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -11827,15 +11929,15 @@
 
     iput v6, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3416
+    .line 3417
     invoke-virtual {p0, v2, v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3417
+    .line 3418
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
     if-ltz v1, :cond_1
 
-    .line 3418
+    .line 3419
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
@@ -11844,129 +11946,129 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3421
+    .line 3422
     :cond_1
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionType:I
 
-    .line 3422
+    .line 3423
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3424
+    .line 3425
     .end local v2    # "elapsedRealtime":J
     .end local v4    # "uptime":J
     :cond_2
     return-void
 
-    .line 3359
+    .line 3360
     :pswitch_0
     const/4 v0, 0x2
 
-    .line 3360
+    .line 3361
     goto :goto_0
 
-    .line 3362
+    .line 3363
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 3363
+    .line 3364
     goto :goto_0
 
-    .line 3365
+    .line 3366
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 3366
+    .line 3367
     goto :goto_0
 
-    .line 3368
+    .line 3369
     :pswitch_3
     const/4 v0, 0x4
 
-    .line 3369
+    .line 3370
     goto :goto_0
 
-    .line 3371
+    .line 3372
     :pswitch_4
     const/4 v0, 0x5
 
-    .line 3372
+    .line 3373
     goto :goto_0
 
-    .line 3374
+    .line 3375
     :pswitch_5
     const/4 v0, 0x6
 
-    .line 3375
+    .line 3376
     goto :goto_0
 
-    .line 3377
+    .line 3378
     :pswitch_6
     const/4 v0, 0x7
 
-    .line 3378
+    .line 3379
     goto :goto_0
 
-    .line 3380
+    .line 3381
     :pswitch_7
     const/16 v0, 0x8
 
-    .line 3381
+    .line 3382
     goto :goto_0
 
-    .line 3383
+    .line 3384
     :pswitch_8
     const/16 v0, 0x9
 
-    .line 3384
+    .line 3385
     goto :goto_0
 
-    .line 3386
+    .line 3387
     :pswitch_9
     const/16 v0, 0xa
 
-    .line 3387
+    .line 3388
     goto :goto_0
 
-    .line 3389
+    .line 3390
     :pswitch_a
     const/16 v0, 0xb
 
-    .line 3390
+    .line 3391
     goto :goto_0
 
-    .line 3392
+    .line 3393
     :pswitch_b
     const/16 v0, 0xc
 
-    .line 3393
+    .line 3394
     goto :goto_0
 
-    .line 3395
+    .line 3396
     :pswitch_c
     const/16 v0, 0xd
 
-    .line 3396
+    .line 3397
     goto :goto_0
 
-    .line 3398
+    .line 3399
     :pswitch_d
     const/16 v0, 0xe
 
-    .line 3399
+    .line 3400
     goto :goto_0
 
-    .line 3401
+    .line 3402
     :pswitch_e
     const/16 v0, 0xf
 
-    .line 3402
+    .line 3403
     goto :goto_0
 
-    .line 3357
+    .line 3358
     nop
 
     :pswitch_data_0
@@ -11993,23 +12095,23 @@
     .locals 7
 
     .prologue
-    .line 3216
+    .line 3217
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
     if-eqz v4, :cond_0
 
-    .line 3217
+    .line 3218
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3218
+    .line 3219
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3219
+    .line 3220
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -12021,20 +12123,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3222
+    .line 3223
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3223
+    .line 3224
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
-    .line 3224
+    .line 3225
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3226
+    .line 3227
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -12045,23 +12147,23 @@
     .locals 7
 
     .prologue
-    .line 3203
+    .line 3204
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
     if-nez v4, :cond_0
 
-    .line 3204
+    .line 3205
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3205
+    .line 3206
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3206
+    .line 3207
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -12073,20 +12175,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3209
+    .line 3210
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3210
+    .line 3211
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
-    .line 3211
+    .line 3212
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3213
+    .line 3214
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -12098,12 +12200,12 @@
     .param p1, "signalStrength"    # Landroid/telephony/SignalStrength;
 
     .prologue
-    .line 3350
+    .line 3351
     invoke-virtual {p1}, Landroid/telephony/SignalStrength;->getLevel()I
 
     move-result v0
 
-    .line 3351
+    .line 3352
     .local v0, "bin":I
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneServiceStateRaw:I
 
@@ -12111,7 +12213,7 @@
 
     invoke-direct {p0, v1, v2, v0}, Lcom/android/internal/os/BatteryStatsImpl;->updateAllPhoneStateLocked(III)V
 
-    .line 3352
+    .line 3353
     return-void
 .end method
 
@@ -12121,12 +12223,12 @@
     .param p2, "simState"    # I
 
     .prologue
-    .line 3345
+    .line 3346
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthBinRaw:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/os/BatteryStatsImpl;->updateAllPhoneStateLocked(III)V
 
-    .line 3346
+    .line 3347
     return-void
 .end method
 
@@ -12136,24 +12238,24 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 2556
+    .line 2557
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2557
+    .line 2558
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isOnBattery()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2558
+    .line 2559
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 2559
+    .line 2560
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
@@ -12161,7 +12263,7 @@
 
     invoke-virtual {v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->incNumAnrsLocked()V
 
-    .line 2561
+    .line 2562
     .end local v0    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_0
     return-void
@@ -12173,24 +12275,24 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 2548
+    .line 2549
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2549
+    .line 2550
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isOnBattery()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2550
+    .line 2551
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 2551
+    .line 2552
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
@@ -12198,7 +12300,7 @@
 
     invoke-virtual {v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->incNumCrashesLocked()V
 
-    .line 2553
+    .line 2554
     .end local v0    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_0
     return-void
@@ -12210,12 +12312,12 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 2925
+    .line 2926
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2926
+    .line 2927
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -12224,16 +12326,16 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2927
+    .line 2928
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v0, :cond_0
 
-    .line 2928
+    .line 2929
     iget-object v1, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mPids:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 2930
+    .line 2931
     :cond_0
     return-void
 .end method
@@ -12246,12 +12348,12 @@
     .prologue
     const/16 v6, 0x4001
 
-    .line 2570
+    .line 2571
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2571
+    .line 2572
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -12262,24 +12364,24 @@
 
     if-nez v0, :cond_1
 
-    .line 2582
+    .line 2583
     :cond_0
     :goto_0
     return-void
 
-    .line 2574
+    .line 2575
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2575
+    .line 2576
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2576
+    .line 2577
     .local v4, "uptime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -12289,7 +12391,7 @@
 
     invoke-virtual {v0, p1, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->updateProcessStateLocked(Ljava/lang/String;IJ)V
 
-    .line 2578
+    .line 2579
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
     if-eqz v0, :cond_0
@@ -12300,7 +12402,7 @@
 
     move v8, p2
 
-    .line 2581
+    .line 2582
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -12314,24 +12416,24 @@
     .prologue
     const v6, 0x8001
 
-    .line 2531
+    .line 2532
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2532
+    .line 2533
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->isOnBattery()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2533
+    .line 2534
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
-    .line 2534
+    .line 2535
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v0, p1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->getProcessStatsLocked(Ljava/lang/String;)Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
@@ -12339,7 +12441,7 @@
 
     invoke-virtual {v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->incStartsLocked()V
 
-    .line 2536
+    .line 2537
     .end local v0    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_0
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
@@ -12352,23 +12454,23 @@
 
     if-nez v1, :cond_2
 
-    .line 2545
+    .line 2546
     :cond_1
     :goto_0
     return-void
 
-    .line 2539
+    .line 2540
     :cond_2
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
     if-eqz v1, :cond_1
 
-    .line 2542
+    .line 2543
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2543
+    .line 2544
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -12381,7 +12483,7 @@
 
     move v8, p2
 
-    .line 2544
+    .line 2545
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -12394,17 +12496,17 @@
     .param p3, "state"    # I
 
     .prologue
-    .line 2564
+    .line 2565
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2565
+    .line 2566
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2566
+    .line 2567
     .local v0, "elapsedRealtime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -12412,7 +12514,7 @@
 
     invoke-virtual {v2, p1, p3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->updateProcessStateLocked(Ljava/lang/String;IJ)V
 
-    .line 2567
+    .line 2568
     return-void
 .end method
 
@@ -12420,29 +12522,29 @@
     .locals 9
 
     .prologue
-    .line 3517
+    .line 3518
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
     if-lez v6, :cond_0
 
-    .line 3518
+    .line 3519
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3519
+    .line 3520
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3520
+    .line 3521
     .local v4, "uptime":J
     const/4 v6, 0x0
 
     iput v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
-    .line 3521
+    .line 3522
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -12453,15 +12555,15 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3524
+    .line 3525
     invoke-virtual {p0, v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3525
+    .line 3526
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopAllRunningLocked(J)V
 
-    .line 3526
+    .line 3527
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -12474,7 +12576,7 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 3527
+    .line 3528
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -12483,16 +12585,16 @@
 
     check-cast v3, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 3528
+    .line 3529
     .local v3, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteResetAudioLocked(J)V
 
-    .line 3526
+    .line 3527
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3531
+    .line 3532
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "i":I
     .end local v3    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
@@ -12505,29 +12607,29 @@
     .locals 9
 
     .prologue
-    .line 3534
+    .line 3535
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
     if-lez v6, :cond_0
 
-    .line 3535
+    .line 3536
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3536
+    .line 3537
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3537
+    .line 3538
     .local v4, "uptime":J
     const/4 v6, 0x0
 
     iput v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
-    .line 3538
+    .line 3539
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v7, v6, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -12538,15 +12640,15 @@
 
     iput v7, v6, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3541
+    .line 3542
     invoke-virtual {p0, v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3542
+    .line 3543
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v6, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopAllRunningLocked(J)V
 
-    .line 3543
+    .line 3544
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -12559,7 +12661,7 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 3544
+    .line 3545
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -12568,16 +12670,16 @@
 
     check-cast v3, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 3545
+    .line 3546
     .local v3, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteResetVideoLocked(J)V
 
-    .line 3543
+    .line 3544
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3548
+    .line 3549
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "i":I
     .end local v3    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
@@ -12591,34 +12693,34 @@
     .param p1, "brightness"    # I
 
     .prologue
-    .line 3091
+    .line 3092
     div-int/lit8 v0, p1, 0x33
 
-    .line 3092
+    .line 3093
     .local v0, "bin":I
     if-gez v0, :cond_4
 
     const/4 v0, 0x0
 
-    .line 3094
+    .line 3095
     :cond_0
     :goto_0
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     if-eq v1, v0, :cond_3
 
-    .line 3095
+    .line 3096
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3096
+    .line 3097
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3097
+    .line 3098
     .local v4, "uptime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -12634,22 +12736,22 @@
 
     iput v6, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3101
+    .line 3102
     invoke-virtual {p0, v2, v3, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3102
+    .line 3103
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
     const/4 v6, 0x2
 
     if-ne v1, v6, :cond_2
 
-    .line 3103
+    .line 3104
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     if-ltz v1, :cond_1
 
-    .line 3104
+    .line 3105
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
@@ -12658,7 +12760,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3106
+    .line 3107
     :cond_1
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -12666,17 +12768,17 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3108
+    .line 3109
     :cond_2
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
-    .line 3110
+    .line 3111
     .end local v2    # "elapsedRealtime":J
     .end local v4    # "uptime":J
     :cond_3
     return-void
 
-    .line 3093
+    .line 3094
     :cond_4
     const/4 v1, 0x5
 
@@ -12692,31 +12794,31 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 3021
+    .line 3022
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
     if-eq v1, p1, :cond_2
 
-    .line 3022
+    .line 3023
     iget v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 3023
+    .line 3024
     .local v0, "oldState":I
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 3027
+    .line 3028
     if-eqz p1, :cond_0
 
-    .line 3028
+    .line 3029
     add-int/lit8 v12, p1, -0x1
 
-    .line 3029
+    .line 3030
     .local v12, "stepState":I
     const/4 v1, 0x4
 
     if-ge v12, v1, :cond_3
 
-    .line 3030
+    .line 3031
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
@@ -12729,7 +12831,7 @@
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 3031
+    .line 3032
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
     and-int/lit8 v1, v1, -0x4
@@ -12738,7 +12840,7 @@
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
 
-    .line 3037
+    .line 3038
     .end local v12    # "stepState":I
     :cond_0
     :goto_0
@@ -12746,18 +12848,18 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 3039
+    .line 3040
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 3040
+    .line 3041
     .local v8, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v10
 
-    .line 3041
+    .line 3042
     .local v10, "uptime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -12769,20 +12871,20 @@
 
     iput v2, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3044
+    .line 3045
     invoke-virtual {p0, v8, v9, v10, v11}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3045
+    .line 3046
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3046
+    .line 3047
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     if-ltz v1, :cond_1
 
-    .line 3047
+    .line 3048
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
@@ -12791,7 +12893,7 @@
 
     invoke-virtual {v1, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3050
+    .line 3051
     :cond_1
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -12817,7 +12919,7 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->updateTimeBasesLocked(ZZJJ)V
 
-    .line 3055
+    .line 3056
     const/4 v2, -0x1
 
     const/4 v3, -0x1
@@ -12834,19 +12936,19 @@
 
     invoke-virtual/range {v1 .. v11}, Lcom/android/internal/os/BatteryStatsImpl;->noteStartWakeLocked(IILjava/lang/String;Ljava/lang/String;IZJJ)V
 
-    .line 3059
+    .line 3060
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v1, :cond_2
 
-    .line 3060
+    .line 3061
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl;->updateDischargeScreenLevelsLocked(ZZ)V
 
-    .line 3087
+    .line 3088
     .end local v0    # "oldState":I
     .end local v8    # "elapsedRealtime":J
     .end local v10    # "uptime":J
@@ -12854,7 +12956,7 @@
     :goto_1
     return-void
 
-    .line 3033
+    .line 3034
     .restart local v0    # "oldState":I
     .restart local v12    # "stepState":I
     :cond_3
@@ -12882,25 +12984,25 @@
 
     goto :goto_0
 
-    .line 3062
+    .line 3063
     .end local v12    # "stepState":I
     :cond_4
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
-    .line 3064
+    .line 3065
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 3065
+    .line 3066
     .restart local v8    # "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v10
 
-    .line 3066
+    .line 3067
     .restart local v10    # "uptime":J
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -12912,20 +13014,20 @@
 
     iput v2, v1, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3069
+    .line 3070
     invoke-virtual {p0, v8, v9, v10, v11}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3070
+    .line 3071
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v1, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3071
+    .line 3072
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
 
     if-ltz v1, :cond_5
 
-    .line 3072
+    .line 3073
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessBin:I
@@ -12934,7 +13036,7 @@
 
     invoke-virtual {v1, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3075
+    .line 3076
     :cond_5
     const/4 v3, -0x1
 
@@ -12950,7 +13052,7 @@
 
     invoke-virtual/range {v2 .. v11}, Lcom/android/internal/os/BatteryStatsImpl;->noteStopWakeLocked(IILjava/lang/String;Ljava/lang/String;IJJ)V
 
-    .line 3078
+    .line 3079
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->isRunning()Z
@@ -12975,12 +13077,12 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsImpl;->updateTimeBasesLocked(ZZJJ)V
 
-    .line 3082
+    .line 3083
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v1, :cond_2
 
-    .line 3083
+    .line 3084
     const/4 v1, 0x1
 
     const/4 v2, 0x0
@@ -12995,29 +13097,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 2993
+    .line 2994
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2994
+    .line 2995
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2995
+    .line 2996
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 2996
+    .line 2997
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
     if-nez v4, :cond_0
 
-    .line 2997
+    .line 2998
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13028,10 +13130,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3000
+    .line 3001
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3002
+    .line 3003
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
@@ -13039,14 +13141,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
-    .line 3003
+    .line 3004
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStartGps(J)V
 
-    .line 3004
+    .line 3005
     return-void
 .end method
 
@@ -13056,29 +13158,29 @@
     .param p2, "sensor"    # I
 
     .prologue
-    .line 2963
+    .line 2964
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2964
+    .line 2965
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2965
+    .line 2966
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 2966
+    .line 2967
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
     if-nez v4, :cond_0
 
-    .line 2967
+    .line 2968
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13089,10 +13191,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2970
+    .line 2971
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2972
+    .line 2973
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
@@ -13100,14 +13202,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
-    .line 2973
+    .line 2974
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, p2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStartSensor(IJ)V
 
-    .line 2974
+    .line 2975
     return-void
 .end method
 
@@ -13121,24 +13223,24 @@
     .param p6, "unimportantForLogging"    # Z
 
     .prologue
-    .line 2761
+    .line 2762
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 2762
+    .line 2763
     .local v8, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v10
 
-    .line 2763
+    .line 2764
     .local v10, "uptime":J
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 2764
+    .line 2765
     .local v0, "N":I
     const/4 v12, 0x0
 
@@ -13146,7 +13248,7 @@
     :goto_0
     if-ge v12, v0, :cond_0
 
-    .line 2765
+    .line 2766
     invoke-virtual {p1, v12}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
@@ -13165,12 +13267,12 @@
 
     invoke-virtual/range {v1 .. v11}, Lcom/android/internal/os/BatteryStatsImpl;->noteStartWakeLocked(IILjava/lang/String;Ljava/lang/String;IZJJ)V
 
-    .line 2764
+    .line 2765
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 2768
+    .line 2769
     :cond_0
     return-void
 .end method
@@ -13187,32 +13289,32 @@
     .param p9, "uptime"    # J
 
     .prologue
-    .line 2682
+    .line 2683
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2683
+    .line 2684
     if-nez p5, :cond_3
 
-    .line 2686
+    .line 2687
     move-wide/from16 v0, p9
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl;->aggregateLastWakeupUptimeLocked(J)V
 
-    .line 2687
+    .line 2688
     if-nez p4, :cond_0
 
-    .line 2688
+    .line 2689
     move-object/from16 p4, p3
 
-    .line 2690
+    .line 2691
     :cond_0
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
     if-eqz v4, :cond_1
 
-    .line 2691
+    .line 2692
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const v5, 0x8005
@@ -13227,7 +13329,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 2693
+    .line 2694
     const v10, 0x8005
 
     move-object v5, p0
@@ -13242,13 +13344,13 @@
 
     invoke-virtual/range {v5 .. v12}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 2697
+    .line 2698
     :cond_1
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
 
     if-nez v4, :cond_6
 
-    .line 2698
+    .line 2699
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13259,7 +13361,7 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2701
+    .line 2702
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -13268,7 +13370,7 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2702
+    .line 2703
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -13281,7 +13383,7 @@
 
     iput-object v0, v4, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 2703
+    .line 2704
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -13290,7 +13392,7 @@
 
     iput p1, v4, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 2704
+    .line 2705
     if-nez p6, :cond_5
 
     const/4 v4, 0x1
@@ -13298,14 +13400,14 @@
     :goto_0
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockImportant:Z
 
-    .line 2705
+    .line 2706
     move-wide/from16 v0, p7
 
     move-wide/from16 v2, p9
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2718
+    .line 2719
     :cond_2
     :goto_1
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
@@ -13314,14 +13416,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
 
-    .line 2720
+    .line 2721
     :cond_3
     if-ltz p1, :cond_4
 
-    .line 2724
+    .line 2725
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->requestWakelockCpuUpdate()V
 
-    .line 2725
+    .line 2726
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
@@ -13336,17 +13438,17 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStartWakeLocked(ILjava/lang/String;IJ)V
 
-    .line 2727
+    .line 2728
     :cond_4
     return-void
 
-    .line 2704
+    .line 2705
     :cond_5
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 2706
+    .line 2707
     :cond_6
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockImportant:Z
 
@@ -13360,21 +13462,21 @@
 
     if-nez v4, :cond_2
 
-    .line 2708
+    .line 2709
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
     if-eqz v4, :cond_7
 
-    .line 2710
+    .line 2711
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryLastWritten:Landroid/os/BatteryStats$HistoryItem;
 
     const/4 v5, 0x0
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2711
+    .line 2712
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -13383,7 +13485,7 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2712
+    .line 2713
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -13396,7 +13498,7 @@
 
     iput-object v0, v4, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 2713
+    .line 2714
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -13405,14 +13507,14 @@
 
     iput p1, v4, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 2714
+    .line 2715
     move-wide/from16 v0, p7
 
     move-wide/from16 v2, p9
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2716
+    .line 2717
     :cond_7
     const/4 v4, 0x1
 
@@ -13426,23 +13528,23 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3007
+    .line 3008
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3008
+    .line 3009
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3009
+    .line 3010
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3010
+    .line 3011
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
@@ -13450,12 +13552,12 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
-    .line 3011
+    .line 3012
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGpsNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3012
+    .line 3013
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13466,10 +13568,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3015
+    .line 3016
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3017
+    .line 3018
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -13477,7 +13579,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStopGps(J)V
 
-    .line 3018
+    .line 3019
     return-void
 .end method
 
@@ -13487,23 +13589,23 @@
     .param p2, "sensor"    # I
 
     .prologue
-    .line 2977
+    .line 2978
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2978
+    .line 2979
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2979
+    .line 2980
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 2980
+    .line 2981
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
@@ -13511,12 +13613,12 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
-    .line 2981
+    .line 2982
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mSensorNesting:I
 
     if-nez v4, :cond_0
 
-    .line 2982
+    .line 2983
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13527,10 +13629,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2985
+    .line 2986
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2987
+    .line 2988
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -13538,7 +13640,7 @@
 
     invoke-virtual {v4, p2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStopSensor(IJ)V
 
-    .line 2988
+    .line 2989
     return-void
 .end method
 
@@ -13551,24 +13653,24 @@
     .param p5, "type"    # I
 
     .prologue
-    .line 2791
+    .line 2792
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 2792
+    .line 2793
     .local v6, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
 
-    .line 2793
+    .line 2794
     .local v8, "uptime":J
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v10
 
-    .line 2794
+    .line 2795
     .local v10, "N":I
     const/4 v11, 0x0
 
@@ -13576,7 +13678,7 @@
     :goto_0
     if-ge v11, v10, :cond_0
 
-    .line 2795
+    .line 2796
     invoke-virtual {p1, v11}, Landroid/os/WorkSource;->get(I)I
 
     move-result v1
@@ -13593,12 +13695,12 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/android/internal/os/BatteryStatsImpl;->noteStopWakeLocked(IILjava/lang/String;Ljava/lang/String;IJJ)V
 
-    .line 2794
+    .line 2795
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 2797
+    .line 2798
     :cond_0
     return-void
 .end method
@@ -13614,33 +13716,33 @@
     .param p8, "uptime"    # J
 
     .prologue
-    .line 2731
+    .line 2732
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2732
+    .line 2733
     if-nez p5, :cond_2
 
-    .line 2733
+    .line 2734
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
 
     add-int/lit8 v4, v4, -0x1
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
 
-    .line 2734
+    .line 2735
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
     if-eqz v4, :cond_1
 
-    .line 2735
+    .line 2736
     if-nez p4, :cond_0
 
-    .line 2736
+    .line 2737
     move-object/from16 p4, p3
 
-    .line 2738
+    .line 2739
     :cond_0
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
@@ -13656,7 +13758,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 2740
+    .line 2741
     const/16 v10, 0x4005
 
     move-object v5, p0
@@ -13671,13 +13773,13 @@
 
     invoke-virtual/range {v5 .. v12}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 2744
+    .line 2745
     :cond_1
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeLockNesting:I
 
     if-nez v4, :cond_2
 
-    .line 2745
+    .line 2746
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -13688,31 +13790,31 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2748
+    .line 2749
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitialAcquireWakeName:Ljava/lang/String;
 
-    .line 2749
+    .line 2750
     const/4 v4, -0x1
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mInitialAcquireWakeUid:I
 
-    .line 2750
+    .line 2751
     move-wide/from16 v0, p6
 
     move-wide/from16 v2, p8
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2753
+    .line 2754
     :cond_2
     if-ltz p1, :cond_3
 
-    .line 2754
+    .line 2755
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->requestWakelockCpuUpdate()V
 
-    .line 2755
+    .line 2756
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
@@ -13727,7 +13829,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStopWakeLocked(ILjava/lang/String;IJ)V
 
-    .line 2757
+    .line 2758
     :cond_3
     return-void
 .end method
@@ -13740,23 +13842,23 @@
     .prologue
     const/16 v6, 0x4004
 
-    .line 2596
+    .line 2597
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2597
+    .line 2598
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2598
+    .line 2599
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2599
+    .line 2600
     .local v4, "uptime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -13764,7 +13866,7 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStopSyncLocked(Ljava/lang/String;J)V
 
-    .line 2600
+    .line 2601
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -13775,7 +13877,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2604
+    .line 2605
     :goto_0
     return-void
 
@@ -13786,7 +13888,7 @@
 
     move v8, p2
 
-    .line 2603
+    .line 2604
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -13800,23 +13902,23 @@
     .prologue
     const v6, 0x8004
 
-    .line 2585
+    .line 2586
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p2
 
-    .line 2586
+    .line 2587
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2587
+    .line 2588
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2588
+    .line 2589
     .local v4, "uptime":J
     invoke-virtual {p0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -13824,7 +13926,7 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteStartSyncLocked(Ljava/lang/String;J)V
 
-    .line 2589
+    .line 2590
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v1, 0x0
@@ -13835,7 +13937,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2593
+    .line 2594
     :goto_0
     return-void
 
@@ -13846,7 +13948,7 @@
 
     move v8, p2
 
-    .line 2592
+    .line 2593
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
     goto :goto_0
@@ -13858,24 +13960,24 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 3113
+    .line 3114
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v0, :cond_0
 
-    .line 3114
+    .line 3115
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3115
+    .line 3116
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteUserActivityLocked(I)V
 
-    .line 3117
+    .line 3118
     :cond_0
     return-void
 .end method
@@ -13885,19 +13987,19 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3566
+    .line 3567
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3567
+    .line 3568
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteVibratorOffLocked()V
 
-    .line 3568
+    .line 3569
     return-void
 .end method
 
@@ -13907,19 +14009,19 @@
     .param p2, "durationMillis"    # J
 
     .prologue
-    .line 3561
+    .line 3562
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3562
+    .line 3563
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v0
 
     invoke-virtual {v0, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteVibratorOnLocked(J)V
 
-    .line 3563
+    .line 3564
     return-void
 .end method
 
@@ -13928,33 +14030,33 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3500
+    .line 3501
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3514
+    .line 3515
     :goto_0
     return-void
 
-    .line 3503
+    .line 3504
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3504
+    .line 3505
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3505
+    .line 3506
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3506
+    .line 3507
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
@@ -13964,7 +14066,7 @@
 
     if-nez v4, :cond_1
 
-    .line 3507
+    .line 3508
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -13975,15 +14077,15 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3510
+    .line 3511
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3511
+    .line 3512
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3513
+    .line 3514
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -13999,29 +14101,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3485
+    .line 3486
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3486
+    .line 3487
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3487
+    .line 3488
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3488
+    .line 3489
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3489
+    .line 3490
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -14032,15 +14134,15 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3492
+    .line 3493
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3493
+    .line 3494
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3495
+    .line 3496
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
@@ -14048,14 +14150,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
-    .line 3496
+    .line 3497
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteVideoTurnedOnLocked(J)V
 
-    .line 3497
+    .line 3498
     return-void
 .end method
 
@@ -14064,22 +14166,22 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 2810
+    .line 2811
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2811
+    .line 2812
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 2814
+    .line 2815
     .local v2, "uptime":J
     invoke-virtual {p0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->aggregateLastWakeupUptimeLocked(J)V
 
-    .line 2815
+    .line 2816
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -14088,14 +14190,14 @@
 
     iput-object v5, v4, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2816
+    .line 2817
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
     iput-object p1, v4, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 2817
+    .line 2818
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v4, v4, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -14104,16 +14206,16 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 2818
+    .line 2819
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupReason:Ljava/lang/String;
 
-    .line 2819
+    .line 2820
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWakeupUptimeMs:J
 
-    .line 2820
+    .line 2821
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 2821
+    .line 2822
     return-void
 .end method
 
@@ -14123,12 +14225,12 @@
     .param p2, "csph"    # I
 
     .prologue
-    .line 3893
+    .line 3894
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3894
+    .line 3895
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14136,19 +14238,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3895
+    .line 3896
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2, p2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiBatchedScanStartedLocked(II)V
 
-    .line 3894
+    .line 3895
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3897
+    .line 3898
     :cond_0
     return-void
 .end method
@@ -14159,17 +14261,17 @@
     .param p2, "csph"    # I
 
     .prologue
-    .line 3823
+    .line 3824
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3824
+    .line 3825
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3825
+    .line 3826
     .local v0, "elapsedRealtime":J
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14177,7 +14279,7 @@
 
     invoke-virtual {v2, p2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiBatchedScanStartedLocked(IJ)V
 
-    .line 3826
+    .line 3827
     return-void
 .end method
 
@@ -14186,12 +14288,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3900
+    .line 3901
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3901
+    .line 3902
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14199,19 +14301,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3902
+    .line 3903
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiBatchedScanStoppedLocked(I)V
 
-    .line 3901
+    .line 3902
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3904
+    .line 3905
     :cond_0
     return-void
 .end method
@@ -14221,17 +14323,17 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3829
+    .line 3830
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3830
+    .line 3831
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3831
+    .line 3832
     .local v0, "elapsedRealtime":J
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14239,7 +14341,7 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiBatchedScanStoppedLocked(J)V
 
-    .line 3832
+    .line 3833
     return-void
 .end method
 
@@ -14248,12 +14350,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3914
+    .line 3915
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3915
+    .line 3916
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14261,19 +14363,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3916
+    .line 3917
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiMulticastDisabledLocked(I)V
 
-    .line 3915
+    .line 3916
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3918
+    .line 3919
     :cond_0
     return-void
 .end method
@@ -14283,23 +14385,23 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3851
+    .line 3852
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3852
+    .line 3853
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3853
+    .line 3854
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3854
+    .line 3855
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
@@ -14307,12 +14409,12 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
-    .line 3855
+    .line 3856
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3856
+    .line 3857
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -14323,10 +14425,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3859
+    .line 3860
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3861
+    .line 3862
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14334,7 +14436,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiMulticastDisabledLocked(J)V
 
-    .line 3862
+    .line 3863
     return-void
 .end method
 
@@ -14343,12 +14445,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3907
+    .line 3908
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3908
+    .line 3909
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14356,19 +14458,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3909
+    .line 3910
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiMulticastEnabledLocked(I)V
 
-    .line 3908
+    .line 3909
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3911
+    .line 3912
     :cond_0
     return-void
 .end method
@@ -14378,29 +14480,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3837
+    .line 3838
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3838
+    .line 3839
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3839
+    .line 3840
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3840
+    .line 3841
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3841
+    .line 3842
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -14411,10 +14513,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3844
+    .line 3845
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3846
+    .line 3847
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
@@ -14422,14 +14524,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastNesting:I
 
-    .line 3847
+    .line 3848
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiMulticastEnabledLocked(J)V
 
-    .line 3848
+    .line 3849
     return-void
 .end method
 
@@ -14437,24 +14539,24 @@
     .locals 7
 
     .prologue
-    .line 3440
+    .line 3441
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3441
+    .line 3442
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3442
+    .line 3443
     .local v2, "uptime":J
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
     if-eqz v4, :cond_0
 
-    .line 3443
+    .line 3444
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -14465,20 +14567,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3446
+    .line 3447
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3447
+    .line 3448
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
-    .line 3448
+    .line 3449
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3450
+    .line 3451
     :cond_0
     return-void
 .end method
@@ -14487,23 +14589,23 @@
     .locals 7
 
     .prologue
-    .line 3427
+    .line 3428
     iget-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
     if-nez v4, :cond_0
 
-    .line 3428
+    .line 3429
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3429
+    .line 3430
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3430
+    .line 3431
     .local v2, "uptime":J
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -14515,20 +14617,20 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3433
+    .line 3434
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3434
+    .line 3435
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
-    .line 3435
+    .line 3436
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3437
+    .line 3438
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_0
@@ -14540,37 +14642,37 @@
     .param p1, "newRssi"    # I
 
     .prologue
-    .line 3698
+    .line 3699
     const/4 v3, 0x5
 
     invoke-static {p1, v3}, Landroid/net/wifi/WifiManager;->calculateSignalLevel(II)I
 
     move-result v2
 
-    .line 3700
+    .line 3701
     .local v2, "strengthBin":I
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
     if-eq v3, v2, :cond_2
 
-    .line 3701
+    .line 3702
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3702
+    .line 3703
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 3703
+    .line 3704
     .local v4, "uptime":J
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
     if-ltz v3, :cond_0
 
-    .line 3704
+    .line 3705
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
@@ -14579,11 +14681,11 @@
 
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3707
+    .line 3708
     :cond_0
     if-ltz v2, :cond_3
 
-    .line 3708
+    .line 3709
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v2
@@ -14594,14 +14696,14 @@
 
     if-nez v3, :cond_1
 
-    .line 3709
+    .line 3710
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v2
 
     invoke-virtual {v3, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3711
+    .line 3712
     :cond_1
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -14617,20 +14719,20 @@
 
     iput v6, v3, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3716
+    .line 3717
     invoke-virtual {p0, v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3720
+    .line 3721
     :goto_0
     iput v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthBin:I
 
-    .line 3722
+    .line 3723
     .end local v0    # "elapsedRealtime":J
     .end local v4    # "uptime":J
     :cond_2
     return-void
 
-    .line 3718
+    .line 3719
     .restart local v0    # "elapsedRealtime":J
     .restart local v4    # "uptime":J
     :cond_3
@@ -14647,23 +14749,23 @@
     .param p2, "newWs"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3617
+    .line 3618
     iget-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
     if-eqz v5, :cond_1
 
-    .line 3618
+    .line 3619
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3619
+    .line 3620
     .local v2, "elapsedRealtime":J
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3620
+    .line 3621
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14671,7 +14773,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3621
+    .line 3622
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v5
@@ -14680,7 +14782,7 @@
 
     move-result v4
 
-    .line 3622
+    .line 3623
     .local v4, "uid":I
     invoke-virtual {p0, v4}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14688,25 +14790,25 @@
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiStoppedLocked(J)V
 
-    .line 3620
+    .line 3621
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3624
+    .line 3625
     .end local v4    # "uid":I
     :cond_0
     invoke-virtual {p2}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3625
+    .line 3626
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 3626
+    .line 3627
     invoke-virtual {p2, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v5
@@ -14715,7 +14817,7 @@
 
     move-result v4
 
-    .line 3627
+    .line 3628
     .restart local v4    # "uid":I
     invoke-virtual {p0, v4}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14723,12 +14825,12 @@
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiRunningLocked(J)V
 
-    .line 3625
+    .line 3626
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 3630
+    .line 3631
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "elapsedRealtime":J
@@ -14740,7 +14842,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3632
+    .line 3633
     :cond_2
     return-void
 .end method
@@ -14750,23 +14852,23 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3597
+    .line 3598
     iget-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
     if-nez v5, :cond_0
 
-    .line 3598
+    .line 3599
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3599
+    .line 3600
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 3600
+    .line 3601
     .local v6, "uptime":J
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -14778,25 +14880,25 @@
 
     iput v8, v5, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3603
+    .line 3604
     invoke-virtual {p0, v2, v3, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3604
+    .line 3605
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
-    .line 3605
+    .line 3606
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3606
+    .line 3607
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3607
+    .line 3608
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14804,7 +14906,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3608
+    .line 3609
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v5
@@ -14813,7 +14915,7 @@
 
     move-result v4
 
-    .line 3609
+    .line 3610
     .local v4, "uid":I
     invoke-virtual {p0, v4}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -14821,12 +14923,12 @@
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiRunningLocked(J)V
 
-    .line 3607
+    .line 3608
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3612
+    .line 3613
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "elapsedRealtime":J
@@ -14839,7 +14941,7 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3614
+    .line 3615
     :cond_1
     return-void
 .end method
@@ -14849,12 +14951,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3879
+    .line 3880
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3880
+    .line 3881
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14862,19 +14964,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3881
+    .line 3882
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiScanStartedLocked(I)V
 
-    .line 3880
+    .line 3881
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3883
+    .line 3884
     :cond_0
     return-void
 .end method
@@ -14884,29 +14986,29 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3795
+    .line 3796
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3796
+    .line 3797
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3797
+    .line 3798
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3798
+    .line 3799
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3799
+    .line 3800
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -14917,10 +15019,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3802
+    .line 3803
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3804
+    .line 3805
     :cond_0
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
@@ -14928,14 +15030,14 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
-    .line 3805
+    .line 3806
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiScanStartedLocked(J)V
 
-    .line 3806
+    .line 3807
     return-void
 .end method
 
@@ -14944,12 +15046,12 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3886
+    .line 3887
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3887
+    .line 3888
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -14957,19 +15059,19 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 3888
+    .line 3889
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/android/internal/os/BatteryStatsImpl;->noteWifiScanStoppedLocked(I)V
 
-    .line 3887
+    .line 3888
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3890
+    .line 3891
     :cond_0
     return-void
 .end method
@@ -14979,23 +15081,23 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 3809
+    .line 3810
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 3810
+    .line 3811
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3811
+    .line 3812
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3812
+    .line 3813
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
@@ -15003,12 +15105,12 @@
 
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
-    .line 3813
+    .line 3814
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanNesting:I
 
     if-nez v4, :cond_0
 
-    .line 3814
+    .line 3815
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -15019,10 +15121,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 3817
+    .line 3818
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3819
+    .line 3820
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -15030,7 +15132,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiScanStoppedLocked(J)V
 
-    .line 3820
+    .line 3821
     return-void
 .end method
 
@@ -15040,23 +15142,23 @@
     .param p2, "accessPoint"    # Ljava/lang/String;
 
     .prologue
-    .line 3656
+    .line 3657
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
     if-eq v2, p1, :cond_1
 
-    .line 3657
+    .line 3658
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3658
+    .line 3659
     .local v0, "elapsedRealtime":J
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
     if-ltz v2, :cond_0
 
-    .line 3659
+    .line 3660
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
@@ -15065,18 +15167,18 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3661
+    .line 3662
     :cond_0
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiState:I
 
-    .line 3662
+    .line 3663
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v2, v2, p1
 
     invoke-virtual {v2, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3664
+    .line 3665
     .end local v0    # "elapsedRealtime":J
     :cond_1
     return-void
@@ -15087,23 +15189,23 @@
     .param p1, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 3635
+    .line 3636
     iget-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
     if-eqz v5, :cond_0
 
-    .line 3636
+    .line 3637
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 3637
+    .line 3638
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 3638
+    .line 3639
     .local v6, "uptime":J
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -15115,25 +15217,25 @@
 
     iput v8, v5, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3641
+    .line 3642
     invoke-virtual {p0, v2, v3, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3642
+    .line 3643
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
-    .line 3643
+    .line 3644
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3644
+    .line 3645
     invoke-virtual {p1}, Landroid/os/WorkSource;->size()I
 
     move-result v0
 
-    .line 3645
+    .line 3646
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -15141,7 +15243,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3646
+    .line 3647
     invoke-virtual {p1, v1}, Landroid/os/WorkSource;->get(I)I
 
     move-result v5
@@ -15150,7 +15252,7 @@
 
     move-result v4
 
-    .line 3647
+    .line 3648
     .local v4, "uid":I
     invoke-virtual {p0, v4}, Lcom/android/internal/os/BatteryStatsImpl;->getUidStatsLocked(I)Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -15158,12 +15260,12 @@
 
     invoke-virtual {v5, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->noteWifiStoppedLocked(J)V
 
-    .line 3645
+    .line 3646
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3650
+    .line 3651
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "elapsedRealtime":J
@@ -15176,7 +15278,7 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3652
+    .line 3653
     :cond_1
     return-void
 .end method
@@ -15187,29 +15289,29 @@
     .param p2, "failedAuth"    # Z
 
     .prologue
-    .line 3668
+    .line 3669
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
     if-eq v4, p1, :cond_1
 
-    .line 3669
+    .line 3670
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3670
+    .line 3671
     .local v0, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 3671
+    .line 3672
     .local v2, "uptime":J
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
     if-ltz v4, :cond_0
 
-    .line 3672
+    .line 3673
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     iget v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
@@ -15218,18 +15320,18 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->stopRunningLocked(J)V
 
-    .line 3674
+    .line 3675
     :cond_0
     iput p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplState:I
 
-    .line 3675
+    .line 3676
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v4, v4, p1
 
     invoke-virtual {v4, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->startRunningLocked(J)V
 
-    .line 3676
+    .line 3677
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -15244,10 +15346,10 @@
 
     iput v5, v4, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 3681
+    .line 3682
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 3683
+    .line 3684
     .end local v0    # "elapsedRealtime":J
     .end local v2    # "uptime":J
     :cond_1
@@ -15258,13 +15360,13 @@
     .locals 0
 
     .prologue
-    .line 8777
+    .line 8805
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 8781
+    .line 8809
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStartClockTime()J
 
-    .line 8782
+    .line 8810
     return-void
 .end method
 
@@ -15272,10 +15374,10 @@
     .locals 4
 
     .prologue
-    .line 6808
+    .line 6819
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->updateKernelWakelocksLocked()V
 
-    .line 6809
+    .line 6820
     const v1, 0xffff
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -15284,12 +15386,12 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->updateNetworkActivityLocked(IJ)V
 
-    .line 6810
+    .line 6821
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
     if-eqz v1, :cond_0
 
-    .line 6811
+    .line 6822
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
     const/4 v2, 0x2
@@ -15298,17 +15400,17 @@
 
     const/4 v0, 0x1
 
-    .line 6812
+    .line 6823
     .local v0, "screenOn":Z
     :goto_0
     invoke-virtual {p0, v0, v0}, Lcom/android/internal/os/BatteryStatsImpl;->updateDischargeScreenLevelsLocked(ZZ)V
 
-    .line 6814
+    .line 6825
     .end local v0    # "screenOn":Z
     :cond_0
     return-void
 
-    .line 6811
+    .line 6822
     :cond_1
     const/4 v0, 0x0
 
@@ -15320,10 +15422,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 8475
+    .line 8503
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->readFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8476
+    .line 8504
     return-void
 .end method
 
@@ -15332,12 +15434,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 8479
+    .line 8507
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 8480
+    .line 8508
     .local v16, "magic":I
     const v4, -0x458a8b8b
 
@@ -15345,7 +15447,7 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 8481
+    .line 8509
     new-instance v4, Landroid/os/ParcelFormatException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -15374,7 +15476,7 @@
 
     throw v4
 
-    .line 8484
+    .line 8512
     :cond_0
     const/4 v4, 0x0
 
@@ -15384,7 +15486,7 @@
 
     invoke-virtual {v0, v1, v4}, Lcom/android/internal/os/BatteryStatsImpl;->readHistory(Landroid/os/Parcel;Z)V
 
-    .line 8486
+    .line 8514
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -15393,7 +15495,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
-    .line 8487
+    .line 8515
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -15402,7 +15504,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
-    .line 8488
+    .line 8516
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
@@ -15411,7 +15513,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
 
-    .line 8489
+    .line 8517
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
@@ -15420,7 +15522,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
 
-    .line 8490
+    .line 8518
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -15429,7 +15531,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUptime:J
 
-    .line 8491
+    .line 8519
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -15438,7 +15540,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUptimeStart:J
 
-    .line 8492
+    .line 8520
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -15447,7 +15549,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtime:J
 
-    .line 8493
+    .line 8521
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -15456,7 +15558,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtimeStart:J
 
-    .line 8494
+    .line 8522
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -15470,14 +15572,14 @@
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
-    .line 8495
+    .line 8523
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
 
-    .line 8496
+    .line 8524
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -15486,7 +15588,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 8497
+    .line 8525
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -15495,14 +15597,14 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 8499
+    .line 8527
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 8500
+    .line 8528
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15523,7 +15625,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8501
+    .line 8529
     const/4 v12, 0x0
 
     .local v12, "i":I
@@ -15532,7 +15634,7 @@
 
     if-ge v12, v4, :cond_2
 
-    .line 8502
+    .line 8530
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -15557,19 +15659,19 @@
 
     aput-object v4, v23, v12
 
-    .line 8501
+    .line 8529
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 8494
+    .line 8522
     .end local v12    # "i":I
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 8505
+    .line 8533
     .restart local v12    # "i":I
     :cond_2
     const/4 v4, 0x0
@@ -15578,7 +15680,7 @@
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractive:Z
 
-    .line 8506
+    .line 8534
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15599,14 +15701,14 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8507
+    .line 8535
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
-    .line 8508
+    .line 8536
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15627,7 +15729,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8509
+    .line 8537
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15648,7 +15750,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8510
+    .line 8538
     const/4 v12, 0x0
 
     :goto_2
@@ -15656,7 +15758,7 @@
 
     if-ge v12, v4, :cond_3
 
-    .line 8511
+    .line 8539
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -15681,12 +15783,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8510
+    .line 8538
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
-    .line 8514
+    .line 8542
     :cond_3
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
@@ -15708,7 +15810,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8515
+    .line 8543
     const/4 v12, 0x0
 
     :goto_3
@@ -15716,7 +15818,7 @@
 
     if-ge v12, v4, :cond_4
 
-    .line 8516
+    .line 8544
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -15741,12 +15843,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8515
+    .line 8543
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 8519
+    .line 8547
     :cond_4
     const/4 v12, 0x0
 
@@ -15755,7 +15857,7 @@
 
     if-ge v12, v4, :cond_5
 
-    .line 8520
+    .line 8548
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -15772,7 +15874,7 @@
 
     aput-object v5, v4, v12
 
-    .line 8521
+    .line 8549
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -15789,12 +15891,12 @@
 
     aput-object v5, v4, v12
 
-    .line 8519
+    .line 8547
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_4
 
-    .line 8523
+    .line 8551
     :cond_5
     sget v4, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
@@ -15802,7 +15904,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 8524
+    .line 8552
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15823,7 +15925,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8525
+    .line 8553
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15844,7 +15946,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8527
+    .line 8555
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     move-object/from16 v0, p0
@@ -15859,7 +15961,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 8528
+    .line 8556
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     move-object/from16 v0, p0
@@ -15874,7 +15976,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 8529
+    .line 8557
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
     move-object/from16 v0, p0
@@ -15889,14 +15991,14 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
 
-    .line 8530
+    .line 8558
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
-    .line 8531
+    .line 8559
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15917,14 +16019,14 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8532
+    .line 8560
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
-    .line 8533
+    .line 8561
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -15945,7 +16047,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8534
+    .line 8562
     const/4 v12, 0x0
 
     :goto_5
@@ -15953,7 +16055,7 @@
 
     if-ge v12, v4, :cond_6
 
-    .line 8535
+    .line 8563
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -15978,12 +16080,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8534
+    .line 8562
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_5
 
-    .line 8538
+    .line 8566
     :cond_6
     const/4 v12, 0x0
 
@@ -15992,7 +16094,7 @@
 
     if-ge v12, v4, :cond_7
 
-    .line 8539
+    .line 8567
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -16017,12 +16119,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8538
+    .line 8566
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_6
 
-    .line 8542
+    .line 8570
     :cond_7
     const/4 v12, 0x0
 
@@ -16031,7 +16133,7 @@
 
     if-ge v12, v4, :cond_8
 
-    .line 8543
+    .line 8571
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -16056,12 +16158,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8542
+    .line 8570
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_7
 
-    .line 8546
+    .line 8574
     :cond_8
     const/4 v4, 0x0
 
@@ -16069,7 +16171,7 @@
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
-    .line 8547
+    .line 8575
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -16090,7 +16192,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8548
+    .line 8576
     const/4 v12, 0x0
 
     :goto_8
@@ -16098,7 +16200,7 @@
 
     if-ge v12, v4, :cond_9
 
-    .line 8549
+    .line 8577
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -16123,12 +16225,12 @@
 
     aput-object v4, v23, v12
 
-    .line 8548
+    .line 8576
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_8
 
-    .line 8552
+    .line 8580
     :cond_9
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -16138,7 +16240,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
-    .line 8553
+    .line 8581
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16147,7 +16249,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLoadedNumConnectivityChange:I
 
-    .line 8554
+    .line 8582
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16156,14 +16258,14 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggedNumConnectivityChange:I
 
-    .line 8555
+    .line 8583
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnNesting:I
 
-    .line 8556
+    .line 8584
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -16182,14 +16284,14 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8557
+    .line 8585
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnNesting:I
 
-    .line 8558
+    .line 8586
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -16208,14 +16310,14 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8559
+    .line 8587
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
-    .line 8560
+    .line 8588
     new-instance v4, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     const/4 v5, 0x0
@@ -16236,7 +16338,7 @@
 
     iput-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 8561
+    .line 8589
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16245,7 +16347,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
-    .line 8562
+    .line 8590
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16254,7 +16356,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
 
-    .line 8563
+    .line 8591
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16263,7 +16365,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 8564
+    .line 8592
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16272,7 +16374,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
-    .line 8565
+    .line 8593
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16281,7 +16383,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
 
-    .line 8566
+    .line 8594
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16290,7 +16392,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
 
-    .line 8567
+    .line 8595
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16299,7 +16401,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 8568
+    .line 8596
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16308,7 +16410,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
-    .line 8569
+    .line 8597
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16317,7 +16419,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 8570
+    .line 8598
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16326,7 +16428,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
 
-    .line 8571
+    .line 8599
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16335,7 +16437,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
-    .line 8572
+    .line 8600
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
@@ -16344,7 +16446,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->readLongArray([J)V
 
-    .line 8573
+    .line 8601
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16353,7 +16455,7 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
-    .line 8574
+    .line 8602
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
@@ -16362,7 +16464,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->readLongArray([J)V
 
-    .line 8575
+    .line 8603
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
@@ -16371,7 +16473,7 @@
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
-    .line 8577
+    .line 8605
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -16380,26 +16482,26 @@
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingCount:I
 
-    .line 8578
+    .line 8606
     const/4 v4, -0x1
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 8580
+    .line 8608
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
-    .line 8581
+    .line 8609
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 8582
+    .line 8610
     .local v10, "NKW":I
     const/4 v13, 0x0
 
@@ -16407,19 +16509,19 @@
     :goto_9
     if-ge v13, v10, :cond_b
 
-    .line 8583
+    .line 8611
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    .line 8584
+    .line 8612
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v22
 
-    .line 8585
+    .line 8613
     .local v22, "wakelockName":Ljava/lang/String;
     new-instance v15, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
@@ -16431,7 +16533,7 @@
 
     invoke-direct {v15, v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Landroid/os/Parcel;)V
 
-    .line 8586
+    .line 8614
     .local v15, "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     move-object/from16 v0, p0
 
@@ -16441,7 +16543,7 @@
 
     invoke-virtual {v4, v0, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8582
+    .line 8610
     .end local v15    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     .end local v22    # "wakelockName":Ljava/lang/String;
     :cond_a
@@ -16449,7 +16551,7 @@
 
     goto :goto_9
 
-    .line 8590
+    .line 8618
     :cond_b
     move-object/from16 v0, p0
 
@@ -16457,12 +16559,12 @@
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
-    .line 8591
+    .line 8619
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 8592
+    .line 8620
     .local v11, "NWR":I
     const/4 v14, 0x0
 
@@ -16470,19 +16572,19 @@
     :goto_a
     if-ge v14, v11, :cond_d
 
-    .line 8593
+    .line 8621
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_c
 
-    .line 8594
+    .line 8622
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 8595
+    .line 8623
     .local v18, "reasonName":Ljava/lang/String;
     new-instance v19, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
@@ -16496,7 +16598,7 @@
 
     invoke-direct {v0, v4, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Landroid/os/Parcel;)V
 
-    .line 8596
+    .line 8624
     .local v19, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     move-object/from16 v0, p0
 
@@ -16508,7 +16610,7 @@
 
     invoke-virtual {v4, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8592
+    .line 8620
     .end local v18    # "reasonName":Ljava/lang/String;
     .end local v19    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_c
@@ -16516,7 +16618,7 @@
 
     goto :goto_a
 
-    .line 8600
+    .line 8628
     :cond_d
     move-object/from16 v0, p0
 
@@ -16524,82 +16626,84 @@
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8601
+    .line 8629
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFullTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8602
+    .line 8630
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWindowTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8603
+    .line 8631
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiRunningTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8604
+    .line 8632
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFullWifiLockTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8605
+    .line 8633
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiScanTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8606
+    .line 8634
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiBatchedScanTimers:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->clear()V
 
-    .line 8607
+    .line 8635
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiMulticastTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8608
+    .line 8636
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mAudioTurnedOnTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8609
+    .line 8637
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mVideoTurnedOnTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 8611
+    .line 8639
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    sput v4, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    move-object/from16 v0, p0
 
-    .line 8613
+    invoke-virtual {v0, v4}, Lcom/android/internal/os/BatteryStatsImpl;->setCpuSpeedSteps(I)V
+
+    .line 8641
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v17
 
-    .line 8614
+    .line 8642
     .local v17, "numUids":I
     move-object/from16 v0, p0
 
@@ -16607,7 +16711,7 @@
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->clear()V
 
-    .line 8615
+    .line 8643
     const/4 v12, 0x0
 
     :goto_b
@@ -16615,12 +16719,12 @@
 
     if-ge v12, v0, :cond_e
 
-    .line 8616
+    .line 8644
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v21
 
-    .line 8617
+    .line 8645
     .local v21, "uid":I
     new-instance v20, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -16632,7 +16736,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;-><init>(Lcom/android/internal/os/BatteryStatsImpl;I)V
 
-    .line 8618
+    .line 8646
     .local v20, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     move-object/from16 v0, p0
 
@@ -16648,7 +16752,7 @@
 
     invoke-virtual {v0, v4, v5, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->readFromParcelLocked(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Landroid/os/Parcel;)V
 
-    .line 8619
+    .line 8647
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -16659,12 +16763,12 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 8615
+    .line 8643
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_b
 
-    .line 8621
+    .line 8649
     .end local v20    # "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     .end local v21    # "uid":I
     :cond_e
@@ -16677,12 +16781,12 @@
     .param p2, "andOldHistory"    # Z
 
     .prologue
-    .line 7760
+    .line 7788
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
-    .line 7762
+    .line 7790
     .local v4, "historyBaseTime":J
     move-object/from16 v0, p0
 
@@ -16692,7 +16796,7 @@
 
     invoke-virtual {v14, v15}, Landroid/os/Parcel;->setDataSize(I)V
 
-    .line 7763
+    .line 7791
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -16701,33 +16805,33 @@
 
     invoke-virtual {v14, v15}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 7764
+    .line 7792
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v14}, Ljava/util/HashMap;->clear()V
 
-    .line 7765
+    .line 7793
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 7766
+    .line 7794
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 7768
+    .line 7796
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 7769
+    .line 7797
     .local v8, "numTags":I
     const/4 v6, 0x0
 
@@ -16735,40 +16839,40 @@
     :goto_0
     if-ge v6, v8, :cond_1
 
-    .line 7770
+    .line 7798
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 7771
+    .line 7799
     .local v7, "idx":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 7772
+    .line 7800
     .local v9, "str":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
 
-    .line 7773
+    .line 7801
     .local v13, "uid":I
     new-instance v12, Landroid/os/BatteryStats$HistoryTag;
 
     invoke-direct {v12}, Landroid/os/BatteryStats$HistoryTag;-><init>()V
 
-    .line 7774
+    .line 7802
     .local v12, "tag":Landroid/os/BatteryStats$HistoryTag;
     iput-object v9, v12, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
-    .line 7775
+    .line 7803
     iput v13, v12, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
-    .line 7776
+    .line 7804
     iput v7, v12, Landroid/os/BatteryStats$HistoryTag;->poolIdx:I
 
-    .line 7777
+    .line 7805
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
@@ -16779,21 +16883,21 @@
 
     invoke-virtual {v14, v12, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7778
+    .line 7806
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
     if-lt v7, v14, :cond_0
 
-    .line 7779
+    .line 7807
     add-int/lit8 v14, v7, 0x1
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNextHistoryTagIdx:I
 
-    .line 7781
+    .line 7809
     :cond_0
     move-object/from16 v0, p0
 
@@ -16813,12 +16917,12 @@
 
     iput v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumHistoryTagChars:I
 
-    .line 7769
+    .line 7797
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 7784
+    .line 7812
     .end local v7    # "idx":I
     .end local v9    # "str":Ljava/lang/String;
     .end local v12    # "tag":Landroid/os/BatteryStats$HistoryTag;
@@ -16828,19 +16932,19 @@
 
     move-result v2
 
-    .line 7785
+    .line 7813
     .local v2, "bufSize":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v3
 
-    .line 7786
+    .line 7814
     .local v3, "curPos":I
     const/high16 v14, 0xf0000
 
     if-lt v2, v14, :cond_4
 
-    .line 7787
+    .line 7815
     const-string v14, "BatteryStatsImpl"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -16863,20 +16967,20 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7797
+    .line 7825
     :goto_1
     if-eqz p2, :cond_2
 
-    .line 7798
+    .line 7826
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/os/BatteryStatsImpl;->readOldHistory(Landroid/os/Parcel;)V
 
-    .line 7807
+    .line 7835
     :cond_2
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
-    .line 7817
+    .line 7845
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
@@ -16887,12 +16991,12 @@
 
     if-lez v14, :cond_3
 
-    .line 7818
+    .line 7846
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v10
 
-    .line 7819
+    .line 7847
     .local v10, "oldnow":J
     move-object/from16 v0, p0
 
@@ -16908,18 +17012,18 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
-    .line 7827
+    .line 7855
     .end local v10    # "oldnow":J
     :cond_3
     return-void
 
-    .line 7788
+    .line 7816
     :cond_4
     and-int/lit8 v14, v2, -0x4
 
     if-eq v14, v2, :cond_5
 
-    .line 7789
+    .line 7817
     const-string v14, "BatteryStatsImpl"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -16944,7 +17048,7 @@
 
     goto :goto_1
 
-    .line 7793
+    .line 7821
     :cond_5
     move-object/from16 v0, p0
 
@@ -16954,7 +17058,7 @@
 
     invoke-virtual {v14, v0, v3, v2}, Landroid/os/Parcel;->appendFrom(Landroid/os/Parcel;II)V
 
-    .line 7794
+    .line 7822
     add-int v14, v3, v2
 
     move-object/from16 v0, p1
@@ -16970,18 +17074,18 @@
     .param p2, "cur"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 2067
+    .line 2068
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 2068
+    .line 2069
     .local v7, "firstToken":I
     const v13, 0x7ffff
 
     and-int v6, v7, v13
 
-    .line 2069
+    .line 2070
     .local v6, "deltaTimeToken":I
     const/4 v13, 0x0
 
@@ -16989,19 +17093,19 @@
 
     iput-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->cmd:B
 
-    .line 2070
+    .line 2071
     const/4 v13, 0x1
 
     move-object/from16 v0, p2
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2074
+    .line 2075
     const v13, 0x7fffd
 
     if-ge v6, v13, :cond_2
 
-    .line 2075
+    .line 2076
     move-object/from16 v0, p2
 
     iget-wide v14, v0, Landroid/os/BatteryStats$HistoryItem;->time:J
@@ -17016,7 +17120,7 @@
 
     iput-wide v14, v0, Landroid/os/BatteryStats$HistoryItem;->time:J
 
-    .line 2094
+    .line 2095
     :goto_0
     const/high16 v13, 0x80000
 
@@ -17024,12 +17128,12 @@
 
     if-eqz v13, :cond_0
 
-    .line 2095
+    .line 2096
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 2096
+    .line 2097
     .local v2, "batteryLevelInt":I
     shr-int/lit8 v13, v2, 0x19
 
@@ -17041,7 +17145,7 @@
 
     iput-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
-    .line 2097
+    .line 2098
     shl-int/lit8 v13, v2, 0x7
 
     shr-int/lit8 v13, v13, 0x15
@@ -17052,7 +17156,7 @@
 
     iput-short v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryTemperature:S
 
-    .line 2098
+    .line 2099
     and-int/lit16 v13, v2, 0x3fff
 
     int-to-char v13, v13
@@ -17061,7 +17165,7 @@
 
     iput-char v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryVoltage:C
 
-    .line 2099
+    .line 2100
     move-object/from16 v0, p2
 
     iget v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
@@ -17072,7 +17176,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2107
+    .line 2108
     .end local v2    # "batteryLevelInt":I
     :cond_0
     const/high16 v13, 0x100000
@@ -17081,12 +17185,12 @@
 
     if-eqz v13, :cond_5
 
-    .line 2108
+    .line 2109
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 2109
+    .line 2110
     .local v10, "stateInt":I
     const/high16 v13, -0x1000000
 
@@ -17102,7 +17206,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 2110
+    .line 2111
     shr-int/lit8 v13, v10, 0x1d
 
     and-int/lit8 v13, v13, 0x7
@@ -17113,7 +17217,7 @@
 
     iput-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryStatus:B
 
-    .line 2112
+    .line 2113
     shr-int/lit8 v13, v10, 0x1a
 
     and-int/lit8 v13, v13, 0x7
@@ -17124,7 +17228,7 @@
 
     iput-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryHealth:B
 
-    .line 2114
+    .line 2115
     shr-int/lit8 v13, v10, 0x18
 
     and-int/lit8 v13, v13, 0x3
@@ -17135,14 +17239,14 @@
 
     iput-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
-    .line 2116
+    .line 2117
     move-object/from16 v0, p2
 
     iget-byte v13, v0, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
     packed-switch v13, :pswitch_data_0
 
-    .line 2127
+    .line 2128
     :goto_1
     move-object/from16 v0, p2
 
@@ -17154,7 +17258,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2138
+    .line 2139
     .end local v10    # "stateInt":I
     :goto_2
     const/high16 v13, 0x200000
@@ -17163,7 +17267,7 @@
 
     if-eqz v13, :cond_1
 
-    .line 2139
+    .line 2140
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v13
@@ -17172,7 +17276,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->states2:I
 
-    .line 2144
+    .line 2145
     :cond_1
     const/high16 v13, 0x400000
 
@@ -17180,18 +17284,18 @@
 
     if-eqz v13, :cond_8
 
-    .line 2145
+    .line 2146
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 2146
+    .line 2147
     .local v9, "indexes":I
     const v13, 0xffff
 
     and-int v11, v9, v13
 
-    .line 2147
+    .line 2148
     .local v11, "wakeLockIndex":I
     shr-int/lit8 v13, v9, 0x10
 
@@ -17199,13 +17303,13 @@
 
     and-int v12, v13, v14
 
-    .line 2148
+    .line 2149
     .local v12, "wakeReasonIndex":I
     const v13, 0xffff
 
     if-eq v11, v13, :cond_6
 
-    .line 2149
+    .line 2150
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->localWakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -17214,7 +17318,7 @@
 
     iput-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2150
+    .line 2151
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -17223,13 +17327,13 @@
 
     invoke-direct {v0, v11, v13}, Lcom/android/internal/os/BatteryStatsImpl;->readHistoryTag(ILandroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2156
+    .line 2157
     :goto_3
     const v13, 0xffff
 
     if-eq v12, v13, :cond_7
 
-    .line 2157
+    .line 2158
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->localWakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -17238,7 +17342,7 @@
 
     iput-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2158
+    .line 2159
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -17247,7 +17351,7 @@
 
     invoke-direct {v0, v12, v13}, Lcom/android/internal/os/BatteryStatsImpl;->readHistoryTag(ILandroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2164
+    .line 2165
     :goto_4
     move-object/from16 v0, p2
 
@@ -17259,7 +17363,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2170
+    .line 2171
     .end local v9    # "indexes":I
     .end local v11    # "wakeLockIndex":I
     .end local v12    # "wakeReasonIndex":I
@@ -17270,7 +17374,7 @@
 
     if-eqz v13, :cond_9
 
-    .line 2171
+    .line 2172
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->localEventTag:Landroid/os/BatteryStats$HistoryTag;
@@ -17279,12 +17383,12 @@
 
     iput-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2172
+    .line 2173
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 2173
+    .line 2174
     .local v3, "codeAndIndex":I
     const v13, 0xffff
 
@@ -17294,14 +17398,14 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->eventCode:I
 
-    .line 2174
+    .line 2175
     shr-int/lit8 v13, v3, 0x10
 
     const v14, 0xffff
 
     and-int v8, v13, v14
 
-    .line 2175
+    .line 2176
     .local v8, "index":I
     move-object/from16 v0, p2
 
@@ -17311,7 +17415,7 @@
 
     invoke-direct {v0, v8, v13}, Lcom/android/internal/os/BatteryStatsImpl;->readHistoryTag(ILandroid/os/BatteryStats$HistoryTag;)V
 
-    .line 2176
+    .line 2177
     move-object/from16 v0, p2
 
     iget v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
@@ -17322,19 +17426,19 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2183
+    .line 2184
     .end local v3    # "codeAndIndex":I
     .end local v8    # "index":I
     :goto_6
     return-void
 
-    .line 2076
+    .line 2077
     :cond_2
     const v13, 0x7fffd
 
     if-ne v6, v13, :cond_3
 
-    .line 2077
+    .line 2078
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v14
@@ -17343,7 +17447,7 @@
 
     iput-wide v14, v0, Landroid/os/BatteryStats$HistoryItem;->time:J
 
-    .line 2078
+    .line 2079
     move-object/from16 v0, p2
 
     iget v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
@@ -17354,7 +17458,7 @@
 
     iput v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
 
-    .line 2080
+    .line 2081
     move-object/from16 v0, p2
 
     move-object/from16 v1, p1
@@ -17363,18 +17467,18 @@
 
     goto :goto_6
 
-    .line 2082
+    .line 2083
     :cond_3
     const v13, 0x7fffe
 
     if-ne v6, v13, :cond_4
 
-    .line 2083
+    .line 2084
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 2084
+    .line 2085
     .local v4, "delta":I
     move-object/from16 v0, p2
 
@@ -17390,7 +17494,7 @@
 
     iput-wide v14, v0, Landroid/os/BatteryStats$HistoryItem;->time:J
 
-    .line 2085
+    .line 2086
     move-object/from16 v0, p2
 
     iget v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
@@ -17403,14 +17507,14 @@
 
     goto/16 :goto_0
 
-    .line 2088
+    .line 2089
     .end local v4    # "delta":I
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
-    .line 2090
+    .line 2091
     .local v4, "delta":J
     move-object/from16 v0, p2
 
@@ -17422,7 +17526,7 @@
 
     iput-wide v14, v0, Landroid/os/BatteryStats$HistoryItem;->time:J
 
-    .line 2091
+    .line 2092
     move-object/from16 v0, p2
 
     iget v13, v0, Landroid/os/BatteryStats$HistoryItem;->numReadInts:I
@@ -17435,7 +17539,7 @@
 
     goto/16 :goto_0
 
-    .line 2118
+    .line 2119
     .end local v4    # "delta":J
     .restart local v10    # "stateInt":I
     :pswitch_0
@@ -17447,7 +17551,7 @@
 
     goto/16 :goto_1
 
-    .line 2121
+    .line 2122
     :pswitch_1
     const/4 v13, 0x2
 
@@ -17457,7 +17561,7 @@
 
     goto/16 :goto_1
 
-    .line 2124
+    .line 2125
     :pswitch_2
     const/4 v13, 0x4
 
@@ -17467,7 +17571,7 @@
 
     goto/16 :goto_1
 
-    .line 2135
+    .line 2136
     .end local v10    # "stateInt":I
     :cond_5
     const/high16 v13, -0x1000000
@@ -17490,7 +17594,7 @@
 
     goto/16 :goto_2
 
-    .line 2154
+    .line 2155
     .restart local v9    # "indexes":I
     .restart local v11    # "wakeLockIndex":I
     .restart local v12    # "wakeReasonIndex":I
@@ -17503,7 +17607,7 @@
 
     goto/16 :goto_3
 
-    .line 2162
+    .line 2163
     :cond_7
     const/4 v13, 0x0
 
@@ -17513,7 +17617,7 @@
 
     goto/16 :goto_4
 
-    .line 2166
+    .line 2167
     .end local v9    # "indexes":I
     .end local v11    # "wakeLockIndex":I
     .end local v12    # "wakeReasonIndex":I
@@ -17524,7 +17628,7 @@
 
     iput-object v13, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
 
-    .line 2167
+    .line 2168
     const/4 v13, 0x0
 
     move-object/from16 v0, p2
@@ -17533,7 +17637,7 @@
 
     goto/16 :goto_5
 
-    .line 2181
+    .line 2182
     :cond_9
     const/4 v13, 0x0
 
@@ -17543,7 +17647,7 @@
 
     goto/16 :goto_6
 
-    .line 2116
+    .line 2117
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -17558,30 +17662,30 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 7716
+    .line 7744
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     if-nez v1, :cond_1
 
-    .line 7717
+    .line 7745
     const-string v1, "BatteryStats"
 
     const-string v6, "readLocked: no file associated with this instance"
 
     invoke-static {v1, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7753
+    .line 7781
     :cond_0
     :goto_0
     return-void
 
-    .line 7721
+    .line 7749
     :cond_1
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->clear()V
 
-    .line 7724
+    .line 7752
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
@@ -17589,7 +17693,7 @@
 
     move-result-object v8
 
-    .line 7725
+    .line 7753
     .local v8, "file":Ljava/io/File;
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
@@ -17597,24 +17701,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 7728
+    .line 7756
     new-instance v11, Ljava/io/FileInputStream;
 
     invoke-direct {v11, v8}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 7730
+    .line 7758
     .local v11, "stream":Ljava/io/FileInputStream;
     invoke-static {v11}, Lcom/android/internal/os/BatteryStatsHelper;->readFully(Ljava/io/FileInputStream;)[B
 
     move-result-object v10
 
-    .line 7731
+    .line 7759
     .local v10, "raw":[B
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v9
 
-    .line 7732
+    .line 7760
     .local v9, "in":Landroid/os/Parcel;
     const/4 v1, 0x0
 
@@ -17622,20 +17726,20 @@
 
     invoke-virtual {v9, v10, v1, v6}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 7733
+    .line 7761
     const/4 v1, 0x0
 
     invoke-virtual {v9, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 7734
+    .line 7762
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 7736
+    .line 7764
     invoke-virtual {p0, v9}, Lcom/android/internal/os/BatteryStatsImpl;->readSummaryFromParcel(Landroid/os/Parcel;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7741
+    .line 7769
     .end local v8    # "file":Ljava/io/File;
     .end local v9    # "in":Landroid/os/Parcel;
     .end local v10    # "raw":[B
@@ -17645,7 +17749,7 @@
 
     iput-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
 
-    .line 7743
+    .line 7771
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v1}, Landroid/os/Parcel;->dataPosition()I
@@ -17654,23 +17758,23 @@
 
     if-lez v1, :cond_0
 
-    .line 7744
+    .line 7772
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 7745
+    .line 7773
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 7746
+    .line 7774
     .local v2, "elapsedRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 7750
+    .line 7778
     .local v4, "uptime":J
     const/4 v6, 0x4
 
@@ -17684,18 +17788,18 @@
 
     move v6, v12
 
-    .line 7751
+    .line 7779
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/os/BatteryStatsImpl;->startRecordingHistory(JJZ)V
 
     goto :goto_0
 
-    .line 7737
+    .line 7765
     .end local v2    # "elapsedRealtime":J
     .end local v4    # "uptime":J
     :catch_0
     move-exception v0
 
-    .line 7738
+    .line 7766
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "BatteryStats"
 
@@ -17711,7 +17815,7 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 7831
+    .line 7859
     return-void
 .end method
 
@@ -17720,12 +17824,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 7886
+    .line 7914
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v31
 
-    .line 7887
+    .line 7915
     .local v31, "version":I
     const/16 v33, 0x74
 
@@ -17735,7 +17839,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 7888
+    .line 7916
     const-string v33, "BatteryStats"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -17780,12 +17884,12 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8167
+    .line 8195
     :cond_0
     :goto_0
     return-void
 
-    .line 7893
+    .line 7921
     :cond_1
     const/16 v33, 0x1
 
@@ -17797,7 +17901,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl;->readHistory(Landroid/os/Parcel;Z)V
 
-    .line 7895
+    .line 7923
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17808,7 +17912,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
-    .line 7896
+    .line 7924
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v34
@@ -17819,7 +17923,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mUptime:J
 
-    .line 7897
+    .line 7925
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v34
@@ -17830,7 +17934,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mRealtime:J
 
-    .line 7898
+    .line 7926
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v34
@@ -17841,7 +17945,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl;->mStartClockTime:J
 
-    .line 7899
+    .line 7927
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v33
@@ -17852,7 +17956,7 @@
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
 
-    .line 7900
+    .line 7928
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v33
@@ -17863,7 +17967,7 @@
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
 
-    .line 7901
+    .line 7929
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -17876,7 +17980,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->readSummaryFromParcel(Landroid/os/Parcel;)V
 
-    .line 7902
+    .line 7930
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -17889,7 +17993,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->readSummaryFromParcel(Landroid/os/Parcel;)V
 
-    .line 7903
+    .line 7931
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17900,7 +18004,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
 
-    .line 7904
+    .line 7932
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17911,7 +18015,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
 
-    .line 7905
+    .line 7933
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17922,7 +18026,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 7906
+    .line 7934
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17933,7 +18037,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
-    .line 7907
+    .line 7935
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17944,7 +18048,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
 
-    .line 7908
+    .line 7936
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17955,7 +18059,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
 
-    .line 7909
+    .line 7937
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17966,7 +18070,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
-    .line 7910
+    .line 7938
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17977,7 +18081,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
 
-    .line 7911
+    .line 7939
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -17988,7 +18092,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
-    .line 7912
+    .line 7940
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
@@ -18001,7 +18105,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->readLongArray([J)V
 
-    .line 7913
+    .line 7941
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -18012,7 +18116,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
-    .line 7914
+    .line 7942
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
@@ -18025,7 +18129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->readLongArray([J)V
 
-    .line 7916
+    .line 7944
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
@@ -18040,7 +18144,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
 
-    .line 7918
+    .line 7946
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18049,7 +18153,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
-    .line 7919
+    .line 7947
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18062,7 +18166,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7920
+    .line 7948
     const/4 v12, 0x0
 
     .local v12, "i":I
@@ -18073,7 +18177,7 @@
 
     if-ge v12, v0, :cond_2
 
-    .line 7921
+    .line 7949
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18088,12 +18192,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7920
+    .line 7948
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 7923
+    .line 7951
     :cond_2
     const/16 v33, 0x0
 
@@ -18103,7 +18207,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mInteractive:Z
 
-    .line 7924
+    .line 7952
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInteractiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18116,7 +18220,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7925
+    .line 7953
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18125,7 +18229,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOn:Z
 
-    .line 7926
+    .line 7954
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18138,7 +18242,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7927
+    .line 7955
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18151,7 +18255,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7928
+    .line 7956
     const/4 v12, 0x0
 
     :goto_2
@@ -18161,7 +18265,7 @@
 
     if-ge v12, v0, :cond_3
 
-    .line 7929
+    .line 7957
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18176,12 +18280,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7928
+    .line 7956
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
-    .line 7931
+    .line 7959
     :cond_3
     move-object/from16 v0, p0
 
@@ -18195,7 +18299,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7932
+    .line 7960
     const/4 v12, 0x0
 
     :goto_3
@@ -18205,7 +18309,7 @@
 
     if-ge v12, v0, :cond_4
 
-    .line 7933
+    .line 7961
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18220,12 +18324,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7932
+    .line 7960
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 7935
+    .line 7963
     :cond_4
     const/4 v12, 0x0
 
@@ -18236,7 +18340,7 @@
 
     if-ge v12, v0, :cond_5
 
-    .line 7936
+    .line 7964
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -18251,7 +18355,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7937
+    .line 7965
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -18266,12 +18370,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7935
+    .line 7963
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_4
 
-    .line 7939
+    .line 7967
     :cond_5
     sget v33, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
@@ -18281,7 +18385,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioPowerState:I
 
-    .line 7940
+    .line 7968
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18294,7 +18398,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7941
+    .line 7969
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18307,7 +18411,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7942
+    .line 7970
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -18320,7 +18424,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7943
+    .line 7971
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -18333,7 +18437,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7944
+    .line 7972
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -18346,7 +18450,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7945
+    .line 7973
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18355,7 +18459,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOn:Z
 
-    .line 7946
+    .line 7974
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18368,7 +18472,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7947
+    .line 7975
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18377,7 +18481,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunning:Z
 
-    .line 7948
+    .line 7976
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18390,7 +18494,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7949
+    .line 7977
     const/4 v12, 0x0
 
     :goto_5
@@ -18400,7 +18504,7 @@
 
     if-ge v12, v0, :cond_6
 
-    .line 7950
+    .line 7978
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18415,12 +18519,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7949
+    .line 7977
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_5
 
-    .line 7952
+    .line 7980
     :cond_6
     const/4 v12, 0x0
 
@@ -18431,7 +18535,7 @@
 
     if-ge v12, v0, :cond_7
 
-    .line 7953
+    .line 7981
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18446,12 +18550,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7952
+    .line 7980
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_6
 
-    .line 7955
+    .line 7983
     :cond_7
     const/4 v12, 0x0
 
@@ -18462,7 +18566,7 @@
 
     if-ge v12, v0, :cond_8
 
-    .line 7956
+    .line 7984
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18477,12 +18581,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7955
+    .line 7983
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_7
 
-    .line 7958
+    .line 7986
     :cond_8
     const/16 v33, 0x0
 
@@ -18492,7 +18596,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOn:Z
 
-    .line 7959
+    .line 7987
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18505,7 +18609,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7960
+    .line 7988
     const/4 v12, 0x0
 
     :goto_8
@@ -18515,7 +18619,7 @@
 
     if-ge v12, v0, :cond_9
 
-    .line 7961
+    .line 7989
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18530,12 +18634,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7960
+    .line 7988
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_8
 
-    .line 7963
+    .line 7991
     :cond_9
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -18553,7 +18657,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mNumConnectivityChange:I
 
-    .line 7964
+    .line 7992
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18562,7 +18666,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOn:Z
 
-    .line 7965
+    .line 7993
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18575,12 +18679,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7967
+    .line 7995
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 7968
+    .line 7996
     .local v5, "NKW":I
     const/16 v33, 0x2710
 
@@ -18588,7 +18692,7 @@
 
     if-le v5, v0, :cond_a
 
-    .line 7969
+    .line 7997
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -18615,7 +18719,7 @@
 
     goto/16 :goto_0
 
-    .line 7972
+    .line 8000
     :cond_a
     const/4 v14, 0x0
 
@@ -18623,19 +18727,19 @@
     :goto_9
     if-ge v14, v5, :cond_c
 
-    .line 7973
+    .line 8001
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_b
 
-    .line 7974
+    .line 8002
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 7975
+    .line 8003
     .local v20, "kwltName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -18651,20 +18755,20 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7972
+    .line 8000
     .end local v20    # "kwltName":Ljava/lang/String;
     :cond_b
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_9
 
-    .line 7979
+    .line 8007
     :cond_c
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 7980
+    .line 8008
     .local v11, "NWR":I
     const/16 v33, 0x2710
 
@@ -18672,7 +18776,7 @@
 
     if-le v11, v0, :cond_d
 
-    .line 7981
+    .line 8009
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -18699,7 +18803,7 @@
 
     goto/16 :goto_0
 
-    .line 7984
+    .line 8012
     :cond_d
     const/16 v19, 0x0
 
@@ -18709,19 +18813,19 @@
 
     if-ge v0, v11, :cond_f
 
-    .line 7985
+    .line 8013
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_e
 
-    .line 7986
+    .line 8014
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v25
 
-    .line 7987
+    .line 8015
     .local v25, "reasonName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -18737,27 +18841,35 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 7984
+    .line 8012
     .end local v25    # "reasonName":Ljava/lang/String;
     :cond_e
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_a
 
-    .line 7991
+    .line 8019
     :cond_f
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
-    sput v33, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    move-object/from16 v0, p0
 
-    .line 7992
-    sget v33, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    move/from16 v1, v33
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl;->setCpuSpeedSteps(I)V
+
+    .line 8020
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v33
 
     if-ltz v33, :cond_10
 
-    sget v33, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v33
 
     const/16 v34, 0x64
 
@@ -18767,7 +18879,7 @@
 
     if-le v0, v1, :cond_11
 
-    .line 7993
+    .line 8021
     :cond_10
     new-instance v33, Landroid/os/BadParcelableException;
 
@@ -18781,7 +18893,9 @@
 
     move-result-object v34
 
-    sget v35, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v35
 
     invoke-virtual/range {v34 .. v35}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -18795,13 +18909,13 @@
 
     throw v33
 
-    .line 7996
+    .line 8024
     :cond_11
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 7997
+    .line 8025
     .local v9, "NU":I
     const/16 v33, 0x2710
 
@@ -18809,7 +18923,7 @@
 
     if-le v9, v0, :cond_12
 
-    .line 7998
+    .line 8026
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -18836,7 +18950,7 @@
 
     goto/16 :goto_0
 
-    .line 8001
+    .line 8029
     :cond_12
     const/16 v17, 0x0
 
@@ -18846,12 +18960,12 @@
 
     if-ge v0, v9, :cond_0
 
-    .line 8002
+    .line 8030
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v30
 
-    .line 8003
+    .line 8031
     .local v30, "uid":I
     new-instance v29, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
@@ -18863,7 +18977,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;-><init>(Lcom/android/internal/os/BatteryStatsImpl;I)V
 
-    .line 8004
+    .line 8032
     .local v29, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     move-object/from16 v0, p0
 
@@ -18879,7 +18993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 8006
+    .line 8034
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -18888,14 +19002,14 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiRunning:Z
 
-    .line 8007
+    .line 8035
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_13
 
-    .line 8008
+    .line 8036
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18908,7 +19022,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8010
+    .line 8038
     :cond_13
     const/16 v33, 0x0
 
@@ -18918,14 +19032,14 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mFullWifiLockOut:Z
 
-    .line 8011
+    .line 8039
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_14
 
-    .line 8012
+    .line 8040
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mFullWifiLockTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18938,7 +19052,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8014
+    .line 8042
     :cond_14
     const/16 v33, 0x0
 
@@ -18948,14 +19062,14 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiScanStarted:Z
 
-    .line 8015
+    .line 8043
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_15
 
-    .line 8016
+    .line 8044
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiScanTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -18968,7 +19082,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8018
+    .line 8046
     :cond_15
     const/16 v33, -0x1
 
@@ -18978,7 +19092,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiBatchedScanBinStarted:I
 
-    .line 8019
+    .line 8047
     const/4 v12, 0x0
 
     :goto_c
@@ -18988,14 +19102,14 @@
 
     if-ge v12, v0, :cond_17
 
-    .line 8020
+    .line 8048
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_16
 
-    .line 8021
+    .line 8049
     const/16 v33, 0x0
 
     move-object/from16 v0, v29
@@ -19004,7 +19118,7 @@
 
     invoke-virtual {v0, v12, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->makeWifiBatchedScanBin(ILandroid/os/Parcel;)V
 
-    .line 8022
+    .line 8050
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiBatchedScanTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -19019,13 +19133,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8019
+    .line 8047
     :cond_16
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_c
 
-    .line 8025
+    .line 8053
     :cond_17
     const/16 v33, 0x0
 
@@ -19035,14 +19149,14 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiMulticastEnabled:Z
 
-    .line 8026
+    .line 8054
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_18
 
-    .line 8027
+    .line 8055
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiMulticastTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -19055,7 +19169,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8029
+    .line 8057
     :cond_18
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19063,7 +19177,7 @@
 
     if-eqz v33, :cond_19
 
-    .line 8030
+    .line 8058
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->createAudioTurnedOnTimerLocked()Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     move-result-object v33
@@ -19074,7 +19188,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8032
+    .line 8060
     :cond_19
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19082,7 +19196,7 @@
 
     if-eqz v33, :cond_1a
 
-    .line 8033
+    .line 8061
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->createVideoTurnedOnTimerLocked()Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     move-result-object v33
@@ -19093,7 +19207,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8035
+    .line 8063
     :cond_1a
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19101,7 +19215,7 @@
 
     if-eqz v33, :cond_1b
 
-    .line 8036
+    .line 8064
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->createForegroundActivityTimerLocked()Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     move-result-object v33
@@ -19112,7 +19226,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8038
+    .line 8066
     :cond_1b
     const/16 v33, 0x3
 
@@ -19122,7 +19236,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessState:I
 
-    .line 8039
+    .line 8067
     const/4 v12, 0x0
 
     :goto_d
@@ -19132,14 +19246,14 @@
 
     if-ge v12, v0, :cond_1d
 
-    .line 8040
+    .line 8068
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_1c
 
-    .line 8041
+    .line 8069
     const/16 v33, 0x0
 
     move-object/from16 v0, v29
@@ -19148,7 +19262,7 @@
 
     invoke-virtual {v0, v12, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->makeProcessState(ILandroid/os/Parcel;)V
 
-    .line 8042
+    .line 8070
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -19163,13 +19277,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8039
+    .line 8067
     :cond_1c
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_d
 
-    .line 8045
+    .line 8073
     :cond_1d
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19177,7 +19291,7 @@
 
     if-eqz v33, :cond_1e
 
-    .line 8046
+    .line 8074
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->createVibratorOnTimerLocked()Lcom/android/internal/os/BatteryStatsImpl$BatchTimer;
 
     move-result-object v33
@@ -19188,7 +19302,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$BatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8049
+    .line 8077
     :cond_1e
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19196,7 +19310,7 @@
 
     if-eqz v33, :cond_20
 
-    .line 8050
+    .line 8078
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mUserActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$Counter;
@@ -19205,10 +19319,10 @@
 
     if-nez v33, :cond_1f
 
-    .line 8051
+    .line 8079
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->initUserActivityLocked()V
 
-    .line 8053
+    .line 8081
     :cond_1f
     const/4 v12, 0x0
 
@@ -19219,7 +19333,7 @@
 
     if-ge v12, v0, :cond_20
 
-    .line 8054
+    .line 8082
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mUserActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$Counter;
@@ -19234,12 +19348,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Counter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8053
+    .line 8081
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_e
 
-    .line 8058
+    .line 8086
     :cond_20
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19247,7 +19361,7 @@
 
     if-eqz v33, :cond_23
 
-    .line 8059
+    .line 8087
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -19256,10 +19370,10 @@
 
     if-nez v33, :cond_21
 
-    .line 8060
+    .line 8088
     invoke-virtual/range {v29 .. v29}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->initNetworkActivityLocked()V
 
-    .line 8062
+    .line 8090
     :cond_21
     const/4 v12, 0x0
 
@@ -19270,7 +19384,7 @@
 
     if-ge v12, v0, :cond_22
 
-    .line 8063
+    .line 8091
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -19285,7 +19399,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8064
+    .line 8092
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -19300,12 +19414,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8062
+    .line 8090
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_f
 
-    .line 8066
+    .line 8094
     :cond_22
     move-object/from16 v0, v29
 
@@ -19319,7 +19433,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8067
+    .line 8095
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mMobileRadioActiveCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -19332,13 +19446,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8070
+    .line 8098
     :cond_23
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 8071
+    .line 8099
     .local v10, "NW":I
     const/16 v33, 0x64
 
@@ -19346,7 +19460,7 @@
 
     if-le v10, v0, :cond_24
 
-    .line 8072
+    .line 8100
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19373,7 +19487,7 @@
 
     goto/16 :goto_0
 
-    .line 8075
+    .line 8103
     :cond_24
     const/16 v18, 0x0
 
@@ -19383,12 +19497,12 @@
 
     if-ge v0, v10, :cond_25
 
-    .line 8076
+    .line 8104
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v32
 
-    .line 8077
+    .line 8105
     .local v32, "wlName":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -19398,19 +19512,19 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->readWakeSummaryFromParcelLocked(Ljava/lang/String;Landroid/os/Parcel;)V
 
-    .line 8075
+    .line 8103
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_10
 
-    .line 8080
+    .line 8108
     .end local v32    # "wlName":Ljava/lang/String;
     :cond_25
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 8081
+    .line 8109
     .local v7, "NS":I
     const/16 v33, 0x64
 
@@ -19418,7 +19532,7 @@
 
     if-le v7, v0, :cond_26
 
-    .line 8082
+    .line 8110
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19445,7 +19559,7 @@
 
     goto/16 :goto_0
 
-    .line 8085
+    .line 8113
     :cond_26
     const/16 v16, 0x0
 
@@ -19455,12 +19569,12 @@
 
     if-ge v0, v7, :cond_27
 
-    .line 8086
+    .line 8114
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 8087
+    .line 8115
     .local v21, "name":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -19470,19 +19584,19 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->readSyncSummaryFromParcelLocked(Ljava/lang/String;Landroid/os/Parcel;)V
 
-    .line 8085
+    .line 8113
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_11
 
-    .line 8090
+    .line 8118
     .end local v21    # "name":Ljava/lang/String;
     :cond_27
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 8091
+    .line 8119
     .local v4, "NJ":I
     const/16 v33, 0x64
 
@@ -19490,7 +19604,7 @@
 
     if-le v4, v0, :cond_28
 
-    .line 8092
+    .line 8120
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19517,7 +19631,7 @@
 
     goto/16 :goto_0
 
-    .line 8095
+    .line 8123
     :cond_28
     const/4 v13, 0x0
 
@@ -19525,12 +19639,12 @@
     :goto_12
     if-ge v13, v4, :cond_29
 
-    .line 8096
+    .line 8124
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 8097
+    .line 8125
     .restart local v21    # "name":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -19540,19 +19654,19 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->readJobSummaryFromParcelLocked(Ljava/lang/String;Landroid/os/Parcel;)V
 
-    .line 8095
+    .line 8123
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_12
 
-    .line 8100
+    .line 8128
     .end local v21    # "name":Ljava/lang/String;
     :cond_29
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 8101
+    .line 8129
     .local v6, "NP":I
     const/16 v33, 0x3e8
 
@@ -19560,7 +19674,7 @@
 
     if-le v6, v0, :cond_2a
 
-    .line 8102
+    .line 8130
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19587,7 +19701,7 @@
 
     goto/16 :goto_0
 
-    .line 8105
+    .line 8133
     :cond_2a
     const/16 v16, 0x0
 
@@ -19596,12 +19710,12 @@
 
     if-ge v0, v6, :cond_2c
 
-    .line 8106
+    .line 8134
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v27
 
-    .line 8107
+    .line 8135
     .local v27, "seNumber":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -19609,7 +19723,7 @@
 
     if-eqz v33, :cond_2b
 
-    .line 8108
+    .line 8136
     const/16 v33, 0x1
 
     move-object/from16 v0, v29
@@ -19628,27 +19742,27 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8105
+    .line 8133
     :cond_2b
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_13
 
-    .line 8113
+    .line 8141
     .end local v27    # "seNumber":I
     :cond_2c
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 8114
+    .line 8142
     const/16 v33, 0x3e8
 
     move/from16 v0, v33
 
     if-le v6, v0, :cond_2d
 
-    .line 8115
+    .line 8143
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19675,7 +19789,7 @@
 
     goto/16 :goto_0
 
-    .line 8118
+    .line 8146
     :cond_2d
     const/4 v15, 0x0
 
@@ -19683,12 +19797,12 @@
     :goto_14
     if-ge v15, v6, :cond_31
 
-    .line 8119
+    .line 8147
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 8120
+    .line 8148
     .local v24, "procName":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -19698,7 +19812,7 @@
 
     move-result-object v22
 
-    .line 8121
+    .line 8149
     .local v22, "p":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
@@ -19716,7 +19830,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mUserTime:J
 
-    .line 8122
+    .line 8150
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v34
@@ -19733,7 +19847,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
 
-    .line 8123
+    .line 8151
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v34
@@ -19750,7 +19864,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
 
-    .line 8124
+    .line 8152
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -19767,7 +19881,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mStarts:I
 
-    .line 8125
+    .line 8153
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -19784,7 +19898,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mNumCrashes:I
 
-    .line 8126
+    .line 8154
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -19801,12 +19915,12 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mNumAnrs:I
 
-    .line 8127
+    .line 8155
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 8128
+    .line 8156
     .local v8, "NSB":I
     const/16 v33, 0x64
 
@@ -19814,7 +19928,7 @@
 
     if-le v8, v0, :cond_2e
 
-    .line 8129
+    .line 8157
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19841,7 +19955,7 @@
 
     goto/16 :goto_0
 
-    .line 8132
+    .line 8160
     :cond_2e
     new-array v0, v8, [Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
 
@@ -19853,20 +19967,20 @@
 
     iput-object v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
 
-    .line 8133
+    .line 8161
     const/4 v12, 0x0
 
     :goto_15
     if-ge v12, v8, :cond_30
 
-    .line 8134
+    .line 8162
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
 
     if-eqz v33, :cond_2f
 
-    .line 8135
+    .line 8163
     move-object/from16 v0, v22
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -19885,7 +19999,7 @@
 
     aput-object v34, v33, v12
 
-    .line 8136
+    .line 8164
     move-object/from16 v0, v22
 
     iget-object v0, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -19900,13 +20014,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8133
+    .line 8161
     :cond_2f
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_15
 
-    .line 8139
+    .line 8167
     :cond_30
     move-object/from16 v0, v22
 
@@ -19918,12 +20032,12 @@
 
     if-eqz v33, :cond_0
 
-    .line 8118
+    .line 8146
     add-int/lit8 v15, v15, 0x1
 
     goto/16 :goto_14
 
-    .line 8144
+    .line 8172
     .end local v8    # "NSB":I
     .end local v22    # "p":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     .end local v24    # "procName":Ljava/lang/String;
@@ -19932,14 +20046,14 @@
 
     move-result v6
 
-    .line 8145
+    .line 8173
     const/16 v33, 0x2710
 
     move/from16 v0, v33
 
     if-le v6, v0, :cond_32
 
-    .line 8146
+    .line 8174
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -19966,19 +20080,19 @@
 
     goto/16 :goto_0
 
-    .line 8149
+    .line 8177
     :cond_32
     const/4 v15, 0x0
 
     :goto_16
     if-ge v15, v6, :cond_35
 
-    .line 8150
+    .line 8178
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v23
 
-    .line 8151
+    .line 8179
     .local v23, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -19988,7 +20102,7 @@
 
     move-result-object v22
 
-    .line 8152
+    .line 8180
     .local v22, "p":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -20006,19 +20120,19 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;->mWakeups:I
 
-    .line 8153
+    .line 8181
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 8154
+    .line 8182
     const/16 v33, 0x3e8
 
     move/from16 v0, v33
 
     if-le v7, v0, :cond_33
 
-    .line 8155
+    .line 8183
     const-string v33, "BatteryStatsImpl"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -20045,7 +20159,7 @@
 
     goto/16 :goto_0
 
-    .line 8158
+    .line 8186
     :cond_33
     const/16 v16, 0x0
 
@@ -20054,12 +20168,12 @@
 
     if-ge v0, v7, :cond_34
 
-    .line 8159
+    .line 8187
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v28
 
-    .line 8160
+    .line 8188
     .local v28, "servName":Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -20071,7 +20185,7 @@
 
     move-result-object v26
 
-    .line 8161
+    .line 8189
     .local v26, "s":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readLong()J
 
@@ -20089,7 +20203,7 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;->mStartTime:J
 
-    .line 8162
+    .line 8190
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -20106,7 +20220,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
 
-    .line 8163
+    .line 8191
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v33
@@ -20123,12 +20237,12 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
 
-    .line 8158
+    .line 8186
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_17
 
-    .line 8149
+    .line 8177
     .end local v26    # "s":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
     .end local v28    # "servName":Ljava/lang/String;
     :cond_34
@@ -20136,7 +20250,7 @@
 
     goto/16 :goto_16
 
-    .line 8001
+    .line 8029
     .end local v22    # "p":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
     .end local v23    # "pkgName":Ljava/lang/String;
     :cond_35
@@ -20151,7 +20265,7 @@
     .param p2, "appUid"    # I
 
     .prologue
-    .line 2487
+    .line 2488
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
     const/4 v2, -0x1
@@ -20160,16 +20274,16 @@
 
     move-result v0
 
-    .line 2488
+    .line 2489
     .local v0, "curUid":I
     if-ne v0, p2, :cond_0
 
-    .line 2489
+    .line 2490
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIsolatedUids:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 2491
+    .line 2492
     :cond_0
     return-void
 .end method
@@ -20179,12 +20293,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 7555
+    .line 7583
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 7556
+    .line 7584
     return-void
 .end method
 
@@ -20196,12 +20310,12 @@
     .param p5, "usedTime"    # J
 
     .prologue
-    .line 2953
+    .line 2954
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2954
+    .line 2955
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -20210,7 +20324,7 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2955
+    .line 2956
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v0, :cond_0
 
@@ -20220,10 +20334,10 @@
 
     move-wide v4, p5
 
-    .line 2956
+    .line 2957
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->reportExcessiveCpuLocked(Ljava/lang/String;JJ)V
 
-    .line 2958
+    .line 2959
     :cond_0
     return-void
 .end method
@@ -20236,12 +20350,12 @@
     .param p5, "usedTime"    # J
 
     .prologue
-    .line 2945
+    .line 2946
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->mapUid(I)I
 
     move-result p1
 
-    .line 2946
+    .line 2947
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -20250,7 +20364,7 @@
 
     check-cast v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2947
+    .line 2948
     .local v0, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v0, :cond_0
 
@@ -20260,10 +20374,10 @@
 
     move-wide v4, p5
 
-    .line 2948
+    .line 2949
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->reportExcessiveWakeLocked(Ljava/lang/String;JJ)V
 
-    .line 2950
+    .line 2951
     :cond_0
     return-void
 .end method
@@ -20276,29 +20390,29 @@
 
     const/4 v10, 0x0
 
-    .line 6666
+    .line 6677
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->resetAllStatsLocked()V
 
-    .line 6667
+    .line 6678
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 6668
+    .line 6679
     .local v2, "mSecUptime":J
     mul-long v6, v2, v8
 
-    .line 6669
+    .line 6680
     .local v6, "uptime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 6670
+    .line 6681
     .local v0, "mSecRealtime":J
     mul-long v4, v0, v8
 
-    .line 6671
+    .line 6682
     .local v4, "realtime":J
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
@@ -20306,13 +20420,13 @@
 
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStartLevel:I
 
-    .line 6672
+    .line 6683
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 6673
+    .line 6684
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 6674
+    .line 6685
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-byte v8, v8, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
@@ -20325,17 +20439,17 @@
 
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 6676
+    .line 6687
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v8, v6, v7, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->reset(JJ)V
 
-    .line 6677
+    .line 6688
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     invoke-virtual {v8, v6, v7, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->reset(JJ)V
 
-    .line 6678
+    .line 6689
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget v8, v8, Landroid/os/BatteryStats$HistoryItem;->states:I
@@ -20346,42 +20460,42 @@
 
     if-nez v8, :cond_0
 
-    .line 6679
+    .line 6690
     iget v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenState:I
 
     const/4 v9, 0x2
 
     if-ne v8, v9, :cond_1
 
-    .line 6680
+    .line 6691
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-byte v8, v8, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
     iput v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6681
+    .line 6692
     iput v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
 
-    .line 6686
+    .line 6697
     :goto_0
     iput v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 6687
+    .line 6698
     iput v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 6689
+    .line 6700
     :cond_0
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->initActiveHistoryEventsLocked(JJ)V
 
-    .line 6690
+    .line 6701
     return-void
 
-    .line 6683
+    .line 6694
     :cond_1
     iput v10, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6684
+    .line 6695
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
 
     iget-byte v8, v8, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
@@ -20401,15 +20515,28 @@
     .param p6, "volt"    # I
 
     .prologue
-    .line 6995
+    .line 7006
     monitor-enter p0
 
-    .line 6996
-    if-nez p3, :cond_6
+    .line 7010
+    if-nez p3, :cond_7
 
+    const/4 v3, 0x2
+
+    move/from16 v0, p1
+
+    if-ne v0, v3, :cond_0
+
+    const/4 v3, 0x5
+
+    move/from16 v0, p1
+
+    if-eq v0, v3, :cond_7
+
+    :cond_0
     const/16 v20, 0x1
 
-    .line 6997
+    .line 7013
     .local v20, "onBattery":Z
     :goto_0
     :try_start_0
@@ -20417,13 +20544,13 @@
 
     move-result-wide v6
 
-    .line 6998
+    .line 7014
     .local v6, "uptime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 6999
+    .line 7015
     .local v4, "elapsedRealtime":J
     move-object/from16 v0, p0
 
@@ -20431,34 +20558,34 @@
 
     iget-byte v9, v3, Landroid/os/BatteryStats$HistoryItem;->batteryStatus:B
 
-    .line 7000
+    .line 7016
     .local v9, "oldStatus":I
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_2
 
-    .line 7001
+    .line 7017
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHaveBatteryLevel:Z
 
-    .line 7006
+    .line 7022
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     move/from16 v0, v20
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v3, :cond_1
 
-    .line 7007
-    if-eqz v20, :cond_7
+    .line 7023
+    if-eqz v20, :cond_8
 
-    .line 7008
+    .line 7024
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20471,45 +20598,45 @@
 
     iput v8, v3, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 7013
-    :cond_0
+    .line 7029
+    :cond_1
     :goto_1
     move/from16 v9, p1
 
-    .line 7015
-    :cond_1
-    if-eqz v20, :cond_8
+    .line 7031
+    :cond_2
+    if-eqz v20, :cond_9
 
-    .line 7016
+    .line 7032
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 7017
+    .line 7033
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
-    .line 7018
+    .line 7034
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 7019
+    .line 7035
     const/4 v8, 0x1
 
     move-object/from16 v3, p0
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->startRecordingHistory(JJZ)V
 
-    .line 7027
-    :cond_2
+    .line 7043
+    :cond_3
     :goto_2
     move/from16 v0, p4
 
@@ -20517,31 +20644,31 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
 
-    .line 7028
+    .line 7044
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
 
-    if-gez v3, :cond_3
+    if-gez v3, :cond_4
 
-    .line 7029
+    .line 7045
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
 
-    .line 7031
-    :cond_3
+    .line 7047
+    :cond_4
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
     move/from16 v0, v20
 
-    if-eq v0, v3, :cond_9
+    if-eq v0, v3, :cond_a
 
-    .line 7032
+    .line 7048
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20552,7 +20679,7 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
-    .line 7033
+    .line 7049
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20563,7 +20690,7 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryStatus:B
 
-    .line 7034
+    .line 7050
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20574,7 +20701,7 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryHealth:B
 
-    .line 7035
+    .line 7051
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20585,7 +20712,7 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
-    .line 7036
+    .line 7052
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20596,7 +20723,7 @@
 
     iput-short v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryTemperature:S
 
-    .line 7037
+    .line 7053
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20613,50 +20740,50 @@
 
     move/from16 v10, p4
 
-    .line 7038
+    .line 7054
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/BatteryStatsImpl;->setOnBatteryLocked(JJZII)V
 
-    .line 7097
-    :cond_4
+    .line 7113
+    :cond_5
     :goto_3
-    if-nez v20, :cond_5
+    if-nez v20, :cond_6
 
     const/4 v3, 0x5
 
     move/from16 v0, p1
 
-    if-ne v0, v3, :cond_5
+    if-ne v0, v3, :cond_6
 
-    .line 7100
+    .line 7116
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 7102
-    :cond_5
+    .line 7118
+    :cond_6
     monitor-exit p0
 
-    .line 7103
+    .line 7119
     return-void
 
-    .line 6996
+    .line 7010
     .end local v4    # "elapsedRealtime":J
     .end local v6    # "uptime":J
     .end local v9    # "oldStatus":I
     .end local v20    # "onBattery":Z
-    :cond_6
+    :cond_7
     const/16 v20, 0x0
 
     goto/16 :goto_0
 
-    .line 7010
+    .line 7026
     .restart local v4    # "elapsedRealtime":J
     .restart local v6    # "uptime":J
     .restart local v9    # "oldStatus":I
     .restart local v20    # "onBattery":Z
-    :cond_7
+    :cond_8
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20671,7 +20798,7 @@
 
     goto/16 :goto_1
 
-    .line 7102
+    .line 7118
     .end local v4    # "elapsedRealtime":J
     .end local v6    # "uptime":J
     .end local v9    # "oldStatus":I
@@ -20684,33 +20811,33 @@
 
     throw v3
 
-    .line 7021
+    .line 7037
     .restart local v4    # "elapsedRealtime":J
     .restart local v6    # "uptime":J
     .restart local v9    # "oldStatus":I
-    :cond_8
+    :cond_9
     const/16 v3, 0x60
 
     move/from16 v0, p4
 
-    if-ge v0, v3, :cond_2
+    if-ge v0, v3, :cond_3
 
-    .line 7022
+    .line 7038
     :try_start_1
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
-    .line 7023
+    .line 7039
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordingHistory:Z
 
-    .line 7024
+    .line 7040
     const/4 v8, 0x1
 
     move-object/from16 v3, p0
@@ -20719,11 +20846,11 @@
 
     goto/16 :goto_2
 
-    .line 7040
-    :cond_9
+    .line 7056
+    :cond_a
     const/4 v2, 0x0
 
-    .line 7041
+    .line 7057
     .local v2, "changed":Z
     move-object/from16 v0, p0
 
@@ -20733,9 +20860,9 @@
 
     move/from16 v0, p4
 
-    if-eq v3, v0, :cond_a
+    if-eq v3, v0, :cond_b
 
-    .line 7042
+    .line 7058
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20746,11 +20873,11 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
-    .line 7043
+    .line 7059
     const/4 v2, 0x1
 
-    .line 7045
-    :cond_a
+    .line 7061
+    :cond_b
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20759,9 +20886,9 @@
 
     move/from16 v0, p1
 
-    if-eq v3, v0, :cond_b
+    if-eq v3, v0, :cond_c
 
-    .line 7046
+    .line 7062
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20772,11 +20899,11 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryStatus:B
 
-    .line 7047
+    .line 7063
     const/4 v2, 0x1
 
-    .line 7049
-    :cond_b
+    .line 7065
+    :cond_c
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20785,9 +20912,9 @@
 
     move/from16 v0, p2
 
-    if-eq v3, v0, :cond_c
+    if-eq v3, v0, :cond_d
 
-    .line 7050
+    .line 7066
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20798,11 +20925,11 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryHealth:B
 
-    .line 7051
+    .line 7067
     const/4 v2, 0x1
 
-    .line 7053
-    :cond_c
+    .line 7069
+    :cond_d
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20811,9 +20938,9 @@
 
     move/from16 v0, p3
 
-    if-eq v3, v0, :cond_d
+    if-eq v3, v0, :cond_e
 
-    .line 7054
+    .line 7070
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20824,11 +20951,11 @@
 
     iput-byte v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryPlugType:B
 
-    .line 7055
+    .line 7071
     const/4 v2, 0x1
 
-    .line 7057
-    :cond_d
+    .line 7073
+    :cond_e
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20839,7 +20966,7 @@
 
     move/from16 v0, p5
 
-    if-ge v0, v3, :cond_e
+    if-ge v0, v3, :cond_f
 
     move-object/from16 v0, p0
 
@@ -20851,10 +20978,10 @@
 
     move/from16 v0, p5
 
-    if-gt v0, v3, :cond_f
+    if-gt v0, v3, :cond_10
 
-    .line 7059
-    :cond_e
+    .line 7075
+    :cond_f
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20865,11 +20992,11 @@
 
     iput-short v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryTemperature:S
 
-    .line 7060
+    .line 7076
     const/4 v2, 0x1
 
-    .line 7062
-    :cond_f
+    .line 7078
+    :cond_10
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20880,7 +21007,7 @@
 
     move/from16 v0, p6
 
-    if-gt v0, v3, :cond_10
+    if-gt v0, v3, :cond_11
 
     move-object/from16 v0, p0
 
@@ -20892,10 +21019,10 @@
 
     move/from16 v0, p6
 
-    if-ge v0, v3, :cond_11
+    if-ge v0, v3, :cond_12
 
-    .line 7064
-    :cond_10
+    .line 7080
+    :cond_11
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -20906,20 +21033,20 @@
 
     iput-char v8, v3, Landroid/os/BatteryStats$HistoryItem;->batteryVoltage:C
 
-    .line 7065
+    .line 7081
     const/4 v2, 0x1
 
-    .line 7067
-    :cond_11
-    if-eqz v2, :cond_12
+    .line 7083
+    :cond_12
+    if-eqz v2, :cond_13
 
-    .line 7068
+    .line 7084
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4, v5, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 7070
-    :cond_12
+    .line 7086
+    :cond_13
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
@@ -20954,18 +21081,18 @@
 
     or-long v16, v10, v12
 
-    .line 7073
+    .line 7089
     .local v16, "modeBits":J
-    if-eqz v20, :cond_13
+    if-eqz v20, :cond_14
 
-    .line 7074
+    .line 7090
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepLevel:I
 
     move/from16 v0, p4
 
-    if-eq v3, v0, :cond_4
+    if-eq v3, v0, :cond_5
 
     move-object/from16 v0, p0
 
@@ -20973,9 +21100,9 @@
 
     move/from16 v0, p4
 
-    if-le v3, v0, :cond_4
+    if-le v3, v0, :cond_5
 
-    .line 7075
+    .line 7091
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
@@ -21004,26 +21131,26 @@
 
     iput v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
-    .line 7078
+    .line 7094
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepLevel:I
 
-    .line 7079
+    .line 7095
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mMinDischargeStepLevel:I
 
-    .line 7080
+    .line 7096
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepTime:J
 
-    .line 7081
+    .line 7097
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
@@ -21032,7 +21159,7 @@
 
     iput v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 7082
+    .line 7098
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -21041,15 +21168,15 @@
 
     goto/16 :goto_3
 
-    .line 7085
-    :cond_13
+    .line 7101
+    :cond_14
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepLevel:I
 
     move/from16 v0, p4
 
-    if-eq v3, v0, :cond_4
+    if-eq v3, v0, :cond_5
 
     move-object/from16 v0, p0
 
@@ -21057,9 +21184,9 @@
 
     move/from16 v0, p4
 
-    if-ge v3, v0, :cond_4
+    if-ge v3, v0, :cond_5
 
-    .line 7086
+    .line 7102
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
@@ -21088,26 +21215,26 @@
 
     iput v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
-    .line 7089
+    .line 7105
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepLevel:I
 
-    .line 7090
+    .line 7106
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mMaxChargeStepLevel:I
 
-    .line 7091
+    .line 7107
     move-object/from16 v0, p0
 
     iput-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepTime:J
 
-    .line 7092
+    .line 7108
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
@@ -21116,7 +21243,7 @@
 
     iput v3, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 7093
+    .line 7109
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -21133,7 +21260,7 @@
     .param p1, "headset"    # Landroid/bluetooth/BluetoothHeadset;
 
     .prologue
-    .line 1884
+    .line 1885
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
@@ -21152,18 +21279,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1885
+    .line 1886
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCurrentBluetoothPingCount()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 1887
+    .line 1888
     :cond_0
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBtHeadset:Landroid/bluetooth/BluetoothHeadset;
 
-    .line 1888
+    .line 1889
     return-void
 .end method
 
@@ -21172,10 +21299,34 @@
     .param p1, "cb"    # Lcom/android/internal/os/BatteryStatsImpl$BatteryCallback;
 
     .prologue
-    .line 6476
+    .line 6487
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mCallback:Lcom/android/internal/os/BatteryStatsImpl$BatteryCallback;
 
-    .line 6477
+    .line 6488
+    return-void
+.end method
+
+.method protected setCpuSpeedSteps(I)V
+    .locals 0
+    .param p1, "numSpeedSteps"    # I
+
+    .prologue
+    .line 7556
+    sput p1, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+
+    .line 7557
+    return-void
+.end method
+
+.method protected setKernelWakelockUpdateVersion(I)V
+    .locals 0
+    .param p1, "kernelWakelockUpdateVersion"    # I
+
+    .prologue
+    .line 7564
+    sput p1, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+
+    .line 7565
     return-void
 .end method
 
@@ -21184,10 +21335,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 2674
+    .line 2675
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mNoAutoReset:Z
 
-    .line 2675
+    .line 2676
     return-void
 .end method
 
@@ -21196,14 +21347,16 @@
     .param p1, "steps"    # I
 
     .prologue
-    .line 6480
-    sget v0, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    .line 6491
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    sput p1, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->setCpuSpeedSteps(I)V
 
-    .line 6481
+    .line 6492
     :cond_0
     return-void
 .end method
@@ -21217,10 +21370,10 @@
     .param p7, "level"    # I
 
     .prologue
-    .line 6818
+    .line 6829
     const/4 v4, 0x0
 
-    .line 6819
+    .line 6830
     .local v4, "doWrite":Z
     move-object/from16 v0, p0
 
@@ -21232,7 +21385,7 @@
 
     move-result-object v18
 
-    .line 6820
+    .line 6831
     .local v18, "m":Landroid/os/Message;
     if-eqz p5, :cond_7
 
@@ -21243,7 +21396,7 @@
 
     iput v5, v0, Landroid/os/Message;->arg1:I
 
-    .line 6821
+    .line 6832
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
@@ -21252,18 +21405,18 @@
 
     invoke-virtual {v5, v0}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6823
+    .line 6834
     const-wide/16 v6, 0x3e8
 
     mul-long v14, p3, v6
 
-    .line 6824
+    .line 6835
     .local v14, "uptime":J
     const-wide/16 v6, 0x3e8
 
     mul-long v16, p1, v6
 
-    .line 6825
+    .line 6836
     .local v16, "realtime":J
     move-object/from16 v0, p0
 
@@ -21275,15 +21428,15 @@
 
     const/16 v20, 0x1
 
-    .line 6826
+    .line 6837
     .local v20, "screenOn":Z
     :goto_1
     if-eqz p5, :cond_b
 
-    .line 6831
+    .line 6842
     const/4 v10, 0x0
 
-    .line 6832
+    .line 6843
     .local v10, "reset":Z
     move-object/from16 v0, p0
 
@@ -21338,7 +21491,7 @@
 
     if-lt v5, v6, :cond_3
 
-    .line 6837
+    .line 6848
     :cond_1
     const-string v5, "BatteryStatsImpl"
 
@@ -21418,7 +21571,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6844
+    .line 6855
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getLowDischargeAmountSinceCharge()I
 
     move-result v5
@@ -21427,12 +21580,12 @@
 
     if-lt v5, v6, :cond_2
 
-    .line 6845
+    .line 6856
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v19
 
-    .line 6846
+    .line 6857
     .local v19, "parcel":Landroid/os/Parcel;
     const/4 v5, 0x1
 
@@ -21442,7 +21595,7 @@
 
     invoke-virtual {v0, v1, v5}, Lcom/android/internal/os/BatteryStatsImpl;->writeSummaryToParcel(Landroid/os/Parcel;Z)V
 
-    .line 6847
+    .line 6858
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v5
@@ -21457,32 +21610,32 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 6869
+    .line 6880
     .end local v19    # "parcel":Landroid/os/Parcel;
     :cond_2
     const/4 v4, 0x1
 
-    .line 6870
+    .line 6881
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->resetAllStatsLocked()V
 
-    .line 6871
+    .line 6882
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStartLevel:I
 
-    .line 6872
+    .line 6883
     const/4 v10, 0x1
 
-    .line 6873
+    .line 6884
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
 
-    .line 6875
+    .line 6886
     :cond_3
     move/from16 v0, p5
 
@@ -21496,28 +21649,28 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
-    .line 6876
+    .line 6887
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepLevel:I
 
-    .line 6877
+    .line 6888
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mMinDischargeStepLevel:I
 
-    .line 6878
+    .line 6889
     const-wide/16 v6, -0x1
 
     move-object/from16 v0, p0
 
     iput-wide v6, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastDischargeStepTime:J
 
-    .line 6879
+    .line 6890
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
@@ -21526,17 +21679,17 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 6880
+    .line 6891
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mModStepMode:I
 
-    .line 6881
+    .line 6892
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 6882
+    .line 6893
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -21547,7 +21700,7 @@
 
     iput-byte v6, v5, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
-    .line 6883
+    .line 6894
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -21560,10 +21713,10 @@
 
     iput v6, v5, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 6886
+    .line 6897
     if-eqz v10, :cond_4
 
-    .line 6887
+    .line 6898
     const/4 v5, 0x1
 
     move-object/from16 v0, p0
@@ -21576,14 +21729,14 @@
 
     move-wide/from16 v8, p3
 
-    .line 6888
+    .line 6899
     invoke-direct/range {v5 .. v10}, Lcom/android/internal/os/BatteryStatsImpl;->startRecordingHistory(JJZ)V
 
-    .line 6890
+    .line 6901
     :cond_4
     invoke-virtual/range {p0 .. p4}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 6891
+    .line 6902
     move/from16 v0, p7
 
     move-object/from16 v1, p0
@@ -21596,24 +21749,24 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 6892
+    .line 6903
     if-eqz v20, :cond_9
 
-    .line 6893
+    .line 6904
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6894
+    .line 6905
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
 
-    .line 6899
+    .line 6910
     :goto_2
     const/4 v5, 0x0
 
@@ -21621,14 +21774,14 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 6900
+    .line 6911
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 6901
+    .line 6912
     const/4 v12, 0x1
 
     if-nez v20, :cond_a
@@ -21640,7 +21793,7 @@
 
     invoke-virtual/range {v11 .. v17}, Lcom/android/internal/os/BatteryStatsImpl;->updateTimeBasesLocked(ZZJJ)V
 
-    .line 6924
+    .line 6935
     .end local v10    # "reset":Z
     :goto_4
     if-nez v4, :cond_5
@@ -21657,7 +21810,7 @@
 
     if-gez v5, :cond_6
 
-    .line 6925
+    .line 6936
     :cond_5
     move-object/from16 v0, p0
 
@@ -21665,14 +21818,14 @@
 
     if-eqz v5, :cond_6
 
-    .line 6926
+    .line 6937
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->writeAsyncLocked()V
 
-    .line 6929
+    .line 6940
     :cond_6
     return-void
 
-    .line 6820
+    .line 6831
     .end local v14    # "uptime":J
     .end local v16    # "realtime":J
     .end local v20    # "screenOn":Z
@@ -21681,7 +21834,7 @@
 
     goto/16 :goto_0
 
-    .line 6825
+    .line 6836
     .restart local v14    # "uptime":J
     .restart local v16    # "realtime":J
     :cond_8
@@ -21689,7 +21842,7 @@
 
     goto/16 :goto_1
 
-    .line 6896
+    .line 6907
     .restart local v10    # "reset":Z
     .restart local v20    # "screenOn":Z
     :cond_9
@@ -21699,7 +21852,7 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6897
+    .line 6908
     move/from16 v0, p7
 
     move-object/from16 v1, p0
@@ -21708,13 +21861,13 @@
 
     goto :goto_2
 
-    .line 6901
+    .line 6912
     :cond_a
     const/4 v13, 0x0
 
     goto :goto_3
 
-    .line 6903
+    .line 6914
     .end local v10    # "reset":Z
     :cond_b
     move/from16 v0, p5
@@ -21729,10 +21882,10 @@
 
     iput-boolean v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
 
-    .line 6904
+    .line 6915
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 6905
+    .line 6916
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -21743,7 +21896,7 @@
 
     iput-byte v6, v5, Landroid/os/BatteryStats$HistoryItem;->batteryLevel:B
 
-    .line 6906
+    .line 6917
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryCur:Landroid/os/BatteryStats$HistoryItem;
@@ -21756,10 +21909,10 @@
 
     iput v6, v5, Landroid/os/BatteryStats$HistoryItem;->states:I
 
-    .line 6909
+    .line 6920
     invoke-virtual/range {p0 .. p4}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryRecordLocked(JJ)V
 
-    .line 6910
+    .line 6921
     move/from16 v0, p7
 
     move-object/from16 v1, p0
@@ -21772,7 +21925,7 @@
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
-    .line 6911
+    .line 6922
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
@@ -21781,7 +21934,7 @@
 
     if-ge v0, v5, :cond_c
 
-    .line 6912
+    .line 6923
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
@@ -21800,7 +21953,7 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
 
-    .line 6913
+    .line 6924
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
@@ -21817,7 +21970,7 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
 
-    .line 6915
+    .line 6926
     :cond_c
     move-object/from16 v0, p0
 
@@ -21827,7 +21980,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/os/BatteryStatsImpl;->updateDischargeScreenLevelsLocked(ZZ)V
 
-    .line 6916
+    .line 6927
     const/4 v12, 0x0
 
     if-nez v20, :cond_d
@@ -21839,35 +21992,35 @@
 
     invoke-virtual/range {v11 .. v17}, Lcom/android/internal/os/BatteryStatsImpl;->updateTimeBasesLocked(ZZJJ)V
 
-    .line 6917
+    .line 6928
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
 
-    .line 6918
+    .line 6929
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepLevel:I
 
-    .line 6919
+    .line 6930
     move/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsImpl;->mMaxChargeStepLevel:I
 
-    .line 6920
+    .line 6931
     const-wide/16 v6, -0x1
 
     move-object/from16 v0, p0
 
     iput-wide v6, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastChargeStepTime:J
 
-    .line 6921
+    .line 6932
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurStepMode:I
@@ -21876,7 +22029,7 @@
 
     iput v5, v0, Lcom/android/internal/os/BatteryStatsImpl;->mInitStepMode:I
 
-    .line 6922
+    .line 6933
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
@@ -21885,7 +22038,7 @@
 
     goto/16 :goto_4
 
-    .line 6916
+    .line 6927
     :cond_d
     const/4 v13, 0x0
 
@@ -21897,17 +22050,17 @@
     .param p1, "timeout"    # J
 
     .prologue
-    .line 6484
+    .line 6495
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     if-eqz v0, :cond_0
 
-    .line 6485
+    .line 6496
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->setTimeout(J)V
 
-    .line 6487
+    .line 6498
     :cond_0
     return-void
 .end method
@@ -21919,42 +22072,42 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 2636
+    .line 2637
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mRecordAllHistory:Z
 
-    .line 2637
+    .line 2638
     if-nez p1, :cond_1
 
-    .line 2639
+    .line 2640
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     const/4 v6, 0x5
 
     invoke-virtual {v1, v6}, Landroid/os/BatteryStats$HistoryEventTracker;->removeEvents(I)V
 
-    .line 2642
+    .line 2643
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mActiveEvents:Landroid/os/BatteryStats$HistoryEventTracker;
 
     invoke-virtual {v1, v7}, Landroid/os/BatteryStats$HistoryEventTracker;->getStateForEvent(I)Ljava/util/HashMap;
 
     move-result-object v0
 
-    .line 2644
+    .line 2645
     .local v0, "active":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     if-eqz v0, :cond_3
 
-    .line 2645
+    .line 2646
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2646
+    .line 2647
     .local v2, "mSecRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2647
+    .line 2648
     .local v4, "mSecUptime":J
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -21978,7 +22131,7 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 2648
+    .line 2649
     .local v9, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -21986,7 +22139,7 @@
 
     check-cast v12, Landroid/util/SparseIntArray;
 
-    .line 2649
+    .line 2650
     .local v12, "uids":Landroid/util/SparseIntArray;
     const/4 v11, 0x0
 
@@ -21998,7 +22151,7 @@
 
     if-ge v11, v1, :cond_0
 
-    .line 2650
+    .line 2651
     const/16 v6, 0x4001
 
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -22015,12 +22168,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 2649
+    .line 2650
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 2657
+    .line 2658
     .end local v0    # "active":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     .end local v2    # "mSecRealtime":J
     .end local v4    # "mSecUptime":J
@@ -22035,22 +22188,22 @@
 
     move-result-object v0
 
-    .line 2659
+    .line 2660
     .restart local v0    # "active":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     if-eqz v0, :cond_3
 
-    .line 2660
+    .line 2661
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2661
+    .line 2662
     .restart local v2    # "mSecRealtime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2662
+    .line 2663
     .restart local v4    # "mSecUptime":J
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -22074,7 +22227,7 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 2663
+    .line 2664
     .restart local v9    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -22082,7 +22235,7 @@
 
     check-cast v12, Landroid/util/SparseIntArray;
 
-    .line 2664
+    .line 2665
     .restart local v12    # "uids":Landroid/util/SparseIntArray;
     const/4 v11, 0x0
 
@@ -22094,7 +22247,7 @@
 
     if-ge v11, v1, :cond_2
 
-    .line 2665
+    .line 2666
     const v6, 0x8001
 
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -22111,12 +22264,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/BatteryStatsImpl;->addHistoryEventLocked(JJILjava/lang/String;I)V
 
-    .line 2664
+    .line 2665
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 2671
+    .line 2672
     .end local v2    # "mSecRealtime":J
     .end local v4    # "mSecUptime":J
     .end local v9    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/util/SparseIntArray;>;"
@@ -22131,7 +22284,7 @@
     .locals 4
 
     .prologue
-    .line 7641
+    .line 7669
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -22142,15 +22295,15 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl;->recordShutdownLocked(JJ)V
 
-    .line 7642
+    .line 7670
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->writeSyncLocked()V
 
-    .line 7643
+    .line 7671
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mShuttingDown:Z
 
-    .line 7644
+    .line 7672
     return-void
 .end method
 
@@ -22160,38 +22313,38 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2824
+    .line 2825
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->removeMessages(I)V
 
-    .line 2826
+    .line 2827
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 2827
+    .line 2828
     .local v0, "N":I
     if-nez v0, :cond_1
 
-    .line 2828
+    .line 2829
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 2829
+    .line 2830
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDistributeWakelockCpu:Z
 
-    .line 2853
+    .line 2854
     :cond_0
     :goto_0
     return v4
 
-    .line 2833
+    .line 2834
     :cond_1
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -22205,18 +22358,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 2837
+    .line 2838
     :cond_2
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDistributeWakelockCpu:Z
 
-    .line 2841
+    .line 2842
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_0
 
-    .line 2842
+    .line 2843
     iget-object v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPartialTimers:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22225,16 +22378,16 @@
 
     check-cast v2, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    .line 2843
+    .line 2844
     .local v2, "st":Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
     iget-boolean v5, v2, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mInList:Z
 
     if-eqz v5, :cond_3
 
-    .line 2844
+    .line 2845
     iget-object v3, v2, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->mUid:Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 2847
+    .line 2848
     .local v3, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     if-eqz v3, :cond_3
 
@@ -22244,12 +22397,12 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 2848
+    .line 2849
     const/16 v4, 0x32
 
     goto :goto_0
 
-    .line 2841
+    .line 2842
     .end local v3    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_3
     add-int/lit8 v1, v1, 0x1
@@ -22265,7 +22418,7 @@
 
     const/4 v4, 0x0
 
-    .line 6555
+    .line 6566
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v6}, Landroid/os/Parcel;->dataSize()I
@@ -22274,23 +22427,23 @@
 
     if-gtz v6, :cond_0
 
-    .line 6571
+    .line 6582
     :goto_0
     return v4
 
-    .line 6558
+    .line 6569
     :cond_0
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v6, v4}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 6559
+    .line 6570
     iput-boolean v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
-    .line 6560
+    .line 6571
     iput-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIteratingHistory:Z
 
-    .line 6561
+    .line 6572
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->size()I
@@ -22301,7 +22454,7 @@
 
     iput-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
-    .line 6562
+    .line 6573
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->size()I
@@ -22312,10 +22465,10 @@
 
     iput-object v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryUids:[I
 
-    .line 6563
+    .line 6574
     iput v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryChars:I
 
-    .line 6564
+    .line 6575
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -22340,7 +22493,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 6565
+    .line 6576
     .local v0, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/os/BatteryStats$HistoryTag;Ljava/lang/Integer;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -22348,7 +22501,7 @@
 
     check-cast v3, Landroid/os/BatteryStats$HistoryTag;
 
-    .line 6566
+    .line 6577
     .local v3, "tag":Landroid/os/BatteryStats$HistoryTag;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -22360,7 +22513,7 @@
 
     move-result v2
 
-    .line 6567
+    .line 6578
     .local v2, "idx":I
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryStrings:[Ljava/lang/String;
 
@@ -22368,14 +22521,14 @@
 
     aput-object v6, v4, v2
 
-    .line 6568
+    .line 6579
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryUids:[I
 
     iget v6, v3, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
     aput v6, v4, v2
 
-    .line 6569
+    .line 6580
     iget v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadHistoryChars:I
 
     iget-object v6, v3, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
@@ -22398,7 +22551,7 @@
     :cond_1
     move v4, v5
 
-    .line 6571
+    .line 6582
     goto :goto_0
 .end method
 
@@ -22410,37 +22563,37 @@
 
     const/4 v0, 0x0
 
-    .line 6493
+    .line 6504
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistory:Landroid/os/BatteryStats$HistoryItem;
 
     iput-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryIterator:Landroid/os/BatteryStats$HistoryItem;
 
     if-nez v2, :cond_0
 
-    .line 6500
+    .line 6511
     :goto_0
     return v0
 
-    .line 6496
+    .line 6507
     :cond_0
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 6497
+    .line 6508
     iget-object v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryReadTmp:Landroid/os/BatteryStats$HistoryItem;
 
     invoke-virtual {v2}, Landroid/os/BatteryStats$HistoryItem;->clear()V
 
-    .line 6498
+    .line 6509
     iput-boolean v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mReadOverflow:Z
 
-    .line 6499
+    .line 6510
     iput-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mIteratingHistory:Z
 
     move v0, v1
 
-    .line 6500
+    .line 6511
     goto :goto_0
 .end method
 
@@ -22449,12 +22602,12 @@
     .param p1, "except"    # I
 
     .prologue
-    .line 3229
+    .line 3230
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3230
+    .line 3231
     .local v0, "elapsedRealtime":J
     const/4 v2, 0x0
 
@@ -22464,16 +22617,16 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 3231
+    .line 3232
     if-ne v2, p1, :cond_1
 
-    .line 3230
+    .line 3231
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3234
+    .line 3235
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -22486,7 +22639,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 3235
+    .line 3236
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v2
@@ -22495,7 +22648,7 @@
 
     goto :goto_1
 
-    .line 3238
+    .line 3239
     :cond_2
     return-void
 .end method
@@ -22505,12 +22658,12 @@
     .param p1, "except"    # I
 
     .prologue
-    .line 3686
+    .line 3687
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3687
+    .line 3688
     .local v0, "elapsedRealtime":J
     const/4 v2, 0x0
 
@@ -22520,16 +22673,16 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 3688
+    .line 3689
     if-ne v2, p1, :cond_1
 
-    .line 3687
+    .line 3688
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3691
+    .line 3692
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -22542,7 +22695,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 3692
+    .line 3693
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
     aget-object v3, v3, v2
@@ -22551,7 +22704,7 @@
 
     goto :goto_1
 
-    .line 3695
+    .line 3696
     :cond_2
     return-void
 .end method
@@ -22564,52 +22717,52 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 6785
+    .line 6796
     if-eqz p1, :cond_1
 
-    .line 6786
+    .line 6797
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
     iget v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
     sub-int v0, v1, v2
 
-    .line 6787
+    .line 6798
     .local v0, "diff":I
     if-lez v0, :cond_0
 
-    .line 6788
+    .line 6799
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
 
-    .line 6789
+    .line 6800
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
 
-    .line 6798
+    .line 6809
     :cond_0
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 6799
+    .line 6810
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6800
+    .line 6811
     iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
 
-    .line 6805
+    .line 6816
     :goto_1
     return-void
 
-    .line 6792
+    .line 6803
     .end local v0    # "diff":I
     :cond_1
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
@@ -22618,18 +22771,18 @@
 
     sub-int v0, v1, v2
 
-    .line 6793
+    .line 6804
     .restart local v0    # "diff":I
     if-lez v0, :cond_0
 
-    .line 6794
+    .line 6805
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
 
-    .line 6795
+    .line 6806
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
 
     add-int/2addr v1, v0
@@ -22638,11 +22791,11 @@
 
     goto :goto_0
 
-    .line 6802
+    .line 6813
     :cond_2
     iput v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOnUnplugLevel:I
 
-    .line 6803
+    .line 6814
     iget v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
 
     iput v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeScreenOffUnplugLevel:I
@@ -22654,27 +22807,27 @@
     .locals 10
 
     .prologue
-    .line 7106
+    .line 7122
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->readKernelWakelockStats()Ljava/util/Map;
 
     move-result-object v5
 
-    .line 7108
+    .line 7124
     .local v5, "m":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
     if-nez v5, :cond_1
 
-    .line 7110
+    .line 7126
     const-string v8, "BatteryStatsImpl"
 
     const-string v9, "Couldn\'t get kernel wake lock stats"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7138
+    .line 7154
     :cond_0
     return-void
 
-    .line 7114
+    .line 7130
     :cond_1
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -22698,7 +22851,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 7115
+    .line 7131
     .local v0, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -22706,7 +22859,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 7116
+    .line 7132
     .local v6, "name":Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -22714,7 +22867,7 @@
 
     check-cast v4, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
 
-    .line 7118
+    .line 7134
     .local v4, "kws":Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
@@ -22724,11 +22877,11 @@
 
     check-cast v3, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 7119
+    .line 7135
     .local v3, "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-nez v3, :cond_2
 
-    .line 7120
+    .line 7136
     new-instance v3, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
     .end local v3    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
@@ -22738,31 +22891,33 @@
 
     invoke-direct {v3, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;-><init>(Lcom/android/internal/os/BatteryStatsImpl$TimeBase;Z)V
 
-    .line 7122
+    .line 7138
     .restart local v3    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v8, v6, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7124
+    .line 7140
     :cond_2
     iget v8, v4, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mCount:I
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->updateCurrentReportedCount(I)V
 
-    .line 7125
+    .line 7141
     iget-wide v8, v4, Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;->mTotalTime:J
 
     invoke-virtual {v3, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->updateCurrentReportedTotalTime(J)V
 
-    .line 7126
-    sget v8, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    .line 7142
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v8
 
     invoke-virtual {v3, v8}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->setUpdateVersion(I)V
 
     goto :goto_0
 
-    .line 7129
+    .line 7145
     .end local v0    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;>;"
     .end local v3    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     .end local v4    # "kws":Lcom/android/internal/os/BatteryStatsImpl$KernelWakelockStats;
@@ -22780,7 +22935,7 @@
 
     if-eq v8, v9, :cond_0
 
-    .line 7131
+    .line 7147
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -22805,7 +22960,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 7132
+    .line 7148
     .local v1, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -22813,17 +22968,19 @@
 
     check-cast v7, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 7133
+    .line 7149
     .local v7, "st":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     invoke-virtual {v7}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->getUpdateVersion()I
 
     move-result v8
 
-    sget v9, Lcom/android/internal/os/BatteryStatsImpl;->sKernelWakelockUpdateVersion:I
+    invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getKernelWakelockUpdateVersion()I
+
+    move-result v9
 
     if-eq v8, v9, :cond_4
 
-    .line 7134
+    .line 7150
     invoke-virtual {v7}, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;->setStale()V
 
     goto :goto_1
@@ -22841,7 +22998,7 @@
 
     const/4 v7, 0x0
 
-    .line 2457
+    .line 2458
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
     move v1, p1
@@ -22856,20 +23013,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 2458
+    .line 2459
     if-eqz p1, :cond_3
 
-    .line 2460
+    .line 2461
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCurrentBluetoothPingCount()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
 
-    .line 2461
+    .line 2462
     iput v7, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingCount:I
 
-    .line 2469
+    .line 2470
     :cond_0
     :goto_0
     if-eqz p1, :cond_4
@@ -22878,7 +23035,7 @@
 
     move v1, v6
 
-    .line 2470
+    .line 2471
     .local v1, "unpluggedScreenOff":Z
     :goto_1
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -22889,19 +23046,19 @@
 
     if-eq v1, v0, :cond_2
 
-    .line 2471
+    .line 2472
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->updateKernelWakelocksLocked()V
 
-    .line 2472
+    .line 2473
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsImpl;->requestWakelockCpuUpdate()V
 
-    .line 2473
+    .line 2474
     if-nez v1, :cond_1
 
-    .line 2476
+    .line 2477
     iput-boolean v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDistributeWakelockCpu:Z
 
-    .line 2478
+    .line 2479
     :cond_1
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
 
@@ -22911,11 +23068,11 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->setRunning(ZJJ)Z
 
-    .line 2480
+    .line 2481
     :cond_2
     return-void
 
-    .line 2464
+    .line 2465
     .end local v1    # "unpluggedScreenOff":Z
     :cond_3
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->getBluetoothPingCount()I
@@ -22924,7 +23081,7 @@
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingCount:I
 
-    .line 2465
+    .line 2466
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothPingStart:I
@@ -22934,7 +23091,7 @@
     :cond_4
     move v1, v7
 
-    .line 2469
+    .line 2470
     goto :goto_1
 .end method
 
@@ -22942,12 +23099,12 @@
     .locals 1
 
     .prologue
-    .line 7650
+    .line 7678
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/os/BatteryStatsImpl;->writeLocked(Z)V
 
-    .line 7651
+    .line 7679
     return-void
 .end method
 
@@ -22960,7 +23117,7 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 7850
+    .line 7878
     iget-wide v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBaseTime:J
 
     iget-wide v6, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastHistoryElapsedRealtime:J
@@ -22969,21 +23126,21 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 7851
+    .line 7879
     if-nez p2, :cond_1
 
-    .line 7852
+    .line 7880
     invoke-virtual {p1, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7853
+    .line 7881
     invoke-virtual {p1, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7871
+    .line 7899
     :cond_0
     :goto_0
     return-void
 
-    .line 7856
+    .line 7884
     :cond_1
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
@@ -22993,7 +23150,7 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7857
+    .line 7885
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryTagPool:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -23018,7 +23175,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 7858
+    .line 7886
     .local v0, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/os/BatteryStats$HistoryTag;Ljava/lang/Integer;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -23026,7 +23183,7 @@
 
     check-cast v2, Landroid/os/BatteryStats$HistoryTag;
 
-    .line 7859
+    .line 7887
     .local v2, "tag":Landroid/os/BatteryStats$HistoryTag;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -23040,19 +23197,19 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7860
+    .line 7888
     iget-object v3, v2, Landroid/os/BatteryStats$HistoryTag;->string:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 7861
+    .line 7889
     iget v3, v2, Landroid/os/BatteryStats$HistoryTag;->uid:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 7863
+    .line 7891
     .end local v0    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/os/BatteryStats$HistoryTag;Ljava/lang/Integer;>;"
     .end local v2    # "tag":Landroid/os/BatteryStats$HistoryTag;
     :cond_2
@@ -23064,7 +23221,7 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7866
+    .line 7894
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
 
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHistoryBuffer:Landroid/os/Parcel;
@@ -23075,10 +23232,10 @@
 
     invoke-virtual {p1, v3, v8, v4}, Landroid/os/Parcel;->appendFrom(Landroid/os/Parcel;II)V
 
-    .line 7868
+    .line 7896
     if-eqz p3, :cond_0
 
-    .line 7869
+    .line 7897
     invoke-virtual {p0, p1}, Lcom/android/internal/os/BatteryStatsImpl;->writeOldHistory(Landroid/os/Parcel;)V
 
     goto :goto_0
@@ -23091,7 +23248,7 @@
     .param p3, "last"    # Landroid/os/BatteryStats$HistoryItem;
 
     .prologue
-    .line 1942
+    .line 1943
     if-eqz p3, :cond_0
 
     move-object/from16 v0, p2
@@ -23102,7 +23259,7 @@
 
     if-eqz v19, :cond_2
 
-    .line 1943
+    .line 1944
     :cond_0
     const v19, 0x7fffd
 
@@ -23112,7 +23269,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1944
+    .line 1945
     const/16 v19, 0x0
 
     move-object/from16 v0, p2
@@ -23123,12 +23280,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/BatteryStats$HistoryItem;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2043
+    .line 2044
     :cond_1
     :goto_0
     return-void
 
-    .line 1948
+    .line 1949
     :cond_2
     move-object/from16 v0, p2
 
@@ -23144,7 +23301,7 @@
 
     sub-long v8, v20, v22
 
-    .line 1949
+    .line 1950
     .local v8, "deltaTime":J
     move-object/from16 v0, p0
 
@@ -23154,7 +23311,7 @@
 
     move-result v12
 
-    .line 1950
+    .line 1951
     .local v12, "lastBatteryLevelInt":I
     move-object/from16 v0, p0
 
@@ -23164,7 +23321,7 @@
 
     move-result v13
 
-    .line 1953
+    .line 1954
     .local v13, "lastStateInt":I
     const-wide/16 v20, 0x0
 
@@ -23178,11 +23335,11 @@
 
     if-lez v19, :cond_10
 
-    .line 1954
+    .line 1955
     :cond_3
     const v7, 0x7ffff
 
-    .line 1960
+    .line 1961
     .local v7, "deltaTimeToken":I
     :goto_1
     move-object/from16 v0, p2
@@ -23197,7 +23354,7 @@
 
     or-int v10, v7, v19
 
-    .line 1961
+    .line 1962
     .local v10, "firstToken":I
     move-object/from16 v0, p0
 
@@ -23207,23 +23364,23 @@
 
     move-result v4
 
-    .line 1962
+    .line 1963
     .local v4, "batteryLevelInt":I
     if-eq v4, v12, :cond_12
 
     const/4 v5, 0x1
 
-    .line 1963
+    .line 1964
     .local v5, "batteryLevelIntChanged":Z
     :goto_2
     if-eqz v5, :cond_4
 
-    .line 1964
+    .line 1965
     const/high16 v19, 0x80000
 
     or-int v10, v10, v19
 
-    .line 1966
+    .line 1967
     :cond_4
     move-object/from16 v0, p0
 
@@ -23233,23 +23390,23 @@
 
     move-result v15
 
-    .line 1967
+    .line 1968
     .local v15, "stateInt":I
     if-eq v15, v13, :cond_13
 
     const/16 v16, 0x1
 
-    .line 1968
+    .line 1969
     .local v16, "stateIntChanged":Z
     :goto_3
     if-eqz v16, :cond_5
 
-    .line 1969
+    .line 1970
     const/high16 v19, 0x100000
 
     or-int v10, v10, v19
 
-    .line 1971
+    .line 1972
     :cond_5
     move-object/from16 v0, p2
 
@@ -23271,17 +23428,17 @@
 
     const/4 v14, 0x1
 
-    .line 1972
+    .line 1973
     .local v14, "state2IntChanged":Z
     :goto_4
     if-eqz v14, :cond_6
 
-    .line 1973
+    .line 1974
     const/high16 v19, 0x200000
 
     or-int v10, v10, v19
 
-    .line 1975
+    .line 1976
     :cond_6
     move-object/from16 v0, p2
 
@@ -23299,13 +23456,13 @@
 
     if-eqz v19, :cond_8
 
-    .line 1976
+    .line 1977
     :cond_7
     const/high16 v19, 0x400000
 
     or-int v10, v10, v19
 
-    .line 1978
+    .line 1979
     :cond_8
     move-object/from16 v0, p2
 
@@ -23315,32 +23472,32 @@
 
     if-eqz v19, :cond_9
 
-    .line 1979
+    .line 1980
     const/high16 v19, 0x800000
 
     or-int v10, v10, v19
 
-    .line 1981
+    .line 1982
     :cond_9
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v10}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 1985
-    const v19, 0x7fffe
-
-    move/from16 v0, v19
-
-    if-lt v7, v0, :cond_a
 
     .line 1986
     const v19, 0x7fffe
 
     move/from16 v0, v19
 
+    if-lt v7, v0, :cond_a
+
+    .line 1987
+    const v19, 0x7fffe
+
+    move/from16 v0, v19
+
     if-ne v7, v0, :cond_15
 
-    .line 1988
+    .line 1989
     long-to-int v0, v8
 
     move/from16 v19, v0
@@ -23351,30 +23508,30 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1994
+    .line 1995
     :cond_a
     :goto_5
     if-eqz v5, :cond_b
 
-    .line 1995
+    .line 1996
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2002
+    .line 2003
     :cond_b
     if-eqz v16, :cond_c
 
-    .line 2003
+    .line 2004
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v15}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2011
+    .line 2012
     :cond_c
     if-eqz v14, :cond_d
 
-    .line 2012
+    .line 2013
     move-object/from16 v0, p2
 
     iget v0, v0, Landroid/os/BatteryStats$HistoryItem;->states2:I
@@ -23387,7 +23544,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2016
+    .line 2017
     :cond_d
     move-object/from16 v0, p2
 
@@ -23405,7 +23562,7 @@
 
     if-eqz v19, :cond_f
 
-    .line 2019
+    .line 2020
     :cond_e
     move-object/from16 v0, p2
 
@@ -23415,7 +23572,7 @@
 
     if-eqz v19, :cond_16
 
-    .line 2020
+    .line 2021
     move-object/from16 v0, p2
 
     iget-object v0, v0, Landroid/os/BatteryStats$HistoryItem;->wakelockTag:Landroid/os/BatteryStats$HistoryTag;
@@ -23430,7 +23587,7 @@
 
     move-result v17
 
-    .line 2026
+    .line 2027
     .local v17, "wakeLockIndex":I
     :goto_6
     move-object/from16 v0, p2
@@ -23441,7 +23598,7 @@
 
     if-eqz v19, :cond_17
 
-    .line 2027
+    .line 2028
     move-object/from16 v0, p2
 
     iget-object v0, v0, Landroid/os/BatteryStats$HistoryItem;->wakeReasonTag:Landroid/os/BatteryStats$HistoryTag;
@@ -23456,7 +23613,7 @@
 
     move-result v18
 
-    .line 2033
+    .line 2034
     .local v18, "wakeReasonIndex":I
     :goto_7
     shl-int/lit8 v19, v18, 0x10
@@ -23469,7 +23626,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2035
+    .line 2036
     .end local v17    # "wakeLockIndex":I
     .end local v18    # "wakeReasonIndex":I
     :cond_f
@@ -23481,7 +23638,7 @@
 
     if-eqz v19, :cond_1
 
-    .line 2036
+    .line 2037
     move-object/from16 v0, p2
 
     iget-object v0, v0, Landroid/os/BatteryStats$HistoryItem;->eventTag:Landroid/os/BatteryStats$HistoryTag;
@@ -23496,7 +23653,7 @@
 
     move-result v11
 
-    .line 2037
+    .line 2038
     .local v11, "index":I
     move-object/from16 v0, p2
 
@@ -23512,7 +23669,7 @@
 
     or-int v6, v19, v20
 
-    .line 2038
+    .line 2039
     .local v6, "codeAndIndex":I
     move-object/from16 v0, p1
 
@@ -23520,7 +23677,7 @@
 
     goto/16 :goto_0
 
-    .line 1955
+    .line 1956
     .end local v4    # "batteryLevelInt":I
     .end local v5    # "batteryLevelIntChanged":Z
     .end local v6    # "codeAndIndex":I
@@ -23537,13 +23694,13 @@
 
     if-ltz v19, :cond_11
 
-    .line 1956
+    .line 1957
     const v7, 0x7fffe
 
     .restart local v7    # "deltaTimeToken":I
     goto/16 :goto_1
 
-    .line 1958
+    .line 1959
     .end local v7    # "deltaTimeToken":I
     :cond_11
     long-to-int v7, v8
@@ -23551,7 +23708,7 @@
     .restart local v7    # "deltaTimeToken":I
     goto/16 :goto_1
 
-    .line 1962
+    .line 1963
     .restart local v4    # "batteryLevelInt":I
     .restart local v10    # "firstToken":I
     :cond_12
@@ -23559,7 +23716,7 @@
 
     goto/16 :goto_2
 
-    .line 1967
+    .line 1968
     .restart local v5    # "batteryLevelIntChanged":Z
     .restart local v15    # "stateInt":I
     :cond_13
@@ -23567,14 +23724,14 @@
 
     goto/16 :goto_3
 
-    .line 1971
+    .line 1972
     .restart local v16    # "stateIntChanged":Z
     :cond_14
     const/4 v14, 0x0
 
     goto/16 :goto_4
 
-    .line 1991
+    .line 1992
     .restart local v14    # "state2IntChanged":Z
     :cond_15
     move-object/from16 v0, p1
@@ -23583,14 +23740,14 @@
 
     goto/16 :goto_5
 
-    .line 2024
+    .line 2025
     :cond_16
     const v17, 0xffff
 
     .restart local v17    # "wakeLockIndex":I
     goto :goto_6
 
-    .line 2031
+    .line 2032
     :cond_17
     const v18, 0xffff
 
@@ -23603,70 +23760,70 @@
     .param p1, "sync"    # Z
 
     .prologue
-    .line 7658
+    .line 7686
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mFile:Lcom/android/internal/util/JournaledFile;
 
     if-nez v1, :cond_1
 
-    .line 7659
+    .line 7687
     const-string v1, "BatteryStats"
 
     const-string v2, "writeLocked: no file associated with this instance"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7685
+    .line 7713
     :cond_0
     :goto_0
     return-void
 
-    .line 7663
+    .line 7691
     :cond_1
     iget-boolean v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mShuttingDown:Z
 
     if-nez v1, :cond_0
 
-    .line 7667
+    .line 7695
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 7668
+    .line 7696
     .local v0, "out":Landroid/os/Parcel;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/os/BatteryStatsImpl;->writeSummaryToParcel(Landroid/os/Parcel;Z)V
 
-    .line 7669
+    .line 7697
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
 
-    .line 7671
+    .line 7699
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
     if-eqz v1, :cond_2
 
-    .line 7672
+    .line 7700
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 7674
+    .line 7702
     :cond_2
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPendingWrite:Landroid/os/Parcel;
 
-    .line 7676
+    .line 7704
     if-eqz p1, :cond_3
 
-    .line 7677
+    .line 7705
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsImpl;->commitPendingDataToDisk()V
 
     goto :goto_0
 
-    .line 7679
+    .line 7707
     :cond_3
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
@@ -23686,7 +23843,7 @@
     .param p1, "out"    # Landroid/os/Parcel;
 
     .prologue
-    .line 7875
+    .line 7903
     return-void
 .end method
 
@@ -23696,15 +23853,15 @@
     .param p2, "inclHistory"    # Z
 
     .prologue
-    .line 8176
+    .line 8204
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 8180
+    .line 8208
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStartClockTime()J
 
     move-result-wide v34
 
-    .line 8182
+    .line 8210
     .local v34, "startClockTime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -23714,7 +23871,7 @@
 
     mul-long v6, v4, v44
 
-    .line 8183
+    .line 8211
     .local v6, "NOW_SYS":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -23724,7 +23881,7 @@
 
     mul-long v8, v4, v44
 
-    .line 8185
+    .line 8213
     .local v8, "NOWREAL_SYS":J
     const/16 v4, 0x74
 
@@ -23732,7 +23889,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8187
+    .line 8215
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -23743,7 +23900,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Lcom/android/internal/os/BatteryStatsImpl;->writeHistory(Landroid/os/Parcel;ZZ)V
 
-    .line 8189
+    .line 8217
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
@@ -23752,7 +23909,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8190
+    .line 8218
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -23765,7 +23922,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8191
+    .line 8219
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -23778,14 +23935,14 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8192
+    .line 8220
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v34
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8193
+    .line 8221
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
@@ -23794,7 +23951,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8194
+    .line 8222
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
@@ -23803,7 +23960,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8195
+    .line 8223
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -23812,7 +23969,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->writeSummaryToParcel(Landroid/os/Parcel;JJ)V
 
-    .line 8196
+    .line 8224
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -23821,7 +23978,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->writeSummaryToParcel(Landroid/os/Parcel;JJ)V
 
-    .line 8197
+    .line 8225
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
@@ -23830,7 +23987,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8198
+    .line 8226
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
@@ -23839,7 +23996,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8199
+    .line 8227
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -23848,7 +24005,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8200
+    .line 8228
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
@@ -23857,7 +24014,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8201
+    .line 8229
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getLowDischargeAmountSinceCharge()I
 
     move-result v4
@@ -23866,7 +24023,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8202
+    .line 8230
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getHighDischargeAmountSinceCharge()I
 
     move-result v4
@@ -23875,7 +24032,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8203
+    .line 8231
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getDischargeAmountScreenOnSinceCharge()I
 
     move-result v4
@@ -23884,7 +24041,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8204
+    .line 8232
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getDischargeAmountScreenOffSinceCharge()I
 
     move-result v4
@@ -23893,7 +24050,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8205
+    .line 8233
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
@@ -23902,7 +24059,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8206
+    .line 8234
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
@@ -23911,7 +24068,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeLongArray([J)V
 
-    .line 8207
+    .line 8235
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
@@ -23920,7 +24077,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8208
+    .line 8236
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
@@ -23929,7 +24086,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeLongArray([J)V
 
-    .line 8210
+    .line 8238
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -23938,7 +24095,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8211
+    .line 8239
     const/16 v19, 0x0
 
     .local v19, "i":I
@@ -23949,7 +24106,7 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 8212
+    .line 8240
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -23960,12 +24117,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8211
+    .line 8239
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_0
 
-    .line 8214
+    .line 8242
     :cond_0
     move-object/from16 v0, p0
 
@@ -23975,7 +24132,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8215
+    .line 8243
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -23984,7 +24141,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8216
+    .line 8244
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -23993,7 +24150,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8217
+    .line 8245
     const/16 v19, 0x0
 
     :goto_1
@@ -24003,7 +24160,7 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 8218
+    .line 8246
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24014,12 +24171,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8217
+    .line 8245
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_1
 
-    .line 8220
+    .line 8248
     :cond_1
     move-object/from16 v0, p0
 
@@ -24029,7 +24186,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8221
+    .line 8249
     const/16 v19, 0x0
 
     :goto_2
@@ -24039,7 +24196,7 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 8222
+    .line 8250
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24050,12 +24207,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8221
+    .line 8249
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_2
 
-    .line 8224
+    .line 8252
     :cond_2
     const/16 v19, 0x0
 
@@ -24066,7 +24223,7 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 8225
+    .line 8253
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -24077,7 +24234,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8226
+    .line 8254
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -24088,12 +24245,12 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8224
+    .line 8252
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_3
 
-    .line 8228
+    .line 8256
     :cond_3
     move-object/from16 v0, p0
 
@@ -24103,7 +24260,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8229
+    .line 8257
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24112,7 +24269,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8230
+    .line 8258
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -24121,7 +24278,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8231
+    .line 8259
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -24130,7 +24287,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8232
+    .line 8260
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -24139,7 +24296,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8233
+    .line 8261
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24148,7 +24305,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8234
+    .line 8262
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24157,7 +24314,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8235
+    .line 8263
     const/16 v19, 0x0
 
     :goto_4
@@ -24167,7 +24324,7 @@
 
     if-ge v0, v4, :cond_4
 
-    .line 8236
+    .line 8264
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24178,12 +24335,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8235
+    .line 8263
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_4
 
-    .line 8238
+    .line 8266
     :cond_4
     const/16 v19, 0x0
 
@@ -24194,7 +24351,7 @@
 
     if-ge v0, v4, :cond_5
 
-    .line 8239
+    .line 8267
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24205,12 +24362,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8238
+    .line 8266
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_5
 
-    .line 8241
+    .line 8269
     :cond_5
     const/16 v19, 0x0
 
@@ -24221,7 +24378,7 @@
 
     if-ge v0, v4, :cond_6
 
-    .line 8242
+    .line 8270
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24232,12 +24389,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8241
+    .line 8269
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_6
 
-    .line 8244
+    .line 8272
     :cond_6
     move-object/from16 v0, p0
 
@@ -24247,7 +24404,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8245
+    .line 8273
     const/16 v19, 0x0
 
     :goto_7
@@ -24257,7 +24414,7 @@
 
     if-ge v0, v4, :cond_7
 
-    .line 8246
+    .line 8274
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24268,12 +24425,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8245
+    .line 8273
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_7
 
-    .line 8248
+    .line 8276
     :cond_7
     move-object/from16 v0, p0
 
@@ -24283,7 +24440,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8249
+    .line 8277
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24292,7 +24449,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8251
+    .line 8279
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
@@ -24305,7 +24462,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8252
+    .line 8280
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
@@ -24332,7 +24489,7 @@
 
     check-cast v17, Ljava/util/Map$Entry;
 
-    .line 8253
+    .line 8281
     .local v17, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -24340,18 +24497,18 @@
 
     check-cast v29, Lcom/android/internal/os/BatteryStatsImpl$Timer;
 
-    .line 8254
+    .line 8282
     .local v29, "kwlt":Lcom/android/internal/os/BatteryStatsImpl$Timer;
     if-eqz v29, :cond_8
 
-    .line 8255
+    .line 8283
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8256
+    .line 8284
     invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -24362,7 +24519,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8257
+    .line 8285
     move-object/from16 v0, v29
 
     move-object/from16 v1, p1
@@ -24371,7 +24528,7 @@
 
     goto :goto_8
 
-    .line 8259
+    .line 8287
     :cond_8
     const/4 v4, 0x0
 
@@ -24381,7 +24538,7 @@
 
     goto :goto_8
 
-    .line 8263
+    .line 8291
     .end local v17    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     .end local v29    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$Timer;
     :cond_9
@@ -24397,7 +24554,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8264
+    .line 8292
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
@@ -24423,7 +24580,7 @@
 
     check-cast v17, Ljava/util/Map$Entry;
 
-    .line 8265
+    .line 8293
     .restart local v17    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -24431,18 +24588,18 @@
 
     check-cast v37, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 8266
+    .line 8294
     .local v37, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-eqz v37, :cond_a
 
-    .line 8267
+    .line 8295
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8268
+    .line 8296
     invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -24453,7 +24610,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8269
+    .line 8297
     move-object/from16 v0, v37
 
     move-object/from16 v1, p1
@@ -24462,7 +24619,7 @@
 
     goto :goto_9
 
-    .line 8271
+    .line 8299
     :cond_a
     const/4 v4, 0x0
 
@@ -24472,17 +24629,19 @@
 
     goto :goto_9
 
-    .line 8275
+    .line 8303
     .end local v17    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     .end local v37    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_b
-    sget v4, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v4
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8276
+    .line 8304
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -24491,13 +24650,13 @@
 
     move-result v15
 
-    .line 8277
+    .line 8305
     .local v15, "NU":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v15}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8278
+    .line 8306
     const/16 v26, 0x0
 
     .end local v20    # "i$":Ljava/util/Iterator;
@@ -24507,7 +24666,7 @@
 
     if-ge v0, v15, :cond_29
 
-    .line 8279
+    .line 8307
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -24522,7 +24681,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8280
+    .line 8308
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -24535,7 +24694,7 @@
 
     check-cast v40, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 8282
+    .line 8310
     .local v40, "u":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     move-object/from16 v0, v40
 
@@ -24543,14 +24702,14 @@
 
     if-eqz v4, :cond_c
 
-    .line 8283
+    .line 8311
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8284
+    .line 8312
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24559,7 +24718,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8288
+    .line 8316
     :goto_b
     move-object/from16 v0, v40
 
@@ -24567,14 +24726,14 @@
 
     if-eqz v4, :cond_d
 
-    .line 8289
+    .line 8317
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8290
+    .line 8318
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mFullWifiLockTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24583,7 +24742,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8294
+    .line 8322
     :goto_c
     move-object/from16 v0, v40
 
@@ -24591,14 +24750,14 @@
 
     if-eqz v4, :cond_e
 
-    .line 8295
+    .line 8323
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8296
+    .line 8324
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiScanTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24607,7 +24766,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8300
+    .line 8328
     :goto_d
     const/16 v19, 0x0
 
@@ -24618,7 +24777,7 @@
 
     if-ge v0, v4, :cond_10
 
-    .line 8301
+    .line 8329
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiBatchedScanTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24627,14 +24786,14 @@
 
     if-eqz v4, :cond_f
 
-    .line 8302
+    .line 8330
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8303
+    .line 8331
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiBatchedScanTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24645,13 +24804,13 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8300
+    .line 8328
     :goto_f
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_e
 
-    .line 8286
+    .line 8314
     :cond_c
     const/4 v4, 0x0
 
@@ -24661,7 +24820,7 @@
 
     goto :goto_b
 
-    .line 8292
+    .line 8320
     :cond_d
     const/4 v4, 0x0
 
@@ -24671,7 +24830,7 @@
 
     goto :goto_c
 
-    .line 8298
+    .line 8326
     :cond_e
     const/4 v4, 0x0
 
@@ -24681,7 +24840,7 @@
 
     goto :goto_d
 
-    .line 8305
+    .line 8333
     :cond_f
     const/4 v4, 0x0
 
@@ -24691,7 +24850,7 @@
 
     goto :goto_f
 
-    .line 8308
+    .line 8336
     :cond_10
     move-object/from16 v0, v40
 
@@ -24699,14 +24858,14 @@
 
     if-eqz v4, :cond_11
 
-    .line 8309
+    .line 8337
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8310
+    .line 8338
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mWifiMulticastTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24715,7 +24874,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8314
+    .line 8342
     :goto_10
     move-object/from16 v0, v40
 
@@ -24723,14 +24882,14 @@
 
     if-eqz v4, :cond_12
 
-    .line 8315
+    .line 8343
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8316
+    .line 8344
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mAudioTurnedOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24739,7 +24898,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8320
+    .line 8348
     :goto_11
     move-object/from16 v0, v40
 
@@ -24747,14 +24906,14 @@
 
     if-eqz v4, :cond_13
 
-    .line 8321
+    .line 8349
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8322
+    .line 8350
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mVideoTurnedOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24763,7 +24922,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8326
+    .line 8354
     :goto_12
     move-object/from16 v0, v40
 
@@ -24771,14 +24930,14 @@
 
     if-eqz v4, :cond_14
 
-    .line 8327
+    .line 8355
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8328
+    .line 8356
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mForegroundActivityTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24787,7 +24946,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8332
+    .line 8360
     :goto_13
     const/16 v19, 0x0
 
@@ -24798,7 +24957,7 @@
 
     if-ge v0, v4, :cond_16
 
-    .line 8333
+    .line 8361
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24807,14 +24966,14 @@
 
     if-eqz v4, :cond_15
 
-    .line 8334
+    .line 8362
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8335
+    .line 8363
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -24825,13 +24984,13 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8332
+    .line 8360
     :goto_15
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_14
 
-    .line 8312
+    .line 8340
     :cond_11
     const/4 v4, 0x0
 
@@ -24841,7 +25000,7 @@
 
     goto :goto_10
 
-    .line 8318
+    .line 8346
     :cond_12
     const/4 v4, 0x0
 
@@ -24851,7 +25010,7 @@
 
     goto :goto_11
 
-    .line 8324
+    .line 8352
     :cond_13
     const/4 v4, 0x0
 
@@ -24861,7 +25020,7 @@
 
     goto :goto_12
 
-    .line 8330
+    .line 8358
     :cond_14
     const/4 v4, 0x0
 
@@ -24871,7 +25030,7 @@
 
     goto :goto_13
 
-    .line 8337
+    .line 8365
     :cond_15
     const/4 v4, 0x0
 
@@ -24881,7 +25040,7 @@
 
     goto :goto_15
 
-    .line 8340
+    .line 8368
     :cond_16
     move-object/from16 v0, v40
 
@@ -24889,14 +25048,14 @@
 
     if-eqz v4, :cond_18
 
-    .line 8341
+    .line 8369
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8342
+    .line 8370
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mVibratorOnTimer:Lcom/android/internal/os/BatteryStatsImpl$BatchTimer;
@@ -24905,7 +25064,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$BatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8347
+    .line 8375
     :goto_16
     move-object/from16 v0, v40
 
@@ -24913,14 +25072,14 @@
 
     if-nez v4, :cond_19
 
-    .line 8348
+    .line 8376
     const/4 v4, 0x0
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8356
+    .line 8384
     :cond_17
     move-object/from16 v0, v40
 
@@ -24928,14 +25087,14 @@
 
     if-nez v4, :cond_1a
 
-    .line 8357
+    .line 8385
     const/4 v4, 0x0
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8368
+    .line 8396
     :goto_17
     move-object/from16 v0, v40
 
@@ -24945,13 +25104,13 @@
 
     move-result-object v41
 
-    .line 8369
+    .line 8397
     .local v41, "wakeStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;>;"
     invoke-virtual/range {v41 .. v41}, Landroid/util/ArrayMap;->size()I
 
     move-result v16
 
-    .line 8370
+    .line 8398
     .local v16, "NW":I
     move-object/from16 v0, p1
 
@@ -24959,7 +25118,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8371
+    .line 8399
     const/16 v27, 0x0
 
     .local v27, "iw":I
@@ -24970,7 +25129,7 @@
 
     if-ge v0, v1, :cond_1f
 
-    .line 8372
+    .line 8400
     move-object/from16 v0, v41
 
     move/from16 v1, v27
@@ -24985,7 +25144,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8373
+    .line 8401
     move-object/from16 v0, v41
 
     move/from16 v1, v27
@@ -24996,7 +25155,7 @@
 
     check-cast v42, Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;
 
-    .line 8374
+    .line 8402
     .local v42, "wl":Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;
     move-object/from16 v0, v42
 
@@ -25004,14 +25163,14 @@
 
     if-eqz v4, :cond_1c
 
-    .line 8375
+    .line 8403
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8376
+    .line 8404
     move-object/from16 v0, v42
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;->mTimerFull:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -25020,7 +25179,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8380
+    .line 8408
     :goto_19
     move-object/from16 v0, v42
 
@@ -25028,14 +25187,14 @@
 
     if-eqz v4, :cond_1d
 
-    .line 8381
+    .line 8409
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8382
+    .line 8410
     move-object/from16 v0, v42
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;->mTimerPartial:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -25044,7 +25203,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8386
+    .line 8414
     :goto_1a
     move-object/from16 v0, v42
 
@@ -25052,14 +25211,14 @@
 
     if-eqz v4, :cond_1e
 
-    .line 8387
+    .line 8415
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8388
+    .line 8416
     move-object/from16 v0, v42
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;->mTimerWindow:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -25068,13 +25227,13 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8371
+    .line 8399
     :goto_1b
     add-int/lit8 v27, v27, 0x1
 
     goto :goto_18
 
-    .line 8344
+    .line 8372
     .end local v16    # "NW":I
     .end local v27    # "iw":I
     .end local v41    # "wakeStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;>;"
@@ -25088,7 +25247,7 @@
 
     goto/16 :goto_16
 
-    .line 8350
+    .line 8378
     :cond_19
     const/4 v4, 0x1
 
@@ -25096,7 +25255,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8351
+    .line 8379
     const/16 v19, 0x0
 
     :goto_1c
@@ -25106,7 +25265,7 @@
 
     if-ge v0, v4, :cond_17
 
-    .line 8352
+    .line 8380
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mUserActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$Counter;
@@ -25117,12 +25276,12 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$Counter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8351
+    .line 8379
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_1c
 
-    .line 8359
+    .line 8387
     :cond_1a
     const/4 v4, 0x1
 
@@ -25130,7 +25289,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8360
+    .line 8388
     const/16 v19, 0x0
 
     :goto_1d
@@ -25140,7 +25299,7 @@
 
     if-ge v0, v4, :cond_1b
 
-    .line 8361
+    .line 8389
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -25151,7 +25310,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8362
+    .line 8390
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -25162,12 +25321,12 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8360
+    .line 8388
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_1d
 
-    .line 8364
+    .line 8392
     :cond_1b
     move-object/from16 v0, v40
 
@@ -25177,7 +25336,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8365
+    .line 8393
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mMobileRadioActiveCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -25188,7 +25347,7 @@
 
     goto/16 :goto_17
 
-    .line 8378
+    .line 8406
     .restart local v16    # "NW":I
     .restart local v27    # "iw":I
     .restart local v41    # "wakeStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;>;"
@@ -25202,7 +25361,7 @@
 
     goto/16 :goto_19
 
-    .line 8384
+    .line 8412
     :cond_1d
     const/4 v4, 0x0
 
@@ -25212,7 +25371,7 @@
 
     goto/16 :goto_1a
 
-    .line 8390
+    .line 8418
     :cond_1e
     const/4 v4, 0x0
 
@@ -25222,7 +25381,7 @@
 
     goto :goto_1b
 
-    .line 8394
+    .line 8422
     .end local v42    # "wl":Lcom/android/internal/os/BatteryStatsImpl$Uid$Wakelock;
     :cond_1f
     move-object/from16 v0, v40
@@ -25233,19 +25392,19 @@
 
     move-result-object v36
 
-    .line 8395
+    .line 8423
     .local v36, "syncStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;>;"
     invoke-virtual/range {v36 .. v36}, Landroid/util/ArrayMap;->size()I
 
     move-result v13
 
-    .line 8396
+    .line 8424
     .local v13, "NS":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8397
+    .line 8425
     const/16 v24, 0x0
 
     .local v24, "is":I
@@ -25254,7 +25413,7 @@
 
     if-ge v0, v13, :cond_20
 
-    .line 8398
+    .line 8426
     move-object/from16 v0, v36
 
     move/from16 v1, v24
@@ -25269,7 +25428,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8399
+    .line 8427
     move-object/from16 v0, v36
 
     move/from16 v1, v24
@@ -25284,12 +25443,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8397
+    .line 8425
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_1e
 
-    .line 8402
+    .line 8430
     :cond_20
     move-object/from16 v0, v40
 
@@ -25299,19 +25458,19 @@
 
     move-result-object v28
 
-    .line 8403
+    .line 8431
     .local v28, "jobStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;>;"
     invoke-virtual/range {v28 .. v28}, Landroid/util/ArrayMap;->size()I
 
     move-result v11
 
-    .line 8404
+    .line 8432
     .local v11, "NJ":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8405
+    .line 8433
     const/16 v22, 0x0
 
     .local v22, "ij":I
@@ -25320,7 +25479,7 @@
 
     if-ge v0, v11, :cond_21
 
-    .line 8406
+    .line 8434
     move-object/from16 v0, v28
 
     move/from16 v1, v22
@@ -25335,7 +25494,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8407
+    .line 8435
     move-object/from16 v0, v28
 
     move/from16 v1, v22
@@ -25350,12 +25509,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8405
+    .line 8433
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_1f
 
-    .line 8410
+    .line 8438
     :cond_21
     move-object/from16 v0, v40
 
@@ -25365,13 +25524,13 @@
 
     move-result v14
 
-    .line 8411
+    .line 8439
     .local v14, "NSE":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8412
+    .line 8440
     const/16 v25, 0x0
 
     .local v25, "ise":I
@@ -25380,7 +25539,7 @@
 
     if-ge v0, v14, :cond_23
 
-    .line 8413
+    .line 8441
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mSensorStats:Landroid/util/SparseArray;
@@ -25395,7 +25554,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8414
+    .line 8442
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mSensorStats:Landroid/util/SparseArray;
@@ -25408,7 +25567,7 @@
 
     check-cast v31, Lcom/android/internal/os/BatteryStatsImpl$Uid$Sensor;
 
-    .line 8415
+    .line 8443
     .local v31, "se":Lcom/android/internal/os/BatteryStatsImpl$Uid$Sensor;
     move-object/from16 v0, v31
 
@@ -25416,14 +25575,14 @@
 
     if-eqz v4, :cond_22
 
-    .line 8416
+    .line 8444
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8417
+    .line 8445
     move-object/from16 v0, v31
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Sensor;->mTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -25432,13 +25591,13 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8412
+    .line 8440
     :goto_21
     add-int/lit8 v25, v25, 0x1
 
     goto :goto_20
 
-    .line 8419
+    .line 8447
     :cond_22
     const/4 v4, 0x0
 
@@ -25448,7 +25607,7 @@
 
     goto :goto_21
 
-    .line 8423
+    .line 8451
     .end local v31    # "se":Lcom/android/internal/os/BatteryStatsImpl$Uid$Sensor;
     :cond_23
     move-object/from16 v0, v40
@@ -25459,13 +25618,13 @@
 
     move-result v12
 
-    .line 8424
+    .line 8452
     .local v12, "NP":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v12}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8425
+    .line 8453
     const/16 v23, 0x0
 
     .local v23, "ip":I
@@ -25474,7 +25633,7 @@
 
     if-ge v0, v12, :cond_26
 
-    .line 8426
+    .line 8454
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStats:Landroid/util/ArrayMap;
@@ -25491,7 +25650,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8427
+    .line 8455
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mProcessStats:Landroid/util/ArrayMap;
@@ -25504,7 +25663,7 @@
 
     check-cast v30, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
 
-    .line 8428
+    .line 8456
     .local v30, "ps":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     move-object/from16 v0, v30
 
@@ -25514,7 +25673,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8429
+    .line 8457
     move-object/from16 v0, v30
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSystemTime:J
@@ -25523,7 +25682,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8430
+    .line 8458
     move-object/from16 v0, v30
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mForegroundTime:J
@@ -25532,7 +25691,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8431
+    .line 8459
     move-object/from16 v0, v30
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mStarts:I
@@ -25541,7 +25700,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8432
+    .line 8460
     move-object/from16 v0, v30
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mNumCrashes:I
@@ -25550,7 +25709,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8433
+    .line 8461
     move-object/from16 v0, v30
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mNumAnrs:I
@@ -25559,20 +25718,20 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8434
+    .line 8462
     move-object/from16 v0, v30
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
 
     array-length v10, v4
 
-    .line 8435
+    .line 8463
     .local v10, "N":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8436
+    .line 8464
     const/16 v19, 0x0
 
     :goto_23
@@ -25580,7 +25739,7 @@
 
     if-ge v0, v10, :cond_25
 
-    .line 8437
+    .line 8465
     move-object/from16 v0, v30
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -25589,14 +25748,14 @@
 
     if-eqz v4, :cond_24
 
-    .line 8438
+    .line 8466
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8439
+    .line 8467
     move-object/from16 v0, v30
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->mSpeedBins:[Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;
@@ -25607,13 +25766,13 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8436
+    .line 8464
     :goto_24
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_23
 
-    .line 8441
+    .line 8469
     :cond_24
     const/4 v4, 0x0
 
@@ -25623,7 +25782,7 @@
 
     goto :goto_24
 
-    .line 8444
+    .line 8472
     :cond_25
     move-object/from16 v0, v30
 
@@ -25631,12 +25790,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;->writeExcessivePowerToParcelLocked(Landroid/os/Parcel;)V
 
-    .line 8425
+    .line 8453
     add-int/lit8 v23, v23, 0x1
 
     goto/16 :goto_22
 
-    .line 8447
+    .line 8475
     .end local v10    # "N":I
     .end local v30    # "ps":Lcom/android/internal/os/BatteryStatsImpl$Uid$Proc;
     :cond_26
@@ -25648,15 +25807,15 @@
 
     move-result v12
 
-    .line 8448
+    .line 8476
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v12}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8449
+    .line 8477
     if-lez v12, :cond_28
 
-    .line 8451
+    .line 8479
     move-object/from16 v0, v40
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid;->mPackageStats:Landroid/util/ArrayMap;
@@ -25682,7 +25841,7 @@
 
     check-cast v18, Ljava/util/Map$Entry;
 
-    .line 8452
+    .line 8480
     .local v18, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;>;"
     invoke-interface/range {v18 .. v18}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -25694,14 +25853,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8453
+    .line 8481
     invoke-interface/range {v18 .. v18}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v30
 
     check-cast v30, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
 
-    .line 8454
+    .line 8482
     .local v30, "ps":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
     move-object/from16 v0, v30
 
@@ -25711,7 +25870,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8455
+    .line 8483
     move-object/from16 v0, v30
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;->mServiceStats:Ljava/util/HashMap;
@@ -25720,15 +25879,15 @@
 
     move-result v13
 
-    .line 8456
+    .line 8484
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8457
+    .line 8485
     if-lez v13, :cond_27
 
-    .line 8459
+    .line 8487
     move-object/from16 v0, v30
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;->mServiceStats:Ljava/util/HashMap;
@@ -25755,7 +25914,7 @@
 
     check-cast v32, Ljava/util/Map$Entry;
 
-    .line 8460
+    .line 8488
     .local v32, "sent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;>;"
     invoke-interface/range {v32 .. v32}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -25767,14 +25926,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8461
+    .line 8489
     invoke-interface/range {v32 .. v32}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v33
 
     check-cast v33, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
 
-    .line 8462
+    .line 8490
     .local v33, "ss":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;
     move-object/from16 v0, p0
 
@@ -25790,7 +25949,7 @@
 
     move-result-wide v38
 
-    .line 8464
+    .line 8492
     .local v38, "time":J
     move-object/from16 v0, p1
 
@@ -25798,7 +25957,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8465
+    .line 8493
     move-object/from16 v0, v33
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;->mStarts:I
@@ -25807,7 +25966,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8466
+    .line 8494
     move-object/from16 v0, v33
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg$Serv;->mLaunches:I
@@ -25818,7 +25977,7 @@
 
     goto :goto_25
 
-    .line 8278
+    .line 8306
     .end local v18    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;>;"
     .end local v21    # "i$":Ljava/util/Iterator;
     .end local v30    # "ps":Lcom/android/internal/os/BatteryStatsImpl$Uid$Pkg;
@@ -25830,7 +25989,7 @@
 
     goto/16 :goto_a
 
-    .line 8472
+    .line 8500
     .end local v11    # "NJ":I
     .end local v12    # "NP":I
     .end local v13    # "NS":I
@@ -25853,12 +26012,12 @@
     .locals 1
 
     .prologue
-    .line 7654
+    .line 7682
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/os/BatteryStatsImpl;->writeLocked(Z)V
 
-    .line 7655
+    .line 7683
     return-void
 .end method
 
@@ -25868,12 +26027,12 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 8624
+    .line 8652
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->writeToParcelLocked(Landroid/os/Parcel;ZI)V
 
-    .line 8625
+    .line 8653
     return-void
 .end method
 
@@ -25884,15 +26043,15 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 8634
+    .line 8662
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->pullPendingStateUpdatesLocked()V
 
-    .line 8638
+    .line 8666
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getStartClockTime()J
 
     move-result-wide v20
 
-    .line 8640
+    .line 8668
     .local v20, "startClockTime":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -25902,7 +26061,7 @@
 
     mul-long v6, v4, v24
 
-    .line 8641
+    .line 8669
     .local v6, "uSecUptime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -25912,7 +26071,7 @@
 
     mul-long v8, v4, v24
 
-    .line 8642
+    .line 8670
     .local v8, "uSecRealtime":J
     move-object/from16 v0, p0
 
@@ -25922,7 +26081,7 @@
 
     move-result-wide v10
 
-    .line 8643
+    .line 8671
     .local v10, "batteryRealtime":J
     move-object/from16 v0, p0
 
@@ -25932,7 +26091,7 @@
 
     move-result-wide v12
 
-    .line 8645
+    .line 8673
     .local v12, "batteryScreenOffRealtime":J
     const v4, -0x458a8b8b
 
@@ -25940,7 +26099,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8647
+    .line 8675
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -25951,7 +26110,7 @@
 
     invoke-virtual {v0, v1, v4, v5}, Lcom/android/internal/os/BatteryStatsImpl;->writeHistory(Landroid/os/Parcel;ZZ)V
 
-    .line 8649
+    .line 8677
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartCount:I
@@ -25960,14 +26119,14 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8650
+    .line 8678
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v20
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8651
+    .line 8679
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mStartPlatformVersion:Ljava/lang/String;
@@ -25976,7 +26135,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8652
+    .line 8680
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mEndPlatformVersion:Ljava/lang/String;
@@ -25985,7 +26144,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8653
+    .line 8681
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUptime:J
@@ -25994,7 +26153,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8654
+    .line 8682
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUptimeStart:J
@@ -26003,7 +26162,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8655
+    .line 8683
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtime:J
@@ -26012,7 +26171,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8656
+    .line 8684
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mRealtimeStart:J
@@ -26021,7 +26180,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8657
+    .line 8685
     move-object/from16 v0, p0
 
     iget-boolean v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBattery:Z
@@ -26035,7 +26194,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8658
+    .line 8686
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -26044,7 +26203,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->writeToParcel(Landroid/os/Parcel;JJ)V
 
-    .line 8659
+    .line 8687
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryScreenOffTimeBase:Lcom/android/internal/os/BatteryStatsImpl$TimeBase;
@@ -26053,7 +26212,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lcom/android/internal/os/BatteryStatsImpl$TimeBase;->writeToParcel(Landroid/os/Parcel;JJ)V
 
-    .line 8661
+    .line 8689
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26062,7 +26221,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8662
+    .line 8690
     const/4 v15, 0x0
 
     .local v15, "i":I
@@ -26071,7 +26230,7 @@
 
     if-ge v15, v4, :cond_1
 
-    .line 8663
+    .line 8691
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenBrightnessTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26082,19 +26241,19 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8662
+    .line 8690
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 8657
+    .line 8685
     .end local v15    # "i":I
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 8665
+    .line 8693
     .restart local v15    # "i":I
     :cond_1
     move-object/from16 v0, p0
@@ -26105,7 +26264,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8666
+    .line 8694
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowPowerModeEnabledTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26114,7 +26273,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8667
+    .line 8695
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26123,7 +26282,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8668
+    .line 8696
     const/4 v15, 0x0
 
     :goto_2
@@ -26131,7 +26290,7 @@
 
     if-ge v15, v4, :cond_2
 
-    .line 8669
+    .line 8697
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26142,12 +26301,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8668
+    .line 8696
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_2
 
-    .line 8671
+    .line 8699
     :cond_2
     move-object/from16 v0, p0
 
@@ -26157,7 +26316,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8672
+    .line 8700
     const/4 v15, 0x0
 
     :goto_3
@@ -26165,7 +26324,7 @@
 
     if-ge v15, v4, :cond_3
 
-    .line 8673
+    .line 8701
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneDataConnectionsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26176,12 +26335,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8672
+    .line 8700
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_3
 
-    .line 8675
+    .line 8703
     :cond_3
     const/4 v15, 0x0
 
@@ -26190,7 +26349,7 @@
 
     if-ge v15, v4, :cond_4
 
-    .line 8676
+    .line 8704
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkByteActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -26201,7 +26360,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 8677
+    .line 8705
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNetworkPacketActivityCounters:[Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -26212,12 +26371,12 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 8675
+    .line 8703
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_4
 
-    .line 8679
+    .line 8707
     :cond_4
     move-object/from16 v0, p0
 
@@ -26227,7 +26386,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8680
+    .line 8708
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActivePerAppTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26236,7 +26395,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8681
+    .line 8709
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveAdjustedTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -26245,7 +26404,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 8682
+    .line 8710
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownTime:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -26254,7 +26413,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 8683
+    .line 8711
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mMobileRadioActiveUnknownCount:Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;
@@ -26263,7 +26422,7 @@
 
     invoke-virtual {v4, v0}, Lcom/android/internal/os/BatteryStatsImpl$LongSamplingCounter;->writeToParcel(Landroid/os/Parcel;)V
 
-    .line 8684
+    .line 8712
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26272,7 +26431,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8685
+    .line 8713
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26281,7 +26440,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8686
+    .line 8714
     const/4 v15, 0x0
 
     :goto_5
@@ -26289,7 +26448,7 @@
 
     if-ge v15, v4, :cond_5
 
-    .line 8687
+    .line 8715
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26300,12 +26459,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8686
+    .line 8714
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_5
 
-    .line 8689
+    .line 8717
     :cond_5
     const/4 v15, 0x0
 
@@ -26314,7 +26473,7 @@
 
     if-ge v15, v4, :cond_6
 
-    .line 8690
+    .line 8718
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSupplStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26325,12 +26484,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8689
+    .line 8717
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_6
 
-    .line 8692
+    .line 8720
     :cond_6
     const/4 v15, 0x0
 
@@ -26339,7 +26498,7 @@
 
     if-ge v15, v4, :cond_7
 
-    .line 8693
+    .line 8721
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiSignalStrengthsTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26350,12 +26509,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8692
+    .line 8720
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_7
 
-    .line 8695
+    .line 8723
     :cond_7
     move-object/from16 v0, p0
 
@@ -26365,7 +26524,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8696
+    .line 8724
     const/4 v15, 0x0
 
     :goto_8
@@ -26373,7 +26532,7 @@
 
     if-ge v15, v4, :cond_8
 
-    .line 8697
+    .line 8725
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothStateTimer:[Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26384,12 +26543,12 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8696
+    .line 8724
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_8
 
-    .line 8699
+    .line 8727
     :cond_8
     move-object/from16 v0, p0
 
@@ -26399,7 +26558,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8700
+    .line 8728
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLoadedNumConnectivityChange:I
@@ -26408,7 +26567,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8701
+    .line 8729
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUnpluggedNumConnectivityChange:I
@@ -26417,7 +26576,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8702
+    .line 8730
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mFlashlightOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
@@ -26426,7 +26585,7 @@
 
     invoke-virtual {v4, v0, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeToParcel(Landroid/os/Parcel;J)V
 
-    .line 8703
+    .line 8731
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeUnplugLevel:I
@@ -26435,7 +26594,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8704
+    .line 8732
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargePlugLevel:I
@@ -26444,7 +26603,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8705
+    .line 8733
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeCurrentLevel:I
@@ -26453,7 +26612,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8706
+    .line 8734
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mCurrentBatteryLevel:I
@@ -26462,7 +26621,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8707
+    .line 8735
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLowDischargeAmountSinceCharge:I
@@ -26471,7 +26630,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8708
+    .line 8736
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mHighDischargeAmountSinceCharge:I
@@ -26480,7 +26639,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8709
+    .line 8737
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOn:I
@@ -26489,7 +26648,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8710
+    .line 8738
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOnSinceCharge:I
@@ -26498,7 +26657,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8711
+    .line 8739
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOff:I
@@ -26507,7 +26666,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8712
+    .line 8740
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeAmountScreenOffSinceCharge:I
@@ -26516,7 +26675,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8713
+    .line 8741
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumDischargeStepDurations:I
@@ -26525,7 +26684,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8714
+    .line 8742
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mDischargeStepDurations:[J
@@ -26534,7 +26693,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeLongArray([J)V
 
-    .line 8715
+    .line 8743
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mNumChargeStepDurations:I
@@ -26543,7 +26702,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8716
+    .line 8744
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mChargeStepDurations:[J
@@ -26552,7 +26711,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeLongArray([J)V
 
-    .line 8717
+    .line 8745
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mLastWriteTime:J
@@ -26561,7 +26720,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 8719
+    .line 8747
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getBluetoothPingCount()I
 
     move-result v4
@@ -26570,10 +26729,10 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8721
+    .line 8749
     if-eqz p2, :cond_c
 
-    .line 8722
+    .line 8750
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
@@ -26586,7 +26745,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8723
+    .line 8751
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mKernelWakelockStats:Ljava/util/HashMap;
@@ -26613,7 +26772,7 @@
 
     check-cast v14, Ljava/util/Map$Entry;
 
-    .line 8724
+    .line 8752
     .local v14, "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     invoke-interface {v14}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -26621,18 +26780,18 @@
 
     check-cast v17, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 8725
+    .line 8753
     .local v17, "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-eqz v17, :cond_9
 
-    .line 8726
+    .line 8754
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8727
+    .line 8755
     invoke-interface {v14}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -26643,7 +26802,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8728
+    .line 8756
     move-object/from16 v0, v17
 
     move-object/from16 v1, p1
@@ -26652,7 +26811,7 @@
 
     goto :goto_9
 
-    .line 8730
+    .line 8758
     :cond_9
     const/4 v4, 0x0
 
@@ -26662,7 +26821,7 @@
 
     goto :goto_9
 
-    .line 8733
+    .line 8761
     .end local v14    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     .end local v17    # "kwlt":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     :cond_a
@@ -26678,7 +26837,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8734
+    .line 8762
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mWakeupReasonStats:Ljava/util/HashMap;
@@ -26704,7 +26863,7 @@
 
     check-cast v14, Ljava/util/Map$Entry;
 
-    .line 8735
+    .line 8763
     .restart local v14    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     invoke-interface {v14}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -26712,18 +26871,18 @@
 
     check-cast v19, Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
 
-    .line 8736
+    .line 8764
     .local v19, "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
     if-eqz v19, :cond_b
 
-    .line 8737
+    .line 8765
     const/4 v4, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8738
+    .line 8766
     invoke-interface {v14}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -26734,7 +26893,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 8739
+    .line 8767
     move-object/from16 v0, v19
 
     move-object/from16 v1, p1
@@ -26743,7 +26902,7 @@
 
     goto :goto_a
 
-    .line 8741
+    .line 8769
     :cond_b
     const/4 v4, 0x0
 
@@ -26753,7 +26912,7 @@
 
     goto :goto_a
 
-    .line 8745
+    .line 8773
     .end local v14    # "ent":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;>;"
     .end local v16    # "i$":Ljava/util/Iterator;
     .end local v19    # "timer":Lcom/android/internal/os/BatteryStatsImpl$SamplingTimer;
@@ -26764,18 +26923,20 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8748
+    .line 8776
     :cond_d
-    sget v4, Lcom/android/internal/os/BatteryStatsImpl;->sNumSpeedSteps:I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsImpl;->getCpuSpeedSteps()I
+
+    move-result v4
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8750
+    .line 8778
     if-eqz p2, :cond_e
 
-    .line 8751
+    .line 8779
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -26784,7 +26945,7 @@
 
     move-result v18
 
-    .line 8752
+    .line 8780
     .local v18, "size":I
     move-object/from16 v0, p1
 
@@ -26792,7 +26953,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8753
+    .line 8781
     const/4 v15, 0x0
 
     :goto_b
@@ -26800,7 +26961,7 @@
 
     if-ge v15, v0, :cond_f
 
-    .line 8754
+    .line 8782
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -26813,7 +26974,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8755
+    .line 8783
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/os/BatteryStatsImpl;->mUidStats:Landroid/util/SparseArray;
@@ -26824,7 +26985,7 @@
 
     check-cast v22, Lcom/android/internal/os/BatteryStatsImpl$Uid;
 
-    .line 8757
+    .line 8785
     .local v22, "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     move-object/from16 v0, v22
 
@@ -26832,12 +26993,12 @@
 
     invoke-virtual {v0, v1, v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$Uid;->writeToParcelLocked(Landroid/os/Parcel;J)V
 
-    .line 8753
+    .line 8781
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_b
 
-    .line 8760
+    .line 8788
     .end local v18    # "size":I
     .end local v22    # "uid":Lcom/android/internal/os/BatteryStatsImpl$Uid;
     :cond_e
@@ -26847,7 +27008,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8762
+    .line 8790
     :cond_f
     return-void
 .end method
@@ -26858,11 +27019,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 8628
+    .line 8656
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/internal/os/BatteryStatsImpl;->writeToParcelLocked(Landroid/os/Parcel;ZI)V
 
-    .line 8629
+    .line 8657
     return-void
 .end method

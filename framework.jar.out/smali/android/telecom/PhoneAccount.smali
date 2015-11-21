@@ -1115,7 +1115,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 701
     invoke-virtual {p0, p1}, Landroid/telecom/PhoneAccount;->createIconDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

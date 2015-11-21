@@ -84,15 +84,11 @@
 
 .method public bridge synthetic onServiceChanged(Ljava/lang/Object;IZ)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # I
-    .param p3, "x2"    # Z
 
     .prologue
     .line 406
     check-cast p1, Landroid/content/SyncAdapterType;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/content/SyncManager$8;->onServiceChanged(Landroid/content/SyncAdapterType;IZ)V
 
     return-void

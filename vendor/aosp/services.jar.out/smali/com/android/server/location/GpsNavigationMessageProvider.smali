@@ -194,7 +194,6 @@
 
 .method public bridge synthetic onGpsEnabledChanged(Z)V
     .locals 0
-    .param p1, "x0"    # Z
 
     .prologue
     .line 32

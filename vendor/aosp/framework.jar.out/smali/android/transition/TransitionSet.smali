@@ -171,7 +171,6 @@
 # virtual methods
 .method public bridge synthetic addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/transition/Transition$TransitionListener;
 
     .prologue
     .line 55
@@ -199,7 +198,6 @@
 
 .method public bridge synthetic addTarget(I)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
     .line 55
@@ -212,7 +210,6 @@
 
 .method public bridge synthetic addTarget(Landroid/view/View;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/view/View;
 
     .prologue
     .line 55
@@ -225,7 +222,6 @@
 
 .method public bridge synthetic addTarget(Ljava/lang/Class;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Class;
 
     .prologue
     .line 55
@@ -238,7 +234,6 @@
 
 .method public bridge synthetic addTarget(Ljava/lang/String;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -1222,7 +1217,6 @@
 
 .method public bridge synthetic removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/transition/Transition$TransitionListener;
 
     .prologue
     .line 55
@@ -1250,7 +1244,6 @@
 
 .method public bridge synthetic removeTarget(I)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # I
 
     .prologue
     .line 55
@@ -1263,7 +1256,6 @@
 
 .method public bridge synthetic removeTarget(Landroid/view/View;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/view/View;
 
     .prologue
     .line 55
@@ -1276,7 +1268,6 @@
 
 .method public bridge synthetic removeTarget(Ljava/lang/Class;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Class;
 
     .prologue
     .line 55
@@ -1289,7 +1280,6 @@
 
 .method public bridge synthetic removeTarget(Ljava/lang/String;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -1721,7 +1711,6 @@
 
 .method public bridge synthetic setDuration(J)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # J
 
     .prologue
     .line 55
@@ -1837,7 +1826,6 @@
 
 .method public bridge synthetic setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/animation/TimeInterpolator;
 
     .prologue
     .line 55
@@ -2010,7 +1998,6 @@
 
 .method bridge synthetic setSceneRoot(Landroid/view/ViewGroup;)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # Landroid/view/ViewGroup;
 
     .prologue
     .line 55
@@ -2067,7 +2054,6 @@
 
 .method public bridge synthetic setStartDelay(J)Landroid/transition/Transition;
     .locals 1
-    .param p1, "x0"    # J
 
     .prologue
     .line 55

@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">এই ভিডিওটি এই ডিভাইসে স্ট্রিমিং করার জন্য বৈধ নয়৷</string>
     <string name="selectTextMode">পাঠ্য নির্বাচন করুন</string>
     <string name="status_bar_notification_info_overflow">৯৯৯+</string>
-    <string name="profile_none">কোনটি না</string>
     <string name="profile_picker_title">প্রোফাইলস</string>
     <string name="global_action_choose_profile">প্রোফাইল</string>
+    <string name="profile_none">কোনটি না</string>
     <string name="global_action_screenshot">স্ক্রীনসর্ট</string>
     <string name="permlab_receiveProtectedSms">সুরক্ষিত এসএমএস গৃহীত হবে</string>
     <string name="permdesc_receiveProtectedSms">একটি আগত সুরক্ষিত এসএমএস গ্রহণ করতে অ্যাপটিকে অনুমতি দিন।</string>
@@ -47,8 +47,6 @@
     <string name="permdesc_changePrivacyGuardState">অ্যাপটি কে অন্য অ্যাপ পরিবর্তন করার অনুমতি দিন যা গোপনীয়তা রক্ষাকারী সঙ্গে চলমান। যখন একটি অ্যাপ গোপনীয়তা রক্ষাকারী সঙ্গে চলমান থাকে তখন এটি ব্যক্তিগত তথ্য ব্যাবহার করতে পারবে না, যেমন যোগাযোগ, কল লগ, বা বার্তা।</string>
     <string name="privacy_guard_notification">গোপনীয়তা রক্ষাকারী সক্রিয়</string>
     <string name="privacy_guard_notification_detail">%1$s ব্যাক্তিগত তথ্য ব্যাবহার করতে পারবেন না</string>
-    <string name="permlab_useHardwareFramework">হার্ডওয়্যার ফ্রেমওয়ার্ক ব্যবহার করুন</string>
-    <string name="permdesc_useHardwareFramework">একটি অ্যাপকে সিএম হার্ডওয়্যার ফ্রেমওয়ার্ক ব্যাবহারের অনুমতি দিন।</string>
     <string name="permlab_setKeyguardWallpaper">কীগার্ড ওয়ালপেপার নির্ধারণ</string>
     <string name="permdesc_setKeyguardWallpaper">অ্যাপটিকে লক স্ক্রীন ওয়ালপেপার পরিবর্তনের অনুমতি দিন।</string>
     <string name="privacy_guard_dialog_title">গোপনীয়তা রক্ষাকারী</string>

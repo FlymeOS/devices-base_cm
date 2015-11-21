@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">See video ei sobi voogesituseks selles seadmes.</string>
     <string name="selectTextMode">Valige tekst</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Puudub</string>
     <string name="profile_picker_title">Profiilid</string>
     <string name="global_action_choose_profile">Profiil</string>
+    <string name="profile_none">Puudub</string>
     <string name="global_action_screenshot">Ekraanipilt</string>
     <string name="permlab_receiveProtectedSms">saa kaitstud SMSe</string>
     <string name="permdesc_receiveProtectedSms">Lubab rakendusel vastu võtta sissetuleva kaitstud SMSi.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Sellega lubate muuta mõne muu rakenduse käivitumist Privaatsuskaitsega. Kui rakendus töötab sisselülitatud Privaatsuskaitsega, puudub rakendusel ligipääs isiklikele andmetele nagu kontaktid, kõnelogid või sõnumid.</string>
     <string name="privacy_guard_notification">Privaatsuskaitse aktiveeritud</string>
     <string name="privacy_guard_notification_detail">%1$s ei pääse ligi isiklikele andmetele</string>
-    <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
-    <string name="permdesc_useHardwareFramework">Annab rakendusele ligipääsu CM riistvara raamistikule.</string>
     <string name="permlab_setKeyguardWallpaper">muuta lukuekraani pilti</string>
     <string name="permdesc_setKeyguardWallpaper">Lubab rakendusel muuta lukustusekraani taustapilti.</string>
     <string name="privacy_guard_dialog_title">Privaatsuskaitse</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB üle USB &amp; võrgu aktiveeritud</string>
     <string name="adb_active_generic_notification_message">Puuduta silumise lõpetamiseks.</string>
     <string name="usb_choose_notification_title">Puuduta USB sätete valimiseks.</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB &amp; võrk</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Võrk</string>
     <string name="permlab_interceptPackageLaunch">rakenduse käivitamise katkestamine</string>
     <string name="permdesc_interceptPackageLaunch">Luba rakendusel katkestada teiste rakenduste käivitamist</string>
     <string name="app_ops_access_camera">kontrollida kaamerat</string>
@@ -207,6 +209,10 @@
     <string name="fingerprint_default_name">Sõrmejälg %d</string>
     <string name="permlab_accessFingerprintService">juurdepääs sõrmejälgede teenusele</string>
     <string name="permdesc_accessFingerprintService">Annab rakendusel ligipääsu sõrmejälgede teenusele. Rakendus saab lisada, kustutada, nimetada ümber ja autentida sõrmejälgi</string>
+    <string name="permlab_resetBatteryStats">nullida aku statistikat</string>
+    <string name="permdesc_resetBatteryStats">Lubab rakendusel nullida aku praeguse madala-tasemelise kasutuse andmed.</string>
+    <string name="silent_mode_priority">Prioriteet</string>
+    <string name="silent_mode_none">Puudub</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">kB</string>
     <string name="megabyteShort">MB</string>
@@ -1778,12 +1784,4 @@ Akusäästja lülitatakse seadme laadimise ajal automaatselt välja."</string>
     <string name="stk_cc_ss_to_ss">SS-päring muudeti uueks SS-päringuks.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥.</string>
-    <string name="adb_active_custom_tile">ADB - %1$s</string>
-    <string name="adb_active_custom_tile_both">USB &amp; võrk</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Võrk</string>
-    <string name="permlab_resetBatteryStats">nullida aku statistikat</string>
-    <string name="permdesc_resetBatteryStats">Lubab rakendusel nullida aku praeguse madala-tasemelise kasutuse andmed.</string>
-    <string name="silent_mode_priority">Prioriteet</string>
-    <string name="silent_mode_none">Puudub</string>
 </resources>

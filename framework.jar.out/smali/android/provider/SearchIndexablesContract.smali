@@ -103,11 +103,11 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string v1, "rank"
+    const-string/jumbo v1, "rank"
 
     aput-object v1, v0, v3
 
-    const-string v1, "xmlResId"
+    const-string/jumbo v1, "xmlResId"
 
     aput-object v1, v0, v4
 
@@ -142,19 +142,19 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string v1, "rank"
+    const-string/jumbo v1, "rank"
 
     aput-object v1, v0, v3
 
-    const-string v1, "title"
+    const-string/jumbo v1, "title"
 
     aput-object v1, v0, v4
 
-    const-string v1, "summaryOn"
+    const-string/jumbo v1, "summaryOn"
 
     aput-object v1, v0, v5
 
-    const-string v1, "summaryOff"
+    const-string/jumbo v1, "summaryOff"
 
     aput-object v1, v0, v6
 
@@ -170,7 +170,7 @@
 
     const/4 v1, 0x6
 
-    const-string v2, "screenTitle"
+    const-string/jumbo v2, "screenTitle"
 
     aput-object v2, v0, v1
 
@@ -212,7 +212,7 @@
 
     const/16 v1, 0xd
 
-    const-string v2, "user_id"
+    const-string/jumbo v2, "user_id"
 
     aput-object v2, v0, v1
 

@@ -1776,7 +1776,6 @@
     .locals 1
 
     .prologue
-    .line 563
     invoke-virtual {p0}, Landroid/telecom/RemoteConnection;->getConnectionCapabilities()I
 
     move-result v0
@@ -1789,9 +1788,7 @@
     .param p1, "callCapabilities"    # I
 
     .prologue
-    .line 918
     invoke-virtual {p0, p1}, Landroid/telecom/RemoteConnection;->setConnectionCapabilities(I)V
 
-    .line 919
     return-void
 .end method

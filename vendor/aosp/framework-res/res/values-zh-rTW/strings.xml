@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">這部影片的格式無效，因此無法在此裝置中串流播放。</string>
     <string name="selectTextMode">選取文字</string>
     <string name="status_bar_notification_info_overflow">超過 999</string>
-    <string name="profile_none">無</string>
     <string name="profile_picker_title">設定檔</string>
     <string name="global_action_choose_profile">設定檔</string>
+    <string name="profile_none">無</string>
     <string name="global_action_screenshot">螢幕擷取</string>
     <string name="permlab_receiveProtectedSms">接收受保護的簡訊</string>
     <string name="permdesc_receiveProtectedSms">允許應用程式接收受保護的簡訊。</string>
@@ -48,13 +48,12 @@
     <string name="permdesc_changePrivacyGuardState">允許應用程式變更其他應用程式執行時是否啟用隱私守衛。當應用程式執行時啟用了隱私守衛，它將無法存取個人資料，例如聯絡人、通話記錄或訊息。</string>
     <string name="privacy_guard_notification">隱私守衛正在運作</string>
     <string name="privacy_guard_notification_detail">「%1$s」將無法存取個人資料</string>
-    <string name="permlab_useHardwareFramework">使用硬體框架</string>
-    <string name="permdesc_useHardwareFramework">允許應用程式存取 CM 硬體框架</string>
     <string name="permlab_setKeyguardWallpaper">設定鎖定畫面桌布</string>
     <string name="permdesc_setKeyguardWallpaper">允許應用程式變更鎖定畫面桌布。</string>
     <string name="privacy_guard_dialog_title">隱私守衛</string>
     <string name="privacy_guard_dialog_summary">「%1$s」想要%2$s。</string>
     <string name="global_action_reboot">重新啟動</string>
+    <string name="global_action_current_user">現在</string>
     <string name="reboot_reboot">重新啟動</string>
     <string name="reboot_recovery">Recovery</string>
     <string name="reboot_bootloader">Bootloader</string>
@@ -68,6 +67,10 @@
     <string name="adb_both_active_notification_title">已啟用 USB 及網路 ADB</string>
     <string name="adb_active_generic_notification_message">輕觸即可停用偵錯。</string>
     <string name="usb_choose_notification_title">輕觸即可選擇 USB 選項。</string>
+    <string name="adb_active_custom_tile">ADB - %1$s</string>
+    <string name="adb_active_custom_tile_both">USB和網路</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">網路</string>
     <string name="permlab_interceptPackageLaunch">限制應用程式執行</string>
     <string name="permdesc_interceptPackageLaunch">允許應用程式限制其他應用程式執行</string>
     <string name="app_ops_access_camera">存取相機</string>
@@ -164,6 +167,30 @@
     <string name="usb_media_checking">正在檢查 USB 儲存裝置。</string>
     <string name="usb_media_removed">USB 儲存裝置已被移除。</string>
     <string name="usb_media_shared">USB 儲存裝置正被電腦使用中。</string>
+    <string name="sd_ext_media_checking_notification_title">正在準備 SD 卡</string>
+    <string name="sd_ext_media_checking_notification_message">正在檢查 SD 卡的錯誤。</string>
+    <string name="sd_ext_media_nofs_notification_title">SD 卡為空白</string>
+    <string name="sd_ext_media_nofs_notification_message">SD 卡無內容，或使用不受支援的檔案系統。</string>
+    <string name="sd_ext_media_unmountable_notification_title">USB 儲存裝置已損壞</string>
+    <string name="sd_ext_media_unmountable_notification_message">SD 記憶卡已損壞。請嘗試將記憶卡重新格式化。</string>
+    <string name="sd_ext_media_badremoval_notification_title">SD 卡未正常移除</string>
+    <string name="sd_ext_media_badremoval_notification_message">請先卸載 SD 卡，再將其移除，以免資料遺失。</string>
+    <string name="sd_ext_media_safe_unmount_notification_title">可安全移除 SD 卡</string>
+    <string name="sd_ext_media_safe_unmount_notification_message">您現在可以安全地移除 SD 卡。</string>
+    <string name="sd_ext_media_nomedia_notification_title">已移除 SD 卡</string>
+    <string name="sd_ext_media_nomedia_notification_message">SD 卡已移除，請插入新的 SD 卡。</string>
+    <string name="usb_ext_media_checking_notification_title">正在準備 USB 儲存裝置</string>
+    <string name="usb_ext_media_checking_notification_message">正在檢查 USB 儲存裝置的錯誤。</string>
+    <string name="usb_ext_media_nofs_notification_title">USB 儲存裝置為空白</string>
+    <string name="usb_ext_media_nofs_notification_message">USB 儲存裝置無內容，或使用不受支援的檔案系統。</string>
+    <string name="usb_ext_media_unmountable_notification_title">USB 儲存裝置已損壞</string>
+    <string name="usb_ext_media_unmountable_notification_message">USB 儲存裝置已損壞。請嘗試將 USB 儲存裝置重新格式化。</string>
+    <string name="usb_ext_media_badremoval_notification_title">USB 儲存裝置未正常移除</string>
+    <string name="usb_ext_media_badremoval_notification_message">請先卸載 USB 儲存裝置，再將其移除，以免資料遺失。</string>
+    <string name="usb_ext_media_safe_unmount_notification_title">可安全移除 USB 儲存裝置</string>
+    <string name="usb_ext_media_safe_unmount_notification_message">您現在可以安全地移除 USB 儲存裝置。</string>
+    <string name="usb_ext_media_nomedia_notification_title">已移除 USB 儲存裝置</string>
+    <string name="usb_ext_media_nomedia_notification_message">USB 儲存裝置已移除，請插入新的 USB 儲存裝置。</string>
     <string name="live_display_auto">自動</string>
     <string name="live_display_auto_summary">在白天和夜晚自動調節螢幕顏色溫度</string>
     <string name="live_display_off">關閉</string>
@@ -175,6 +202,17 @@
     <string name="live_display_outdoor">戶外 (陽光)</string>
     <string name="live_display_outdoor_summary">僅使用戶外設定</string>
     <string name="live_display_hint">LiveDisplay 可以幫助減少眼睛的疲勞及睡前使用造成的不適。輕觸此處來試試！</string>
+    <string name="lock_to_app_toast_no_navbar">要解鎖此螢幕，觸摸並按住返回鍵。</string>
+    <string name="quick_settings_tile_flashlight_not_title">手電筒開</string>
+    <string name="quick_settings_tile_flashlight_not_summary">點擊關閉</string>
+    <string name="storage_sd_dock_card">座架 SD 卡</string>
+    <string name="fingerprint_default_name">指紋 %d</string>
+    <string name="permlab_accessFingerprintService">存取指紋辨識服務</string>
+    <string name="permdesc_accessFingerprintService">允許應用程式存取指紋辨識服務。該應用程式可以新增、刪除、重新命名及使用指紋驗證。</string>
+    <string name="permlab_resetBatteryStats">重設電池統計資訊</string>
+    <string name="permdesc_resetBatteryStats">允許應用程式重設目前低電量的電池使用資料。</string>
+    <string name="silent_mode_priority">優先度</string>
+    <string name="silent_mode_none">無</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%Y 年 %-m 月 %-e 日</string>
     <string name="time_of_day" formatted="false">%p %I:%M:%S</string>

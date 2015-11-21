@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 591
+    .line 592
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,14 +32,14 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 593
+    .line 594
     const-string/jumbo v1, "serial"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 594
+    .line 595
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/hardware/SerialManager;
 

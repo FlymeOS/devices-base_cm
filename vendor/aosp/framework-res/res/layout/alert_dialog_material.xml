@@ -20,9 +20,9 @@
     <FrameLayout android:id="@id/customPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0">
         <FrameLayout android:id="@id/custom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </FrameLayout>
-    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/buttonPanel" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="?attr/buttonBarStyle">
-        <Button android:id="@id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/buttonBarNeutralButtonStyle" />
-        <Space android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/buttonPanel" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="?attr/buttonBarStyle">
+        <Button android:ellipsize="end" android:id="@id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="0.99" style="?attr/buttonBarNeutralButtonStyle" />
+        <Space android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.01" />
         <Button android:id="@id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/buttonBarNegativeButtonStyle" />
         <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/buttonBarPositiveButtonStyle" />
     </LinearLayout>

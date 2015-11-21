@@ -61,7 +61,7 @@
 
     .line 8122
     .local v1, "values":Landroid/content/ContentValues;
-    const-string v2, "pinned"
+    const-string/jumbo v2, "pinned"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -85,7 +85,7 @@
     .line 8107
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "undemote"
+    const-string/jumbo v1, "undemote"
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 

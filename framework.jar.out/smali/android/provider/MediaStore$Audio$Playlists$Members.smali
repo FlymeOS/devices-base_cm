@@ -119,9 +119,9 @@
 
     move-result-object v2
 
-    const-string v3, "move"
+    const-string/jumbo v3, "move"
 
-    const-string v4, "true"
+    const-string/jumbo v4, "true"
 
     invoke-virtual {v2, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -139,7 +139,7 @@
 
     .line 1670
     .local v1, "values":Landroid/content/ContentValues;
-    const-string v2, "play_order"
+    const-string/jumbo v2, "play_order"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

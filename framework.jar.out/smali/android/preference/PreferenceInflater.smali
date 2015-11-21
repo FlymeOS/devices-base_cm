@@ -269,9 +269,6 @@
 
 .method protected bridge synthetic onCreateCustomFromTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/Object;Landroid/util/AttributeSet;)Z
     .locals 1
-    .param p1, "x0"    # Lorg/xmlpull/v1/XmlPullParser;
-    .param p2, "x1"    # Ljava/lang/Object;
-    .param p3, "x2"    # Landroid/util/AttributeSet;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/xmlpull/v1/XmlPullParserException;
@@ -282,7 +279,6 @@
     .line 38
     check-cast p2, Landroid/preference/Preference;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/preference/PreferenceInflater;->onCreateCustomFromTag(Lorg/xmlpull/v1/XmlPullParser;Landroid/preference/Preference;Landroid/util/AttributeSet;)Z
 
     move-result v0
@@ -292,18 +288,13 @@
 
 .method protected bridge synthetic onMergeRoots(Landroid/preference/GenericInflater$Parent;ZLandroid/preference/GenericInflater$Parent;)Landroid/preference/GenericInflater$Parent;
     .locals 1
-    .param p1, "x0"    # Landroid/preference/GenericInflater$Parent;
-    .param p2, "x1"    # Z
-    .param p3, "x2"    # Landroid/preference/GenericInflater$Parent;
 
     .prologue
     .line 38
     check-cast p1, Landroid/preference/PreferenceGroup;
 
-    .end local p1    # "x0":Landroid/preference/GenericInflater$Parent;
     check-cast p3, Landroid/preference/PreferenceGroup;
 
-    .end local p3    # "x2":Landroid/preference/GenericInflater$Parent;
     invoke-virtual {p0, p1, p2, p3}, Landroid/preference/PreferenceInflater;->onMergeRoots(Landroid/preference/PreferenceGroup;ZLandroid/preference/PreferenceGroup;)Landroid/preference/PreferenceGroup;
 
     move-result-object v0

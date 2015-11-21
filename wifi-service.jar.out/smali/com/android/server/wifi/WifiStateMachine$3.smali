@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1002
+    .line 1007
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$3;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,11 +41,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1005
+    .line 1010
     # operator++ for: Lcom/android/server/wifi/WifiStateMachine;->sScanAlarmIntentCount:I
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$008()I
 
-    .line 1006
+    .line 1011
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$3;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/4 v1, -0x2
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Lcom/android/server/wifi/WifiStateMachine;->startScan(IILandroid/net/wifi/ScanSettings;Landroid/os/WorkSource;)V
 
-    .line 1007
+    .line 1012
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->VDBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$200()Z
 
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1008
+    .line 1013
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$3;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 1009
+    .line 1014
     :cond_0
     return-void
 .end method

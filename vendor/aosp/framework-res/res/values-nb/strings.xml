@@ -24,9 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Denne videoen er ikke gyldig for direkteavspilling på enheten.</string>
     <string name="selectTextMode">Marker tekst</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="profile_none">Ingen</string>
     <string name="profile_picker_title">Profiler</string>
     <string name="global_action_choose_profile">Profil</string>
+    <string name="profile_none">Ingen</string>
     <string name="global_action_screenshot">Skjermbilde</string>
     <string name="permlab_receiveProtectedSms">motta beskyttet SMS</string>
     <string name="permdesc_receiveProtectedSms">Lar programmet motta innkommende beskyttede SMS.</string>
@@ -48,8 +48,6 @@
     <string name="permdesc_changePrivacyGuardState">Lar appen endre om en annen app kjører med personlighetsvern. Når en app kjører med personlighetsvern vil den ikke ha tilgang til personlig data som kontakter, samtalelogg eller meldinger.</string>
     <string name="privacy_guard_notification">Personvernvakt aktiv</string>
     <string name="privacy_guard_notification_detail">%1$s vil ikke få tilgang til personlige data</string>
-    <string name="permlab_useHardwareFramework">bruke maskinvare</string>
-    <string name="permdesc_useHardwareFramework">Gir en app tilgang til CM maskinvaren.</string>
     <string name="permlab_setKeyguardWallpaper">Angi tastaturbakgrunn</string>
     <string name="permdesc_setKeyguardWallpaper">Tillat en app å endre låseskjermsbakgrunn.</string>
     <string name="privacy_guard_dialog_title">Personvernvakt</string>
@@ -69,6 +67,10 @@
     <string name="adb_both_active_notification_title">ADB over USB &amp; nettverk aktivert</string>
     <string name="adb_active_generic_notification_message">Trykk for å deaktivere feilsøking.</string>
     <string name="usb_choose_notification_title">Trykk for å velge alternativer for USB.</string>
+    <string name="adb_active_custom_tile">ADB – %1$s</string>
+    <string name="adb_active_custom_tile_both">USB og nettverk</string>
+    <string name="adb_active_custom_tile_usb">USB</string>
+    <string name="adb_active_custom_tile_net">Nettverk</string>
     <string name="permlab_interceptPackageLaunch">avbryt app start</string>
     <string name="permdesc_interceptPackageLaunch">Tillater en app å avbryte oppstarten av andre programmer</string>
     <string name="app_ops_access_camera">tilgang til kameraet</string>
@@ -207,6 +209,8 @@
     <string name="fingerprint_default_name">Fingeravtrykk %d</string>
     <string name="permlab_accessFingerprintService">tilgang til fingeravtrykkstjenesten</string>
     <string name="permdesc_accessFingerprintService">Gjør det mulig for en app å få tilgang til fingeravtrykkstjenesten. Appen kan legge til, slette, gi nytt navn på og godkjenne i forhold til fingeravtrykk</string>
+    <string name="permlab_resetBatteryStats">tilbakestill batteristatistikk</string>
+    <string name="permdesc_resetBatteryStats">Tillater at et program kan tilbakestille nåværende bruksdata om lavt batteri.</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
@@ -1783,10 +1787,4 @@ Batterisparing slås av automatisk når enheten lader."</string>
     <string name="stk_cc_ss_to_ss">SS-forespørselen er endret til en ny SS-forespørsel.</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
-    <string name="adb_active_custom_tile">ADB – %1$s</string>
-    <string name="adb_active_custom_tile_both">USB og nettverk</string>
-    <string name="adb_active_custom_tile_usb">USB</string>
-    <string name="adb_active_custom_tile_net">Nettverk</string>
-    <string name="permlab_resetBatteryStats">tilbakestill batteristatistikk</string>
-    <string name="permdesc_resetBatteryStats">Tillater at et program kan tilbakestille nåværende bruksdata om lavt batteri.</string>
 </resources>

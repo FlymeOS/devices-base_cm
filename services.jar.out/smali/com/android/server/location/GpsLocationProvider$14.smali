@@ -24,7 +24,7 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 2200
+    .line 2214
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$14;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +39,7 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 2203
+    .line 2217
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$14;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const/16 v1, 0xd
@@ -51,6 +51,6 @@
     # invokes: Lcom/android/server/location/GpsLocationProvider;->sendMessage(IILjava/lang/Object;)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/location/GpsLocationProvider;->access$2100(Lcom/android/server/location/GpsLocationProvider;IILjava/lang/Object;)V
 
-    .line 2204
+    .line 2218
     return-void
 .end method
