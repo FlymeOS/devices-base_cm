@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dropTarget_paddingEnd">2.0dip</dimen>
-    <dimen name="dropTarget_paddingStart">185.0dip</dimen>
+    <dimen name="dropTarget_paddingEnd">20.0dip</dimen>
+    <dimen name="dropTarget_paddingStart">167.0dip</dimen>
     <dimen name="icontext_size">7.5sp</dimen>
     <dimen name="uninstall_title_size">19.0sp</dimen>
     <dimen name="icon_text_padding">4.25dip</dimen>
