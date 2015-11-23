@@ -31,7 +31,7 @@
     iput-object p1, p0, Landroid/widget/MzActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/MzActionMenuPresenter;
 
     .line 854
-    const v5, 0x1010444
+    const v5, #android:attr@actionOverflowMenuStyle#t
 
     move-object v0, p0
 

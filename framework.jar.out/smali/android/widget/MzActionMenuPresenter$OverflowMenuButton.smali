@@ -37,7 +37,7 @@
     iput-object p1, p0, Landroid/widget/MzActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/MzActionMenuPresenter;
 
     .line 722
-    const v0, 0x10102f6
+    const v0, #android:attr@actionOverflowButtonStyle#t
 
     invoke-direct {p0, p2, v2, v0}, Lcom/meizu/widget/GlowImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -123,7 +123,7 @@
 
     sget-object v4, Landroid/R$styleable;->ImageView:[I
 
-    const v5, 0x10102f6
+    const v5, #android:attr@actionOverflowButtonStyle#t
 
     invoke-virtual {p1, v3, v4, v5, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

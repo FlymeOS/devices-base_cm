@@ -185,7 +185,7 @@
 
     move-result-object v1
 
-    const v2, 0x101048d
+    const v2, #android:attr@actionBarPopupTheme#t
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -1347,7 +1347,7 @@
 
     sget-object v3, Landroid/R$styleable;->ActionBar:[I
 
-    const v4, 0x10102ce
+    const v4, #android:attr@actionBarStyle#t
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

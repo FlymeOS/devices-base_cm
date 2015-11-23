@@ -1093,12 +1093,12 @@
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 529
-    const/high16 v3, 0x1040000
+    const/high16 v3, #android:string@cancel#t
 
     invoke-virtual {v0, v3, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 530
-    const v3, 0x104000a
+    const v3, #android:string@ok#t
 
     new-instance v4, Landroid/text/util/UrlSpanHelper$6;
 
