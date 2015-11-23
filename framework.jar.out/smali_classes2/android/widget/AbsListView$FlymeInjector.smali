@@ -655,7 +655,7 @@
     if-eqz v1, :cond_0
 
     .line 8653
-    const v2, 0x1020001
+    const v2, #android:id@checkbox#t
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1436,7 +1436,7 @@
     iput-object p1, p0, Landroid/widget/AbsListView;->mDragShawdowView:Landroid/view/View;
 
     .line 8741
-    const v5, 0x1020001
+    const v5, #android:id@checkbox#t
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2614,7 +2614,7 @@
 
     .line 8515
     :cond_0
-    const v2, 0x1020001
+    const v2, #android:id@checkbox#t
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

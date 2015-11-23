@@ -35,7 +35,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x1010444
+    const v5, #android:attr@actionOverflowMenuStyle#t
 
     move-object v0, p0
 
