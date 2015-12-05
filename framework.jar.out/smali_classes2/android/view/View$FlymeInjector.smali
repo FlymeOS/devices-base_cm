@@ -303,44 +303,39 @@
 .end method
 
 .method private static takeImageBlur(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-    .locals 15
+    .locals 12
     .param p0, "mBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    const/4 v14, 0x1
+    if-nez p0, :cond_0
 
-    const/high16 v13, 0x3f800000    # 1.0f
+    const/4 v9, 0x0
 
-    const/4 v12, 0x0
+    :goto_0
+    return-object v9
 
-    .line 21622
+    :cond_0
     const/high16 v8, 0x41a00000    # 20.0f
 
-    .line 21623
     .local v8, "scaleFactor":F
     const/high16 v2, 0x41100000    # 9.0f
 
-    .line 21624
     .local v2, "blurRadius":F
-    const-string/jumbo v0, "persist.sys.disable_blur_view"
+    const-string v0, "persist.sys.disable_blur_view"
 
-    .line 21625
     .local v0, "BLUR_EFFECT_PROP_KEY_DISABLE_BLUR_VIEW":Ljava/lang/String;
-    const-string/jumbo v1, "persist.sys.static_blur_mode"
+    const-string v1, "persist.sys.static_blur_mode"
 
-    .line 21626
     .local v1, "BLUR_EFFECT_PROP_KEY_STATIC_BLUR_MODE":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    .line 21627
     .local v4, "mBitmapWidth":I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 21629
     .local v3, "mBitmapHeight":I
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -352,7 +347,7 @@
 
     move-result v9
 
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_4
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -364,17 +359,14 @@
 
     move-result v9
 
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_4
 
-    .line 21631
     const/high16 v8, 0x41a00000    # 20.0f
 
-    .line 21632
     const/high16 v2, 0x41200000    # 10.0f
 
-    .line 21639
-    :cond_0
-    :goto_0
+    :cond_1
+    :goto_1
     int-to-float v9, v4
 
     div-float/2addr v9, v8
@@ -393,109 +385,108 @@
 
     move-result-object v7
 
-    .line 21641
     .local v7, "overBitmap":Landroid/graphics/Bitmap;
     new-instance v5, Landroid/graphics/Canvas;
 
     invoke-direct {v5, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 21642
     .local v5, "mCanvas":Landroid/graphics/Canvas;
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
-    .line 21643
-    invoke-virtual {v5, v12, v12}, Landroid/graphics/Canvas;->translate(FF)V
+    const/4 v9, 0x0
 
-    .line 21644
-    div-float v9, v13, v8
+    const/4 v10, 0x0
 
-    div-float v10, v13, v8
+    invoke-virtual {v5, v9, v10}, Landroid/graphics/Canvas;->translate(FF)V
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    div-float/2addr v9, v8
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    div-float/2addr v10, v8
 
     invoke-virtual {v5, v9, v10}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 21647
-    :cond_1
+    :cond_2
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
-    .line 21648
     .local v6, "mPaint":Landroid/graphics/Paint;
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_3
 
-    .line 21649
     const/4 v9, 0x2
 
     invoke-virtual {v6, v9}, Landroid/graphics/Paint;->setFlags(I)V
 
-    .line 21652
-    :cond_2
-    invoke-virtual {v5, p0, v12, v12, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    :cond_3
+    const/4 v9, 0x0
 
-    .line 21654
+    const/4 v10, 0x0
+
+    invoke-virtual {v5, p0, v9, v10, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
     float-to-int v9, v2
 
-    invoke-static {v7, v9, v14}, Landroid/view/View;->makeStackBlur(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    const/4 v10, 0x1
+
+    invoke-static {v7, v9, v10}, Landroid/view/View;->makeStackBlur(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 21655
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_5
 
-    .line 21656
-    invoke-static {v7, v4, v3, v14}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+    const/4 v9, 0x1
 
-    move-result-object v9
-
-    .line 21658
-    :goto_1
-    return-object v9
-
-    .line 21633
-    .end local v5    # "mCanvas":Landroid/graphics/Canvas;
-    .end local v6    # "mPaint":Landroid/graphics/Paint;
-    .end local v7    # "overBitmap":Landroid/graphics/Bitmap;
-    :cond_3
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v4, v3, v9}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v9
-
-    const-string/jumbo v10, "true"
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_0
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string/jumbo v10, "true"
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_0
-
-    .line 21635
-    const/high16 v8, 0x41a00000    # 20.0f
-
-    .line 21636
-    const/high16 v2, 0x41000000    # 8.0f
 
     goto :goto_0
 
-    .line 21658
+    .end local v5    # "mCanvas":Landroid/graphics/Canvas;
+    .end local v6    # "mPaint":Landroid/graphics/Paint;
+    .end local v7    # "overBitmap":Landroid/graphics/Bitmap;
+    :cond_4
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string/jumbo v10, "true"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string/jumbo v10, "true"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    const/high16 v8, 0x41a00000    # 20.0f
+
+    const/high16 v2, 0x41000000    # 8.0f
+
+    goto :goto_1
+
     .restart local v5    # "mCanvas":Landroid/graphics/Canvas;
     .restart local v6    # "mPaint":Landroid/graphics/Paint;
     .restart local v7    # "overBitmap":Landroid/graphics/Bitmap;
-    :cond_4
+    :cond_5
     const/4 v9, 0x0
 
-    goto :goto_1
+    goto/16 :goto_0
 .end method
 
 .method private static takeRotateBitmap(Landroid/view/View;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
