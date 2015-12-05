@@ -2218,20 +2218,12 @@
     :cond_a
     if-eqz v6, :cond_e
 
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/android/internal/app/MzResolverActivity;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;
-
-    iget-object v2, v2, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->currentResolveList:Ljava/util/List;
-
-    if-eqz v2, :cond_e
-
     .line 736
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/app/MzResolverActivity;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;
 
-    iget-object v2, v2, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->currentResolveList:Ljava/util/List;
+    iget-object v2, v2, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mOrigResolveList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -2262,7 +2254,7 @@
 
     iget-object v2, v0, Lcom/android/internal/app/MzResolverActivity;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;
 
-    iget-object v2, v2, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->currentResolveList:Ljava/util/List;
+    iget-object v2, v2, Lcom/android/internal/app/MzResolverActivity$ResolveListAdapter;->mOrigResolveList:Ljava/util/List;
 
     move/from16 v0, v16
 

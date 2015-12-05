@@ -105,6 +105,10 @@
 
     invoke-interface {v1, v0}, Landroid/view/WindowManagerPolicy;->goingToSleep(I)V
 
+    iget-object v1, p0, Lcom/android/server/power/Notifier$3;->this$0:Lcom/android/server/power/Notifier;
+
+    invoke-static {v1, v0}, Lcom/android/server/power/Notifier$FlymeInjector;->mzNotifyAccessControlGotoSleep(Lcom/android/server/power/Notifier;I)V
+
     .line 335
     return-void
 

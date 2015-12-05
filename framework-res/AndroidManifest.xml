@@ -710,5 +710,11 @@
                 <data android:scheme="package"/>
             </intent-filter>
         </receiver>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="standard" android:name="com.meizu.app.AccessApplication" android:needAccessControl="false" android:noHistory="true" android:screenOrientation="portrait" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.content.pm.CONFIRM_ACCESS_APPCATONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
