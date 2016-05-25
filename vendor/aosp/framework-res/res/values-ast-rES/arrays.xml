@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Casa</item>
+        <item>Trabayu</item>
+        <item>Otra</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Trabayu</item>
+        <item>Otra</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Casa</item>
+        <item>Móvil</item>
+        <item>Trabayu</item>
+        <item>Fax del trabayu</item>
+        <item>Fax de casa</item>
+        <item>Busca</item>
+        <item>Otru</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Casa</item>
+        <item>Trabayu</item>
+        <item>Otra</item>
+        <item>Personalizar</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>40413496</item>
+        <item>-3713379</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>6</item>
+    </integer-array>
+    <string-array name="imAddressTypes">
+        <item>Casa</item>
+        <item>Trabayu</item>
+        <item>Otru</item>
+        <item>Personalizar</item>
+    </string-array>
+</resources>

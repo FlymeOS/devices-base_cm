@@ -1,0 +1,12 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: telephony-common.jar
+compressionType: false
+doNotCompress: null
+isFrameworkApk: false
+packageInfo: null
+sdkInfo: null
+sharedLibrary: false
+unknownFiles: {}
+usesFramework: null
+version: 2.1.1-04d478-SNAPSHOT
+versionInfo: null

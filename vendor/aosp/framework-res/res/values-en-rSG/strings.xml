@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="byteShort">B</string>
+    <string name="elapsed_time_short_format_mm_ss">%1$02d:%2$02d</string>
+    <string name="elapsed_time_short_format_h_mm_ss">%1$d:%2$02d:%3$02d</string>
+</resources>

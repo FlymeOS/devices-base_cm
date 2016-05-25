@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_tether_apndata">
+        <item>[ApnSettingV3]TELUS ISP,isp.telus.com,,,,,,,,,302,221,,DUN,,,true,0,,,,,,,gid,54</item>
+        <item>[ApnSettingV3]Tethered PC Mobile,isp.mb.com,,,,,,,,,302,221,,DUN,,,true,0,,,,,,,gid,50</item>
+        <item>[ApnSettingV3]Koodo,sp.koodo.com,,,,,,,,,302,221,,DUN,,,true,0,,,,,,,gid,4B</item>
+    </string-array>
+</resources>
