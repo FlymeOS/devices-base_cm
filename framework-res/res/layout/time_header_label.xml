@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:id="@id/time_header" android:padding="@dimen/timepicker_separator_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="ltr">
+        <TextView android:gravity="end" android:id="@id/hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale" />
+        <TextView android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timepicker_separator_padding" android:layout_marginRight="@dimen/timepicker_separator_padding" android:importantForAccessibility="no" android:layoutDirection="locale" />
+        <TextView android:gravity="start" android:id="@id/minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ampm_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAlignedChildIndex="1" android:layoutDirection="locale">
+            <CheckedTextView android:ellipsize="none" android:id="@id/am_label" android:paddingTop="@dimen/timepicker_ampm_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:paddingStart="@dimen/timepicker_ampm_horizontal_padding" android:paddingEnd="@dimen/timepicker_ampm_horizontal_padding" />
+            <CheckedTextView android:ellipsize="none" android:id="@id/pm_label" android:paddingTop="@dimen/timepicker_pm_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:paddingStart="@dimen/timepicker_ampm_horizontal_padding" android:paddingEnd="@dimen/timepicker_ampm_horizontal_padding" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

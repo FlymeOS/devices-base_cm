@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">സിം ലോക്കാകുന്നതിന് മുമ്പായി നിങ്ങൾക്ക് %d ശ്രമങ്ങൾ കൂടി ബാക്കിയുണ്ട്.</item>
+        <item quantity="one">സിം ലോക്കാകുന്നതിന് മുമ്പായി നിങ്ങൾക്ക് %d ശ്രമം കൂടി ബാക്കിയുണ്ട്.</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">%d നിമിഷം മുമ്പ്</item>
+        <item quantity="one">1 നിമിഷം മുമ്പ്</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="one">1 മിനിറ്റ് മുമ്പ്</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">%d മണിക്കൂർ മുമ്പ്</item>
+        <item quantity="one">1 മണിക്കൂര്‍ മുമ്പ്</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">കഴിഞ്ഞ %d ദിവസം</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">%d ദിവസം മുമ്പ്</item>
+        <item quantity="one">ഇന്നലെ</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">%d നിമിഷത്തിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു നിമിഷത്തിനുള്ളിൽ</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d മിനിറ്റിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു മിനിറ്റിൽ</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">%d മണിക്കൂറിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു മണിക്കൂറിനുള്ളിൽ</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">%d ദിവസത്തിനുള്ളിൽ</item>
+        <item quantity="one">നാളെ</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">%d നിമിഷം മുമ്പ്</item>
+        <item quantity="one">ഒരു നിമിഷം മുമ്പ്</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="one">ഒരു മിനിറ്റ് മുമ്പ്</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">%d മണിക്കൂർ മുമ്പ്</item>
+        <item quantity="one">1 മണിക്കൂര്‍ മുമ്പ്</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">%d ദിവസം മുമ്പ്</item>
+        <item quantity="one">ഇന്നലെ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">%d നിമിഷത്തിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു നിമിഷത്തിനുള്ളിൽ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d മിനിറ്റിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു മിനിറ്റിനുള്ളിൽ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">%d മണിക്കൂറിനുള്ളിൽ</item>
+        <item quantity="one">ഒരു മണിക്കൂറിനുള്ളിൽ</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">%d ദിവസത്തിനുള്ളിൽ</item>
+        <item quantity="one">നാളെ</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d സെക്കൻഡ്</item>
+        <item quantity="one">1 സെക്കൻഡ്</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d മിനിറ്റ്</item>
+        <item quantity="one">ഒരു മിനിറ്റ്</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d മണിക്കൂർ</item>
+        <item quantity="one">ഒരു മണിക്കൂർ</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi നെറ്റ്‌വർക്കുകൾ ലഭ്യമാണ്</item>
+        <item quantity="one">Wi-Fi നെറ്റ്‌വർക്ക് ലഭ്യമാണ്</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ലഭ്യമായ Wi-Fi നെറ്റ്‌വർക്കുകൾ തുറക്കുക</item>
+        <item quantity="one">ലഭ്യമായ Wi-Fi നെറ്റ്‌വർക്ക് തുറക്കുക</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d / %2$d</item>
+        <item quantity="one">ഒരു പൊരുത്തം</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക</item>
+        <item quantity="one">ഒരു സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d മണിക്കൂർ സമയത്തേക്ക് (%2$s വരെ)</item>
+        <item quantity="one">ഒരു മണിക്കൂർ സമയത്തേക്ക് (%2$s വരെ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d മിനിറ്റ് ദൈർഘ്യം</item>
+        <item quantity="one">ഒരു മിനിറ്റ് ദൈർഘ്യം</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d മണിക്കൂർ ദൈർഘ്യം</item>
+        <item quantity="one">ഒരു മണിക്കൂർ ദൈർഘ്യം</item>
+    </plurals>
+</resources>
