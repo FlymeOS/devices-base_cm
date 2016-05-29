@@ -331,6 +331,13 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     #setprop vold.post_fs_data_done 1
 
+    mkdir /data/misc/samba 0775 system system
+    mkdir /data/misc/samba/remote 0775 system system
+    mkdir /data/misc/samba/lib 0775 system system
+    mkdir /data/misc/samba/private 0775 system system
+    mkdir /data/misc/samba/tmp 0775 system system
+    mkdir /data/misc/samba/var 0775 system system
+
 on boot
     # basic network init
     ifup lo
@@ -652,3 +659,19 @@ service pre-recovery /system/bin/uncrypt
     class main
     disabled
     oneshot
+
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system

@@ -136,3 +136,16 @@ cmpartnerinterface                        u:object_r:system_server_service:s0
 cmtelephonymanager                        u:object_r:system_server_service:s0
 cmhardware                                u:object_r:system_server_service:s0
 cmappsuggest                              u:object_r:system_server_service:s0
+move_window                               u:object_r:system_server_service:s0
+samba_server                              u:object_r:system_server_service:s0
+samba_client                              u:object_r:system_server_service:s0
+networkmanagement_service_flyme           u:object_r:system_server_service:s0
+phone_ext                                 u:object_r:radio_service:s0
+IIccPhoneBookMz                           u:object_r:radio_service:s0
+call_adapter                              u:object_r:system_server_service:s0
+flyme_theme_service                             u:object_r:system_server_service:s0
+flyme_permission                          u:object_r:system_server_service:s0
+access_control                            u:object_r:system_server_service:s0
+flyme_wallpaper                           u:object_r:system_server_service:s0
+flyme_packagemanager                      u:object_r:system_server_service:s0
+flyme_statusbar                           u:object_r:system_server_service:s0
