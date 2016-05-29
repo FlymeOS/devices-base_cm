@@ -2242,6 +2242,7 @@
     <public type="id" name="websearch" id="0x010203e9" />
     <public type="id" name="find_prev" id="0x010203ea" />
     <public type="id" name="find_next" id="0x010203eb" />
+    <public type="id" name="fontChange" id="0x010203ec" />
     <public type="style" name="Animation" id="0x01030000" />
     <public type="style" name="Animation.Activity" id="0x01030001" />
     <public type="style" name="Animation.Dialog" id="0x01030002" />
@@ -9064,4 +9065,5 @@
     <public type="^attr-private" name="cantSaveState" id="0x011600b1" />
     <public type="^attr-private" name="allowViaWhitelist" id="0x011600b2" />
     <public type="^attr-private" name="primaryUserOnly" id="0x011600b3" />
+    <public type="^attr-private" name="needAccessControl" id="0x011600b4" />
 </resources>

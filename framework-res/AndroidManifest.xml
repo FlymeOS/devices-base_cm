@@ -592,9 +592,11 @@
     <permission android:description="@string/permdesc_accessTorchService" android:label="@string/permlab_accessTorchService" android:name="android.permission.ACCESS_TORCH_SERVICE" android:protectionLevel="signature"/>
     <permission android:description="@string/permdesc_accessFingerprintService" android:label="@string/permlab_accessFingerprintService" android:name="android.permission.ACCESS_FINGERPRINT_SERVICE" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_thirdPartyKeyguard" android:label="@string/permlab_thirdPartyKeyguard" android:name="android.permission.THIRD_PARTY_KEYGUARD" android:protectionLevel="system|signature"/>
+    <permission android:name="android.permission.MEIZU_CONTROL_PACKAGE_PERMISSIONS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.MEIZU_SMART_LOCK" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="android.permission.CONFIRM_FULL_BACKUP"/>
     <application android:allowClearUserData="false" android:backupAgent="com.android.server.backup.SystemBackupAgent" android:hasCode="false" android:icon="@drawable/ic_launcher_android" android:killAfterRestore="false" android:label="@string/android_system_label" android:persistent="true" android:process="system" android:supportsRtl="true">
-        <activity android:documentLaunchMode="never" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.android.internal.app.ChooserActivity" android:process=":ui" android:relinquishTaskIdentity="true" android:theme="@style/Theme.DeviceDefault.Resolver">
+        <activity android:documentLaunchMode="never" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.android.internal.app.MzChooserActivity" android:process=":ui" android:relinquishTaskIdentity="true" android:theme="@style/Theme.DeviceDefault.Resolver">
             <intent-filter>
                 <action android:name="android.intent.action.CHOOSER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -673,6 +675,10 @@
         <receiver android:name="com.android.server.MasterClearReceiver" android:permission="android.permission.MASTER_CLEAR">
             <intent-filter android:priority="100">
                 <action android:name="android.intent.action.MASTER_CLEAR"/>
+                <action android:name="android.intent.action.MZ_WIPE_SDCARD"/>
+                <action android:name="android.intent.action.MZ_WIPE_ALL"/>
+                <action android:name="android.intent.action.MZ_DELETE_ALL"/>
+                <action android:name="android.intent.action.MZ_UPDATE"/>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
                 <category android:name="android.intent.category.MASTER_CLEAR"/>
             </intent-filter>
@@ -687,5 +693,38 @@
         <service android:exported="true" android:name="com.android.server.MountServiceIdler" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="true" android:name="com.android.server.backup.FullBackupJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="true" android:name="com.android.server.pm.BackgroundDexOptService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+	<receiver android:name="com.android.server.OnekeyUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ONEKEY_UPGRADE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="false" android:name="com.android.internal.app.RecommendActivity" android:process=":ui" android:theme="@style/Theme.Holo.Dialog.Alert">
+            <intent-filter>
+                <action android:name="android.intent.action.RECOMMEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.meizu.app.AccessApplication" android:needAccessControl="false" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoTitleBar" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.content.pm.CONFIRM_ACCESS_APPCATONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.android.server.pm.UpdatePermissionsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.APP_PERMISSION_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.server.pm.UpdateAppsReceiver" android:primaryUserOnly="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true"/>
     </application>
 </manifest>

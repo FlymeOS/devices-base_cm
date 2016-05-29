@@ -63,6 +63,7 @@
     </attr>
     <attr name="configChanges">
         <flag name="locale" value="0x00000004" />
+        <flag name="fontChange" value="0x00008000" />
         <flag name="fontScale" value="0x40000000" />
         <flag name="keyboard" value="0x00000010" />
         <flag name="keyboardHidden" value="0x00000020" />
@@ -74,7 +75,7 @@
         <flag name="screenLayout" value="0x00000100" />
         <flag name="screenSize" value="0x00000400" />
         <flag name="smallestScreenSize" value="0x00000800" />
-        <flag name="themeChange" value="0x00300000" />
+        <flag name="themeChange" value="0x00004000" />
         <flag name="touchscreen" value="0x00000008" />
         <flag name="uiMode" value="0x00000200" />
     </attr>

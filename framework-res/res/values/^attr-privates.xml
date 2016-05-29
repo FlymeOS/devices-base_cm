@@ -210,4 +210,5 @@
     <attr name="cantSaveState" format="boolean" />
     <attr name="allowViaWhitelist" format="boolean" />
     <attr name="primaryUserOnly" format="boolean" />
+    <attr name="needAccessControl" format="boolean" />
 </resources>
