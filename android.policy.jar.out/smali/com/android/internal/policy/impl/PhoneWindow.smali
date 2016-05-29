@@ -15,6 +15,7 @@
         Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;,
         Lcom/android/internal/policy/impl/PhoneWindow$DrawableFeatureState;,
         Lcom/android/internal/policy/impl/PhoneWindow$DecorView;,
+        Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;,
         Lcom/android/internal/policy/impl/PhoneWindow$ActionMenuPresenterCallback;,
         Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;,
         Lcom/android/internal/policy/impl/PhoneWindow$WindowManagerHolder;,
@@ -10596,6 +10597,10 @@
     .param p1, "color"    # I
 
     .prologue
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->flymeOnStatusBarColorChange(Lcom/android/internal/policy/impl/PhoneWindow;I)I
+
+    move-result p1
+
     .line 5019
     iput p1, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mStatusBarColor:I
 
