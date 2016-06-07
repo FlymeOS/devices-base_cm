@@ -371,6 +371,8 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    invoke-direct {p0, v7}, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->setFlymeExtraValues(Landroid/content/ContentValues;)V
+
     .line 1561
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mAppInfo:Landroid/content/pm/PackageInfo;
 
@@ -994,5 +996,43 @@
     .line 1509
     .end local v3    # "values":Landroid/content/ContentValues;
     :cond_0
+    return-void
+.end method
+
+.method private setFlymeExtraValues(Landroid/content/ContentValues;)V
+    .locals 4
+    .param p1, "values"    # Landroid/content/ContentValues;
+
+    .prologue
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
+
+    move-result-object v2
+
+    iget v3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSubId:I
+
+    invoke-virtual {v2, v3}, Landroid/telephony/TelephonyManager;->getSubscriberId(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "imsi":Ljava/lang/String;
+    iget v2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSubId:I
+
+    invoke-static {v2}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
+
+    move-result v1
+
+    .local v1, "phoneId":I
+    const-string v2, "imsi"
+
+    invoke-virtual {p1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "sim_id"
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
     return-void
 .end method
