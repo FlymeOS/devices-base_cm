@@ -18554,6 +18554,8 @@
 
     .line 3503
     :cond_2
+    invoke-direct {p0, p1, p5}, Lcom/android/server/pm/Settings;->flymeSendPackageFirstLaunchBroadcast(Ljava/lang/String;I)V
+
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0, p5}, Lcom/android/server/pm/PackageSetting;->setNotLaunched(ZI)V
@@ -23188,5 +23190,43 @@
     .end local v2    # "id":J
     .end local v4    # "len$":I
     :cond_0
+    return-void
+.end method
+
+.method private flymeSendPackageFirstLaunchBroadcast(Ljava/lang/String;I)V
+    .locals 7
+    .param p1, "packageName"    # Ljava/lang/String;
+    .param p2, "userId"    # I
+
+    .prologue
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/server/pm/PackageSetting;
+
+    .local v6, "pkgSetting":Lcom/android/server/pm/PackageSetting;
+    const-string v0, "meizu.intent.action.PACKAGE_FIRST_LAUNCH"
+
+    iget-object v1, v6, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    new-array v5, v3, [I
+
+    const/4 v3, 0x0
+
+    aput p2, v5, v3
+
+    move-object v3, v2
+
+    move-object v4, v2
+
+    invoke-static/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
+
     return-void
 .end method

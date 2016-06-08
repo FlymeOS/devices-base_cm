@@ -1345,8 +1345,10 @@
     :try_start_2
     invoke-virtual {v3, v4, v6}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
+    invoke-direct {p0, p3, p4, p5, p6}, Lcom/android/server/wm/Session;->flymeSetDragStateInitXAndY(FFFF)V
+
     .line 336
-    const v4, 0x3f350481    # 0.7071f
+    const/high16 v4, 0x3f800000    # 1.0f
 
     invoke-virtual {v3, v4}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
@@ -1775,7 +1777,7 @@
 
     iget-object v4, v4, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->endDragLw()V
+    invoke-virtual {v4}, Lcom/android/server/wm/DragState;->mzEndDragLwAnimation()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
@@ -2298,5 +2300,26 @@
     invoke-virtual {p0}, Lcom/android/server/wm/Session;->killSessionLocked()V
 
     .line 524
+    return-void
+.end method
+
+.method private flymeSetDragStateInitXAndY(FFFF)V
+    .locals 3
+    .param p1, "touchX"    # F
+    .param p2, "touchY"    # F
+    .param p3, "thumbCenterX"    # F
+    .param p4, "thumbCenterY"    # F
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/Session;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
+
+    sub-float v1, p1, p3
+
+    sub-float v2, p2, p4
+
+    invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/DragState;->mzSetInitXAndY(FF)V
+
     return-void
 .end method

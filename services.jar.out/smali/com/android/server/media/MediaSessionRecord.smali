@@ -4485,3 +4485,12 @@
 
     return-object v0
 .end method
+
+.method flymeGetFieldService()Lcom/android/server/media/MediaSessionService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord;->mService:Lcom/android/server/media/MediaSessionService;
+
+    return-object v0
+.end method

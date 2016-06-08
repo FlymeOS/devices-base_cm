@@ -3,6 +3,14 @@
 .source "MasterClearReceiver.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/MasterClearReceiver$FlymeRebootThread;
+    }
+.end annotation
+
+
 # static fields
 .field public static final EXTRA_WIPE_MEDIA:Ljava/lang/String; = "wipe_media"
 
@@ -69,6 +77,16 @@
 
     .line 43
     :cond_0
+    invoke-direct/range {p0 .. p2}, Lcom/android/server/MasterClearReceiver;->flymeRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     const-string v1, "shutdown"
 
     const/4 v2, 0x0
@@ -111,4 +129,22 @@
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
+.end method
+
+.method private flymeRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)Z
+    .locals 2
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+
+    .prologue
+    new-instance v0, Lcom/android/server/MasterClearReceiver$FlymeRebootThread;
+
+    invoke-direct {v0, p1, p2}, Lcom/android/server/MasterClearReceiver$FlymeRebootThread;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
+
+    .local v0, "flymeRebootThread":Lcom/android/server/MasterClearReceiver$FlymeRebootThread;
+    invoke-virtual {v0}, Lcom/android/server/MasterClearReceiver$FlymeRebootThread;->start()V
+
+    const/4 v1, 0x1
+
+    return v1
 .end method

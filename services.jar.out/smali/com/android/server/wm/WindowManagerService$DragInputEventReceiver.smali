@@ -42,6 +42,18 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$DragInputEventReceiver;->this$0:Lcom/android/server/wm/WindowManagerService;
+
+    invoke-static {p0, p1, v0}, Lcom/android/server/wm/WindowManagerService$FlymeInjector;->hookOnInputEvent(Lcom/android/server/wm/WindowManagerService$DragInputEventReceiver;Landroid/view/InputEvent;Lcom/android/server/wm/WindowManagerService;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     .line 731
     const/4 v3, 0x0
 

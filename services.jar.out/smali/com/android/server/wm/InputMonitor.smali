@@ -6,6 +6,13 @@
 .implements Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/wm/InputMonitor$FlymeInjector;
+    }
+.end annotation
+
 # instance fields
 .field private mInputDevicesReady:Z
 
@@ -1205,6 +1212,8 @@
 
     .line 448
     :cond_1
+    invoke-static/range {p0 .. p1}, Lcom/android/server/wm/InputMonitor$FlymeInjector;->setInputFocusLw(Lcom/android/server/wm/InputMonitor;Lcom/android/server/wm/WindowState;)V
+
     return-void
 .end method
 
@@ -1263,6 +1272,8 @@
 
     .line 250
     :cond_0
+    invoke-static/range {p0 .. p0}, Lcom/android/server/wm/InputMonitor$FlymeInjector;->updateInputWindowsLw(Lcom/android/server/wm/InputMonitor;)V
+
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -1836,4 +1847,13 @@
     move-exception v0
 
     goto :goto_0
+.end method
+
+.method flymeGetFieldService()Lcom/android/server/wm/WindowManagerService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    return-object v0
 .end method

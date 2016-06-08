@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/wm/WindowState$FlymeInjector;,
         Lcom/android/server/wm/WindowState$DeathRecipient;
     }
 .end annotation
@@ -19,6 +20,8 @@
 
 
 # instance fields
+.field mWindowStateExt:Lcom/android/server/wm/WindowStateExt;
+
 .field mAppFreezing:Z
 
 .field final mAppOp:I
@@ -1239,6 +1242,8 @@
 
     iput-object v13, p0, Lcom/android/server/wm/WindowState;->mInputWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
+    invoke-static/range {p0 .. p0}, Lcom/android/server/wm/WindowState$FlymeInjector;->initFlymeExtraFields(Lcom/android/server/wm/WindowState;)V
+
     goto/16 :goto_8
 
     .line 464
@@ -1756,6 +1761,8 @@
     move-object/from16 v0, p2
 
     invoke-static {v1, v0, v4}, Landroid/view/Gravity;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/wm/WindowState$FlymeInjector;->computeFrameLw(Lcom/android/server/wm/WindowState;)V
 
     .line 601
     move-object/from16 v0, p0
@@ -7325,4 +7332,91 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method getVisibleWindowUnderMe(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/WindowState;
+    .locals 4
+    .param p1, "me"    # Lcom/android/server/wm/WindowState;
+
+    .prologue
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getWindowList()Lcom/android/server/wm/WindowList;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Lcom/android/server/wm/WindowList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    .local v1, "indexOfMe":I
+    add-int/lit8 v0, v1, -0x1
+
+    .local v0, "i":I
+    :goto_0
+    if-ltz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getWindowList()Lcom/android/server/wm/WindowList;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/wm/WindowState;
+
+    .local v2, "underMe":Lcom/android/server/wm/WindowState;
+    invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/android/server/wm/WindowState;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    invoke-interface {v3, v2}, Landroid/view/WindowManagerPolicy;->shouldWindowAffectDarkStatusBarIcon(Landroid/view/WindowManagerPolicy$WindowState;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .end local v2    # "underMe":Lcom/android/server/wm/WindowState;
+    :goto_1
+    return-object v2
+
+    .restart local v2    # "underMe":Lcom/android/server/wm/WindowState;
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    .end local v2    # "underMe":Lcom/android/server/wm/WindowState;
+    :cond_1
+    const/4 v2, 0x0
+
+    goto :goto_1
+.end method
+
+.method public isInMovedMode()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowState;->mWindowStateExt:Lcom/android/server/wm/WindowStateExt;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowStateExt;->isInMovedMode()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setBackupFlag(I)V
+    .locals 1
+    .param p1, "flag"    # I
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowState;->mWindowStateExt:Lcom/android/server/wm/WindowStateExt;
+
+    iput p1, v0, Lcom/android/server/wm/WindowStateExt;->mBackupFlags:I
+
+    return-void
 .end method
