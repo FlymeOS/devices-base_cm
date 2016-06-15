@@ -341,3 +341,12 @@
 
 .method public abstract windowTypeToLayerLw(I)I
 .end method
+
+.method public abstract setStatusBarColorTheme(Landroid/view/WindowManagerPolicy$WindowState;IZ)V
+.end method
+
+.method public abstract setStatusBarDarkTheme(Landroid/view/WindowManagerPolicy$WindowState;ZZ)V
+.end method
+
+.method public abstract shouldWindowAffectDarkStatusBarIcon(Landroid/view/WindowManagerPolicy$WindowState;)Z
+.end method

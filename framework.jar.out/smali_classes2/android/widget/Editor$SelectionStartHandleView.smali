@@ -160,6 +160,10 @@
 
     move-result v0
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$SelectionStartHandleView;->flymeGetSelectionStart()I
+
+    move-result v0
+
     .line 3706
     :cond_0
     invoke-virtual {p0, v0, v3}, Landroid/widget/Editor$SelectionStartHandleView;->positionAtCursorOffset(IZ)V
@@ -205,4 +209,21 @@
 
     .line 3696
     return-void
+.end method
+
+.method private flymeGetSelectionStart()I
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionStart()I
+
+    move-result v0
+
+    return v0
 .end method

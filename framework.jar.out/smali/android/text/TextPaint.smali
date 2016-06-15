@@ -149,3 +149,32 @@
     .line 81
     return-void
 .end method
+
+.method public setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    .locals 1
+    .param p1, "typeface"    # Landroid/graphics/Typeface;
+
+    .prologue
+    invoke-static {p1}, Landroid/content/res/flymetheme/FlymeFontsHelper;->isDefaultTypeface(Landroid/graphics/Typeface;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->hasFlymeTypeface()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->getflymeTypeface()Landroid/graphics/Typeface;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -103,6 +103,16 @@
 
     .line 3098
     .local v0, "handled":Z
+    invoke-direct/range {p0 .. p0}, Landroid/widget/AbsListView$CheckForKeyLongPress;->flymeCheckForLongPress()Z
+
+    move-result v3
+
+    if-nez v3, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     invoke-virtual {p0}, Landroid/widget/AbsListView$CheckForKeyLongPress;->sameWindow()Z
 
     move-result v3
@@ -158,4 +168,45 @@
     invoke-virtual {v2, v8}, Landroid/view/View;->setPressed(Z)V
 
     goto :goto_0
+.end method
+
+.method private flymeCheckForLongPress()Z
+    .locals 6
+
+    .prologue
+    iget-object v2, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v2, v2, Landroid/widget/AbsListView;->mSelectedPosition:I
+
+    iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v3, v3, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    sub-int v0, v2, v3
+
+    .local v0, "index":I
+    iget-object v2, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/AbsListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    .local v1, "v":Landroid/view/View;
+    iget-object v2, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v3, v3, Landroid/widget/AbsListView;->mSelectedPosition:I
+
+    iget-object v4, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v4, v4, Landroid/widget/AbsListView;->mSelectedPosition:I
+
+    int-to-long v4, v4
+
+    invoke-virtual {v2, v3, v4, v5, v1}, Landroid/widget/AbsListView;->mzCheckForLongPressForMeiZu(IJLandroid/view/View;)Z
+
+    move-result v2
+
+    return v2
 .end method

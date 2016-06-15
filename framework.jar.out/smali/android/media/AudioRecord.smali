@@ -1739,7 +1739,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-direct {p0, v0, v2}, Landroid/media/AudioRecord;->native_start(II)I
+    invoke-direct {p0, v0, v2}, Landroid/media/AudioRecord;->hook_native_start(II)I
 
     move-result v0
 
@@ -1964,4 +1964,31 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
+.end method
+
+.method private hook_native_start(II)I
+    .locals 1
+    .param p1, "syncEvent"    # I
+    .param p2, "sessionId"    # I
+
+    .prologue
+    const/16 v0, 0x1b
+
+    invoke-static {v0}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, p1, p2}, Landroid/media/AudioRecord;->native_start(II)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
 .end method

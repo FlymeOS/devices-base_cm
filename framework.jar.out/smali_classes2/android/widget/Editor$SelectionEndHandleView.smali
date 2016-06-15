@@ -176,6 +176,10 @@
 
     move-result v0
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$SelectionEndHandleView;->flymeGetSelectionEnd()I
+
+    move-result v0
+
     .line 3756
     :cond_0
     const/4 v2, 0x0
@@ -223,4 +227,21 @@
 
     .line 3744
     return-void
+.end method
+
+.method private flymeGetSelectionEnd()I
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Editor$SelectionEndHandleView;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionEnd()I
+
+    move-result v0
+
+    return v0
 .end method

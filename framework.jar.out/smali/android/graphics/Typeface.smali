@@ -982,6 +982,20 @@
     .param p0, "style"    # I
 
     .prologue
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->hasFlymeTypeface()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->getflymeTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_flyme_0
+
     .line 181
     sget-object v0, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
@@ -2102,4 +2116,22 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public static isSystemTypeface(Landroid/graphics/Typeface;)Z
+    .locals 1
+    .param p0, "typeface"    # Landroid/graphics/Typeface;
+
+    .prologue
+    sget-object v0, Landroid/graphics/Typeface;->sSystemFontMap:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method

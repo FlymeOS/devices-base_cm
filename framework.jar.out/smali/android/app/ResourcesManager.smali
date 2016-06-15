@@ -1542,6 +1542,8 @@
     :cond_4
     invoke-static {p1, v2, p2}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
+    invoke-direct {p0, v0}, Landroid/app/ResourcesManager;->flymeFreeCaches(I)V
+
     .line 487
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
 
@@ -3102,4 +3104,34 @@
     move-object/from16 v16, v9
 
     goto/16 :goto_1
+.end method
+
+.method private flymeFreeCaches(I)V
+    .locals 1
+    .param p1, "changes"    # I
+
+    .prologue
+    and-int/lit16 v0, p1, 0x4000
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    :cond_0
+    const v0, 0x8000
+
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->cleanflymeTypeface()V
+
+    :cond_1
+    return-void
 .end method

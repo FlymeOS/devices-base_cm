@@ -261,3 +261,44 @@
     .line 155
     return-void
 .end method
+
+.method constructor <init>(IZZLandroid/os/ParcelUuid;I)V
+    .locals 8
+    .param p1, "type"    # I
+    .param p2, "auth"    # Z
+    .param p3, "encrypt"    # Z
+    .param p4, "uuid"    # Landroid/os/ParcelUuid;
+    .param p5, "port"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/bluetooth/BluetoothSocket;
+
+    const/4 v2, -0x1
+
+    const/4 v5, 0x0
+
+    move v1, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v6, p5
+
+    move-object v7, p4
+
+    invoke-direct/range {v0 .. v7}, Landroid/bluetooth/BluetoothSocket;-><init>(IIZZLandroid/bluetooth/BluetoothDevice;ILandroid/os/ParcelUuid;)V
+
+    iput-object v0, p0, Landroid/bluetooth/BluetoothServerSocket;->mSocket:Landroid/bluetooth/BluetoothSocket;
+
+    iput p5, p0, Landroid/bluetooth/BluetoothServerSocket;->mChannel:I
+
+    return-void
+.end method

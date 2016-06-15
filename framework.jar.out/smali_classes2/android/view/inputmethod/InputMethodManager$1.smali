@@ -149,6 +149,16 @@
     .param p1, "sequence"    # I
 
     .prologue
+    invoke-direct/range {p0 .. p1}, Landroid/view/inputmethod/InputMethodManager$1;->hookOnUnbindMethodForOnInputShownChanged(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     .line 589
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
@@ -246,4 +256,70 @@
     .prologue
     .line 580
     return-void
+.end method
+
+.method private hookOnUnbindMethodForOnInputShownChanged(I)Z
+    .locals 7
+    .param p1, "sequence"    # I
+
+    .prologue
+    const/4 v5, -0x7
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eq p1, v5, :cond_0
+
+    const/16 v4, -0x9
+
+    if-ne p1, v4, :cond_1
+
+    :cond_0
+    if-ne p1, v5, :cond_2
+
+    move v1, v2
+
+    .local v1, "vis":Z
+    :goto_0
+    const/16 v0, 0x8
+
+    .local v0, "MSG_VIS_CHANGED":I
+    iget-object v4, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v5, v4, Landroid/view/inputmethod/InputMethodManager;->mFlymeHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v6, v4, Landroid/view/inputmethod/InputMethodManager;->mFlymeHandler:Landroid/os/Handler;
+
+    if-eqz v1, :cond_3
+
+    move v4, v2
+
+    :goto_1
+    invoke-virtual {v6, v0, v4, v3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    move v3, v2
+
+    .end local v0    # "MSG_VIS_CHANGED":I
+    .end local v1    # "vis":Z
+    :cond_1
+    return v3
+
+    :cond_2
+    move v1, v3
+
+    goto :goto_0
+
+    .restart local v0    # "MSG_VIS_CHANGED":I
+    .restart local v1    # "vis":Z
+    :cond_3
+    move v4, v3
+
+    goto :goto_1
 .end method

@@ -253,6 +253,10 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
+    invoke-direct/range {p0 .. p3}, Lcom/android/internal/view/menu/ListMenuPresenter$MenuAdapter;->flymeGetConvertView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
     const/4 v3, 0x0
 
     .line 253
@@ -301,4 +305,125 @@
 
     .line 282
     return-void
+.end method
+
+.method private flymeGetConvertView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
+    .param p1, "position"    # I
+    .param p2, "convertView"    # Landroid/view/View;
+    .param p3, "parent"    # Landroid/view/ViewGroup;
+
+    .prologue
+    invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/ListMenuPresenter$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
+
+    move-result-object v0
+
+    .local v0, "item":Lcom/android/internal/view/menu/MenuItemImpl;
+    if-nez p2, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuItemImpl;->isCategoryHeader()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Lcom/android/internal/view/menu/ListMenuPresenter;
+
+    iget-object v1, v1, Lcom/android/internal/view/menu/ListMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
+
+    sget v2, Lcom/flyme/internal/R$layout;->mz_list_menu_item_header_layout:I
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    :cond_0
+    return-object p2
+.end method
+
+.method public areAllItemsEnabled()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getItemViewType(I)I
+    .locals 4
+    .param p1, "position"    # I
+
+    .prologue
+    const/4 v1, 0x0
+
+    .local v1, "TYPE_NORMAL":I
+    const/4 v0, 0x1
+
+    .local v0, "TYPE_HEADER":I
+    invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/ListMenuPresenter$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
+
+    move-result-object v2
+
+    .local v2, "item":Lcom/android/internal/view/menu/MenuItemImpl;
+    invoke-virtual {v2}, Lcom/android/internal/view/menu/MenuItemImpl;->isCategoryHeader()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .end local v0    # "TYPE_HEADER":I
+    :goto_0
+    return v0
+
+    .restart local v0    # "TYPE_HEADER":I
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public getViewTypeCount()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x2
+
+    .local v0, "TYPE_COUNT":I
+    return v0
+.end method
+
+.method public isEnabled(I)Z
+    .locals 2
+    .param p1, "position"    # I
+
+    .prologue
+    invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/ListMenuPresenter$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
+
+    move-result-object v0
+
+    .local v0, "item":Lcom/android/internal/view/menu/MenuItemImpl;
+    invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuItemImpl;->isEnabled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuItemImpl;->isCategoryHeader()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
 .end method

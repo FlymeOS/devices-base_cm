@@ -104,6 +104,16 @@
 
     .line 3075
     .local v1, "handled":Z
+    invoke-direct/range {p0 .. p0}, Landroid/widget/AbsListView$CheckForLongPress;->flymeCheckForLongPress()Z
+
+    move-result v6
+
+    if-nez v6, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     invoke-virtual {p0}, Landroid/widget/AbsListView$CheckForLongPress;->sameWindow()Z
 
     move-result v6
@@ -162,4 +172,59 @@
     iput v7, v6, Landroid/widget/AbsListView;->mTouchMode:I
 
     goto :goto_0
+.end method
+
+.method private flymeCheckForLongPress()Z
+    .locals 7
+
+    .prologue
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    const/4 v6, 0x2
+
+    iput v6, v5, Landroid/widget/AbsListView;->mTouchMode:I
+
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v4, v5, Landroid/widget/AbsListView;->mMotionPosition:I
+
+    .local v4, "motionPosition":I
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget-object v6, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v6, v6, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    sub-int v6, v4, v6
+
+    invoke-virtual {v5, v6}, Landroid/widget/AbsListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .local v0, "child":Landroid/view/View;
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v1, v5, Landroid/widget/AbsListView;->mMotionPosition:I
+
+    .local v1, "longPressPosition":I
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget-object v5, v5, Landroid/widget/AbsListView;->mAdapter:Landroid/widget/ListAdapter;
+
+    iget-object v6, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    iget v6, v6, Landroid/widget/AbsListView;->mMotionPosition:I
+
+    invoke-interface {v5, v6}, Landroid/widget/ListAdapter;->getItemId(I)J
+
+    move-result-wide v2
+
+    .local v2, "longPressId":J
+    iget-object v5, p0, Landroid/widget/AbsListView$CheckForLongPress;->this$0:Landroid/widget/AbsListView;
+
+    invoke-virtual {v5, v1, v2, v3, v0}, Landroid/widget/AbsListView;->mzCheckForLongPressForMeiZu(IJLandroid/view/View;)Z
+
+    move-result v5
+
+    return v5
 .end method

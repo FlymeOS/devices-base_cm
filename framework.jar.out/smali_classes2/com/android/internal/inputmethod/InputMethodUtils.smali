@@ -997,6 +997,12 @@
 
     .line 750
     .local v0, "imiLabel":Ljava/lang/CharSequence;
+    invoke-static {p0, p1, p2, v0}, Lcom/android/internal/inputmethod/InputMethodUtils;->getFlymeImeAndSubtypeDisplayName(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;Landroid/view/inputmethod/InputMethodSubtype;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+
     if-eqz p2, :cond_0
 
     const/4 v1, 0x2
@@ -2517,6 +2523,18 @@
 
     if-eqz v1, :cond_0
 
+    invoke-static/range {p1 .. p1}, Lcom/android/internal/inputmethod/InputMethodUtils;->isBuildExtAndDefaultIME(Landroid/view/inputmethod/InputMethodInfo;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_flyme_0
+
+    const/4 v1, 0x1
+
+    return v1
+
+    :cond_flyme_0
+
     .line 396
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getIsDefaultResourceId()I
 
@@ -2853,4 +2871,220 @@
     const/4 v8, 0x0
 
     goto :goto_4
+.end method
+
+.method private static getFlymeImeAndSubtypeDisplayName(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;Landroid/view/inputmethod/InputMethodSubtype;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 5
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "imi"    # Landroid/view/inputmethod/InputMethodInfo;
+    .param p2, "subtype"    # Landroid/view/inputmethod/InputMethodSubtype;
+    .param p3, "imiLabel"    # Ljava/lang/CharSequence;
+
+    .prologue
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "com.meizu.flyme.input/com.meizu.input.MzInputService"
+
+    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .end local p3    # "imiLabel":Ljava/lang/CharSequence;
+    :cond_0
+    :goto_0
+    return-object p3
+
+    .restart local p3    # "imiLabel":Ljava/lang/CharSequence;
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
+
+    move-result-object v2
+
+    iget-object v2, v2, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    invoke-virtual {p2, p0, v1, v2}, Landroid/view/inputmethod/InputMethodSubtype;->getDisplayName(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .local v0, "subtypeLabel":Ljava/lang/CharSequence;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [Ljava/lang/CharSequence;
+
+    const/4 v1, 0x0
+
+    aput-object v0, v2, v1
+
+    const/4 v3, 0x1
+
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, ""
+
+    :goto_1
+    aput-object v1, v2, v3
+
+    invoke-static {v2}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, " - "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+.end method
+
+.method public static isBuildExtAndDefaultIME(Landroid/view/inputmethod/InputMethodInfo;)Z
+    .locals 7
+    .param p0, "imi"    # Landroid/view/inputmethod/InputMethodInfo;
+
+    .prologue
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p0}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "id":Ljava/lang/String;
+    const-string v6, "com.cootek.smartinputv5/com.cootek.smartinput5.TouchPalIME"
+
+    invoke-static {v0, v6}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    move v3, v4
+
+    .local v3, "isInternationalAndIMEIntl":Z
+    :goto_0
+    const-string v6, "com.iflytek.inputmethod/.FlyIME"
+
+    invoke-static {v0, v6}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    sget-object v6, Landroid/os/BuildExt;->CUSTOMIZE_CHINAMOBILE:Ljava/lang/Boolean;
+
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    move v1, v4
+
+    .local v1, "isCustomizeChinaMobileAndFlyIME":Z
+    :goto_1
+    const-string v6, "com.syntellia.fleksy.keyboard/.Fleksy"
+
+    invoke-static {v0, v6}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    invoke-static {}, Landroid/os/BuildExt;->isIndiaVersion()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    move v2, v4
+
+    .local v2, "isIndiaAndDefIME":Z
+    :goto_2
+    if-nez v3, :cond_0
+
+    if-nez v1, :cond_0
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    move v5, v4
+
+    :cond_1
+    return v5
+
+    .end local v1    # "isCustomizeChinaMobileAndFlyIME":Z
+    .end local v2    # "isIndiaAndDefIME":Z
+    .end local v3    # "isInternationalAndIMEIntl":Z
+    :cond_2
+    move v3, v5
+
+    goto :goto_0
+
+    .restart local v3    # "isInternationalAndIMEIntl":Z
+    :cond_3
+    move v1, v5
+
+    goto :goto_1
+
+    .restart local v1    # "isCustomizeChinaMobileAndFlyIME":Z
+    :cond_4
+    move v2, v5
+
+    goto :goto_2
+.end method
+
+.method public static isDefaultIME(Ljava/lang/String;)Z
+    .locals 1
+    .param p0, "id"    # Ljava/lang/String;
+
+    .prologue
+    const-string v0, "com.meizu.flyme.input/com.meizu.input.MzInputService"
+
+    invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
 .end method

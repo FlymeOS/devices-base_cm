@@ -250,6 +250,8 @@
 
     iput-object v2, v0, Landroid/net/wifi/WifiConfiguration;->allowedGroupCiphers:Ljava/util/BitSet;
 
+    invoke-static {p1, v0}, Landroid/net/wifi/WifiConfiguration$FlymeInjector;->readFlymeExtraFields(Landroid/os/Parcel;Landroid/net/wifi/WifiConfiguration;)V
+
     .line 1760
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 

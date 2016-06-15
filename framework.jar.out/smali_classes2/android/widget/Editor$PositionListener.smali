@@ -18,6 +18,12 @@
 
 
 # instance fields
+.field public mAttached:Z
+
+.field public mTextViewHeight:I
+
+.field public mTextViewWidth:I
+
 .field private final MAXIMUM_NUMBER_OF_LISTENERS:I
 
 .field private mCanMove:[Z
@@ -134,6 +140,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/Editor$PositionListener;->mPositionHasChanged:Z
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$PositionListener;->flymeUpdatePositionHasChanged()V
+
     .line 2205
     iget-object v0, p0, Landroid/widget/Editor$PositionListener;->mTempCoords:[I
 
@@ -147,6 +155,8 @@
     aget v0, v0, v2
 
     iput v0, p0, Landroid/widget/Editor$PositionListener;->mPositionY:I
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$PositionListener;->flymeUpdatemScrollHasChanged()V
 
     .line 2207
     return-void
@@ -428,4 +438,117 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+.end method
+
+.method private flymeUpdatePositionHasChanged()V
+    .locals 5
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    iget-object v3, p0, Landroid/widget/Editor$PositionListener;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v3}, Landroid/widget/Editor;->isAttached()Z
+
+    move-result v0
+
+    .local v0, "attached":Z
+    iget-object v3, p0, Landroid/widget/Editor$PositionListener;->mTempCoords:[I
+
+    aget v3, v3, v1
+
+    iget v4, p0, Landroid/widget/Editor$PositionListener;->mPositionX:I
+
+    if-ne v3, v4, :cond_0
+
+    iget-object v3, p0, Landroid/widget/Editor$PositionListener;->mTempCoords:[I
+
+    aget v3, v3, v2
+
+    iget v4, p0, Landroid/widget/Editor$PositionListener;->mPositionY:I
+
+    if-ne v3, v4, :cond_0
+
+    iget-boolean v3, p0, Landroid/widget/Editor$PositionListener;->mAttached:Z
+
+    if-eq v0, v3, :cond_1
+
+    :cond_0
+    move v1, v2
+
+    :cond_1
+    iput-boolean v1, p0, Landroid/widget/Editor$PositionListener;->mPositionHasChanged:Z
+
+    iput-boolean v0, p0, Landroid/widget/Editor$PositionListener;->mAttached:Z
+
+    return-void
+.end method
+
+.method private flymeUpdatemScrollHasChanged()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x1
+
+    iget v0, p0, Landroid/widget/Editor$PositionListener;->mTextViewWidth:I
+
+    iget-object v1, p0, Landroid/widget/Editor$PositionListener;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v1}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getWidth()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Landroid/widget/Editor$PositionListener;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getWidth()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/widget/Editor$PositionListener;->mTextViewWidth:I
+
+    iput-boolean v2, p0, Landroid/widget/Editor$PositionListener;->mScrollHasChanged:Z
+
+    :cond_0
+    iget v0, p0, Landroid/widget/Editor$PositionListener;->mTextViewHeight:I
+
+    iget-object v1, p0, Landroid/widget/Editor$PositionListener;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v1}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getHeight()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Landroid/widget/Editor$PositionListener;->this$0:Landroid/widget/Editor;
+
+    invoke-virtual {v0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getHeight()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/widget/Editor$PositionListener;->mTextViewHeight:I
+
+    iput-boolean v2, p0, Landroid/widget/Editor$PositionListener;->mScrollHasChanged:Z
+
+    :cond_1
+    return-void
 .end method

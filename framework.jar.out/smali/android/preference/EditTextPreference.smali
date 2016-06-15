@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/preference/EditTextPreference$FlymeInjector;,
         Landroid/preference/EditTextPreference$SavedState;
     }
 .end annotation
@@ -80,6 +81,8 @@
     invoke-direct {v0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     iput-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    invoke-static/range {p0 .. p2}, Landroid/preference/EditTextPreference$FlymeInjector;->flymeSetDialogStyleEditText(Landroid/preference/EditTextPreference;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 59
     iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
@@ -180,6 +183,8 @@
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-static/range {p0 .. p0}, Landroid/preference/EditTextPreference$FlymeInjector;->flymeSetEditTextSelection(Landroid/preference/EditTextPreference;)V
 
     .line 116
     invoke-virtual {v0}, Landroid/widget/EditText;->getParent()Landroid/view/ViewParent;
@@ -447,4 +452,23 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method flymeGetFieldEditText()Landroid/widget/EditText;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    return-object v0
+.end method
+
+.method flymeSetFieldEditText(Landroid/widget/EditText;)V
+    .locals 0
+    .param p1, "editText"    # Landroid/widget/EditText;
+
+    .prologue
+    iput-object p1, p0, Landroid/preference/EditTextPreference;->mEditText:Landroid/widget/EditText;
+
+    return-void
 .end method

@@ -92,6 +92,10 @@
     .line 334
     .end local v0    # "decor":Landroid/view/View;
     :goto_0
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
+
+    invoke-static {v1}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->updateCoverHeightIfNeeded(Landroid/inputmethodservice/InputMethodService;)V
+
     return-void
 
     .line 328

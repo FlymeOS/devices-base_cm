@@ -882,7 +882,7 @@
     .line 124
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
+    #invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
 
     .line 127
     :cond_0

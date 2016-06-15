@@ -7,6 +7,8 @@
 
 
 # static fields
+.field public static final ACTION_DRAG_CANCEL:I = 0x64
+
 .field public static final ACTION_DRAG_ENDED:I = 0x4
 
 .field public static final ACTION_DRAG_ENTERED:I = 0x5

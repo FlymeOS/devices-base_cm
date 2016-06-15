@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/net/wifi/ScanResult$FlymeInjector;,
         Landroid/net/wifi/ScanResult$InformationElement;
     }
 .end annotation
@@ -38,6 +39,8 @@
 
 
 # instance fields
+.field public HexSSID:Ljava/lang/String;
+
 .field public BSSID:Ljava/lang/String;
 
 .field public SSID:Ljava/lang/String;
@@ -192,6 +195,8 @@
 
     iput v0, p0, Landroid/net/wifi/ScanResult;->isAutoJoinCandidate:I
 
+    invoke-static/range {p0 .. p1}, Landroid/net/wifi/ScanResult$FlymeInjector;->initFlymeExtraFields(Landroid/net/wifi/ScanResult;Landroid/net/wifi/ScanResult;)V
+
     .line 274
     :cond_0
     return-void
@@ -245,6 +250,8 @@
 
     .line 237
     iput v1, p0, Landroid/net/wifi/ScanResult;->distanceSdCm:I
+
+    invoke-static/range {p0 .. p1}, Landroid/net/wifi/ScanResult$FlymeInjector;->initFlymeExtraFields(Landroid/net/wifi/ScanResult;Landroid/net/wifi/WifiSsid;)V
 
     .line 238
     return-void
@@ -304,6 +311,8 @@
 
     .line 251
     iput p9, p0, Landroid/net/wifi/ScanResult;->distanceSdCm:I
+
+    invoke-static/range {p0 .. p1}, Landroid/net/wifi/ScanResult$FlymeInjector;->initFlymeExtraFields(Landroid/net/wifi/ScanResult;Landroid/net/wifi/WifiSsid;)V
 
     .line 252
     return-void

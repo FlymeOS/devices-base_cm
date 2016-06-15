@@ -10,6 +10,7 @@
         Landroid/provider/Settings$Global;,
         Landroid/provider/Settings$Secure;,
         Landroid/provider/Settings$System;,
+        Landroid/provider/Settings$ShareList;,
         Landroid/provider/Settings$NameValueCache;,
         Landroid/provider/Settings$NameValueTable;,
         Landroid/provider/Settings$SettingNotFoundException;

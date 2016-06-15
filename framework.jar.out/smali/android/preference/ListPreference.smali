@@ -438,6 +438,8 @@
     .line 272
     invoke-virtual {p1, v3, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    invoke-direct/range {p0 .. p1}, Landroid/preference/ListPreference;->flymeRemoveNegativeButton(Landroid/app/AlertDialog$Builder;)V
+
     .line 273
     return-void
 .end method
@@ -761,6 +763,29 @@
     invoke-virtual {p0, v0}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 200
+    :cond_0
+    return-void
+.end method
+
+.method private flymeRemoveNegativeButton(Landroid/app/AlertDialog$Builder;)V
+    .locals 2
+    .param p1, "builder"    # Landroid/app/AlertDialog$Builder;
+
+    .prologue
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Landroid/preference/ListPreference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->isDeviceDefaultTheme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, v1, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
     :cond_0
     return-void
 .end method

@@ -6,6 +6,14 @@
 .implements Landroid/view/LayoutInflater$Factory2;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/app/FragmentManagerImpl$FlymeInjector;
+    }
+.end annotation
+
+
 # static fields
 .field static DEBUG:Z = false
 
@@ -3799,7 +3807,7 @@
     :cond_6
     iget-object v4, p0, Landroid/app/FragmentManagerImpl;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v4, v0}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
+    invoke-static {v4, v0}, Landroid/app/FragmentManagerImpl$FlymeInjector;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
 
     move-result-object v1
 

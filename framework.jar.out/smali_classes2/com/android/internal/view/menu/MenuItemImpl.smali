@@ -37,6 +37,8 @@
 
 
 # instance fields
+.field private mFlymeIsHeader:Z
+
 .field private mActionProvider:Landroid/view/ActionProvider;
 
 .field private mActionView:Landroid/view/View;
@@ -2003,4 +2005,23 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public isCategoryHeader()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mFlymeIsHeader:Z
+
+    return v0
+.end method
+
+.method public setCategoryHeader(Z)V
+    .locals 0
+    .param p1, "isHeader"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Lcom/android/internal/view/menu/MenuItemImpl;->mFlymeIsHeader:Z
+
+    return-void
 .end method

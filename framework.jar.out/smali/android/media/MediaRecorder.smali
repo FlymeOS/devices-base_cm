@@ -57,6 +57,8 @@
 
 
 # instance fields
+.field private mMzIsVideoRecord:Z
+
 .field private mEventHandler:Landroid/media/MediaRecorder$EventHandler;
 
 .field private mFd:Ljava/io/FileDescriptor;
@@ -327,6 +329,8 @@
     .end annotation
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Landroid/media/MediaRecorder;->flymeEnforceCameraPermission()V
+
     const-wide/16 v2, 0x0
 
     .line 757
@@ -1170,4 +1174,62 @@
             Ljava/lang/IllegalStateException;
         }
     .end annotation
+.end method
+
+.method private flymeEnforceCameraPermission()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    iget-boolean v0, p0, Landroid/media/MediaRecorder;->mMzIsVideoRecord:Z
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x4c
+
+    :goto_0
+    invoke-static {v0}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Permission deny!"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    const/16 v0, 0x1b
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public hook_setVideoSource(I)V
+    .locals 1
+    .param p1, "video_source"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/media/MediaRecorder;->mMzIsVideoRecord:Z
+
+    invoke-virtual {p0, p1}, Landroid/media/MediaRecorder;->setVideoSource(I)V
+
+    return-void
 .end method

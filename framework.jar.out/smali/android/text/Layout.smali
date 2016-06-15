@@ -725,6 +725,22 @@
     .param p1, "method"    # Landroid/text/TextUtils$TruncateAt;
 
     .prologue
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-nez v0, :cond_flyme_0
+
+    sget-object v0, Landroid/text/TextUtils;->ELLIPSIS_TWO_DOTS:[C
+
+    const/4 v1, 0x0
+
+    aget-char v0, v0, v1
+
+    return v0
+
+    :cond_flyme_0
+
     const/4 v1, 0x0
 
     .line 1756
@@ -5590,6 +5606,15 @@
 
     .line 1124
     :cond_a
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-direct {v0, v1, v4}, Landroid/text/Layout;->getFlymeOffsetForHorizontal(II)I
+
+    move-result v4
+
     return v4
 .end method
 
@@ -6659,4 +6684,24 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
+.end method
+
+.method private getFlymeOffsetForHorizontal(II)I
+    .locals 1
+    .param p1, "line"    # I
+    .param p2, "best"    # I
+
+    .prologue
+    invoke-virtual {p0, p1}, Landroid/text/Layout;->getLineEnd(I)I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-direct {p0, p2}, Landroid/text/Layout;->getOffsetAtStartOf(I)I
+
+    move-result p2
+
+    :cond_0
+    return p2
 .end method

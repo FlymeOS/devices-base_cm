@@ -529,6 +529,8 @@
     .restart local v3    # "uid":I
     if-eqz v3, :cond_1
 
+    goto/16 :goto_flyme_0
+
     const/16 v4, 0x3e8
 
     if-ne v3, v4, :cond_2
@@ -555,6 +557,7 @@
 
     .line 107
     :cond_2
+    :goto_flyme_0
     const-wide/16 v6, 0x10
 
     :try_start_1

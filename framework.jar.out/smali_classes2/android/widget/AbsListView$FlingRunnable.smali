@@ -160,6 +160,10 @@
     :goto_0
     iget-object v2, p0, Landroid/widget/AbsListView$FlingRunnable;->this$0:Landroid/widget/AbsListView;
 
+    invoke-static {v2}, Landroid/widget/AbsListView$FlymeInjector;->flymeStopPositionScroller(Landroid/widget/AbsListView;)V
+
+    iget-object v2, p0, Landroid/widget/AbsListView$FlingRunnable;->this$0:Landroid/widget/AbsListView;
+
     invoke-virtual {v2}, Landroid/widget/AbsListView;->invalidate()V
 
     .line 4459
