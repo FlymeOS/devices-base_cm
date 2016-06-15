@@ -40,8 +40,6 @@
 
 .field public static final MEIZU_FLAG_STOP_RECOMMEND:I = 0x800
 
-.field public static final MZ_ACTION_ACCOUNT_ACCOUNTCENTER:Ljava/lang/String; = "com.meizu.account.ACCOUNTCENTER"
-
 .field public static final MZ_ACTION_APP_DOWN_PROMPT:Ljava/lang/String; = "meizu.intent.action.APP_DOWNLOAD_PROMPT"
 
 .field public static final MZ_ACTION_DEVICE_CONNECTION_STATE_CHANGED:Ljava/lang/String; = "meizu.intent.action.DEVICE_CONNECTION_STATE_CHANGED"

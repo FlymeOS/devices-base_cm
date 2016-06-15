@@ -195,6 +195,8 @@
 # instance fields
 .field public mFlymeNotification:Landroid/app/NotificationExt;
 
+.field public replyIntent:Landroid/app/PendingIntent;
+
 .field public snoozeIntent:Landroid/app/PendingIntent;
 
 .field public actions:[Landroid/app/Notification$Action;
