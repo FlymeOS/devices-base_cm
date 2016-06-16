@@ -1220,15 +1220,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v15
+    #move-result v15
+
+    const/4 v15, 0x1
 
     .line 377
     .local v15, "status":I
@@ -1236,15 +1238,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v16
+    #move-result v16
+
+    const/16 v16, -0x1
 
     .line 379
     .local v16, "nwMode":I
@@ -1252,15 +1256,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v17
+    #move-result v17
+
+    const/16 v17, -0x1
 
     .line 383
     .local v17, "userNwMode":I
@@ -8768,6 +8774,8 @@
     .param p2, "nwMode"    # I
 
     .prologue
+    return-void
+
     .line 1743
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -9123,6 +9131,8 @@
 
     move-result v3
 
+    const/4 v3, 0x0
+
     if-eqz v3, :cond_0
 
     .line 1785
@@ -9242,6 +9252,8 @@
     .param p2, "nwMode"    # I
 
     .prologue
+    return-void
+
     .line 1762
     new-instance v1, Ljava/lang/StringBuilder;
 
