@@ -1,0 +1,13 @@
+.method public deflectCall(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public switchToOtherActiveSub(Ljava/lang/String;Z)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
