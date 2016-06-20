@@ -1878,3 +1878,17 @@
 
     return-void
 .end method
+
+.method constructor <init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;)V
+    .locals 1
+    .param p1, "phone"    # Landroid/telecom/Phone;
+    .param p2, "telecomCallId"    # Ljava/lang/String;
+    .param p3, "inCallAdapter"    # Landroid/telecom/InCallAdapter;
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Landroid/telecom/Call;-><init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;Z)V
+
+    return-void
+.end method

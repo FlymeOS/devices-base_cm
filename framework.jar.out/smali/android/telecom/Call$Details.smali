@@ -1007,3 +1007,57 @@
 
     return v0
 .end method
+
+.method public constructor <init>(Landroid/net/Uri;ILjava/lang/String;ILandroid/telecom/PhoneAccountHandle;IILandroid/telecom/DisconnectCause;JLandroid/telecom/GatewayInfo;ILandroid/telecom/StatusHints;Landroid/os/Bundle;)V
+    .locals 19
+    .param p1, "handle"    # Landroid/net/Uri;
+    .param p2, "handlePresentation"    # I
+    .param p3, "callerDisplayName"    # Ljava/lang/String;
+    .param p4, "callerDisplayNamePresentation"    # I
+    .param p5, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
+    .param p6, "capabilities"    # I
+    .param p7, "properties"    # I
+    .param p8, "disconnectCause"    # Landroid/telecom/DisconnectCause;
+    .param p9, "connectTimeMillis"    # J
+    .param p11, "gatewayInfo"    # Landroid/telecom/GatewayInfo;
+    .param p12, "videoState"    # I
+    .param p13, "statusHints"    # Landroid/telecom/StatusHints;
+    .param p14, "extras"    # Landroid/os/Bundle;
+
+    .prologue
+    const-wide/16 v10, 0x0
+
+    const/16 v18, 0x0
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v2, p1
+
+    move/from16 v3, p2
+
+    move-object/from16 v4, p3
+
+    move/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move/from16 v7, p6
+
+    move/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    move-wide/from16 v12, p9
+
+    move-object/from16 v14, p11
+
+    move/from16 v15, p12
+
+    move-object/from16 v16, p13
+
+    move-object/from16 v17, p14
+
+    invoke-direct/range {v1 .. v18}, Landroid/telecom/Call$Details;-><init>(Landroid/net/Uri;ILjava/lang/String;ILandroid/telecom/PhoneAccountHandle;IILandroid/telecom/DisconnectCause;JJLandroid/telecom/GatewayInfo;ILandroid/telecom/StatusHints;Landroid/os/Bundle;I)V
+
+    return-void
+.end method
