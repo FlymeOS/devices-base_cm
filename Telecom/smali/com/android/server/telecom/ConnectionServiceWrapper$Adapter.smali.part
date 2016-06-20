@@ -1,0 +1,27 @@
+.method public setCallProperties(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setPhoneAccountHandle(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setCallSubstate(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public setExtras(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
