@@ -1,0 +1,50 @@
+.method getVoiceMailNumberInternal(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 760
+    invoke-direct {p0, p1}, Lcom/android/server/telecom/TelecomService;->isVisibleToCaller(Landroid/telecom/PhoneAccountHandle;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 761
+    const-string v0, "%s is not visible for the calling user"
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->w(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 762
+    const/4 v0, 0x0
+
+    .line 766
+    :goto_0
+    return-object v0
+
+    .line 765
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/telecom/TelecomService;->mPhoneAccountRegistrar:Lcom/android/server/telecom/PhoneAccountRegistrar;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/PhoneAccountRegistrar;->getSubscriptionIdForPhoneAccount(Landroid/telecom/PhoneAccountHandle;)I
+
+    move-result v0
+
+    .line 766
+    invoke-direct {p0}, Lcom/android/server/telecom/TelecomService;->getTelephonyManager()Landroid/telephony/TelephonyManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/telephony/TelephonyManager;->getVoiceMailNumber(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method

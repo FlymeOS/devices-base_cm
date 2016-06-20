@@ -1,0 +1,36 @@
+.method public getVoiceMailNumber(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/telecom/TelecomService$TelecomServiceImpl;->this$0:Lcom/android/server/telecom/TelecomService;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/TelecomService;->getVoiceMailNumberInternal(Landroid/telecom/PhoneAccountHandle;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    throw v0
+.end method
+
+.method public getActiveSubscription()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public switchToOtherActiveSub(I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
