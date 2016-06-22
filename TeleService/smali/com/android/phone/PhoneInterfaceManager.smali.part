@@ -1,0 +1,766 @@
+.method public toggleLTE(Z)V
+    .locals 0
+    .param p1, "on"    # Z
+
+    .prologue
+    return-void
+.end method
+
+.method public isDataPossibleForSubscription(ILjava/lang/String;)Z
+    .locals 1
+    .param p1, "subId"    # I
+    .param p2, "apnType"    # Ljava/lang/String;
+
+    .prologue
+    .line 1257
+    invoke-direct {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Lcom/android/internal/telephony/Phone;->isOnDemandDataPossible(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getIccOperatorNumeric(I)Ljava/lang/String;
+    .locals 8
+    .param p1, "subId"    # I
+
+    .prologue
+    const/4 v7, -0x1
+
+    .line 1826
+    const/4 v1, 0x0
+
+    .line 1827
+    .local v1, "iccOperatorNumeric":Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getServiceState()Landroid/telephony/ServiceState;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/telephony/ServiceState;->getRilDataRadioTechnology()I
+
+    move-result v3
+
+    .line 1828
+    .local v3, "netType":I
+    invoke-static {v3}, Lcom/android/internal/telephony/uicc/UiccController;->getFamilyFromRadioTechnology(I)I
+
+    move-result v0
+
+    .line 1829
+    .local v0, "family":I
+    if-ne v7, v0, :cond_0
+
+    .line 1830
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->getActivePhoneTypeForSubscriber(I)I
+
+    move-result v4
+
+    .line 1831
+    .local v4, "phoneType":I
+    packed-switch v4, :pswitch_data_0
+
+    .line 1841
+    .end local v4    # "phoneType":I
+    :cond_0
+    :goto_0
+    if-eq v7, v0, :cond_1
+
+    .line 1842
+    iget-object v6, p0, Lcom/android/phone/PhoneInterfaceManager;->mSubscriptionController:Lcom/android/internal/telephony/SubscriptionController;
+
+    invoke-virtual {v6, p1}, Lcom/android/internal/telephony/SubscriptionController;->getPhoneId(I)I
+
+    move-result v5
+
+    .line 1843
+    .local v5, "slotId":I
+    invoke-static {}, Lcom/android/internal/telephony/uicc/UiccController;->getInstance()Lcom/android/internal/telephony/uicc/UiccController;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v5, v0}, Lcom/android/internal/telephony/uicc/UiccController;->getIccRecords(II)Lcom/android/internal/telephony/uicc/IccRecords;
+
+    move-result-object v2
+
+    .line 1844
+    .local v2, "iccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
+    if-eqz v2, :cond_1
+
+    .line 1845
+    invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/IccRecords;->getOperatorNumeric()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1848
+    .end local v2    # "iccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
+    .end local v5    # "slotId":I
+    :cond_1
+    return-object v1
+
+    .line 1833
+    .restart local v4    # "phoneType":I
+    :pswitch_0
+    const/4 v0, 0x1
+
+    .line 1834
+    goto :goto_0
+
+    .line 1836
+    :pswitch_1
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 1831
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public getAllCellInfoUsingSubId(I)Ljava/util/List;
+    .locals 10
+    .param p1, "subId"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List",
+            "<",
+            "Landroid/telephony/CellInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 1380
+    :try_start_0
+    iget-object v7, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneGlobals;
+
+    const-string v8, "android.permission.ACCESS_FINE_LOCATION"
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v7, v8, v9}, Lcom/android/phone/PhoneGlobals;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1390
+    :goto_0
+    invoke-static {}, Lcom/android/phone/PhoneInterfaceManager;->checkIfCallerIsSelfOrForegroundUser()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    .line 1392
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1393
+    .local v2, "cellInfos":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getPhones()[Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    .local v0, "arr$":[Lcom/android/internal/telephony/Phone;
+    array-length v5, v0
+
+    .local v5, "len$":I
+    const/4 v4, 0x0
+
+    .local v4, "i$":I
+    :goto_1
+    if-ge v4, v5, :cond_1
+
+    aget-object v6, v0, v4
+
+    .line 1394
+    .local v6, "phone":Lcom/android/internal/telephony/Phone;
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getAllCellInfo()Ljava/util/List;
+
+    move-result-object v1
+
+    .line 1395
+    .local v1, "cellInfo":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    if-eqz v1, :cond_0
+
+    .line 1396
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getAllCellInfo()Ljava/util/List;
+
+    move-result-object v7
+
+    invoke-interface {v2, v7}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 1393
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    .line 1382
+    .end local v0    # "arr$":[Lcom/android/internal/telephony/Phone;
+    .end local v1    # "cellInfo":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    .end local v2    # "cellInfos":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
+    .end local v4    # "i$":I
+    .end local v5    # "len$":I
+    .end local v6    # "phone":Lcom/android/internal/telephony/Phone;
+    :catch_0
+    move-exception v3
+
+    .line 1386
+    .local v3, "e":Ljava/lang/SecurityException;
+    iget-object v7, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneGlobals;
+
+    const-string v8, "android.permission.ACCESS_COARSE_LOCATION"
+
+    invoke-virtual {v7, v8, v2}, Lcom/android/phone/PhoneGlobals;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 1402
+    .end local v3    # "e":Ljava/lang/SecurityException;
+    :cond_1
+    return-object v2
+.end method
+
+.method public getLteOnGsmMode()I
+    .locals 1
+
+    .prologue
+    .line 2429
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getLteOnGsmMode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public addProtectedSmsAddress(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "address"    # Ljava/lang/String;
+
+    .prologue
+    return-void
+.end method
+
+.method public revokeProtectedSmsAddress(Ljava/lang/String;)Z
+    .locals 1
+    .param p1, "address"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public iccOpenLogicalChannelUsingSubId(ILjava/lang/String;)Landroid/telephony/IccOpenLogicalChannelResponse;
+    .locals 3
+    .param p1, "subId"    # I
+    .param p2, "AID"    # Ljava/lang/String;
+
+    .prologue
+    .line 1872
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermissionOrCarrierPrivilege()V
+
+    .line 1875
+    const/16 v1, 0x9
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v1, p2, v2}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/IccOpenLogicalChannelResponse;
+
+    .line 1878
+    .local v0, "response":Landroid/telephony/IccOpenLogicalChannelResponse;
+    return-object v0
+.end method
+
+.method public iccCloseLogicalChannelUsingSubId(II)Z
+    .locals 4
+    .param p1, "subId"    # I
+    .param p2, "channel"    # I
+
+    .prologue
+    .line 1888
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermissionOrCarrierPrivilege()V
+
+    .line 1891
+    if-gez p2, :cond_0
+
+    .line 1892
+    const/4 v1, 0x0
+
+    .line 1896
+    :goto_0
+    return v1
+
+    .line 1894
+    :cond_0
+    const/16 v1, 0xb
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    .line 1896
+    .local v0, "success":Ljava/lang/Boolean;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    goto :goto_0
+.end method
+
+.method public iccTransmitApduLogicalChannelUsingSubId(IIIIIIILjava/lang/String;)Ljava/lang/String;
+    .locals 11
+    .param p1, "subId"    # I
+    .param p2, "channel"    # I
+    .param p3, "cla"    # I
+    .param p4, "command"    # I
+    .param p5, "p1"    # I
+    .param p6, "p2"    # I
+    .param p7, "p3"    # I
+    .param p8, "data"    # Ljava/lang/String;
+
+    .prologue
+    .line 1909
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermissionOrCarrierPrivilege()V
+
+    .line 1917
+    if-gez p2, :cond_1
+
+    .line 1918
+    const-string v9, ""
+
+    .line 1931
+    :cond_0
+    :goto_0
+    return-object v9
+
+    .line 1921
+    :cond_1
+    const/4 v10, 0x7
+
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;
+
+    move v1, p2
+
+    move v2, p3
+
+    move v3, p4
+
+    move/from16 v4, p5
+
+    move/from16 v5, p6
+
+    move/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    invoke-direct/range {v0 .. v7}, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;-><init>(IIIIIILjava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v10, v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lcom/android/internal/telephony/uicc/IccIoResult;
+
+    .line 1926
+    .local v8, "response":Lcom/android/internal/telephony/uicc/IccIoResult;
+    iget v0, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->sw1:I
+
+    shl-int/lit8 v0, v0, 0x8
+
+    iget v1, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->sw2:I
+
+    add-int/2addr v0, v1
+
+    const/high16 v1, 0x10000
+
+    add-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 1928
+    .local v9, "s":Ljava/lang/String;
+    iget-object v0, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    if-eqz v0, :cond_0
+
+    .line 1929
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    invoke-static {v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bytesToHexString([B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    goto :goto_0
+.end method
+
+.method public iccTransmitApduBasicChannelUsingSubId(IIIIIILjava/lang/String;)Ljava/lang/String;
+    .locals 11
+    .param p1, "subId"    # I
+    .param p2, "cla"    # I
+    .param p3, "command"    # I
+    .param p4, "p1"    # I
+    .param p5, "p2"    # I
+    .param p6, "p3"    # I
+    .param p7, "data"    # Ljava/lang/String;
+
+    .prologue
+    .line 1944
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermissionOrCarrierPrivilege()V
+
+    .line 1951
+    const/16 v10, 0x1d
+
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;
+
+    const/4 v1, 0x0
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move/from16 v5, p5
+
+    move/from16 v6, p6
+
+    move-object/from16 v7, p7
+
+    invoke-direct/range {v0 .. v7}, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;-><init>(IIIIIILjava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v10, v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lcom/android/internal/telephony/uicc/IccIoResult;
+
+    .line 1956
+    .local v8, "response":Lcom/android/internal/telephony/uicc/IccIoResult;
+    iget v0, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->sw1:I
+
+    shl-int/lit8 v0, v0, 0x8
+
+    iget v1, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->sw2:I
+
+    add-int/2addr v0, v1
+
+    const/high16 v1, 0x10000
+
+    add-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 1958
+    .local v9, "s":Ljava/lang/String;
+    iget-object v0, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    if-eqz v0, :cond_0
+
+    .line 1959
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, v8, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    invoke-static {v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bytesToHexString([B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 1961
+    :cond_0
+    return-object v9
+.end method
+
+.method public iccExchangeSimIOUsingSubId(IIIIIILjava/lang/String;)[B
+    .locals 12
+    .param p1, "subId"    # I
+    .param p2, "fileID"    # I
+    .param p3, "command"    # I
+    .param p4, "p1"    # I
+    .param p5, "p2"    # I
+    .param p6, "p3"    # I
+    .param p7, "filePath"    # Ljava/lang/String;
+
+    .prologue
+    .line 1974
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermissionOrCarrierPrivilege()V
+
+    .line 1981
+    const/16 v11, 0x1f
+
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;
+
+    const/4 v1, -0x1
+
+    move v2, p2
+
+    move v3, p3
+
+    move/from16 v4, p4
+
+    move/from16 v5, p5
+
+    move/from16 v6, p6
+
+    move-object/from16 v7, p7
+
+    invoke-direct/range {v0 .. v7}, Lcom/android/phone/PhoneInterfaceManager$IccAPDUArgument;-><init>(IIIIIILjava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v11, v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/android/internal/telephony/uicc/IccIoResult;
+
+    .line 1989
+    .local v9, "response":Lcom/android/internal/telephony/uicc/IccIoResult;
+    const/4 v10, 0x0
+
+    .line 1990
+    .local v10, "result":[B
+    const/4 v8, 0x2
+
+    .line 1991
+    .local v8, "length":I
+    iget-object v0, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    if-eqz v0, :cond_0
+
+    .line 1992
+    iget-object v0, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    array-length v0, v0
+
+    add-int/lit8 v8, v0, 0x2
+
+    .line 1993
+    new-array v10, v8, [B
+
+    .line 1994
+    iget-object v0, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    iget-object v3, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
+
+    array-length v3, v3
+
+    invoke-static {v0, v1, v10, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
+
+    .line 1999
+    :goto_0
+    add-int/lit8 v0, v8, -0x1
+
+    iget v1, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->sw2:I
+
+    int-to-byte v1, v1
+
+    aput-byte v1, v10, v0
+
+    .line 2000
+    add-int/lit8 v0, v8, -0x2
+
+    iget v1, v9, Lcom/android/internal/telephony/uicc/IccIoResult;->sw1:I
+
+    int-to-byte v1, v1
+
+    aput-byte v1, v10, v0
+
+    .line 2001
+    return-object v10
+
+    .line 1996
+    :cond_0
+    new-array v10, v8, [B
+
+    goto :goto_0
+.end method
+
+.method public getAtr()[B
+    .locals 1
+
+    .prologue
+    .line 2370
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->getDefaultSubscription()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getAtrUsingSubId(I)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getAtrUsingSubId(I)[B
+    .locals 6
+    .param p1, "subId"    # I
+
+    .prologue
+    .line 2375
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v3
+
+    const/16 v4, 0x403
+
+    if-eq v3, v4, :cond_0
+
+    .line 2376
+    new-instance v3, Ljava/lang/SecurityException;
+
+    const-string v4, "Only Smartcard API may access UICC"
+
+    invoke-direct {v3, v4}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v3
+
+    .line 2378
+    :cond_0
+    const/16 v3, 0x21
+
+    const/4 v4, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 2380
+    .local v1, "response":Ljava/lang/String;
+    const/4 v2, 0x0
+
+    .line 2381
+    .local v2, "result":[B
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 2383
+    :try_start_0
+    invoke-static {v1}, Lcom/android/internal/telephony/uicc/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    .line 2388
+    :cond_1
+    :goto_0
+    return-object v2
+
+    .line 2384
+    :catch_0
+    move-exception v0
+
+    .line 2385
+    .local v0, "re":Ljava/lang/RuntimeException;
+    const-string v3, "PhoneInterfaceManager"
+
+    const-string v4, "Invalid format of the response string"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
