@@ -2607,7 +2607,7 @@
     .line 663
     .local v4, "_arg2":Z
     :goto_20
-    invoke-virtual {p0, v2, v3, v4}, Landroid/view/IWindowManager$Stub;->keyguardGoingAway(ZZZ)V
+    invoke-virtual {p0, v2, v3}, Landroid/view/IWindowManager$Stub;->keyguardGoingAway(ZZ)V
 
     .line 664
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
