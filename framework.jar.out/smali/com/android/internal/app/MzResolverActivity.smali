@@ -175,9 +175,9 @@
 
     .line 654
     .local v1, "ft":Landroid/app/FragmentTransaction;
-    const/high16 v2, 0x10b0000
+    const/high16 v2, #android:animator@fade_in#i
 
-    const v3, 0x10b0001
+    const v3, #android:animator@fade_out#t
 
     invoke-virtual {v1, v2, v3}, Landroid/app/FragmentTransaction;->setCustomAnimations(II)Landroid/app/FragmentTransaction;
 
@@ -698,7 +698,7 @@
 .end method
 
 .method private resortResolveInfos(Ljava/util/List;)Ljava/util/List;
-    .locals 32
+    .locals 34
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -726,453 +726,470 @@
 
     .restart local p1    # "resolves":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_1
-    const-string v5, "com.android.email"
+    const-string v6, "com.android.email"
 
-    .local v5, "EMAIL":Ljava/lang/String;
-    const-string v8, "com.android.mms"
+    .local v6, "EMAIL":Ljava/lang/String;
+    const-string v9, "com.android.mms"
 
-    .local v8, "MMS":Ljava/lang/String;
+    .local v9, "MMS":Ljava/lang/String;
+    const-string v5, "com.android.bluetooth"
+
+    .local v5, "BT_OPP":Ljava/lang/String;
     const-string v4, "com.meizu.share"
 
     .local v4, "BT":Ljava/lang/String;
-    const-string v10, "com.meizu.notepaper"
+    const-string v11, "com.meizu.notepaper"
 
-    .local v10, "NOTEPAPER":Ljava/lang/String;
-    const-string v12, "com.tencent.mm"
+    .local v11, "NOTEPAPER":Ljava/lang/String;
+    const-string v13, "com.tencent.mm"
 
-    .local v12, "WECHAT":Ljava/lang/String;
-    const-string v13, "com.sina.weibo"
+    .local v13, "WECHAT":Ljava/lang/String;
+    const-string v14, "com.sina.weibo"
 
-    .local v13, "WEIBO":Ljava/lang/String;
-    const-string v6, "com.meizu.flyme.flymebbs"
+    .local v14, "WEIBO":Ljava/lang/String;
+    const-string v7, "com.meizu.flyme.flymebbs"
 
-    .local v6, "FLYMEBBS":Ljava/lang/String;
-    const-string v7, "com.meizu.media.gallery"
+    .local v7, "FLYMEBBS":Ljava/lang/String;
+    const-string v8, "com.meizu.media.gallery"
 
-    .local v7, "GALLERY":Ljava/lang/String;
-    const-string v9, "com.meizu.media.music"
+    .local v8, "GALLERY":Ljava/lang/String;
+    const-string v10, "com.meizu.media.music"
 
-    .local v9, "MUSIC":Ljava/lang/String;
-    const-string v11, "com.meizu.media.video"
+    .local v10, "MUSIC":Ljava/lang/String;
+    const-string v12, "com.meizu.media.video"
 
-    .local v11, "VIDEO":Ljava/lang/String;
+    .local v12, "VIDEO":Ljava/lang/String;
     const-string v3, "com.android.browser"
 
     .local v3, "BROWSER":Ljava/lang/String;
-    const/16 v17, 0x0
-
-    .local v17, "email":Landroid/content/pm/ResolveInfo;
-    const/16 v21, 0x0
-
-    .local v21, "mms":Landroid/content/pm/ResolveInfo;
-    const/4 v15, 0x0
-
-    .local v15, "bt":Landroid/content/pm/ResolveInfo;
-    const/16 v23, 0x0
-
-    .local v23, "notepaper":Landroid/content/pm/ResolveInfo;
     const/16 v19, 0x0
 
-    .local v19, "gallery":Landroid/content/pm/ResolveInfo;
-    const/16 v22, 0x0
+    .local v19, "email":Landroid/content/pm/ResolveInfo;
+    const/16 v23, 0x0
 
-    .local v22, "music":Landroid/content/pm/ResolveInfo;
-    const/16 v26, 0x0
+    .local v23, "mms":Landroid/content/pm/ResolveInfo;
+    const/16 v16, 0x0
 
-    .local v26, "video":Landroid/content/pm/ResolveInfo;
-    const/4 v14, 0x0
+    .local v16, "bt":Landroid/content/pm/ResolveInfo;
+    const/16 v17, 0x0
 
-    .local v14, "browser":Landroid/content/pm/ResolveInfo;
+    .local v17, "bt_opp":Landroid/content/pm/ResolveInfo;
+    const/16 v25, 0x0
+
+    .local v25, "notepaper":Landroid/content/pm/ResolveInfo;
+    const/16 v21, 0x0
+
+    .local v21, "gallery":Landroid/content/pm/ResolveInfo;
+    const/16 v24, 0x0
+
+    .local v24, "music":Landroid/content/pm/ResolveInfo;
     const/16 v28, 0x0
 
-    .local v28, "weChatMoments":Landroid/content/pm/ResolveInfo;
-    const/16 v27, 0x0
+    .local v28, "video":Landroid/content/pm/ResolveInfo;
+    const/4 v15, 0x0
 
-    .local v27, "weChatFriend":Landroid/content/pm/ResolveInfo;
+    .local v15, "browser":Landroid/content/pm/ResolveInfo;
+    const/16 v30, 0x0
+
+    .local v30, "weChatMoments":Landroid/content/pm/ResolveInfo;
     const/16 v29, 0x0
 
-    .local v29, "weibo":Landroid/content/pm/ResolveInfo;
-    const/16 v18, 0x0
+    .local v29, "weChatFriend":Landroid/content/pm/ResolveInfo;
+    const/16 v31, 0x0
 
-    .local v18, "flymebbs":Landroid/content/pm/ResolveInfo;
+    .local v31, "weibo":Landroid/content/pm/ResolveInfo;
+    const/16 v20, 0x0
+
+    .local v20, "flymebbs":Landroid/content/pm/ResolveInfo;
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v20
+    move-result-object v22
 
-    .local v20, "i$":Ljava/util/Iterator;
+    .local v22, "i$":Ljava/util/Iterator;
     :cond_2
     :goto_1
-    invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_f
+    if-eqz v32, :cond_10
 
-    invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v25
+    move-result-object v27
 
-    check-cast v25, Landroid/content/pm/ResolveInfo;
+    check-cast v27, Landroid/content/pm/ResolveInfo;
 
-    .local v25, "resolve":Landroid/content/pm/ResolveInfo;
-    move-object/from16 v0, v25
-
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    move-object/from16 v30, v0
-
-    if-eqz v30, :cond_3
-
-    move-object/from16 v0, v25
+    .local v27, "resolve":Landroid/content/pm/ResolveInfo;
+    move-object/from16 v0, v27
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    move-object/from16 v16, v0
+    move-object/from16 v32, v0
 
-    .local v16, "ci":Landroid/content/pm/ComponentInfo;
+    if-eqz v32, :cond_3
+
+    move-object/from16 v0, v27
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    move-object/from16 v18, v0
+
+    .local v18, "ci":Landroid/content/pm/ComponentInfo;
     :goto_2
-    move-object/from16 v0, v16
+    move-object/from16 v0, v18
 
     iget-object v0, v0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    move-object/from16 v24, v0
+    move-object/from16 v26, v0
 
-    .local v24, "pkg":Ljava/lang/String;
-    const-string v30, "com.android.email"
+    .local v26, "pkg":Ljava/lang/String;
+    const-string v32, "com.android.email"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_4
+    if-eqz v32, :cond_4
 
-    move-object/from16 v17, v25
+    move-object/from16 v19, v27
 
     goto :goto_1
 
-    .end local v16    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v24    # "pkg":Ljava/lang/String;
+    .end local v18    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v26    # "pkg":Ljava/lang/String;
     :cond_3
-    move-object/from16 v0, v25
+    move-object/from16 v0, v27
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    move-object/from16 v16, v0
+    move-object/from16 v18, v0
 
     goto :goto_2
 
-    .restart local v16    # "ci":Landroid/content/pm/ComponentInfo;
-    .restart local v24    # "pkg":Ljava/lang/String;
+    .restart local v18    # "ci":Landroid/content/pm/ComponentInfo;
+    .restart local v26    # "pkg":Ljava/lang/String;
     :cond_4
-    const-string v30, "com.android.mms"
+    const-string v32, "com.android.mms"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_5
+    if-eqz v32, :cond_5
 
-    move-object/from16 v21, v25
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v32, v0
+
+    const-string v33, "com.android.mms.ui.ComposeMessageActivity"
+
+    invoke-virtual/range {v32 .. v33}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v32
+
+    if-eqz v32, :cond_5
+
+    move-object/from16 v23, v27
 
     goto :goto_1
 
     :cond_5
-    const-string v30, "com.meizu.share"
+    const-string v32, "com.android.bluetooth"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_6
+    if-eqz v32, :cond_6
 
-    move-object/from16 v0, v16
+    move-object/from16 v0, v18
 
     iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
 
-    move-object/from16 v30, v0
+    move-object/from16 v32, v0
 
-    const-string v31, "com.meizu.share.BluetoothOppLauncherActivity"
+    const-string v33, "com.android.bluetooth.opp.BluetoothOppLauncherActivity"
 
-    invoke-virtual/range {v30 .. v31}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual/range {v32 .. v33}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_6
+    if-eqz v32, :cond_6
 
-    move-object/from16 v15, v25
+    move-object/from16 v17, v27
 
     goto :goto_1
 
     :cond_6
-    const-string v30, "com.meizu.notepaper"
+    const-string v32, "com.meizu.share"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_7
+    if-eqz v32, :cond_7
 
-    move-object/from16 v23, v25
+    move-object/from16 v0, v18
 
-    goto :goto_1
+    iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v32, v0
+
+    const-string v33, "com.meizu.share.BluetoothOppLauncherActivity"
+
+    invoke-virtual/range {v32 .. v33}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v32
+
+    if-eqz v32, :cond_7
+
+    move-object/from16 v16, v27
+
+    goto/16 :goto_1
 
     :cond_7
-    const-string v30, "com.meizu.media.music"
+    const-string v32, "com.meizu.notepaper"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_8
+    if-eqz v32, :cond_8
 
-    move-object/from16 v22, v25
+    move-object/from16 v25, v27
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_8
-    const-string v30, "com.meizu.media.video"
+    const-string v32, "com.meizu.media.music"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_9
+    if-eqz v32, :cond_9
 
-    move-object/from16 v26, v25
+    move-object/from16 v24, v27
 
     goto/16 :goto_1
 
     :cond_9
-    const-string v30, "com.meizu.media.gallery"
+    const-string v32, "com.meizu.media.video"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_a
+    if-eqz v32, :cond_a
 
-    move-object/from16 v19, v25
+    move-object/from16 v28, v27
 
     goto/16 :goto_1
 
     :cond_a
-    const-string v30, "com.android.browser"
+    const-string v32, "com.meizu.media.gallery"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_b
+    if-eqz v32, :cond_b
 
-    move-object/from16 v14, v25
+    move-object/from16 v21, v27
 
     goto/16 :goto_1
 
     :cond_b
-    const-string v30, "com.tencent.mm"
+    const-string v32, "com.android.browser"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_c
+    if-eqz v32, :cond_c
 
-    move-object/from16 v0, v16
-
-    iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
-
-    move-object/from16 v30, v0
-
-    const-string v31, "com.tencent.mm.ui.tools.ShareToTimeLineUI"
-
-    invoke-virtual/range {v30 .. v31}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v30
-
-    if-eqz v30, :cond_c
-
-    move-object/from16 v28, v25
+    move-object/from16 v15, v27
 
     goto/16 :goto_1
 
     :cond_c
-    const-string v30, "com.tencent.mm"
+    const-string v32, "com.tencent.mm"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_d
+    if-eqz v32, :cond_d
 
-    move-object/from16 v0, v16
+    move-object/from16 v0, v18
 
     iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
 
-    move-object/from16 v30, v0
+    move-object/from16 v32, v0
 
-    const-string v31, "com.tencent.mm.ui.tools.ShareImgUI"
+    const-string v33, "com.tencent.mm.ui.tools.ShareToTimeLineUI"
 
-    invoke-virtual/range {v30 .. v31}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual/range {v32 .. v33}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_d
+    if-eqz v32, :cond_d
 
-    move-object/from16 v27, v25
+    move-object/from16 v30, v27
 
     goto/16 :goto_1
 
     :cond_d
-    const-string v30, "com.sina.weibo"
+    const-string v32, "com.tencent.mm"
 
-    move-object/from16 v0, v30
+    move-object/from16 v0, v32
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v30
+    move-result v32
 
-    if-eqz v30, :cond_e
+    if-eqz v32, :cond_e
 
-    move-object/from16 v29, v25
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v32, v0
+
+    const-string v33, "com.tencent.mm.ui.tools.ShareImgUI"
+
+    invoke-virtual/range {v32 .. v33}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v32
+
+    if-eqz v32, :cond_e
+
+    move-object/from16 v29, v27
 
     goto/16 :goto_1
 
     :cond_e
-    const-string v30, "com.meizu.flyme.flymebbs"
+    const-string v32, "com.sina.weibo"
 
-    move-object/from16 v0, v30
-
-    move-object/from16 v1, v24
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v30
-
-    if-eqz v30, :cond_2
-
-    move-object/from16 v18, v25
-
-    goto/16 :goto_1
-
-    .end local v16    # "ci":Landroid/content/pm/ComponentInfo;
-    .end local v24    # "pkg":Ljava/lang/String;
-    .end local v25    # "resolve":Landroid/content/pm/ResolveInfo;
-    :cond_f
-    if-eqz v22, :cond_10
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v22
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    const/16 v30, 0x0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v30
-
-    move-object/from16 v2, v22
-
-    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    :cond_10
-    if-eqz v26, :cond_11
-
-    move-object/from16 v0, p1
+    move-object/from16 v0, v32
 
     move-object/from16 v1, v26
 
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    move-result v32
+
+    if-eqz v32, :cond_f
+
+    move-object/from16 v31, v27
+
+    goto/16 :goto_1
+
+    :cond_f
+    const-string v32, "com.meizu.flyme.flymebbs"
+
+    move-object/from16 v0, v32
+
+    move-object/from16 v1, v26
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v32
+
+    if-eqz v32, :cond_2
+
+    move-object/from16 v20, v27
+
+    goto/16 :goto_1
+
+    .end local v18    # "ci":Landroid/content/pm/ComponentInfo;
+    .end local v26    # "pkg":Ljava/lang/String;
+    .end local v27    # "resolve":Landroid/content/pm/ResolveInfo;
+    :cond_10
+    if-eqz v24, :cond_11
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move-object/from16 v1, v24
 
-    move-object/from16 v2, v26
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    move-object/from16 v2, v24
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_11
-    if-eqz v19, :cond_12
+    if-eqz v28, :cond_12
 
     move-object/from16 v0, p1
 
-    move-object/from16 v1, v19
+    move-object/from16 v1, v28
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
-    move-object/from16 v2, v19
+    move-object/from16 v2, v28
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_12
-    if-eqz v14, :cond_13
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v14}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    const/16 v30, 0x0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v30
-
-    invoke-interface {v0, v1, v14}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    :cond_13
-    if-eqz v21, :cond_14
+    if-eqz v21, :cond_13
 
     move-object/from16 v0, p1
 
@@ -1180,15 +1197,30 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
     move-object/from16 v2, v21
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_13
+    if-eqz v15, :cond_14
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v15}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    invoke-interface {v0, v1, v15}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_14
     if-eqz v23, :cond_15
@@ -1199,30 +1231,34 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
     move-object/from16 v2, v23
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_15
-    if-eqz v15, :cond_16
+    if-eqz v25, :cond_16
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v15}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    move-object/from16 v1, v25
 
-    const/16 v30, 0x0
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
-    invoke-interface {v0, v1, v15}, Ljava/util/List;->add(ILjava/lang/Object;)V
+    move-object/from16 v2, v25
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_16
     if-eqz v17, :cond_17
@@ -1233,37 +1269,113 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
     move-object/from16 v2, v17
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_17
-    if-eqz v18, :cond_18
+    if-eqz v16, :cond_18
 
     move-object/from16 v0, p1
 
-    move-object/from16 v1, v18
+    move-object/from16 v1, v16
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v16
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_18
-    if-eqz v29, :cond_19
+    if-eqz v19, :cond_19
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v19
+
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    move-object/from16 v2, v19
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_19
+    if-eqz v20, :cond_1a
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v20
+
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    move-object/from16 v2, v20
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1a
+    if-eqz v31, :cond_1b
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v31
+
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    move-object/from16 v2, v31
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1b
+    if-eqz v30, :cond_1c
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v30
+
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/16 v32, 0x0
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v32
+
+    move-object/from16 v2, v30
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1c
+    if-eqz v29, :cond_0
 
     move-object/from16 v0, p1
 
@@ -1271,51 +1383,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    const/16 v30, 0x0
+    const/16 v32, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v30
+    move/from16 v1, v32
 
     move-object/from16 v2, v29
-
-    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    :cond_19
-    if-eqz v28, :cond_1a
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v28
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    const/16 v30, 0x0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v30
-
-    move-object/from16 v2, v28
-
-    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    :cond_1a
-    if-eqz v27, :cond_0
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v27
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    const/16 v30, 0x0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v30
-
-    move-object/from16 v2, v27
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
