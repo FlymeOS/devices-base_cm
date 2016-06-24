@@ -1,0 +1,133 @@
+.method public isShowing()Z
+    .locals 1
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    # getter for: Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService;->access$000(Lcom/android/systemui/keyguard/KeyguardService;)Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isShowing()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isSecure()Z
+    .locals 1
+
+    .prologue
+    .line 80
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    # getter for: Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService;->access$000(Lcom/android/systemui/keyguard/KeyguardService;)Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isSecure()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isShowingAndNotOccluded()Z
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    # getter for: Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService;->access$000(Lcom/android/systemui/keyguard/KeyguardService;)Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isShowingAndNotOccluded()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isInputRestricted()Z
+    .locals 1
+
+    .prologue
+    .line 90
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    # getter for: Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService;->access$000(Lcom/android/systemui/keyguard/KeyguardService;)Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isInputRestricted()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isDismissable()Z
+    .locals 1
+
+    .prologue
+    .line 171
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    # getter for: Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService;->access$000(Lcom/android/systemui/keyguard/KeyguardService;)Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isDismissable()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setOccluded(Z)I
+    .locals 1
+    .param p1, "isOccluded"    # Z
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/keyguard/KeyguardService$1;->setOccluded(Z)V
+
+    return v0
+.end method
+
+.method public showAssistant()V
+    .locals 1
+
+    .prologue
+    .line 194
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    .line 195
+    return-void
+.end method
+
+.method public dispatch(Landroid/view/MotionEvent;)V
+    .locals 1
+    .param p1, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    .line 199
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    .line 200
+    return-void
+.end method
