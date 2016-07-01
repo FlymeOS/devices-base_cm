@@ -950,6 +950,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
+    move-object v0, p0
+
+    return-object v0
+
     .line 793
     const/4 v0, 0x0
 
