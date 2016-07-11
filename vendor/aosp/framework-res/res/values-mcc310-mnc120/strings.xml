@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="config_mms_user_agent_profile_url">http://gsm.lge.com/html/gsm/Nexus5-M20.xml</string>
-    <string name="roamingText0">Digital Roaming</string>
-    <string name="roamingText1">Sprint</string>
-    <string name="roamingText2">Digital Roaming</string>
-</resources>

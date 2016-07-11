@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<nine-patch android:src="@drawable/dialog_background_mtrl_mult" android:tint="?colorBackground" android:tintMode="multiply"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

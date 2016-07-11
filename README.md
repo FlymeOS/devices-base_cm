@@ -20,12 +20,6 @@
 
 当然也可以自行修改 *mainfest/default.xml* 将 *base_cm* 放在 *repo* 的下载列表里。
 
-为了解决中国的开发者访问 *<https://github.com/FlymeOS>* 过于缓慢的问题，增加了本项目的中国镜像地址： *<http://git.oschina.net/FlymeOS>*
-
-因此，中国的开发者可以使用下面的命令下载代码：
-
-	git clone https://git.oschina.net/FlymeOS/devices-base_cm.git --single-branch -b lollipop-5.1
-
 下载完成后建议对其重命名,  *cd* 到 *devices* 目录，输入：
 
 	mv ./devices-base_cm ./base_cm

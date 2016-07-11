@@ -1,7 +1,0 @@
-.method public addStateMonitorCallback(Lcom/android/internal/policy/IKeyguardStateCallback;)V
-    .locals 0
-    .param p1, "callback"    # Lcom/android/internal/policy/IKeyguardStateCallback;
-
-    .prologue
-    return-void
-.end method
