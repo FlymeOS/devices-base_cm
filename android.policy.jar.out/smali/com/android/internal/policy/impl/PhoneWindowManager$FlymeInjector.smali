@@ -328,7 +328,7 @@
     if-eqz v1, :cond_8
 
     .line 6649
-    const v1, 0x10a0011
+    const v1, #android:anim@app_starting_exit#t
 
     goto :goto_1
 

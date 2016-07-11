@@ -120,7 +120,7 @@
 
     move-result-object v1
 
-    const v2, 0x1010309
+    const v2, #android:attr@alertDialogTheme#t
 
     const/4 v3, 0x1
 

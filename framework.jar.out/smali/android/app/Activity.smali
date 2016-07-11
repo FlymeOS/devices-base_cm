@@ -9339,7 +9339,9 @@
 
     if-eqz v0, :cond_flyme_0
 
-    invoke-static/range {p1 .. p1}, Landroid/app/Activity$FlymeInjector;->startActivity(Landroid/content/Intent;)V
+    invoke-static/range {p0 .. p2}, Landroid/app/Activity$FlymeInjector;->startActivity(Landroid/app/Activity;Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    return-void
 
     :cond_flyme_0
 

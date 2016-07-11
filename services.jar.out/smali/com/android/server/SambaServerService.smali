@@ -778,7 +778,7 @@
 
     .line 321
     .local v2, "contentView":Landroid/widget/RemoteViews;
-    const v14, 0x1020006
+    const v14, #android:id@icon#t
 
     invoke-virtual {v2, v14, v6}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
@@ -906,7 +906,7 @@
 
     iget-object v14, v14, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v15, 0x1020016
+    const v15, #android:id@title#t
 
     invoke-virtual {v14, v15, v13}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 

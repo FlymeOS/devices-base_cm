@@ -113,7 +113,7 @@
 
     .line 370
     :goto_0
-    const v5, 0x1020006
+    const v5, #android:id@icon#t
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     .line 371
     .restart local v1    # "imageView":Landroid/widget/ImageView;
-    const v5, 0x1020014
+    const v5, #android:id@text1#t
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

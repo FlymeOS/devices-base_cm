@@ -67,7 +67,7 @@
     :try_start_0
     iget-object v5, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
 
-    const v6, 0x102000b
+    const v6, #android:id@message#t
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

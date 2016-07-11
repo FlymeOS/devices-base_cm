@@ -1150,7 +1150,7 @@
     .local v4, "states":[[I
     new-array v5, v8, [I
 
-    const v6, 0x101009e
+    const v6, #android:attr@state_enabled#t
 
     aput v6, v5, v7
 
@@ -1878,7 +1878,7 @@
 
     iget-object v13, v0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
-    const v14, 0x102000b
+    const v14, #android:id@message#t
 
     invoke-virtual {v13, v14}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -1934,7 +1934,7 @@
 
     sget-object v15, Landroid/R$styleable;->Theme:[I
 
-    const v16, 0x101005b
+    const v16, #android:attr@windowTitleStyle#t
 
     const/16 v17, 0x0
 
@@ -2580,7 +2580,7 @@
     .line 925
     iget-object v1, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
-    const v4, 0x1020006
+    const v4, #android:id@icon#t
 
     invoke-virtual {v1, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -2721,7 +2721,7 @@
 
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mContext:Landroid/content/Context;
 
-    const v3, 0x10301b3
+    const v3, #android:style@TextAppearance.DeviceDefault.Small#t
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -4185,7 +4185,7 @@
     .line 756
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
-    const v1, 0x102002e
+    const v1, #android:id@mask#t
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 

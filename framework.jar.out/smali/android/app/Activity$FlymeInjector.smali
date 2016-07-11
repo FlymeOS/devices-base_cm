@@ -2812,83 +2812,6 @@
     return-void
 .end method
 
-.method static startActivity(Landroid/content/Intent;)V
-    .locals 6
-    .param p0, "intent"    # Landroid/content/Intent;
-
-    .prologue
-    .line 6864
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 6865
-    .local v2, "packageName":Ljava/lang/String;
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 6866
-    .local v0, "className":Ljava/lang/String;
-    new-instance v1, Landroid/content/ComponentName;
-
-    const-string v4, "android"
-
-    const-string v5, "com.meizu.app.AccessApplication"
-
-    invoke-direct {v1, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 6867
-    .local v1, "newComponentName":Landroid/content/ComponentName;
-    invoke-virtual {p0}, Landroid/content/Intent;->getFlags()I
-
-    move-result v3
-
-    .line 6868
-    .local v3, "srcIntentFlag":I
-    iget-object v4, p0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
-
-    invoke-virtual {v4, v3}, Landroid/content/IntentExt;->setAccessSrcFlags(I)V
-
-    .line 6869
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    .line 6870
-    iget-object v4, p0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
-
-    const/high16 v5, 0x40000
-
-    invoke-virtual {v4, v5}, Landroid/content/IntentExt;->addMeizuFlags(I)V
-
-    .line 6871
-    const-string v4, "fromlauncher"
-
-    const/4 v5, 0x1
-
-    invoke-virtual {p0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 6872
-    const-string v4, "accesspkg"
-
-    invoke-virtual {p0, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 6873
-    const-string v4, "accesscls"
-
-    invoke-virtual {p0, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 6874
-    return-void
-.end method
-
 .method static startFlymeAccessControlManager(Landroid/app/Activity;)V
     .locals 10
     .param p0, "activity"    # Landroid/app/Activity;
@@ -2898,12 +2821,11 @@
 
     const/4 v6, 0x0
 
-    .line 6413
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
-    const-string/jumbo v8, "mz_app_lock_control"
+    const-string v8, "mz_app_lock_control"
 
     const/4 v9, -0x3
 
@@ -2911,26 +2833,21 @@
 
     move-result v0
 
-    .line 6415
     .local v0, "appAccessControl":I
     if-nez v0, :cond_1
 
-    .line 6447
     :cond_0
     :goto_0
     return-void
 
-    .line 6421
     :cond_1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 6422
     .local v2, "intent":Landroid/content/Intent;
     if-eqz v2, :cond_0
 
-    .line 6424
     :try_start_0
     iget-object v7, v2, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
 
@@ -2938,7 +2855,6 @@
 
     move-result v1
 
-    .line 6425
     .local v1, "flag":I
     and-int/lit8 v7, v1, 0x10
 
@@ -2946,14 +2862,12 @@
 
     move v4, v3
 
-    .line 6426
     .local v4, "isLockView":Z
     :goto_1
     and-int/lit8 v7, v1, 0x20
 
     if-eqz v7, :cond_5
 
-    .line 6427
     .local v3, "isFastStarting":Z
     :goto_2
     iget-object v6, p0, Landroid/app/Activity;->mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -2972,13 +2886,11 @@
 
     if-nez v3, :cond_0
 
-    .line 6429
     :cond_2
     iget-object v6, p0, Landroid/app/Activity;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
 
     if-nez v6, :cond_3
 
-    .line 6430
     const-string v6, "access_control"
 
     invoke-virtual {p0, v6}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2989,7 +2901,6 @@
 
     iput-object v6, p0, Landroid/app/Activity;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
 
-    .line 6432
     :cond_3
     iget-object v6, p0, Landroid/app/Activity;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
 
@@ -3003,14 +2914,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 6433
     new-instance v5, Landroid/content/Intent;
 
     const-string v6, "android.content.pm.CONFIRM_ACCESS_APPCATONS"
 
     invoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6434
     .local v5, "mAccessApp":Landroid/content/Intent;
     iget-object v6, v5, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
 
@@ -3020,7 +2929,6 @@
 
     invoke-virtual {v6, v7}, Landroid/content/IntentExt;->setAccessPackageName(Ljava/lang/String;)V
 
-    .line 6435
     iget-object v7, v5, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
 
     iget-object v6, p0, Landroid/app/Activity;->mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -3048,29 +2956,24 @@
 
     invoke-virtual {v7, v6}, Landroid/content/IntentExt;->setAccessPackageLabel(Ljava/lang/String;)V
 
-    .line 6438
     const/high16 v6, 0x10000000
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 6439
     const v6, 0x8000
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 6440
     iget-object v6, v5, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
 
     const/16 v7, 0x40
 
     invoke-virtual {v6, v7}, Landroid/content/IntentExt;->addMeizuFlags(I)V
 
-    .line 6441
     invoke-virtual {p0, v5}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 6444
     .end local v1    # "flag":I
     .end local v3    # "isFastStarting":Z
     .end local v4    # "isLockView":Z
@@ -3084,17 +2987,14 @@
     :cond_4
     move v4, v6
 
-    .line 6425
     goto :goto_1
 
     .restart local v4    # "isLockView":Z
     :cond_5
     move v3, v6
 
-    .line 6426
     goto :goto_2
 
-    .line 6435
     .restart local v3    # "isFastStarting":Z
     .restart local v5    # "mAccessApp":Landroid/content/Intent;
     :cond_6
@@ -3118,25 +3018,21 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 6400
     const-class v3, Landroid/app/Activity$FlymeInjector;
 
     monitor-enter v3
 
-    .line 6401
     :try_start_0
     sget v2, Landroid/app/Activity$FlymeInjector;->mStatusBarHeight:I
 
     if-nez v2, :cond_0
 
-    .line 6402
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 6403
     .local v0, "res":Landroid/content/res/Resources;
-    const-string/jumbo v2, "status_bar_height"
+    const-string v2, "status_bar_height"
 
     const-string v4, "dimen"
 
@@ -3146,18 +3042,15 @@
 
     move-result v1
 
-    .line 6404
     .local v1, "resourceId":I
     if-lez v1, :cond_0
 
-    .line 6405
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
     sput v2, Landroid/app/Activity$FlymeInjector;->mStatusBarHeight:I
 
-    .line 6406
     sget v2, Landroid/app/Activity$FlymeInjector;->mStatusBarHeight:I
 
     int-to-float v2, v2
@@ -3176,16 +3069,13 @@
 
     sput v2, Landroid/app/Activity$FlymeInjector;->mTopShift:I
 
-    .line 6409
     .end local v0    # "res":Landroid/content/res/Resources;
     .end local v1    # "resourceId":I
     :cond_0
     monitor-exit v3
 
-    .line 6410
     return-void
 
-    .line 6409
     :catchall_0
     move-exception v2
 
@@ -3194,4 +3084,84 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v2
+.end method
+
+.method static startActivity(Landroid/app/Activity;Landroid/content/Intent;Landroid/os/Bundle;)V
+    .locals 8
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "options"    # Landroid/os/Bundle;
+
+    .prologue
+    const/4 v7, -0x1
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    .local v3, "packageName":Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 6866
+    .local v0, "className":Ljava/lang/String;
+    new-instance v1, Landroid/content/ComponentName;
+
+    const-string v5, "android"
+
+    const-string v6, "com.meizu.app.AccessApplication"
+
+    invoke-direct {v1, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .local v1, "newComponentName":Landroid/content/ComponentName;
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    .local v2, "newIntent":Landroid/content/Intent;
+    invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
+
+    move-result v4
+
+    .local v4, "srcIntentFlag":I
+    iget-object v5, v2, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+
+    invoke-virtual {v5, v4}, Landroid/content/IntentExt;->setAccessSrcFlags(I)V
+
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    iget-object v5, v2, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+
+    const/high16 v6, 0x40000
+
+    invoke-virtual {v5, v6}, Landroid/content/IntentExt;->addMeizuFlags(I)V
+
+    const-string v5, "accesspkg"
+
+    invoke-virtual {v2, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v5, "accesscls"
+
+    invoke-virtual {v2, v5, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0, v2, v7, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, v2, v7}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
 .end method
