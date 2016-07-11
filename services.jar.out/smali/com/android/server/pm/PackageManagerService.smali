@@ -19430,12 +19430,6 @@
 
     if-eqz v5, :cond_1
 
-    invoke-static {p0, v0, p1, p2}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->removeActiveAdminX(Lcom/android/server/pm/PackageManagerService;Landroid/app/admin/IDevicePolicyManager;Ljava/lang/String;I)V
-
-    const/4 v3, 0x0
-
-    return v3
-
     .line 11754
     :cond_0
     :goto_0
@@ -19472,7 +19466,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_flyme_0
+    if-nez v5, :cond_0
 
     .line 11746
     add-int/lit8 v1, v1, 0x1
@@ -19506,15 +19500,6 @@
 
     .line 11754
     goto :goto_0
-
-    :cond_flyme_0
-    aget v5, v2, v1
-
-    invoke-static {p0, v0, p1, v5}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->removeActiveAdminX(Lcom/android/server/pm/PackageManagerService;Landroid/app/admin/IDevicePolicyManager;Ljava/lang/String;I)V
-
-    const/4 v3, 0x0
-
-    return v3
 .end method
 
 .method private static isPrivilegedApp(Landroid/content/pm/PackageParser$Package;)Z

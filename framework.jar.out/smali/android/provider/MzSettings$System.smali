@@ -67,6 +67,40 @@
 
 .field public static final KEYBOARD_EXIT_DIRECTLY:Ljava/lang/String; = "keyboard_exit_directly"
 
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND:Ljava/lang/String; = "second_screen_card_remind"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_CAMERA:Ljava/lang/String; = "second_screen_card_remind_camera"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_CLOCK:Ljava/lang/String; = "second_screen_card_remind_clock"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_COUNT_DOWN:Ljava/lang/String; = "second_screen_card_remind_count_down"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_INCOMING_CALL:Ljava/lang/String; = "second_screen_card_remind_incoming_call"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_WEATHER:Ljava/lang/String; = "second_screen_card_remind_weather"
+
+.field public static final KEY_SECOND_SCREEN_NOTIFICATION:Ljava/lang/String; = "second_screen_notification"
+
+.field public static final KEY_SECOND_SCREEN_NOTIFICATION_PREFIX:Ljava/lang/String; = "second_screen_notify_"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_AIRMODE:Ljava/lang/String; = "second_screen_screenoff_airmode"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_ANIM:Ljava/lang/String; = "second_screen_screenoff_anim"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_CHARGING:Ljava/lang/String; = "second_screen_screenoff_charging"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_DND:Ljava/lang/String; = "second_screen_screenoff_dnd"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_INPUT_TEXT:Ljava/lang/String; = "second_screen_screenoff_input_text"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_MUSIC:Ljava/lang/String; = "second_screen_screenoff_music"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_VOICE_ASSIS:Ljava/lang/String; = "second_screen_screenoff_voice_assis"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_WIRELESS:Ljava/lang/String; = "second_screen_screenoff_wireless"
+
+.field public static final KEY_SECOND_SCREEN_SWITCH:Ljava/lang/String; = "second_screen_switch"
+
 .field public static final KEY_SOUND:Ljava/lang/String; = "key_sound"
 
 .field public static final KEY_SOUNDS_ENABLED:Ljava/lang/String; = "key_sounds_enabled"
@@ -167,6 +201,8 @@
 
 .field public static final MZ_GUARD_MODE:Ljava/lang/String; = "mz_guard_mode"
 
+.field public static final MZ_HOLSTER_HALL_MODE:Ljava/lang/String; = "mz_holster_hall_mode"
+
 .field public static final MZ_HOME_KEY_TOUCH_BEHAVIOR:Ljava/lang/String; = "mz_home_key_touch_behavior"
 
 .field public static final MZ_INTELLIGENT_VOICE:Ljava/lang/String; = "mz_intelligent_voice"
@@ -176,6 +212,8 @@
 .field public static final MZ_INTELLIGENT_VOICE_HOME_WAKEUP:Ljava/lang/String; = "mz_intelligent_voice_home_wakeup"
 
 .field public static final MZ_KEYGUARD_PALM_REJECTION_ENABLED:Ljava/lang/String; = "keyguard_palm_rejection"
+
+.field public static final MZ_LARGE_LAUNCHER_ICON:Ljava/lang/String; = "flyme_boss_icon"
 
 .field public static final MZ_MTP_UNLOCKED:Ljava/lang/String; = "mz_mtp_unlocked"
 
