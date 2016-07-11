@@ -31,6 +31,8 @@
 
 .field public static final FLAG_ONLY_UPDATE_TICKER:I = 0x2000000
 
+.field public static final FLAG_SHOW_IN_KEYGUARD:I = 0x4000000
+
 .field public static final AUDIO_ATTRIBUTES_DEFAULT:Landroid/media/AudioAttributes;
 
 .field public static final CATEGORY_ALARM:Ljava/lang/String; = "alarm"

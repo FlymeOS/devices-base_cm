@@ -226,18 +226,18 @@
     .param p0, "absSeekBar"    # Landroid/widget/AbsSeekBar;
 
     .prologue
-    .line 966
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    .line 970
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    .line 973
+    .line 977
     :goto_0
     return-void
 
-    .line 969
+    .line 973
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldPaddingLeft()I
 
@@ -251,7 +251,7 @@
 
     .line 970
     .local v0, "delta":I
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -292,14 +292,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 922
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    .line 926
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
-    .line 924
+    .line 928
     invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getHeight()I
 
     move-result v5
@@ -310,8 +310,8 @@
 
     if-le v5, v6, :cond_2
 
-    .line 925
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    .line 929
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -366,7 +366,7 @@
 
     .line 935
     :cond_2
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -1162,15 +1162,15 @@
     .param p0, "absSeekBar"    # Landroid/widget/AbsSeekBar;
 
     .prologue
-    .line 908
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    .line 912
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 909
-    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+    .line 913
+    invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1182,7 +1182,7 @@
 
     iput v0, p0, Landroid/widget/AbsSeekBar;->mFlymeHalfThumbWidth:I
 
-    .line 911
+    .line 915
     :cond_0
     return-void
 .end method

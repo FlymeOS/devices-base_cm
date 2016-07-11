@@ -66,6 +66,10 @@
 
 .field mFlymeAppSetStatusBarColor:I
 
+.field mFlymeDecoViewDrawFirst:Z
+
+.field mFlymeDecoViewDrawFlag:Z
+
 .field mFlymeDecorViewPaddingTop:I
 
 .field mFlymeDensity:F
@@ -10765,21 +10769,26 @@
     .param p1, "on"    # Z
 
     .prologue
+    .line 6358
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
+    .line 6359
     .local v1, "win":Landroid/view/Window;
     invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v2
 
+    .line 6360
     .local v2, "winParams":Landroid/view/WindowManager$LayoutParams;
     const/high16 v0, 0x4000000
 
+    .line 6361
     .local v0, "bits":I
     if-eqz p1, :cond_0
 
+    .line 6362
     iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 v4, 0x4000000
@@ -10788,11 +10797,14 @@
 
     iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
+    .line 6366
     :goto_0
     invoke-virtual {v1, v2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
+    .line 6367
     return-void
 
+    .line 6364
     :cond_0
     iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -10810,7 +10822,7 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    invoke-static {p0, p1}, Landroid/app/Activity$FlymeInjector;->drawStatusBarBackground(Landroid/app/Activity;Landroid/graphics/Canvas;)V
+    invoke-static {p0}, Landroid/app/Activity$FlymeInjector;->drawStatusBarBackground(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -10819,6 +10831,7 @@
     .locals 1
 
     .prologue
+    .line 6382
     iget-object v0, p0, Landroid/app/Activity;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     return-object v0
@@ -10828,6 +10841,7 @@
     .locals 1
 
     .prologue
+    .line 6371
     iget-boolean v0, p0, Landroid/app/Activity;->mFlymeActionBarToTop:Z
 
     return v0
@@ -10838,6 +10852,7 @@
     .param p1, "color"    # I
 
     .prologue
+    .line 6332
     invoke-static {p0, p1}, Landroid/app/Activity$FlymeInjector;->onStatusBarColorChange(Landroid/app/Activity;I)I
 
     move-result v0
@@ -10850,10 +10865,13 @@
     .param p1, "actionBarToTop"    # Z
 
     .prologue
+    .line 6376
     iput-boolean p1, p0, Landroid/app/Activity;->mFlymeActionBarToTop:Z
 
+    .line 6377
     invoke-direct {p0, p1}, Landroid/app/Activity;->setTranslucentStatus(Z)V
 
+    .line 6378
     return-void
 .end method
 
@@ -10862,16 +10880,19 @@
     .param p1, "color"    # I
 
     .prologue
+    .line 6315
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setAutoStatusBarIcon(Z)V
 
+    .line 6316
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setStatusBarIconColor(I)V
 
+    .line 6317
     return-void
 .end method
 
@@ -10880,16 +10901,19 @@
     .param p1, "on"    # Z
 
     .prologue
+    .line 6309
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setAutoStatusBarIcon(Z)V
 
+    .line 6310
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setStatusBarDarkIcon(Z)V
 
+    .line 6311
     return-void
 .end method
 
@@ -10898,15 +10922,18 @@
     .param p1, "color"    # I
 
     .prologue
+    .line 6321
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setAutoStatusBarIcon(Z)V
 
+    .line 6322
     iget-object v0, p0, Landroid/app/Activity;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setStatusBarIconColor(I)V
 
+    .line 6323
     return-void
 .end method

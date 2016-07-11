@@ -2590,3 +2590,12 @@
     :cond_0
     return-void
 .end method
+
+.method flymeGetFieldThumb()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/AbsSeekBar;->mThumb:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method

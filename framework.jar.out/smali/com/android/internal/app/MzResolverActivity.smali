@@ -154,7 +154,7 @@
 
     iput-object v0, p0, Lcom/android/internal/app/MzResolverActivity;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    .line 1724
+    .line 1728
     return-void
 .end method
 
@@ -371,27 +371,27 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1602
+    .line 1606
     if-nez p1, :cond_1
 
-    .line 1619
+    .line 1623
     :cond_0
     :goto_0
     return v3
 
-    .line 1605
+    .line 1609
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1606
+    .line 1610
     .local v1, "intentType":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1609
+    .line 1613
     .local v0, "intentAction":Ljava/lang/String;
     new-instance v2, Ljava/util/ArrayList;
 
@@ -399,18 +399,18 @@
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1610
+    .line 1614
     .local v2, "solveActions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "android.intent.action.SEND"
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1611
+    .line 1615
     const-string v4, "android.intent.action.SEND_MULTIPLE"
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1613
+    .line 1617
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -429,7 +429,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1619
+    .line 1623
     const/4 v3, 0x1
 
     goto :goto_0
@@ -523,36 +523,36 @@
     .locals 4
 
     .prologue
-    .line 1943
+    .line 1993
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
-    .line 1944
+    .line 1994
     .local v0, "fm":Landroid/app/FragmentManager;
     invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
 
     move-result-object v1
 
-    .line 1945
+    .line 1995
     .local v1, "ft":Landroid/app/FragmentTransaction;
     iget-boolean v2, p0, Lcom/android/internal/app/MzResolverActivity;->mIsInDetailFrag:Z
 
     if-eqz v2, :cond_1
 
-    .line 1946
+    .line 1996
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity;->mDetailListFrag:Landroid/app/Fragment;
 
     if-nez v2, :cond_0
 
-    .line 1947
+    .line 1997
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     invoke-direct {v2}, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/app/MzResolverActivity;->mDetailListFrag:Landroid/app/Fragment;
 
-    .line 1949
+    .line 1999
     :cond_0
     sget v2, Lcom/flyme/internal/R$id;->contentPanel:I
 
@@ -560,27 +560,27 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
-    .line 1956
+    .line 2006
     :goto_0
     invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 1957
+    .line 2007
     return-void
 
-    .line 1951
+    .line 2001
     :cond_1
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity;->mNormalGridFrag:Landroid/app/Fragment;
 
     if-nez v2, :cond_2
 
-    .line 1952
+    .line 2002
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 
     invoke-direct {v2}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/app/MzResolverActivity;->mNormalGridFrag:Landroid/app/Fragment;
 
-    .line 1954
+    .line 2004
     :cond_2
     sget v2, Lcom/flyme/internal/R$id;->contentPanel:I
 
@@ -598,56 +598,56 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1635
+    .line 1639
     if-nez p1, :cond_1
 
-    .line 1651
+    .line 1655
     :cond_0
     :goto_0
     return v0
 
-    .line 1639
+    .line 1643
     :cond_1
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
     if-nez v1, :cond_2
 
-    .line 1640
+    .line 1644
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
-    .line 1641
+    .line 1645
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
     const-string v2, "com.meizu.filemanager"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1642
+    .line 1646
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
     const-string v2, "com.android.mms"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1643
+    .line 1647
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
     const-string v2, "com.android.contacts"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1644
+    .line 1648
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
     const-string v2, "com.android.phone"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1647
+    .line 1651
     :cond_2
     sget-object v1, Lcom/android/internal/app/MzResolverActivity;->mInternalList:Ljava/util/ArrayList;
 
@@ -657,7 +657,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1648
+    .line 1652
     const/4 v0, 0x1
 
     goto :goto_0
@@ -714,92 +714,121 @@
     .end annotation
 
     .prologue
+    .line 1814
     .local p1, "resolves":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-nez p1, :cond_1
 
+    .line 1815
     const/16 p1, 0x0
 
+    .line 1962
     .end local p1    # "resolves":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_0
     :goto_0
     return-object p1
 
+    .line 1818
     .restart local p1    # "resolves":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_1
     const-string v6, "com.android.email"
 
+    .line 1819
     .local v6, "EMAIL":Ljava/lang/String;
     const-string v9, "com.android.mms"
 
+    .line 1820
     .local v9, "MMS":Ljava/lang/String;
     const-string v5, "com.android.bluetooth"
 
+    .line 1821
     .local v5, "BT_OPP":Ljava/lang/String;
     const-string v4, "com.meizu.share"
 
+    .line 1822
     .local v4, "BT":Ljava/lang/String;
     const-string v11, "com.meizu.notepaper"
 
+    .line 1824
     .local v11, "NOTEPAPER":Ljava/lang/String;
     const-string v13, "com.tencent.mm"
 
+    .line 1825
     .local v13, "WECHAT":Ljava/lang/String;
     const-string v14, "com.sina.weibo"
 
+    .line 1826
     .local v14, "WEIBO":Ljava/lang/String;
     const-string v7, "com.meizu.flyme.flymebbs"
 
+    .line 1828
     .local v7, "FLYMEBBS":Ljava/lang/String;
     const-string v8, "com.meizu.media.gallery"
 
+    .line 1829
     .local v8, "GALLERY":Ljava/lang/String;
     const-string v10, "com.meizu.media.music"
 
+    .line 1830
     .local v10, "MUSIC":Ljava/lang/String;
     const-string v12, "com.meizu.media.video"
 
+    .line 1831
     .local v12, "VIDEO":Ljava/lang/String;
     const-string v3, "com.android.browser"
 
+    .line 1835
     .local v3, "BROWSER":Ljava/lang/String;
     const/16 v19, 0x0
 
+    .line 1836
     .local v19, "email":Landroid/content/pm/ResolveInfo;
     const/16 v23, 0x0
 
+    .line 1837
     .local v23, "mms":Landroid/content/pm/ResolveInfo;
     const/16 v16, 0x0
 
+    .line 1838
     .local v16, "bt":Landroid/content/pm/ResolveInfo;
     const/16 v17, 0x0
 
+    .line 1839
     .local v17, "bt_opp":Landroid/content/pm/ResolveInfo;
     const/16 v25, 0x0
 
+    .line 1840
     .local v25, "notepaper":Landroid/content/pm/ResolveInfo;
     const/16 v21, 0x0
 
+    .line 1841
     .local v21, "gallery":Landroid/content/pm/ResolveInfo;
     const/16 v24, 0x0
 
+    .line 1842
     .local v24, "music":Landroid/content/pm/ResolveInfo;
     const/16 v28, 0x0
 
+    .line 1843
     .local v28, "video":Landroid/content/pm/ResolveInfo;
     const/4 v15, 0x0
 
+    .line 1845
     .local v15, "browser":Landroid/content/pm/ResolveInfo;
     const/16 v30, 0x0
 
+    .line 1846
     .local v30, "weChatMoments":Landroid/content/pm/ResolveInfo;
     const/16 v29, 0x0
 
+    .line 1847
     .local v29, "weChatFriend":Landroid/content/pm/ResolveInfo;
     const/16 v31, 0x0
 
+    .line 1848
     .local v31, "weibo":Landroid/content/pm/ResolveInfo;
     const/16 v20, 0x0
 
+    .line 1849
     .local v20, "flymebbs":Landroid/content/pm/ResolveInfo;
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -820,6 +849,7 @@
 
     check-cast v27, Landroid/content/pm/ResolveInfo;
 
+    .line 1850
     .local v27, "resolve":Landroid/content/pm/ResolveInfo;
     move-object/from16 v0, v27
 
@@ -835,6 +865,7 @@
 
     move-object/from16 v18, v0
 
+    .line 1852
     .local v18, "ci":Landroid/content/pm/ComponentInfo;
     :goto_2
     move-object/from16 v0, v18
@@ -843,6 +874,7 @@
 
     move-object/from16 v26, v0
 
+    .line 1853
     .local v26, "pkg":Ljava/lang/String;
     const-string v32, "com.android.email"
 
@@ -856,10 +888,12 @@
 
     if-eqz v32, :cond_4
 
+    .line 1854
     move-object/from16 v19, v27
 
     goto :goto_1
 
+    .line 1850
     .end local v18    # "ci":Landroid/content/pm/ComponentInfo;
     .end local v26    # "pkg":Ljava/lang/String;
     :cond_3
@@ -871,6 +905,7 @@
 
     goto :goto_2
 
+    .line 1855
     .restart local v18    # "ci":Landroid/content/pm/ComponentInfo;
     .restart local v26    # "pkg":Ljava/lang/String;
     :cond_4
@@ -900,10 +935,12 @@
 
     if-eqz v32, :cond_5
 
+    .line 1856
     move-object/from16 v23, v27
 
     goto :goto_1
 
+    .line 1857
     :cond_5
     const-string v32, "com.android.bluetooth"
 
@@ -931,10 +968,12 @@
 
     if-eqz v32, :cond_6
 
+    .line 1859
     move-object/from16 v17, v27
 
     goto :goto_1
 
+    .line 1860
     :cond_6
     const-string v32, "com.meizu.share"
 
@@ -962,10 +1001,12 @@
 
     if-eqz v32, :cond_7
 
+    .line 1863
     move-object/from16 v16, v27
 
     goto/16 :goto_1
 
+    .line 1870
     :cond_7
     const-string v32, "com.meizu.notepaper"
 
@@ -979,10 +1020,12 @@
 
     if-eqz v32, :cond_8
 
+    .line 1871
     move-object/from16 v25, v27
 
     goto/16 :goto_1
 
+    .line 1872
     :cond_8
     const-string v32, "com.meizu.media.music"
 
@@ -996,10 +1039,12 @@
 
     if-eqz v32, :cond_9
 
+    .line 1873
     move-object/from16 v24, v27
 
     goto/16 :goto_1
 
+    .line 1874
     :cond_9
     const-string v32, "com.meizu.media.video"
 
@@ -1013,10 +1058,12 @@
 
     if-eqz v32, :cond_a
 
+    .line 1875
     move-object/from16 v28, v27
 
     goto/16 :goto_1
 
+    .line 1876
     :cond_a
     const-string v32, "com.meizu.media.gallery"
 
@@ -1030,10 +1077,12 @@
 
     if-eqz v32, :cond_b
 
+    .line 1877
     move-object/from16 v21, v27
 
     goto/16 :goto_1
 
+    .line 1878
     :cond_b
     const-string v32, "com.android.browser"
 
@@ -1047,10 +1096,12 @@
 
     if-eqz v32, :cond_c
 
+    .line 1879
     move-object/from16 v15, v27
 
     goto/16 :goto_1
 
+    .line 1880
     :cond_c
     const-string v32, "com.tencent.mm"
 
@@ -1078,10 +1129,12 @@
 
     if-eqz v32, :cond_d
 
+    .line 1881
     move-object/from16 v30, v27
 
     goto/16 :goto_1
 
+    .line 1882
     :cond_d
     const-string v32, "com.tencent.mm"
 
@@ -1109,10 +1162,12 @@
 
     if-eqz v32, :cond_e
 
+    .line 1883
     move-object/from16 v29, v27
 
     goto/16 :goto_1
 
+    .line 1884
     :cond_e
     const-string v32, "com.sina.weibo"
 
@@ -1126,10 +1181,12 @@
 
     if-eqz v32, :cond_f
 
+    .line 1885
     move-object/from16 v31, v27
 
     goto/16 :goto_1
 
+    .line 1886
     :cond_f
     const-string v32, "com.meizu.flyme.flymebbs"
 
@@ -1143,22 +1200,26 @@
 
     if-eqz v32, :cond_2
 
+    .line 1887
     move-object/from16 v20, v27
 
     goto/16 :goto_1
 
+    .line 1891
     .end local v18    # "ci":Landroid/content/pm/ComponentInfo;
     .end local v26    # "pkg":Ljava/lang/String;
     .end local v27    # "resolve":Landroid/content/pm/ResolveInfo;
     :cond_10
     if-eqz v24, :cond_11
 
+    .line 1892
     move-object/from16 v0, p1
 
     move-object/from16 v1, v24
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1893
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1169,15 +1230,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1896
     :cond_11
     if-eqz v28, :cond_12
 
+    .line 1897
     move-object/from16 v0, p1
 
     move-object/from16 v1, v28
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1898
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1188,15 +1252,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1901
     :cond_12
     if-eqz v21, :cond_13
 
+    .line 1902
     move-object/from16 v0, p1
 
     move-object/from16 v1, v21
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1903
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1207,13 +1274,16 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1906
     :cond_13
     if-eqz v15, :cond_14
 
+    .line 1907
     move-object/from16 v0, p1
 
     invoke-interface {v0, v15}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1908
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1222,15 +1292,18 @@
 
     invoke-interface {v0, v1, v15}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1911
     :cond_14
     if-eqz v23, :cond_15
 
+    .line 1912
     move-object/from16 v0, p1
 
     move-object/from16 v1, v23
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1913
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1241,15 +1314,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1916
     :cond_15
     if-eqz v25, :cond_16
 
+    .line 1917
     move-object/from16 v0, p1
 
     move-object/from16 v1, v25
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1918
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1260,15 +1336,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1927
     :cond_16
     if-eqz v17, :cond_17
 
+    .line 1928
     move-object/from16 v0, p1
 
     move-object/from16 v1, v17
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1929
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1279,15 +1358,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1932
     :cond_17
     if-eqz v16, :cond_18
 
+    .line 1933
     move-object/from16 v0, p1
 
     move-object/from16 v1, v16
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1934
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1298,15 +1380,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1937
     :cond_18
     if-eqz v19, :cond_19
 
+    .line 1938
     move-object/from16 v0, p1
 
     move-object/from16 v1, v19
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1939
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1317,15 +1402,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1942
     :cond_19
     if-eqz v20, :cond_1a
 
+    .line 1943
     move-object/from16 v0, p1
 
     move-object/from16 v1, v20
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1944
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1336,15 +1424,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1947
     :cond_1a
     if-eqz v31, :cond_1b
 
+    .line 1948
     move-object/from16 v0, p1
 
     move-object/from16 v1, v31
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1949
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1355,15 +1446,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1952
     :cond_1b
     if-eqz v30, :cond_1c
 
+    .line 1953
     move-object/from16 v0, p1
 
     move-object/from16 v1, v30
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1954
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1374,15 +1468,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 1957
     :cond_1c
     if-eqz v29, :cond_0
 
+    .line 1958
     move-object/from16 v0, p1
 
     move-object/from16 v1, v29
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 1959
     const/16 v32, 0x0
 
     move-object/from16 v0, p1
@@ -1781,19 +1878,19 @@
     .locals 1
 
     .prologue
-    .line 1918
+    .line 1968
     iget-boolean v0, p0, Lcom/android/internal/app/MzResolverActivity;->mIsInDetailFrag:Z
 
     if-eqz v0, :cond_0
 
-    .line 1919
+    .line 1969
     invoke-direct {p0}, Lcom/android/internal/app/MzResolverActivity;->ChangeFragment()V
 
-    .line 1923
+    .line 1973
     :goto_0
     return-void
 
-    .line 1921
+    .line 1971
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
 
@@ -2935,7 +3032,7 @@
     .restart local v16    # "i":I
     .restart local v25    # "set":[Landroid/content/ComponentName;
     :cond_d
-    if-eqz p3, :cond_13
+    if-eqz p3, :cond_11
 
     .line 787
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/MzResolverActivity;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2961,7 +3058,7 @@
     .end local v25    # "set":[Landroid/content/ComponentName;
     :cond_e
     :goto_4
-    if-eqz p2, :cond_12
+    if-eqz p2, :cond_10
 
     .line 806
     move-object/from16 v0, p0
@@ -2983,49 +3080,19 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 811
+    .line 815
     :cond_f
-    const-string v2, "android.intent.action.SEND"
-
-    invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_10
-
-    const-string v2, "android.intent.action.SEND_MULTIPLE"
-
-    invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    :cond_10
-    const/high16 v2, 0x10000000
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    :cond_11
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/MzResolverActivity;->safelyStartActivity(Landroid/content/Intent;)V
 
-    :cond_12
+    .line 817
+    :cond_10
     return-void
 
+    .line 791
     .restart local v6    # "filter":Landroid/content/IntentFilter;
     .restart local v7    # "bestMatch":I
     .restart local v9    # "N":I
@@ -3034,7 +3101,7 @@
     .restart local v14    # "data":Landroid/net/Uri;
     .restart local v16    # "i":I
     .restart local v25    # "set":[Landroid/content/ComponentName;
-    :cond_13
+    :cond_11
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -3158,17 +3225,17 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1962
+    .line 2012
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 1963
+    .line 2013
     const-string v0, "ISDETAIL"
 
     iget-boolean v1, p0, Lcom/android/internal/app/MzResolverActivity;->mIsInDetailFrag:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1964
+    .line 2014
     return-void
 .end method
 
@@ -3230,14 +3297,14 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1928
+    .line 1978
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
 
     float-to-int v0, v4
 
-    .line 1929
+    .line 1979
     .local v0, "TouchX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -3245,24 +3312,24 @@
 
     float-to-int v1, v4
 
-    .line 1930
+    .line 1980
     .local v1, "TouchY":I
     iget-boolean v4, p0, Lcom/android/internal/app/MzResolverActivity;->mIsInDetailFrag:Z
 
     if-nez v4, :cond_0
 
-    .line 1931
+    .line 1981
     sget v4, Lcom/flyme/internal/R$id;->mz_resolver_frag1_content_panel:I
 
     invoke-virtual {p0, v4}, Lcom/android/internal/app/MzResolverActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1932
+    .line 1982
     .local v3, "view":Landroid/view/View;
     if-eqz v3, :cond_0
 
-    .line 1933
+    .line 1983
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/view/View;->getLeft()I
@@ -3291,7 +3358,7 @@
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 1934
+    .line 1984
     .local v2, "f":Landroid/graphics/RectF;
     int-to-float v4, v0
 
@@ -3303,10 +3370,10 @@
 
     if-nez v4, :cond_0
 
-    .line 1935
+    .line 1985
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity;->finish()V
 
-    .line 1939
+    .line 1989
     .end local v2    # "f":Landroid/graphics/RectF;
     .end local v3    # "view":Landroid/view/View;
     :cond_0
@@ -3322,19 +3389,19 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 816
+    .line 820
     iget-boolean v3, p0, Lcom/android/internal/app/MzResolverActivity;->mSafeForwardingMode:Z
 
     if-nez v3, :cond_0
 
-    .line 817
+    .line 821
     invoke-virtual {p0, p1}, Lcom/android/internal/app/MzResolverActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 834
+    .line 838
     :goto_0
     return-void
 
-    .line 821
+    .line 825
     :cond_0
     const/4 v3, 0x0
 
@@ -3347,11 +3414,11 @@
 
     goto :goto_0
 
-    .line 822
+    .line 826
     :catch_0
     move-exception v0
 
-    .line 825
+    .line 829
     .local v0, "e":Ljava/lang/RuntimeException;
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -3368,7 +3435,7 @@
 
     move-result-object v2
 
-    .line 830
+    .line 834
     .local v2, "launchedFromPackage":Ljava/lang/String;
     :goto_1
     const-string v3, "MzResolverActivity"
@@ -3421,12 +3488,12 @@
 
     goto :goto_0
 
-    .line 827
+    .line 831
     .end local v2    # "launchedFromPackage":Ljava/lang/String;
     :catch_1
     move-exception v1
 
-    .line 828
+    .line 832
     .local v1, "e2":Landroid/os/RemoteException;
     const-string v2, "??"
 
@@ -3451,7 +3518,7 @@
     .param p1, "ri"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 837
+    .line 841
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -3484,11 +3551,11 @@
 
     move-result-object v0
 
-    .line 840
+    .line 844
     .local v0, "in":Landroid/content/Intent;
     invoke-virtual {p0, v0}, Lcom/android/internal/app/MzResolverActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 841
+    .line 845
     return-void
 .end method
 

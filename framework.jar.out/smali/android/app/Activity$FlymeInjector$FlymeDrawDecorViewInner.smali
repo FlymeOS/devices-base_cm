@@ -20,54 +20,94 @@
 # instance fields
 .field private mActivity:Landroid/app/Activity;
 
-.field private mDelayDraw:Z
+.field private mDelay:I
 
 .field private mWindow:Landroid/view/Window;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Landroid/view/Window;Z)V
+.method public constructor <init>(Landroid/app/Activity;Landroid/view/Window;I)V
     .locals 0
     .param p1, "activity"    # Landroid/app/Activity;
     .param p2, "window"    # Landroid/view/Window;
-    .param p3, "delayDraw"    # Z
+    .param p3, "delay"    # I
 
     .prologue
-    .line 6880
+    .line 6889
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6881
+    .line 6890
     iput-object p1, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
 
-    .line 6882
+    .line 6891
     iput-object p2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
 
-    .line 6883
-    iput-boolean p3, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mDelayDraw:Z
+    .line 6892
+    iput p3, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mDelay:I
 
-    .line 6884
+    .line 6893
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     .prologue
-    .line 6888
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 6897
+    iget-object v2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
+
+    iget-boolean v2, v2, Landroid/app/Activity;->mFlymeDecoViewDrawFirst:Z
+
+    if-eqz v2, :cond_1
+
+    .line 6898
+    iget-object v2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
+
+    iget-object v3, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
+
+    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v3
+
+    iget v4, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mDelay:I
+
+    if-nez v4, :cond_0
+
+    :goto_0
+    invoke-static {v2, v3, v0}, Landroid/app/Activity$FlymeInjector;->onDrawDecorViewInner(Landroid/app/Activity;Landroid/view/View;Z)V
+
+    .line 6903
+    :goto_1
+    return-void
+
+    :cond_0
+    move v0, v1
+
+    .line 6898
+    goto :goto_0
+
+    .line 6900
+    :cond_1
+    iget-object v2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
+
+    iput-boolean v0, v2, Landroid/app/Activity;->mFlymeDecoViewDrawFlag:Z
+
+    .line 6901
     iget-object v0, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
 
-    iget-object v1, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
+    iget-object v2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
 
-    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-boolean v2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mDelayDraw:Z
+    invoke-static {v0, v2, v1}, Landroid/app/Activity$FlymeInjector;->onDrawDecorViewInner(Landroid/app/Activity;Landroid/view/View;I)V
 
-    invoke-static {v0, v1, v2}, Landroid/app/Activity$FlymeInjector;->onDrawDecorViewInner(Landroid/app/Activity;Landroid/view/View;Z)V
-
-    .line 6889
-    return-void
+    goto :goto_1
 .end method

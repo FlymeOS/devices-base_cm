@@ -68,6 +68,8 @@
 
 .field public static final IS_PRODUCT:Z
 
+.field public static final IS_S25:Ljava/lang/Boolean;
+
 .field public static final IS_SHOPDEMO:Ljava/lang/Boolean;
 
 .field public static final IS_TD_PLATFORM:Ljava/lang/Boolean;
@@ -1027,7 +1029,20 @@
 
     sput-object v0, Landroid/os/BuildExt;->IS_U10:Ljava/lang/Boolean;
 
-    .line 159
+    .line 158
+    const-string v0, "2555"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->checkProductModel(Ljava/lang/String;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/os/BuildExt;->IS_S25:Ljava/lang/Boolean;
+
+    .line 161
     const-string/jumbo v0, "ro.meizu.product.model"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1036,7 +1051,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->MZ_MODEL:Ljava/lang/String;
 
-    .line 160
+    .line 162
     const-string/jumbo v0, "ro.product.device"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1055,7 +1070,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->IS_MX3:Ljava/lang/Boolean;
 
-    .line 161
+    .line 163
     const-string/jumbo v0, "ro.product.device"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1074,7 +1089,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->IS_MX2:Ljava/lang/Boolean;
 
-    .line 163
+    .line 165
     const-string/jumbo v0, "ro.meizu.customize.demo"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1096,7 +1111,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->IS_SHOPDEMO:Ljava/lang/Boolean;
 
-    .line 166
+    .line 168
     const-string/jumbo v0, "ro.product.manufacturer"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1105,7 +1120,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->MANUFACTURER:Ljava/lang/String;
 
-    .line 187
+    .line 189
     const-string/jumbo v0, "ro.flyme.hideinfo"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1124,7 +1139,7 @@
 
     sput-object v0, Landroid/os/BuildExt;->HIDE_INFO:Ljava/lang/Boolean;
 
-    .line 421
+    .line 423
     const-string/jumbo v0, "ro.meizu.has_smartbar"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
