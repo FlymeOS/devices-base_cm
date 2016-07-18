@@ -650,6 +650,110 @@
     goto :goto_0
 .end method
 
+.method static setFlymeSystle(Landroid/inputmethodservice/InputMethodService;)V
+    .locals 5
+    .param p0, "ims"    # Landroid/inputmethodservice/InputMethodService;
+
+    .prologue
+    const v4, -0xa0a0b
+
+    const/4 v3, 0x0
+
+    .line 2625
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractEditText:Landroid/inputmethodservice/ExtractEditText;
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v1, v2}, Landroid/inputmethodservice/ExtractEditText;->setGravity(I)V
+
+    .line 2626
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractEditText:Landroid/inputmethodservice/ExtractEditText;
+
+    invoke-virtual {v1, v4}, Landroid/inputmethodservice/ExtractEditText;->setBackgroundColor(I)V
+
+    .line 2627
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractEditText:Landroid/inputmethodservice/ExtractEditText;
+
+    const/16 v2, 0xc
+
+    invoke-virtual {v1, v2, v3, v3, v3}, Landroid/inputmethodservice/ExtractEditText;->setPadding(IIII)V
+
+    .line 2628
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAction:Landroid/widget/Button;
+
+    if-eqz v1, :cond_0
+
+    .line 2629
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAction:Landroid/widget/Button;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+
+    .line 2630
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAction:Landroid/widget/Button;
+
+    sget v2, Lcom/flyme/internal/R$drawable;->input_method_extract_action_background:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
+
+    .line 2631
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAction:Landroid/widget/Button;
+
+    invoke-virtual {v1}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 2632
+    .local v0, "linearParams":Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {p0}, Landroid/inputmethodservice/InputMethodService;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/flyme/internal/R$dimen;->extract_action_height:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
+
+    .line 2633
+    invoke-virtual {p0}, Landroid/inputmethodservice/InputMethodService;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/flyme/internal/R$dimen;->extract_action_width:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
+
+    .line 2634
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAction:Landroid/widget/Button;
+
+    invoke-virtual {v1, v0}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 2635
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAccessories:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
+
+    .line 2636
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService;->mExtractAccessories:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
+
+    .line 2638
+    .end local v0    # "linearParams":Landroid/widget/FrameLayout$LayoutParams;
+    :cond_0
+    return-void
+.end method
+
 .method static unbindInputEnter(Landroid/inputmethodservice/InputMethodService;)V
     .locals 1
     .param p0, "ims"    # Landroid/inputmethodservice/InputMethodService;

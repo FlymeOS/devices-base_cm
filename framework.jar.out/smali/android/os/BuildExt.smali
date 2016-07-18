@@ -2021,6 +2021,38 @@
     return v0
 .end method
 
+.method public static isJcopUpgradeSupported()Z
+    .locals 2
+
+    .prologue
+    .line 367
+    const-string/jumbo v0, "true"
+
+    const-string/jumbo v1, "ro.product.jcopupgrade"
+
+    invoke-static {v1}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 368
+    const/4 v0, 0x1
+
+    .line 370
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static isLtgModem()Z
     .locals 2
 

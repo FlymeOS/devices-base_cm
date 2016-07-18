@@ -59,6 +59,8 @@
 
 .field public static final MEIZU_TETHER_ENABLE_BLUETOOTH:Ljava/lang/String; = "tether_enable_bluetooth"
 
+.field public static final MZ_FAST_CHARGE:Ljava/lang/String; = "mz_fast_charge"
+
 .field public static final MZ_WIFI_ENABLE_SLEEP_AT_NIGHT:Ljava/lang/String; = "wifi_enable_sleep_at_night"
 
 .field public static final MZ_WIFI_SCAN_ALWAYS_AVAILABLE_REMEMBERED:Ljava/lang/String; = "wifi_scan_always_enabled_remembered"
