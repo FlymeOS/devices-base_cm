@@ -37,11 +37,33 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 6
+    .locals 7
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 356
+    const/4 v6, 0x1
+
+    .line 368
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$5;->this$1:Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;
+
+    iget-object v2, v2, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mShutdownOrReboot:Z
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 369
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$5;->this$1:Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;
+
+    iget-object v2, v2, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mShutdownOrReboot:Z
+    invoke-static {v2, v6}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1002(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    .line 370
     sget-object v2, Landroid/os/BuildExt;->IS_SHOPDEMO:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -85,11 +107,9 @@
 
     move-result-object v2
 
-    const/4 v3, 0x1
-
     const-wide/16 v4, 0x320
 
-    invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v2, v6, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 378
     :cond_0

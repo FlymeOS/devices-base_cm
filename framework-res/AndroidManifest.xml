@@ -704,7 +704,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.meizu.app.AccessApplication" android:needAccessControl="false" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoTitleBar" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.meizu.app.AccessApplication" android:needAccessControl="false" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoTitleBar" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.content.pm.CONFIRM_ACCESS_APPCATONS"/>
                 <category android:name="android.intent.category.DEFAULT"/>

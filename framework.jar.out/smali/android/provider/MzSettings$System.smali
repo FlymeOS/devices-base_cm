@@ -397,6 +397,10 @@
 
 .field public static final STATUSBAR_BATTERY_PERCENT:Ljava/lang/String; = "statusbar_battery_percent"
 
+.field public static final SUB_DISPLAY_SCREEN_BRIGHTNESS:Ljava/lang/String; = "sub_display_screen_brightness"
+
+.field public static final SUB_DISPLAY_SCREEN_OFF_TIMEOUT:Ljava/lang/String; = "sub_display_screen_off_timeout"
+
 .field public static final VOICE_ASSISTENT_USE_IN_LOCKSCREEN:Ljava/lang/String; = "voice_assistent_use_in_lockscreen"
 
 
