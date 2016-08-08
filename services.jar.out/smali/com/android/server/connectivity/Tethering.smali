@@ -1766,7 +1766,7 @@
 
     .line 660
     :cond_b
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/connectivity/Tethering;->showFlymeTetheredNotification()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/connectivity/Tethering;->clearTetheredNotification()V
 
     goto/16 :goto_0
 
@@ -4754,15 +4754,4 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v9
-.end method
-
-.method private showFlymeTetheredNotification()V
-    .locals 1
-
-    .prologue
-    sget v0, Lcom/flyme/internal/R$drawable;->mz_stat_sys_tether_wifi:I
-
-    invoke-direct {p0, v0}, Lcom/android/server/connectivity/Tethering;->showTetheredNotification(I)V
-
-    return-void
 .end method
