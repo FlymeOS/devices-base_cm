@@ -136,7 +136,11 @@
 
 .field public mAccessPackageName:Ljava/lang/String;
 
+.field public mAccessSrcClassName:Ljava/lang/String;
+
 .field public mAccessSrcFlags:I
+
+.field public mAccessSrcPackageName:Ljava/lang/String;
 
 .field public mMeizuFlags:I
 
@@ -152,19 +156,37 @@
     return-void
 .end method
 
+
+# virtual methods
+.method public addAccessSrcFlags(I)V
+    .locals 1
+    .param p1, "flags"    # I
+
+    .prologue
+    .line 326
+    iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
+
+    or-int/2addr v0, p1
+
+    iput v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
+
+    .line 327
+    return-void
+.end method
+
 .method public addMeizuFlags(I)V
     .locals 1
     .param p1, "flags"    # I
 
     .prologue
-    .line 298
+    .line 310
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 299
+    .line 311
     return-void
 .end method
 
@@ -172,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 345
+    .line 410
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
     return-object v0
@@ -182,8 +204,38 @@
     .locals 1
 
     .prologue
-    .line 337
+    .line 402
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getAccessSrcClassName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 394
+    iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getAccessSrcFlags()I
+    .locals 1
+
+    .prologue
+    .line 380
+    iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
+
+    return v0
+.end method
+
+.method public getAccessSrcPackageName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 387
+    iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -192,7 +244,7 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 373
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     return v0
@@ -203,10 +255,10 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
-    .line 322
+    .line 366
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
-    .line 323
+    .line 367
     return-void
 .end method
 
@@ -215,10 +267,46 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 314
+    .line 358
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
-    .line 315
+    .line 359
+    return-void
+.end method
+
+.method public setAccessSrcClassName(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "className"    # Ljava/lang/String;
+
+    .prologue
+    .line 350
+    iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
+
+    .line 351
+    return-void
+.end method
+
+.method public setAccessSrcFlags(I)V
+    .locals 0
+    .param p1, "flags"    # I
+
+    .prologue
+    .line 334
+    iput p1, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
+
+    .line 335
+    return-void
+.end method
+
+.method public setAccessSrcPackageName(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    .line 342
+    iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
+
+    .line 343
     return-void
 .end method
 
@@ -227,44 +315,9 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 306
+    .line 318
     iput p1, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 307
-    return-void
-.end method
-
-
-# virtual methods
-.method public addAccessSrcFlags(I)V
-    .locals 1
-    .param p1, "flags"    # I
-
-    .prologue
-    iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
-
-    or-int/2addr v0, p1
-
-    iput v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
-
-    return-void
-.end method
-
-.method public getAccessSrcFlags()I
-    .locals 1
-
-    .prologue
-    iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
-
-    return v0
-.end method
-
-.method public setAccessSrcFlags(I)V
-    .locals 0
-    .param p1, "flags"    # I
-
-    .prologue
-    iput p1, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
-
+    .line 319
     return-void
 .end method

@@ -32,7 +32,7 @@
     .param p2, "aInfo"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 4181
+    .line 4187
     if-eqz p2, :cond_0
 
     const-string v0, "android.permission.CALL_PHONE"
@@ -57,10 +57,10 @@
 
     if-nez v0, :cond_0
 
-    .line 4183
+    .line 4189
     const/4 v0, 0x1
 
-    .line 4185
+    .line 4191
     :goto_0
     return v0
 
@@ -84,6 +84,7 @@
 
     move-result v11
 
+    .line 4148
     .local v11, "srcIntentFlag":I
     move-object/from16 v0, p1
 
@@ -91,6 +92,7 @@
 
     invoke-virtual {v12, v11}, Landroid/content/IntentExt;->setAccessSrcFlags(I)V
 
+    .line 4149
     move-object/from16 v0, p1
 
     iget-object v12, v0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
@@ -99,7 +101,7 @@
 
     move-result v5
 
-    .line 4148
+    .line 4150
     .local v5, "flag":I
     and-int/lit8 v12, v5, 0x10
 
@@ -107,7 +109,7 @@
 
     const/4 v7, 0x1
 
-    .line 4149
+    .line 4151
     .local v7, "isLockView":Z
     :goto_0
     and-int/lit8 v12, v5, 0x20
@@ -116,6 +118,7 @@
 
     const/4 v6, 0x1
 
+    .line 4152
     .local v6, "isFastStarting":Z
     :goto_1
     move-object/from16 v0, p0
@@ -124,13 +127,15 @@
 
     iget-object v4, v12, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
+    .line 4153
     .local v4, "context":Landroid/content/Context;
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
     if-eqz v7, :cond_0
 
-    if-nez v6, :cond_6
+    if-nez v6, :cond_7
 
+    .line 4154
     :cond_0
     move-object/from16 v0, p0
 
@@ -138,6 +143,7 @@
 
     if-nez v12, :cond_1
 
+    .line 4155
     const-string v12, "access_control"
 
     invoke-virtual {v4, v12}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -150,7 +156,7 @@
 
     iput-object v12, v0, Lcom/android/server/am/ActivityStackSupervisor;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
 
-    .line 4155
+    .line 4157
     :cond_1
     move-object/from16 v0, p0
 
@@ -160,7 +166,7 @@
 
     move-object/from16 v1, p2
 
-    .line 4177
+    .line 4183
     .end local v4    # "context":Landroid/content/Context;
     .end local v5    # "flag":I
     .end local v6    # "isFastStarting":Z
@@ -171,7 +177,7 @@
     :goto_2
     return-object v1
 
-    .line 4148
+    .line 4150
     .end local v1    # "aInfo":Landroid/content/pm/ActivityInfo;
     .restart local v5    # "flag":I
     .restart local v11    # "srcIntentFlag":I
@@ -181,14 +187,14 @@
 
     goto :goto_0
 
-    .line 4149
+    .line 4151
     .restart local v7    # "isLockView":Z
     :cond_3
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 4158
+    .line 4160
     .restart local v4    # "context":Landroid/content/Context;
     .restart local v6    # "isFastStarting":Z
     :cond_4
@@ -198,7 +204,7 @@
 
     iget-boolean v9, v12, Landroid/content/ActivityInfoExt;->needAccessControl:Z
 
-    .line 4159
+    .line 4161
     .local v9, "needAccessControl":Z
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -214,7 +220,7 @@
 
     move-result v3
 
-    .line 4160
+    .line 4162
     .local v3, "appAccessControl":I
     move-object/from16 v0, p0
 
@@ -228,12 +234,13 @@
 
     move-result v12
 
-    if-eqz v12, :cond_6
+    if-eqz v12, :cond_7
 
-    if-eqz v9, :cond_6
+    if-eqz v9, :cond_7
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
+    .line 4163
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/am/ActivityStackSupervisor;->mRealPm:Lcom/android/server/pm/PackageManagerService;
@@ -244,7 +251,7 @@
 
     move-result-object v10
 
-    .line 4162
+    .line 4164
     .local v10, "rInfo":Landroid/content/pm/ResolveInfo;
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -256,16 +263,16 @@
 
     move-result-object v2
 
-    .line 4163
+    .line 4165
     .local v2, "activityLabel":Ljava/lang/CharSequence;
     if-nez v2, :cond_5
 
-    .line 4164
+    .line 4166
     move-object/from16 v0, p2
 
     iget-object v12, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    if-eqz v12, :cond_7
+    if-eqz v12, :cond_8
 
     move-object/from16 v0, p2
 
@@ -279,22 +286,22 @@
 
     move-result-object v2
 
-    .line 4167
+    .line 4169
     :cond_5
     :goto_3
     move-object/from16 v0, p2
 
     iget-object v8, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 4168
+    .line 4170
     .local v8, "mAccessPkg":Ljava/lang/String;
-    if-eqz v10, :cond_8
+    if-eqz v10, :cond_9
 
     iget-object v0, v10, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     move-object/from16 p2, v0
 
-    .line 4169
+    .line 4171
     :goto_4
     move-object/from16 v0, p2
 
@@ -302,12 +309,14 @@
 
     iput-object v2, v12, Landroid/content/ActivityInfoExt;->mDisplaytitleString:Ljava/lang/CharSequence;
 
+    .line 4172
     move-object/from16 v0, p2
 
     iget-object v12, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
 
     iput-object v8, v12, Landroid/content/ActivityInfoExt;->mAccessPkg:Ljava/lang/String;
 
+    .line 4173
     move-object/from16 v0, p2
 
     iget-object v12, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
@@ -318,6 +327,45 @@
 
     iput-object v13, v12, Landroid/content/ActivityInfoExt;->mStartComponentName:Landroid/content/ComponentName;
 
+    .line 4174
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_6
+
+    .line 4175
+    move-object/from16 v0, p1
+
+    iget-object v12, v0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v12, v13}, Landroid/content/IntentExt;->setAccessSrcPackageName(Ljava/lang/String;)V
+
+    .line 4176
+    move-object/from16 v0, p1
+
+    iget-object v12, v0, Landroid/content/Intent;->mFlymeIntent:Landroid/content/IntentExt;
+
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v12, v13}, Landroid/content/IntentExt;->setAccessSrcClassName(Ljava/lang/String;)V
+
+    .line 4178
+    :cond_6
     new-instance v12, Landroid/content/ComponentName;
 
     move-object/from16 v0, p2
@@ -346,16 +394,16 @@
     .end local v9    # "needAccessControl":Z
     .end local v10    # "rInfo":Landroid/content/pm/ResolveInfo;
     .end local v11    # "srcIntentFlag":I
-    :cond_6
+    :cond_7
     :goto_5
     move-object/from16 v1, p2
 
-    .line 4177
+    .line 4183
     .end local p2    # "aInfo":Landroid/content/pm/ActivityInfo;
     .restart local v1    # "aInfo":Landroid/content/pm/ActivityInfo;
     goto/16 :goto_2
 
-    .line 4164
+    .line 4166
     .end local v1    # "aInfo":Landroid/content/pm/ActivityInfo;
     .restart local v2    # "activityLabel":Ljava/lang/CharSequence;
     .restart local v3    # "appAccessControl":I
@@ -367,7 +415,7 @@
     .restart local v10    # "rInfo":Landroid/content/pm/ResolveInfo;
     .restart local v11    # "srcIntentFlag":I
     .restart local p2    # "aInfo":Landroid/content/pm/ActivityInfo;
-    :cond_7
+    :cond_8
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v12
@@ -382,14 +430,14 @@
 
     goto :goto_3
 
-    .line 4168
+    .line 4170
     .restart local v8    # "mAccessPkg":Ljava/lang/String;
-    :cond_8
+    :cond_9
     const/16 p2, 0x0
 
     goto :goto_4
 
-    .line 4175
+    .line 4181
     .end local v2    # "activityLabel":Ljava/lang/CharSequence;
     .end local v3    # "appAccessControl":I
     .end local v4    # "context":Landroid/content/Context;

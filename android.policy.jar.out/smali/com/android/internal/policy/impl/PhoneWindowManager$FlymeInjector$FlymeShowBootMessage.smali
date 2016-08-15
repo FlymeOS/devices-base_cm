@@ -30,16 +30,16 @@
     .param p2, "msg"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6698
+    .line 6700
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6699
+    .line 6701
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 6700
+    .line 6702
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mMsg:Ljava/lang/CharSequence;
 
-    .line 6701
+    .line 6703
     return-void
 .end method
 
@@ -47,10 +47,10 @@
     .locals 14
 
     .prologue
-    .line 6710
+    .line 6712
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mMsg:Ljava/lang/CharSequence;
 
-    if-eqz v11, :cond_2
+    if-eqz v11, :cond_1
 
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mMsg:Ljava/lang/CharSequence;
 
@@ -58,22 +58,22 @@
 
     move-result-object v6
 
-    .line 6711
+    .line 6713
     .local v6, "msgText":Ljava/lang/String;
     :goto_0
     const/4 v7, 0x0
 
-    .line 6712
+    .line 6714
     .local v7, "showProcessBar":Z
     const/4 v3, 0x0
 
-    .line 6713
+    .line 6715
     .local v3, "dex_opt":I
     const/4 v8, 0x0
 
-    .line 6714
+    .line 6716
     .local v8, "total_size":I
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_2
 
     const-string v11, "flymeTrain"
 
@@ -83,9 +83,9 @@
 
     const/4 v12, -0x1
 
-    if-eq v11, v12, :cond_3
+    if-eq v11, v12, :cond_2
 
-    .line 6716
+    .line 6718
     :try_start_0
     const-string v11, "flymeTrain"
 
@@ -93,18 +93,18 @@
 
     move-result-object v0
 
-    .line 6717
+    .line 6719
     .local v0, "arry1":[Ljava/lang/String;
     const/4 v11, 0x0
 
     aget-object v6, v0, v11
 
-    .line 6718
+    .line 6720
     const/4 v11, 0x1
 
     aget-object v2, v0, v11
 
-    .line 6719
+    .line 6721
     .local v2, "dexText":Ljava/lang/String;
     const-string v11, "processTrain"
 
@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    .line 6720
+    .line 6722
     .local v1, "arry2":[Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -126,7 +126,7 @@
 
     move-result v3
 
-    .line 6721
+    .line 6723
     const/4 v11, 0x1
 
     aget-object v11, v1, v11
@@ -141,22 +141,21 @@
 
     move-result v8
 
-    .line 6722
+    .line 6724
     const/4 v7, 0x1
 
-    .line 6733
+    .line 6732
     .end local v0    # "arry1":[Ljava/lang/String;
     .end local v1    # "arry2":[Ljava/lang/String;
     .end local v2    # "dexText":Ljava/lang/String;
-    :cond_0
     :goto_1
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgText:Landroid/widget/TextView;
 
-    if-nez v11, :cond_1
+    if-nez v11, :cond_0
 
-    .line 6734
+    .line 6733
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -165,7 +164,7 @@
 
     move-result-object v5
 
-    .line 6735
+    .line 6734
     .local v5, "inflater":Landroid/view/LayoutInflater;
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -179,33 +178,7 @@
 
     iput-object v12, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
 
-    .line 6736
-    iget-object v12, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
-
-    sget v13, Lcom/flyme/internal/R$id;->dex_opt_title:I
-
-    invoke-virtual {v11, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v11
-
-    check-cast v11, Landroid/widget/TextView;
-
-    iput-object v11, v12, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgTitle:Landroid/widget/TextView;
-
-    .line 6737
-    iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgTitle:Landroid/widget/TextView;
-
-    sget v12, Lcom/flyme/internal/R$string;->dexopt_apps_title:I
-
-    invoke-virtual {v11, v12}, Landroid/widget/TextView;->setText(I)V
-
-    .line 6738
+    .line 6735
     iget-object v12, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -222,7 +195,7 @@
 
     iput-object v11, v12, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgText:Landroid/widget/TextView;
 
-    .line 6739
+    .line 6736
     iget-object v12, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -239,7 +212,7 @@
 
     iput-object v11, v12, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgBar:Landroid/widget/ProgressBar;
 
-    .line 6741
+    .line 6738
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -252,67 +225,74 @@
 
     check-cast v9, Landroid/view/WindowManager;
 
-    .line 6742
+    .line 6739
     .local v9, "wm":Landroid/view/WindowManager;
     new-instance v10, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v10}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 6744
+    .line 6741
     .local v10, "wmParams":Landroid/view/WindowManager$LayoutParams;
     const/4 v11, 0x5
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 6745
+    .line 6742
     const/16 v11, 0x7e5
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 6746
+    .line 6743
     const/16 v11, 0x11
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 6747
+    .line 6744
     const/4 v11, -0x1
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 6748
+    .line 6745
     const/4 v11, -0x1
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 6750
+    .line 6747
     iget v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v11, v11, 0x8
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 6751
+    .line 6748
     iget v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v11, v11, 0x10
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 6753
+    .line 6749
+    iget v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    or-int/lit16 v11, v11, 0x100
+
+    iput v11, v10, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    .line 6751
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootLayout:Landroid/view/View;
 
     invoke-interface {v9, v11, v10}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 6756
+    .line 6754
     .end local v5    # "inflater":Landroid/view/LayoutInflater;
     .end local v9    # "wm":Landroid/view/WindowManager;
     .end local v10    # "wmParams":Landroid/view/WindowManager$LayoutParams;
-    :cond_1
-    if-eqz v7, :cond_4
+    :cond_0
+    if-eqz v7, :cond_3
 
-    .line 6757
+    .line 6755
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgBar:Landroid/widget/ProgressBar;
@@ -321,7 +301,7 @@
 
     invoke-virtual {v11, v12}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 6758
+    .line 6756
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgBar:Landroid/widget/ProgressBar;
@@ -332,7 +312,7 @@
 
     invoke-virtual {v11, v12}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 6762
+    .line 6760
     :goto_2
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -340,20 +320,20 @@
 
     invoke-virtual {v11, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 6763
+    .line 6761
     return-void
 
-    .line 6710
+    .line 6712
     .end local v3    # "dex_opt":I
     .end local v6    # "msgText":Ljava/lang/String;
     .end local v7    # "showProcessBar":Z
     .end local v8    # "total_size":I
-    :cond_2
+    :cond_1
     const/4 v6, 0x0
 
     goto/16 :goto_0
 
-    .line 6723
+    .line 6725
     .restart local v3    # "dex_opt":I
     .restart local v6    # "msgText":Ljava/lang/String;
     .restart local v7    # "showProcessBar":Z
@@ -361,7 +341,7 @@
     :catch_0
     move-exception v4
 
-    .line 6724
+    .line 6726
     .local v4, "e":Ljava/lang/Exception;
     const-string v11, "WindowManager"
 
@@ -387,37 +367,27 @@
 
     goto/16 :goto_1
 
-    .line 6727
-    .end local v4    # "e":Ljava/lang/Exception;
-    :cond_3
-    iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgTitle:Landroid/widget/TextView;
-
-    if-eqz v11, :cond_0
-
-    .line 6728
-    iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgTitle:Landroid/widget/TextView;
-
-    const/4 v12, 0x0
-
-    invoke-virtual {v11, v12}, Landroid/widget/TextView;->setVisibility(I)V
-
     .line 6729
+    .end local v4    # "e":Ljava/lang/Exception;
+    :cond_2
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgTitle:Landroid/widget/TextView;
+    iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    const v12, #android:string@android_upgrading_title#t
+    invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v11, v12}, Landroid/widget/TextView;->setText(I)V
+    move-result-object v11
+
+    sget v12, Lcom/flyme/internal/R$string;->system_booting:I
+
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
 
     goto/16 :goto_1
 
-    .line 6760
-    :cond_4
+    .line 6758
+    :cond_3
     iget-object v11, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->mPwm:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v11, v11, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFlymeBootMsgBar:Landroid/widget/ProgressBar;
@@ -435,9 +405,9 @@
     .locals 0
 
     .prologue
-    .line 6705
+    .line 6707
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector$FlymeShowBootMessage;->showFlymeBootMessage()V
 
-    .line 6706
+    .line 6708
     return-void
 .end method
