@@ -116,27 +116,14 @@
 
     move-result v3
 
-    if-nez v3, :cond_1
-
-    .line 30
-    sget-boolean v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->DEBUG:Z
-
-    if-eqz v3, :cond_0
-
-    .line 31
-    const-string v3, "FlymeFontsHelper"
-
-    const-string v4, "The font path is not mount,create next time!"
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v3, :cond_0
 
     .line 53
-    :cond_0
     :goto_0
     return-void
 
     .line 35
-    :cond_1
+    :cond_0
     new-instance v1, Ljava/io/File;
 
     const-string v3, "data/data/com.meizu.customizecenter/font/flymeFont.ttf"
@@ -149,7 +136,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_1
 
     .line 37
     const-string v3, "data/data/com.meizu.customizecenter/font/flymeFont.ttf"
@@ -193,7 +180,7 @@
     .line 40
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "customFontFile":Ljava/io/File;
-    :cond_2
+    :cond_1
     :try_start_1
     new-instance v1, Ljava/io/File;
 
@@ -208,7 +195,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
     .line 42
     const-string v3, "data/data/com.meizu.customizecenter/font/flymeFont.otf"
@@ -225,7 +212,7 @@
     goto :goto_1
 
     .line 45
-    :cond_3
+    :cond_2
     const/4 v3, 0x0
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;

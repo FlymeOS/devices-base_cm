@@ -17,18 +17,14 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
-.field final synthetic val$context:Landroid/content/Context;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/server/pm/UpdateAppsReceiver;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/server/pm/UpdateAppsReceiver;)V
     .locals 0
 
     .prologue
-    .line 95
+    .line 98
     iput-object p1, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
-
-    iput-object p2, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -41,7 +37,7 @@
     .locals 7
 
     .prologue
-    .line 99
+    .line 102
     :try_start_0
     new-instance v3, Ljava/io/File;
 
@@ -49,7 +45,7 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 100
+    .line 103
     .local v3, "verifyFile":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -57,14 +53,14 @@
 
     if-nez v4, :cond_1
 
-    .line 101
+    .line 104
     const-string v4, "UpdateAppsReceiver"
 
     const-string v5, "/data/app/.need_init do not exist"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
+    .line 105
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     const/4 v5, 0x0
@@ -72,18 +68,8 @@
     # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mVerifyFileExist:Z
     invoke-static {v4, v5}, Lcom/android/server/pm/UpdateAppsReceiver;->access$002(Lcom/android/server/pm/UpdateAppsReceiver;Z)Z
 
-    .line 113
+    .line 117
     :goto_0
-    iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->val$context:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v4
-
-    # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->access$102(Landroid/content/pm/PackageManager;)Landroid/content/pm/PackageManager;
-
-    .line 114
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$100()Landroid/content/pm/PackageManager;
 
@@ -91,20 +77,20 @@
 
     if-nez v4, :cond_2
 
-    .line 115
+    .line 118
     const-string v4, "UpdateAppsReceiver"
 
     const-string v5, "mPm is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
+    .line 155
     .end local v3    # "verifyFile":Ljava/io/File;
     :cond_0
     :goto_1
     return-void
 
-    .line 105
+    .line 108
     .restart local v3    # "verifyFile":Ljava/io/File;
     :cond_1
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
@@ -116,7 +102,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 107
+    .line 110
     :try_start_1
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_1
@@ -124,11 +110,11 @@
 
     goto :goto_0
 
-    .line 108
+    .line 111
     :catch_0
     move-exception v0
 
-    .line 109
+    .line 112
     .local v0, "ex":Ljava/lang/Exception;
     :try_start_2
     const-string v4, "UpdateAppsReceiver"
@@ -153,20 +139,20 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
+    .line 113
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
-    .line 148
+    .line 151
     .end local v0    # "ex":Ljava/lang/Exception;
     .end local v3    # "verifyFile":Ljava/io/File;
     :catch_1
     move-exception v0
 
-    .line 149
+    .line 152
     .restart local v0    # "ex":Ljava/lang/Exception;
     const-string v4, "UpdateAppsReceiver"
 
@@ -190,12 +176,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
+    .line 153
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 119
+    .line 122
     .end local v0    # "ex":Ljava/lang/Exception;
     .restart local v3    # "verifyFile":Ljava/io/File;
     :cond_2
@@ -204,7 +190,7 @@
     :try_start_3
     invoke-static {v4}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 121
+    .line 124
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$100()Landroid/content/pm/PackageManager;
 
@@ -219,7 +205,7 @@
     # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mInstalledList:Ljava/util/List;
     invoke-static {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->access$202(Ljava/util/List;)Ljava/util/List;
 
-    .line 123
+    .line 126
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mInstalledList:Ljava/util/List;
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$200()Ljava/util/List;
 
@@ -232,7 +218,7 @@
     # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mInstalledListSize:I
     invoke-static {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->access$302(I)I
 
-    .line 125
+    .line 128
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     new-instance v5, Ljava/io/File;
@@ -246,7 +232,7 @@
 
     move-result-object v2
 
-    .line 126
+    .line 129
     .local v2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
@@ -257,7 +243,7 @@
 
     if-nez v4, :cond_3
 
-    .line 127
+    .line 130
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     invoke-virtual {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->getFirstBootAlreadyOfUpdate()Z
@@ -266,19 +252,19 @@
 
     if-nez v4, :cond_0
 
-    .line 128
+    .line 131
     const-string v4, "UpdateAppsReceiver"
 
     const-string v5, "is firstboot"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
+    .line 132
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     invoke-virtual {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->setFirstBootAlreadyForUpdate()V
 
-    .line 130
+    .line 133
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->setPackageStateFirstTime(Ljava/util/List;)V
@@ -286,7 +272,7 @@
 
     goto/16 :goto_1
 
-    .line 135
+    .line 138
     :cond_3
     const-string v4, "UpdateAppsReceiver"
 
@@ -314,14 +300,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 139
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
-    .line 139
+    .line 142
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->checkPackageState(Ljava/util/List;)Ljava/util/List;
@@ -329,7 +315,7 @@
 
     move-result-object v1
 
-    .line 140
+    .line 143
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -346,7 +332,7 @@
     # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mUpdateInstallApks:[Ljava/io/File;
     invoke-static {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->access$702([Ljava/io/File;)[Ljava/io/File;
 
-    .line 142
+    .line 145
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mUpdateInstallApks:[Ljava/io/File;
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$700()[Ljava/io/File;
 
@@ -357,7 +343,7 @@
     # setter for: Lcom/android/server/pm/UpdateAppsReceiver;->mLenght:I
     invoke-static {v4}, Lcom/android/server/pm/UpdateAppsReceiver;->access$802(I)I
 
-    .line 143
+    .line 146
     const-string v4, "UpdateAppsReceiver"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -385,7 +371,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
+    .line 147
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mLenght:I
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$800()I
 
@@ -393,7 +379,7 @@
 
     if-lez v4, :cond_0
 
-    .line 145
+    .line 148
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver$1;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;

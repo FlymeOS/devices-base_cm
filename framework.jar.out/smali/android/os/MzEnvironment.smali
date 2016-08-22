@@ -12,6 +12,8 @@
 
 .field public static DIRECTORY_SAFE_BOX_VIDEO:Ljava/lang/String; = null
 
+.field public static FLYME_SAFE_BOX:Ljava/lang/String; = null
+
 .field private static final TAG:Ljava/lang/String; = "MzEnvironment"
 
 
@@ -39,6 +41,11 @@
     const-string v0, ".@meizu_protbox@/Photo"
 
     sput-object v0, Landroid/os/MzEnvironment;->DIRECTORY_SAFE_BOX_PHOTO:Ljava/lang/String;
+
+    .line 40
+    const-string v0, ".flymeSafeBox"
+
+    sput-object v0, Landroid/os/MzEnvironment;->FLYME_SAFE_BOX:Ljava/lang/String;
 
     return-void
 .end method
