@@ -14136,13 +14136,19 @@
 
     .line 4767
     .local v17, "rect":Landroid/graphics/Rect;
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ListView;->isLayoutRtl()Z
+
+    move-result v20
+
+    if-eqz v20, :cond_12
+
     move-object/from16 v0, v17
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
     move/from16 v20, v0
 
-    const/16 v21, 0x0
+    const/16 v21, 0x1
 
     aget v21, v16, v21
 
@@ -14161,6 +14167,51 @@
 
     move/from16 v20, v0
 
+    const/16 v21, 0x0
+
+    aget v21, v16, v21
+
+    sub-int v20, v20, v21
+
+    move/from16 v0, v20
+
+    move-object/from16 v1, v17
+
+    iput v0, v1, Landroid/graphics/Rect;->right:I
+
+    :goto_6
+    move-object/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    goto/16 :goto_0
+
+    :cond_12
+    move-object/from16 v0, v17
+
+    iget v0, v0, Landroid/graphics/Rect;->left:I
+
+    move/from16 v20, v0
+
+    const/16 v21, 0x0
+
+    aget v21, v16, v21
+
+    add-int v20, v20, v21
+
+    move/from16 v0, v20
+
+    move-object/from16 v1, v17
+
+    iput v0, v1, Landroid/graphics/Rect;->left:I
+
+    .line 4769
+    move-object/from16 v0, v17
+
+    iget v0, v0, Landroid/graphics/Rect;->right:I
+
+    move/from16 v20, v0
+
     const/16 v21, 0x1
 
     aget v21, v16, v21
@@ -14173,12 +14224,7 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 4769
-    move-object/from16 v0, v17
-
-    invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    goto/16 :goto_0
+    goto :goto_6
 .end method
 
 .method private flymeEndDragSelection()V

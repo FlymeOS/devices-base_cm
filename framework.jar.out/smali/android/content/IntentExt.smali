@@ -42,6 +42,8 @@
 
 .field public static final MZ_ACTION_APP_DOWN_PROMPT:Ljava/lang/String; = "meizu.intent.action.APP_DOWNLOAD_PROMPT"
 
+.field public static final MZ_ACTION_CLEAR_ALL_NOTIFICATION:Ljava/lang/String; = "meizu.intent.action.CLEAR_ALL_NOTIFICATIONS"
+
 .field public static final MZ_ACTION_DEVICE_CONNECTION_STATE_CHANGED:Ljava/lang/String; = "meizu.intent.action.DEVICE_CONNECTION_STATE_CHANGED"
 
 .field public static final MZ_ACTION_DO_NOT_DISTURB_END:Ljava/lang/String; = "meizu.intent.action.DO_NOT_DISTURB_END"
