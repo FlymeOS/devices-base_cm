@@ -63,6 +63,8 @@
 
 .field public static final FLYME_LOGOUT_CLEAR_FLAG:Ljava/lang/String; = "flyme_logout_clear_flag"
 
+.field public static final HALL_SWITCH:Ljava/lang/String; = "hall_switch"
+
 .field public static final HAPTIC_FEEDBACK_KEYBOARD_ENABLE:Ljava/lang/String; = "haptic_feedback_keyboard_enable"
 
 .field public static final HAPTIC_FEEDBACK_KEYBOARD_STRENGTH:Ljava/lang/String; = "haptic_feedback_keyboard_strength"

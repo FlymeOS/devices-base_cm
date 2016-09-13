@@ -15,6 +15,10 @@
 
 
 # static fields
+.field public static final APP_CLONE_ENABLED:Ljava/lang/String; = "mz_app_clone_enabled"
+
+.field public static final APP_CLONE_ENABLED_PACKAGES:Ljava/lang/String; = "mz_app_clone_eabled_pkgs"
+
 .field public static final ESE_SMARTMX:Ljava/lang/String; = "smartmx_ese"
 
 .field public static final MEIZU_DEVICE_NAME:Ljava/lang/String; = "meizu_device_name"
@@ -124,7 +128,7 @@
     .locals 2
 
     .prologue
-    .line 1035
+    .line 1042
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x1e
@@ -133,21 +137,21 @@
 
     sput-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
-    .line 1036
+    .line 1043
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_inside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1037
+    .line 1044
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_outside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1038
+    .line 1045
     return-void
 .end method
 
@@ -155,7 +159,7 @@
     .locals 0
 
     .prologue
-    .line 882
+    .line 889
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
