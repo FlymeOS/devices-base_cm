@@ -24,6 +24,8 @@
 
 .field public static final FILE_CONFIG_NAME:Ljava/lang/String; = "config.xml"
 
+.field public static final FILE_ICONFILTER_CONFIG_NAME:Ljava/lang/String; = "filter_config.xml"
+
 .field public static final FILE_THEME_VALUE:Ljava/lang/String; = "theme_values.xml"
 
 .field public static final FLYME_ICON_PACKAGE_NAME_LIST:Ljava/util/ArrayList;

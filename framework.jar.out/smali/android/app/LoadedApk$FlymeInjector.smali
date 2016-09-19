@@ -27,9 +27,27 @@
     .locals 0
 
     .prologue
-    .line 1256
+    .line 1263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+.method static cleanFlymeTypeface()V
+    .locals 1
+
+    .prologue
+    .line 1284
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->cleanflymeTypeface()V
+
+    .line 1285
+    invoke-static {}, Landroid/content/res/flymetheme/iconfilter/IconFilter;->getInstance()Landroid/content/res/flymetheme/iconfilter/IconFilter;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/flymetheme/iconfilter/IconFilter;->cleanFilter()V
+
+    .line 1287
     return-void
 .end method
 
@@ -37,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 1272
+    .line 1279
     sget v0, Landroid/app/LoadedApk$FlymeInjector;->flymePackageId:I
 
     return v0
@@ -51,10 +69,10 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 1264
+    .line 1271
     invoke-virtual {p0, p1, p2, p3}, Landroid/app/LoadedApk;->flymeInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
-    .line 1265
+    .line 1272
     const-string v0, "flyme"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -63,15 +81,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1266
+    .line 1273
     sput p3, Landroid/app/LoadedApk$FlymeInjector;->flymePackageId:I
 
-    .line 1267
+    .line 1274
     const-string v0, "com.flyme.internal"
 
     invoke-virtual {p0, p1, v0, p3}, Landroid/app/LoadedApk;->flymeInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
-    .line 1269
+    .line 1276
     :cond_0
     return-void
 .end method
