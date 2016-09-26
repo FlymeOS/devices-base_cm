@@ -52,7 +52,7 @@
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$2;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallReady()V
-    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1000(Lcom/android/server/pm/UpdateAppsReceiver;)V
+    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$900(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     goto :goto_0
 
@@ -61,7 +61,7 @@
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$2;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallStart()V
-    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1100(Lcom/android/server/pm/UpdateAppsReceiver;)V
+    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1000(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$2;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->udpateInstallComplete()V
-    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1200(Lcom/android/server/pm/UpdateAppsReceiver;)V
+    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1100(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     goto :goto_0
 
@@ -87,13 +87,13 @@
     move-result v0
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallFailed(I)V
-    invoke-static {v1, v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1300(Lcom/android/server/pm/UpdateAppsReceiver;I)V
+    invoke-static {v1, v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1200(Lcom/android/server/pm/UpdateAppsReceiver;I)V
 
     .line 209
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$2;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # invokes: Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallStart()V
-    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1100(Lcom/android/server/pm/UpdateAppsReceiver;)V
+    invoke-static {v0}, Lcom/android/server/pm/UpdateAppsReceiver;->access$1000(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     goto :goto_0
 

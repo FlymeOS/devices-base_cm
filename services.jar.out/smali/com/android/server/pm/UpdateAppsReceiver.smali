@@ -26,7 +26,7 @@
 
 .field private static final UPDATE_INSTALL_FAILED:I = 0x68
 
-.field private static final UPDATE_INSTALL_PATH:Ljava/lang/String; = "/custom/"
+.field private static final UPDATE_INSTALL_PATH:Ljava/lang/String; = "/custom/gms/apk/"
 
 .field private static final UPDATE_INSTALL_READY:I = 0x65
 
@@ -177,21 +177,21 @@
 
     iput-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName2:Ljava/lang/String;
 
-    .line 198
+    .line 191
     new-instance v0, Lcom/android/server/pm/UpdateAppsReceiver$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/UpdateAppsReceiver$2;-><init>(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     iput-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 326
+    .line 318
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
 
-    .line 455
+    .line 411
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -240,7 +240,7 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallReady()V
+    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallStart()V
 
     return-void
 .end method
@@ -251,23 +251,12 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallStart()V
-
-    return-void
-.end method
-
-.method static synthetic access$1200(Lcom/android/server/pm/UpdateAppsReceiver;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
-
-    .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->udpateInstallComplete()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/pm/UpdateAppsReceiver;I)V
+.method static synthetic access$1200(Lcom/android/server/pm/UpdateAppsReceiver;I)V
     .locals 0
     .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
     .param p1, "x1"    # I
@@ -279,7 +268,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500()I
+.method static synthetic access$1400()I
     .locals 1
 
     .prologue
@@ -289,7 +278,7 @@
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/pm/UpdateAppsReceiver;)Landroid/content/pm/FlymePackageManager;
+.method static synthetic access$1500(Lcom/android/server/pm/UpdateAppsReceiver;)Landroid/content/pm/FlymePackageManager;
     .locals 1
     .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
 
@@ -346,19 +335,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/pm/UpdateAppsReceiver;Ljava/util/List;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
-    .param p1, "x1"    # Ljava/util/List;
-
-    .prologue
-    .line 42
-    invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->setPackageStateFirstTime(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method static synthetic access$600(Lcom/android/server/pm/UpdateAppsReceiver;Ljava/util/List;)Ljava/util/List;
+.method static synthetic access$500(Lcom/android/server/pm/UpdateAppsReceiver;Ljava/util/List;)Ljava/util/List;
     .locals 1
     .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
     .param p1, "x1"    # Ljava/util/List;
@@ -372,7 +349,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700()[Ljava/io/File;
+.method static synthetic access$600()[Ljava/io/File;
     .locals 1
 
     .prologue
@@ -382,7 +359,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$702([Ljava/io/File;)[Ljava/io/File;
+.method static synthetic access$602([Ljava/io/File;)[Ljava/io/File;
     .locals 0
     .param p0, "x0"    # [Ljava/io/File;
 
@@ -393,7 +370,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$800()I
+.method static synthetic access$700()I
     .locals 1
 
     .prologue
@@ -403,7 +380,7 @@
     return v0
 .end method
 
-.method static synthetic access$802(I)I
+.method static synthetic access$702(I)I
     .locals 0
     .param p0, "x0"    # I
 
@@ -414,7 +391,7 @@
     return p0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/pm/UpdateAppsReceiver;)Landroid/os/Handler;
+.method static synthetic access$800(Lcom/android/server/pm/UpdateAppsReceiver;)Landroid/os/Handler;
     .locals 1
     .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
 
@@ -425,21 +402,32 @@
     return-object v0
 .end method
 
+.method static synthetic access$900(Lcom/android/server/pm/UpdateAppsReceiver;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/android/server/pm/UpdateAppsReceiver;
+
+    .prologue
+    .line 42
+    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->updateInstallReady()V
+
+    return-void
+.end method
+
 .method private checkAppsOp(Landroid/content/Context;)V
     .locals 9
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 408
+    .line 364
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
-    .line 409
+    .line 365
     .local v8, "pm":Landroid/content/pm/PackageManager;
     const/4 v7, 0x0
 
-    .line 411
+    .line 367
     .local v7, "info":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName:Ljava/lang/String;
@@ -452,11 +440,11 @@
 
     move-result-object v7
 
-    .line 415
+    .line 371
     :goto_0
     if-eqz v7, :cond_0
 
-    .line 416
+    .line 372
     const/16 v2, 0x18
 
     iget-object v3, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName:Ljava/lang/String;
@@ -471,15 +459,15 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/UpdateAppsReceiver;->setAppOpsPermission(Landroid/content/Context;ILjava/lang/String;II)V
 
-    .line 419
+    .line 375
     :cond_0
     return-void
 
-    .line 412
+    .line 368
     :catch_0
     move-exception v6
 
-    .line 413
+    .line 369
     .local v6, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v6}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -493,16 +481,16 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 422
+    .line 378
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 423
+    .line 379
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/4 v1, 0x0
 
-    .line 425
+    .line 381
     .local v1, "info":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName2:Ljava/lang/String;
@@ -515,14 +503,14 @@
 
     move-result-object v1
 
-    .line 429
+    .line 385
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 430
+    .line 386
     const/4 v3, 0x0
 
-    .line 432
+    .line 388
     .local v3, "serv":Landroid/content/pm/ServiceInfo;
     :try_start_1
     sget-object v4, Lcom/android/server/pm/UpdateAppsReceiver;->limitServiceComponentName:Landroid/content/ComponentName;
@@ -535,34 +523,34 @@
 
     move-result-object v3
 
-    .line 435
+    .line 391
     :goto_1
     if-eqz v3, :cond_1
 
-    .line 436
+    .line 392
     sget-object v4, Lcom/android/server/pm/UpdateAppsReceiver;->limitServiceComponentName:Landroid/content/ComponentName;
 
     const/4 v5, 0x2
 
     invoke-virtual {v2, v4, v5, v6}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
-    .line 442
+    .line 398
     .end local v3    # "serv":Landroid/content/pm/ServiceInfo;
     :cond_0
     :goto_2
     return-void
 
-    .line 426
+    .line 382
     :catch_0
     move-exception v0
 
-    .line 427
+    .line 383
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 439
+    .line 395
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v3    # "serv":Landroid/content/pm/ServiceInfo;
     :cond_1
@@ -574,7 +562,7 @@
 
     goto :goto_2
 
-    .line 433
+    .line 389
     :catch_1
     move-exception v4
 
@@ -586,23 +574,23 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 160
+    .line 153
     invoke-virtual {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->getFirstBootAlreadyOfOp()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 161
+    .line 154
     invoke-virtual {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->setFirstBootAlreadyForOp()V
 
-    .line 162
+    .line 155
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->checkAppsPermission(Landroid/content/Context;)V
 
-    .line 163
+    .line 156
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->checkAppsOp(Landroid/content/Context;)V
 
-    .line 165
+    .line 158
     :cond_0
     return-void
 .end method
@@ -613,7 +601,7 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 168
+    .line 161
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -622,15 +610,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 169
+    .line 162
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->checkAppsOp(Landroid/content/Context;)V
 
-    .line 173
+    .line 166
     :cond_0
     :goto_0
     return-void
 
-    .line 170
+    .line 163
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->limitPackageName2:Ljava/lang/String;
 
@@ -640,7 +628,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 171
+    .line 164
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->checkAppsPermission(Landroid/content/Context;)V
 
     goto :goto_0
@@ -663,13 +651,13 @@
     .end annotation
 
     .prologue
-    .line 390
+    .line 350
     .local p1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 391
+    .line 351
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -682,7 +670,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -690,7 +678,7 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 392
+    .line 352
     .local v0, "apkFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -698,7 +686,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 395
+    .line 355
     sget-object v4, Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -711,62 +699,19 @@
 
     move-result-object v3
 
-    .line 396
+    .line 356
     .local v3, "pkInfo":Landroid/content/pm/PackageInfo;
     if-eqz v3, :cond_0
 
-    .line 397
-    iget-object v4, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p0, v4}, Lcom/android/server/pm/UpdateAppsReceiver;->getPackageState(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    .line 398
-    const-string v4, "UpdateAppsReceiver"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "pakcageName :  "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v6, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, " is aleady uninstalled by user"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    .line 400
-    :cond_1
+    .line 357
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 404
+    .line 360
     .end local v0    # "apkFile":Ljava/io/File;
     .end local v3    # "pkInfo":Landroid/content/pm/PackageInfo;
-    :cond_2
+    :cond_1
     return-object v2
 .end method
 
@@ -777,7 +722,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 298
+    .line 291
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -786,12 +731,12 @@
 
     move-object v0, v1
 
-    .line 306
+    .line 299
     :cond_0
     :goto_0
     return-object v0
 
-    .line 301
+    .line 294
     :cond_1
     sget-object v2, Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
 
@@ -805,7 +750,7 @@
 
     move-result-object v0
 
-    .line 303
+    .line 296
     .local v0, "pkInfo":Landroid/content/pm/PackageInfo;
     if-eqz v0, :cond_2
 
@@ -816,273 +761,219 @@
     :cond_2
     move-object v0, v1
 
-    .line 304
+    .line 297
     goto :goto_0
 .end method
 
 .method private readXml()V
-    .locals 12
+    .locals 10
 
     .prologue
-    const/4 v11, 0x0
+    const/4 v8, 0x0
 
-    .line 503
-    iget-object v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
+    .line 446
+    iput-boolean v8, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
 
-    if-eqz v10, :cond_0
+    .line 447
+    iput-boolean v8, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
 
-    .line 504
-    iget-object v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
+    .line 449
+    new-instance v2, Ljava/io/File;
 
-    invoke-virtual {v10}, Ljava/util/HashMap;->clear()V
+    iget-object v8, p0, Lcom/android/server/pm/UpdateAppsReceiver;->dataDir:Ljava/io/File;
 
-    .line 506
-    :cond_0
-    iput-boolean v11, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
+    const-string v9, "system/updateapps.xml"
 
-    .line 507
-    iput-boolean v11, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
+    invoke-direct {v2, v8, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 509
-    new-instance v3, Ljava/io/File;
+    .line 451
+    .local v2, "newxmlfile":Ljava/io/File;
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
-    iget-object v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->dataDir:Ljava/io/File;
+    move-result v8
 
-    const-string v11, "system/updateapps.xml"
+    if-nez v8, :cond_0
 
-    invoke-direct {v3, v10, v11}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 511
-    .local v3, "newxmlfile":Ljava/io/File;
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
-
-    move-result v10
-
-    if-nez v10, :cond_1
-
-    .line 547
+    .line 483
     :goto_0
     return-void
 
-    .line 514
-    :cond_1
-    const/4 v6, 0x0
+    .line 454
+    :cond_0
+    const/4 v4, 0x0
 
-    .line 516
-    .local v6, "str":Ljava/io/FileInputStream;
+    .line 456
+    .local v4, "str":Ljava/io/FileInputStream;
     :try_start_0
-    new-instance v7, Ljava/io/FileInputStream;
+    new-instance v5, Ljava/io/FileInputStream;
 
-    invoke-direct {v7, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v5, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 517
-    .end local v6    # "str":Ljava/io/FileInputStream;
-    .local v7, "str":Ljava/io/FileInputStream;
+    .line 457
+    .end local v4    # "str":Ljava/io/FileInputStream;
+    .local v5, "str":Ljava/io/FileInputStream;
     :try_start_1
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
-    move-result-object v4
+    move-result-object v3
 
-    .line 518
-    .local v4, "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
-    invoke-virtual {v4}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
+    .line 458
+    .local v3, "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
+    invoke-virtual {v3}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
-    move-result-object v9
+    move-result-object v7
 
-    .line 519
-    .local v9, "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
-    const-string v10, "UTF-8"
+    .line 459
+    .local v7, "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
+    const-string v8, "UTF-8"
 
-    invoke-interface {v9, v7, v10}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-interface {v7, v5, v8}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 521
-    invoke-interface {v9}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+    .line 461
+    invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
 
-    .line 523
+    .line 463
     .local v1, "eventType":I
     :goto_1
-    const/4 v10, 0x1
+    const/4 v8, 0x1
 
-    if-eq v1, v10, :cond_5
+    if-eq v1, v8, :cond_3
 
-    .line 524
+    .line 464
     packed-switch v1, :pswitch_data_0
 
-    .line 541
-    :cond_2
+    .line 477
+    :cond_1
     :goto_2
     :pswitch_0
-    invoke-interface {v9}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+    invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
     goto :goto_1
 
-    .line 528
+    .line 468
     :pswitch_1
-    const-string v10, "UpdateApps"
+    const-string v8, "UpdateApps"
 
-    invoke-interface {v9}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+    invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v9
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v8
 
-    if-eqz v10, :cond_3
+    if-eqz v8, :cond_2
 
-    .line 529
-    const/4 v10, 0x0
+    .line 469
+    const/4 v8, 0x0
 
-    const-string v11, "value"
+    const-string v9, "value"
 
-    invoke-interface {v9, v10, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v7, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v6
 
-    .line 530
-    .local v8, "value":Ljava/lang/String;
-    invoke-static {v8}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+    .line 470
+    .local v6, "value":Ljava/lang/String;
+    invoke-static {v6}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
-    move-result v10
+    move-result v8
 
-    iput-boolean v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
+    iput-boolean v8, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_2
 
-    .line 544
+    .line 480
     .end local v1    # "eventType":I
-    .end local v4    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
-    .end local v8    # "value":Ljava/lang/String;
-    .end local v9    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
+    .end local v3    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
+    .end local v6    # "value":Ljava/lang/String;
+    .end local v7    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
     :catch_0
     move-exception v0
 
-    move-object v6, v7
+    move-object v4, v5
 
-    .line 545
-    .end local v7    # "str":Ljava/io/FileInputStream;
+    .line 481
+    .end local v5    # "str":Ljava/io/FileInputStream;
     .local v0, "e":Ljava/lang/Exception;
-    .restart local v6    # "str":Ljava/io/FileInputStream;
+    .restart local v4    # "str":Ljava/io/FileInputStream;
     :goto_3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 531
+    .line 471
     .end local v0    # "e":Ljava/lang/Exception;
-    .end local v6    # "str":Ljava/io/FileInputStream;
+    .end local v4    # "str":Ljava/io/FileInputStream;
     .restart local v1    # "eventType":I
-    .restart local v4    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
-    .restart local v7    # "str":Ljava/io/FileInputStream;
-    .restart local v9    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
-    :cond_3
+    .restart local v3    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
+    .restart local v5    # "str":Ljava/io/FileInputStream;
+    .restart local v7    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
+    :cond_2
     :try_start_2
-    const-string v10, "DefaultOp"
+    const-string v8, "DefaultOp"
 
-    invoke-interface {v9}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+    invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v9
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v8
 
-    if-eqz v10, :cond_4
+    if-eqz v8, :cond_1
 
-    .line 532
-    const/4 v10, 0x0
+    .line 472
+    const/4 v8, 0x0
 
-    const-string v11, "value"
+    const-string v9, "value"
 
-    invoke-interface {v9, v10, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v7, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v6
 
-    .line 533
-    .restart local v8    # "value":Ljava/lang/String;
-    invoke-static {v8}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+    .line 473
+    .restart local v6    # "value":Ljava/lang/String;
+    invoke-static {v6}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
-    move-result v10
+    move-result v8
 
-    iput-boolean v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
-
-    goto :goto_2
-
-    .line 534
-    .end local v8    # "value":Ljava/lang/String;
-    :cond_4
-    const-string v10, "PackageState"
-
-    invoke-interface {v9}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_2
-
-    .line 535
-    const/4 v10, 0x0
-
-    const-string v11, "name"
-
-    invoke-interface {v9, v10, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 536
-    .local v2, "key":Ljava/lang/String;
-    const/4 v10, 0x0
-
-    const-string v11, "value"
-
-    invoke-interface {v9, v10, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 537
-    .local v5, "set":Ljava/lang/String;
-    iget-object v10, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
-
-    invoke-virtual {v10, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v8, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
 
     goto :goto_2
 
-    .line 543
-    .end local v2    # "key":Ljava/lang/String;
-    .end local v5    # "set":Ljava/lang/String;
-    :cond_5
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+    .line 479
+    .end local v6    # "value":Ljava/lang/String;
+    :cond_3
+    invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    move-object v6, v7
+    move-object v4, v5
 
-    .line 546
-    .end local v7    # "str":Ljava/io/FileInputStream;
-    .restart local v6    # "str":Ljava/io/FileInputStream;
-    goto/16 :goto_0
+    .line 482
+    .end local v5    # "str":Ljava/io/FileInputStream;
+    .restart local v4    # "str":Ljava/io/FileInputStream;
+    goto :goto_0
 
-    .line 544
+    .line 480
     .end local v1    # "eventType":I
-    .end local v4    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
-    .end local v9    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
+    .end local v3    # "pullFactory":Lorg/xmlpull/v1/XmlPullParserFactory;
+    .end local v7    # "xmlPullParser":Lorg/xmlpull/v1/XmlPullParser;
     :catch_1
     move-exception v0
 
     goto :goto_3
 
-    .line 524
+    .line 464
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1107,16 +998,16 @@
     .end annotation
 
     .prologue
-    .line 176
+    .line 169
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v2
 
-    .line 177
+    .line 170
     .local v2, "files":[Ljava/io/File;
     if-eqz v2, :cond_2
 
-    .line 178
+    .line 171
     move-object v0, v2
 
     .local v0, "arr$":[Ljava/io/File;
@@ -1131,7 +1022,7 @@
 
     aget-object v1, v0, v3
 
-    .line 179
+    .line 172
     .local v1, "f":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -1139,17 +1030,17 @@
 
     if-eqz v7, :cond_1
 
-    .line 180
+    .line 173
     invoke-direct {p0, v1}, Lcom/android/server/pm/UpdateAppsReceiver;->scanAllFiles(Ljava/io/File;)Ljava/util/List;
 
-    .line 178
+    .line 171
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 182
+    .line 175
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -1161,11 +1052,11 @@
 
     move-result v5
 
-    .line 183
+    .line 176
     .local v5, "lastDot":I
     if-ltz v5, :cond_0
 
-    .line 186
+    .line 179
     const-string v7, "APK"
 
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -1186,16 +1077,16 @@
 
     move-result v4
 
-    .line 188
+    .line 181
     .local v4, "isApk":Z
     if-eqz v4, :cond_0
 
-    .line 189
+    .line 182
     iget-object v7, p0, Lcom/android/server/pm/UpdateAppsReceiver;->resultList:Ljava/util/List;
 
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 190
+    .line 183
     const-string v7, "UpdateAppsReceiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1224,7 +1115,7 @@
 
     goto :goto_1
 
-    .line 195
+    .line 188
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v1    # "f":Ljava/io/File;
     .end local v3    # "i$":I
@@ -1246,7 +1137,7 @@
     .param p5, "mode"    # I
 
     .prologue
-    .line 446
+    .line 402
     const-string v1, "appops"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1255,142 +1146,11 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 448
+    .line 404
     .local v0, "mAppOps":Landroid/app/AppOpsManager;
     invoke-virtual {v0, p2, p4, p3, p5}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    .line 449
-    return-void
-.end method
-
-.method private setPackageStateFirstTime(Ljava/util/List;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Ljava/io/File;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 375
-    .local p1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .local v1, "i$":Ljava/util/Iterator;
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/File;
-
-    .line 376
-    .local v0, "apkFile":Ljava/io/File;
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 379
-    sget-object v3, Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
-
-    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v4, v5}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v2
-
-    .line 380
-    .local v2, "pkInfo":Landroid/content/pm/PackageInfo;
-    if-eqz v2, :cond_0
-
-    .line 381
-    const-string v3, "UpdateAppsReceiver"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, " this is upgrade first time by clear userdadta and  mVerifyFileExist : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-boolean v5, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mVerifyFileExist:Z
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 383
-    const-string v3, "UpdateAppsReceiver"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "pakcageName :  "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-object v5, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, " set state  true"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 384
-    iget-object v3, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    const/4 v4, 0x1
-
-    invoke-virtual {p0, v3, v4}, Lcom/android/server/pm/UpdateAppsReceiver;->setPackageState(Ljava/lang/String;Z)V
-
-    goto :goto_0
-
-    .line 387
-    .end local v0    # "apkFile":Ljava/io/File;
-    .end local v2    # "pkInfo":Landroid/content/pm/PackageInfo;
-    :cond_1
+    .line 405
     return-void
 .end method
 
@@ -1398,7 +1158,7 @@
     .locals 3
 
     .prologue
-    .line 265
+    .line 258
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
@@ -1411,7 +1171,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 266
+    .line 259
     return-void
 .end method
 
@@ -1420,14 +1180,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 98
+    .line 92
     new-instance v0, Lcom/android/server/pm/UpdateAppsReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/UpdateAppsReceiver$1;-><init>(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     invoke-virtual {v0}, Lcom/android/server/pm/UpdateAppsReceiver$1;->start()V
 
-    .line 157
+    .line 150
     return-void
 .end method
 
@@ -1436,7 +1196,7 @@
     .param p1, "returnCode"    # I
 
     .prologue
-    .line 269
+    .line 262
     const-string v0, "UpdateAppsReceiver"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1459,7 +1219,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
+    .line 263
     return-void
 .end method
 
@@ -1467,7 +1227,7 @@
     .locals 3
 
     .prologue
-    .line 220
+    .line 213
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
@@ -1480,7 +1240,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 221
+    .line 214
     return-void
 .end method
 
@@ -1488,7 +1248,7 @@
     .locals 9
 
     .prologue
-    .line 224
+    .line 217
     const-string v5, "UpdateAppsReceiver"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1561,7 +1321,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
+    .line 219
     sget-object v5, Lcom/android/server/pm/UpdateAppsReceiver;->mUpdateInstallApks:[Ljava/io/File;
 
     if-eqz v5, :cond_0
@@ -1576,21 +1336,21 @@
 
     if-nez v5, :cond_1
 
-    .line 262
+    .line 255
     :cond_0
     :goto_0
     return-void
 
-    .line 229
+    .line 222
     :cond_1
     sget-boolean v5, Lcom/android/server/pm/UpdateAppsReceiver;->mMediaShared:Z
 
     if-nez v5, :cond_0
 
-    .line 231
+    .line 224
     monitor-enter p0
 
-    .line 232
+    .line 225
     :try_start_0
     sget-object v5, Lcom/android/server/pm/UpdateAppsReceiver;->mUpdateInstallApks:[Ljava/io/File;
 
@@ -1600,14 +1360,14 @@
 
     sput-object v5, Lcom/android/server/pm/UpdateAppsReceiver;->mInstallApk:Ljava/io/File;
 
-    .line 233
+    .line 226
     sget v5, Lcom/android/server/pm/UpdateAppsReceiver;->mIndex:I
 
     add-int/lit8 v5, v5, 0x1
 
     sput v5, Lcom/android/server/pm/UpdateAppsReceiver;->mIndex:I
 
-    .line 234
+    .line 227
     new-instance v0, Ljava/io/File;
 
     sget-object v5, Lcom/android/server/pm/UpdateAppsReceiver;->mInstallApk:Ljava/io/File;
@@ -1618,23 +1378,23 @@
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 235
+    .line 228
     .local v0, "file":Ljava/io/File;
     invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 236
+    .line 229
     .local v4, "packageURI":Landroid/net/Uri;
     invoke-direct {p0, v0}, Lcom/android/server/pm/UpdateAppsReceiver;->isValidApk(Ljava/io/File;)Landroid/content/pm/PackageInfo;
 
     move-result-object v3
 
-    .line 237
+    .line 230
     .local v3, "packageInfo":Landroid/content/pm/PackageInfo;
     const/4 v1, 0x0
 
-    .line 238
+    .line 231
     .local v1, "installFlags":I
     const-string v5, "UpdateAppsReceiver"
 
@@ -1674,10 +1434,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
+    .line 232
     if-eqz v3, :cond_3
 
-    .line 240
+    .line 233
     iget-object v5, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     iget v6, v3, Landroid/content/pm/PackageInfo;->versionCode:I
@@ -1688,7 +1448,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 242
+    .line 235
     iget-object v5, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
 
     iget-object v6, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
@@ -1707,12 +1467,12 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 244
+    .line 237
     monitor-exit p0
 
     goto :goto_0
 
-    .line 261
+    .line 254
     .end local v0    # "file":Ljava/io/File;
     .end local v1    # "installFlags":I
     .end local v3    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -1726,7 +1486,7 @@
 
     throw v5
 
-    .line 246
+    .line 239
     .restart local v0    # "file":Ljava/io/File;
     .restart local v1    # "installFlags":I
     .restart local v3    # "packageInfo":Landroid/content/pm/PackageInfo;
@@ -1763,13 +1523,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 241
     or-int/lit8 v1, v1, 0x2
 
-    .line 250
+    .line 243
     or-int/lit16 v1, v1, 0x80
 
-    .line 257
+    .line 250
     sget-object v5, Lcom/android/server/pm/UpdateAppsReceiver;->mPm:Landroid/content/pm/PackageManager;
 
     new-instance v6, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;
@@ -1782,7 +1542,7 @@
 
     invoke-virtual {v5, v4, v6, v1, v7}, Landroid/content/pm/PackageManager;->installPackage(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;)V
 
-    .line 258
+    .line 251
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1821,7 +1581,7 @@
 
     move-result-object v2
 
-    .line 259
+    .line 252
     .local v2, "installNumber":Ljava/lang/String;
     const-string v5, "UpdateAppsReceiver"
 
@@ -1861,12 +1621,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
+    .line 254
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 252
+    .line 245
     .end local v2    # "installNumber":Ljava/lang/String;
     :cond_3
     iget-object v5, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
@@ -1887,7 +1647,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 254
+    .line 247
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1901,23 +1661,23 @@
     .locals 2
 
     .prologue
-    .line 343
+    .line 335
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 344
+    .line 336
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
 
-    .line 345
+    .line 337
     iget-boolean v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
 
     monitor-exit v1
 
     return v0
 
-    .line 346
+    .line 338
     :catchall_0
     move-exception v0
 
@@ -1932,23 +1692,23 @@
     .locals 2
 
     .prologue
-    .line 328
+    .line 320
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 329
+    .line 321
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
 
-    .line 330
+    .line 322
     iget-boolean v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
 
     monitor-exit v1
 
     return v0
 
-    .line 331
+    .line 323
     :catchall_0
     move-exception v0
 
@@ -1959,66 +1719,13 @@
     throw v0
 .end method
 
-.method public getPackageState(Ljava/lang/String;)Z
-    .locals 3
-    .param p1, "pkgName"    # Ljava/lang/String;
-
-    .prologue
-    .line 367
-    iget-object v2, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    .line 368
-    :try_start_0
-    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
-
-    .line 369
-    iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 370
-    .local v0, "strValue":Ljava/lang/String;
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result v1
-
-    :goto_0
-    monitor-exit v2
-
-    return v1
-
-    :cond_0
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    .line 371
-    .end local v0    # "strValue":Ljava/lang/String;
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
 .method public isPackageAlreadyInstalled(Ljava/lang/String;I)Z
     .locals 6
     .param p1, "pkgName"    # Ljava/lang/String;
     .param p2, "versionCode"    # I
 
     .prologue
-    .line 274
+    .line 267
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2027,7 +1734,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 275
+    .line 268
     sget-object v3, Lcom/android/server/pm/UpdateAppsReceiver;->mInstalledList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2036,7 +1743,7 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 276
+    .line 269
     .local v2, "tmp":Landroid/content/pm/PackageInfo;
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -2046,7 +1753,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 277
+    .line 270
     const-string v3, "UpdateAppsReceiver"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2105,7 +1812,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
+    .line 280
     iget-object v3, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mFpm:Landroid/content/pm/FlymePackageManager;
 
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -2116,7 +1823,7 @@
 
     move-result-object v1
 
-    .line 288
+    .line 281
     .local v1, "mPackInfo":Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_0
 
@@ -2124,23 +1831,23 @@
 
     if-le v3, p2, :cond_0
 
-    .line 289
+    .line 282
     const/4 v3, 0x1
 
-    .line 294
+    .line 287
     .end local v1    # "mPackInfo":Landroid/content/pm/PackageInfo;
     .end local v2    # "tmp":Landroid/content/pm/PackageInfo;
     :goto_1
     return v3
 
-    .line 274
+    .line 267
     .restart local v2    # "tmp":Landroid/content/pm/PackageInfo;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 294
+    .line 287
     .end local v2    # "tmp":Landroid/content/pm/PackageInfo;
     :cond_1
     const/4 v3, 0x0
@@ -2187,12 +1894,12 @@
     .line 84
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver;->checkDefaultOpForBootCompleted(Landroid/content/Context;)V
 
-    .line 95
+    .line 89
     :cond_0
     :goto_0
     return-void
 
-    .line 87
+    .line 85
     :cond_1
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
@@ -2204,44 +1911,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
-
-    .line 88
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 89
-    .local v0, "packageName":Ljava/lang/String;
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/UpdateAppsReceiver;->setPackageState(Ljava/lang/String;Z)V
-
-    .line 90
-    invoke-direct {p0, p1, v0}, Lcom/android/server/pm/UpdateAppsReceiver;->checkDefaultOpForPackageAdded(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 91
-    .end local v0    # "packageName":Ljava/lang/String;
-    :cond_2
-    const-string v1, "android.intent.action.PACKAGE_REMOVED"
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
     if-eqz v1, :cond_0
 
-    .line 92
+    .line 86
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -2250,11 +1922,9 @@
 
     move-result-object v0
 
-    .line 93
-    .restart local v0    # "packageName":Ljava/lang/String;
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/pm/UpdateAppsReceiver;->setPackageState(Ljava/lang/String;Z)V
+    .line 87
+    .local v0, "packageName":Ljava/lang/String;
+    invoke-direct {p0, p1, v0}, Lcom/android/server/pm/UpdateAppsReceiver;->checkDefaultOpForPackageAdded(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2263,30 +1933,30 @@
     .locals 2
 
     .prologue
-    .line 350
+    .line 342
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 351
+    .line 343
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
 
-    .line 352
+    .line 344
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
 
-    .line 353
+    .line 345
     invoke-virtual {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->writeXml()V
 
-    .line 354
+    .line 346
     monitor-exit v1
 
-    .line 355
+    .line 347
     return-void
 
-    .line 354
+    .line 346
     :catchall_0
     move-exception v0
 
@@ -2301,79 +1971,30 @@
     .locals 2
 
     .prologue
-    .line 335
+    .line 327
     iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 336
+    .line 328
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
 
-    .line 337
+    .line 329
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
 
-    .line 338
+    .line 330
     invoke-virtual {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->writeXml()V
 
-    .line 339
+    .line 331
     monitor-exit v1
 
-    .line 340
+    .line 332
     return-void
 
-    .line 339
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public setPackageState(Ljava/lang/String;Z)V
-    .locals 3
-    .param p1, "pkgName"    # Ljava/lang/String;
-    .param p2, "install"    # Z
-
-    .prologue
-    .line 358
-    iget-object v1, p0, Lcom/android/server/pm/UpdateAppsReceiver;->mLocked:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 359
-    :try_start_0
-    invoke-direct {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->readXml()V
-
-    .line 360
-    iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 361
-    iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 362
-    invoke-virtual {p0}, Lcom/android/server/pm/UpdateAppsReceiver;->writeXml()V
-
-    .line 363
-    monitor-exit v1
-
-    .line 364
-    return-void
-
-    .line 363
+    .line 331
     :catchall_0
     move-exception v0
 
@@ -2385,254 +2006,162 @@
 .end method
 
 .method public writeXml()V
-    .locals 12
+    .locals 8
 
     .prologue
-    .line 457
-    new-instance v5, Ljava/io/File;
+    .line 413
+    new-instance v2, Ljava/io/File;
 
-    iget-object v9, p0, Lcom/android/server/pm/UpdateAppsReceiver;->dataDir:Ljava/io/File;
+    iget-object v5, p0, Lcom/android/server/pm/UpdateAppsReceiver;->dataDir:Ljava/io/File;
 
-    const-string v10, "system/updateapps.xml"
+    const-string v6, "system/updateapps.xml"
 
-    invoke-direct {v5, v9, v10}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v2, v5, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 459
-    .local v5, "newxmlfile":Ljava/io/File;
+    .line 415
+    .local v2, "newxmlfile":Ljava/io/File;
     :try_start_0
-    invoke-virtual {v5}, Ljava/io/File;->exists()Z
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
-    move-result v9
+    move-result v5
 
-    if-nez v9, :cond_0
+    if-nez v5, :cond_0
 
-    .line 460
-    invoke-virtual {v5}, Ljava/io/File;->createNewFile()Z
+    .line 416
+    invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 466
+    .line 422
     :cond_0
     :goto_0
     :try_start_1
-    new-instance v2, Ljava/io/FileOutputStream;
+    new-instance v1, Ljava/io/FileOutputStream;
 
-    invoke-direct {v2, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 467
-    .local v2, "fstr":Ljava/io/FileOutputStream;
-    new-instance v6, Ljava/io/BufferedOutputStream;
+    .line 423
+    .local v1, "fstr":Ljava/io/FileOutputStream;
+    new-instance v3, Ljava/io/BufferedOutputStream;
 
-    invoke-direct {v6, v2}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v3, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 468
-    .local v6, "out":Ljava/io/BufferedOutputStream;
-    new-instance v7, Lcom/android/internal/util/FastXmlSerializer;
+    .line 424
+    .local v3, "out":Ljava/io/BufferedOutputStream;
+    new-instance v4, Lcom/android/internal/util/FastXmlSerializer;
 
-    invoke-direct {v7}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
+    invoke-direct {v4}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 469
-    .local v7, "serializer":Lorg/xmlpull/v1/XmlSerializer;
-    const-string v9, "utf-8"
+    .line 425
+    .local v4, "serializer":Lorg/xmlpull/v1/XmlSerializer;
+    const-string v5, "utf-8"
 
-    invoke-interface {v7, v6, v9}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
+    invoke-interface {v4, v3, v5}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 470
-    const/4 v9, 0x0
+    .line 426
+    const/4 v5, 0x0
 
-    const/4 v10, 0x1
+    const/4 v6, 0x1
 
-    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v10
+    move-result-object v6
 
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-interface {v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 472
-    const/4 v9, 0x0
+    .line 428
+    const/4 v5, 0x0
 
-    const-string v10, "UpdateApps"
+    const-string v6, "UpdateApps"
 
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 473
-    const/4 v9, 0x0
+    .line 429
+    const/4 v5, 0x0
 
-    const-string v10, "value"
+    const-string v6, "value"
 
-    iget-boolean v11, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
+    iget-boolean v7, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyUpdateApps:Z
 
-    invoke-static {v11}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    invoke-static {v7}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v7
 
-    invoke-interface {v7, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 474
-    const/4 v9, 0x0
+    .line 430
+    const/4 v5, 0x0
 
-    const-string v10, "UpdateApps"
+    const-string v6, "UpdateApps"
 
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 476
-    const/4 v9, 0x0
+    .line 432
+    const/4 v5, 0x0
 
-    const-string v10, "DefaultOp"
+    const-string v6, "DefaultOp"
 
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 477
-    const/4 v9, 0x0
+    .line 433
+    const/4 v5, 0x0
 
-    const-string v10, "value"
+    const-string v6, "value"
 
-    iget-boolean v11, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
+    iget-boolean v7, p0, Lcom/android/server/pm/UpdateAppsReceiver;->firstBootAlreadyDefaultOp:Z
 
-    invoke-static {v11}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    invoke-static {v7}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v7
 
-    invoke-interface {v7, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 478
-    const/4 v9, 0x0
+    .line 434
+    const/4 v5, 0x0
 
-    const-string v10, "DefaultOp"
+    const-string v6, "DefaultOp"
 
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v4, v5, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 480
-    iget-object v9, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
+    .line 436
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    invoke-virtual {v9}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+    .line 437
+    invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->flush()V
 
-    move-result-object v9
+    .line 438
+    invoke-static {v1}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    .line 481
-    .local v3, "iter":Ljava/util/Iterator;
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1
-
-    .line 482
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    .line 483
-    .local v1, "entry":Ljava/util/Map$Entry;
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v4
-
-    .line 484
-    .local v4, "key":Ljava/lang/Object;
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    .line 485
-    .local v8, "val":Ljava/lang/Object;
-    const/4 v9, 0x0
-
-    const-string v10, "PackageState"
-
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
-
-    .line 486
-    const/4 v9, 0x0
-
-    const-string v10, "name"
-
-    check-cast v4, Ljava/lang/String;
-
-    .end local v4    # "key":Ljava/lang/Object;
-    invoke-interface {v7, v9, v10, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
-
-    .line 487
-    const/4 v9, 0x0
-
-    const-string v10, "value"
-
-    check-cast v8, Ljava/lang/String;
-
-    .end local v8    # "val":Ljava/lang/Object;
-    invoke-interface {v7, v9, v10, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
-
-    .line 488
-    const/4 v9, 0x0
-
-    const-string v10, "PackageState"
-
-    invoke-interface {v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    .line 439
+    invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_1
+    .line 443
+    .end local v1    # "fstr":Ljava/io/FileOutputStream;
+    .end local v3    # "out":Ljava/io/BufferedOutputStream;
+    .end local v4    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
+    :goto_1
+    return-void
 
-    .line 497
-    .end local v1    # "entry":Ljava/util/Map$Entry;
-    .end local v2    # "fstr":Ljava/io/FileOutputStream;
-    .end local v3    # "iter":Ljava/util/Iterator;
-    .end local v6    # "out":Ljava/io/BufferedOutputStream;
-    .end local v7    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
+    .line 417
     :catch_0
     move-exception v0
 
-    .line 498
-    .local v0, "e":Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    .line 500
-    .end local v0    # "e":Ljava/lang/Exception;
-    :goto_2
-    return-void
-
-    .line 461
-    :catch_1
-    move-exception v0
-
-    .line 462
+    .line 418
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 491
+    .line 440
     .end local v0    # "e":Ljava/io/IOException;
-    .restart local v2    # "fstr":Ljava/io/FileOutputStream;
-    .restart local v3    # "iter":Ljava/util/Iterator;
-    .restart local v6    # "out":Ljava/io/BufferedOutputStream;
-    .restart local v7    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
-    :cond_1
-    :try_start_2
-    invoke-interface {v7}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
+    :catch_1
+    move-exception v0
 
-    .line 492
-    invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->flush()V
+    .line 441
+    .local v0, "e":Ljava/lang/Exception;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 493
-    invoke-static {v2}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
-
-    .line 494
-    invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->close()V
-
-    .line 495
-    iget-object v9, p0, Lcom/android/server/pm/UpdateAppsReceiver;->packageValueList:Ljava/util/HashMap;
-
-    invoke-virtual {v9}, Ljava/util/HashMap;->clear()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    goto :goto_2
+    goto :goto_1
 .end method
