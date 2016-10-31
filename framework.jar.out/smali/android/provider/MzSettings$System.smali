@@ -117,6 +117,8 @@
 
 .field public static final KEY_SECOND_SCREEN_SCREENOFF_MUSIC:Ljava/lang/String; = "second_screen_screenoff_music"
 
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_PHONE_CALLING:Ljava/lang/String; = "second_screen_screenoff_calling"
+
 .field public static final KEY_SECOND_SCREEN_SCREENOFF_VOICE_ASSIS:Ljava/lang/String; = "second_screen_screenoff_voice_assis"
 
 .field public static final KEY_SECOND_SCREEN_SCREENOFF_WIRELESS:Ljava/lang/String; = "second_screen_screenoff_wireless"
