@@ -26,6 +26,10 @@
 
 .field private static final COM_FEEDBACK:Ljava/lang/String; = "com.google.android.feedback"
 
+.field private static final COM_FLYMEBBS_PACKAGE:Ljava/lang/String; = "com.meizu.flyme.flymebbs"
+
+.field private static final COM_FLYMEBBS_SIGNATURE:Ljava/lang/String; = "308203d7308202bfa003020102020900b8025912377deb24300d06092a864886f70d0101050500308181310b300906035504061302434e3112301006035504080c094775616e675a686f753114301206035504070c0b5a68754861692056696577310e300c060355040a0c054d65697a75310e300c060355040b0c054d65697a75310b300906035504030c026d78311b301906092a864886f70d010901160c6d78406d65697a752e636f6d301e170d3135303132333039323831365a170d3432303631303039323831365a308181310b300906035504061302434e3112301006035504080c094775616e675a686f753114301206035504070c0b5a68754861692056696577310e300c060355040a0c054d65697a75310e300c060355040b0c054d65697a75310b300906035504030c026d78311b301906092a864886f70d010901160c6d78406d65697a752e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100c52c4d380186ae6465b90b0fdd318c631a88571babd5d940949b180353b2843af0635375bd188d73d760fa7cd61960e7fbfb0fe0fe9fa8f18e802fe46f03c658088eeaf014099bd39486253e9753b382088c1e6474d962bd89a457ee288bfdf3fa4578c37e991947b0e8ece671bd50faa124b337e813ab4b9a6bfe633703164f9b0f7a8e6c0d87989730fdc3e402e944166f880cab096a765726599d78617778206e6a8bc1bb45ad9dbd9fcbf487ed51b6e4f3f1b69f4e5db8436612566f2c0cc9c8151f0e69ad741208e1de13513315cd4c66d0f8e21478efd154290aa420cdf14b62152a1ea894f051071f364945f4b1082ac5fa6f282de7f1e2f1e3e366850203010001a350304e301d0603551d0e04160414e4159e1a3f280e38e072f72eaac1153131539636301f0603551d23041830168014e4159e1a3f280e38e072f72eaac1153131539636300c0603551d13040530030101ff300d06092a864886f70d01010505000382010100996996e5906ec3513c9ec74c34019ede17eb999cfab752cb6e4f32bca5d5561464e8ccdfd8bf624efe222cc54441a5362ff23994c867428a3bb2f50c8b17b52ccfe0c71d6ca42bb66cd5b32d246a95b1648633035f9da4b30bc84d48e6c75ed446a207729193ddd24dfb9e8a2f0b74671a920ccfc9700a5de07be368aca721f90520c8d1a34869d6198b8d00ddb71f3379f8014c9bc4c51f08d717915fb59dfbcb214e845f6a8e0995b931307f5775235550dd65e663ea394436c0bef7363b5a2e314c440b8c036ee95c7526a963deaa1895491d6e499affb734563c61ba9c38a327a218f86e0c3aef108ba7850dfe5924cd831c5e6154a48d89905c43aca1da"
+
 .field private static final COM_GSF:Ljava/lang/String; = "com.google.android.gsf"
 
 .field private static final COM_GSF_LOGIN:Ljava/lang/String; = "com.google.android.gsf.login"
@@ -51,14 +55,14 @@
     .locals 4
 
     .prologue
-    .line 92
+    .line 133
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
-    .line 94
+    .line 136
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -71,7 +75,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
+    .line 138
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -84,7 +88,20 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 97
+    .line 139
+    sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
+
+    new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
+
+    const-string v2, "com.meizu.flyme.flymebbs"
+
+    const-string v3, "308203d7308202bfa003020102020900b8025912377deb24300d06092a864886f70d0101050500308181310b300906035504061302434e3112301006035504080c094775616e675a686f753114301206035504070c0b5a68754861692056696577310e300c060355040a0c054d65697a75310e300c060355040b0c054d65697a75310b300906035504030c026d78311b301906092a864886f70d010901160c6d78406d65697a752e636f6d301e170d3135303132333039323831365a170d3432303631303039323831365a308181310b300906035504061302434e3112301006035504080c094775616e675a686f753114301206035504070c0b5a68754861692056696577310e300c060355040a0c054d65697a75310e300c060355040b0c054d65697a75310b300906035504030c026d78311b301906092a864886f70d010901160c6d78406d65697a752e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100c52c4d380186ae6465b90b0fdd318c631a88571babd5d940949b180353b2843af0635375bd188d73d760fa7cd61960e7fbfb0fe0fe9fa8f18e802fe46f03c658088eeaf014099bd39486253e9753b382088c1e6474d962bd89a457ee288bfdf3fa4578c37e991947b0e8ece671bd50faa124b337e813ab4b9a6bfe633703164f9b0f7a8e6c0d87989730fdc3e402e944166f880cab096a765726599d78617778206e6a8bc1bb45ad9dbd9fcbf487ed51b6e4f3f1b69f4e5db8436612566f2c0cc9c8151f0e69ad741208e1de13513315cd4c66d0f8e21478efd154290aa420cdf14b62152a1ea894f051071f364945f4b1082ac5fa6f282de7f1e2f1e3e366850203010001a350304e301d0603551d0e04160414e4159e1a3f280e38e072f72eaac1153131539636301f0603551d23041830168014e4159e1a3f280e38e072f72eaac1153131539636300c0603551d13040530030101ff300d06092a864886f70d01010505000382010100996996e5906ec3513c9ec74c34019ede17eb999cfab752cb6e4f32bca5d5561464e8ccdfd8bf624efe222cc54441a5362ff23994c867428a3bb2f50c8b17b52ccfe0c71d6ca42bb66cd5b32d246a95b1648633035f9da4b30bc84d48e6c75ed446a207729193ddd24dfb9e8a2f0b74671a920ccfc9700a5de07be368aca721f90520c8d1a34869d6198b8d00ddb71f3379f8014c9bc4c51f08d717915fb59dfbcb214e845f6a8e0995b931307f5775235550dd65e663ea394436c0bef7363b5a2e314c440b8c036ee95c7526a963deaa1895491d6e499affb734563c61ba9c38a327a218f86e0c3aef108ba7850dfe5924cd831c5e6154a48d89905c43aca1da"
+
+    invoke-direct {v1, v2, v3}, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 140
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -97,7 +114,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 141
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -110,7 +127,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 99
+    .line 142
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -123,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
+    .line 143
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -136,7 +153,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 101
+    .line 144
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -149,7 +166,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 145
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -162,7 +179,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 103
+    .line 146
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -175,7 +192,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
+    .line 147
     return-void
 .end method
 
@@ -196,40 +213,40 @@
     .param p1, "s2"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 115
+    .line 159
     if-nez p0, :cond_1
 
-    .line 116
+    .line 160
     if-nez p1, :cond_0
 
     const/4 v6, 0x1
 
-    .line 135
+    .line 179
     :goto_0
     return v6
 
-    .line 116
+    .line 160
     :cond_0
     const/4 v6, -0x1
 
     goto :goto_0
 
-    .line 120
+    .line 164
     :cond_1
     if-nez p1, :cond_2
 
-    .line 121
+    .line 165
     const/4 v6, -0x2
 
     goto :goto_0
 
-    .line 123
+    .line 167
     :cond_2
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 124
+    .line 168
     .local v3, "set1":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     move-object v0, p0
 
@@ -245,23 +262,23 @@
 
     aget-object v5, v0, v1
 
-    .line 125
+    .line 169
     .local v5, "sig":Landroid/content/pm/Signature;
     invoke-virtual {v3, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 124
+    .line 168
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 127
+    .line 171
     .end local v5    # "sig":Landroid/content/pm/Signature;
     :cond_3
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 128
+    .line 172
     .local v4, "set2":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     move-object v0, p1
 
@@ -274,16 +291,16 @@
 
     aget-object v5, v0, v1
 
-    .line 129
+    .line 173
     .restart local v5    # "sig":Landroid/content/pm/Signature;
     invoke-virtual {v4, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 128
+    .line 172
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 132
+    .line 176
     .end local v5    # "sig":Landroid/content/pm/Signature;
     :cond_4
     invoke-virtual {v3, v4}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
@@ -292,12 +309,12 @@
 
     if-eqz v6, :cond_5
 
-    .line 133
+    .line 177
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 135
+    .line 179
     :cond_5
     const/4 v6, -0x3
 
@@ -311,7 +328,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 107
+    .line 150
     sget-object v3, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -332,7 +349,7 @@
 
     check-cast v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
 
-    .line 108
+    .line 151
     .local v0, "espi":Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
     iget-object v3, v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mPackageName:Ljava/lang/String;
 
@@ -344,7 +361,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 109
+    .line 152
     iget-object v3, v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mSignatures:[Landroid/content/pm/Signature;
 
     iget-object v4, p0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
@@ -357,7 +374,7 @@
 
     const/4 v2, 0x1
 
-    .line 112
+    .line 155
     .end local v0    # "espi":Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
     :cond_1
     return v2
