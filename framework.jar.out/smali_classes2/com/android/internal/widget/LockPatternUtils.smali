@@ -4700,7 +4700,7 @@
 
     int-to-long v4, v3
 
-    invoke-direct {p0, v2, v4, v5, p4}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
+    invoke-virtual {p0, v2, v4, v5, p4}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     return-void
 
