@@ -1059,7 +1059,7 @@
     return v2
 .end method
 
-.method public matchesCallFilter(Landroid/os/Bundle;)[Z
+.method public matchesCallFilter(Landroid/os/Bundle;)Z
     .locals 3
     .param p1, "extras"    # Landroid/os/Bundle;
 
@@ -1078,7 +1078,11 @@
 
     move-result-object v2
 
-    return-object v2
+    const/4 v0, 0x0
+
+    aget-boolean v2, v2, v0
+
+    return v2
 
     .line 348
     :catch_0
@@ -1088,7 +1092,7 @@
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v2, 0x0
 
-    return-object v2
+    return v2
 .end method
 
 .method public notify(ILandroid/app/Notification;)V
