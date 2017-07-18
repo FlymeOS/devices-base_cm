@@ -1,0 +1,6 @@
+.method public showKeyguard()V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
