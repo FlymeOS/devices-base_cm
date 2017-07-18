@@ -813,3 +813,118 @@
     .line 380
     goto :goto_2
 .end method
+
+.method public constructor <init>(Ljava/lang/String;ILandroid/telecom/DisconnectCause;Ljava/util/List;IIJLandroid/net/Uri;ILjava/lang/String;ILandroid/telecom/GatewayInfo;Landroid/telecom/PhoneAccountHandle;ZLcom/android/internal/telecom/IVideoProvider;Ljava/lang/String;Ljava/util/List;Landroid/telecom/StatusHints;ILjava/util/List;Landroid/os/Bundle;Landroid/os/Bundle;)V
+    .locals 27
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "state"    # I
+    .param p3, "disconnectCause"    # Landroid/telecom/DisconnectCause;
+    .param p5, "capabilities"    # I
+    .param p6, "properties"    # I
+    .param p7, "connectTimeMillis"    # J
+    .param p9, "handle"    # Landroid/net/Uri;
+    .param p10, "handlePresentation"    # I
+    .param p11, "callerDisplayName"    # Ljava/lang/String;
+    .param p12, "callerDisplayNamePresentation"    # I
+    .param p13, "gatewayInfo"    # Landroid/telecom/GatewayInfo;
+    .param p14, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
+    .param p15, "isVideoCallProviderChanged"    # Z
+    .param p16, "videoCallProvider"    # Lcom/android/internal/telecom/IVideoProvider;
+    .param p17, "parentCallId"    # Ljava/lang/String;
+    .param p19, "statusHints"    # Landroid/telecom/StatusHints;
+    .param p20, "videoState"    # I
+    .param p22, "intentExtras"    # Landroid/os/Bundle;
+    .param p23, "extras"    # Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Landroid/telecom/DisconnectCause;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;IIJ",
+            "Landroid/net/Uri;",
+            "I",
+            "Ljava/lang/String;",
+            "I",
+            "Landroid/telecom/GatewayInfo;",
+            "Landroid/telecom/PhoneAccountHandle;",
+            "Z",
+            "Lcom/android/internal/telecom/IVideoProvider;",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroid/telecom/StatusHints;",
+            "I",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroid/os/Bundle;",
+            "Landroid/os/Bundle;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .local p4, "cannedSmsResponses":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local p18, "childCallIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local p21, "conferenceableCallIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move-object/from16 v3, p3
+
+    move-object/from16 v4, p4
+
+    move/from16 v5, p5
+
+    move/from16 v6, p6
+
+    const-wide/16 v7, 0x0
+
+    move-wide/from16 v9, p7
+
+    move-object/from16 v11, p9
+
+    move/from16 v12, p10
+
+    move-object/from16 v13, p11
+
+    move/from16 v14, p12
+
+    move-object/from16 v15, p13
+
+    move-object/from16 v16, p14
+
+    move/from16 v17, p15
+
+    move-object/from16 v18, p16
+
+    move-object/from16 v19, p17
+
+    move-object/from16 v20, p18
+
+    move-object/from16 v21, p19
+
+    move/from16 v22, p20
+
+    move-object/from16 v23, p21
+
+    move-object/from16 v24, p22
+
+    move-object/from16 v25, p23
+
+    const/16 v26, 0x0
+
+    invoke-direct/range {v0 .. v26}, Landroid/telecom/ParcelableCall;-><init>(Ljava/lang/String;ILandroid/telecom/DisconnectCause;Ljava/util/List;IIJJLandroid/net/Uri;ILjava/lang/String;ILandroid/telecom/GatewayInfo;Landroid/telecom/PhoneAccountHandle;ZLcom/android/internal/telecom/IVideoProvider;Ljava/lang/String;Ljava/util/List;Landroid/telecom/StatusHints;ILjava/util/List;Landroid/os/Bundle;Landroid/os/Bundle;Z)V
+
+    return-void
+.end method
