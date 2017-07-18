@@ -244,6 +244,7 @@
     <protected-broadcast android:name="org.cyanogenmod.intent.action.THEME_CHANGED" android:permission="cyanogenmod.permission.SEND_PROTECTED_THEME_BROADCAST"/>
     <protected-broadcast android:name="android.intent.action.THEME_RESOURCES_CACHED" android:permission="cyanogenmod.permission.SEND_PROTECTED_THEME_BROADCAST"/>
     <protected-broadcast android:name="android.net.action.SHOW_NETWORK_POLICY_NOTIFICATION"/>
+    <protected-broadcast android:name="com.meizu.safe.ACTION_BLOCK_LOCKED_SCREEN_SHOW"/>
     <eat-comment/>
     <eat-comment/>
     <permission-group android:description="@string/permgroupdesc_contacts" android:icon="@drawable/perm_group_contacts" android:label="@string/permgrouplab_contacts" android:name="android.permission-group.CONTACTS" android:priority="100"/>
@@ -616,9 +617,14 @@
     <permission-group android:description="@string/permgroupdesc_security" android:icon="@drawable/perm_group_security" android:label="@string/permgrouplab_security" android:name="android.permission-group.SECURITY" android:priority="400"/>
     <permission android:description="@string/permdesc_readPhoneBlacklist" android:label="@string/permlab_readPhoneBlacklist" android:name="android.permission.READ_PHONE_BLACKLIST" android:permissionGroup="android.permission-group.SECURITY" android:protectionLevel="system|signature"/>
     <permission android:description="@string/permdesc_changePhoneBlacklist" android:label="@string/permlab_changePhoneBlacklist" android:name="android.permission.CHANGE_PHONE_BLACKLIST" android:permissionGroup="android.permission-group.SECURITY" android:protectionLevel="system|signature"/>
+    <permission android:name="android.permission.MEIZU_CONTROL_PACKAGE_PERMISSIONS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.MEIZU_SMART_LOCK" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.FLYME_SWITCH_SYSTEM_MODE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="android.permission.send.MEIZU_DATASAVE_MODE_CHANGED" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.meizu.safe.permission.ACCESS_APP_SHOW_ON_LOCKED_SCREED_PROVIDER"/>
     <uses-permission android:name="android.permission.CONFIRM_FULL_BACKUP"/>
     <application android:allowClearUserData="false" android:backupAgent="com.android.server.backup.SystemBackupAgent" android:hasCode="false" android:icon="@drawable/ic_launcher_android" android:killAfterRestore="false" android:label="@string/android_system_label" android:persistent="true" android:process="system" android:supportsRtl="true">
-        <activity android:documentLaunchMode="never" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.android.internal.app.ChooserActivity" android:process=":ui" android:relinquishTaskIdentity="true" android:theme="@style/Theme.DeviceDefault.Resolver">
+        <activity android:documentLaunchMode="never" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.android.internal.app.MzChooserActivity" android:process=":ui" android:relinquishTaskIdentity="true" android:theme="@style/Theme.DeviceDefault.Resolver">
             <intent-filter>
                 <action android:name="android.intent.action.CHOOSER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -694,6 +700,7 @@
         <receiver android:name="com.android.server.MasterClearReceiver" android:permission="android.permission.MASTER_CLEAR">
             <intent-filter android:priority="100">
                 <action android:name="android.intent.action.MASTER_CLEAR"/>
+                <action android:name="android.intent.action.MZ_UPDATE"/>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
                 <category android:name="android.intent.category.MASTER_CLEAR"/>
             </intent-filter>
@@ -709,5 +716,17 @@
         <service android:exported="true" android:name="com.android.server.backup.FullBackupJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:name="com.android.server.backup.KeyValueBackupJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="true" android:name="com.android.server.pm.BackgroundDexOptService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="false" android:name="com.android.internal.app.RecommendActivity" android:process=":ui" android:theme="@style/Theme.Holo.Dialog.Alert">
+            <intent-filter>
+                <action android:name="android.intent.action.RECOMMEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.meizu.app.AccessApplication" android:needAccessControl="false" android:screenOrientation="portrait" android:theme="@style/Theme.Wallpaper.NoTitleBar.Fullscreen" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.content.pm.CONFIRM_ACCESS_APPCATONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
