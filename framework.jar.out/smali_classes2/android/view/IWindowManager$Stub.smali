@@ -2895,7 +2895,7 @@
 
     move/from16 v3, v64
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/IWindowManager$Stub;->keyguardGoingAway(ZZZ)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/IWindowManager$Stub;->keyguardGoingAway(ZZ)V
 
     .line 690
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V

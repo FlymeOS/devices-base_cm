@@ -6913,3 +6913,21 @@
     .line 2200
     throw v3
 .end method
+
+.method public keyguardGoingAway(ZZ)V
+    .locals 1
+    .param p1, "disableWindowAnimations"    # Z
+    .param p2, "keyguardGoingToNotificationShade"    # Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, p2, v0}, Landroid/view/IWindowManager$Stub$Proxy;->keyguardGoingAway(ZZZ)V
+
+    return-void
+.end method
