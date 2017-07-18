@@ -1,0 +1,132 @@
+.method public setCallProperties(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public resetCdmaConnectionTime(Ljava/lang/String;)V
+    .locals 8
+    .param p1, "callId"    # Ljava/lang/String;
+
+    .prologue
+    .line 126
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v2
+
+    .line 128
+    .local v2, "token":J
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    iget-object v4, v1, Lcom/android/server/telecom/ConnectionServiceWrapper;->mLock:Lcom/android/server/telecom/TelecomSystem$SyncRoot;
+
+    monitor-enter v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 129
+    :try_start_1
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    const-string/jumbo v5, "resetCdmaConnectionTime %s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object p1, v6, v7
+
+    invoke-static {v1, v5, v6}, Lcom/android/server/telecom/ConnectionServiceWrapper;->-wrap1(Lcom/android/server/telecom/ConnectionServiceWrapper;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 130
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->-get0(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidCallId(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 131
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->-get0(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidConferenceId(Ljava/lang/String;)Z
+
+    move-result v1
+
+    .line 130
+    if-eqz v1, :cond_1
+
+    .line 132
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->-get0(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/android/server/telecom/CallIdMapper;->getCall(Ljava/lang/Object;)Lcom/android/server/telecom/Call;
+
+    move-result-object v0
+
+    .line 133
+    .local v0, "call":Lcom/android/server/telecom/Call;
+    if-eqz v0, :cond_1
+
+    .line 134
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->-get1(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallsManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/android/server/telecom/CallsManager;->resetCdmaConnectionTime(Lcom/android/server/telecom/Call;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .end local v0    # "call":Lcom/android/server/telecom/Call;
+    :cond_1
+    :try_start_2
+    monitor-exit v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 141
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    .line 125
+    return-void
+
+    .line 128
+    :catchall_0
+    move-exception v1
+
+    :try_start_3
+    monitor-exit v4
+
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 140
+    :catchall_1
+    move-exception v1
+
+    .line 141
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    .line 140
+    throw v1
+.end method
