@@ -1,0 +1,27 @@
+.method public switchToOtherActiveSub(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "sub"    # Ljava/lang/String;
+
+    .prologue
+    return-void
+.end method
+
+.method public transferCall(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "callId"    # Ljava/lang/String;
+
+    .prologue
+    return-void
+.end method
+
+.method public answerCallWithCallWaitingResponse(Ljava/lang/String;II)V
+    .locals 0
+    .param p1, "callId"    # Ljava/lang/String;
+    .param p2, "videoState"    # I
+    .param p3, "callWaitingResponseType"    # I
+
+    .prologue
+    invoke-virtual/range {p0 .. p2}, Lcom/android/server/telecom/InCallAdapter;->answerCall(Ljava/lang/String;I)V
+
+    return-void
+.end method
