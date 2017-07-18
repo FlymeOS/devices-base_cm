@@ -23175,12 +23175,12 @@
     move-result-object v1
 
     .line 1447
-    const-string/jumbo v2, "cm_setup_wizard_completed"
+    const-string/jumbo v2, "user_setup_complete"
 
     const/4 v3, -0x2
 
     .line 1446
-    invoke-static {v1, v2, v0, v3}, Lcyanogenmod/providers/CMSettings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v1, v2, v0, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v1
 
