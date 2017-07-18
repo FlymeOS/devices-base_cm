@@ -362,7 +362,7 @@
     if-eqz v8, :cond_2
 
     .line 307
-    invoke-direct {p0, p1, v6, v9}, Landroid/content/ContentProvider$Transport;->hook_enforceWritePermission_isWrite(Ljava/lang/String;Landroid/net/Uri;Landroid/content/ContentProviderOperation;)I
+    invoke-direct {p0, p1, v6, v2}, Landroid/content/ContentProvider$Transport;->hook_enforceWritePermission_isWrite(Ljava/lang/String;Landroid/net/Uri;Landroid/content/ContentProviderOperation;)I
 
     move-result v8
 

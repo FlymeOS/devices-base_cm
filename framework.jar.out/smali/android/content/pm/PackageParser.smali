@@ -4837,7 +4837,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
-    move-object/from16 v0, v18
+    move-object/from16 v0, v20
 
     invoke-static {v14, v0}, Landroid/content/pm/PackageParser$FlymeInjector;->parseAccessArgsFromResource(Landroid/content/pm/PackageParser$Activity;Landroid/content/res/TypedArray;)V
 
