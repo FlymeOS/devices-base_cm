@@ -74,7 +74,7 @@ vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider Backup
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := framework services telephony-common wifi-service
+vendor_modify_jars := framework services telephony-common wifi-service org.cyanogenmod.platform
 
 ##############################################################################
 # The value decides which board system directory you want to save.
