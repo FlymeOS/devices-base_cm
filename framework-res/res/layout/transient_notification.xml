@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Toast" android:textColor="@color/bright_foreground_dark" android:layout_gravity="center_horizontal" android:id="@id/message" android:background="?^attr-private/toastFrameBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-16.0dip" android:shadowColor="#bb000000" android:shadowRadius="2.75" android:layout_below="@id/icon" android:layout_marginStart="-16.0dip" android:layout_toEndOf="@id/icon" />
+    <ImageView android:id="@id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+</RelativeLayout>

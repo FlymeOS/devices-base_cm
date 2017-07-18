@@ -1,0 +1,12 @@
+kernel=kernel
+ramdisk=RAMDISK
+page_size=4096
+kernel_size=11201864
+ramdisk_size=1282879
+base_addr=0x00000000
+kernel_offset=0x00008000
+ramdisk_offset=0x02000000
+tags_offset=0x01e00000
+cmd_line='androidboot.hardware=angler androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3'
+board=""
+format=gzip

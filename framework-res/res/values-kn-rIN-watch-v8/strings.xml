@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permgrouplab_sensors">ಸೆನ್ಸರ್‌ಗಳು</string>
+    <string name="android_upgrading_apk">%2$d ರಲ್ಲಿ %1$d ಅಪ್ಲಿಕೇಶನ್.</string>
+</resources>

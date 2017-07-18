@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fiలో కాల్‌లు చేయడం మరియు సందేశాలు పంపడం కోసం ముందుగా ఈ సేవను సెటప్ చేయడానికి మీ క్యారియర్‌ను అడగండి. ఆపై సెట్టింగ్‌ల నుండి మళ్లీ Wi-Fi కాలింగ్‌ను ఆన్ చేయండి.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>మీ క్యారియర్‌తో నమోదు చేయండి</item>
+    </string-array>
+</resources>

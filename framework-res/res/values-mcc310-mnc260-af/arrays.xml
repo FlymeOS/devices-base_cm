@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Om oproepe te maak en boodskappe oor Wi-Fi te stuur, vra jou diensverskaffer eers om hierdie diens op te stel. Skakel Wi-Fi-oproepe dan weer in Instellings aan.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registreer by jou diensverskaffer</item>
+    </string-array>
+</resources>

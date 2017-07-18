@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi ਤੇ ਕਾਲਾਂ ਕਰਨ ਅਤੇ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ, ਪਹਿਲਾਂ ਆਪਣੇ ਕੈਰੀਅਰ ਨੂੰ ਇਹ ਸੇਵਾ ਸੈਟ ਅਪ ਕਰਨ ਲਈ ਕਹੋ। ਫਿਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚੋਂ Wi-Fi ਕਾਲਿੰਗ ਦੁਬਾਰਾ ਚਾਲੂ ਕਰੋ।</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ਆਪਣੇ ਕੈਰੀਅਰ ਨਾਲ ਰਜਿਸਟਰ ਕਰੋ</item>
+    </string-array>
+</resources>

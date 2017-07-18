@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>ဝိုင်ဖိုင်သုံး၍ ဖုန်းခေါ်ဆိုရန်နှင့် မက်စေ့ဂျ်များပို့ရန်၊ ဤဝန်ဆောင်မှုအား စတင်သုံးနိုင်ရန်အတွက် သင့် မိုဘိုင်းဝန်ဆောင်မှုအား ဦးစွာမေးမြန်းပါ။ ထို့နောက် ဆက်တင်မှတဆင့် ဝိုင်ဖိုင် ခေါ်ဆိုမှုအား ထပ်ဖွင့်ပါ။</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>သင့် မိုဘိုင်းဝန်ဆောင်မှုဖြင့် မှတ်ပုံတင်ရန်</item>
+    </string-array>
+</resources>

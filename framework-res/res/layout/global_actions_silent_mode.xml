@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/option1" android:background="?actionBarItemBackground" android:focusable="true" android:layout_width="64.0dip" android:layout_height="fill_parent" android:contentDescription="@string/silent_mode_none">
+        <ImageView android:layout_gravity="center" android:background="@drawable/silent_mode_indicator" android:duplicateParentState="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_power_dnd_total_silence" android:scaleType="center" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <LinearLayout android:id="@id/option2" android:background="?actionBarItemBackground" android:focusable="true" android:layout_width="64.0dip" android:layout_height="fill_parent" android:contentDescription="@string/silent_mode_priority">
+        <ImageView android:layout_gravity="center" android:background="@drawable/silent_mode_indicator" android:duplicateParentState="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_power_dnd_priority" android:scaleType="center" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <LinearLayout android:id="@id/option3" android:background="?actionBarItemBackground" android:focusable="true" android:layout_width="64.0dip" android:layout_height="fill_parent" android:contentDescription="@string/silent_mode_vibrate">
+        <ImageView android:layout_gravity="center" android:background="@drawable/silent_mode_indicator" android:duplicateParentState="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_power_vibrate" android:scaleType="center" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <LinearLayout android:id="@id/option4" android:background="?actionBarItemBackground" android:focusable="true" android:layout_width="64.0dip" android:layout_height="fill_parent" android:contentDescription="@string/silent_mode_ring">
+        <ImageView android:layout_gravity="center" android:background="@drawable/silent_mode_indicator" android:duplicateParentState="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_power_ring" android:scaleType="center" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+</LinearLayout>

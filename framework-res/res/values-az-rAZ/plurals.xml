@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">SIM kartınızın kilidlənməsindən öncə %d cəhdiniz qalır.</item>
+        <item quantity="one">SIM kartınızın kilidlənməsindən öncə %d cəhdiniz qalır.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Son %d gün</item>
+        <item quantity="one">Son %d gün</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d saniyə</item>
+        <item quantity="one">1 saniyə</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d dəqiqə</item>
+        <item quantity="one">1 dəqiqə</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Əlçatan Wi-Fi şəbəkələri</item>
+        <item quantity="one">Əlçatan Wi-Fi şəbəkəsi</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Əlçatan açıq Wi-Fi şəbəkələri</item>
+        <item quantity="one">Əlçatan açıq Wi-Fi şəbəkəsi</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d / %2$d</item>
+        <item quantity="one">1 eynilik</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d saniyə ərzində yenidən cəhd edin</item>
+        <item quantity="one">1 saniyə ərzində yenidən cəhd edin</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d dəqiqəlik (saat %2$s radəsinə qədər)</item>
+        <item quantity="one">Bir dəqiqəlik (saat %2$s radəsinə qədər)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d dəq üçün (%2$s qədər)</item>
+        <item quantity="one">1 dəqiqə üçün (%2$s qədər)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d saatlıq (saat %2$s radəsinə qədər)</item>
+        <item quantity="one">Bir saatlıq (saat %2$s radəsinə qədər)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d saat üçün (%2$s qədər)</item>
+        <item quantity="one">1 saat üçün (%2$s qədər)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d dəqiqəlik</item>
+        <item quantity="one">Bir dəqiqəlik</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d dəq üçün</item>
+        <item quantity="one">1 dəq üçün</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d saatlıq</item>
+        <item quantity="one">Bir saatlıq</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d saat üçün</item>
+        <item quantity="one">1 saat üçün</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d seçilib</item>
+        <item quantity="one">%1$d seçilib</item>
+    </plurals>
+</resources>

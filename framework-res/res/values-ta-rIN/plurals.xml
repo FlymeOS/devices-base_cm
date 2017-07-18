@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">சிம் பூட்டப்படுவதற்கு முன், நீங்கள் %d முறை முயற்சிக்கலாம்.</item>
+        <item quantity="one">சிம் பூட்டப்படுவதற்கு முன், நீங்கள் %d முறை முயற்சிக்கலாம்.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">கடந்த %d நாட்களில்</item>
+        <item quantity="one">கடந்த %d நாளில்</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d வினாடிகள்</item>
+        <item quantity="one">1 வினாடி</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d நிமிடங்கள்</item>
+        <item quantity="one">1 நிமிடம்</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d மணிநேரம்</item>
+        <item quantity="one">1 மணிநேரம்</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">வைஃபை நெட்வொர்க்குகள் உள்ளன</item>
+        <item quantity="one">வைஃபை நெட்வொர்க் உள்ளது</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">பொது வைஃபை நெட்வொர்க்குகள் உள்ளன</item>
+        <item quantity="one">பொது வைஃபை நெட்வொர்க் உள்ளது</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d / %2$d</item>
+        <item quantity="one">1 பொருத்தம்</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d வினாடிகள் கழித்து முயற்சிக்கவும்</item>
+        <item quantity="one">1 வினாடி கழித்து முயற்சிக்கவும்</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d நிமிடங்களுக்கு (%2$s வரை)</item>
+        <item quantity="one">ஒரு நிமிடத்திற்கு (%2$s வரை)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d நிமிடங்களுக்கு (%2$s வரை)</item>
+        <item quantity="one">1 நிமிடத்திற்கு (%2$s வரை)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d மணிநேரத்திற்கு (%2$s வரை)</item>
+        <item quantity="one">ஒரு மணிநேரத்திற்கு (%2$s வரை)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d மணிநேரத்திற்கு (%2$s வரை)</item>
+        <item quantity="one">1 மணிநேரத்திற்கு (%2$s வரை)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d நிமிடங்களுக்கு</item>
+        <item quantity="one">ஒரு நிமிடத்திற்கு</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d நிமிடங்களுக்கு</item>
+        <item quantity="one">1 நிமிடத்திற்கு</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d மணிநேரத்திற்கு</item>
+        <item quantity="one">ஒரு மணிநேரத்திற்கு</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d மணிநேரத்திற்கு</item>
+        <item quantity="one">1 மணிநேரத்திற்கு</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d தேர்ந்தெடுக்கப்பட்டன</item>
+        <item quantity="one">%1$d தேர்ந்தெடுக்கப்பட்டது</item>
+    </plurals>
+</resources>

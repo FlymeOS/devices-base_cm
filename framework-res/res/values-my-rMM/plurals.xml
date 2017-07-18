@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">ဆင်းမ်ကဒ် သော့မချခင် သင့်တွင် %d ခါ ကြိုးစားခွင့်များကျန်ပါသေးသည်။</item>
+        <item quantity="one">ဆင်းမ်ကဒ် သော့မချခင် သင့်တွင် %d ခါ ကြိုးစားခွင့် ကျန်ပါသေးသည်။</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">နောက်ဆုံး %d နေ့</item>
+        <item quantity="one">နောက်ဆုံး %d နေ့</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d စက္ကန့်</item>
+        <item quantity="one">1 စက္ကန့်</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d မိနစ်</item>
+        <item quantity="one">1 မိနစ်</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d နာရီ</item>
+        <item quantity="one">1 နာရီ</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi ကွန်ယက်များရရှိနိုင်သည်</item>
+        <item quantity="one">Wi-Fi ကွန်ယက်ရရှိနိုင်သည်</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Wi-Fi ကွန်ယက်များရရှိနိုင်သည်အား ဖွင့်ပါ</item>
+        <item quantity="one">Wi-Fi ကွန်ယက်ရရှိနိုင်သည်အား ဖွင့်ပါ</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$dထဲမှ %2$d</item>
+        <item quantity="one">ကိုက်ညီမှု 1 ခု</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d စက္ကန့်အတွင်း ထပ်မံကြိုးစားပါ</item>
+        <item quantity="one">1 စက္ကန့်အတွင်း ထပ်မံကြိုးစားပါ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d မိနစ်တွင် (%2$sအထိ)</item>
+        <item quantity="one">တစ်မိနစ်တွင် (%2$s အထိ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">(%2$s ထိ) %1$d မိနစ်အတွက်</item>
+        <item quantity="one">(%2$s ထိ) ၁မိနစ်အတွက်</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d နာရီကြာ (%2$sအထိ)</item>
+        <item quantity="one">တစ်နာရီကြာ (%2$s အထိ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">(%2$s ထိ) %1$d နာရီအတွက်</item>
+        <item quantity="one">(%2$s ထိ) ၁ နာရီအတွက်</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d မိနစ်တွင်</item>
+        <item quantity="one">တစ်မိနစ်တွင်</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d မိနစ်အတွက်</item>
+        <item quantity="one">၁ မိနစ်အတွက်</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d နာရီကြာ</item>
+        <item quantity="one">တစ်နာရီကြာ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d နာရီ အတွက်</item>
+        <item quantity="one">၁ နာရီအတွက်</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d ရွေးချယ်ပြီးပါပြီ</item>
+        <item quantity="one">%1$d ရွေးချယ်ပြီးပါပြီ</item>
+    </plurals>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi経由で音声通話の発信やメッセージの送信を行うには、携帯通信会社にWi-Fiサービスを申し込んだ上で、設定画面でWi-Fi発信を再度ONにしてください。</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>携帯通信会社に登録してください</item>
+    </string-array>
+</resources>

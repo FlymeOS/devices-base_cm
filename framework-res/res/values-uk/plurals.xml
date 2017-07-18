@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">У вас залишилося %d спроби. Після цього SIM-карту буде заблоковано.</item>
+        <item quantity="one">У вас залишилась %d спроба. Після цього SIM-карту буде заблоковано.</item>
+        <item quantity="few">У вас залишилося %d спроби. Після цього SIM-карту буде заблоковано.</item>
+        <item quantity="many">У вас залишилося %d спроб. Після цього SIM-карту буде заблоковано.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Останні %d днів</item>
+        <item quantity="one">Останній %d день</item>
+        <item quantity="few">Останні %d дні</item>
+        <item quantity="many">Останні %d днів</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d секунди</item>
+        <item quantity="one">%d секунда</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="many">%d секунд</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d хвилини</item>
+        <item quantity="one">%d хвилина</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d години</item>
+        <item quantity="one">%d година</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Мережі Wi-Fi доступні</item>
+        <item quantity="one">Мережі Wi-Fi доступні</item>
+        <item quantity="few">Мережі Wi-Fi доступні</item>
+        <item quantity="many">Мережі Wi-Fi доступні</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Відкриті мережі Wi-Fi доступні</item>
+        <item quantity="one">Відкриті мережі Wi-Fi доступні</item>
+        <item quantity="few">Відкриті мережі Wi-Fi доступні</item>
+        <item quantity="many">Відкриті мережі Wi-Fi доступні</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d із %2$d</item>
+        <item quantity="one">%1$d із %2$d</item>
+        <item quantity="few">%1$d із %2$d</item>
+        <item quantity="many">%1$d із %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Повтор через %d секунди</item>
+        <item quantity="one">Повтор через %d секунду</item>
+        <item quantity="few">Повтор через %d секунди</item>
+        <item quantity="many">Повтор через %d секунд</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d хвилини (до %2$s)</item>
+        <item quantity="one">%1$d хвилину (до %2$s)</item>
+        <item quantity="few">%1$d хвилини (до %2$s)</item>
+        <item quantity="many">%1$d хвилин (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Протягом %1$d хв (до %2$s)</item>
+        <item quantity="one">Протягом %1$d хв (до %2$s)</item>
+        <item quantity="few">Протягом %1$d хв (до %2$s)</item>
+        <item quantity="many">Протягом %1$d хв (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d години (до %2$s)</item>
+        <item quantity="one">%1$d годину (до %2$s)</item>
+        <item quantity="few">%1$d години (до %2$s)</item>
+        <item quantity="many">%1$d годин (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Протягом %1$d год (до %2$s)</item>
+        <item quantity="one">Протягом %1$d год (до %2$s)</item>
+        <item quantity="few">Протягом %1$d год (до %2$s)</item>
+        <item quantity="many">Протягом %1$d год (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d хвилини</item>
+        <item quantity="one">%d хвилину</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Протягом %d хв</item>
+        <item quantity="one">Протягом %d хв</item>
+        <item quantity="few">Протягом %d хв</item>
+        <item quantity="many">Протягом %d хв</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d години</item>
+        <item quantity="one">%d годину</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Протягом %d год</item>
+        <item quantity="one">Протягом %d год</item>
+        <item quantity="few">Протягом %d год</item>
+        <item quantity="many">Протягом %d год</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">Вибрано %1$d</item>
+        <item quantity="one">Вибрано %1$d</item>
+        <item quantity="few">Вибрано %1$d</item>
+        <item quantity="many">Вибрано %1$d</item>
+    </plurals>
+</resources>

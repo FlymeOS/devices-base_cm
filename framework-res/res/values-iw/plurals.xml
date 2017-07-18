@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">‏נותרו לך %d ניסיונות לפני נעילת כרטיס ה-SIM.</item>
+        <item quantity="one">‏נותר לך ניסיון %d לפני נעילת כרטיס ה-SIM.</item>
+        <item quantity="two">‏נותרו לך %d ניסיונות לפני נעילת כרטיס ה-SIM.</item>
+        <item quantity="many">‏נותרו לך %d ניסיונות לפני נעילת כרטיס ה-SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">%d הימים האחרונים</item>
+        <item quantity="one">יום %d אחרון</item>
+        <item quantity="two">%d הימים האחרונים</item>
+        <item quantity="many">%d הימים האחרונים</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d שניות</item>
+        <item quantity="one">שנייה אחת</item>
+        <item quantity="two">%d שניות</item>
+        <item quantity="many">%d שניות</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d דקות</item>
+        <item quantity="one">דקה אחת</item>
+        <item quantity="two">%d דקות</item>
+        <item quantity="many">%d דקות</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d שעות</item>
+        <item quantity="one">שעה אחת</item>
+        <item quantity="two">%d שעות</item>
+        <item quantity="many">%d שעות</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">‏יש רשתות Wi-Fi זמינות</item>
+        <item quantity="one">‏יש רשת Wi-Fi זמינה</item>
+        <item quantity="two">‏יש רשתות Wi-Fi זמינות</item>
+        <item quantity="many">‏יש רשתות Wi-Fi זמינות</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">‏יש רשתות Wi-Fi פתוחות וזמינות</item>
+        <item quantity="one">‏יש רשת Wi-Fi פתוחה וזמינה</item>
+        <item quantity="two">‏יש רשתות Wi-Fi פתוחות וזמינות</item>
+        <item quantity="many">‏יש רשתות Wi-Fi פתוחות וזמינות</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d מתוך %2$d</item>
+        <item quantity="one">התאמה אחת</item>
+        <item quantity="two">%1$d מתוך %2$d</item>
+        <item quantity="many">%1$d מתוך %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">נסה שוב בעוד %d שניות</item>
+        <item quantity="one">נסה שוב בעוד שנייה אחת</item>
+        <item quantity="two">נסה שוב בעוד %d שניות</item>
+        <item quantity="many">נסה שוב בעוד %d שניות</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">‏למשך %1$d דקות (עד %2$s)</item>
+        <item quantity="one">למשך דקה אחת (עד %2$s)</item>
+        <item quantity="two">‏למשך %1$d דקות (עד %2$s)</item>
+        <item quantity="many">‏למשך %1$d דקות (עד %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">‏למשך %1$d דקות (עד %2$s)</item>
+        <item quantity="one">למשך דקה אחת (עד %2$s)</item>
+        <item quantity="two">‏למשך %1$d דקות (עד %2$s)</item>
+        <item quantity="many">‏למשך %1$d דקות (עד %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">‏למשך %1$d שעות (עד %2$s)</item>
+        <item quantity="one">למשך שעה אחת (עד %2$s)</item>
+        <item quantity="two">‏למשך %1$d שעות (עד %2$s)</item>
+        <item quantity="many">‏למשך %1$d שעות (עד %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">‏למשך %1$d שעות (עד %2$s)</item>
+        <item quantity="one">למשך שעה אחת (עד %2$s)</item>
+        <item quantity="two">‏למשך %1$d שעות (עד %2$s)</item>
+        <item quantity="many">‏למשך %1$d שעות (עד %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">‏למשך %d דקות</item>
+        <item quantity="one">למשך דקה אחת</item>
+        <item quantity="two">‏למשך %d דקות</item>
+        <item quantity="many">‏למשך %d דקות</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">‏למשך %d דקות</item>
+        <item quantity="one">למשך דקה אחת</item>
+        <item quantity="two">‏למשך %d דקות</item>
+        <item quantity="many">‏למשך %d דקות</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">‏למשך %d שעות</item>
+        <item quantity="one">למשך שעה אחת</item>
+        <item quantity="two">‏למשך %d שעות</item>
+        <item quantity="many">‏למשך %d שעות</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">‏למשך %d שעות</item>
+        <item quantity="one">למשך שעה אחת</item>
+        <item quantity="two">‏למשך %d שעות</item>
+        <item quantity="many">‏למשך %d שעות</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">בחרת %1$d</item>
+        <item quantity="one">בחרת %1$d</item>
+        <item quantity="two">בחרת %1$d</item>
+        <item quantity="many">בחרת %1$d</item>
+    </plurals>
+</resources>

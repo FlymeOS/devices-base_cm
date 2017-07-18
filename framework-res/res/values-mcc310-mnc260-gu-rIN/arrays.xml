@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi પર કૉલ્સ કરવા અને સંદેશા મોકલવા માટે, પહેલા તમારા કેરીઅરને આ સેવા સેટ કરવા માટે કહો. પછી સેટિંગ્સમાંથી Wi-Fi કૉલિંગ ચાલુ કરો.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>તમારા કેરીઅર સાથે નોંધણી કરો</item>
+    </string-array>
+</resources>

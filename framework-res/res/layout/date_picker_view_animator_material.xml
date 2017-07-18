@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.internal.widget.DialogViewAnimator android:gravity="center" android:id="@id/animator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureAllChildren="true" android:inAnimation="@anim/date_picker_fade_in_material" android:outAnimation="@anim/date_picker_fade_out_material"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.widget.DayPickerView android:id="@id/date_picker_day_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <android.widget.YearPickerView android:id="@id/date_picker_year_picker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollIndicators="bottom" />
+</com.android.internal.widget.DialogViewAnimator>

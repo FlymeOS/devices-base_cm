@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi bidez deiak egiteko eta mezuak bidaltzeko, eskatu operadoreari zerbitzu hori gaitzeko. Ondoren, aktibatu Wi-Fi bidezko deiak Ezarpenak atalean.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Erregistratu operadorearekin</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi-ի միջոցով զանգեր կատարելու և հաղորդագրություններ ուղարկելու համար նախ դիմեք ձեր օպերատորին՝ ծառայությունը կարգավորելու համար: Ապա նորից միացրեք Wi-Fi զանգերը Կարգավորումներում:</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Գրանցվեք օպերատորի մոտ</item>
+    </string-array>
+</resources>

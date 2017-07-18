@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>በWi-Fi ላይ ጥሪዎችን ለማድረግ እና መልዕክቶችን ለመላክ መጀመሪያ የአገልግሎት አቅራቢዎ ይህን አገልግሎት እንዲያዘጋጅልዎ መጠየቅ አለብዎት። ከዚያ ከቅንብሮች ሆነው እንደገና የWi-Fi ጥሪን ያብሩ።</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>የአገልግሎት አቅራቢዎ ጋር ይመዝገቡ</item>
+    </string-array>
+</resources>

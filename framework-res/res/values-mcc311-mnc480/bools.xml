@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="imsServiceAllowTurnOff">false</bool>
+    <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_carrier_volte_provisioned">true</bool>
+    <bool name="config_carrier_vt_available">false</bool>
+    <bool name="config_auto_attach_data_on_creation">false</bool>
+    <bool name="config_reject_ggsn_perm_failure">false</bool>
+    <bool name="config_protocol_errors_perm_failure">false</bool>
+</resources>

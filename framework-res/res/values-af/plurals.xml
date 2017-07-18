@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Jy het %d pogings oor voordat SIM gesluit word.</item>
+        <item quantity="one">Jy het %d poging oor voordat SIM gesluit word.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Afgelope %d dae</item>
+        <item quantity="one">Afgelope %d dag</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekondes</item>
+        <item quantity="one">1 sekonde</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minute</item>
+        <item quantity="one">1 minuut</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d uur</item>
+        <item quantity="one">1 uur</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi netwerke beskikbaar</item>
+        <item quantity="one">Wi-Fi-netwerk beskikbaar</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Oop Wi-Fi-netwerke beskikbaar</item>
+        <item quantity="one">Oop Wi-Fi-netwerk beskikbaar</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d van %2$d</item>
+        <item quantity="one">1 passing</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Probeer weer oor %d sekondes</item>
+        <item quantity="one">Probeer weer oor 1 sekonde</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minute lank (tot %2$s)</item>
+        <item quantity="one">Een minuut lank (tot %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d min. lank (tot %2$s)</item>
+        <item quantity="one">1 min. lank (tot %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d uur lank (tot %2$s)</item>
+        <item quantity="one">Een uur lank (tot %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d uur lank (tot %2$s)</item>
+        <item quantity="one">1 uur lank (tot %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minute lank</item>
+        <item quantity="one">Een minuut lank</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d min. lank</item>
+        <item quantity="one">1 min. lank</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d uur lank</item>
+        <item quantity="one">Een uur lank</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d uur lank</item>
+        <item quantity="one">1 uur lank</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d gekies</item>
+        <item quantity="one">%1$d gekies</item>
+    </plurals>
+</resources>

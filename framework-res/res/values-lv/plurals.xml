@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Varat mēģināt vēl %d reizes. Pēdējā mēģinājuma kļūdas gadījumā SIM karte tiks bloķēta.</item>
+        <item quantity="zero">Varat mēģināt vēl %d reizes. Pēdējā mēģinājuma kļūdas gadījumā SIM karte tiks bloķēta.</item>
+        <item quantity="one">Varat mēģināt vēl %d reizi. Pēdējā mēģinājuma kļūdas gadījumā SIM karte tiks bloķēta.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Pēdējās %d dienās</item>
+        <item quantity="zero">Pēdējās %d dienās</item>
+        <item quantity="one">Pēdējā %d dienā</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekundes</item>
+        <item quantity="zero">%d sekunžu</item>
+        <item quantity="one">%d sekundes</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minūtes</item>
+        <item quantity="zero">%d minūšu</item>
+        <item quantity="one">%d minūte</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d stundas</item>
+        <item quantity="zero">%d stundu</item>
+        <item quantity="one">%d stunda</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Pieejami Wi-Fi tīkli</item>
+        <item quantity="zero">Pieejami Wi-Fi tīkli</item>
+        <item quantity="one">Pieejami Wi-Fi tīkli</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Ir pieejami atvērti Wi-Fi tīkli</item>
+        <item quantity="zero">Ir pieejami atvērti Wi-Fi tīkli</item>
+        <item quantity="one">Ir pieejami atvērti Wi-Fi tīkli</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d. no %2$d</item>
+        <item quantity="zero">%1$d. no %2$d</item>
+        <item quantity="one">%1$d. no %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Mēģiniet vēlreiz pēc %d sekundēm</item>
+        <item quantity="zero">Mēģiniet vēlreiz pēc %d sekundēm</item>
+        <item quantity="one">Mēģiniet vēlreiz pēc %d sekundes</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minūtes (līdz %2$s)</item>
+        <item quantity="zero">%1$d minūtes (līdz %2$s)</item>
+        <item quantity="one">%1$d minūti (līdz %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d min (līdz %2$s)</item>
+        <item quantity="zero">%1$d min (līdz %2$s)</item>
+        <item quantity="one">%1$d min (līdz %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d stundas (līdz %2$s)</item>
+        <item quantity="zero">%1$d stundas (līdz %2$s)</item>
+        <item quantity="one">%1$d stundu (līdz %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d h (līdz %2$s)</item>
+        <item quantity="zero">%1$d h (līdz %2$s)</item>
+        <item quantity="one">%1$d h (līdz %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minūtes</item>
+        <item quantity="zero">%d minūtes</item>
+        <item quantity="one">%d minūti</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d min</item>
+        <item quantity="zero">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d stundas</item>
+        <item quantity="zero">%d stundas</item>
+        <item quantity="one">%d stundu</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d h</item>
+        <item quantity="zero">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d atlasīti</item>
+        <item quantity="zero">%1$d atlasīti</item>
+        <item quantity="one">%1$d atlasīts</item>
+    </plurals>
+</resources>

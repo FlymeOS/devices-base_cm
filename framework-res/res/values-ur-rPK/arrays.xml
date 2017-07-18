@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>گھر</item>
+        <item>دفتر</item>
+        <item>دیگر</item>
+        <item>حسب ضرورت</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>دفتر</item>
+        <item>دیگر</item>
+        <item>حسب ضرورت</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>گھر</item>
+        <item>موبائل</item>
+        <item>دفتر</item>
+        <item>دفتر کا فیکس</item>
+        <item>گھر کا فیکس</item>
+        <item>پیجر</item>
+        <item>دیگر</item>
+        <item>حسب ضرورت</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>گھر</item>
+        <item>دفتر</item>
+        <item>دیگر</item>
+        <item>حسب ضرورت</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>گھر</item>
+        <item>دفتر</item>
+        <item>دیگر</item>
+        <item>حسب ضرورت</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Щоб телефонувати або надсилати повідомлення через Wi-Fi, спочатку попросіть свого оператора налаштувати цю послугу. Після цього ввімкніть дзвінки через Wi-Fi у налаштуваннях.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Зареєструйтеся в оператора</item>
+    </string-array>
+</resources>

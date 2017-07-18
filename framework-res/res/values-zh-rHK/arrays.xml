@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>住宅</item>
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>住宅</item>
+        <item>手機</item>
+        <item>公司</item>
+        <item>公司傳真</item>
+        <item>住宅傳真</item>
+        <item>傳呼機</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>住宅</item>
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>住宅</item>
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+</resources>

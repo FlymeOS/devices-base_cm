@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>‏برای برقراری تماس و ارسال پیام از طریق Wi-Fi، ابتدا از شرکت مخابراتی‌تان درخواست کنید این سرویس را راه‌اندازی کند. سپس دوباره از تنظیمات، تماس Wi-Fi را روشن کنید.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ثبت نام با شرکت مخابراتی شما</item>
+    </string-array>
+</resources>

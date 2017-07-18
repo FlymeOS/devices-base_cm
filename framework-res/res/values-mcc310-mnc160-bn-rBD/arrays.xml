@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi এর মাধ্যমে কল করতে ও বার্তা পাঠাতে, প্রথমে আপনার পরিষেবা প্রদানকারীকে এই পরিষেবার সেট আপ করার বিষয়ে জিজ্ঞাসা করুন। তারপরে আবার সেটিংস থেকে Wi-Fi কলিং চালু করুন।</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>আপনার পরিষেবা প্রদানকারীকে নথিভুক্ত করুন</item>
+    </string-array>
+</resources>

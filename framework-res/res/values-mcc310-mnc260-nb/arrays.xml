@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>For å ringe og sende meldinger over Wi-Fi må du først be operatøren om å konfigurere denne tjenesten. Deretter slår du på Wi-Fi-anrop igjen fra Innstillinger.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrer deg hos operatøren din</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Jos haluat soittaa puheluita ja lähettää viestejä Wi-Fin kautta, pyydä ensin operaattoriasi ottamaan tämä palvelu käyttöön. Ota sitten Wi-Fi-puhelut käyttöön asetuksissa.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Rekisteröidy operaattorisi asiakkaaksi.</item>
+    </string-array>
+</resources>

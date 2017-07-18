@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Për të bërë telefonata dhe për të dërguar mesazhe me Wi-Fi, në fillim kërkoji operatorit celular ta konfigurojë këtë shërbim. Më pas aktivizo përsëri telefonatat me Wi-Fi, nga Cilësimet.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Regjistrohu me operatorin tënd celular</item>
+    </string-array>
+</resources>

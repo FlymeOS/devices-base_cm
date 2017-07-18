@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi аркылуу чалууларды аткарып жана билдирүүлөрдү жөнөтүү үчүн адегенде операторуңуздан бул кызматты орнотушун сураныңыз. Андан соң, Жөндөөлөрдөн Wi-Fi чалууну кайра күйгүзүңүз.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Операторуңузга катталыңыз</item>
+    </string-array>
+</resources>

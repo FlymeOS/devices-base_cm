@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Liko %d bandymų. Tada SIM kortelė bus užrakinta.</item>
+        <item quantity="one">Liko %d bandymas. Tada SIM kortelė bus užrakinta.</item>
+        <item quantity="few">Liko %d bandymai. Tada SIM kortelė bus užrakinta.</item>
+        <item quantity="many">Liko %d bandymo. Tada SIM kortelė bus užrakinta.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">%d pastarųjų dienų</item>
+        <item quantity="one">%d pastaroji diena</item>
+        <item quantity="few">%d pastarosios dienos</item>
+        <item quantity="many">%d pastarosios dienos</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekundžių</item>
+        <item quantity="one">%d sekundė</item>
+        <item quantity="few">%d sekundės</item>
+        <item quantity="many">%d sekundės</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minučių</item>
+        <item quantity="one">%d minutė</item>
+        <item quantity="few">%d minutės</item>
+        <item quantity="many">%d minutės</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d valandų</item>
+        <item quantity="one">%d valanda</item>
+        <item quantity="few">%d valandos</item>
+        <item quantity="many">%d valandos</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Pasiekiami „Wi-Fi“ tinklai</item>
+        <item quantity="one">Pasiekiami „Wi-Fi“ tinklai</item>
+        <item quantity="few">Pasiekiami „Wi-Fi“ tinklai</item>
+        <item quantity="many">Pasiekiami „Wi-Fi“ tinklai</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Pasiekiami atvirieji „Wi-Fi“ tinklai</item>
+        <item quantity="one">Pasiekiami atvirieji „Wi-Fi“ tinklai</item>
+        <item quantity="few">Pasiekiami atvirieji „Wi-Fi“ tinklai</item>
+        <item quantity="many">Pasiekiami atvirieji „Wi-Fi“ tinklai</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d iš %2$d</item>
+        <item quantity="one">%1$d iš %2$d</item>
+        <item quantity="few">%1$d iš %2$d</item>
+        <item quantity="many">%1$d iš %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Bandykite dar kartą po %d sekundžių</item>
+        <item quantity="one">Bandykite dar kartą po %d sekundės</item>
+        <item quantity="few">Bandykite dar kartą po %d sekundžių</item>
+        <item quantity="many">Bandykite dar kartą po %d sekundės</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minučių (iki %2$s)</item>
+        <item quantity="one">%1$d minutę (iki %2$s)</item>
+        <item quantity="few">%1$d minutes (iki %2$s)</item>
+        <item quantity="many">%1$d minutės (iki %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d min. (iki %2$s)</item>
+        <item quantity="one">%1$d min. (iki %2$s)</item>
+        <item quantity="few">%1$d min. (iki %2$s)</item>
+        <item quantity="many">%1$d min. (iki %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d valandų (iki %2$s)</item>
+        <item quantity="one">%1$d valandą (iki %2$s)</item>
+        <item quantity="few">%1$d valandas (iki %2$s)</item>
+        <item quantity="many">%1$d valandos (iki %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d val. (iki %2$s)</item>
+        <item quantity="one">%1$d val. (iki %2$s)</item>
+        <item quantity="few">%1$d val. (iki %2$s)</item>
+        <item quantity="many">%1$d val. (iki %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minučių</item>
+        <item quantity="one">%d minutę</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="many">%d minutės</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d min.</item>
+        <item quantity="one">%d min.</item>
+        <item quantity="few">%d min.</item>
+        <item quantity="many">%d min.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d valandų</item>
+        <item quantity="one">%d valandą</item>
+        <item quantity="few">%d valandas</item>
+        <item quantity="many">%d valandos</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d val.</item>
+        <item quantity="one">%d val.</item>
+        <item quantity="few">%d val.</item>
+        <item quantity="many">%d val.</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">Pasir. %1$d elem.</item>
+        <item quantity="one">Pasir. %1$d elem.</item>
+        <item quantity="few">Pasir. %1$d elem.</item>
+        <item quantity="many">Pasir. %1$d elem.</item>
+    </plurals>
+</resources>

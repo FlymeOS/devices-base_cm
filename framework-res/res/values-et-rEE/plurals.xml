@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Teil on enne SIM-kaardi lukustumist jäänud veel %d katset.</item>
+        <item quantity="one">Teil on enne SIM-kaardi lukustumist jäänud veel %d katse.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Viimased %d päeva</item>
+        <item quantity="one">Viimane %d päev</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekundit</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutit</item>
+        <item quantity="one">1 minut</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d tundi</item>
+        <item quantity="one">1 tund</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">WiFi-võrgud on saadaval</item>
+        <item quantity="one">WiFi-võrk on saadaval</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Avatud WiFi-võrgud on saadaval</item>
+        <item quantity="one">Avatud WiFi-võrk on saadaval</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d vastet %2$d-st</item>
+        <item quantity="one">1 vaste</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Proovige uuesti %d sekundi pärast</item>
+        <item quantity="one">Proovige uuesti 1 sekundi pärast</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minutiks (kuni %2$s)</item>
+        <item quantity="one">Üheks minutiks (kuni %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d min (kuni %2$s)</item>
+        <item quantity="one">1 min (kuni %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d tunniks (kuni %2$s)</item>
+        <item quantity="one">Üheks tunniks (kuni %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d h (kuni %2$s)</item>
+        <item quantity="one">1 h (kuni %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minutiks</item>
+        <item quantity="one">Üheks minutiks</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d tunniks</item>
+        <item quantity="one">Üheks tunniks</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d on valitud</item>
+        <item quantity="one">%1$d on valitud</item>
+    </plurals>
+</resources>

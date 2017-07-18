@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Quédanche %d intentos antes de que se bloquee a SIM.</item>
+        <item quantity="one">Quédache %d intento antes de que se bloquee a SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Últimos %d días</item>
+        <item quantity="one">Último %d día</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">Un segundo</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">Un minuto</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d horas</item>
+        <item quantity="one">Unha hora</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Redes wifi dispoñibles</item>
+        <item quantity="one">Rede wifi dispoñible</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Abrir redes wifi dispoñibles</item>
+        <item quantity="one">Abrir rede wifi dispoñible</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d de %2$d</item>
+        <item quantity="one">Unha coincidencia</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Téntao de novo en %d segundos</item>
+        <item quantity="one">Téntao de novo dentro nun segundo</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Durante %1$d minutos (ata as %2$s)</item>
+        <item quantity="one">Durante un minuto (ata as %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Durante %1$d min (ata as %2$s)</item>
+        <item quantity="one">Durante un min (ata as %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Durante %1$d horas (ata as %2$s)</item>
+        <item quantity="one">Durante unha hora (ata as %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Durante %1$d h (ata as %2$s)</item>
+        <item quantity="one">Durante unha h (ata as %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Durante %d minutos</item>
+        <item quantity="one">Durante un minuto</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Durante %d min</item>
+        <item quantity="one">Durante un min</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Durante %d horas</item>
+        <item quantity="one">Durante unha hora</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Durante %d h</item>
+        <item quantity="one">Durante unha h</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">Seleccionáronse %1$d</item>
+        <item quantity="one">Seleccionouse %1$d</item>
+    </plurals>
+</resources>

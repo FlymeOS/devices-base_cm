@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>‏لإجراء مكالمات وإرسال رسائل عبر Wi-Fi، اطلب من مشغّل شبكة الجوّال أولاً إعداد هذا الجهاز، ثم شغّل الاتصال عبر Wi-Fi مرة أخرى من خلال الإعدادات.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>التسجيل لدى مشغّل شبكة الجوّال</item>
+    </string-array>
+</resources>

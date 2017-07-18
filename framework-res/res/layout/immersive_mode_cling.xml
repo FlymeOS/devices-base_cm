@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@color/immersive_cling_bg_color" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/immersive_cling_chevron" android:layout_width="76.0dip" android:layout_height="76.0dip" android:layout_marginTop="-24.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/immersive_cling_back_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/immersive_cling_light_bg_circ" android:scaleType="center" />
+        <ImageView android:id="@id/immersive_cling_back_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/immersive_cling_bg_circ" android:scaleType="center" />
+        <ImageView android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_expand_more_48dp" android:scaleType="center" android:tint="@color/immersive_cling_bg_color" />
+    </FrameLayout>
+    <TextView android:textSize="24.0sp" android:textColor="@color/immersive_cling_text_color" android:id="@id/immersive_cling_title" android:paddingTop="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/immersive_cling_title" android:layout_below="@id/immersive_cling_chevron" android:paddingStart="48.0dip" android:paddingEnd="48.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/immersive_cling_text_color" android:id="@id/immersive_cling_description" android:paddingTop="12.599976dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/immersive_cling_description" android:layout_below="@id/immersive_cling_title" android:paddingStart="48.0dip" android:paddingEnd="48.0dip" />
+    <Button android:textSize="14.0sp" android:textColor="@color/immersive_cling_button_text_color" android:id="@id/ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/immersive_cling_positive" android:layout_below="@id/immersive_cling_description" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" android:layout_marginEnd="40.0dip" android:layout_alignParentEnd="true" style="@style/Widget.Material.Button.Borderless" />
+</RelativeLayout>

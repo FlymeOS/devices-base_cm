@@ -1,0 +1,17 @@
+recovery_api_version=3
+fstab_version=2
+blocksize=0xffffffff
+boot_size=0x2000000
+recovery_size=0x2000000
+system_size=0xC0000000
+userdata_size=0x62bbfbe00
+cache_size=0x6400000
+extfs_sparse_flag=-s
+tool_extensions=.
+default_system_dev_certificate=build/security/testkey
+use_set_metadata=1
+multistage_support=1
+update_rename_support=1
+fs_type=ext4
+selinux_fc=out/target/product/angler/root/file_contexts
+

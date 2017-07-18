@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Sinulla on %d yritystä jäljellä, ennen kuin SIM-kortti lukitaan.</item>
+        <item quantity="one">Sinulla on %d yritys jäljellä, ennen kuin SIM-kortti lukitaan.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Edellisten %d päivän aikana</item>
+        <item quantity="one">Edellisen %d päivän aikana</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="one">1 sekunti</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="one">1 minuutti</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d tuntia</item>
+        <item quantity="one">1 tunti</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi-verkkoja käytettävissä</item>
+        <item quantity="one">Wi-Fi-verkko käytettävissä</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Avoimia Wi-Fi-verkkoja käytettävissä</item>
+        <item quantity="one">Avoin Wi-Fi-verkko käytettävissä</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d/%2$d</item>
+        <item quantity="one">1 tulos</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Yritä uudelleen %d sekunnin kuluttua</item>
+        <item quantity="one">Yritä uudelleen 1 sekunnin kuluttua</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minuutiksi (kunnes kello on %2$s)</item>
+        <item quantity="one">Yhdeksi minuutiksi (kunnes kello on %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d minuutin ajan (%2$s asti)</item>
+        <item quantity="one">1 minuutin ajan (%2$s asti)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d tunniksi (kunnes kello on %2$s)</item>
+        <item quantity="one">Yhdeksi tunniksi (kunnes kello on %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d tunnin ajan (%2$s asti)</item>
+        <item quantity="one">1 tunnin ajan (%2$s asti)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minuutiksi</item>
+        <item quantity="one">Minuutiksi</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d minuutin ajan</item>
+        <item quantity="one">1 minuutin ajan</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d tunniksi</item>
+        <item quantity="one">Tunniksi</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d tunnin ajan</item>
+        <item quantity="one">1 tunnin ajan</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d valittu</item>
+        <item quantity="one">%1$d valittu</item>
+    </plurals>
+</resources>

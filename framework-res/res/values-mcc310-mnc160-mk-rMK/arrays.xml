@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>За повикување и испраќање пораки преку Wi-Fi, прво побарајте од операторот да ви ја постави оваа услуга. Потоа повторно вклучете повикување преку Wi-Fi во Поставки.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Регистрирајте се со операторот</item>
+    </string-array>
+</resources>

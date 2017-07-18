@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Til að hringja og senda skilaboð yfir Wi-Fi þarftu fyrst að biðja símafyrirtækið þitt um að setja þá þjónustu upp. Kveiktu síðan á Wi-Fi símtölum í stillingunum.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Skráðu þig hjá símafyrirtækinu</item>
+    </string-array>
+</resources>

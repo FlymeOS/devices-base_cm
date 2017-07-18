@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>要通过 WLAN 打电话和发信息，请先让您的运营商开通此服务，然后再到“设置”中重新开启 WLAN 通话功能。</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>向您的运营商注册</item>
+    </string-array>
+</resources>

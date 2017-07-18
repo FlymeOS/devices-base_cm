@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">ሲምዎ ከመቆለፉ በፊት %d ሙከራዎች ይቀሩዎታል።</item>
+        <item quantity="one">ሲምዎ ከመቆለፉ በፊት %d ሙከራዎች ይቀሩዎታል።</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">የመጨረሻዎቹ %d ቀኖች</item>
+        <item quantity="one">የመጨረሻዎቹ %d ቀኖች</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d ሰከንዶች</item>
+        <item quantity="one">%d ሰከንዶች</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d ደቂቃዎች</item>
+        <item quantity="one">%d ደቂቃዎች</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d ሰዓቶች</item>
+        <item quantity="one">%d ሰዓቶች</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">የWi-Fi አውታረ መረቦች አሉ</item>
+        <item quantity="one">የWi-Fi አውታረ መረቦች አሉ</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">የሚገኙ የWi-Fi አውታረ መረቦችን ክፈት</item>
+        <item quantity="one">የሚገኙ የWi-Fi አውታረ መረቦችን ክፈት</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ከ%2$d</item>
+        <item quantity="one">%1$d ከ%2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">በ%d ሰከንዶች ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="one">በ%d ሰከንዶች ውስጥ እንደገና ይሞክሩ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">ለ%1$d ደቂቃዎች (እስከ %2$s ድረስ)</item>
+        <item quantity="one">ለ%1$d ደቂቃዎች (እስከ %2$s ድረስ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">ለ%1$d ደቂቃ (እስከ %2$s)</item>
+        <item quantity="one">ለ%1$d ደቂቃ (እስከ %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">ለ%1$d ሰዓቶች (እስከ %2$s ድረስ)</item>
+        <item quantity="one">ለ%1$d ሰዓቶች (እስከ %2$s ድረስ)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">ለ%1$d ሰዓት (እስከ %2$s)</item>
+        <item quantity="one">ለ%1$d ሰዓት (እስከ %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">ለ%d ደቂቃዎች</item>
+        <item quantity="one">ለ%d ደቂቃዎች</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">ለ%d ደቂቃ</item>
+        <item quantity="one">ለ%d ደቂቃ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">ለ%d ሰዓቶች</item>
+        <item quantity="one">ለ%d ሰዓቶች</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">ለ%d ሰዓት</item>
+        <item quantity="one">ለ%d ሰዓት</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d ተመርጠዋል</item>
+        <item quantity="one">%1$d ተመርጧል</item>
+    </plurals>
+</resources>

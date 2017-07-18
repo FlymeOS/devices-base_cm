@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>"Per fer trucades i enviar missatges per Wi-Fi, primer has de demanar a l'operador de telefonia mòbil que configuri aquest servei. Després, torna a activar les trucades per Wi-Fi des de Configuració."</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>"Registra't amb el teu operador de telefonia mòbil"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>"Kablosuz ağ üzerinden telefon etmek ve ileti göndermek için ilk önce operatörünüzden bu hizmeti ayarlamasını isteyin. Sonra tekrar Ayarlar'dan Kablosuz çağrı özelliğini açın."</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Operatörünüze kaydolun</item>
+    </string-array>
+</resources>

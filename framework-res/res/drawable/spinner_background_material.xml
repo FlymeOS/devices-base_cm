@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:paddingStart="0.0dip" android:paddingEnd="48.0dip" android:paddingMode="stack"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="end|fill_vertical|center" android:width="48.0dip" android:drawable="@drawable/control_background_40dp_material" />
+    <item android:gravity="end|center" android:height="24.0dip" android:width="24.0dip" android:drawable="@drawable/ic_spinner_caret" android:end="12.0dip" />
+</layer-list>

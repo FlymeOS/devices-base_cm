@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi orqali qo‘ng‘iroqlarni amalga oshirish va xabarlar bilan almashinish uchun uyali aloqa operatoringizdan ushbu xizmatni yoqib qo‘yishni so‘rashingiz lozim. Keyin sozlamalarda Wi-Fi qo‘ng‘irog‘i imkoniyatini yoqib olishingiz mumkin.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Mobil operatoringiz yordamida ro‘yxatdan o‘ting</item>
+    </string-array>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">ඔබේ SIM කාඩ් පත අඟුළු වැටීමට පෙර තවත් උත්සාහයන් %d ක් ඉතිරිව ඇත.</item>
+        <item quantity="one">ඔබේ SIM කාඩ් පත අඟුළු වැටීමට පෙර තවත් උත්සාහයන් %d ක් ඉතිරිව ඇත.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">අවසන් දින %d</item>
+        <item quantity="one">අවසන් දින %d</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">තත්පර %d යි</item>
+        <item quantity="one">තත්පර %d යි</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">මිනිත්තු %d යි</item>
+        <item quantity="one">මිනිත්තු %d යි</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">පැය %d</item>
+        <item quantity="one">පැය %d</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi ජාල තිබේ</item>
+        <item quantity="one">Wi-Fi ජාල තිබේ</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">විවෘත Wi-Fi ජාල තිබේ</item>
+        <item quantity="one">විවෘත Wi-Fi ජාල තිබේ</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d න් %2$d යි</item>
+        <item quantity="one">%1$d න් %2$d යි</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">තත්පර %d කින් නැවත උත්සාහ කරන්න</item>
+        <item quantity="one">තත්පර %d කින් නැවත උත්සාහ කරන්න</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">මිනිත්තු %1$d ක් සඳහා (%2$s තෙක්)</item>
+        <item quantity="one">මිනිත්තු %1$d ක් සඳහා (%2$s තෙක්)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">විනාඩි %1$d ක් සඳහා (%2$s තෙක්)</item>
+        <item quantity="one">විනාඩි %1$d ක් සඳහා (%2$s තෙක්)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">පැය %1$d ක් සඳහා (%2$s තෙක්)</item>
+        <item quantity="one">පැය %1$d ක් සඳහා (%2$s තෙක්)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">පැය %1$d ක් සඳහා (%2$s තෙක්)</item>
+        <item quantity="one">පැය %1$d ක් සඳහා (%2$s තෙක්)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">මිනිත්තු %d ක් සඳහා</item>
+        <item quantity="one">මිනිත්තු %d ක් සඳහා</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">විනාඩි %d ක් සඳහා</item>
+        <item quantity="one">විනාඩි %d ක් සඳහා</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">පැය %d ක් සඳහා</item>
+        <item quantity="one">පැය %d ක් සඳහා</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">පැය %d ක් සඳහා</item>
+        <item quantity="one">පැය %d ක් සඳහා</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d ක් තෝරන ලදි</item>
+        <item quantity="one">%1$d ක් තෝරන ලදි</item>
+    </plurals>
+</resources>

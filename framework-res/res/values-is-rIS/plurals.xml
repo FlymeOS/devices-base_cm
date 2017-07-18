@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Þú átt %d tilraunir eftir áður en SIM-kortinu verður læst.</item>
+        <item quantity="one">Þú átt %d tilraun eftir áður en SIM-kortinu verður læst.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Undanfarna %d daga</item>
+        <item quantity="one">Undanfarinn %d dag</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekúndur</item>
+        <item quantity="one">%d sekúnda</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d mínútur</item>
+        <item quantity="one">%d mínúta</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d klukkustundir</item>
+        <item quantity="one">%d klukkustund</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi net í boði</item>
+        <item quantity="one">Wi-Fi net í boði</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Opin Wi-Fi net í boði</item>
+        <item quantity="one">Opin Wi-Fi net í boði</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d af %2$d</item>
+        <item quantity="one">%1$d af %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Reyndu aftur eftir %d sekúndur</item>
+        <item quantity="one">Reyndu aftur eftir %d sekúndu</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Í %1$d mínútur (til %2$s)</item>
+        <item quantity="one">Í %1$d mínútu (til %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Í %1$d mín. (fram til %2$s)</item>
+        <item quantity="one">Í %1$d mín. (fram til %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Í %1$d klukkustundir (til %2$s)</item>
+        <item quantity="one">Í %1$d klukkustund (til %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Í %1$d klst. (fram til %2$s)</item>
+        <item quantity="one">Í %1$d klst. (fram til %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Í %d mínútur</item>
+        <item quantity="one">Í %d mínútu</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Í %d mín.</item>
+        <item quantity="one">Í %d mín.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Í %d klukkustundir</item>
+        <item quantity="one">Í %d klukkustund</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Í %d klst.</item>
+        <item quantity="one">Í %d klst.</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d valin</item>
+        <item quantity="one">%1$d valið</item>
+    </plurals>
+</resources>

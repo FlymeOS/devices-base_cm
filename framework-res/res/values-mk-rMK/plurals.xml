@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Ви преостануваат уште %d обиди пред СИМ-картичката да се заклучи.</item>
+        <item quantity="one">Ви преостануваат уште %d обид пред СИМ-картичката да се заклучи.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Последните %d дена</item>
+        <item quantity="one">Последните %d ден</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d секунди</item>
+        <item quantity="one">%d секунда</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d минути</item>
+        <item quantity="one">%d минута</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d часа</item>
+        <item quantity="one">%d час</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi мрежи се достапни</item>
+        <item quantity="one">Wi-Fi мрежи се достапни</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Отворени Wi-Fi мрежи се достапни</item>
+        <item quantity="one">Отворени Wi-Fi мрежи се достапни</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d од %2$d</item>
+        <item quantity="one">%1$d од %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Обидете се повторно по %d секунди</item>
+        <item quantity="one">Обидете се повторно по %d секунда</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">За %1$d минути (до %2$s)</item>
+        <item quantity="one">За %1$d минута (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">За %1$d мин. (до %2$s)</item>
+        <item quantity="one">За %1$d мин. (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">За %1$d часа (до %2$s)</item>
+        <item quantity="one">За %1$d час (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">За %1$d ч. (до %2$s)</item>
+        <item quantity="one">За %1$d ч. (до %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">За %d минути</item>
+        <item quantity="one">За %d минута</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">За %d мин.</item>
+        <item quantity="one">За %d мин.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">За % d часа</item>
+        <item quantity="one">За % d час</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">За %d ч.</item>
+        <item quantity="one">За %d ч.</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d се избрани</item>
+        <item quantity="one">%1$d е избрана</item>
+    </plurals>
+</resources>

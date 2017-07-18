@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>वाय-फायवरून कॉल करण्यासाठी आणि संदेश पाठविण्यासाठी, प्रथम आपल्या वाहकास ही सेवा सेट करण्यास सांगा. नंतर सेटिंग्जमधून पुन्हा वाय-फाय कॉलिंग चालू करा.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>आपल्या वाहकासह नोंदणी करा</item>
+    </string-array>
+</resources>

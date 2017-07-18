@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>ਘਰ</item>
+        <item>ਕੰਮ</item>
+        <item>ਹੋਰ</item>
+        <item>ਕਸਟਮ</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>ਕੰਮ</item>
+        <item>ਹੋਰ</item>
+        <item>ਕਸਟਮ</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ਘਰ</item>
+        <item>ਮੋਬਾਈਲ</item>
+        <item>ਕੰਮ</item>
+        <item>ਦਫ਼ਤਰ ਦੀ ਫੈਕਸ</item>
+        <item>ਘਰ ਦੀ ਫੈਕਸ</item>
+        <item>ਪੇਜ਼ਰ</item>
+        <item>ਹੋਰ</item>
+        <item>ਕਸਟਮ</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ਘਰ</item>
+        <item>ਕੰਮ</item>
+        <item>ਹੋਰ</item>
+        <item>ਕਸਟਮ</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>ਘਰ</item>
+        <item>ਕੰਮ</item>
+        <item>ਹੋਰ</item>
+        <item>ਕਸਟਮ</item>
+    </string-array>
+</resources>

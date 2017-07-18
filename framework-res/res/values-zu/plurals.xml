@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Unemizamo engu-%d esele ngaphambi kokuthi i-SIM ikhiywe.</item>
+        <item quantity="one">Unemizamo engu-%d esele ngaphambi kokuthi i-SIM ikhiywe.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Izinsuku zokugcina ezingu-%d</item>
+        <item quantity="one">Izinsuku zokugcina ezingu-%d</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d amasekhondi</item>
+        <item quantity="one">%d amasekhondi</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d amaminithi</item>
+        <item quantity="one">%d amaminithi</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d amahora</item>
+        <item quantity="one">%d amahora</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Amanethiwekhi we-Wi-Fi ayatholakala</item>
+        <item quantity="one">Amanethiwekhi we-Wi-Fi ayatholakala</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Vula amanethiwekhi we-Wi-Fi atholakalayo</item>
+        <item quantity="one">Vula amanethiwekhi we-Wi-Fi atholakalayo</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d kokungu-%2$d</item>
+        <item quantity="one">%1$d kokungu-%2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Zama futhi kumasekhondi angu-%d</item>
+        <item quantity="one">Zama futhi kumasekhondi angu-%d</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Okwamaminithi angu-%1$d (kuze kube ngo-%2$s)</item>
+        <item quantity="one">Okwamaminithi angu-%1$d (kuze kube ngo-%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Ngeminithi elingu-%1$d (kuze kube ngu-%2$s)</item>
+        <item quantity="one">Ngeminithi elingu-%1$d (kuze kube ngu-%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Kwamahora angu-%1$d (kuze kube ngo-%2$s)</item>
+        <item quantity="one">Kwamahora angu-%1$d (kuze kube ngo-%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Ngehora elingu-%1$d (kuze kube ngu-%2$s)</item>
+        <item quantity="one">Ngehora elingu-%1$d (kuze kube ngu-%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Amaminithi angu-%d</item>
+        <item quantity="one">Amaminithi angu-%d</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Ngeminithi elingu-%d</item>
+        <item quantity="one">Ngeminithi elingu-%d</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Amahora angu-%d</item>
+        <item quantity="one">Amahora angu-%d</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Ngamahora angu-%d</item>
+        <item quantity="one">Ngamahora angu-%d</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d okukhethiwe</item>
+        <item quantity="one">%1$d okukhethiwe</item>
+    </plurals>
+</resources>

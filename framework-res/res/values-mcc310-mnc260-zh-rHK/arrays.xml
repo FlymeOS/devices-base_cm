@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>如要透過 Wi-Fi 撥打電話及傳送訊息，請先向您的流動網絡供應商要求設定此服務。然後再次在「設定」中開啟 Wi-Fi 通話。</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>向您的流動網絡供應商註冊</item>
+    </string-array>
+</resources>

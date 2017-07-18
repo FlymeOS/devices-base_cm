@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permgrouplab_sensors">సెన్సార్‌లు</string>
+    <string name="android_upgrading_apk">%2$dలో %1$dవ అనువర్తనం.</string>
+</resources>

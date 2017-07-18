@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>‏Wi-Fi سے کالز کرنے اور پیغامات بھیجنے کیلئے، پہلے اپنے کیریئر سے اس سروس کو ترتیب دینے کیلئے کہیں۔ پھر ترتیبات سے دوبارہ Wi-Fi کالنگ آن کریں۔</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>اپنے کیریئر کے ساتھ رجسٹر کریں</item>
+    </string-array>
+</resources>

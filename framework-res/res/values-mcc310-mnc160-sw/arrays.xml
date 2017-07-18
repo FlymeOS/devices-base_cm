@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Ili upige simu na kutuma ujumbe kupitia Wi-Fi, mwambie mtoa huduma wako asanidi huduma hii kwanza. Kisha uwashe tena upigaji simu kwa Wi-Fi kutoka kwenye Mipangilio.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Jisajili na mtoa huduma wako</item>
+    </string-array>
+</resources>

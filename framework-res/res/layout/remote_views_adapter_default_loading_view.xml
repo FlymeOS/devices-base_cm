@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="18.0sp" android:textColor="@color/loading_view_text_color" android:gravity="center" android:id="@id/default_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/loading" android:shadowColor="@color/loading_view_text_shadow_color" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi üzərindən zəng etmək və mesaj göndərmək üçün ilk öncə operatordan bu xidməti ayarlamağı tələb edin. Sonra Ayarlardan Wi-Fi çağrısını aktivləşdirin.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Operatorla qeydiyyatdan keçin</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>За да извършвате обаждания и да изпращате съобщения през Wi-Fi, първо помолете оператора си да настрои тази услуга. След това включете отново функцията за обаждания през Wi-Fi от настройките.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Регистриране с оператора ви</item>
+    </string-array>
+</resources>

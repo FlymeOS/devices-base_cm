@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_wifi_framework_sap_2G_channel_list">1,6</string>
+</resources>

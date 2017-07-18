@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">您還可以再試 %d 次。如果仍然失敗，SIM 卡將被鎖定。</item>
+        <item quantity="one">您還可以再試 %d 次。如果仍然失敗，SIM 卡將被鎖定。</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">過去 %d 天內</item>
+        <item quantity="one">過去 %d 天內</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d 秒</item>
+        <item quantity="one">1 秒</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d 分鐘</item>
+        <item quantity="one">1 分鐘</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d 小時</item>
+        <item quantity="one">1 小時</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">有多個可用的 Wi-Fi 網路</item>
+        <item quantity="one">有一個可用的 Wi-Fi 網路</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">有多個可用的開放 Wi-Fi 網路</item>
+        <item quantity="one">有多個可用的開放 Wi-Fi 網路</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">第 %1$d 個相符項目 (共 %2$d 個)</item>
+        <item quantity="one">1 個相符項目</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">請於 %d 秒後再試一次</item>
+        <item quantity="one">請於 1 秒後再試一次</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">持續 %1$d 分鐘 (結束時間：%2$s)</item>
+        <item quantity="one">持續 1 分鐘 (結束時間：%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d 分鐘 (直到 %2$s)</item>
+        <item quantity="one">1 分鐘 (直到 %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">持續 %1$d 小時 (結束時間：%2$s)</item>
+        <item quantity="one">持續 1 小時 (結束時間：%2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d 小時 (直到 %2$s)</item>
+        <item quantity="one">1 小時 (直到 %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">持續 %d 分鐘</item>
+        <item quantity="one">持續 1 分鐘</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d 分鐘</item>
+        <item quantity="one">1 分鐘</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">持續 %d 小時</item>
+        <item quantity="one">持續 1 小時</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d 小時</item>
+        <item quantity="one">1 小時</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">已選取 %1$d 個項目</item>
+        <item quantity="one">已選取 %1$d 個項目</item>
+    </plurals>
+</resources>
