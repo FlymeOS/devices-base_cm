@@ -30389,7 +30389,7 @@
     .param p4, "totalAppCount"    # I
 
     .prologue
-    invoke-static/range {p0 .. p1}, Lcom/android/server/policy/PhoneWindowManager$FlymeInjector;->showBootMessage(Lcom/android/server/policy/PhoneWindowManager;II)Z
+    invoke-static {p0, p3, p4}, Lcom/android/server/policy/PhoneWindowManager$FlymeInjector;->showBootMessage(Lcom/android/server/policy/PhoneWindowManager;II)Z
 
     move-result v0
 

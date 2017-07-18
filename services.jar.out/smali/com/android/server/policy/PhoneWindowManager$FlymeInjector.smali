@@ -938,17 +938,17 @@
     .prologue
     int-to-double v0, p1
 
-    int-to-double v1, p2
+    int-to-double v2, p2
 
-    div-double v2, v0, v1
+    div-double v4, v0, v2
 
     const-wide/high16 v0, 0x4059000000000000L    # 100.0
 
-    mul-double/2addr v0, v2
+    mul-double/2addr v0, v4
 
-    const-wide/high16 v1, 0x3fe0000000000000L    # 0.5
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
-    sub-double/2addr v0, v1
+    sub-double/2addr v0, v2
 
     double-to-int v2, v0
 
