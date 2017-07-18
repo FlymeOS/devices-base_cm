@@ -1463,3 +1463,21 @@
     :cond_0
     return-void
 .end method
+
+.method public isLocalVideoCapable()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isRemoteVideoCapable()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
