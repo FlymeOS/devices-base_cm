@@ -1516,3 +1516,117 @@
     .line 376
     goto :goto_4
 .end method
+
+.method private loadFlymeIcon(Landroid/content/pm/ComponentInfo;)Landroid/graphics/drawable/Drawable;
+    .locals 3
+    .param p1, "ci"    # Landroid/content/pm/ComponentInfo;
+
+    .prologue
+    const/4 v0, 0x0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    const-string v1, "com.android.calendar"
+
+    iget-object v2, p1, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-boolean v1, Landroid/content/res/flymetheme/FlymeThemeHelper;->MEIZU_CALENDAR_ICON:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCalendarIcon()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    :goto_0
+    return-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    :cond_0
+    iget-object v1, p1, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCustomIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "dr":Landroid/graphics/drawable/Drawable;
+    goto :goto_0
+.end method
+
+.method public loadIconFlymeTheme(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+    .locals 6
+    .param p1, "pm"    # Landroid/content/pm/PackageManager;
+
+    .prologue
+    const/4 v5, 0x0
+
+    iget-object v3, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
+
+    if-eqz v3, :cond_0
+
+    iget v3, p0, Landroid/content/pm/ResolveInfo;->icon:I
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
+
+    iget v4, p0, Landroid/content/pm/ResolveInfo;->icon:I
+
+    invoke-virtual {p1, v3, v4, v5}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    .local v2, "dr":Landroid/graphics/drawable/Drawable;
+    if-eqz v2, :cond_0
+
+    return-object v2
+
+    .end local v2    # "dr":Landroid/graphics/drawable/Drawable;
+    :cond_0
+    invoke-direct {p0}, Landroid/content/pm/ResolveInfo;->getComponentInfo()Landroid/content/pm/ComponentInfo;
+
+    move-result-object v1
+
+    .local v1, "ci":Landroid/content/pm/ComponentInfo;
+    iget-object v0, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    .local v0, "ai":Landroid/content/pm/ApplicationInfo;
+    invoke-direct {p0, v1}, Landroid/content/pm/ResolveInfo;->loadFlymeIcon(Landroid/content/pm/ComponentInfo;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    .restart local v2    # "dr":Landroid/graphics/drawable/Drawable;
+    if-eqz v2, :cond_1
+
+    return-object v2
+
+    :cond_1
+    iget v3, p0, Landroid/content/pm/ResolveInfo;->icon:I
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, v1, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    iget v4, p0, Landroid/content/pm/ResolveInfo;->icon:I
+
+    invoke-virtual {p1, v3, v4, v0}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    return-object v2
+
+    :cond_2
+    invoke-virtual {v1, p1}, Landroid/content/pm/ComponentInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    return-object v3
+.end method

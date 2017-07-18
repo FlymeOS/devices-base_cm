@@ -40,6 +40,20 @@
 
 
 # instance fields
+.field private mFlymeContentHeight:I
+
+.field private mFlymeFieldId:I
+
+.field private mFlymeHeaderView:Landroid/view/View;
+
+.field private mFlymeListViewPadding:Landroid/graphics/Rect;
+
+.field private mFlymeMaxHeight:I
+
+.field protected mMzAdjustWindowPosition:Z
+
+.field protected mMzKeepInputMethodNeeded:Z
+
 .field private mAdapter:Landroid/widget/ListAdapter;
 
 .field private mContext:Landroid/content/Context;
@@ -348,6 +362,8 @@
 
     iput v2, p0, Landroid/widget/ListPopupWindow;->mLayoutDirection:I
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/ListPopupWindow;->initFlymeExtraFields()V
+
     .line 213
     return-void
 .end method
@@ -401,6 +417,8 @@
     move-object/from16 v0, p0
 
     iput-object v4, v0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/ListPopupWindow;->buildFlymeDropDownList()V
 
     .line 1072
     move-object/from16 v0, p0
@@ -727,6 +745,9 @@
     .line 1183
     :cond_4
     :goto_4
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/ListPopupWindow;->setFlymeDropDownVerticalOffset()V
+
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
@@ -764,6 +785,11 @@
 
     .line 1187
     .local v17, "maxHeight":I
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/ListPopupWindow;->adjustFlymeWindowPositionHeight()I
+
+    move-result v17
+
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/ListPopupWindow;->mDropDownAlwaysVisible:Z
@@ -2200,6 +2226,15 @@
     .param p1, "mode"    # I
 
     .prologue
+
+    iget-boolean v0, p0, Landroid/widget/ListPopupWindow;->mMzKeepInputMethodNeeded:Z
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     .line 714
     iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
 
@@ -2372,6 +2407,9 @@
 
     .line 732
     :cond_0
+
+    invoke-direct/range {p0 .. p1}, Landroid/widget/ListPopupWindow;->setFlymeSelection(I)V
+
     return-void
 .end method
 
@@ -2449,6 +2487,9 @@
 
     .line 586
     .local v6, "height":I
+
+    invoke-direct {p0, v6}, Landroid/widget/ListPopupWindow;->initFlymeContentHeight(I)V
+
     invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->isInputMethodNotNeeded()Z
 
     move-result v8
@@ -2846,4 +2887,550 @@
 
     .line 656
     goto :goto_c
+.end method
+
+.method private adjustFlymeWindowPositionHeight()I
+    .locals 3
+
+    .prologue
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    .local v0, "ignoreBottomDecorations":Z
+    :goto_0
+    invoke-virtual {p0, v0}, Landroid/widget/ListPopupWindow;->adjustWindowPositionHeightforMz(Z)I
+
+    move-result v1
+
+    return v1
+
+    .end local v0    # "ignoreBottomDecorations":Z
+    :cond_0
+    const/4 v0, 0x0
+
+    .restart local v0    # "ignoreBottomDecorations":Z
+    goto :goto_0
+.end method
+
+.method private buildFlymeDropDownList()V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x0
+
+    const/4 v5, 0x0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iget v1, v1, Landroid/graphics/Rect;->left:I
+
+    iget-object v2, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->top:I
+
+    iget-object v3, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iget v3, v3, Landroid/graphics/Rect;->right:I
+
+    iget-object v4, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iget v4, v4, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ListPopupWindow$DropDownListView;->setPaddingRelative(IIII)V
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    invoke-virtual {v0, v5, v5}, Landroid/widget/ListPopupWindow$DropDownListView;->measure(II)V
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    invoke-virtual {v0, v1, v6, v5}, Landroid/widget/ListPopupWindow$DropDownListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
+
+    :cond_1
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListPopupWindow$DropDownListView;->setOverScrollMode(I)V
+
+    return-void
+.end method
+
+.method private initFlymeContentHeight(I)V
+    .locals 2
+    .param p1, "height"    # I
+
+    .prologue
+    const/4 v0, 0x0
+
+    if-lez p1, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mTempRect:Landroid/graphics/Rect;
+
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    sub-int v0, p1, v0
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mTempRect:Landroid/graphics/Rect;
+
+    iget v1, v1, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr v0, v1
+
+    :cond_0
+    iput v0, p0, Landroid/widget/ListPopupWindow;->mFlymeContentHeight:I
+
+    return-void
+.end method
+
+.method private initFlymeExtraFields()V
+    .locals 2
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/flyme/internal/R$dimen;->mz_alert_dialog_max_height:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Landroid/widget/ListPopupWindow;->mFlymeMaxHeight:I
+
+    return-void
+.end method
+
+.method private setFlymeDropDownVerticalOffset()V
+    .locals 2
+
+    .prologue
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "background":Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p0, Landroid/widget/ListPopupWindow;->mDropDownVerticalOffsetSet:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Landroid/widget/ListPopupWindow;->mMzAdjustWindowPosition:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Landroid/widget/ListPopupWindow;->mDropDownVerticalOffset:I
+
+    :cond_0
+    return-void
+.end method
+
+.method private setFlymeSelection(I)V
+    .locals 2
+    .param p1, "position"    # I
+
+    .prologue
+    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mDropDownList:Landroid/widget/ListPopupWindow$DropDownListView;
+
+    iget v1, p0, Landroid/widget/ListPopupWindow;->mFlymeContentHeight:I
+
+    div-int/lit8 v1, v1, 0x2
+
+    invoke-virtual {v0, p1, v1}, Landroid/widget/ListPopupWindow$DropDownListView;->setSelectionFromTop(II)V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public adjustWindowPositionForMz(Z)V
+    .locals 0
+    .param p1, "adjust"    # Z
+
+    .prologue
+    return-void
+.end method
+
+.method public adjustWindowPositionHeightforMz(Z)I
+    .locals 4
+    .param p1, "ignoreBottomDecorations"    # Z
+
+    .prologue
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->getAnchorView()Landroid/view/View;
+
+    move-result-object v2
+
+    iget v3, p0, Landroid/widget/ListPopupWindow;->mDropDownVerticalOffset:I
+
+    invoke-virtual {v1, v2, v3, p1}, Landroid/widget/PopupWindow;->getMaxAvailableHeight(Landroid/view/View;IZ)I
+
+    move-result v0
+
+    .local v0, "maxHeight":I
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->isColorTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Landroid/widget/ListPopupWindow;->mFlymeMaxHeight:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    :cond_0
+    return v0
+.end method
+
+.method flymeGetFieldHandler()Landroid/os/Handler;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldPopup()Landroid/widget/PopupWindow;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldResizePopupRunnable()Landroid/widget/ListPopupWindow$ResizePopupRunnable;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mResizePopupRunnable:Landroid/widget/ListPopupWindow$ResizePopupRunnable;
+
+    return-object v0
+.end method
+
+.method public getContentWidth()I
+    .locals 4
+
+    .prologue
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    .local v0, "rect":Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    iget v2, p0, Landroid/widget/ListPopupWindow;->mDropDownWidth:I
+
+    iget v3, v0, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v2, v3
+
+    iget v3, v0, Landroid/graphics/Rect;->right:I
+
+    sub-int v1, v2, v3
+
+    .local v1, "width":I
+    return v1
+.end method
+
+.method public getHeaderView()Landroid/view/View;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public getPopupWindow()Landroid/widget/PopupWindow;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    return-object v0
+.end method
+
+.method public keepInputMethodNeeded(Z)V
+    .locals 2
+    .param p1, "keep"    # Z
+
+    .prologue
+    const/4 v1, 0x1
+
+    iput-boolean p1, p0, Landroid/widget/ListPopupWindow;->mMzKeepInputMethodNeeded:Z
+
+    iget-boolean v0, p0, Landroid/widget/ListPopupWindow;->mMzKeepInputMethodNeeded:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setContentHeight(I)V
+    .locals 3
+    .param p1, "height"    # I
+
+    .prologue
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .local v0, "popupBackground":Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mTempRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mTempRect:Landroid/graphics/Rect;
+
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    iget-object v2, p0, Landroid/widget/ListPopupWindow;->mTempRect:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr v1, v2
+
+    add-int/2addr v1, p1
+
+    iput v1, p0, Landroid/widget/ListPopupWindow;->mDropDownHeight:I
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/widget/ListPopupWindow;->setHeight(I)V
+
+    goto :goto_0
+.end method
+
+.method public setDropDownListViewPadding(IIII)V
+    .locals 1
+    .param p1, "left"    # I
+    .param p2, "top"    # I
+    .param p3, "right"    # I
+    .param p4, "bottom"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    iput-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iput p1, v0, Landroid/graphics/Rect;->left:I
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iput p2, v0, Landroid/graphics/Rect;->top:I
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iput p3, v0, Landroid/graphics/Rect;->right:I
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mFlymeListViewPadding:Landroid/graphics/Rect;
+
+    iput p4, v0, Landroid/graphics/Rect;->bottom:I
+
+    goto :goto_0
+.end method
+
+.method public setHeaderText(Ljava/lang/String;)V
+    .locals 4
+    .param p1, "text"    # Ljava/lang/String;
+
+    .prologue
+    iget-object v2, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/lang/NullPointerException;
+
+    const-string v3, "HeaderView cannot be null"
+
+    invoke-direct {v2, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_0
+    :try_start_0
+    iget v2, p0, Landroid/widget/ListPopupWindow;->mFlymeFieldId:I
+
+    if-nez v2, :cond_2
+
+    iget-object v1, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    check-cast v1, Landroid/widget/TextView;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .local v1, "tv":Landroid/widget/TextView;
+    :goto_0
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->isShowing()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->show()V
+
+    :cond_1
+    return-void
+
+    .end local v1    # "tv":Landroid/widget/TextView;
+    :cond_2
+    :try_start_1
+    iget-object v2, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    iget v3, p0, Landroid/widget/ListPopupWindow;->mFlymeFieldId:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+    :try_end_1
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .restart local v1    # "tv":Landroid/widget/TextView;
+    goto :goto_0
+
+    .end local v1    # "tv":Landroid/widget/TextView;
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Ljava/lang/ClassCastException;
+    const-string v2, "ListPopupWindow"
+
+    const-string v3, "You must supply a resource ID for a TextView"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    const-string v3, "HeaderView requires the resource ID to be a TextView"
+
+    invoke-direct {v2, v3, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+.end method
+
+.method public setHeaderView(Landroid/view/View;I)V
+    .locals 0
+    .param p1, "header"    # Landroid/view/View;
+    .param p2, "textViewResourceId"    # I
+
+    .prologue
+    iput-object p1, p0, Landroid/widget/ListPopupWindow;->mFlymeHeaderView:Landroid/view/View;
+
+    iput p2, p0, Landroid/widget/ListPopupWindow;->mFlymeFieldId:I
+
+    return-void
+.end method
+
+.method public setLayoutMode(I)V
+    .locals 1
+    .param p1, "mode"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setLayoutMode(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setMaxHeight(I)V
+    .locals 0
+    .param p1, "height"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/ListPopupWindow;->mFlymeMaxHeight:I
+
+    return-void
 .end method

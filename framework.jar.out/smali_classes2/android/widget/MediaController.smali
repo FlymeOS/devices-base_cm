@@ -1011,7 +1011,7 @@
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
     .line 161
-    const/16 v1, 0x3e8
+    const/4 v1, 0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 

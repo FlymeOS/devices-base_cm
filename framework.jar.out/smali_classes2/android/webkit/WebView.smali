@@ -11,6 +11,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/webkit/WebView$ReaderModeListener;,
+        Landroid/webkit/WebView$ReaderCallBack;,
+        Landroid/webkit/WebView$ReaderTitleAndNumCallBack;,
         Landroid/webkit/WebView$WebViewTransport;,
         Landroid/webkit/WebView$FindListener;,
         Landroid/webkit/WebView$VisualStateCallback;,
@@ -23,6 +26,8 @@
 
 
 # static fields
+.field public static final SCHEME_DATE:Ljava/lang/String; = "date:"
+
 .field public static final DATA_REDUCTION_PROXY_SETTING_CHANGED:Ljava/lang/String; = "android.webkit.DATA_REDUCTION_PROXY_SETTING_CHANGED"
 
 .field private static final LOGTAG:Ljava/lang/String; = "WebView"
@@ -3788,4 +3793,109 @@
     move-result v0
 
     return v0
+.end method
+
+.method public getTitleHeight()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getWebChromeClient()Landroid/webkit/WebChromeClient;
+    .locals 1
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0}, Landroid/webkit/WebViewProvider;->getWebChromeClient()Landroid/webkit/WebChromeClient;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public readerWholeHtmlSendMessage()V
+    .locals 1
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0}, Landroid/webkit/WebViewProvider;->readerWholeHtmlSendMessage()V
+
+    return-void
+.end method
+
+.method public selectLink()V
+    .locals 1
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0}, Landroid/webkit/WebViewProvider;->selectLink()V
+
+    return-void
+.end method
+
+.method public setLoadReaderPageCallBack(Landroid/webkit/WebView$ReaderCallBack;)V
+    .locals 1
+    .param p1, "l"    # Landroid/webkit/WebView$ReaderCallBack;
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0, p1}, Landroid/webkit/WebViewProvider;->setLoadReaderPageCallBack(Landroid/webkit/WebView$ReaderCallBack;)V
+
+    return-void
+.end method
+
+.method public setReaderModel()V
+    .locals 1
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0}, Landroid/webkit/WebViewProvider;->setReaderModel()V
+
+    return-void
+.end method
+
+.method public setReaderPageListener(Landroid/webkit/WebView$ReaderModeListener;)V
+    .locals 1
+    .param p1, "l"    # Landroid/webkit/WebView$ReaderModeListener;
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0, p1}, Landroid/webkit/WebViewProvider;->setReaderPageListener(Landroid/webkit/WebView$ReaderModeListener;)V
+
+    return-void
+.end method
+
+.method public setReaderTitleAndNumFunction(Landroid/webkit/WebView$ReaderTitleAndNumCallBack;)V
+    .locals 1
+    .param p1, "callback"    # Landroid/webkit/WebView$ReaderTitleAndNumCallBack;
+
+    .prologue
+    invoke-direct {p0}, Landroid/webkit/WebView;->checkThread()V
+
+    iget-object v0, p0, Landroid/webkit/WebView;->mProvider:Landroid/webkit/WebViewProvider;
+
+    invoke-interface {v0, p1}, Landroid/webkit/WebViewProvider;->setReaderTitleAndNumFunction(Landroid/webkit/WebView$ReaderTitleAndNumCallBack;)V
+
+    return-void
 .end method

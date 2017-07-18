@@ -47,6 +47,13 @@
 
     .line 4019
     .local v0, "event":Landroid/view/KeyEvent;
+
+    invoke-direct {p0, v0}, Landroid/view/ViewRootImpl$EarlyPostImeInputStage;->flymeEnsureTM(Landroid/view/KeyEvent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_flyme_0
+
     iget-object v1, p0, Landroid/view/ViewRootImpl$EarlyPostImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-static {v1, v0}, Landroid/view/ViewRootImpl;->-wrap1(Landroid/view/ViewRootImpl;Landroid/view/KeyEvent;)Z
@@ -62,6 +69,7 @@
 
     .line 4025
     :cond_0
+    :cond_flyme_0
     iget-object v1, p0, Landroid/view/ViewRootImpl$EarlyPostImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mFallbackEventHandler:Landroid/view/FallbackEventHandler;
@@ -223,5 +231,38 @@
 
     .line 4011
     :cond_1
+    return v2
+.end method
+
+.method private flymeEnsureTM(Landroid/view/KeyEvent;)Z
+    .locals 3
+    .param p1, "event"    # Landroid/view/KeyEvent;
+
+    .prologue
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v0
+
+    const/16 v1, 0x7a
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->isCtrlPressed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl$EarlyPostImeInputStage;->this$0:Landroid/view/ViewRootImpl;
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewRootImpl;->ensureTouchMode(Z)Z
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
     return v2
 .end method

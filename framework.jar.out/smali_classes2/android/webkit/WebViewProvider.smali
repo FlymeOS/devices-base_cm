@@ -336,3 +336,30 @@
 
 .method public abstract zoomOut()Z
 .end method
+
+.method public abstract getWebChromeClient()Landroid/webkit/WebChromeClient;
+.end method
+
+.method public abstract readerWholeHtmlSendMessage()V
+.end method
+
+.method public abstract savePage()Z
+.end method
+
+.method public abstract selectLink()V
+.end method
+
+.method public abstract setLoadReaderPageCallBack(Landroid/webkit/WebView$ReaderCallBack;)V
+.end method
+
+.method public abstract setReaderModel()V
+.end method
+
+.method public abstract setReaderPageListener(Landroid/webkit/WebView$ReaderModeListener;)V
+.end method
+
+.method public abstract setReaderTitleAndNumFunction(Landroid/webkit/WebView$ReaderTitleAndNumCallBack;)V
+.end method
+
+.method public abstract setSavePageClient(Landroid/webkit/SavePageClient;)V
+.end method

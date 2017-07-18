@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/webkit/WebChromeClient$WebViewMediaPlayerController;,
+        Landroid/webkit/WebChromeClient$WebViewMediaPlayerStatusListener;,
         Landroid/webkit/WebChromeClient$CustomViewCallback;,
         Landroid/webkit/WebChromeClient$FileChooserParams;
     }
@@ -416,5 +418,22 @@
 
     .prologue
     .line 531
+    return-void
+.end method
+
+.method public getWebViewMediaPlayerStatusListener()Landroid/webkit/WebChromeClient$WebViewMediaPlayerStatusListener;
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public setContentVideoViewControllerCallback(Landroid/webkit/WebChromeClient$WebViewMediaPlayerController;)V
+    .locals 0
+    .param p1, "callback"    # Landroid/webkit/WebChromeClient$WebViewMediaPlayerController;
+
+    .prologue
     return-void
 .end method

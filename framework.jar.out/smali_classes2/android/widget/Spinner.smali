@@ -31,6 +31,10 @@
 
 
 # instance fields
+.field protected mMzDropDownHorizontalOffset:I
+
+.field protected mMzPopupLayoutMode:I
+
 .field private mDisableChildrenWhenDisabled:Z
 
 .field mDropDownWidth:I
@@ -1672,6 +1676,8 @@
 
     invoke-interface {v0, p1}, Landroid/widget/Spinner$SpinnerPopup;->setHorizontalOffset(I)V
 
+    invoke-direct/range {p0 .. p1}, Landroid/widget/Spinner;->setFlymeDropDownHorizontalOffset(I)V
+
     .line 382
     return-void
 .end method
@@ -1907,5 +1913,25 @@
     invoke-virtual {p0, v0}, Landroid/widget/Spinner;->setPrompt(Ljava/lang/CharSequence;)V
 
     .line 797
+    return-void
+.end method
+
+.method private setFlymeDropDownHorizontalOffset(I)V
+    .locals 0
+    .param p1, "pixels"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/Spinner;->mMzDropDownHorizontalOffset:I
+
+    return-void
+.end method
+
+.method public setPopupLayoutMode(I)V
+    .locals 0
+    .param p1, "mode"    # I
+
+    .prologue
+    iput p1, p0, Landroid/widget/Spinner;->mMzPopupLayoutMode:I
+
     return-void
 .end method

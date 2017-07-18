@@ -3,6 +3,13 @@
 .source "ResourcesManager.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/app/ResourcesManager$FlymeInjector;
+    }
+.end annotation
+
 # static fields
 .field private static final DEBUG:Z = false
 
@@ -1810,6 +1817,8 @@
     .line 466
     :cond_3
     invoke-static {p1, v2, p2}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+
+    invoke-static/range {v1 .. v1}, Landroid/app/ResourcesManager$FlymeInjector;->freeCaches(I)V
 
     .line 468
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V

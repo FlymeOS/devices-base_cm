@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/policy/PhoneWindow$FlymeInjector;,
         Lcom/android/internal/policy/PhoneWindow$SettingsObserver;,
         Lcom/android/internal/policy/PhoneWindow$WindowManagerHolder;,
         Lcom/android/internal/policy/PhoneWindow$PanelMenuPresenterCallback;,
@@ -53,6 +54,8 @@
 
 
 # instance fields
+.field private mFlymeDarkStatusBarIcon:Z
+
 .field private mActionMenuPresenterCallback:Lcom/android/internal/policy/PhoneWindow$ActionMenuPresenterCallback;
 
 .field private mAllowEnterTransitionOverlap:Ljava/lang/Boolean;
@@ -10869,6 +10872,11 @@
     .param p1, "color"    # I
 
     .prologue
+
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/PhoneWindow$FlymeInjector;->flymeOnStatusBarColorChange(Lcom/android/internal/policy/PhoneWindow;I)I
+
+    move-result p1
+
     const/4 v2, 0x0
 
     .line 5343
@@ -11215,4 +11223,50 @@
     .line 1517
     :cond_0
     return-void
+.end method
+
+.method public setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    .locals 3
+    .param p1, "a"    # Landroid/view/WindowManager$LayoutParams;
+
+    .prologue
+    const/4 v2, 0x0
+
+    iget-object v1, p0, Lcom/android/internal/policy/PhoneWindow;->mDecor:Lcom/android/internal/policy/PhoneWindow$DecorView;
+
+    if-eqz v1, :cond_0
+
+    if-eqz p1, :cond_1
+
+    iget v1, p1, Landroid/view/WindowManager$LayoutParams;->meizuFlags:I
+
+    and-int/lit16 v1, v1, 0x200
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x1
+
+    .local v0, "light":Z
+    :goto_0
+    iget-boolean v1, p0, Lcom/android/internal/policy/PhoneWindow;->mFlymeDarkStatusBarIcon:Z
+
+    if-eq v0, v1, :cond_0
+
+    iput-boolean v0, p0, Lcom/android/internal/policy/PhoneWindow;->mFlymeDarkStatusBarIcon:Z
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/policy/PhoneWindow;->setAutoStatusBarIcon(Z)V
+
+    invoke-virtual {p0, v0, v2}, Lcom/android/internal/policy/PhoneWindow;->setLightStatusBar(ZZ)V
+
+    .end local v0    # "light":Z
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    .restart local v0    # "light":Z
+    goto :goto_0
 .end method

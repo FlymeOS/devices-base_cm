@@ -595,3 +595,21 @@
 
 .method public abstract supportZoom()Z
 .end method
+
+.method public abstract getTextDegree()I
+.end method
+
+.method public abstract setIsBrowserApp(Z)V
+.end method
+
+.method public abstract setIsEmailApp(Z)V
+.end method
+
+.method public abstract setNightModeEnabled(Z)V
+.end method
+
+.method public abstract setPrivateBrowsingEnabled(Z)V
+.end method
+
+.method public abstract setTextDegree(I)V
+.end method

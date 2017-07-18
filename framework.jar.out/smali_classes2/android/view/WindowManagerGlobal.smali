@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final ADD_ONKEYGUARD_NOT_ALLOWED:I = -0x6f
+
 .field public static final ADD_APP_EXITING:I = -0x4
 
 .field public static final ADD_BAD_APP_TOKEN:I = -0x1
@@ -2659,4 +2661,158 @@
     monitor-exit v4
 
     throw v3
+.end method
+
+.method public doShrinkMemory(I)V
+    .locals 4
+    .param p1, "level"    # I
+
+    .prologue
+    iget-object v3, p0, Landroid/view/WindowManagerGlobal;->mLock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v2, p0, Landroid/view/WindowManagerGlobal;->mRoots:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    add-int/lit8 v0, v2, -0x1
+
+    .local v0, "i":I
+    :goto_0
+    if-ltz v0, :cond_3
+
+    iget-object v2, p0, Landroid/view/WindowManagerGlobal;->mRoots:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewRootImpl;
+
+    .local v1, "root":Landroid/view/ViewRootImpl;
+    iget-object v2, v1, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/ViewRootImpl;->getHostVisibility()I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    :goto_1
+    invoke-virtual {v1}, Landroid/view/ViewRootImpl;->destroyHardwareResources()V
+
+    :cond_1
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v2, v1, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
+
+    iget-object v2, v2, Landroid/view/View$AttachInfo;->mHardwareRenderer:Landroid/view/HardwareRenderer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    .end local v1    # "root":Landroid/view/ViewRootImpl;
+    :cond_3
+    monitor-exit v3
+
+    invoke-static {p1}, Landroid/view/HardwareRenderer;->trimMemory(I)V
+
+    return-void
+
+    .end local v0    # "i":I
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+
+    throw v2
+.end method
+
+.method public hasVisibleWindows()Z
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    iget-object v3, p0, Landroid/view/WindowManagerGlobal;->mLock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v2, p0, Landroid/view/WindowManagerGlobal;->mRoots:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    add-int/lit8 v0, v2, -0x1
+
+    .local v0, "i":I
+    :goto_0
+    if-ltz v0, :cond_1
+
+    iget-object v2, p0, Landroid/view/WindowManagerGlobal;->mRoots:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewRootImpl;
+
+    .local v1, "root":Landroid/view/ViewRootImpl;
+    iget-object v2, v1, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/ViewRootImpl;->getHostVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, v1, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
+
+    iget-object v2, v2, Landroid/view/View$AttachInfo;->mHardwareRenderer:Landroid/view/HardwareRenderer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
+
+    monitor-exit v3
+
+    return v2
+
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    .end local v1    # "root":Landroid/view/ViewRootImpl;
+    :cond_1
+    monitor-exit v3
+
+    return v4
+
+    .end local v0    # "i":I
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+
+    throw v2
 .end method

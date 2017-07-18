@@ -2286,3 +2286,169 @@
     .line 152
     return-void
 .end method
+
+.method public static flymeRebootWipeUserData(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 7
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x0
+
+    const-string v4, "android.intent.action.MZ_UPDATE"
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const-string v4, "wipe_userdata"
+
+    invoke-virtual {p1, v4, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .local v0, "clearData":Z
+    const-string v4, "upgrade_locate_filepath"
+
+    invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, "filePath":Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Landroid/os/RecoverySystem;->installFlymeUpdatePackage(Landroid/content/Context;ZLjava/lang/String;)V
+
+    .end local v0    # "clearData":Z
+    .end local v1    # "filePath":Ljava/lang/String;
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v4, "shutdown"
+
+    invoke-virtual {p1, v4, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    .local v3, "shutdown":Z
+    const-string v4, "android.intent.extra.REASON"
+
+    invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .local v2, "reason":Ljava/lang/String;
+    invoke-static {p0, v3, v2}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;ZLjava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method private static installFlymeUpdatePackage(Landroid/content/Context;ZLjava/lang/String;)V
+    .locals 7
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "wipe"    # Z
+    .param p2, "filePath"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .local v3, "packageFile":Ljava/io/File;
+    invoke-virtual {v3}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "filename":Ljava/lang/String;
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "--update_package="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, "filenameArg":Ljava/lang/String;
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "--locale="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .local v2, "localeArg":Ljava/lang/String;
+    if-eqz p1, :cond_0
+
+    const-string v4, "--wipe_data"
+
+    :goto_0
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Ljava/lang/String;
+
+    const/4 v6, 0x0
+
+    aput-object v1, v5, v6
+
+    const/4 v6, 0x1
+
+    aput-object v2, v5, v6
+
+    const/4 v6, 0x2
+
+    aput-object v4, v5, v6
+
+    invoke-static {p0, v5}, Landroid/os/RecoverySystem;->bootCommand(Landroid/content/Context;[Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const/4 v4, 0x0
+
+    .local v4, "wipeDataArg":Ljava/lang/String;
+    goto :goto_0
+.end method

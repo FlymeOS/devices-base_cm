@@ -16,6 +16,8 @@
 
 
 # static fields
+.field public static final DATE_TIME:I = 0x10
+
 .field public static final ALL:I = 0xf
 
 .field public static final EMAIL_ADDRESSES:I = 0x2
@@ -232,6 +234,17 @@
     and-int/lit8 v1, p1, 0x1
 
     if-eqz v1, :cond_2
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v1
+
+    if-nez v1, :cond_flyme_0
+    
+    invoke-static {p0, v0}, Landroid/text/util/Linkify;->flymeGatherLinks(Landroid/text/Spannable;Ljava/util/ArrayList;)V
+
+    goto :goto_flyme_0
+
+    :cond_flyme_0
 
     .line 221
     sget-object v2, Landroid/util/Patterns;->WEB_URL:Ljava/util/regex/Pattern;
@@ -265,6 +278,7 @@
 
     .line 226
     :cond_2
+    :goto_flyme_0
     and-int/lit8 v1, p1, 0x2
 
     if-eqz v1, :cond_3
@@ -293,7 +307,7 @@
     if-eqz v1, :cond_4
 
     .line 233
-    invoke-static {v0, p0}, Landroid/text/util/Linkify;->gatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)V
+    invoke-static {v0, p0}, Landroid/text/util/Linkify;->flymeGatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)Z
 
     .line 236
     :cond_4
@@ -306,6 +320,9 @@
 
     .line 240
     :cond_5
+
+    invoke-static {p0, p1, v0}, Landroid/text/util/Linkify;->flymeGatherLinksDateTime(Landroid/text/Spannable;ILjava/util/ArrayList;)V
+
     invoke-static {v0}, Landroid/text/util/Linkify;->pruneOverlaps(Ljava/util/ArrayList;)V
 
     .line 242
@@ -1278,4 +1295,206 @@
     .end local v5    # "remove":I
     :cond_4
     return-void
+.end method
+
+.method private static final flymeGatherLinks(Landroid/text/Spannable;Ljava/util/ArrayList;)V
+    .locals 6
+    .param p0, "text"    # Landroid/text/Spannable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/text/Spannable;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .local p1, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    sget-object v2, Landroid/util/MzPatterns;->WEB_URL:Ljava/util/regex/Pattern;
+
+    const/4 v0, 0x3
+
+    new-array v3, v0, [Ljava/lang/String;
+
+    const-string v0, "http://"
+
+    const/4 v1, 0x0
+
+    aput-object v0, v3, v1
+
+    const-string v0, "https://"
+
+    const/4 v1, 0x1
+
+    aput-object v0, v3, v1
+
+    const-string v0, "rtsp://"
+
+    const/4 v1, 0x2
+
+    aput-object v0, v3, v1
+
+    sget-object v4, Landroid/text/util/Linkify;->sUrlMatchFilter:Landroid/text/util/Linkify$MatchFilter;
+
+    const/4 v5, 0x0
+
+    move-object v0, p1
+
+    move-object v1, p0
+
+    invoke-static/range {v0 .. v5}, Landroid/text/util/Linkify;->gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    return-void
+.end method
+
+.method private static final flymeGatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+    .locals 0
+    .param p1, "s"    # Landroid/text/Spannable;
+    .param p2, "pattern"    # Ljava/util/regex/Pattern;
+    .param p3, "schemes"    # [Ljava/lang/String;
+    .param p4, "matchFilter"    # Landroid/text/util/Linkify$MatchFilter;
+    .param p5, "transformFilter"    # Landroid/text/util/Linkify$TransformFilter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;",
+            "Landroid/text/Spannable;",
+            "Ljava/util/regex/Pattern;",
+            "[",
+            "Ljava/lang/String;",
+            "Landroid/text/util/Linkify$MatchFilter;",
+            "Landroid/text/util/Linkify$TransformFilter;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    invoke-static/range {p0 .. p5}, Landroid/text/util/Linkify;->gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    return-void
+.end method
+
+.method private static final flymeGatherLinksDateTime(Landroid/text/Spannable;ILjava/util/ArrayList;)V
+    .locals 6
+    .param p0, "sTextSpannable"    # Landroid/text/Spannable;
+    .param p1, "sMask"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/text/Spannable;",
+            "I",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .local p2, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    const/4 v1, 0x0
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    and-int/lit8 v0, p1, 0x10
+
+    if-eqz v0, :cond_0
+
+    sget-object v2, Landroid/util/DateTimeUrlHelper;->DATE_TIME_PATTERN:Ljava/util/regex/Pattern;
+
+    const/4 v0, 0x1
+
+    new-array v3, v0, [Ljava/lang/String;
+
+    const-string v0, "datetime:"
+
+    aput-object v0, v3, v1
+
+    sget-object v4, Landroid/util/DateTimeUrlHelper;->sDateTimeMatchFilter:Landroid/text/util/Linkify$MatchFilter;
+
+    sget-object v5, Landroid/util/DateTimeUrlHelper;->sDateTimeTransformFilter:Landroid/text/util/Linkify$TransformFilter;
+
+    move-object v0, p2
+
+    move-object v1, p0
+
+    invoke-static/range {v0 .. v5}, Landroid/text/util/Linkify;->flymeGatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private static final flymeGatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)Z
+    .locals 7
+    .param p1, "s"    # Landroid/text/Spannable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/text/util/LinkSpec;",
+            ">;",
+            "Landroid/text/Spannable;",
+            ")Z"
+        }
+    .end annotation
+
+    .prologue
+    .local p0, "links":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/text/util/LinkSpec;>;"
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v2, Landroid/util/MzPatterns;->PHONE:Ljava/util/regex/Pattern;
+
+    new-array v3, v6, [Ljava/lang/String;
+
+    const-string v0, "tel:"
+
+    aput-object v0, v3, v1
+
+    new-instance v4, Landroid/text/util/FlymePhoneNumberMatchFilter;
+
+    invoke-direct {v4}, Landroid/text/util/FlymePhoneNumberMatchFilter;-><init>()V
+
+    sget-object v5, Landroid/text/util/Linkify;->sPhoneNumberTransformFilter:Landroid/text/util/Linkify$TransformFilter;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-static/range {v0 .. v5}, Landroid/text/util/Linkify;->gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+
+    return v6
+
+    :cond_0
+    invoke-static {p0, p1}, Landroid/text/util/Linkify;->gatherTelLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)V
+
+    return v1
+.end method
+
+.method static getPhoneNumberMinimumDigits()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x5
+
+    return v0
 .end method

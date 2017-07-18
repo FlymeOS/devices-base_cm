@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/provider/Settings$ShareList;,
         Landroid/provider/Settings$SettingNotFoundException;,
         Landroid/provider/Settings$NameValueTable;,
         Landroid/provider/Settings$NameValueCache;,
@@ -602,6 +603,18 @@
 
     .line 8948
     :pswitch_2
+    invoke-static/range {p4 .. p4}, Landroid/provider/Settings;->isFlymePermissionGranted(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_flyme_0
+
+    const/4 v5, 0x1
+
+    return v5
+
+    :cond_flyme_0
+
     const/4 v5, 0x0
 
     array-length v6, p5
@@ -759,6 +772,31 @@
     invoke-static/range {v0 .. v6}, Landroid/provider/Settings;->isCallingPackageAllowedToPerformAppOpsProtectedOperation(Landroid/content/Context;ILjava/lang/String;ZI[Ljava/lang/String;Z)Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method private static isFlymePermissionGranted(I)Z
+    .locals 1
+    .param p0, "appOpsOpCode"    # I
+
+    .prologue
+    const/16 v0, 0x17
+
+    if-ne p0, v0, :cond_0
+
+    invoke-static {v0}, Lmeizu/security/FlymePermissionManager;->isFlymePermissionGranted(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method

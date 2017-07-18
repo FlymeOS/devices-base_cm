@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final ANGLE:D = 0.5235987755982988
+.field private static final ANGLE:D = 0.12566370614359174
 
 .field private static final COS:F
 
@@ -86,7 +86,7 @@
     .locals 4
 
     .prologue
-    const-wide v2, 0x3fe0c152382d7365L    # 0.5235987755982988
+    const-wide v2, 0x3fc015bf9217271aL    # 0.12566370614359174
 
     .line 77
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D

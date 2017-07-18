@@ -10,12 +10,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/preference/PreferenceScreen$FlymeInjector;,
         Landroid/preference/PreferenceScreen$SavedState;
     }
 .end annotation
 
 
 # instance fields
+.field mFlymeShowBottomDivider:Z
+
 .field private mDialog:Landroid/app/Dialog;
 
 .field private mListView:Landroid/widget/ListView;
@@ -34,6 +37,8 @@
     const v0, 0x101008b
 
     invoke-direct {p0, p1, p2, v0}, Landroid/preference/PreferenceGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceScreen$FlymeInjector;->initFlymeExtraFields(Landroid/preference/PreferenceScreen;)V
 
     .line 99
     return-void
@@ -183,6 +188,8 @@
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    invoke-static/range {p0 .. p1}, Landroid/preference/PreferenceScreen$FlymeInjector;->bindFlymeListView(Landroid/preference/PreferenceScreen;Landroid/widget/ListView;)V
 
     .line 146
     invoke-virtual {p0}, Landroid/preference/PreferenceScreen;->onAttachedToActivity()V
@@ -354,6 +361,9 @@
 
     .line 214
     .local v1, "preference":Landroid/preference/Preference;
+
+    invoke-static/range {p0 .. p3}, Landroid/preference/PreferenceScreen$FlymeInjector;->setFlymePreferenceView(Landroid/preference/PreferenceScreen;Landroid/widget/AdapterView;Landroid/view/View;I)V
+
     invoke-virtual {v1, p0}, Landroid/preference/Preference;->performClick(Landroid/preference/PreferenceScreen;)V
 
     .line 205
@@ -464,4 +474,23 @@
     .end local v1    # "myState":Landroid/preference/PreferenceScreen$SavedState;
     :cond_0
     return-object v2
+.end method
+
+.method flymeGetFieldRootAdapter()Landroid/widget/ListAdapter;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/preference/PreferenceScreen;->mRootAdapter:Landroid/widget/ListAdapter;
+
+    return-object v0
+.end method
+
+.method public showBottomDivider(Z)V
+    .locals 0
+    .param p1, "show"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Landroid/preference/PreferenceScreen;->mFlymeShowBottomDivider:Z
+
+    return-void
 .end method

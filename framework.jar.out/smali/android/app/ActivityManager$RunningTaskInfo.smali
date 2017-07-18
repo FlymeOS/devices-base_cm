@@ -37,6 +37,17 @@
 
 
 # instance fields
+.field public allActivitiesClass:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field public baseActivity:Landroid/content/ComponentName;
 
 .field public description:Ljava/lang/CharSequence;

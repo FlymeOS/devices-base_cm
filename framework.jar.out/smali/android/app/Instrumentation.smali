@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/Instrumentation$FlymeRecommendActivity;,
         Landroid/app/Instrumentation$ActivityMonitor;,
         Landroid/app/Instrumentation$ActivityResult;,
         Landroid/app/Instrumentation$InstrumentationThread;,
@@ -1760,6 +1761,24 @@
 
     .line 1514
     .local v18, "result":I
+    move-object/from16 v10, p0
+
+    move-object/from16 v11, p1
+
+    move-object/from16 v12, p2
+
+    move-object/from16 v13, p3
+
+    move-object/from16 v14, p4
+
+    move-object/from16 v15, p5
+
+    move/from16 v16, p6
+
+    move-object/from16 v17, p7
+
+    invoke-direct/range {v10 .. v18}, Landroid/app/Instrumentation;->startFlymeRecommendActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;I)V
+
     move/from16 v0, v18
 
     move-object/from16 v1, p5
@@ -4404,4 +4423,50 @@
     monitor-exit v2
 
     throw v1
+.end method
+
+.method private startFlymeRecommendActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;I)V
+    .locals 9
+    .param p1, "who"    # Landroid/content/Context;
+    .param p2, "contextThread"    # Landroid/os/IBinder;
+    .param p3, "token"    # Landroid/os/IBinder;
+    .param p4, "target"    # Landroid/app/Activity;
+    .param p5, "intent"    # Landroid/content/Intent;
+    .param p6, "requestCode"    # I
+    .param p7, "options"    # Landroid/os/Bundle;
+    .param p8, "result"    # I
+
+    .prologue
+    if-ltz p8, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Landroid/app/Instrumentation$FlymeRecommendActivity;
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move v7, p6
+
+    move-object/from16 v8, p7
+
+    invoke-direct/range {v1 .. v8}, Landroid/app/Instrumentation$FlymeRecommendActivity;-><init>(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    .local v1, "recommendActivity":Landroid/app/Instrumentation$FlymeRecommendActivity;
+    if-eqz v1, :cond_1
+
+    move/from16 v0, p8
+
+    invoke-virtual {v1, v0}, Landroid/app/Instrumentation$FlymeRecommendActivity;->start(I)V
+
+    :cond_1
+    return-void
 .end method

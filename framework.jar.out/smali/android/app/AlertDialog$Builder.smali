@@ -1041,3 +1041,117 @@
     .line 1113
     return-object v0
 .end method
+
+.method public setAnchorView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "anchorView"    # Landroid/view/View;
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput-object p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mAnchorView:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method public setAnchorView(Landroid/view/View;I)Landroid/app/AlertDialog$Builder;
+    .locals 2
+    .param p1, "anchorView"    # Landroid/view/View;
+    .param p2, "x"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput-object p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mAnchorView:Landroid/view/View;
+
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mX:Ljava/lang/Integer;
+
+    return-object p0
+.end method
+
+.method public setMaxHeight(I)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "maxHeight"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mMaxHeight:I
+
+    return-object p0
+.end method
+
+.method public setMessage(Ljava/lang/CharSequence;I)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "message"    # Ljava/lang/CharSequence;
+    .param p2, "alignType"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
+
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput p2, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mMsgAlignType:I
+
+    return-object p0
+.end method
+
+.method public setShowAtBottom(Z)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "showAtBottom"    # Z
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput-boolean p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mDialogShowAtBottom:Z
+
+    return-object p0
+.end method
+
+.method public setTitleStyle(I)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "titleStyle"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mTitleStyle:I
+
+    return-object p0
+.end method
+
+.method public setWidth(I)Landroid/app/AlertDialog$Builder;
+    .locals 1
+    .param p1, "width"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
+
+    iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAlertParamsExt:Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;
+
+    iput p1, v0, Lcom/android/internal/app/AlertControllerExt$AlertParamsExt;->mWidth:I
+
+    return-object p0
+.end method

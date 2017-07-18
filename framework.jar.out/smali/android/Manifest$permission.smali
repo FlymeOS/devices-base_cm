@@ -15,6 +15,14 @@
 
 
 # static fields
+.field public static final FLYME_SWITCH_SYSTEM_MODE:Ljava/lang/String; = "android.permission.FLYME_SWITCH_SYSTEM_MODE"
+
+.field public static final MEIZU_CONTROL_PACKAGE_PERMISSIONS:Ljava/lang/String; = "android.permission.MEIZU_CONTROL_PACKAGE_PERMISSIONS"
+
+.field public static final MEIZU_DATASAVE_MODE_CHANGED:Ljava/lang/String; = "android.permission.send.MEIZU_DATASAVE_MODE_CHANGED"
+
+.field public static final MEIZU_SMART_LOCK:Ljava/lang/String; = "android.permission.MEIZU_SMART_LOCK"
+
 .field public static final ACCESS_CACHE_FILESYSTEM:Ljava/lang/String; = "android.permission.ACCESS_CACHE_FILESYSTEM"
 
 .field public static final ACCESS_CHECKIN_PROPERTIES:Ljava/lang/String; = "android.permission.ACCESS_CHECKIN_PROPERTIES"

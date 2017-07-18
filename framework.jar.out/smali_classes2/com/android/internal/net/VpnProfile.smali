@@ -1056,3 +1056,34 @@
     .line 111
     goto :goto_1
 .end method
+
+.method public needKeyStore()Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lcom/android/internal/net/VpnProfile;->type:I
+
+    if-eqz v2, :cond_0
+
+    iget v2, p0, Lcom/android/internal/net/VpnProfile;->type:I
+
+    if-eq v2, v0, :cond_0
+
+    iget v2, p0, Lcom/android/internal/net/VpnProfile;->type:I
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method

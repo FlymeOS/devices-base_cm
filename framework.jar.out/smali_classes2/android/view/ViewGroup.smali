@@ -19760,3 +19760,58 @@
     .line 4151
     return-void
 .end method
+
+.method public dispatchStatusBarTap()Z
+    .locals 5
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewGroup;->mChildren:[Landroid/view/View;
+
+    .local v0, "children":[Landroid/view/View;
+    iget v1, p0, Landroid/view/ViewGroup;->mChildrenCount:I
+
+    .local v1, "count":I
+    const/4 v2, 0x0
+
+    .local v2, "handled":Z
+    const/4 v3, 0x0
+
+    .local v3, "i":I
+    :goto_0
+    if-ge v3, v1, :cond_0
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Landroid/view/View;->dispatchStatusBarTap()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const/4 v2, 0x1
+
+    :cond_0
+    if-nez v2, :cond_1
+
+    invoke-super {p0}, Landroid/view/View;->dispatchStatusBarTap()Z
+
+    move-result v2
+
+    .end local v2    # "handled":Z
+    :cond_1
+    return v2
+
+    .restart local v2    # "handled":Z
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+.end method

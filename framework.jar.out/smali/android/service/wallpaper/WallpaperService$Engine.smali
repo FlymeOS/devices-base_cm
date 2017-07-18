@@ -319,6 +319,8 @@
 
     iput-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
+    invoke-direct/range {p0 .. p0}, Landroid/service/wallpaper/WallpaperService$Engine;->initFlymeExtraFields()V
+
     .line 127
     return-void
 .end method
@@ -3679,4 +3681,17 @@
     throw v2
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
+.end method
+
+.method private initFlymeExtraFields()V
+    .locals 1
+
+    .prologue
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    iput v0, p0, Landroid/service/wallpaper/WallpaperService$Engine;->mPendingXOffset:F
+
+    iput v0, p0, Landroid/service/wallpaper/WallpaperService$Engine;->mPendingYOffset:F
+
+    return-void
 .end method

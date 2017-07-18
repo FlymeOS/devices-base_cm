@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
 .field private mAuthorities:[Ljava/lang/String;
 
 .field private mAuthority:Ljava/lang/String;
@@ -2820,4 +2822,378 @@
 .end method
 
 .method public abstract update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+.end method
+
+.method isFlymeCurentLockApp(Landroid/net/Uri;Ljava/lang/String;)Z
+    .locals 17
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "callingPkg"    # Ljava/lang/String;
+
+    .prologue
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v12
+
+    .local v12, "uid":I
+    move-object/from16 v0, p0
+
+    iget v13, v0, Landroid/content/ContentProvider;->mMyUid:I
+
+    invoke-static {v12, v13}, Landroid/os/UserHandle;->isSameApp(II)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_0
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    if-nez v13, :cond_1
+
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    const-string v14, "access_control"
+
+    invoke-virtual {v13, v14}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Lmeizu/security/AccessControlManager;
+
+    move-object/from16 v0, p0
+
+    iput-object v13, v0, Landroid/content/ContentProvider;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    :cond_1
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    if-nez v13, :cond_2
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_2
+    invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    move-result-object v8
+
+    .local v8, "name":Ljava/lang/String;
+    if-nez v8, :cond_3
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_3
+    const/4 v4, 0x0
+
+    .local v4, "cpi":Landroid/content/pm/ProviderInfo;
+    :try_start_0
+    invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
+
+    move-result-object v13
+
+    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
+
+    move-result v14
+
+    const/4 v15, 0x0
+
+    invoke-interface {v13, v8, v15, v14}, Landroid/content/pm/IPackageManager;->resolveContentProvider(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v4
+
+    .end local v4    # "cpi":Landroid/content/pm/ProviderInfo;
+    :goto_0
+    if-eqz v4, :cond_e
+
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v13}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    const-string v14, "ownerPackage"
+
+    const-string v15, "string"
+
+    iget-object v0, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v16, v0
+
+    invoke-virtual/range {v13 .. v16}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v11
+
+    .local v11, "ownerPackageId":I
+    const/4 v10, 0x0
+
+    .local v10, "ownerPackage":Ljava/lang/String;
+    if-lez v11, :cond_4
+
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v13}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    .end local v10    # "ownerPackage":Ljava/lang/String;
+    :cond_4
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v14}, Lmeizu/security/AccessControlManager;->checkAccessControl(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-nez v13, :cond_5
+
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+    invoke-virtual {v13, v10}, Lmeizu/security/AccessControlManager;->checkAccessControl(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_e
+
+    :cond_5
+    if-eqz v10, :cond_6
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_6
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_6
+    const-string v13, "com.tencent.mm.sdk.plugin.provider"
+
+    invoke-virtual {v13, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_7
+
+    const-string v13, "com.tencent.mm"
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_7
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_7
+    const-string v13, "com.meizu.safe"
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_8
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_8
+    const-string v13, "com.android.mms"
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-nez v13, :cond_9
+
+    const-string v13, "com.android.providers.telephony"
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_a
+
+    :cond_9
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_a
+    :try_start_1
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v13}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v13
+
+    iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    const/16 v15, 0x80
+
+    invoke-virtual {v13, v14, v15}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    .local v1, "ai":Landroid/content/pm/ApplicationInfo;
+    if-eqz v1, :cond_b
+
+    iget-object v13, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz v13, :cond_b
+
+    iget-object v13, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    const-string v14, "needAccessData"
+
+    const/4 v15, 0x1
+
+    invoke-virtual {v13, v14, v15}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result v9
+
+    .local v9, "needAccessData":Z
+    if-nez v9, :cond_b
+
+    const/4 v13, 0x0
+
+    return v13
+
+    .end local v1    # "ai":Landroid/content/pm/ApplicationInfo;
+    .end local v9    # "needAccessData":Z
+    :catch_0
+    move-exception v5
+
+    :cond_b
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v13}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    const-string v14, "believePackages"
+
+    const-string v15, "array"
+
+    iget-object v0, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v16, v0
+
+    invoke-virtual/range {v13 .. v16}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    .local v2, "believePackageId":I
+    if-lez v2, :cond_d
+
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v13}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v3
+
+    .local v3, "believePackages":[Ljava/lang/String;
+    if-eqz v3, :cond_d
+
+    const/4 v7, 0x0
+
+    .local v7, "i":I
+    :goto_1
+    array-length v13, v3
+
+    if-ge v7, v13, :cond_d
+
+    aget-object v13, v3, v7
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_c
+
+    const/4 v13, 0x0
+
+    return v13
+
+    :cond_c
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_1
+
+    .end local v3    # "believePackages":[Ljava/lang/String;
+    .end local v7    # "i":I
+    :cond_d
+    const/4 v13, 0x1
+
+    return v13
+
+    .end local v2    # "believePackageId":I
+    .end local v11    # "ownerPackageId":I
+    :cond_e
+    const/4 v13, 0x0
+
+    return v13
+
+    .restart local v4    # "cpi":Landroid/content/pm/ProviderInfo;
+    :catch_1
+    move-exception v6
+
+    .local v6, "ex":Landroid/os/RemoteException;
+    goto/16 :goto_0
 .end method

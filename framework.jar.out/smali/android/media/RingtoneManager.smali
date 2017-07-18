@@ -366,6 +366,13 @@
     .param p1, "type"    # I
 
     .prologue
+
+    invoke-static/range {p0 .. p1}, Landroid/media/MzRingtoneManager;->getActualDefaultRingtoneUri(Landroid/content/Context;I)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+
     const/4 v2, 0x0
 
     .line 646
@@ -1247,6 +1254,8 @@
     :cond_1
     invoke-static {v2, v0, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
+    invoke-static/range {p0 .. p2}, Landroid/media/RingtoneManager;->setFlymeActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
+
     .line 662
     return-void
 .end method
@@ -1780,6 +1789,126 @@
     invoke-virtual {v0}, Landroid/media/Ringtone;->stop()V
 
     .line 332
+    :cond_0
+    return-void
+.end method
+
+.method public static isRingtoneFileExist(Landroid/content/Context;Landroid/net/Uri;)Z
+    .locals 10
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "uri"    # Landroid/net/Uri;
+
+    .prologue
+    const/4 v9, 0x1
+
+    const/4 v8, 0x0
+
+    if-nez p1, :cond_0
+
+    return v8
+
+    :cond_0
+    const/4 v6, 0x0
+
+    .local v6, "c":Landroid/database/Cursor;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v1, "_data"
+
+    const/4 v3, 0x0
+
+    aput-object v1, v2, v3
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v6
+
+    .local v6, "c":Landroid/database/Cursor;
+    if-eqz v6, :cond_1
+
+    invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
+    :try_end_0
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-gtz v0, :cond_3
+
+    :cond_1
+    if-eqz v6, :cond_2
+
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    return v8
+
+    :cond_3
+    if-eqz v6, :cond_4
+
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_4
+    return v9
+
+    .end local v6    # "c":Landroid/database/Cursor;
+    :catch_0
+    move-exception v7
+
+    .local v7, "e":Landroid/database/sqlite/SQLiteException;
+    if-eqz v6, :cond_5
+
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_5
+    return v8
+
+    .end local v7    # "e":Landroid/database/sqlite/SQLiteException;
+    :catchall_0
+    move-exception v0
+
+    if-eqz v6, :cond_6
+
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_6
+    throw v0
+.end method
+
+.method private static setFlymeActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
+    .locals 1
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "type"    # I
+    .param p2, "ringtoneUri"    # Landroid/net/Uri;
+
+    .prologue
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    const/16 v0, 0x800
+
+    invoke-static {p0, v0, p2}, Landroid/media/MzRingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
+
+    const/16 v0, 0x1000
+
+    invoke-static {p0, v0, p2}, Landroid/media/MzRingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
+
     :cond_0
     return-void
 .end method

@@ -150,6 +150,17 @@
     .param p1, "sequence"    # I
 
     .prologue
+
+    invoke-direct/range {p0 .. p1}, Landroid/view/inputmethod/InputMethodManager$1;->hookOnUnbindMethodForOnInputShownChanged(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     .line 586
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
@@ -249,4 +260,72 @@
     .prologue
     .line 576
     return-void
+.end method
+
+.method private hookOnUnbindMethodForOnInputShownChanged(I)Z
+    .locals 7
+    .param p1, "sequence"    # I
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v5, -0x7
+
+    const/4 v4, 0x0
+
+    if-eq p1, v5, :cond_0
+
+    const/16 v2, -0x9
+
+    if-ne p1, v2, :cond_3
+
+    :cond_0
+    if-ne p1, v5, :cond_1
+
+    const/4 v1, 0x1
+
+    .local v1, "vis":Z
+    :goto_0
+    const/16 v0, 0x8
+
+    .local v0, "MSG_VIS_CHANGED":I
+    iget-object v2, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v5, v2, Landroid/view/inputmethod/InputMethodManager;->mFlymeHandler:Landroid/os/Handler;
+
+    iget-object v2, p0, Landroid/view/inputmethod/InputMethodManager$1;->this$0:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v6, v2, Landroid/view/inputmethod/InputMethodManager;->mFlymeHandler:Landroid/os/Handler;
+
+    if-eqz v1, :cond_2
+
+    move v2, v3
+
+    :goto_1
+    invoke-virtual {v6, v0, v2, v4}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v2
+
+    invoke-virtual {v5, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return v3
+
+    .end local v0    # "MSG_VIS_CHANGED":I
+    .end local v1    # "vis":Z
+    :cond_1
+    const/4 v1, 0x0
+
+    .restart local v1    # "vis":Z
+    goto :goto_0
+
+    .restart local v0    # "MSG_VIS_CHANGED":I
+    :cond_2
+    move v2, v4
+
+    goto :goto_1
+
+    .end local v0    # "MSG_VIS_CHANGED":I
+    .end local v1    # "vis":Z
+    :cond_3
+    return v4
 .end method

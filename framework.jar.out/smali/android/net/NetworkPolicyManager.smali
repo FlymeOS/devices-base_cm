@@ -4,6 +4,22 @@
 
 
 # static fields
+.field public static final POLICY_REJECT_APP_BACKGROUND_NET_MOBILE:I = 0x100
+
+.field public static final POLICY_REJECT_APP_BACKGROUND_NET_WIFI:I = 0x80
+
+.field public static final POLICY_REJECT_APP_NET_MOBILE:I = 0x400
+
+.field public static final POLICY_REJECT_APP_NET_WIFI:I = 0x200
+
+.field public static final RULE_REJECT_BACKGROUND_MOBILE:I = 0x100
+
+.field public static final RULE_REJECT_BACKGROUND_WIFI:I = 0x80
+
+.field public static final RULE_REJECT_METERED_MOBILE:I = 0x400
+
+.field public static final RULE_REJECT_METERED_WIFI:I = 0x200
+
 .field public static final ACTION_SHOW_NETWORK_POLICY_NOTIFICATION:Ljava/lang/String; = "android.net.action.SHOW_NETWORK_POLICY_NOTIFICATION"
 
 .field private static final ALLOW_PLATFORM_APP_POLICY:Z = true

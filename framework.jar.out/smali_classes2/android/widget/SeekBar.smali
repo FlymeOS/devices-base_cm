@@ -72,6 +72,8 @@
     .line 85
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/AbsSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/SeekBar;->setFlymeTouchMode()V
+
     .line 84
     return-void
 .end method
@@ -170,5 +172,17 @@
     iput-object p1, p0, Landroid/widget/SeekBar;->mOnSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     .line 105
+    return-void
+.end method
+
+.method private setFlymeTouchMode()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x1
+
+    .local v0, "SEEK_BAR_SCROLL_MODE_SLOW":I
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->setTouchMode(I)V
+
     return-void
 .end method

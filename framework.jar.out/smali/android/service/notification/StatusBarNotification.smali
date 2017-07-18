@@ -9,6 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;,
+        Landroid/service/notification/StatusBarNotification$FlymeInjector;,
         Landroid/service/notification/StatusBarNotification$1;
     }
 .end annotation
@@ -28,6 +30,8 @@
 
 
 # instance fields
+.field public mFlymeFilter:Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;
+
 .field private final groupKey:Ljava/lang/String;
 
 .field private final id:I
@@ -172,6 +176,8 @@
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
+    invoke-static/range {p0 .. p1}, Landroid/service/notification/StatusBarNotification$FlymeInjector;->initFlymeExtraFields(Landroid/service/notification/StatusBarNotification;Landroid/os/Parcel;)V
+
     .line 75
     return-void
 
@@ -309,6 +315,8 @@
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
+
+    invoke-static/range {p0 .. p0}, Landroid/service/notification/StatusBarNotification$FlymeInjector;->initFlymeExtraFields(Landroid/service/notification/StatusBarNotification;)V
 
     .line 57
     return-void
@@ -523,6 +531,13 @@
     .locals 12
 
     .prologue
+
+    invoke-static/range {p0 .. p0}, Landroid/service/notification/StatusBarNotification$FlymeInjector;->clone(Landroid/service/notification/StatusBarNotification;)Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v0
+
+    return-object v0
+
     .line 161
     new-instance v0, Landroid/service/notification/StatusBarNotification;
 
@@ -617,6 +632,10 @@
 
     .line 154
     invoke-direct/range {v0 .. v11}, Landroid/service/notification/StatusBarNotification;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IIILandroid/app/Notification;Landroid/os/UserHandle;J)V
+
+    invoke-static {p0, v0}, Landroid/service/notification/StatusBarNotification$FlymeInjector;->cloneLight(Landroid/service/notification/StatusBarNotification;Landroid/service/notification/StatusBarNotification;)Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -1024,6 +1043,8 @@
     iget-wide v0, p0, Landroid/service/notification/StatusBarNotification;->postTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    invoke-static/range {p0 .. p2}, Landroid/service/notification/StatusBarNotification$FlymeInjector;->writeToParcel(Landroid/service/notification/StatusBarNotification;Landroid/os/Parcel;I)V
 
     .line 111
     return-void

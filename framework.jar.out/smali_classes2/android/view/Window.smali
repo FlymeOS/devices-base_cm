@@ -13,6 +13,8 @@
 
 
 # static fields
+.field private mFlymeAutoStatusBarIcon:Z
+
 .field protected static final DEFAULT_FEATURES:I = 0x41
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -185,6 +187,8 @@
     iput v0, p0, Landroid/view/Window;->mLocalFeatures:I
 
     iput v0, p0, Landroid/view/Window;->mFeatures:I
+
+    invoke-direct/range {p0 .. p0}, Landroid/view/Window;->initFlymeExtraFields()V
 
     .line 479
     return-void
@@ -2333,4 +2337,317 @@
 .end method
 
 .method public abstract togglePanel(ILandroid/view/KeyEvent;)V
+.end method
+
+.method private initFlymeExtraFields()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setAutoStatusBarIcon(Z)V
+
+    return-void
+.end method
+
+.method private static isBlackColor(II)Z
+    .locals 5
+    .param p0, "color"    # I
+    .param p1, "level"    # I
+
+    .prologue
+    and-int/lit16 v0, p0, 0xff
+
+    .local v0, "blue":I
+    const v3, 0xff00
+
+    and-int/2addr v3, p0
+
+    shr-int/lit8 v1, v3, 0x8
+
+    .local v1, "green":I
+    const/high16 v3, 0xff0000
+
+    and-int/2addr v3, p0
+
+    shr-int/lit8 v2, v3, 0x10
+
+    .local v2, "red":I
+    mul-int/lit8 v3, v2, 0x26
+
+    mul-int/lit8 v4, v1, 0x4b
+
+    add-int/2addr v3, v4
+
+    mul-int/lit8 v4, v0, 0xf
+
+    add-int/2addr v3, v4
+
+    shr-int/lit8 v3, v3, 0x7
+
+    if-ge v3, p1, :cond_0
+
+    const/4 v3, 0x1
+
+    :goto_0
+    return v3
+
+    :cond_0
+    const/4 v3, 0x0
+
+    goto :goto_0
+.end method
+
+.method private isOutOfBoundsNoSlop(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+    .locals 6
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v5
+
+    float-to-int v1, v5
+
+    .local v1, "x":I
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v5
+
+    float-to-int v2, v5
+
+    .local v2, "y":I
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    .local v0, "decorView":Landroid/view/View;
+    if-ltz v1, :cond_0
+
+    if-gez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v3
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v5
+
+    if-gt v1, v5, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    if-gt v2, v5, :cond_0
+
+    move v3, v4
+
+    goto :goto_0
+.end method
+
+.method public isAutoStatusBarIcon()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/view/Window;->mFlymeAutoStatusBarIcon:Z
+
+    return v0
+.end method
+
+.method public isTouchOutOfBounds(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+    .locals 2
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    const/4 v1, 0x0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0, p1, p2}, Landroid/view/Window;->isOutOfBounds(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    return v1
+.end method
+
+.method public setAutoStatusBarIcon(Z)V
+    .locals 0
+    .param p1, "autoStatusBarIcon"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Landroid/view/Window;->mFlymeAutoStatusBarIcon:Z
+
+    return-void
+.end method
+
+.method protected setLightStatusBar(ZZ)V
+    .locals 4
+    .param p1, "darkIcon"    # Z
+    .param p2, "change"    # Z
+
+    .prologue
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    .local v0, "decorView":Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/View;->getSystemUiVisibility()I
+
+    move-result v2
+
+    .local v2, "oldVis":I
+    move v1, v2
+
+    .local v1, "newVis":I
+    if-eqz p1, :cond_2
+
+    or-int/lit16 v1, v1, 0x2000
+
+    :goto_0
+    if-ne v1, v2, :cond_0
+
+    if-eqz p2, :cond_1
+
+    :cond_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    and-int/lit16 v1, v1, -0x2001
+
+    goto :goto_0
+.end method
+
+.method public setStatusBarDarkIcon(Z)V
+    .locals 1
+    .param p1, "darkIcon"    # Z
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/view/Window;->setStatusBarIconColor(ZI)V
+
+    return-void
+.end method
+
+.method public setStatusBarIconColor(I)V
+    .locals 1
+    .param p1, "color"    # I
+
+    .prologue
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/Window;->setStatusBarIconColor(ZI)V
+
+    return-void
+.end method
+
+.method public setStatusBarIconColor(ZI)V
+    .locals 4
+    .param p1, "darkIcon"    # Z
+    .param p2, "color"    # I
+
+    .prologue
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v1
+
+    .local v1, "decorView":Landroid/view/View;
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x0
+
+    .local v0, "change":Z
+    invoke-virtual {p0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v2
+
+    .local v2, "winParams":Landroid/view/WindowManager$LayoutParams;
+    iget v3, v2, Landroid/view/WindowManager$LayoutParams;->statusBarColor:I
+
+    if-eq v3, p2, :cond_0
+
+    iput p2, v2, Landroid/view/WindowManager$LayoutParams;->statusBarColor:I
+
+    invoke-virtual {p0, v2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {p0, p1, v0}, Landroid/view/Window;->setLightStatusBar(ZZ)V
+
+    .end local v0    # "change":Z
+    .end local v2    # "winParams":Landroid/view/WindowManager$LayoutParams;
+    :cond_1
+    return-void
+.end method
+
+.method public shouldCloseOnTouchNoSlop(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+    .locals 2
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    const/4 v1, 0x0
+
+    iget-boolean v0, p0, Landroid/view/Window;->mCloseOnTouchOutside:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0, p1, p2}, Landroid/view/Window;->isOutOfBoundsNoSlop(Landroid/content/Context;Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    return v1
 .end method

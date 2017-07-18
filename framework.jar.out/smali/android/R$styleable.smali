@@ -15,6 +15,10 @@
 
 
 # static fields
+.field public static final SizeAdaptiveLayout:[I
+
+.field public static final SizeAdaptiveLayout_Layout:[I
+
 .field public static final AbsListView:[I
 
 .field public static final AbsListView_cacheColorHint:I = 0x6
@@ -4500,6 +4504,8 @@
     .line 18563
     const/16 v0, 0x2a
 
+    add-int/lit8 v0, v0, 0x1
+
     new-array v0, v0, [I
 
     fill-array-data v0, :array_7
@@ -6716,6 +6722,8 @@
 
     sput-object v0, Landroid/R$styleable;->ShapeDrawablePadding:[I
 
+    invoke-static {}, Landroid/R$styleable;->initFlymeExtraFields()V
+
     .line 42787
     new-array v0, v6, [I
 
@@ -7590,6 +7598,7 @@
         0x10104ef
         0x11600b8
         0x11600bb
+        #android:^attr-private@needAccessControl#t
     .end array-data
 
     .line 19854
@@ -9442,6 +9451,29 @@
     .prologue
     .line 16197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static initFlymeExtraFields()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    new-array v0, v1, [I
+
+    sput-object v0, Landroid/R$styleable;->SizeAdaptiveLayout:[I
+
+    const v0, #android:^attr-private@layout_maxHeight#t
+
+    const v1, #android:^attr-private@layout_minHeight#t
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Landroid/R$styleable;->SizeAdaptiveLayout_Layout:[I
 
     return-void
 .end method

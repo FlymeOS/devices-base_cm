@@ -93,7 +93,7 @@
 
     move-result v1
 
-    if-le v0, v1, :cond_0
+    if-lt v0, v1, :cond_0
 
     .line 1805
     iget-object v0, p0, Landroid/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroid/widget/ListPopupWindow;

@@ -388,6 +388,9 @@
     .locals 2
 
     .prologue
+
+    invoke-direct/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$InputMethodImpl;->unbindInputEnter()V
+
     const/4 v1, 0x0
 
     .line 399
@@ -405,6 +408,30 @@
 
     iput-object v1, v0, Landroid/inputmethodservice/InputMethodService;->mInputConnection:Landroid/view/inputmethod/InputConnection;
 
+    invoke-direct/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$InputMethodImpl;->unbindInputExit()V
+
     .line 396
+    return-void
+.end method
+
+.method private unbindInputEnter()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/inputmethodservice/InputMethodService$InputMethodImpl;->this$0:Landroid/inputmethodservice/InputMethodService;
+
+    invoke-static {v0}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->unbindInputEnter(Landroid/inputmethodservice/InputMethodService;)V
+
+    return-void
+.end method
+
+.method private unbindInputExit()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/inputmethodservice/InputMethodService$InputMethodImpl;->this$0:Landroid/inputmethodservice/InputMethodService;
+
+    invoke-static {v0}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->unbindInputExit(Landroid/inputmethodservice/InputMethodService;)V
+
     return-void
 .end method
