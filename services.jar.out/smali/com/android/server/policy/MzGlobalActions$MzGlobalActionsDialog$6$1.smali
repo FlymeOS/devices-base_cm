@@ -1,6 +1,9 @@
 .class Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6$1;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "MzGlobalActions.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -19,16 +22,15 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;)V
     .locals 0
     .param p1, "this$2"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;
-    .param p2, "$anonymous0"    # Ljava/lang/String;
 
     .prologue
-    .line 399
+    .line 415
     iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6$1;->this$2:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;
 
-    invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -39,33 +41,45 @@
     .locals 3
 
     .prologue
-    .line 403
-    :try_start_0
+    .line 418
+    sget-object v1, Landroid/os/BuildExt;->IS_SHOPDEMO:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 419
+    iget-object v1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6$1;->this$2:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;
+
+    iget-object v1, v1, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$6;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
+
+    invoke-static {v1}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-wrap3(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;)V
+
+    .line 417
+    :goto_0
+    return-void
+
+    .line 421
+    :cond_0
     invoke-static {}, Lcom/android/server/policy/MzGlobalActions;->-get3()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string/jumbo v2, "power"
 
-    .line 401
-    :goto_0
-    return-void
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 404
-    :catch_0
-    move-exception v0
+    move-result-object v0
 
-    .line 405
-    .local v0, "e":Ljava/io/IOException;
-    const-string/jumbo v1, "MzGlobalActions"
+    check-cast v0, Landroid/os/PowerManager;
 
-    .line 406
-    const-string/jumbo v2, "Can\'t perform master clear/factory reset"
+    .line 422
+    .local v0, "pm":Landroid/os/PowerManager;
+    const/4 v1, 0x0
 
-    .line 405
-    invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

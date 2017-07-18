@@ -407,6 +407,8 @@
 
 .field public static final RINGTONE_SOUND_PHONE_2:Ljava/lang/String; = "ringtone_sound_phone_2"
 
+.field public static final SCREENSHOT_SOUNDS_ENABLED:Ljava/lang/String; = "screenshot_sounds_enabled"
+
 .field public static final SCREEN_BRIGHTNESS_ANIMATION:Ljava/lang/String; = "animation_brightness"
 
 .field public static final SCREEN_BRIGHTNESS_PREFERED:Ljava/lang/String; = "prefer_screen_brightness"

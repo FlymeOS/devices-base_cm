@@ -74,7 +74,7 @@
     .line 1785
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/MzResolverActivity;
 
-    invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get8(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
+    invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get9(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -83,7 +83,7 @@
     .line 1786
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/MzResolverActivity;
 
-    invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get8(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
+    invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get9(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -138,7 +138,7 @@
     :cond_0
     iget-object v5, p0, Lcom/android/internal/app/MzResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/MzResolverActivity;
 
-    invoke-static {v5}, Lcom/android/internal/app/MzResolverActivity;->-get8(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
+    invoke-static {v5}, Lcom/android/internal/app/MzResolverActivity;->-get9(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/Map;
 
     move-result-object v5
 

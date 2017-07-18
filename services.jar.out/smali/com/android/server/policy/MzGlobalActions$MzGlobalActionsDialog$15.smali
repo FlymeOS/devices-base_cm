@@ -1,4 +1,4 @@
-.class Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$13;
+.class Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$15;
 .super Ljava/lang/Object;
 .source "MzGlobalActions.java"
 
@@ -27,8 +27,8 @@
     .param p1, "this$1"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     .prologue
-    .line 763
-    iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$13;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
+    .line 827
+    iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$15;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,36 +39,36 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 785
+    .line 838
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 777
+    .line 834
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 771
+    .line 843
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 766
+    .line 829
     return-void
 .end method

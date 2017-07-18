@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->onStart()V
+    value = Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->switchView(IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     .prologue
-    .line 576
+    .line 535
     iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,57 +38,32 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 579
-    iget-object v1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
+    .line 538
+    iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
-    iget-object v1, v1, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/server/policy/MzGlobalActions;
+    iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->mButtons:Landroid/widget/LinearLayout;
 
-    invoke-static {v1}, Lcom/android/server/policy/MzGlobalActions;->-get0(Lcom/android/server/policy/MzGlobalActions;)I
+    const/16 v1, 0x8
 
-    move-result v1
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    const/4 v2, 0x1
+    .line 539
+    iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
-    if-ne v1, v2, :cond_0
+    iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->mButtons:Landroid/widget/LinearLayout;
 
-    .line 580
-    invoke-static {}, Lcom/android/server/policy/MzGlobalActions;->-get3()Landroid/content/Context;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    const-string/jumbo v2, "power"
+    .line 540
+    iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-wrap2(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager;
-
-    .line 581
-    .local v0, "pm":Landroid/os/PowerManager;
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
-
-    .line 578
-    .end local v0    # "pm":Landroid/os/PowerManager;
-    :goto_0
+    .line 537
     return-void
-
-    .line 583
-    :cond_0
-    iget-object v1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$10;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
-
-    iget-object v1, v1, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/server/policy/MzGlobalActions;
-
-    iget-object v1, v1, Lcom/android/server/policy/MzGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, v2}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
-
-    goto :goto_0
 .end method

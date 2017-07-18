@@ -30,7 +30,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1690
-    const v0, 0x1020014
+    const v0, #android:id@text1#t
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -41,7 +41,7 @@
     iput-object v0, p0, Lcom/android/internal/app/MzResolverActivity$ViewHolder;->text:Landroid/widget/TextView;
 
     .line 1691
-    const v0, 0x1020006
+    const v0, #android:id@icon#t
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

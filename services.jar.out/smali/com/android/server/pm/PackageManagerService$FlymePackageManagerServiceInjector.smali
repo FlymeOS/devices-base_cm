@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "/flyme-res/flyme-res.apk"
+    const-string/jumbo v2, "/flyme-res/flyme-res.jar"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

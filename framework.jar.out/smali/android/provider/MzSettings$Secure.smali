@@ -96,6 +96,8 @@
 
 .field public static final MZ_GAME_MODE_DND:Ljava/lang/String; = "mz_game_mode_dnd"
 
+.field public static final MZ_GAME_MODE_GAME_KEYBOARD:Ljava/lang/String; = "mz_game_mode_game_keyboard"
+
 .field public static final MZ_GUEST_MODE_PASSWORD:Ljava/lang/String; = "mz_guest_mode_password"
 
 .field public static final MZ_INPUT_PASSWORD_PROTECTION:Ljava/lang/String; = "mz_safe_keyboard"
@@ -142,7 +144,7 @@
     .locals 2
 
     .prologue
-    .line 1132
+    .line 1141
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x1e
@@ -151,21 +153,21 @@
 
     sput-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
-    .line 1133
+    .line 1142
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_inside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1134
+    .line 1143
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_outside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 979
+    .line 988
     return-void
 .end method
 
@@ -173,7 +175,7 @@
     .locals 0
 
     .prologue
-    .line 979
+    .line 988
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

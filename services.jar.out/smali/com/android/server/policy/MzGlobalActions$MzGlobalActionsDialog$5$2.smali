@@ -57,7 +57,7 @@
 
     iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$5;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
-    invoke-static {v0, v2, v2}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-wrap3(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;IZ)V
+    invoke-static {v0, v2, v2}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-wrap4(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;IZ)V
 
     .line 378
     return-void

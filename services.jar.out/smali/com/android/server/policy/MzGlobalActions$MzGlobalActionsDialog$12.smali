@@ -3,12 +3,12 @@
 .source "MzGlobalActions.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->prepareAnimators()V
+    value = Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->onStart()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     .prologue
-    .line 737
+    .line 643
     iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$12;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,38 +37,39 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+.method public run()V
+    .locals 4
 
     .prologue
-    .line 759
-    return-void
-.end method
+    .line 646
+    iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$12;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    invoke-static {v0}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-get5(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;)Landroid/animation/AnimatorSet;
 
-    .prologue
-    .line 751
-    return-void
-.end method
+    move-result-object v0
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
 
-    .prologue
-    .line 745
-    return-void
-.end method
+    move-result v0
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-    .param p1, "animation"    # Landroid/animation/Animator;
+    if-nez v0, :cond_0
 
-    .prologue
-    .line 740
+    .line 647
+    iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$12;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
+
+    invoke-static {v0}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-get6(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    .line 648
+    const-wide/16 v2, 0x320
+
+    .line 647
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    .line 645
+    :cond_0
     return-void
 .end method

@@ -462,16 +462,12 @@
     move-object/from16 v28, v0
 
     .line 378
-    const-string/jumbo v29, "parentPanel"
+    const-string/jumbo v29, "id"
 
-    const/16 v30, 0x0
+    const-string/jumbo v30, "parentPanel"
 
     .line 377
-    move/from16 v0, v30
-
-    move-object/from16 v1, v29
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v29 .. v30}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v29
 
@@ -498,17 +494,14 @@
 
     move-object/from16 v28, v0
 
+    .line 381
+    const-string/jumbo v29, "id"
+
     .line 382
-    const-string/jumbo v29, "contentPanel"
+    const-string/jumbo v30, "contentPanel"
 
     .line 381
-    const/16 v30, 0x0
-
-    move/from16 v0, v30
-
-    move-object/from16 v1, v29
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v29 .. v30}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v29
 
@@ -1213,7 +1206,7 @@
     new-array v5, v8, [I
 
     .line 1152
-    const v6, 0x101009e
+    const v6, #android:attr@state_enabled#t
 
     aput v6, v5, v7
 
@@ -1751,12 +1744,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 304
-    const-string/jumbo v3, "parentPanel"
+    const-string/jumbo v3, "id"
 
-    const/4 v4, 0x0
+    const-string/jumbo v4, "parentPanel"
 
     .line 303
-    invoke-static {v4, v3}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -1890,14 +1883,14 @@
 .end method
 
 .method private setupButtons()V
-    .locals 13
+    .locals 14
 
     .prologue
-    const/16 v12, 0x11
+    const/16 v13, 0x11
 
-    const/16 v11, 0x9
+    const/16 v12, 0x9
 
-    const/4 v10, 0x3
+    const/4 v11, 0x3
 
     const/4 v8, 0x0
 
@@ -1905,10 +1898,12 @@
     iget-object v7, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 823
-    const-string/jumbo v9, "buttonPanel"
+    const-string/jumbo v9, "id"
+
+    const-string/jumbo v10, "buttonPanel"
 
     .line 822
-    invoke-static {v8, v9}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v9, v10}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v9
 
@@ -1965,7 +1960,7 @@
 
     .line 832
     :cond_0
-    const v7, 0x1020019
+    const v7, #android:id@button1#t
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1975,7 +1970,7 @@
 
     .line 833
     .local v4, "buttonPositive":Landroid/widget/Button;
-    const v7, 0x102001a
+    const v7, #android:id@button2#t
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1985,7 +1980,7 @@
 
     .line 834
     .local v1, "buttonNegative":Landroid/widget/Button;
-    const v7, 0x102001b
+    const v7, #android:id@button3#t
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -2047,7 +2042,7 @@
     iput v8, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     .line 861
-    iput v12, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+    iput v13, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     .line 862
     invoke-virtual {v4, v6}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -2136,7 +2131,7 @@
     iput v8, v6, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     .line 869
-    iput v12, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+    iput v13, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     .line 870
     invoke-virtual {v1, v6}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -2203,7 +2198,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_5
+    if-le v7, v12, :cond_5
 
     const-string/jumbo v7, "en"
 
@@ -2223,7 +2218,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_6
+    if-le v7, v11, :cond_6
 
     const-string/jumbo v7, "zh"
 
@@ -2244,7 +2239,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_7
+    if-le v7, v12, :cond_7
 
     const-string/jumbo v7, "en"
 
@@ -2265,7 +2260,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_9
+    if-le v7, v11, :cond_9
 
     const-string/jumbo v7, "zh"
 
@@ -2486,7 +2481,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_c
+    if-le v7, v12, :cond_c
 
     const-string/jumbo v7, "en"
 
@@ -2506,7 +2501,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_d
+    if-le v7, v11, :cond_d
 
     const-string/jumbo v7, "zh"
 
@@ -2527,7 +2522,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_e
+    if-le v7, v12, :cond_e
 
     const-string/jumbo v7, "en"
 
@@ -2548,7 +2543,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_10
+    if-le v7, v11, :cond_10
 
     const-string/jumbo v7, "zh"
 
@@ -2659,7 +2654,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_12
+    if-le v7, v12, :cond_12
 
     const-string/jumbo v7, "en"
 
@@ -2679,7 +2674,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_13
+    if-le v7, v11, :cond_13
 
     const-string/jumbo v7, "zh"
 
@@ -2700,7 +2695,7 @@
 
     move-result v7
 
-    if-le v7, v11, :cond_14
+    if-le v7, v12, :cond_14
 
     const-string/jumbo v7, "en"
 
@@ -2721,7 +2716,7 @@
 
     move-result v7
 
-    if-le v7, v10, :cond_16
+    if-le v7, v11, :cond_16
 
     const-string/jumbo v7, "zh"
 
@@ -2815,16 +2810,12 @@
     move-object/from16 v17, v0
 
     .line 928
-    const-string/jumbo v18, "contentPanel"
+    const-string/jumbo v18, "id"
 
-    const/16 v19, 0x0
+    const-string/jumbo v19, "contentPanel"
 
     .line 927
-    move/from16 v0, v19
-
-    move-object/from16 v1, v18
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v18 .. v19}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v18
 
@@ -2869,7 +2860,7 @@
 
     move-object/from16 v17, v0
 
-    const v18, 0x102000b
+    const v18, #android:id@message#t
 
     invoke-virtual/range {v17 .. v18}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -2944,7 +2935,7 @@
     const/16 v19, 0x0
 
     .line 951
-    const v20, 0x101005b
+    const v20, #android:attr@windowTitleStyle#t
 
     const/16 v21, 0x0
 
@@ -3527,20 +3518,22 @@
     .locals 9
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     .line 786
-    iget-object v4, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
+    iget-object v5, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 787
-    const-string/jumbo v6, "customPanel"
+    const-string/jumbo v6, "id"
+
+    const-string/jumbo v7, "customPanel"
 
     .line 786
-    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v6, v7}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
-    invoke-virtual {v4, v6}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v5, v6}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -3550,23 +3543,25 @@
     .local v1, "customPanel":Landroid/widget/FrameLayout;
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getVisibility()I
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_1
+    if-nez v5, :cond_0
 
     const/4 v4, 0x1
 
-    :goto_0
+    :cond_0
     iput-boolean v4, p0, Lcom/android/internal/app/AlertControllerExt;->mCustomVisible:Z
 
     .line 789
     iget-object v4, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 790
+    const-string/jumbo v5, "id"
+
     const-string/jumbo v6, "custom"
 
     .line 789
-    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
@@ -3592,11 +3587,11 @@
 
     .line 793
     .local v2, "flp":Landroid/widget/FrameLayout$LayoutParams;
-    if-lez v3, :cond_0
+    if-lez v3, :cond_1
 
     iget-boolean v4, p0, Lcom/android/internal/app/AlertControllerExt;->mCustEditHasMargin:Z
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     .line 795
     iget-object v4, p0, Lcom/android/internal/app/AlertControllerExt;->mContext:Landroid/content/Context;
@@ -3650,26 +3645,17 @@
     invoke-virtual {v2, v4, v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
     .line 785
-    :cond_0
-    return-void
-
-    .end local v0    # "custom":Landroid/widget/FrameLayout;
-    .end local v2    # "flp":Landroid/widget/FrameLayout$LayoutParams;
-    .end local v3    # "hasEditTextCount":I
     :cond_1
-    move v4, v5
-
-    .line 788
-    goto :goto_0
+    return-void
 .end method
 
 .method private setupTitle()V
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v3, 0x1
 
-    const/16 v6, 0x8
+    const/16 v7, 0x8
 
     const/4 v4, 0x0
 
@@ -3677,10 +3663,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 1045
-    const-string/jumbo v5, "topPanel"
+    const-string/jumbo v5, "id"
+
+    const-string/jumbo v6, "topPanel"
 
     .line 1044
-    invoke-static {v4, v5}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
@@ -3696,10 +3684,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 1047
-    const-string/jumbo v5, "title_template"
+    const-string/jumbo v5, "id"
+
+    const-string/jumbo v6, "title_template"
 
     .line 1046
-    invoke-static {v4, v5}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
@@ -3728,7 +3718,7 @@
     .line 1052
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
-    const v5, 0x1020006
+    const v5, #android:id@icon#t
 
     invoke-virtual {v2, v5}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -3742,10 +3732,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 1054
-    const-string/jumbo v5, "contentPanel"
+    const-string/jumbo v5, "id"
+
+    const-string/jumbo v6, "contentPanel"
 
     .line 1053
-    invoke-static {v4, v5}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
@@ -3761,10 +3753,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 1056
-    const-string/jumbo v5, "buttonPanel"
+    const-string/jumbo v5, "id"
+
+    const-string/jumbo v6, "buttonPanel"
 
     .line 1055
-    invoke-static {v4, v5}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
@@ -3793,17 +3787,19 @@
     .line 1060
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mIconView:Landroid/widget/ImageView;
 
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1061
     :cond_0
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mTopPanel:Landroid/widget/LinearLayout;
 
     .line 1062
-    const-string/jumbo v3, "titleDividerTop"
+    const-string/jumbo v3, "id"
+
+    const-string/jumbo v4, "titleDividerTop"
 
     .line 1061
-    invoke-static {v4, v3}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -3817,10 +3813,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mTopPanel:Landroid/widget/LinearLayout;
 
     .line 1064
-    const-string/jumbo v3, "titleDivider"
+    const-string/jumbo v3, "id"
+
+    const-string/jumbo v4, "titleDivider"
 
     .line 1063
-    invoke-static {v4, v3}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -3838,7 +3836,7 @@
     .line 1066
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mTitleDividerTop:Landroid/view/View;
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 1068
     :cond_1
@@ -3849,7 +3847,7 @@
     .line 1069
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mTitleDivider:Landroid/view/View;
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 1071
     :cond_2
@@ -3872,10 +3870,12 @@
     iget-object v2, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 1074
-    const-string/jumbo v3, "alertTitle"
+    const-string/jumbo v3, "id"
+
+    const-string/jumbo v4, "alertTitle"
 
     .line 1073
-    invoke-static {v4, v3}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -3940,7 +3940,7 @@
     iget-object v3, p0, Lcom/android/internal/app/AlertControllerExt;->mContext:Landroid/content/Context;
 
     .line 1079
-    const v4, 0x10301b3
+    const v4, #android:style@TextAppearance.DeviceDefault.Small#t
 
     .line 1078
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
@@ -3965,6 +3965,8 @@
     goto :goto_3
 
     .line 1076
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -4038,17 +4040,14 @@
 
     move-result-object v20
 
+    .line 151
+    const-string/jumbo v21, "dimen"
+
     .line 152
-    const-string/jumbo v21, "status_bar_height"
+    const-string/jumbo v22, "status_bar_height"
 
     .line 151
-    const/16 v22, 0x1
-
-    move/from16 v0, v22
-
-    move-object/from16 v1, v21
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v21 .. v22}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v21
 
@@ -4073,17 +4072,14 @@
 
     move-object/from16 v20, v0
 
+    .line 155
+    const-string/jumbo v21, "id"
+
     .line 156
-    const-string/jumbo v21, "parentPanel"
+    const-string/jumbo v22, "parentPanel"
 
     .line 155
-    const/16 v22, 0x0
-
-    move/from16 v0, v22
-
-    move-object/from16 v1, v21
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v21 .. v22}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v21
 
@@ -4204,17 +4200,14 @@
 
     move-object/from16 v20, v0
 
+    .line 194
+    const-string/jumbo v21, "id"
+
     .line 195
-    const-string/jumbo v21, "extractArea"
+    const-string/jumbo v22, "extractArea"
 
     .line 194
-    const/16 v22, 0x0
-
-    move/from16 v0, v22
-
-    move-object/from16 v1, v21
-
-    invoke-static {v0, v1}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static/range {v21 .. v22}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v21
 
@@ -5333,8 +5326,6 @@
     .param p1, "width"    # I
 
     .prologue
-    const/4 v12, 0x0
-
     .line 517
     iput p1, p0, Lcom/android/internal/app/AlertControllerExt;->mWidth:I
 
@@ -5355,10 +5346,12 @@
     iget-object v10, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 524
-    const-string/jumbo v11, "mask"
+    const-string/jumbo v11, "id"
+
+    const-string/jumbo v12, "mask"
 
     .line 523
-    invoke-static {v12, v11}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v11, v12}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v11
 
@@ -5371,10 +5364,12 @@
     iget-object v10, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 526
-    const-string/jumbo v11, "parentPanel"
+    const-string/jumbo v11, "id"
+
+    const-string/jumbo v12, "parentPanel"
 
     .line 525
-    invoke-static {v12, v11}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v11, v12}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v11
 
@@ -5447,10 +5442,12 @@
     iget-object v10, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
     .line 538
-    const-string/jumbo v11, "buttonPanel"
+    const-string/jumbo v11, "id"
+
+    const-string/jumbo v12, "buttonPanel"
 
     .line 537
-    invoke-static {v12, v11}, Lcom/meizu/util/InternalResUtils;->getInternalResId(ILjava/lang/String;)I
+    invoke-static {v11, v12}, Lcom/meizu/util/InternalResUtils;->getInternalResId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v11
 
@@ -5542,7 +5539,7 @@
     .line 767
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt;->mWindow:Landroid/view/Window;
 
-    const v1, 0x102002e
+    const v1, #android:id@mask#t
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
