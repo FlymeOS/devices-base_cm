@@ -130,6 +130,20 @@ wifiscanner                               u:object_r:wifiscanner_service:s0
 wifi                                      u:object_r:wifi_service:s0
 window                                    u:object_r:window_service:s0
 *                                         u:object_r:default_android_service:s0
+
+move_window                               u:object_r:move_window_service:s0
+flyme_packagemanager                      u:object_r:flyme_packagemanager_service:s0
+flyme_theme_service                       u:object_r:flyme_theme_manager_service:s0
+networkmanagement_service_flyme           u:object_r:networkmanagement_service_flyme_service:s0
+flyme_wallpaper                           u:object_r:flyme_wallpaper_service:s0
+flyme_statusbar                           u:object_r:flyme_statusbar_service:s0
+access_control                            u:object_r:access_control_service:s0
+flyme_permission                          u:object_r:access_control_service:s0
+phone_ext                                 u:object_r:radio_service:s0
+call_adapter                              u:object_r:telecom_service:s0
+flyme_perf                                u:object_r:flyme_perf_service:s0
+alphame_server                            u:object_r:alphame_service:s0
+
 #line 1 "device/huawei/angler/sepolicy/service_contexts"
 AtCmdFwd                                  u:object_r:atfwd_service:s0
 cneservice                                u:object_r:cne_service:s0

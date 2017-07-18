@@ -317,6 +317,12 @@
 /mnt/user(/.*)?             u:object_r:mnt_user_file:s0
 /mnt/runtime(/.*)?          u:object_r:storage_file:s0
 /storage(/.*)?              u:object_r:storage_file:s0
+
+/dev/socket/flymed      u:object_r:flymed_socket:s0
+/system/bin/flymed      u:object_r:flymed_exec:s0
+/data/system/users/[0-9]+/lock_wallpaper		u:object_r:wallpaper_file:s0
+/data/system/users/[0-9]+/smart_wallpaper_target		u:object_r:wallpaper_file:s0
+
 #line 1 "device/huawei/angler/sepolicy/file_contexts"
 # Devices
 #factory reset protection partition
