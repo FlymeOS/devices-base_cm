@@ -1,0 +1,66 @@
+.method public getActiveSubscription()I
+    .locals 3
+
+    .prologue
+    .line 746
+    iget-object v1, p0, Lcom/android/server/telecom/TelecomServiceImpl$1;->this$0:Lcom/android/server/telecom/TelecomServiceImpl;
+
+    invoke-static {v1}, Lcom/android/server/telecom/TelecomServiceImpl;->-get3(Lcom/android/server/telecom/TelecomServiceImpl;)Lcom/android/server/telecom/TelecomSystem$SyncRoot;
+
+    move-result-object v2
+
+    monitor-enter v2
+
+    .line 747
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/telecom/TelecomServiceImpl$1;->this$0:Lcom/android/server/telecom/TelecomServiceImpl;
+
+    invoke-static {v1}, Lcom/android/server/telecom/TelecomServiceImpl;->-get1(Lcom/android/server/telecom/TelecomServiceImpl;)Lcom/android/server/telecom/CallsManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallsManager;->getActiveSubscription()Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v0
+
+    .line 748
+    .local v0, "activeSub":Ljava/lang/String;
+    if-nez v0, :cond_0
+
+    const/4 v1, -0x1
+
+    :goto_0
+    monitor-exit v2
+
+    return v1
+
+    .line 749
+    :cond_0
+    :try_start_1
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-result v1
+
+    goto :goto_0
+
+    .line 746
+    .end local v0    # "activeSub":Ljava/lang/String;
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v2
+
+    throw v1
+.end method
+
+.method public switchToOtherActiveSub(I)V
+    .locals 0
+    .param p1, "subId"    # I
+
+    .prologue
+    return-void
+.end method

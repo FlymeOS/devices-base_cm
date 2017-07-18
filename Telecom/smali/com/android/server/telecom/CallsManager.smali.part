@@ -1,0 +1,155 @@
+.method public getActiveSubscription()Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 2220
+    invoke-virtual {p0}, Lcom/android/server/telecom/CallsManager;->getPhoneAccountRegistrar()Lcom/android/server/telecom/PhoneAccountRegistrar;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/server/telecom/PhoneAccountRegistrar;->getSimPhoneAccounts()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, "ph$iterator":Ljava/util/Iterator;
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telecom/PhoneAccountHandle;
+
+    .line 2221
+    .local v0, "ph":Landroid/telecom/PhoneAccountHandle;
+    invoke-virtual {p0}, Lcom/android/server/telecom/CallsManager;->getPhoneAccountRegistrar()Lcom/android/server/telecom/PhoneAccountRegistrar;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lcom/android/server/telecom/PhoneAccountRegistrar;->getPhoneAccount(Landroid/telecom/PhoneAccountHandle;)Landroid/telecom/PhoneAccount;
+
+    move-result-object v2
+
+    .line 2222
+    const/4 v3, 0x2
+
+    .line 2221
+    invoke-virtual {v2, v3}, Landroid/telecom/PhoneAccount;->isSet(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 2223
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "getActiveSubscription: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {p0, v2, v3}, Lcom/android/server/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2224
+    invoke-virtual {v0}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    return-object v2
+
+    .line 2227
+    .end local v0    # "ph":Landroid/telecom/PhoneAccountHandle;
+    :cond_1
+    const/4 v2, 0x0
+
+    return-object v2
+.end method
+
+.method resetCdmaConnectionTime(Lcom/android/server/telecom/Call;)V
+    .locals 5
+    .param p1, "call"    # Lcom/android/server/telecom/Call;
+
+    .prologue
+    const/4 v4, 0x5
+
+    .line 2451
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {p1, v2, v3}, Lcom/android/server/telecom/Call;->setConnectTimeMillis(J)V
+
+    .line 2452
+    iget-object v2, p0, Lcom/android/server/telecom/CallsManager;->mCalls:Ljava/util/Set;
+
+    invoke-interface {v2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 2453
+    iget-object v2, p0, Lcom/android/server/telecom/CallsManager;->mListeners:Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, "listener$iterator":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/telecom/CallsManager$CallsManagerListener;
+
+    .line 2454
+    .local v0, "listener":Lcom/android/server/telecom/CallsManager$CallsManagerListener;
+    invoke-interface {v0, p1, v4, v4}, Lcom/android/server/telecom/CallsManager$CallsManagerListener;->onCallStateChanged(Lcom/android/server/telecom/Call;II)V
+
+    goto :goto_0
+
+    .line 2456
+    .end local v0    # "listener":Lcom/android/server/telecom/CallsManager$CallsManagerListener;
+    :cond_0
+    invoke-direct {p0}, Lcom/android/server/telecom/CallsManager;->updateForegroundCall()V
+
+    .line 2450
+    .end local v1    # "listener$iterator":Ljava/util/Iterator;
+    :cond_1
+    return-void
+.end method
