@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Quédente %d intentos pa bloquiar la tarxeta SIM.</item>
+        <item quantity="one">Quédate %d intentu pa bloquiar la tarxeta SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Últimos %d díes</item>
+        <item quantity="one">Últimu %d día</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">1 segundu</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">1 minutu</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d hores</item>
+        <item quantity="one">1 hora</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Redes Wi-Fi disponibles</item>
+        <item quantity="one">Rede Wi-Fi disponible</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Redes Wi-Fi abiertes disponibles</item>
+        <item quantity="one">Rede Wi-Fi abierta disponible</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d de %2$d</item>
+        <item quantity="one">Una coincidencia</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Inténtalo en %d s</item>
+        <item quantity="one">Inténtalo en 1 s</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Mentanto %1$d mins (hasta la(les) %2$s)</item>
+        <item quantity="one">Mentanto 1 min (hasta la(les) %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Mentanto %1$d hrs (hasta la(les) %2$s)</item>
+        <item quantity="one">Mentanto 1 hr (hasta la(les) %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Mientres %d minutos</item>
+        <item quantity="one">Mientres un minutu</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Mentanto %d mins</item>
+        <item quantity="one">Mentanto 1 min</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Mientres %d hores</item>
+        <item quantity="one">Mientres una hora</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Mentanto %d hrs</item>
+        <item quantity="one">Mentanto 1 hr</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d elementos esbillaos</item>
+        <item quantity="one">%1$d elementu esbilláu</item>
+    </plurals>
+</resources>

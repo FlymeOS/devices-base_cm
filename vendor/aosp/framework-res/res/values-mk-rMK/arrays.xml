@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Дома</item>
+        <item>Работа</item>
+        <item>Други</item>
+        <item>Прилагодени</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Работа</item>
+        <item>Други</item>
+        <item>Прилагодени</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Дома</item>
+        <item>Мобилен</item>
+        <item>Работа</item>
+        <item>Факс на работа</item>
+        <item>Факс дома</item>
+        <item>Пејџер</item>
+        <item>Други</item>
+        <item>Прилагоди</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Дома</item>
+        <item>Работа</item>
+        <item>Други</item>
+        <item>Прилагодени</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>Дома</item>
+        <item>Работа</item>
+        <item>Други</item>
+        <item>Прилагодени</item>
+    </string-array>
+</resources>

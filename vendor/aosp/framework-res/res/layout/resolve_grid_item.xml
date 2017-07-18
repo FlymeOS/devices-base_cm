@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="?selectableItemBackgroundBorderless" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="80.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="3.0dip" android:scaleType="fitCenter" />
+        <ImageView android:layout_gravity="end|bottom|center" android:id="@id/target_badge" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="fitCenter" />
+    </FrameLayout>
+    <TextView android:textAppearance="?textAppearanceSmall" android:textSize="12.0sp" android:textColor="?textColorPrimary" android:ellipsize="marquee" android:gravity="center|top" android:id="@id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="4.0dip" android:maxLines="2" android:minLines="2" android:fontFamily="sans-serif-condensed" />
+    <TextView android:textAppearance="?textAppearanceSmall" android:textSize="12.0sp" android:ellipsize="marquee" android:gravity="center|top" android:id="@id/text2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:maxLines="2" android:minLines="2" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="timepicker_text_inset_inner">58.0dip</dimen>
+    <dimen name="timepicker_radial_picker_dimen">224.0dip</dimen>
+    <dimen name="floating_window_margin_left">16.0dip</dimen>
+    <dimen name="floating_window_margin_top">8.0dip</dimen>
+    <dimen name="floating_window_margin_right">16.0dip</dimen>
+    <dimen name="floating_window_margin_bottom">32.0dip</dimen>
+</resources>

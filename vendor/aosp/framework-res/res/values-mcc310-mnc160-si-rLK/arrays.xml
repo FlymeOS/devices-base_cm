@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi හරහා ඇමතුම් සිදු කිරීමට සහ පණිවිඩ යැවීමට, පළමුව මෙම සේවාව පිහිටුවන ලෙස ඔබේ වාහකයෙන් ඉල්ලන්න. අනතුරුව සැකසීම් වෙතින් Wi-Fi ඇමතුම නැවත ක්‍රියාත්මක කරන්න.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ඔබගේ වාහකය සමඟ ලියාපදිංචි වන්න</item>
+    </string-array>
+</resources>

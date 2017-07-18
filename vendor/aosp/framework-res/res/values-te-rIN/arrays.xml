@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>ఇల్లు</item>
+        <item>కార్యాలయం</item>
+        <item>ఇతరం</item>
+        <item>అనుకూలం</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>కార్యాలయం</item>
+        <item>ఇతరం</item>
+        <item>అనుకూలం</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ఇల్లు</item>
+        <item>మొబైల్</item>
+        <item>కార్యాలయం</item>
+        <item>కార్యాలయ ఫ్యాక్స్</item>
+        <item>ఇంటి ఫ్యాక్స్</item>
+        <item>పేజర్</item>
+        <item>ఇతరం</item>
+        <item>అనుకూలం</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ఇల్లు</item>
+        <item>కార్యాలయం</item>
+        <item>ఇతరం</item>
+        <item>అనుకూలం</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>ఇల్లు</item>
+        <item>కార్యాలయం</item>
+        <item>ఇతరం</item>
+        <item>అనుకూలం</item>
+    </string-array>
+</resources>

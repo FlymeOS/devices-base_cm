@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi ಬಳಸಿಕೊಂಡು ಕರೆ ಮಾಡಲು ಮತ್ತು ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಲು, ಮೊದಲು ಈ ಸಾಧನವನ್ನು ಹೊಂದಿಸಲು ನಿಮ್ಮ ವಾಹಕವನ್ನು ಕೇಳಿ. ತದನಂತರ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಮತ್ತೆ Wi-Fi ಆನ್‌ ಮಾಡಿ.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ನಿಮ್ಮ ವಾಹಕದಲ್ಲಿ ನೋಂದಾಯಿಸಿಕೊಳ್ಳಿ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Чтобы совершать звонки и отправлять сообщения по Wi-Fi, необходимо сначала обратиться к оператору связи и подключить эту услугу. После этого вы сможете снова выбрать этот параметр в настройках.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Укажите оператора и зарегистрируйтесь</item>
+    </string-array>
+</resources>

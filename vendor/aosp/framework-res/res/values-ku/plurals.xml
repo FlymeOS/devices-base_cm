@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">%d هه‌وڵت ماوه‌ پێش ئه‌وه‌ی سیمکارت دابخرێت.</item>
+        <item quantity="one">%d هه‌وڵت ماوه‌ پێش ئه‌وه‌ی سیمکارت دابخرێت.</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi تۆڕ لەکارە</item>
+        <item quantity="one">Wi-Fi تۆڕ لەکارە</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Wi-Fi تۆڕەکانی کراوە لە کارە</item>
+        <item quantity="one">Wi-Fi تۆڕی کراوە لە کارە</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d لە %2$d</item>
+        <item quantity="one">1 هاوتا</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">دوبارە هەوڵبدەرەوە لە %d چرکەکان</item>
+        <item quantity="one">دوبارە هەوڵبدەرەوە لە 1 چرکەی تر</item>
+    </plurals>
+</resources>

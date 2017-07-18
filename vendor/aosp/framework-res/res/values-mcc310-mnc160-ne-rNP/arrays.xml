@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi बाट कल गर्न र सन्देशहरू पठाउन, सबभन्दा पहिला यो सेवा सेटअप गर्न तपाईँको वाहकलाई भन्नुहोस्। त्यसपछि फेरि सेटिङहरूबाट Wi-Fi कलिङ सक्रिय पार्नुहोस्।</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>तपाईँको वाहकसँग दर्ता गर्नुहोस्</item>
+    </string-array>
+</resources>

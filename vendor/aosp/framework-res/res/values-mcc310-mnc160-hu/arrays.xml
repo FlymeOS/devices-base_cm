@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Ha Wi-Fi-n szeretne telefonálni és üzenetet küldeni, kérje meg szolgáltatóját, hogy állítsa be ezt a szolgáltatást. Ezután a Beállítások menüben kapcsolhatja be újra a Wi-Fi-hívást.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Regisztráljon a szolgáltatójánál</item>
+    </string-array>
+</resources>

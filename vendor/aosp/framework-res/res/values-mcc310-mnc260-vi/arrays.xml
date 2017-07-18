@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Để gọi điện và gửi tin nhắn qua Wi-Fi, trước tiên hãy yêu cầu nhà cung cấp dịch vụ của bạn thiết lập dịch vụ này. Sau đó, bật lại gọi qua Wi-Fi từ Cài đặt.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Đăng ký với nhà cung cấp dịch vụ của bạn</item>
+    </string-array>
+</resources>

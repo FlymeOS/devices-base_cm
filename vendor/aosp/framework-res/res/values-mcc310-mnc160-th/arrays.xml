@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>หากต้องการโทรออกและส่งข้อความผ่าน Wi-Fi โปรดสอบถามผู้ให้บริการของคุณก่อนเพื่อตั้งค่าบริการนี้ แล้วเปิดการโทรผ่าน Wi-Fi อีกครั้งจากการตั้งค่า</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ลงทะเบียนกับผู้ให้บริการ</item>
+    </string-array>
+</resources>

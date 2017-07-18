@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Para facer chamadas e enviar mensaxes a través da wifi, primeiro pídelle ao teu operador que configure este servizo. A continuación, activa de novo as chamadas wifi en Configuración.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Rexístrate co teu operador</item>
+    </string-array>
+</resources>

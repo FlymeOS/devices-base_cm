@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_mms_user_agent">‏‮Nexus5‬‏</string>
+    <string name="config_mms_user_agent_profile_url">‏‮http://www.google.com/oha/rdf/ua-profile-kila.xml‬‏</string>
+</resources>

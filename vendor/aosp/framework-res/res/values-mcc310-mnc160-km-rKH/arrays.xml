@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>ដើម្បីធ្វើការហៅ និងផ្ញើសារតាម Wi-Fi ដំបូងឡើយអ្នកត្រូវស្នើឲ្យក្រុមហ៊ុនរបស់អ្នកដំឡើងសេវាកម្មនេះសិន។ បន្ទាប់មកបើកការហៅតាម Wi-Fi ម្តងទៀតចេញពីការកំណត់។</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ចុះឈ្មោះជាមួយក្រុមហ៊ុនរបស់អ្នក</item>
+    </string-array>
+</resources>

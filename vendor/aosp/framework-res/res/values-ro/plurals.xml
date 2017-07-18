@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">V-au mai rămas %d de încercări până la blocarea cardului SIM.</item>
+        <item quantity="one">V-a mai rămas %d încercare până la blocarea cardului SIM.</item>
+        <item quantity="few">V-au mai rămas %d încercări până la blocarea cardului SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Ultimele %d de zile</item>
+        <item quantity="one">Ultima %d zi</item>
+        <item quantity="few">Ultimele %d zile</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d de secunde</item>
+        <item quantity="one">O secundă</item>
+        <item quantity="few">%d secunde</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d de minute</item>
+        <item quantity="one">Un minut</item>
+        <item quantity="few">%d minute</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d de ore</item>
+        <item quantity="one">O oră</item>
+        <item quantity="few">%d ore</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Rețele Wi-Fi disponibile</item>
+        <item quantity="one">Rețea Wi-Fi disponibilă</item>
+        <item quantity="few">Rețele Wi-Fi disponibile</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Rețele Wi-Fi deschise disponibile</item>
+        <item quantity="one">Rețea Wi-Fi deschisă disponibilă</item>
+        <item quantity="few">Rețele Wi-Fi deschise disponibile</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d din %2$d</item>
+        <item quantity="one">Un rezultat</item>
+        <item quantity="few">%1$d din %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Reîncercați în %d de secunde</item>
+        <item quantity="one">Reîncercați într-o secundă</item>
+        <item quantity="few">Reîncercați în %d secunde</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Timp de %1$d de minute (până la %2$s)</item>
+        <item quantity="one">Timp de un minut (până la %2$s)</item>
+        <item quantity="few">Timp de %1$d minute (până la %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Pentru %1$d min. (până la %2$s)</item>
+        <item quantity="one">Pentru 1 min. (până la %2$s)</item>
+        <item quantity="few">Pentru %1$d min. (până la %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Timp de %1$d de ore (până la %2$s)</item>
+        <item quantity="one">Timp de o oră (până la %2$s)</item>
+        <item quantity="few">Timp de %1$d ore (până la %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Pentru %1$d h (până la %2$s)</item>
+        <item quantity="one">Pentru 1 h (până la %2$s)</item>
+        <item quantity="few">Pentru %1$d h (până la %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Timp de %d de minute</item>
+        <item quantity="one">Timp de un minut</item>
+        <item quantity="few">Timp de %d minute</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Pentru %d min.</item>
+        <item quantity="one">Pentru 1 min.</item>
+        <item quantity="few">Pentru %d min.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Timp de %d de ore</item>
+        <item quantity="one">Timp de o oră</item>
+        <item quantity="few">Timp de %d ore</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Pentru %d h</item>
+        <item quantity="one">Pentru 1 h</item>
+        <item quantity="few">Pentru %d h</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d selectate</item>
+        <item quantity="one">%1$d selectat</item>
+        <item quantity="few">%1$d selectate</item>
+    </plurals>
+</resources>

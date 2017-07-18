@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Du hues nach %d Versich iwwreg ier deng SIM gespaart ass.</item>
+        <item quantity="one">Du hues nach %d Versuch iwwreg ier deng SIM gespaart ass.</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d Sekonnen</item>
+        <item quantity="one">1 Sekonn</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d Minutten</item>
+        <item quantity="one">1 Minutt</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d Stonnen</item>
+        <item quantity="one">1 Stonn</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">WLAN-Netzwierker disponibel</item>
+        <item quantity="one">WLAN-Netzwierk disponibel</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Oppe WLAN-Netzwierker disponibel</item>
+        <item quantity="one">Oppent WLAN-Netzwierk disponibel</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d vu(n) %2$d</item>
+        <item quantity="one">1 Treffer</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Probéier nees a(n) %d Sekonnen</item>
+        <item quantity="one">Probéier nees an 1 Sekonn</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Fir %1$d Minutten (bis %2$s)</item>
+        <item quantity="one">Fir eng Minutt (bis %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Fir %1$d Stonnen (bis %2$s)</item>
+        <item quantity="one">Fir eng Stonn (bis %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Fir %d Minutten</item>
+        <item quantity="one">Fir eng Minutt</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Fir %d Stonnen</item>
+        <item quantity="one">Fir eng Stonn</item>
+    </plurals>
+</resources>

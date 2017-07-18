@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Om du vill ringa samtal och skicka meddelanden via Wi-Fi ber du först operatören att konfigurera tjänsten. Därefter kan du aktivera Wi-Fi-samtal på nytt från Inställningar.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrera dig hos operatören</item>
+    </string-array>
+</resources>

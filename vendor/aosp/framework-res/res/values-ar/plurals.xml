@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">‏يتبقى لديك %d من المحاولات يتم بعدها قفل شريحة SIM.</item>
+        <item quantity="zero">‏لم يتبق لديك أية محاولات (%d) يتم بعدها قفل شريحة SIM.</item>
+        <item quantity="one">‏يتبقى لديك محاولة واحدة (%d) يتم بعدها قفل شريحة SIM.</item>
+        <item quantity="two">‏يتبقى لديك محاولتان (%d) يتم بعدهما قفل شريحة SIM.</item>
+        <item quantity="few">‏يتبقى لديك %d محاولات يتم بعدها قفل شريحة SIM.</item>
+        <item quantity="many">‏يتبقى لديك %d محاولة يتم بعدها قفل شريحة SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">آخر %d من الأيام</item>
+        <item quantity="zero">آخر %d من الأيام</item>
+        <item quantity="one">آخر %d يوم</item>
+        <item quantity="two">آخر يومين (%d)</item>
+        <item quantity="few">آخر %d أيام</item>
+        <item quantity="many">آخر %d يومًا</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d من الثواني</item>
+        <item quantity="zero">أقل من ثانية (%d)</item>
+        <item quantity="one">ثانية واحدة</item>
+        <item quantity="two">ثانيتان (%d)</item>
+        <item quantity="few">%d ثوانٍ</item>
+        <item quantity="many">%d ثانية</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d من الدقائق</item>
+        <item quantity="zero">أقل من دقيقة (%d)</item>
+        <item quantity="one">دقيقة واحدة</item>
+        <item quantity="two">دقيقتان (%d)</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقة</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d من الساعات</item>
+        <item quantity="zero">أقل من ساعة (%d)</item>
+        <item quantity="one">ساعة واحدة</item>
+        <item quantity="two">ساعتان (%d)</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعة</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">‏تتوفر شبكات Wi-Fi</item>
+        <item quantity="zero">‏لا تتوفر أية شبكات Wi-Fi</item>
+        <item quantity="one">‏تتوفر شبكة Wi-Fi واحدة</item>
+        <item quantity="two">‏تتوفر شبكتا Wi-Fi</item>
+        <item quantity="few">‏تتوفر شبكات Wi-Fi</item>
+        <item quantity="many">‏تتوفر شبكات Wi-Fi</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">‏تتوفر شبكات Wi-Fi مفتوحة</item>
+        <item quantity="zero">‏لا تتوفر أية شبكات Wi-Fi مفتوحة</item>
+        <item quantity="one">‏تتوفر شبكة Wi-Fi واحدة مفتوحة</item>
+        <item quantity="two">‏تتوفر شبكتا Wi-Fi مفتوحتان</item>
+        <item quantity="few">‏تتوفر شبكات Wi-Fi مفتوحة</item>
+        <item quantity="many">‏تتوفر شبكات Wi-Fi مفتوحة</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d من %2$d</item>
+        <item quantity="zero">%1$d من %2$d</item>
+        <item quantity="one">مباراة واحدة</item>
+        <item quantity="two">%1$d من %2$d</item>
+        <item quantity="few">%1$d من %2$d</item>
+        <item quantity="many">%1$d من %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">حاول مرة أخرى خلال %d من الثواني</item>
+        <item quantity="zero">حاول مرة أخرى خلال أقل من ثانية %d</item>
+        <item quantity="one">حاول مرة أخرى خلال ثانية واحدة</item>
+        <item quantity="two">حاول مرة أخرى خلال ثانيتين (%d)</item>
+        <item quantity="few">حاول مرة أخرى خلال %d ثوانٍ</item>
+        <item quantity="many">حاول مرة أخرى خلال %d ثانية</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">‏لمدة %1$d من الدقائق (حتى %2$s)</item>
+        <item quantity="zero">‏لمدة أقل من دقيقة (%1$d) (حتى %2$s)</item>
+        <item quantity="one">لمدة دقيقة واحدة (حتى %2$s)</item>
+        <item quantity="two">‏لمدة دقيقتين (%1$d) (حتى %2$s)</item>
+        <item quantity="few">‏لمدة %1$d دقائق (حتى %2$s)</item>
+        <item quantity="many">‏لمدة %1$d دقيقة (حتى %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">‏لمدة %1$d من الدقائق (حتى %2$s)</item>
+        <item quantity="zero">لمدة أقل من دقيقة (حتى %2$s)</item>
+        <item quantity="one">لمدة دقيقة (حتى %2$s)</item>
+        <item quantity="two">لمدة دقيقتين (حتى %2$s)</item>
+        <item quantity="few">‏لمدة %1$d دقائق (حتى %2$s)</item>
+        <item quantity="many">‏لمدة %1$d دقيقة (حتى %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">‏لمدة %1$d من الساعات (حتى %2$s)</item>
+        <item quantity="zero">‏لمدة أقل من ساعة (%1$d) (حتى %2$s)</item>
+        <item quantity="one">لمدة ساعة واحدة (حتى %2$s)</item>
+        <item quantity="two">‏لمدة ساعتين (%1$d) (حتى %2$s)</item>
+        <item quantity="few">‏لمدة %1$d ساعات (حتى %2$s)</item>
+        <item quantity="many">‏لمدة %1$d ساعة (حتى %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">‏لمدة %1$d من الساعات (حتى %2$s)</item>
+        <item quantity="zero">لمدة أقل من ساعة (حتى %2$s)</item>
+        <item quantity="one">لمدة ساعة (حتى %2$s)</item>
+        <item quantity="two">لمدة ساعتين (حتى %2$s)</item>
+        <item quantity="few">‏لمدة %1$d ساعات (حتى %2$s)</item>
+        <item quantity="many">‏لمدة %1$d ساعة (حتى %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">‏لمدة %d من الدقائق</item>
+        <item quantity="zero">‏لمدة أقل من دقيقة (%d)</item>
+        <item quantity="one">لمدة دقيقة واحدة</item>
+        <item quantity="two">‏لمدة دقيقتين (%d)</item>
+        <item quantity="few">‏لمدة %d دقائق</item>
+        <item quantity="many">‏لمدة %d دقيقة</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">‏لمدة %d من الدقائق</item>
+        <item quantity="zero">لمدة أقل من دقيقة</item>
+        <item quantity="one">لمدة دقيقة</item>
+        <item quantity="two">لمدة دقيقتين</item>
+        <item quantity="few">‏لمدة %d دقائق</item>
+        <item quantity="many">‏لمدة %d دقيقة</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">‏لمدة %d من الساعات</item>
+        <item quantity="zero">‏لمدة أقل من ساعة (%d)</item>
+        <item quantity="one">لمدة ساعة واحدة</item>
+        <item quantity="two">‏لمدة ساعتين (%d)</item>
+        <item quantity="few">‏لمدة %d ساعات</item>
+        <item quantity="many">‏لمدة %d ساعة</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">‏لمدة %d من الساعات</item>
+        <item quantity="zero">لمدة أقل من ساعة</item>
+        <item quantity="one">لمدة ساعة</item>
+        <item quantity="two">لمدة ساعتين</item>
+        <item quantity="few">‏لمدة %d ساعات</item>
+        <item quantity="many">‏لمدة %d ساعة</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">تم تحديد %1$d من العناصر</item>
+        <item quantity="zero">تم تحديد %1$d من العناصر</item>
+        <item quantity="one">تم تحديد %1$d عنصر</item>
+        <item quantity="two">تم تحديد عنصرين (%1$d)</item>
+        <item quantity="few">تم تحديد %1$d عناصر</item>
+        <item quantity="many">تم تحديد %1$d عنصرًا</item>
+    </plurals>
+</resources>

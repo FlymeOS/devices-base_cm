@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">ທ່ານສາມາດລອງໄດ້ອີກ %d ເທື່ອກ່ອນທີ່ SIM ຂອງທ່ານຈະຖືກລັອກ.</item>
+        <item quantity="one">ທ່ານສາມາດລອງໄດ້ອີກ %d ເທື່ອກ່ອນທີ່ SIM ຂອງທ່ານຈະຖືກລັອກ.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">%d ວັນ​ສຸດ​ທ້າຍ</item>
+        <item quantity="one">%d ວັນ​ສຸດ​ທ້າຍ</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d ວິ​ນາ​ທີ</item>
+        <item quantity="one">1ວິ​ນາ​ທີ</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d ນາທີ</item>
+        <item quantity="one">1 ນາທີ</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d ຊົ່ວໂມງ</item>
+        <item quantity="one">1 ຊົ່ວໂມງ</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">ເຄືອຂ່າຍ Wi-Fi ທີ່ມີໃຫ້</item>
+        <item quantity="one">ເຄືອຂ່າຍ Wi-Fi ທີ່ມີໃຫ້</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ເປີດເຄືອຂ່າຍ Wi-Fi ທີ່ມີໃຫ້</item>
+        <item quantity="one">ເປີດເຄືອຂ່າຍ Wi-Fi ທີ່ມີໃຫ້</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ໃນ %2$d</item>
+        <item quantity="one">1 ກົງກັນ</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">ລອງໃໝ່ໃນອີກ %d ລອງໃໝ່ໃນອີກ 1 ວິນາທີ</item>
+        <item quantity="one">ລອງໃໝ່ໃນອີກ 1 ວິນາທີ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">ເປັນ​ເວ​ລາ %1$d ນາ​ທີ (ຈົນ​ຮອດ %2$s)</item>
+        <item quantity="one">​ເປັນ​ເວ​ລາ 1 ນາ​ທີ (ຈົນ​ຮອດ %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">ເປັນ​ເວ​ລາ %1$d ນ​ທ (ຈົນ​ກ່​ວາ %2$s)</item>
+        <item quantity="one">ເປັນ​ເວ​ລາ 1 ນ​ທ (ຈົນ​ກ່​ວາ %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">ເປັນ​ເວ​ລາ %1$d ຊົ່ວ​ໂມງ (ຈົນ​ຮອດ %2$s)</item>
+        <item quantity="one">ເປັນ​ເວ​ລາ 1 ຊົ່ວ​ໂມງ (ຈົນ​ຮອດ %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">ເປັນ​ເວ​ລາ %1$d ຊມ (ຈົນ​ກ່​ວາ %2$s)</item>
+        <item quantity="one">ເປັນ​ເວ​ລາ 1 ຊມ (ຈົນ​ກ່​ວາ) %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">ເປັນ​ເວ​ລາ %d ນາ​ທີ</item>
+        <item quantity="one">ເປັນ​ເວລາໜຶ່ງ​ນາ​ທີ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">ເປັນ​ເວ​ລາ %d ນ​ທ</item>
+        <item quantity="one">ເປັນ​ເວ​ລາ 1 ນ​ທ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">ເປັນ​ເວລາ​ %d ຊົ່ວ​ໂມງ</item>
+        <item quantity="one">ເປັນ​ເວລາໜຶ່ງ​ຊົ່ວ​ໂມງ</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">ເປັນ​ເວ​ລາ %d ຊມ</item>
+        <item quantity="one">ເປັນ​ເວ​ລາ 1 ຊມ</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d ຖືກເລືອກ​ແລ້ວ</item>
+        <item quantity="one">%1$d ຖືກເລືອກ​ແລ້ວ</item>
+    </plurals>
+</resources>

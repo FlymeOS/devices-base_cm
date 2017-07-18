@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">თქვენ დაგრჩათ %d მცდელობა, სანამ SIM დაიბლოკება.</item>
+        <item quantity="one">თქვენ დაგრჩათ %d მცდელობა, სანამ SIM დაიბლოკება.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">ბოლო %d დღეს</item>
+        <item quantity="one">ბოლო %d დღეს</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d წამი</item>
+        <item quantity="one">1 წამი</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d წუთი</item>
+        <item quantity="one">1 წუთი</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d საათი</item>
+        <item quantity="one">1 საათი</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">ხელმისაწვდომია Wi-Fi ქსელები</item>
+        <item quantity="one">ხელმისაწვდომია Wi-Fi ქსელი</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">ხელმისაწვდომია ღია Wi-Fi ქსელები</item>
+        <item quantity="one">ხელმისაწვდომია ღია Wi-Fi ქსელი</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d, სულ: %2$d</item>
+        <item quantity="one">1 დამთხვევა</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">ხელახლა სცადეთ %d წამში</item>
+        <item quantity="one">ხელახლა სცადეთ 1 წამში</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d წუთის განმავლობაში (%2$s-მდე)</item>
+        <item quantity="one">ერთი წუთის განმავლობაში (%2$s-მდე)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d წთ. (%2$s-მდე)</item>
+        <item quantity="one">1 წთ. (%2$s-მდე)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d საათის განმავლობაში (%2$s-მდე)</item>
+        <item quantity="one">ერთი საათის განმავლობაში (%2$s-მდე)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d სთ. (%2$s-მდე)</item>
+        <item quantity="one">1 სთ. (%2$s-მდე)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d წუთის განმავლობაში</item>
+        <item quantity="one">ერთი წუთის განმავლობაში</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d წთ.</item>
+        <item quantity="one">1 წთ.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d საათის განმავლობაში</item>
+        <item quantity="one">ერთი საათის განმავლობაში</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d სთ.</item>
+        <item quantity="one">1 სთ.</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d შერჩეული</item>
+        <item quantity="one">%1$d შერჩეული</item>
+    </plurals>
+</resources>

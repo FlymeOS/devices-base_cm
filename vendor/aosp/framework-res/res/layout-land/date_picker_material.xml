@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="168.0dip" android:layout_height="fill_parent" layout="@layout/date_picker_header_material" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/date_picker_view_animator_material" />
+        <ViewStub android:id="@id/buttonPanel" android:layout="@layout/alert_dialog_button_bar_material" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/day_picker_button_margin_top" />
+    </LinearLayout>
+</LinearLayout>

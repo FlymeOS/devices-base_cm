@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_tether_apndata">
+        <item>Conexión Compartida,movistar.es,,,MOVISTAR,MOVISTAR,,,,,214,07,1,DUN</item>
+    </string-array>
+    <integer-array name="config_sms_enabled_single_shift_tables">
+        <item>2</item>
+    </integer-array>
+</resources>

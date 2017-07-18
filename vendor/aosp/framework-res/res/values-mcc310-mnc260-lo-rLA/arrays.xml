@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>ເພື່ອ​ໂທ ແລະ​ສົ່ງ​ຂໍ້​ຄວາມ​ຢູ່​ເທິງ Wi-Fi, ກ່ອນ​ອື່ນ​ໝົດ​ໃຫ້​ຖ້າມ​ຜູ້​ໃຫ້​ບໍ​ລິ​ການ​ເຄືອ​ຂ່າຍ​ຂອງ​ທ່ານ ເພື່ອ​ຕັ້ງ​ການ​ບໍ​ລິ​ການ​ນີ້. ຈາກນັ້ນ​ເປີດການ​ໂທ Wi-Fi ອີກ​ຈາກ​ການ​ຕັ້ງ​ຄ່າ.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>ລົງ​ທະ​ບຽນ​ກັບ​ຜູ້​ໃຫ້​ບໍ​ລິ​ການ​ເຄືອ​ຂ່າຍ​ຂອງ​ທ່ານ</item>
+    </string-array>
+</resources>

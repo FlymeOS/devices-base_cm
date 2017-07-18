@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Untuk melakukan panggilan telepon dan mengirim pesan melalui Wi-Fi, terlebih dahulu minta operator untuk menyiapkan layanan ini. Lalu, aktifkan lagi panggilan telepon Wi-Fi dari Setelan.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Harap daftarkan ke operator</item>
+    </string-array>
+</resources>

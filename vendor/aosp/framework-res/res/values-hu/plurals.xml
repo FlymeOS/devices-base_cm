@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Még %d próbálkozása van a SIM kártya zárolásáig.</item>
+        <item quantity="one">Még %d próbálkozása van a SIM kártya zárolásáig.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">A legutóbbi %d nap</item>
+        <item quantity="one">A legutóbbi %d nap</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d másodperc</item>
+        <item quantity="one">1 másodperc</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d perc</item>
+        <item quantity="one">1 perc</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d óra</item>
+        <item quantity="one">1 óra</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi hálózatok érhetők el</item>
+        <item quantity="one">Van elérhető Wi-Fi hálózat</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Nyílt Wi-Fi hálózatok érhetők el</item>
+        <item quantity="one">Nyílt Wi-Fi hálózat érhető el</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d/%2$d</item>
+        <item quantity="one">1 találat</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Próbálja újra %d másodperc múlva</item>
+        <item quantity="one">Próbálja újra 1 másodperc múlva</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d percen át (eddig: %2$s)</item>
+        <item quantity="one">Egy percen át (eddig: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d percen keresztül (eddig: %2$s)</item>
+        <item quantity="one">1 percen keresztül (eddig: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d órán át (eddig: %2$s)</item>
+        <item quantity="one">Egy órán át (eddig: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d órán keresztül (eddig: %2$s)</item>
+        <item quantity="one">1 órán keresztül (eddig: %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d percen át</item>
+        <item quantity="one">Egy percen át</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d percen keresztül</item>
+        <item quantity="one">1 percen keresztül</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d órán át</item>
+        <item quantity="one">Egy órán át</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d órán keresztül</item>
+        <item quantity="one">1 órán keresztül</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d kiválasztva</item>
+        <item quantity="one">%1$d kiválasztva</item>
+    </plurals>
+</resources>

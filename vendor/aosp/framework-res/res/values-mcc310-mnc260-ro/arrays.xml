@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Pentru a apela și a trimite mesaje prin Wi-Fi, mai întâi solicitați configurarea acestui serviciu la operator. Apoi, activați din nou apelarea prin Wi-Fi din Setări.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Înregistrați-vă la operatorul dvs.</item>
+    </string-array>
+</resources>

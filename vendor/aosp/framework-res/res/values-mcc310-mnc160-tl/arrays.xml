@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Upang tumawag at magpadala ng mga mensahe sa pamamagitan ng Wi-Fi, hilingin muna sa iyong carrier na i-set up ang serbisyong ito. Pagkatapos ay muling i-on ang pagtawag sa Wi-Fi mula sa Mga Setting.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Magparehistro sa iyong carrier</item>
+    </string-array>
+</resources>

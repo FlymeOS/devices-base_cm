@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Um über WLAN telefonieren und Nachrichten senden zu können, bitte zuerst deinen Mobilfunkanbieter, diesen Dienst einzurichten. Aktiviere die Option \"Anrufe über WLAN\" dann erneut über die Einstellungen.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registriere dich bei deinem Mobilfunkanbieter.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Ak chcete volať a odosielať správy prostredníctvom siete Wi-Fi, kontaktujte najskôr svojho operátora v súvislosti s nastavením tejto služby. Potom opäť zapnite v Nastaveniach volanie cez Wi-Fi.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrujte sa so svojím operátorom</item>
+    </string-array>
+</resources>

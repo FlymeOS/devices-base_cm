@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Untuk membuat panggilan dan menghantar mesej melalui Wi-Fi, mula-mula minta pembawa anda untuk menyediakan perkhidmatan ini. Kemudian hidupkan panggilan Wi-Fi semula daripada Tetapan.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Daftar dengan pembawa anda</item>
+    </string-array>
+</resources>

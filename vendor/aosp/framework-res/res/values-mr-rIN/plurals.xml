@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">सिम लॉक होण्यापूर्वी आपल्याकडे %d प्रयत्न उर्वरित आहेत.</item>
+        <item quantity="one">सिम लॉक होण्यापूर्वी आपल्याकडे %d प्रयत्न उर्वरित आहे.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">अंतिम %d दिवस</item>
+        <item quantity="one">अंतिम %d दिवस</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d सेकंद</item>
+        <item quantity="one">%d सेकंद</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d मिनिटे</item>
+        <item quantity="one">%d मिनिट</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d तास</item>
+        <item quantity="one">%d तास</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">वाय-फाय नेटवर्क उपलब्ध</item>
+        <item quantity="one">वाय-फाय नेटवर्क उपलब्ध</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">खुले वाय-फाय नेटवर्क उपलब्ध</item>
+        <item quantity="one">खुले वाय-फाय नेटवर्क उपलब्ध</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d पैकी %2$d</item>
+        <item quantity="one">%1$d पैकी %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d सेकंदांमध्ये पुन्हा प्रयत्न करा</item>
+        <item quantity="one">%d सेकंदात पुन्हा प्रयत्न करा</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d मिनिटांसाठी (%2$s पर्यंत)</item>
+        <item quantity="one">%1$d मिनिटासाठी (%2$s पर्यंत)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d मिनिटासाठी (%2$s पर्यंत)</item>
+        <item quantity="one">%1$d मिनिटासाठी (%2$s पर्यंत)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d तासांसाठी (%2$s पर्यंत)</item>
+        <item quantity="one">%1$d तासासाठी (%2$s पर्यंत)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d तासासाठी (%2$s पर्यंत)</item>
+        <item quantity="one">%1$d तासासाठी (%2$s पर्यंत)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d मिनिटांसाठी</item>
+        <item quantity="one">%d मिनिटासाठी</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d मिनिटांसाठी</item>
+        <item quantity="one">%d मिनिटासाठी</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d तासांसाठी</item>
+        <item quantity="one">%d तासासाठी</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d तासासाठी</item>
+        <item quantity="one">%d तासासाठी</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d निवडले</item>
+        <item quantity="one">%1$d निवडला</item>
+    </plurals>
+</resources>

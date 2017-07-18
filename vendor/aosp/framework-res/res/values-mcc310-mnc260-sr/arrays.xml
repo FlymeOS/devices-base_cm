@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Да бисте упућивали позиве и слали поруке преко Wi-Fi-ја, прво затражите од мобилног оператера да вам омогући ову услугу. Затим у Подешавањима поново укључите Позивање преко Wi-Fi-ја.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Региструјте се код мобилног оператера</item>
+    </string-array>
+</resources>

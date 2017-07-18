@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Hvis du vil foretage opkald og sende beskeder via Wi-Fi, skal du først anmode dit mobilselskab om at konfigurere denne tjeneste. Derefter skal du slå Wi-Fi-opkald til igen fra Indstillinger.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrer dig hos dit mobilselskab</item>
+    </string-array>
+</resources>

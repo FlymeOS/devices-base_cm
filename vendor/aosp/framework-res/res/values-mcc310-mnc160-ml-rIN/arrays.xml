@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>വൈഫൈ വഴി കോളുകൾ വിളിക്കാനും സന്ദേശങ്ങൾ അയയ്‌ക്കാനും ആദ്യം നിങ്ങളുടെ കാരിയറോട് ഈ സേവനം സജ്ജമാക്കാൻ ആവശ്യപ്പെടുക. ക്രമീകരണത്തിൽ നിന്ന് വീണ്ടും വൈഫൈ കോളിംഗ് ഓണാക്കുക.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>നിങ്ങളുടെ കാരിയറിൽ രജിസ്റ്റർ ചെയ്യുക</item>
+    </string-array>
+</resources>

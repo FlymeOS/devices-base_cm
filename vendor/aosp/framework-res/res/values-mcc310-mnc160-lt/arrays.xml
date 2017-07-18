@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Jei norite skambinti ir siųsti pranešimus „Wi-Fi“ ryšiu, pirmiausia paprašykite operatoriaus nustatyti šią paslaugą. Tada vėl įjunkite skambinimą „Wi-Fi“ ryšiu „Nustatymų“ skiltyje.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Užregistruokite pas operatorių</item>
+    </string-array>
+</resources>

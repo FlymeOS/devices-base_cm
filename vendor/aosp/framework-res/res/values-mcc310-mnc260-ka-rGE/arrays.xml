@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Wi-Fi-ს მეშვეობით ზარების განხორციელების ან შეტყობინების გაგზავნისათვის, პირველ რიგში დაეკითხეთ თქვენს ოპერატორს აღნიშნულ მომსახურებაზე. შემდეგ ხელახლა ჩართეთ Wi-Fi ზარები პარამეტრებიდან.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>დაარეგისტრირეთ თქვენი ოპერატორი</item>
+    </string-array>
+</resources>

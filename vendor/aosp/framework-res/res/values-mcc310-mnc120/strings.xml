@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_mms_user_agent">H1511/Android-MMS/2.0</string>
+    <string name="config_mms_user_agent_profile_url">http://wap1.huawei.com/uaprof/Angler-Uaprofile.rdf</string>
+    <string name="config_mobile_hotspot_provision_app_no_ui">com.huawei.entitlement.SILENT_ENTITLEMENT_CHECK</string>
+    <string name="config_mobile_hotspot_provision_response">com.huawei.entitlement.SILENT_ENTITLEMENT_CHECK_RESULT</string>
+    <string name="config_wifi_framework_sap_2G_channel_list">1,6</string>
+</resources>

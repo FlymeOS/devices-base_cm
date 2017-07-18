@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Para fazer chamadas e enviar mensagens por Wi-Fi, primeiro peça à sua operadora para configurar esse serviço. Depois ative novamente as chamadas por Wi-Fi nas configurações.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Faça registro na sua operadora</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Um über WLAN Anrufe durchführen und Nachrichten senden zu können, bitten Sie zuerst Ihren Mobilfunkanbieter, diesen Dienst einzurichten. Aktivieren Sie WLAN-Anrufe dann erneut über die Einstellungen.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrieren Sie sich bei Ihrem Mobilfunkanbieter.</item>
+    </string-array>
+</resources>

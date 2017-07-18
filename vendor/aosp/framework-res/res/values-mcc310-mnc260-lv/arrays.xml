@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Lai veiktu zvanus un sūtītu īsziņas Wi-Fi tīklā, vispirms lūdziet mobilo sakaru operatoru iestatīt šo pakalpojumu. Pēc tam iestatījumos vēlreiz ieslēdziet Wi-Fi zvanus.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Reģistrēt to pie sava mobilo sakaru operatora</item>
+    </string-array>
+</resources>

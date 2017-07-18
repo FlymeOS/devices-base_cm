@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Imate još %d pokušaja prije zaključavanja SIM kartice.</item>
+        <item quantity="one">Imate još %d pokušaj prije zaključavanja SIM kartice.</item>
+        <item quantity="few">Imate još %d pokušaja prije zaključavanja SIM kartice.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Posljednjih %d dana</item>
+        <item quantity="one">Posljednjih %d dan</item>
+        <item quantity="few">Posljednja %d dana</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekundi</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekunde</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minute</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d sati</item>
+        <item quantity="one">%d sat</item>
+        <item quantity="few">%d sata</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Dostupne su Wi-Fi mreže</item>
+        <item quantity="one">Dostupne su Wi-Fi mreže</item>
+        <item quantity="few">Dostupne su Wi-Fi mreže</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Dostupne su otvorene Wi-Fi mreže</item>
+        <item quantity="one">Dostupne su otvorene Wi-Fi mreže</item>
+        <item quantity="few">Dostupne su otvorene Wi-Fi mreže</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d od %2$d</item>
+        <item quantity="one">%1$d od %2$d</item>
+        <item quantity="few">%1$d od %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Pokušajte ponovo za %d sekundi</item>
+        <item quantity="one">Pokušajte ponovo za %d sekundu</item>
+        <item quantity="few">Pokušajte ponovo za %d sekunde</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d minuta (do %2$s)</item>
+        <item quantity="one">%1$d minutu (do %2$s)</item>
+        <item quantity="few">%1$d minute (do %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d min (do %2$s)</item>
+        <item quantity="one">%1$d min (do %2$s)</item>
+        <item quantity="few">%1$d min (do %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d sati (do %2$s)</item>
+        <item quantity="one">%1$d sat (do %2$s)</item>
+        <item quantity="few">%1$d sata (do %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d h (do %2$s)</item>
+        <item quantity="one">%1$d h (do %2$s)</item>
+        <item quantity="few">%1$d h (do %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="one">%d minutu</item>
+        <item quantity="few">%d minute</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+        <item quantity="few">%d min</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d sati</item>
+        <item quantity="one">%d sat</item>
+        <item quantity="few">%d sata</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+        <item quantity="few">%d h</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d odabranih</item>
+        <item quantity="one">%1$d odabrana</item>
+        <item quantity="few">%1$d odabrane</item>
+    </plurals>
+</resources>

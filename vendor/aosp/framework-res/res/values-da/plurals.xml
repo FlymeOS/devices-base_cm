@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Du har %d forsøg tilbage, før SIM-kortet bliver låst.</item>
+        <item quantity="one">Du har %d forsøg tilbage, før SIM-kortet bliver låst.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Inden for de seneste %d dage</item>
+        <item quantity="one">Inden for de seneste %d dage</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d sekunder</item>
+        <item quantity="one">%d sekunder</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d minutter</item>
+        <item quantity="one">%d minutter</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d timer</item>
+        <item quantity="one">%d timer</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Tilgængelige Wi-Fi-netværk</item>
+        <item quantity="one">Tilgængelige Wi-Fi-netværk</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Åbne Wi-Fi-netværk er tilgængelige</item>
+        <item quantity="one">Åbne Wi-Fi-netværk er tilgængelige</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d af %2$d</item>
+        <item quantity="one">%1$d af %2$d</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Prøv igen om %d sekunder</item>
+        <item quantity="one">Prøv igen om %d sekunder</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">I %1$d minutter (indtil %2$s)</item>
+        <item quantity="one">I %1$d minutter (indtil %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">I %1$d min. (indtil kl. %2$s)</item>
+        <item quantity="one">I %1$d min. (indtil kl. %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">I %1$d timer (indtil %2$s)</item>
+        <item quantity="one">I %1$d timer (indtil %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">I %1$d t. (indtil kl. %2$s)</item>
+        <item quantity="one">I %1$d t. (indtil kl. %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">I %d minutter</item>
+        <item quantity="one">I %d minutter</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">I %d min.</item>
+        <item quantity="one">I %d min.</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">I %d timer</item>
+        <item quantity="one">I %d timer</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">I %d t.</item>
+        <item quantity="one">I %d t.</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d valgt</item>
+        <item quantity="one">%1$dvalgt</item>
+    </plurals>
+</resources>

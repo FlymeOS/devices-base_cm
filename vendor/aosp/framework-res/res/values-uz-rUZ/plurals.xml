@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Yana %d ta muvaffaqiyatsiz urinishdan so‘ng SIM karta qulflanadi.</item>
+        <item quantity="one">Yana %d ta muvaffaqiyatsiz urinishdan so‘ng SIM karta qulflanadi.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">So‘nggi %d kun</item>
+        <item quantity="one">So‘nggi %d kun</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d soniya</item>
+        <item quantity="one">1 soniya</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d daqiqa</item>
+        <item quantity="one">1 daqiqa</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d soat</item>
+        <item quantity="one">1 soat</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi tarmoqlari mavjud emas</item>
+        <item quantity="one">Wi-Fi tarmog‘i mavjud emas</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Ochiq Wi-Fi tarmoqlari mavjud</item>
+        <item quantity="one">Ochiq Wi-Fi tarmog‘i mavjud</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d/%2$d</item>
+        <item quantity="one">1 ta natija</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d soniyadan so‘ng qayta urinib ko‘ring</item>
+        <item quantity="one">1 soniyadan so‘ng qayta urinib ko‘ring</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d daqiqa (%2$s gacha)</item>
+        <item quantity="one">Bir daqiqa (%2$s gacha)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d daqiqa (%2$s gacha)</item>
+        <item quantity="one">1 daqiqa (%2$s gacha)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d soat (%2$s gacha)</item>
+        <item quantity="one">Bir soat (%2$s gacha)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d soat (%2$s gacha)</item>
+        <item quantity="one">1 soat (%2$s gacha)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d daqiqa</item>
+        <item quantity="one">Bir daqiqa</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d daqiqa</item>
+        <item quantity="one">1 daqiqa</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d soat</item>
+        <item quantity="one">Bir soat</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d soat</item>
+        <item quantity="one">1 soat</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d ta tanlandi</item>
+        <item quantity="one">%1$d ta tanlandi</item>
+    </plurals>
+</resources>

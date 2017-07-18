@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>"Per effettuare chiamate e inviare messaggi tramite Wi-Fi, è necessario prima chiedere all'operatore telefonico di attivare il servizio. Successivamente, riattiva le chiamate Wi-Fi dalle Impostazioni."</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registrati con il tuo operatore</item>
+    </string-array>
+</resources>

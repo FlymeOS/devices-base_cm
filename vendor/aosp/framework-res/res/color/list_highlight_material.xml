@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?colorControlActivated" android:state_activated="true" android:alpha="@dimen/highlight_alpha_material_colored" />
+    <item android:color="?colorControlHighlight" />
+</selector>

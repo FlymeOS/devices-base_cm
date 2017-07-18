@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Üle WiFi-võrgu helistamiseks ja sõnumite saatmiseks paluge operaatoril esmalt see teenus seadistada. Seejärel lülitage WiFi-kõned menüüs Seaded uuesti sisse.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registreeruge operaatori juures</item>
+    </string-array>
+</resources>

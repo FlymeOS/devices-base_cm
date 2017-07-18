@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permgrouplab_sensors">Sensors</string>
+    <string name="android_upgrading_apk">Program %1$d van %2$d.</string>
+</resources>

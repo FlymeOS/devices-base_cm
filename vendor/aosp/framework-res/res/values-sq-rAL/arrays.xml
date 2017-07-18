@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Faqja e parë</item>
+        <item>Puna</item>
+        <item>Tjetër</item>
+        <item>E personalizuar</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>\"Windows Live\"</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Bisedo me Google</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Puna</item>
+        <item>Tjetër</item>
+        <item>E personalizuar</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Shtëpia</item>
+        <item>Celulari</item>
+        <item>Puna</item>
+        <item>Faks pune</item>
+        <item>Faks shtëpie</item>
+        <item>Biper</item>
+        <item>Tjetër</item>
+        <item>E personalizuar</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Shtëpia</item>
+        <item>Puna</item>
+        <item>Tjetër</item>
+        <item>E personalizuar</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>Shtëpia</item>
+        <item>Puna</item>
+        <item>Tjetër</item>
+        <item>I personalizuar</item>
+    </string-array>
+</resources>

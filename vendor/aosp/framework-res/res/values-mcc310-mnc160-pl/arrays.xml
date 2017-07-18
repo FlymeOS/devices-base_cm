@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Aby dzwonić i wysyłać wiadomości przez Wi-Fi, poproś swojego operatora o skonfigurowanie tej usługi. Potem ponownie włącz połączenia przez Wi-Fi w Ustawieniach.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Zarejestruj u operatora</item>
+    </string-array>
+</resources>

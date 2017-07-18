@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">[Ýöû ĥåVé %d ŕéḿåîñîñĝ åţţéḿþţš ɓéƒöŕé ŠÎḾ îš ļöçķéð. one two three four five six]</item>
+        <item quantity="one">[Ýöû ĥåVé %d ŕéḿåîñîñĝ åţţéḿþţ ɓéƒöŕé ŠÎḾ îš ļöçķéð. one two three four five six]</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">[Ļåšţ %d ðåýš one two]</item>
+        <item quantity="one">[Ļåšţ %d ðåý one two]</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">[%d šéçöñðš one two]</item>
+        <item quantity="one">[1 šéçöñð one two]</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">[%d ḿîñûţéš one two]</item>
+        <item quantity="one">[1 ḿîñûţé one two]</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">[%d ĥöûŕš one two]</item>
+        <item quantity="one">[1 ĥöûŕ one two]</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">[Ŵî-Fî ñéţŵöŕķš åVåîļåɓļé one two three]</item>
+        <item quantity="one">[Ŵî-Fî ñéţŵöŕķ åVåîļåɓļé one two three]</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">[Öþéñ Ŵî-Fî ñéţŵöŕķš åVåîļåɓļé one two three four]</item>
+        <item quantity="one">[Öþéñ Ŵî-Fî ñéţŵöŕķ åVåîļåɓļé one two three four]</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">[%1$d öƒ %2$d one]</item>
+        <item quantity="one">[1 ḿåţçĥ one two]</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">[Ţŕý åĝåîñ îñ %d šéçöñðš one two three]</item>
+        <item quantity="one">[Ţŕý åĝåîñ îñ 1 šéçöñð one two three]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">[Föŕ »%1$d« ḿîñûţéš (ûñţîļ %2$s) one two three]</item>
+        <item quantity="one">[Föŕ öñé ḿîñûţé (ûñţîļ %2$s) one two three]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">[Föŕ »%1$d« ḿîñ (ûñţîļ %2$s) one two three]</item>
+        <item quantity="one">[Föŕ 1 ḿîñ (ûñţîļ %2$s) one two three four five]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">[Föŕ »%1$d« ĥöûŕš (ûñţîļ %2$s) one two three]</item>
+        <item quantity="one">[Föŕ öñé ĥöûŕ (ûñţîļ %2$s) one two three]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">[Föŕ »%1$d« ĥŕ (ûñţîļ %2$s) one two three]</item>
+        <item quantity="one">[Föŕ 1 ĥŕ (ûñţîļ %2$s) one two three four]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">[Föŕ »%d« ḿîñûţéš one two]</item>
+        <item quantity="one">[Föŕ öñé ḿîñûţé one two three]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">[Föŕ »%d« ḿîñ one two]</item>
+        <item quantity="one">[Föŕ 1 ḿîñ one two]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">[Föŕ »%d« ĥöûŕš one two]</item>
+        <item quantity="one">[Föŕ öñé ĥöûŕ one two]</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">[Föŕ »%d« ĥŕ one two]</item>
+        <item quantity="one">[Föŕ 1 ĥŕ one two]</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">[%1$d šéļéçţéð one two]</item>
+        <item quantity="one">[%1$d šéļéçţéð one two]</item>
+    </plurals>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Απομένουν άλλες %d προσπάθειες προτού κλειδωθεί η κάρτα SIM.</item>
+        <item quantity="one">Απομένει άλλη %d προσπάθεια προτού κλειδωθεί η κάρτα SIM.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Τελευταίες %d ημέρες</item>
+        <item quantity="one">Τελευταία %d ημέρα</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d δευτερόλεπτα</item>
+        <item quantity="one">1 δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d λεπτά</item>
+        <item quantity="one">1 λεπτό</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d ώρες</item>
+        <item quantity="one">1 ώρα</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Υπάρχουν διαθέσιμα δίκτυα Wi-Fi</item>
+        <item quantity="one">Υπάρχει διαθέσιμο δίκτυο Wi-Fi</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Υπάρχουν διαθέσιμα ανοικτά δίκτυα Wi-Fi</item>
+        <item quantity="one">Υπάρχει διαθέσιμο ανοικτό δίκτυο Wi-Fi</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d από %2$d</item>
+        <item quantity="one">1 αντιστοιχία</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">Δοκιμάστε ξανά σε %d δευτερόλεπτα</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">Για %1$d λεπτά (έως τις %2$s)</item>
+        <item quantity="one">Για ένα λεπτό (έως τις %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">Για %1$d λεπτά (μέχρι %2$s)</item>
+        <item quantity="one">Για 1 λεπτό (μέχρι %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">Για %1$d ώρες (έως τις %2$s)</item>
+        <item quantity="one">Για μία ώρα (έως τις %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">Για %1$d ώρες (μέχρι %2$s)</item>
+        <item quantity="one">Για 1 ώρα (μέχρι %2$s)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">Για %d λεπτά</item>
+        <item quantity="one">Για ένα λεπτό</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">Για %d λεπτά</item>
+        <item quantity="one">Για 1 λεπτό</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">Για %d ώρες</item>
+        <item quantity="one">Για μία ώρα</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">Για %d ώρες</item>
+        <item quantity="one">Για 1 ώρα</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">Επιλέχτηκαν %1$d</item>
+        <item quantity="one">Επιλέχτηκε %1$d</item>
+    </plurals>
+</resources>

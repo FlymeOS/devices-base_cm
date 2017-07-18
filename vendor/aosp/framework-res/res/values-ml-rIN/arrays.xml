@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>വീട്ടിലെ ഇമെയിൽ</item>
+        <item>ഔദ്യോഗിക ഇമെയിൽ</item>
+        <item>മറ്റുള്ളവ</item>
+        <item>ഇഷ്‌ടാനുസൃതം</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>ഔദ്യോഗികം</item>
+        <item>മറ്റുള്ളവ</item>
+        <item>ഇഷ്‌ടാനുസൃതം</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>വീട്ടിലെ ഫോൺ</item>
+        <item>മൊബൈൽ</item>
+        <item>ഔദ്യോഗിക ഫോൺ</item>
+        <item>ഔദ്യോഗിക ഫാക്‌സ്</item>
+        <item>വീട്ടിലെ ഫാക്‌സ്</item>
+        <item>പേജര്‍</item>
+        <item>മറ്റുള്ളവ</item>
+        <item>ഇഷ്‌ടാനുസൃതം</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>വീട്ടുവിലാസം</item>
+        <item>ഔദ്യോഗിക വിലാസം</item>
+        <item>മറ്റുള്ളവ</item>
+        <item>ഇഷ്‌ടാനുസൃതം</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>വീട്ടിലെ മെസഞ്ചർ ഐഡി</item>
+        <item>ഔദ്യോഗിക മെസഞ്ചർ ഐഡി</item>
+        <item>മറ്റുള്ളവ</item>
+        <item>ഇഷ്‌ടാനുസൃതം</item>
+    </string-array>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Doheem</item>
+        <item>Aarbecht</item>
+        <item>Aner</item>
+        <item>Personaliséiert</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Aarbecht</item>
+        <item>Aner</item>
+        <item>Personaliséiert</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Doheem</item>
+        <item>Mobil</item>
+        <item>Aarbecht</item>
+        <item>Aarbechtsfax</item>
+        <item>Fax doheem</item>
+        <item>Pager</item>
+        <item>Aner</item>
+        <item>Personaliséiert</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Doheem</item>
+        <item>Aarbecht</item>
+        <item>Aner</item>
+        <item>Personaliséiert</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Doheem</item>
+        <item>Aarbecht</item>
+        <item>Aner</item>
+        <item>Personaliséiert</item>
+    </string-array>
+</resources>

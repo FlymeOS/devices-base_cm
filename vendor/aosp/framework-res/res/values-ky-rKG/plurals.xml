@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pinpuk_attempts">
+        <item quantity="other">Сизде SIM кулпуланганга чейин %d аракет калды.</item>
+        <item quantity="one">Сизде SIM кулпуланганга чейин %d аракет калды.</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Акыркы %d күн</item>
+        <item quantity="one">Акыркы %d күн</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="other">%d секунд</item>
+        <item quantity="one">1 секунд</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d мүнөт</item>
+        <item quantity="one">1 мүнөт</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d саат</item>
+        <item quantity="one">1 саат</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Wi-Fi тармагы жеткиликтүү</item>
+        <item quantity="one">Wi-Fi тармагы жеткиликтүү</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Ачык Wi-Fi тармагы жеткиликтүү</item>
+        <item quantity="one">Ачык Wi-Fi тармагы жеткиликтүү</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d ичинен %2$d</item>
+        <item quantity="one">1 дал келүү</item>
+    </plurals>
+    <plurals name="restr_pin_countdown">
+        <item quantity="other">%d секунддан кийин кайталаңыз</item>
+        <item quantity="one">1 секунддан кийин кайталаңыз</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary">
+        <item quantity="other">%1$d мүнөткө (%2$s чейин)</item>
+        <item quantity="one">Бир мүнөткө (%2$s чейин)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_summary_short">
+        <item quantity="other">%1$d мүнөткө (%2$s чейин)</item>
+        <item quantity="one">1 мүнөткө (%2$s чейин)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary">
+        <item quantity="other">%1$d саатка (%2$s чейин)</item>
+        <item quantity="one">Бир саатка (%2$s чейин)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_summary_short">
+        <item quantity="other">%1$d саатка (%2$s чейин)</item>
+        <item quantity="one">1 саатка (%2$s чейин)</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes">
+        <item quantity="other">%d мүнөткө</item>
+        <item quantity="one">Бир мүнөткө</item>
+    </plurals>
+    <plurals name="zen_mode_duration_minutes_short">
+        <item quantity="other">%d мүнөткө</item>
+        <item quantity="one">1 мүнөткө</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours">
+        <item quantity="other">%d саатка</item>
+        <item quantity="one">Бир саатка</item>
+    </plurals>
+    <plurals name="zen_mode_duration_hours_short">
+        <item quantity="other">%d саатка</item>
+        <item quantity="one">1 саатка</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">%1$d тандалды</item>
+        <item quantity="one">%1$d тандалды</item>
+    </plurals>
+</resources>

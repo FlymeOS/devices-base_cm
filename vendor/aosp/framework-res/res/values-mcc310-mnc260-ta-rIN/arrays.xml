@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>வைஃபை மூலம் அழைக்க மற்றும் செய்திகள் அனுப்ப, முதலில் மொபைல் நிறுவனத்திடம் இந்தச் சேவையை அமைக்குமாறு கேட்கவும். பிறகு அமைப்புகளில் மீண்டும் வைஃபை அழைப்பை இயக்கவும்.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>உங்கள் மொபைல் நிறுவனத்தில் பதிவுசெய்யவும்</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>"Als je wilt bellen en berichten wilt verzenden via wifi, moet je eerst je provider vragen deze service in te stellen. Schakel bellen via wifi vervolgens opnieuw in via 'Instellingen'."</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Registreren bij je provider</item>
+    </string-array>
+</resources>

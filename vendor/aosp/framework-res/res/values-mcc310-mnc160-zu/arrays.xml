@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>Ukuze wenze amakholi uphinde uthumele imilayezo nge-Wi-Fi, qala ucele inkampani yakho yenethiwekhi ukuthi isethe le divayisi. Bese uvula ukushaya kwe-Wi-Fi futhi kusukela kuzilungiselelo.</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Bhalisa ngenkampani yakho yenethiwekhi</item>
+    </string-array>
+</resources>
