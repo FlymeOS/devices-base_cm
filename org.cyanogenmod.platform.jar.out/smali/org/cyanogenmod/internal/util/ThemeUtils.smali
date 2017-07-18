@@ -1523,6 +1523,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+
     .line 412
     :try_start_0
     const-string/jumbo v2, "com.android.systemui"
