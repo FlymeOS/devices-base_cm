@@ -1308,6 +1308,7 @@
     .param p1, "tileSpec"    # Ljava/lang/String;
 
     .prologue
+    :try_start_flyme_0
     .line 188
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1332,6 +1333,8 @@
     move-result v4
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+    :try_end_flyme_0
+    .catch Ljava/lang/Exception; {:try_start_flyme_0 .. :try_end_flyme_0} :catch_flyme_0
 
     move-result-object v2
 
@@ -1367,6 +1370,13 @@
 
     .line 196
     :cond_1
+    const/4 v3, -0x1
+
+    return v3
+
+    :catch_flyme_0
+    move-exception v1
+
     const/4 v3, -0x1
 
     return v3
