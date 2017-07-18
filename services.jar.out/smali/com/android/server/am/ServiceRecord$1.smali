@@ -236,7 +236,7 @@
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->icon:I
 
-    invoke-virtual {v15, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+    #invoke-virtual {v15, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     .line 470
     const/16 v2, 0x40
@@ -403,6 +403,9 @@
     .end local v17    # "runningIntent":Landroid/content/Intent;
     :cond_2
     :goto_0
+
+    goto :goto_flyme_0
+
     :try_start_2
     invoke-virtual {v8}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
 
@@ -532,6 +535,14 @@
 
     .line 508
     :cond_3
+    :goto_flyme_0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
+
+    invoke-virtual {v2, v8}, Lcom/android/server/am/ServiceRecord;->setFlymeNotification(Landroid/app/Notification;)V
+    
     const/4 v2, 0x1
 
     :try_start_3

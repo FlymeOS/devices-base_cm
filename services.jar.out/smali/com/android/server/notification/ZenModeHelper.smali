@@ -2440,6 +2440,8 @@
 
     invoke-static {v0}, Lcom/android/server/notification/ZenModeHelper$H;->-wrap1(Lcom/android/server/notification/ZenModeHelper$H;)V
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/notification/ZenModeHelper;->initFlymeDoNotDisturbHelper()V
+
     .line 150
     return-void
 .end method
@@ -3106,5 +3108,18 @@
 
     .line 292
     :cond_1
+    return-void
+.end method
+
+.method private initFlymeDoNotDisturbHelper()V
+    .locals 2
+
+    .prologue
+    new-instance v0, Lcom/android/server/notification/MzDoNotDisturbHelper;
+
+    iget-object v1, p0, Lcom/android/server/notification/ZenModeHelper;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/android/server/notification/MzDoNotDisturbHelper;-><init>(Landroid/content/Context;)V
+
     return-void
 .end method

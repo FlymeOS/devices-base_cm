@@ -396,6 +396,11 @@
 
     .line 629
     :cond_0
+
+    iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$1;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    invoke-virtual {v0, p3}, Lcom/android/server/notification/NotificationManagerService;->addFlymePackageClickNumber(Ljava/lang/String;)V
+
     :try_start_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -581,6 +586,14 @@
     move-object/from16 v0, p3
 
     invoke-static {v0, v2, v3, v4}, Lcom/android/server/EventLogTags;->writeNotificationClicked(Ljava/lang/String;III)V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$1;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {v2, v0}, Lcom/android/server/notification/NotificationManagerService;->addFlymePackageClickNumber(Ljava/lang/String;)V
 
     .line 612
     move-object/from16 v0, v16
@@ -1291,4 +1304,44 @@
     throw v4
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
+.end method
+
+.method public onNotificationClearForReason(IILjava/lang/String;Ljava/lang/String;III)V
+    .locals 12
+    .param p1, "callingUid"    # I
+    .param p2, "callingPid"    # I
+    .param p3, "pkg"    # Ljava/lang/String;
+    .param p4, "tag"    # Ljava/lang/String;
+    .param p5, "id"    # I
+    .param p6, "userId"    # I
+    .param p7, "reason"    # I
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$1;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x42
+
+    const/4 v8, 0x1
+
+    const/4 v11, 0x0
+
+    move v1, p1
+
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object/from16 v4, p4
+
+    move/from16 v5, p5
+
+    move/from16 v9, p6
+
+    move/from16 v10, p7
+
+    invoke-virtual/range {v0 .. v11}, Lcom/android/server/notification/NotificationManagerService;->cancelNotification(IILjava/lang/String;Ljava/lang/String;IIIZIILcom/android/server/notification/ManagedServices$ManagedServiceInfo;)V
+
+    return-void
 .end method

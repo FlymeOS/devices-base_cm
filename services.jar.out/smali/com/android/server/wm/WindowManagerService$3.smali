@@ -69,7 +69,7 @@
     .line 893
     iget-object v7, p0, Lcom/android/server/wm/WindowManagerService$3;->val$holder:[Lcom/android/server/wm/WindowManagerService;
 
-    new-instance v0, Lcom/android/server/wm/WindowManagerService;
+    new-instance v0, Lcom/android/server/wm/FlymeExtWindowManagerService;
 
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$3;->val$context:Landroid/content/Context;
 
@@ -85,7 +85,7 @@
     .line 893
     const/4 v6, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/wm/WindowManagerService;-><init>(Landroid/content/Context;Lcom/android/server/input/InputManagerService;ZZZLcom/android/server/wm/WindowManagerService;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/server/wm/FlymeExtWindowManagerService;-><init>(Landroid/content/Context;Lcom/android/server/input/InputManagerService;ZZZ)V
 
     const/4 v1, 0x0
 

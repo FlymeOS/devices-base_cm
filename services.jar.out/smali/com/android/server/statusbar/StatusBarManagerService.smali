@@ -1746,6 +1746,8 @@
     .line 630
     .local v0, "identity":J
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/statusbar/StatusBarManagerService;->sendFlymeQuitSystemUIBroadcast()V
+
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
 
     invoke-interface {v2}, Lcom/android/server/notification/NotificationDelegate;->onPanelHidden()V
@@ -1786,6 +1788,8 @@
     .line 608
     .local v0, "identity":J
     :try_start_0
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/statusbar/StatusBarManagerService;->sendFlymeEnterSystemUIBroadcast()V
+
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
 
     invoke-interface {v2, p1, p2}, Lcom/android/server/notification/NotificationDelegate;->onPanelRevealed(ZI)V
@@ -2665,6 +2669,105 @@
     move-exception v0
 
     monitor-exit v1
+
+    throw v0
+.end method
+
+.method private sendFlymeEnterSystemUIBroadcast()V
+    .locals 2
+
+    .prologue
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.android.systemui.ACTION_ENTER_SYSTEMUI"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .local v0, "intent":Landroid/content/Intent;
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method private sendFlymeQuitSystemUIBroadcast()V
+    .locals 2
+
+    .prologue
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.android.systemui.ACTION_QUIT_SYSTEMUI"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .local v0, "intent":Landroid/content/Intent;
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method public onNotificationClearForReason(Ljava/lang/String;Ljava/lang/String;III)V
+    .locals 10
+    .param p1, "pkg"    # Ljava/lang/String;
+    .param p2, "tag"    # Ljava/lang/String;
+    .param p3, "id"    # I
+    .param p4, "userId"    # I
+    .param p5, "reason"    # I
+
+    .prologue
+    invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v1
+
+    .local v1, "callingUid":I
+    invoke-static {}, Landroid/os/Binder;->getCallingPid()I
+
+    move-result v2
+
+    .local v2, "callingPid":I
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v8
+
+    .local v8, "identity":J
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move v5, p3
+
+    move v6, p4
+
+    move v7, p5
+
+    invoke-interface/range {v0 .. v7}, Lcom/android/server/notification/NotificationDelegate;->onNotificationClearForReason(IILjava/lang/String;Ljava/lang/String;III)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v0
 .end method

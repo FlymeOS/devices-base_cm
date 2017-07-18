@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/power/Notifier$FlymeInjector;,
         Lcom/android/server/power/Notifier$NotifierHandler;,
         Lcom/android/server/power/Notifier$1;,
         Lcom/android/server/power/Notifier$2;,
@@ -33,6 +34,8 @@
 
 
 # instance fields
+.field mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
 .field private final mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
 
 .field private final mAppOps:Lcom/android/internal/app/IAppOpsService;
@@ -1669,4 +1672,13 @@
     .prologue
     .line 496
     return-void
+.end method
+
+.method flymeGetFieldContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/power/Notifier;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method

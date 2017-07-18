@@ -2224,3 +2224,65 @@
 
     return-object v1
 .end method
+
+.method setFlymeNotification(Landroid/app/Notification;)V
+    .locals 6
+    .param p1, "localForegroundNoti"    # Landroid/app/Notification;
+
+    .prologue
+    const/4 v5, 0x0
+
+    sget v0, Lcom/flyme/internal/R$layout;->notification_template_base:I
+
+    .local v0, "NOTIFICATION_TEMPLATE_BASE":I
+    iget-object v3, p1, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p1, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
+
+    invoke-virtual {v3}, Landroid/widget/RemoteViews;->getLayoutId()I
+
+    move-result v3
+
+    if-ne v3, v0, :cond_0
+
+    iget-object v3, p1, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    const-string v4, "android.title"
+
+    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    .local v2, "title":Ljava/lang/CharSequence;
+    iget-object v3, p1, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    const-string v4, "android.text"
+
+    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    .local v1, "text":Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    if-nez v2, :cond_0
+
+    if-nez v1, :cond_0
+
+    const/4 v3, 0x0
+
+    iput v3, p1, Landroid/app/Notification;->icon:I
+
+    invoke-virtual {p1, v5}, Landroid/app/Notification;->setSmallIcon(Landroid/graphics/drawable/Icon;)V
+
+    .end local v1    # "text":Ljava/lang/CharSequence;
+    .end local v2    # "title":Ljava/lang/CharSequence;
+    :cond_0
+    return-void
+.end method
