@@ -1734,6 +1734,8 @@
     .locals 5
 
     .prologue
+    return-void
+
     .line 2783
     iget-object v4, p0, Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
 
