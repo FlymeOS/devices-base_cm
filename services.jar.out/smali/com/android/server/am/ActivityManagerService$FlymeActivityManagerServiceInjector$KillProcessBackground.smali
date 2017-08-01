@@ -20,10 +20,10 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 21152
+    .line 21216
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 21151
+    .line 21215
     return-void
 .end method
 
@@ -34,16 +34,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 21157
+    .line 21221
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 21156
+    .line 21220
     :goto_0
     return-void
 
-    .line 21159
+    .line 21223
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -53,7 +53,7 @@
 
     goto :goto_0
 
-    .line 21157
+    .line 21221
     :pswitch_data_0
     .packed-switch 0x3e8
         :pswitch_0

@@ -12,6 +12,8 @@
 
 .field public static final TRANSACTION_REMOVE_TASK_NOT_KILL_PROCESS:I = 0x2712
 
+.field public static final TRANSACTION_SCROLL_TOP_ACTIVITY:I = 0x2715
+
 .field public static final TRANSACTION_SHRINK_PROCESS_MEMORY:I = 0x2713
 
 
@@ -33,6 +35,14 @@
 .end method
 
 .method public abstract removeTaskNotKillProcess(Landroid/os/IBinder;I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract scrollTopActivity(Landroid/os/IBinder;[Landroid/view/MotionEvent;I)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

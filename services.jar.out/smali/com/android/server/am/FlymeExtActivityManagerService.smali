@@ -29,7 +29,7 @@
 
 # virtual methods
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 11
+    .locals 14
     .param p1, "code"    # I
     .param p2, "data"    # Landroid/os/Parcel;
     .param p3, "reply"    # Landroid/os/Parcel;
@@ -41,158 +41,210 @@
     .end annotation
 
     .prologue
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    .line 24
     packed-switch p1, :pswitch_data_0
 
-    .line 60
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/android/server/am/ActivityManagerService;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-super/range {p0 .. p4}, Lcom/android/server/am/ActivityManagerService;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v8
+    move-result v13
 
-    return v8
+    return v13
 
-    .line 26
     :pswitch_0
-    const-string/jumbo v8, "android.app.FlymeExtIActivityManager"
+    const-string v13, "android.app.FlymeExtIActivityManager"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-object/from16 v0, p2
 
-    .line 27
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result-object v7
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    .line 28
-    .local v7, "token":Landroid/os/IBinder;
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v11
 
-    move-result-object v2
+    .local v11, "token":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 29
-    .local v2, "packageName":Ljava/lang/String;
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    move-result-object v6
 
-    move-result v8
+    .local v6, "packageName":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    if-eqz v8, :cond_0
+    move-result v13
 
-    sget-object v8, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-eqz v13, :cond_0
 
-    invoke-interface {v8, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    sget-object v13, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-result-object v1
+    move-object/from16 v0, p2
 
-    check-cast v1, Landroid/os/Bundle;
+    invoke-interface {v13, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    .line 30
+    move-result-object v5
+
+    check-cast v5, Landroid/os/Bundle;
+
     :goto_0
-    invoke-virtual {p0, v7, v2, v1}, Lcom/android/server/am/FlymeExtActivityManagerService;->overridePendingTransition(Landroid/os/IBinder;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {p0, v11, v6, v5}, Lcom/android/server/am/FlymeExtActivityManagerService;->overridePendingTransition(Landroid/os/IBinder;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 31
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 32
-    return v9
+    const/4 v13, 0x1
 
-    .line 29
+    return v13
+
     :cond_0
-    const/4 v1, 0x0
+    const/4 v5, 0x0
 
-    .local v1, "options":Landroid/os/Bundle;
+    .local v5, "options":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 36
-    .end local v1    # "options":Landroid/os/Bundle;
-    .end local v2    # "packageName":Ljava/lang/String;
-    .end local v7    # "token":Landroid/os/IBinder;
+    .end local v5    # "options":Landroid/os/Bundle;
+    .end local v6    # "packageName":Ljava/lang/String;
+    .end local v11    # "token":Landroid/os/IBinder;
     :pswitch_1
-    const-string/jumbo v10, "android.app.FlymeExtIActivityManager"
+    const-string v13, "android.app.FlymeExtIActivityManager"
 
-    invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-object/from16 v0, p2
 
-    .line 37
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result v6
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 38
-    .local v6, "taskId":I
-    invoke-virtual {p0, v6}, Lcom/android/server/am/FlymeExtActivityManagerService;->removeTaskNotKillProcess(I)Z
+    move-result v10
 
-    move-result v5
+    .local v10, "taskId":I
+    invoke-virtual {p0, v10}, Lcom/android/server/am/FlymeExtActivityManagerService;->removeTaskNotKillProcess(I)Z
 
-    .line 39
-    .local v5, "result":Z
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    move-result v9
 
-    .line 40
-    if-eqz v5, :cond_1
+    .local v9, "result":Z
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    move v8, v9
+    if-eqz v9, :cond_1
+
+    const/4 v13, 0x1
+
+    :goto_1
+    move-object/from16 v0, p3
+
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v13, 0x1
+
+    return v13
 
     :cond_1
-    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v13, 0x0
 
-    .line 41
-    return v9
+    goto :goto_1
 
-    .line 45
-    .end local v5    # "result":Z
-    .end local v6    # "taskId":I
+    .end local v9    # "result":Z
+    .end local v10    # "taskId":I
     :pswitch_2
-    const-string/jumbo v8, "android.app.FlymeExtIActivityManager"
+    const-string v13, "android.app.FlymeExtIActivityManager"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-object/from16 v0, p2
 
-    .line 46
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result v3
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 47
-    .local v3, "pid":I
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    move-result v7
 
-    move-result v0
+    .local v7, "pid":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 48
-    .local v0, "level":I
-    invoke-virtual {p0, v3, v0}, Lcom/android/server/am/FlymeExtActivityManagerService;->shrinkProcessMemory(II)V
+    move-result v4
 
-    .line 49
-    return v9
+    .local v4, "level":I
+    invoke-virtual {p0, v7, v4}, Lcom/android/server/am/FlymeExtActivityManagerService;->shrinkProcessMemory(II)V
 
-    .line 53
-    .end local v0    # "level":I
-    .end local v3    # "pid":I
+    const/4 v13, 0x1
+
+    return v13
+
+    .end local v4    # "level":I
+    .end local v7    # "pid":I
     :pswitch_3
-    const-string/jumbo v8, "android.app.FlymeExtIActivityManager"
+    const-string v13, "android.app.FlymeExtIActivityManager"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-object/from16 v0, p2
 
-    .line 54
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result v3
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 55
-    .restart local v3    # "pid":I
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result v7
 
-    move-result-object v4
+    .restart local v7    # "pid":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 56
-    .local v4, "reason":Ljava/lang/String;
-    invoke-virtual {p0, v3, v4}, Lcom/android/server/am/FlymeExtActivityManagerService;->killPid(ILjava/lang/String;)V
+    move-result-object v8
 
-    .line 57
-    return v9
+    .local v8, "reason":Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/server/am/FlymeExtActivityManagerService;->killPid(ILjava/lang/String;)V
 
-    .line 24
+    const/4 v13, 0x1
+
+    return v13
+
+    .end local v7    # "pid":I
+    .end local v8    # "reason":Ljava/lang/String;
+    :pswitch_4
+    const-string v13, "android.app.FlymeExtIActivityManager"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .local v2, "eventLength":I
+    const/4 v1, 0x0
+
+    .local v1, "event":[Landroid/view/MotionEvent;
+    if-lez v2, :cond_2
+
+    new-array v1, v2, [Landroid/view/MotionEvent;
+
+    .local v1, "event":[Landroid/view/MotionEvent;
+    const/4 v3, 0x0
+
+    .local v3, "i":I
+    :goto_2
+    if-ge v3, v2, :cond_2
+
+    sget-object v13, Landroid/view/MotionEvent;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    move-object/from16 v0, p2
+
+    invoke-interface {v13, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Landroid/view/MotionEvent;
+
+    aput-object v13, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    .end local v1    # "event":[Landroid/view/MotionEvent;
+    .end local v3    # "i":I
+    :cond_2
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v12
+
+    .local v12, "value":I
+    invoke-virtual {p0, v1, v12}, Lcom/android/server/am/FlymeExtActivityManagerService;->scrollTopActivity([Landroid/view/MotionEvent;I)V
+
+    const/4 v13, 0x1
+
+    return v13
+
     nop
 
     :pswitch_data_0
@@ -201,5 +253,6 @@
         :pswitch_1
         :pswitch_2
         :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method

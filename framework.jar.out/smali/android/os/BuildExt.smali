@@ -2011,6 +2011,26 @@
     return v5
 .end method
 
+.method public static isCyanogenModRom()Z
+    .locals 2
+
+    .prologue
+    .line 525
+    const-string/jumbo v0, "unknown"
+
+    const-string/jumbo v1, "ro.cm.version"
+
+    invoke-static {v1}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isDailyFirmware()Z
     .locals 2
 

@@ -20754,6 +20754,7 @@
     .param p1, "level"    # I
 
     .prologue
+    .line 5487
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
     move-result-object v3
@@ -20764,12 +20765,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 5488
     const/16 v3, 0x3c
 
     invoke-static {v3, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
+    .line 5492
     :cond_0
     const/4 v3, 0x1
 
@@ -20779,11 +20782,13 @@
 
     move-result-object v1
 
+    .line 5493
     .local v1, "callbacks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentCallbacks2;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 5494
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -20791,6 +20796,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 5495
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -20799,10 +20805,12 @@
 
     invoke-interface {v3, p1}, Landroid/content/ComponentCallbacks2;->onTrimMemory(I)V
 
+    .line 5494
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5499
     :cond_1
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
@@ -20810,18 +20818,23 @@
 
     invoke-virtual {v3, p1}, Landroid/view/WindowManagerGlobal;->doShrinkMemory(I)V
 
+    .line 5502
     invoke-static {}, Landroid/database/sqlite/SQLiteDatabase;->releaseMemory()I
 
+    .line 5503
     invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
 
+    .line 5504
     invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
 
+    .line 5507
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v3
 
     invoke-virtual {v3}, Ljava/lang/Runtime;->gc()V
 
+    .line 5485
     return-void
 .end method
 
@@ -20832,7 +20845,54 @@
     .param p3, "arg1"    # I
 
     .prologue
+    .line 1263
     invoke-direct {p0, p1, p2, p3}, Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;I)V
 
+    .line 1262
+    return-void
+.end method
+
+.method final handleScrollActivity(Landroid/app/ActivityThread$FlymeInjector$ScrollActivityData;)V
+    .locals 3
+    .param p1, "data"    # Landroid/app/ActivityThread$FlymeInjector$ScrollActivityData;
+
+    .prologue
+    .line 5555
+    if-eqz p1, :cond_0
+
+    .line 5556
+    iget-object v1, p1, Landroid/app/ActivityThread$FlymeInjector$ScrollActivityData;->token:Landroid/os/IBinder;
+
+    invoke-virtual {p0, v1}, Landroid/app/ActivityThread;->getActivity(Landroid/os/IBinder;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    .line 5557
+    .local v0, "activity":Landroid/app/Activity;
+    if-eqz v0, :cond_0
+
+    .line 5558
+    iget-object v1, p1, Landroid/app/ActivityThread$FlymeInjector$ScrollActivityData;->event:[Landroid/view/MotionEvent;
+
+    iget v2, p1, Landroid/app/ActivityThread$FlymeInjector$ScrollActivityData;->value:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->scrollForCapture([Landroid/view/MotionEvent;I)V
+
+    .line 5554
+    .end local v0    # "activity":Landroid/app/Activity;
+    :cond_0
+    return-void
+.end method
+
+.method invokeMethodSendMessage(ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "what"    # I
+    .param p2, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    .line 1300
+    invoke-direct {p0, p1, p2}, Landroid/app/ActivityThread;->sendMessage(ILjava/lang/Object;)V
+
+    .line 1299
     return-void
 .end method
