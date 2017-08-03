@@ -1734,8 +1734,6 @@
     .locals 5
 
     .prologue
-    return-void
-
     .line 2783
     iget-object v4, p0, Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
 
@@ -1798,6 +1796,8 @@
     .param p1, "userId"    # I
 
     .prologue
+    return-void
+
     .line 2685
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -3050,6 +3050,8 @@
     .param p1, "userId"    # I
 
     .prologue
+    return-void
+
     .line 2735
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
