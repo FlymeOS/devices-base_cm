@@ -88,6 +88,8 @@
 
 .field public static final MZ_GAME_MODE_ACCELERATE:Ljava/lang/String; = "mz_game_mode_accelerate"
 
+.field public static final MZ_GAME_MODE_BARRAGE_NOTIFICATIONS:Ljava/lang/String; = "mz_game_mode_barrage_notifications"
+
 .field public static final MZ_GAME_MODE_DISABLE_BOTTOM_SLIDE:Ljava/lang/String; = "mz_game_mode_disable_bottom_slide"
 
 .field public static final MZ_GAME_MODE_DISABLE_MBACK:Ljava/lang/String; = "mz_game_mode_disable_mback"
@@ -95,6 +97,8 @@
 .field public static final MZ_GAME_MODE_DISABLE_TOP_SLIDE:Ljava/lang/String; = "mz_game_mode_disable_top_slide"
 
 .field public static final MZ_GAME_MODE_DND:Ljava/lang/String; = "mz_game_mode_dnd"
+
+.field public static final MZ_GAME_MODE_ENABLE_ASSISTANT:Ljava/lang/String; = "mz_game_mode_game_assistant"
 
 .field public static final MZ_GAME_MODE_GAME_KEYBOARD:Ljava/lang/String; = "mz_game_mode_game_keyboard"
 
@@ -144,7 +148,7 @@
     .locals 2
 
     .prologue
-    .line 1141
+    .line 1160
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x1e
@@ -153,21 +157,21 @@
 
     sput-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
-    .line 1142
+    .line 1161
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_inside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1143
+    .line 1162
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mz_smartbar_hit_edge_count_outside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 988
+    .line 1007
     return-void
 .end method
 
@@ -175,7 +179,7 @@
     .locals 0
 
     .prologue
-    .line 988
+    .line 1007
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

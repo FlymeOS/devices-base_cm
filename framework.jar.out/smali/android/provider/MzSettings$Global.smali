@@ -87,6 +87,12 @@
 
 .field public static final MZ_FAST_CHARGE:Ljava/lang/String; = "mz_fast_charge"
 
+.field public static final MZ_FREE_WIFI_DISABLED_REASON:Ljava/lang/String; = "free_wifi_disabled_reason"
+
+.field public static final MZ_FREE_WIFI_ENABLER:Ljava/lang/String; = "free_wifi_enabler"
+
+.field public static final MZ_FREE_WIFI_NOTIFY:Ljava/lang/String; = "free_wifi_notify"
+
 .field public static final MZ_WIFI_ENABLE_SLEEP_AT_NIGHT:Ljava/lang/String; = "wifi_enable_sleep_at_night"
 
 .field public static final MZ_WIFI_SCAN_ALWAYS_AVAILABLE_REMEMBERED:Ljava/lang/String; = "wifi_scan_always_enabled_remembered"

@@ -1243,9 +1243,6 @@
     .line 50
     invoke-direct {p0}, Lcom/android/server/shrinker/LowMemoryScanner;->killList()V
 
-    .line 51
-    invoke-direct {p0}, Lcom/android/server/shrinker/LowMemoryScanner;->scheduleTrimMemory()V
-
     .line 52
     iget-object v0, p0, Lcom/android/server/shrinker/LowMemoryScanner;->mRunningAppList:Ljava/util/ArrayList;
 
