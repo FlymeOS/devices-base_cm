@@ -147,10 +147,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2273
+    .line 2275
     if-eqz p1, :cond_3
 
-    .line 2274
+    .line 2276
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -159,20 +159,20 @@
 
     if-ge v7, v0, :cond_3
 
-    .line 2275
+    .line 2277
     aget-object v5, p1, v7
 
-    .line 2276
+    .line 2278
     .local v5, "ii":Landroid/content/Intent;
     if-nez v5, :cond_0
 
-    .line 2274
+    .line 2276
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 2279
+    .line 2281
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPm:Landroid/content/pm/PackageManager;
 
@@ -182,11 +182,11 @@
 
     move-result-object v6
 
-    .line 2280
+    .line 2282
     .local v6, "ai":Landroid/content/pm/ActivityInfo;
     if-nez v6, :cond_1
 
-    .line 2281
+    .line 2283
     const-string/jumbo v0, "MzResolverActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -211,27 +211,27 @@
 
     goto :goto_1
 
-    .line 2284
+    .line 2286
     :cond_1
     new-instance v2, Landroid/content/pm/ResolveInfo;
 
     invoke-direct {v2}, Landroid/content/pm/ResolveInfo;-><init>()V
 
-    .line 2285
+    .line 2287
     .local v2, "ri":Landroid/content/pm/ResolveInfo;
     iput-object v6, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 2286
+    .line 2288
     instance-of v0, v5, Landroid/content/pm/LabeledIntent;
 
     if-eqz v0, :cond_2
 
     move-object v8, v5
 
-    .line 2287
+    .line 2289
     check-cast v8, Landroid/content/pm/LabeledIntent;
 
-    .line 2288
+    .line 2290
     .local v8, "li":Landroid/content/pm/LabeledIntent;
     invoke-virtual {v8}, Landroid/content/pm/LabeledIntent;->getSourcePackage()Ljava/lang/String;
 
@@ -239,28 +239,28 @@
 
     iput-object v0, v2, Landroid/content/pm/ResolveInfo;->resolvePackageName:Ljava/lang/String;
 
-    .line 2289
+    .line 2291
     invoke-virtual {v8}, Landroid/content/pm/LabeledIntent;->getLabelResource()I
 
     move-result v0
 
     iput v0, v2, Landroid/content/pm/ResolveInfo;->labelRes:I
 
-    .line 2290
+    .line 2292
     invoke-virtual {v8}, Landroid/content/pm/LabeledIntent;->getNonLocalizedLabel()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, v2, Landroid/content/pm/ResolveInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 2291
+    .line 2293
     invoke-virtual {v8}, Landroid/content/pm/LabeledIntent;->getIconResource()I
 
     move-result v0
 
     iput v0, v2, Landroid/content/pm/ResolveInfo;->icon:I
 
-    .line 2294
+    .line 2296
     .end local v8    # "li":Landroid/content/pm/LabeledIntent;
     :cond_2
     iget-object v9, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
@@ -281,7 +281,7 @@
 
     goto :goto_1
 
-    .line 2272
+    .line 2274
     .end local v2    # "ri":Landroid/content/pm/ResolveInfo;
     .end local v5    # "ii":Landroid/content/Intent;
     .end local v6    # "ai":Landroid/content/pm/ActivityInfo;
@@ -306,7 +306,7 @@
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v1, 0x0
 
-    .line 2336
+    .line 2338
     if-eqz p1, :cond_4
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -315,24 +315,24 @@
 
     if-lez v0, :cond_4
 
-    .line 2337
+    .line 2339
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 2338
+    .line 2340
     .local v4, "r0":Landroid/content/pm/ResolveInfo;
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v6
 
-    .line 2339
+    .line 2341
     .local v6, "N":I
     const/4 v2, 0x0
 
-    .line 2340
+    .line 2342
     .local v2, "start":I
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPm:Landroid/content/pm/PackageManager;
 
@@ -340,7 +340,7 @@
 
     move-result-object v5
 
-    .line 2341
+    .line 2343
     .local v5, "r0Label":Ljava/lang/CharSequence;
     const/4 v7, 0x1
 
@@ -348,15 +348,15 @@
     :goto_0
     if-ge v7, v6, :cond_3
 
-    .line 2342
+    .line 2344
     if-nez v5, :cond_0
 
-    .line 2343
+    .line 2345
     iget-object v0, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 2345
+    .line 2347
     :cond_0
     invoke-interface {p1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -364,7 +364,7 @@
 
     check-cast v8, Landroid/content/pm/ResolveInfo;
 
-    .line 2346
+    .line 2348
     .local v8, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPm:Landroid/content/pm/PackageManager;
 
@@ -372,16 +372,16 @@
 
     move-result-object v9
 
-    .line 2347
+    .line 2349
     .local v9, "riLabel":Ljava/lang/CharSequence;
     if-nez v9, :cond_1
 
-    .line 2348
+    .line 2350
     iget-object v0, v8, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v9, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 2350
+    .line 2352
     :cond_1
     invoke-virtual {v9, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -389,13 +389,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 2341
+    .line 2343
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 2354
+    .line 2356
     :cond_2
     add-int/lit8 v3, v7, -0x1
 
@@ -405,18 +405,18 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->processGroup(Ljava/util/List;IILandroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;)V
 
-    .line 2355
+    .line 2357
     move-object v4, v8
 
-    .line 2356
+    .line 2358
     move-object v5, v9
 
-    .line 2357
+    .line 2359
     move v2, v7
 
     goto :goto_1
 
-    .line 2360
+    .line 2362
     .end local v8    # "ri":Landroid/content/pm/ResolveInfo;
     .end local v9    # "riLabel":Ljava/lang/CharSequence;
     :cond_3
@@ -428,7 +428,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->processGroup(Ljava/util/List;IILandroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;)V
 
-    .line 2335
+    .line 2337
     .end local v2    # "start":I
     .end local v4    # "r0":Landroid/content/pm/ResolveInfo;
     .end local v5    # "r0Label":Ljava/lang/CharSequence;
@@ -442,7 +442,7 @@
     .locals 3
 
     .prologue
-    .line 2219
+    .line 2221
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
     new-instance v1, Lcom/android/internal/app/MzResolverActivity$ViewPagerAdapter;
@@ -453,14 +453,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/ViewPager;->setAdapter(Lcom/android/internal/widget/PagerAdapter;)V
 
-    .line 2220
+    .line 2222
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/ViewPager;->setCurrentItem(I)V
 
-    .line 2221
+    .line 2223
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mOverScrollLayout:Lcom/meizu/widget/ViewPagerOverScrollLayout;
 
     new-instance v1, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$2;
@@ -469,7 +469,7 @@
 
     invoke-virtual {v0, v1}, Lcom/meizu/widget/ViewPagerOverScrollLayout;->setViewPagerSelectChangeListener(Lcom/meizu/widget/ViewPagerOverScrollLayout$ViewPagerSelectChangeListener;)V
 
-    .line 2218
+    .line 2220
     return-void
 .end method
 
@@ -483,14 +483,14 @@
 
     const/4 v5, -0x2
 
-    .line 2246
+    .line 2248
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->pointViews:Ljava/util/ArrayList;
 
-    .line 2248
+    .line 2250
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -503,7 +503,7 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 2249
+    .line 2251
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPageViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -514,7 +514,7 @@
 
     if-le v3, v4, :cond_0
 
-    .line 2250
+    .line 2252
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->getActivity()Landroid/app/Activity;
@@ -523,51 +523,51 @@
 
     invoke-direct {v1, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 2251
+    .line 2253
     .local v1, "imageView":Landroid/widget/ImageView;
     if-nez v0, :cond_1
 
-    .line 2252
+    .line 2254
     sget v3, Lcom/flyme/internal/R$drawable;->mz_ic_popup_sharepoint_dark:I
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 2256
+    .line 2258
     :goto_1
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 2257
+    .line 2259
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v3, v5, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 2256
+    .line 2258
     invoke-direct {v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2259
+    .line 2261
     .local v2, "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     iput v6, v2, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 2260
+    .line 2262
     iput v6, v2, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    .line 2261
+    .line 2263
     iput v7, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 2262
+    .line 2264
     iput v7, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 2263
+    .line 2265
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPointView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2264
+    .line 2266
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->pointViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2248
+    .line 2250
     .end local v1    # "imageView":Landroid/widget/ImageView;
     .end local v2    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     :cond_0
@@ -575,7 +575,7 @@
 
     goto :goto_0
 
-    .line 2254
+    .line 2256
     .restart local v1    # "imageView":Landroid/widget/ImageView;
     :cond_1
     sget v3, Lcom/flyme/internal/R$drawable;->mz_ic_popup_sharepoint_light:I
@@ -584,7 +584,7 @@
 
     goto :goto_1
 
-    .line 2244
+    .line 2246
     .end local v1    # "imageView":Landroid/widget/ImageView;
     :cond_2
     return-void
@@ -600,21 +600,21 @@
 
     const/4 v4, 0x0
 
-    .line 2127
+    .line 2128
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPageViews:Ljava/util/ArrayList;
 
-    .line 2128
+    .line 2129
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mGridViewAdapters:Ljava/util/ArrayList;
 
-    .line 2129
+    .line 2130
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/MzResolverActivity;->getInitalIntents()[Landroid/content/Intent;
@@ -623,7 +623,7 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mInitialIntents:[Landroid/content/Intent;
 
-    .line 2130
+    .line 2131
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/MzResolverActivity;->getActivityIntent()Landroid/content/Intent;
@@ -632,14 +632,14 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTargetIntent:Landroid/content/Intent;
 
-    .line 2131
+    .line 2132
     new-instance v9, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTargetIntent:Landroid/content/Intent;
 
     invoke-direct {v9, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 2135
+    .line 2136
     .local v9, "shareIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mInitialIntents:[Landroid/content/Intent;
 
@@ -651,12 +651,12 @@
 
     if-lez v1, :cond_0
 
-    .line 2136
+    .line 2137
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mInitialIntents:[Landroid/content/Intent;
 
     invoke-direct {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->buildListfromInitialIntent([Landroid/content/Intent;)V
 
-    .line 2138
+    .line 2139
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
@@ -670,7 +670,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 2139
+    .line 2140
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get4(Lcom/android/internal/app/MzResolverActivity;)Ljava/util/List;
@@ -679,28 +679,28 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
-    .line 2144
+    .line 2145
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
     invoke-direct {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->removePriorityItems(Ljava/util/List;)V
 
-    .line 2145
+    .line 2146
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
     invoke-direct {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->resortTheResolveList(Ljava/util/List;)V
 
-    .line 2146
+    .line 2147
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
     invoke-direct {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->removeNotExportItems(Ljava/util/List;)V
 
-    .line 2147
+    .line 2148
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
     invoke-direct {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->handleSameNameItems(Ljava/util/List;)V
 
-    .line 2149
+    .line 2150
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -713,7 +713,7 @@
 
     div-int/lit8 v2, v1, 0xa
 
-    .line 2150
+    .line 2151
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -726,18 +726,18 @@
 
     move v1, v10
 
-    .line 2149
+    .line 2150
     :goto_2
     add-int/2addr v1, v2
 
     if-ge v7, v1, :cond_8
 
-    .line 2152
+    .line 2153
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2153
+    .line 2154
     .local v3, "viewPageList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;>;"
     mul-int/lit8 v1, v7, 0x5
 
@@ -751,28 +751,28 @@
 
     add-int/lit8 v1, v1, 0xa
 
-    .line 2154
+    .line 2155
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 2153
+    .line 2154
     if-le v1, v2, :cond_4
 
-    .line 2154
+    .line 2155
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 2153
+    .line 2154
     :goto_4
     if-ge v8, v1, :cond_5
 
-    .line 2156
+    .line 2157
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
     invoke-interface {v1, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -783,19 +783,19 @@
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2155
+    .line 2156
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 2141
+    .line 2142
     .end local v3    # "viewPageList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;>;"
     .end local v7    # "i":I
     .end local v8    # "j":I
     :cond_1
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 2142
+    .line 2143
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get3(Lcom/android/internal/app/MzResolverActivity;)Z
@@ -806,7 +806,7 @@
 
     const/16 v1, 0x40
 
-    .line 2141
+    .line 2142
     :goto_5
     const/high16 v5, 0x10000
 
@@ -823,17 +823,17 @@
     :cond_2
     move v1, v4
 
-    .line 2142
+    .line 2143
     goto :goto_5
 
     .restart local v7    # "i":I
     :cond_3
     move v1, v4
 
-    .line 2150
+    .line 2151
     goto :goto_2
 
-    .line 2155
+    .line 2156
     .restart local v3    # "viewPageList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;>;"
     .restart local v8    # "j":I
     :cond_4
@@ -845,7 +845,7 @@
 
     goto :goto_4
 
-    .line 2158
+    .line 2159
     :cond_5
     new-instance v6, Landroid/widget/GridView;
 
@@ -855,7 +855,7 @@
 
     invoke-direct {v6, v1}, Landroid/widget/GridView;-><init>(Landroid/content/Context;)V
 
-    .line 2159
+    .line 2160
     .local v6, "gridView":Landroid/widget/GridView;
     new-instance v0, Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;
 
@@ -869,7 +869,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;-><init>(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;IZ)V
 
-    .line 2161
+    .line 2162
     .local v0, "adapter":Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
@@ -883,14 +883,14 @@
 
     if-ne v1, v10, :cond_7
 
-    .line 2162
+    .line 2163
     invoke-virtual {v0, v4, v4}, Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;->intentForPosition(IZ)Landroid/content/Intent;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->startActivity(Landroid/content/Intent;)V
 
-    .line 2163
+    .line 2164
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get8(Lcom/android/internal/app/MzResolverActivity;)Z
@@ -899,7 +899,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 2164
+    .line 2165
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1}, Lcom/android/internal/app/MzResolverActivity;->-get6(Lcom/android/internal/app/MzResolverActivity;)Lcom/android/internal/content/PackageMonitor;
@@ -908,68 +908,68 @@
 
     invoke-virtual {v1}, Lcom/android/internal/content/PackageMonitor;->unregister()V
 
-    .line 2165
+    .line 2166
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1, v4}, Lcom/android/internal/app/MzResolverActivity;->-set1(Lcom/android/internal/app/MzResolverActivity;Z)Z
 
-    .line 2167
+    .line 2168
     :cond_6
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/MzResolverActivity;->finish()V
 
-    .line 2168
+    .line 2169
     return-void
 
-    .line 2170
+    .line 2171
     :cond_7
     invoke-virtual {v6, v0}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 2171
+    .line 2172
     new-instance v1, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;
 
     invoke-direct {v1, p0, v0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;-><init>(Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;)V
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 2199
+    .line 2200
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mGridViewAdapters:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2200
+    .line 2201
     const/4 v1, 0x5
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 2201
+    .line 2202
     invoke-virtual {v6, v4}, Landroid/widget/GridView;->setBackgroundColor(I)V
 
-    .line 2202
+    .line 2203
     invoke-virtual {v6, v11, v4, v11, v4}, Landroid/widget/GridView;->setPadding(IIII)V
 
-    .line 2203
+    .line 2204
     const/16 v1, 0xf
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setVerticalSpacing(I)V
 
-    .line 2204
+    .line 2205
     invoke-virtual {v6, v10}, Landroid/widget/GridView;->setGravity(I)V
 
-    .line 2205
+    .line 2206
     const/4 v1, 0x2
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setStretchMode(I)V
 
-    .line 2206
+    .line 2207
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v1, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2207
+    .line 2208
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v2, -0x1
@@ -980,17 +980,20 @@
 
     invoke-virtual {v6, v1}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2208
+    .line 2209
+    invoke-virtual {v6, v4}, Landroid/widget/GridView;->setLayoutDirection(I)V
+
+    .line 2210
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPageViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2150
+    .line 2151
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_1
 
-    .line 2210
+    .line 2212
     .end local v0    # "adapter":Lcom/android/internal/app/MzResolverActivity$GridViewAdapter;
     .end local v3    # "viewPageList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;>;"
     .end local v6    # "gridView":Landroid/widget/GridView;
@@ -1008,7 +1011,7 @@
 
     if-eqz v1, :cond_9
 
-    .line 2211
+    .line 2213
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->getResources()Landroid/content/res/Resources;
@@ -1033,15 +1036,15 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 2212
+    .line 2214
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/MzResolverActivity;->finish()V
 
-    .line 2213
+    .line 2215
     return-void
 
-    .line 2126
+    .line 2127
     :cond_9
     return-void
 .end method
@@ -1066,19 +1069,19 @@
     .end annotation
 
     .prologue
-    .line 2388
+    .line 2390
     .local p1, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     sub-int v1, p3, p2
 
     add-int/lit8 v12, v1, 0x1
 
-    .line 2389
+    .line 2391
     .local v12, "num":I
     const/4 v1, 0x1
 
     if-ne v12, v1, :cond_1
 
-    .line 2391
+    .line 2393
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
@@ -1101,15 +1104,15 @@
 
     invoke-interface {v15, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2386
+    .line 2388
     :cond_0
     return-void
 
-    .line 2393
+    .line 2395
     :cond_1
     const/4 v14, 0x0
 
-    .line 2394
+    .line 2396
     .local v14, "usePkg":Z
     move-object/from16 v0, p4
 
@@ -1125,27 +1128,27 @@
 
     move-result-object v13
 
-    .line 2395
+    .line 2397
     .local v13, "startApp":Ljava/lang/CharSequence;
     if-nez v13, :cond_2
 
-    .line 2396
+    .line 2398
     const/4 v14, 0x1
 
-    .line 2398
+    .line 2400
     :cond_2
     if-nez v14, :cond_5
 
-    .line 2401
+    .line 2403
     new-instance v7, Ljava/util/HashSet;
 
     invoke-direct {v7}, Ljava/util/HashSet;-><init>()V
 
-    .line 2402
+    .line 2404
     .local v7, "duplicates":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/CharSequence;>;"
     invoke-virtual {v7, v13}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 2403
+    .line 2405
     add-int/lit8 v8, p2, 0x1
 
     .local v8, "j":I
@@ -1154,7 +1157,7 @@
 
     if-gt v8, v0, :cond_4
 
-    .line 2404
+    .line 2406
     move-object/from16 v0, p1
 
     invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1163,7 +1166,7 @@
 
     check-cast v10, Landroid/content/pm/ResolveInfo;
 
-    .line 2405
+    .line 2407
     .local v10, "jRi":Landroid/content/pm/ResolveInfo;
     iget-object v1, v10, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -1177,7 +1180,7 @@
 
     move-result-object v9
 
-    .line 2406
+    .line 2408
     .local v9, "jApp":Ljava/lang/CharSequence;
     if-eqz v9, :cond_3
 
@@ -1187,17 +1190,17 @@
 
     if-eqz v1, :cond_6
 
-    .line 2407
+    .line 2409
     :cond_3
     const/4 v14, 0x1
 
-    .line 2414
+    .line 2416
     .end local v9    # "jApp":Ljava/lang/CharSequence;
     .end local v10    # "jRi":Landroid/content/pm/ResolveInfo;
     :cond_4
     invoke-virtual {v7}, Ljava/util/HashSet;->clear()V
 
-    .line 2416
+    .line 2418
     .end local v7    # "duplicates":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/CharSequence;>;"
     .end local v8    # "j":I
     :cond_5
@@ -1209,7 +1212,7 @@
 
     if-gt v11, v0, :cond_0
 
-    .line 2417
+    .line 2419
     move-object/from16 v0, p1
 
     invoke-interface {v0, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1218,11 +1221,11 @@
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 2418
+    .line 2420
     .local v3, "add":Landroid/content/pm/ResolveInfo;
     if-eqz v14, :cond_7
 
-    .line 2420
+    .line 2422
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
@@ -1233,7 +1236,7 @@
 
     iget-object v2, v0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
-    .line 2421
+    .line 2423
     iget-object v4, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v4, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -1242,18 +1245,18 @@
 
     move-object/from16 v4, p5
 
-    .line 2420
+    .line 2422
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;-><init>(Landroid/content/Context;Landroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/content/Intent;)V
 
     invoke-interface {v15, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2416
+    .line 2418
     :goto_2
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 2410
+    .line 2412
     .end local v3    # "add":Landroid/content/pm/ResolveInfo;
     .end local v11    # "k":I
     .restart local v7    # "duplicates":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/CharSequence;>;"
@@ -1263,12 +1266,12 @@
     :cond_6
     invoke-virtual {v7, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 2403
+    .line 2405
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 2424
+    .line 2426
     .end local v7    # "duplicates":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/CharSequence;>;"
     .end local v8    # "j":I
     .end local v9    # "jApp":Ljava/lang/CharSequence;
@@ -1286,7 +1289,7 @@
 
     iget-object v2, v0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
-    .line 2425
+    .line 2427
     iget-object v4, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v4, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1303,7 +1306,7 @@
 
     move-object/from16 v4, p5
 
-    .line 2424
+    .line 2426
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/app/MzResolverActivity$DisplayTargetInfo;-><init>(Landroid/content/Context;Landroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/content/Intent;)V
 
     invoke-interface {v15, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1324,7 +1327,7 @@
     .end annotation
 
     .prologue
-    .line 2368
+    .line 2370
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz p1, :cond_1
 
@@ -1336,7 +1339,7 @@
 
     if-le v3, v4, :cond_1
 
-    .line 2369
+    .line 2371
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -1347,7 +1350,7 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 2370
+    .line 2372
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1356,38 +1359,38 @@
 
     iget-object v0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 2372
+    .line 2374
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
 
     iget v4, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mLaunchedFromUid:I
 
-    .line 2373
+    .line 2375
     iget-object v5, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
 
     iget-boolean v6, v0, Landroid/content/pm/ActivityInfo;->exported:Z
 
-    .line 2371
+    .line 2373
     invoke-static {v3, v4, v5, v6}, Landroid/app/ActivityManager;->checkComponentPermission(Ljava/lang/String;IIZ)I
 
     move-result v1
 
-    .line 2374
+    .line 2376
     .local v1, "granted":I
     if-eqz v1, :cond_0
 
-    .line 2376
+    .line 2378
     invoke-interface {p1, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 2369
+    .line 2371
     :cond_0
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 2367
+    .line 2369
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v1    # "granted":I
     .end local v2    # "i":I
@@ -1411,12 +1414,12 @@
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v5, 0x0
 
-    .line 2303
+    .line 2305
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2304
+    .line 2306
     .local v0, "N":I
     if-eqz p1, :cond_2
 
@@ -1426,14 +1429,14 @@
 
     if-lez v4, :cond_2
 
-    .line 2305
+    .line 2307
     invoke-interface {p1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 2306
+    .line 2308
     .local v2, "r0":Landroid/content/pm/ResolveInfo;
     const/4 v1, 0x1
 
@@ -1441,14 +1444,14 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 2307
+    .line 2309
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 2308
+    .line 2310
     .local v3, "ri":Landroid/content/pm/ResolveInfo;
     iget v4, v2, Landroid/content/pm/ResolveInfo;->priority:I
 
@@ -1462,26 +1465,26 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 2309
+    .line 2311
     :cond_0
     :goto_1
     if-ge v1, v0, :cond_1
 
-    .line 2313
+    .line 2315
     invoke-interface {p1, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 2314
+    .line 2316
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 2306
+    .line 2308
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2302
+    .line 2304
     .end local v1    # "i":I
     .end local v2    # "r0":Landroid/content/pm/ResolveInfo;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
@@ -1502,7 +1505,7 @@
     .end annotation
 
     .prologue
-    .line 2325
+    .line 2327
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1512,18 +1515,18 @@
 
     if-le v1, v2, :cond_0
 
-    .line 2326
+    .line 2328
     new-instance v0, Lcom/meizu/util/AppDisplayNameComparator;
 
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-direct {v0, v1}, Lcom/meizu/util/AppDisplayNameComparator;-><init>(Landroid/content/pm/PackageManager;)V
 
-    .line 2327
+    .line 2329
     .local v0, "rComparator":Lcom/meizu/util/AppDisplayNameComparator;
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 2328
+    .line 2330
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-static {v1, p1}, Lcom/android/internal/app/MzResolverActivity;->-wrap2(Lcom/android/internal/app/MzResolverActivity;Ljava/util/List;)Ljava/util/List;
@@ -1532,7 +1535,7 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mResolveList:Ljava/util/List;
 
-    .line 2324
+    .line 2326
     .end local v0    # "rComparator":Lcom/meizu/util/AppDisplayNameComparator;
     :cond_0
     return-void
@@ -1546,20 +1549,20 @@
 
     const/4 v3, 0x0
 
-    .line 2087
+    .line 2088
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mShareLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2088
+    .line 2089
     .local v0, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mWith:I
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 2089
+    .line 2090
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mList:Ljava/util/List;
 
     if-eqz v1, :cond_4
@@ -1574,22 +1577,22 @@
 
     if-le v1, v2, :cond_4
 
-    .line 2090
+    .line 2091
     iget-boolean v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
 
     if-eqz v1, :cond_2
 
-    .line 2091
+    .line 2092
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
     if-eqz v1, :cond_0
 
-    .line 2092
+    .line 2093
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
     invoke-virtual {v1, v3, v3, v3, v3}, Lcom/android/internal/widget/ViewPager;->setPadding(IIII)V
 
-    .line 2094
+    .line 2095
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
@@ -1609,23 +1612,23 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 2095
+    .line 2096
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
     div-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2123
+    .line 2124
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mShareLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2086
+    .line 2087
     return-void
 
-    .line 2097
+    .line 2098
     :cond_1
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
@@ -1637,7 +1640,7 @@
 
     goto :goto_0
 
-    .line 2100
+    .line 2101
     :cond_2
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
@@ -1657,7 +1660,7 @@
 
     if-ne v1, v4, :cond_3
 
-    .line 2101
+    .line 2102
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
     mul-int/lit8 v1, v1, 0x5
@@ -1668,7 +1671,7 @@
 
     goto :goto_0
 
-    .line 2103
+    .line 2104
     :cond_3
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
@@ -1680,23 +1683,23 @@
 
     goto :goto_0
 
-    .line 2107
+    .line 2108
     :cond_4
     iget-boolean v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
-
-    if-eqz v1, :cond_5
-
-    .line 2108
-    iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
     if-eqz v1, :cond_5
 
     .line 2109
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
 
+    if-eqz v1, :cond_5
+
+    .line 2110
+    iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mViewPager:Lcom/android/internal/widget/ViewPager;
+
     invoke-virtual {v1, v3, v3, v3, v3}, Lcom/android/internal/widget/ViewPager;->setPadding(IIII)V
 
-    .line 2112
+    .line 2113
     :cond_5
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mContext:Landroid/content/Context;
 
@@ -1716,7 +1719,7 @@
 
     if-ne v1, v4, :cond_6
 
-    .line 2113
+    .line 2114
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
     div-int/lit8 v1, v1, 0x3
@@ -1725,13 +1728,13 @@
 
     goto :goto_0
 
-    .line 2115
+    .line 2116
     :cond_6
     iget-boolean v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
 
     if-eqz v1, :cond_7
 
-    .line 2116
+    .line 2117
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
     mul-int/lit8 v1, v1, 0x3
@@ -1742,7 +1745,7 @@
 
     goto :goto_0
 
-    .line 2118
+    .line 2119
     :cond_7
     iget v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mHeight:I
 
@@ -1760,7 +1763,7 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 2233
+    .line 2235
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1773,7 +1776,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2234
+    .line 2236
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->pointViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1784,10 +1787,10 @@
 
     if-le v1, v2, :cond_0
 
-    .line 2235
+    .line 2237
     if-ne p1, v0, :cond_1
 
-    .line 2236
+    .line 2238
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->pointViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1800,14 +1803,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 2233
+    .line 2235
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2238
+    .line 2240
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->pointViews:Ljava/util/ArrayList;
 
@@ -1823,7 +1826,7 @@
 
     goto :goto_1
 
-    .line 2232
+    .line 2234
     :cond_2
     return-void
 .end method
@@ -2042,29 +2045,34 @@
     iput-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mOverScrollLayout:Lcom/meizu/widget/ViewPagerOverScrollLayout;
 
     .line 1999
+    iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mPointView:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->setLayoutDirection(I)V
+
+    .line 2000
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTitle:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_2
 
-    .line 2000
+    .line 2001
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTextTitle:Landroid/widget/TextView;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2001
+    .line 2002
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTextTitle:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2006
+    .line 2007
     :goto_0
     iget-boolean v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
 
     if-eqz v2, :cond_0
 
-    .line 2007
+    .line 2008
     sget v2, Lcom/flyme/internal/R$id;->mz_check_bar:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2073,17 +2081,17 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 2008
+    .line 2009
     .local v0, "checkBarLayout":Landroid/view/ViewGroup;
     if-eqz v0, :cond_3
 
-    .line 2009
+    .line 2010
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 2011
+    .line 2012
     sget v2, Lcom/flyme/internal/R$id;->mz_alwaysUse:I
 
-    .line 2010
+    .line 2011
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
@@ -2092,7 +2100,7 @@
 
     iput-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysCheck:Landroid/widget/CheckBox;
 
-    .line 2012
+    .line 2013
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysCheck:Landroid/widget/CheckBox;
 
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->getResources()Landroid/content/res/Resources;
@@ -2107,22 +2115,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2017
+    .line 2018
     .end local v0    # "checkBarLayout":Landroid/view/ViewGroup;
     :cond_0
     :goto_1
     invoke-direct {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->initViewPager()V
 
-    .line 2018
+    .line 2019
     invoke-direct {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->initData()V
 
-    .line 2019
+    .line 2020
     invoke-direct {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->initPoint()V
 
-    .line 2020
+    .line 2021
     invoke-direct {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->setShareLayoutSize()V
 
-    .line 2021
+    .line 2022
     return-object v1
 
     .line 1987
@@ -2130,14 +2138,14 @@
     :cond_1
     return-object v3
 
-    .line 2003
+    .line 2004
     .restart local v1    # "v":Landroid/view/View;
     :cond_2
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTextTitle:Landroid/widget/TextView;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2004
+    .line 2005
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mTextTitle:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->getResources()Landroid/content/res/Resources;
@@ -2154,7 +2162,7 @@
 
     goto :goto_0
 
-    .line 2014
+    .line 2015
     .restart local v0    # "checkBarLayout":Landroid/view/ViewGroup;
     :cond_3
     iput-boolean v5, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
@@ -2167,9 +2175,9 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2077
+    .line 2078
     invoke-super {p0, p1}, Landroid/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 2076
+    .line 2077
     return-void
 .end method

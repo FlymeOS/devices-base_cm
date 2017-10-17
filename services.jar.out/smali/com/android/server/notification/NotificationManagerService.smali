@@ -12869,11 +12869,11 @@
 
     if-eqz v3, :cond_8
 
-    iget v3, v12, Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;->spamScoreUpperLimit:F
+    const/4 v3, 0x0
 
     cmpg-float v3, v22, v3
 
-    if-gez v3, :cond_8
+    if-gtz v3, :cond_8
 
     const/4 v3, 0x1
 

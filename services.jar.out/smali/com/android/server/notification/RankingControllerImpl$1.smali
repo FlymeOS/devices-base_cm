@@ -1,29 +1,16 @@
 .class Lcom/android/server/notification/RankingControllerImpl$1;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "RankingControllerImpl.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/notification/RankingControllerImpl;->computingDailyResult(Ljava/util/List;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/notification/RankingControllerImpl;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lmeizu/notification/RankingDaily;",
-        ">;"
-    }
 .end annotation
 
 
@@ -37,68 +24,106 @@
     .param p1, "this$0"    # Lcom/android/server/notification/RankingControllerImpl;
 
     .prologue
-    .line 189
+    .line 330
     iput-object p1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-    .param p1, "lhs"    # Ljava/lang/Object;
-    .param p2, "rhs"    # Ljava/lang/Object;
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 6
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 191
-    check-cast p1, Lmeizu/notification/RankingDaily;
+    .line 333
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .end local p1    # "lhs":Ljava/lang/Object;
-    check-cast p2, Lmeizu/notification/RankingDaily;
+    move-result-object v0
 
-    .end local p2    # "rhs":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/RankingControllerImpl$1;->compare(Lmeizu/notification/RankingDaily;Lmeizu/notification/RankingDaily;)I
+    .line 334
+    .local v0, "action":Ljava/lang/String;
+    const-string/jumbo v1, "android.intent.action.TIME_TICK"
 
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return v0
-.end method
+    move-result v1
 
-.method public compare(Lmeizu/notification/RankingDaily;Lmeizu/notification/RankingDaily;)I
-    .locals 2
-    .param p1, "lhs"    # Lmeizu/notification/RankingDaily;
-    .param p2, "rhs"    # Lmeizu/notification/RankingDaily;
+    if-eqz v1, :cond_1
 
-    .prologue
-    .line 193
-    iget v0, p1, Lmeizu/notification/RankingDaily;->allNum:I
+    .line 335
+    iget-object v1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
 
-    iget v1, p2, Lmeizu/notification/RankingDaily;->allNum:I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-ne v0, v1, :cond_0
+    move-result-wide v2
 
-    const/4 v0, 0x0
+    invoke-static {v1, v2, v3}, Lcom/android/server/notification/RankingControllerImpl;->-set0(Lcom/android/server/notification/RankingControllerImpl;J)J
 
-    :goto_0
-    return v0
-
-    .line 194
+    .line 332
     :cond_0
-    iget v0, p1, Lmeizu/notification/RankingDaily;->allNum:I
+    :goto_0
+    return-void
 
-    iget v1, p2, Lmeizu/notification/RankingDaily;->allNum:I
-
-    if-le v0, v1, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
+    .line 336
     :cond_1
-    const/4 v0, 0x1
+    const-string/jumbo v1, "android.intent.action.TIMEZONE_CHANGED"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string/jumbo v1, "android.intent.action.TIME_SET"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 337
+    :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iget-object v1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
+
+    invoke-static {v1}, Lcom/android/server/notification/RankingControllerImpl;->-get2(Lcom/android/server/notification/RankingControllerImpl;)J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0x5265c00
+
+    cmp-long v1, v2, v4
+
+    if-ltz v1, :cond_0
+
+    .line 338
+    iget-object v1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-static {v1, v2, v3}, Lcom/android/server/notification/RankingControllerImpl;->-set0(Lcom/android/server/notification/RankingControllerImpl;J)J
+
+    .line 339
+    iget-object v1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
+
+    invoke-static {v1}, Lcom/android/server/notification/RankingControllerImpl;->-wrap2(Lcom/android/server/notification/RankingControllerImpl;)V
 
     goto :goto_0
 .end method

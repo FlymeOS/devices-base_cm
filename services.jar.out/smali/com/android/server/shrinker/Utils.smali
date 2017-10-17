@@ -220,12 +220,12 @@
 
     .line 279
     .local v3, "total":I
-    if-lt v3, v7, :cond_2
+    if-le v3, v7, :cond_2
 
     .line 280
-    const v1, 0x7d000
+    const v1, 0xc8000
 
-    .line 286
+    .line 288
     :goto_3
     const-string/jumbo v4, "persist.sys.shrink_mem_level"
 
@@ -281,17 +281,26 @@
     .restart local v1    # "defaultLowSize":I
     .restart local v3    # "total":I
     :cond_2
-    const/4 v4, 0x3
-
-    if-ne v3, v4, :cond_3
+    if-ne v3, v7, :cond_3
 
     .line 282
+    const v1, 0x7d000
+
+    goto :goto_3
+
+    .line 283
+    :cond_3
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_4
+
+    .line 284
     const v1, 0x64000
 
     goto :goto_3
 
-    .line 284
-    :cond_3
+    .line 286
+    :cond_4
     const v1, 0x3e800
 
     goto :goto_3

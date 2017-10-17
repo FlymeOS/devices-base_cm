@@ -58,6 +58,8 @@
 
 .field public static final MEIZU_FLAG_STOP_RECOMMEND:I = 0x800
 
+.field public static final MEIZU_FLAG_UNINSTALL:I = 0x400000
+
 .field public static final MZ_ACTION_APP_DOWN_PROMPT:Ljava/lang/String; = "meizu.intent.action.APP_DOWNLOAD_PROMPT"
 
 .field public static final MZ_ACTION_CLEAR_ALL_NOTIFICATION:Ljava/lang/String; = "meizu.intent.action.CLEAR_ALL_NOTIFICATIONS"
@@ -181,14 +183,14 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 417
+    .line 422
     iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
-    .line 416
+    .line 421
     return-void
 .end method
 
@@ -197,14 +199,14 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 401
+    .line 406
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 400
+    .line 405
     return-void
 .end method
 
@@ -212,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 501
+    .line 506
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
     return-object v0
@@ -222,7 +224,7 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 498
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
     return-object v0
@@ -232,7 +234,7 @@
     .locals 1
 
     .prologue
-    .line 485
+    .line 490
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
 
     return-object v0
@@ -242,7 +244,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 476
     iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
     return v0
@@ -252,7 +254,7 @@
     .locals 1
 
     .prologue
-    .line 478
+    .line 483
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
     return-object v0
@@ -262,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 464
+    .line 469
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     return v0
@@ -273,10 +275,10 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
-    .line 457
+    .line 462
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
-    .line 456
+    .line 461
     return-void
 .end method
 
@@ -285,10 +287,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 449
+    .line 454
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
-    .line 448
+    .line 453
     return-void
 .end method
 
@@ -297,10 +299,10 @@
     .param p1, "className"    # Ljava/lang/String;
 
     .prologue
-    .line 441
+    .line 446
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
 
-    .line 440
+    .line 445
     return-void
 .end method
 
@@ -309,10 +311,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 425
+    .line 430
     iput p1, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
-    .line 424
+    .line 429
     return-void
 .end method
 
@@ -321,10 +323,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 433
+    .line 438
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
-    .line 432
+    .line 437
     return-void
 .end method
 
@@ -333,9 +335,9 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 409
+    .line 414
     iput p1, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 408
+    .line 413
     return-void
 .end method

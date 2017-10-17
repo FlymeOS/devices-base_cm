@@ -29,6 +29,8 @@
 # static fields
 .field public static final EXTRA_ORIGINAL_PACKAGE_NAME:Ljava/lang/String; = "android.originalPackageName"
 
+.field public static final EXTRA_FLYME_NOTIFICATION_SETTING:Ljava/lang/String; = "android.flymeNotificationSetting"
+
 .field public static final FLAG_ALWAYS_SHOW_TICKER:I = 0x1000000
 
 .field public static final FLAG_ONLY_UPDATE_TICKER:I = 0x2000000

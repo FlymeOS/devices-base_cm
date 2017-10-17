@@ -1,4 +1,4 @@
-.class Lcom/android/server/policy/MzPhoneWindowManager$8;
+.class Lcom/android/server/policy/MzPhoneWindowManager$9;
 .super Landroid/database/ContentObserver;
 .source "MzPhoneWindowManager.java"
 
@@ -25,8 +25,8 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1035
-    iput-object p1, p0, Lcom/android/server/policy/MzPhoneWindowManager$8;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
+    .line 1043
+    iput-object p1, p0, Lcom/android/server/policy/MzPhoneWindowManager$9;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,11 +40,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1038
-    iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$8;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
+    .line 1046
+    iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$9;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
-    invoke-static {v0}, Lcom/android/server/policy/MzPhoneWindowManager;->-wrap7(Lcom/android/server/policy/MzPhoneWindowManager;)V
+    invoke-static {v0}, Lcom/android/server/policy/MzPhoneWindowManager;->-wrap8(Lcom/android/server/policy/MzPhoneWindowManager;)V
 
-    .line 1037
+    .line 1045
     return-void
 .end method

@@ -18,3 +18,6 @@
 
 .method public abstract interceptNotification(Landroid/service/notification/StatusBarNotification;ZZ)Z
 .end method
+
+.method public abstract offsetScore(Lmeizu/notification/RankingDaily;J)F
+.end method

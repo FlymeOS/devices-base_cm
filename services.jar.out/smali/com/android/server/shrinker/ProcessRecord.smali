@@ -256,13 +256,32 @@
 
     .line 103
     :cond_1
-    sget-object v0, Lcom/android/server/am/Ams_Interface;->AMS:Lcom/android/server/am/ActivityManagerService;
+    iget v1, p0, Lcom/android/server/shrinker/ProcessRecord;->pid:I
+
+    invoke-static {v1}, Landroid/os/Process;->getUidForPid(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/server/shrinker/ProcessRecord;->parent:Lcom/android/server/shrinker/PackageRecord;
+
+    iget-object v2, v2, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    if-eq v1, v2, :cond_2
 
     .line 104
+    return-void
+
+    .line 106
+    :cond_2
+    sget-object v0, Lcom/android/server/am/Ams_Interface;->AMS:Lcom/android/server/am/ActivityManagerService;
+
+    .line 107
     .local v0, "sync":Ljava/lang/Object;
     monitor-enter v0
 
-    .line 105
+    .line 108
     const/4 v1, 0x5
 
     :try_start_0
@@ -312,17 +331,17 @@
 
     invoke-static {v2, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 106
+    .line 109
     iget v1, p0, Lcom/android/server/shrinker/ProcessRecord;->pid:I
 
     invoke-static {v1}, Landroid/os/Process;->killProcessQuiet(I)V
 
-    .line 107
+    .line 110
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/shrinker/ProcessRecord;->killed:Z
 
-    .line 108
+    .line 111
     iget-object v1, p0, Lcom/android/server/shrinker/ProcessRecord;->parent:Lcom/android/server/shrinker/PackageRecord;
 
     iget-object v1, v1, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -339,7 +358,7 @@
 
     goto :goto_0
 
-    .line 104
+    .line 107
     :catchall_0
     move-exception v1
 
@@ -354,12 +373,12 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 118
+    .line 121
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 119
+    .line 122
     .local v0, "time":J
     iget v2, p0, Lcom/android/server/shrinker/ProcessRecord;->pid:I
 
@@ -375,15 +394,15 @@
 
     if-lez v2, :cond_0
 
-    .line 120
+    .line 123
     iput-wide v0, p0, Lcom/android/server/shrinker/ProcessRecord;->lastTrimMemoryTime:J
 
-    .line 121
+    .line 124
     iget v2, p0, Lcom/android/server/shrinker/ProcessRecord;->pid:I
 
     invoke-static {v2, p2, p1}, Lcom/android/server/am/Ams_Interface;->scheduleTrimMemory(IIZ)Z
 
-    .line 117
+    .line 120
     :cond_0
     return-void
 .end method
@@ -409,10 +428,10 @@
     .param p1, "freeze"    # Z
 
     .prologue
-    .line 114
+    .line 117
     iput-boolean p1, p0, Lcom/android/server/shrinker/ProcessRecord;->frozen:Z
 
-    .line 113
+    .line 116
     return-void
 .end method
 
@@ -500,20 +519,20 @@
 
     const/4 v4, 0x0
 
-    .line 126
+    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x10
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 127
+    .line 130
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/android/server/shrinker/ProcessRecord;->process:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
+    .line 131
     const-string/jumbo v1, " adj:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -524,7 +543,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 129
+    .line 132
     const-string/jumbo v1, " pid:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -535,7 +554,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 130
+    .line 133
     const-string/jumbo v1, " showUI:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -550,14 +569,14 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
+    .line 134
     iget-wide v2, p0, Lcom/android/server/shrinker/ProcessRecord;->pss:J
 
     cmp-long v1, v2, v6
 
     if-eqz v1, :cond_0
 
-    .line 132
+    .line 135
     const-string/jumbo v1, " pss:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -568,7 +587,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 134
+    .line 137
     :cond_0
     iget-wide v2, p0, Lcom/android/server/shrinker/ProcessRecord;->rss:J
 
@@ -576,7 +595,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 135
+    .line 138
     const-string/jumbo v1, " rss:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -587,7 +606,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 137
+    .line 140
     :cond_1
     iget-object v1, p0, Lcom/android/server/shrinker/ProcessRecord;->oom:Lcom/android/server/shrinker/ProcessRecord;
 
@@ -599,7 +618,7 @@
 
     if-lez v1, :cond_2
 
-    .line 138
+    .line 141
     const-string/jumbo v1, "\n\t\t     connected by [%s,%d,%d]"
 
     const/4 v2, 0x3
@@ -642,7 +661,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
+    .line 143
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
