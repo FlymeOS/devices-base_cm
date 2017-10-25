@@ -1149,15 +1149,9 @@
     iput v2, v0, Lmeizu/notification/RankingDaily;->score:F
 
     .line 170
-    const/4 v2, 0x0
-
-    iget v4, v0, Lmeizu/notification/RankingDaily;->score:F
-
-    invoke-static {v2, v4}, Ljava/lang/Math;->max(FF)F
+    iget v2, v0, Lmeizu/notification/RankingDaily;->score:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v2
 
     monitor-exit v3
 

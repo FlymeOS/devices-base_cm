@@ -631,13 +631,39 @@
 .end method
 
 .method public offsetScore(Lmeizu/notification/RankingDaily;J)F
-    .locals 1
+    .locals 4
     .param p1, "preDaily"    # Lmeizu/notification/RankingDaily;
     .param p2, "postDate"    # J
 
     .prologue
-    .line 207
-    const/4 v0, 0x0
+    :try_start_0
+    iget-object v2, p0, Lcom/android/server/notification/NotificationFirewallImpl;->remoteService:Lmeizu/notification/INotificationFilterService;
 
-    return v0
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/server/notification/NotificationFirewallImpl;->remoteService:Lmeizu/notification/INotificationFilterService;
+
+    invoke-interface {v2, p1, p2, p3}, Lmeizu/notification/INotificationFilterService;->offsetScore(Lmeizu/notification/RankingDaily;J)F
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result v2
+
+    return v2
+
+    :catch_0
+    move-exception v0
+
+    :cond_0
+    :goto_0
+    iget v2, p1, Lmeizu/notification/RankingDaily;->score:F
+
+    return v2
+
+    :catch_1
+    move-exception v1
+
+    .local v1, "throwable":Ljava/lang/Throwable;
+    goto :goto_0
 .end method

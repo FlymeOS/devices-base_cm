@@ -104,6 +104,11 @@
     .line 56
     iput-boolean v1, p0, Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;->intercept:Z
 
+    .line 58
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    iput v0, p0, Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;->score:F
+
     .line 59
     const/4 v0, 0x0
 
@@ -144,6 +149,11 @@
 
     .line 56
     iput-boolean v2, p0, Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;->intercept:Z
+
+    .line 58
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    iput v0, p0, Landroid/service/notification/StatusBarNotification$FlymeNotificationFilter;->score:F
 
     .line 59
     const/4 v0, 0x0
